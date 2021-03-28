@@ -101,13 +101,9 @@ function updateTable() {
 }
 
 //King of Food Data Range
-$("#foodRange").on("mousemove", function() {
+$("#foodRange").on("input", function() {
   $("#foodPill").text($(this).prop("value"));
-});
-
-$("#foodRange").on("mouseup", function() {
-  clearTimeout();
-  setTimeout(updateTable, 500);
+  updateTable();
 });
 
 $("#collapse1").on("click", function() {
