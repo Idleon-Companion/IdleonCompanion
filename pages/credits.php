@@ -13,7 +13,6 @@
         For info or suggestions, write at <a href="mailto: webmaster@idleoncompanion.com">webmaster@idleoncompanion.com</a>, or shoot me a pm on Discord</p>
     </div>
   </div>
-  <!--  TALENTS  -->
   <div class="row justify-content-center">
     <div class="col">
       <hr>
@@ -25,5 +24,4 @@
         </blockquote>
       </div>
     </div>
-    <!--- NOTES --->
   </div>
