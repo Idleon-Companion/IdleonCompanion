@@ -26,7 +26,7 @@
       <tr>
         <?php foreach($value as $innerKey => $innerValue): ?>
         <th data-toggle="tooltip" data-trigger="click" data-delay='{"show":"100", "hide":"100"}' title="<?php echo $innerValue["name"] ?>" scope="row" class="p-0">
-          <img loading="lazy" src="assets/images/checklist/<?php echo $innerKey ?>.png">
+          <img class="w-50 h-auto" loading="lazy" src="assets/images/checklist/<?php echo $innerKey ?>.png">
         </th>
           <?php if($innerValue['global'] == "true"): ?>
           <td colspan="7">
