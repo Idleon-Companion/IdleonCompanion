@@ -24,18 +24,18 @@
 
 <body>
 	<div class="container">
-<div class="row justify-content-between pt-3">
-	<div class="col-xs-9">
-			<img class="img d-inline my-4 ml-4" style="height:6rem;" src="assets/images/bg/logo-clean.png"></img>
-			<h1 class="display-4 d-sm-inline-block d-none align-middle ml-4">Idleon Companion</h3>
-	</div>
-	<div class="col-xs-3">
-		<a type="button" class="btn btn-outline-light m-2" data-toggle="modal" data-target="#clockModal">
-			<p class="m-0 text-left"><small>Reset Timer</small></p>
-			<h3 class="display-4 m-0"  id="clock"></h3>
-		</a>
-	</div>
-</div>
+		<div class="row justify-content-between pt-3">
+			<div class="col-xs-9">
+					<img class="img d-inline my-4 ml-4" style="height:6rem;" src="assets/images/bg/logo-clean.png">
+					<h1 class="display-4 d-sm-inline-block d-none align-middle ml-4">Idleon Companion</h1>
+			</div>
+			<div class="col-xs-3">
+				<a type="button" class="btn btn-outline-light m-2" data-toggle="modal" data-target="#clockModal">
+					<p class="m-0 text-left"><small>Reset Timer</small></p>
+					<h3 class="display-4 m-0"  id="clock"></h3>
+				</a>
+			</div>
+		</div>
 
 		<!-- Modal -->
 		<div class="modal fade" id="clockModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -130,9 +130,12 @@
 		</div>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 		<script src="assets/js/main.js?9555"></script>
+	</div>
+	<div class="footer m-5">
+	</div>
 </body>
 
 </html>

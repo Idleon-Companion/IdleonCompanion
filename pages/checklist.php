@@ -23,8 +23,8 @@
       </tr>
     </thead>
     <tbody>
+      <?php foreach($value as $innerKey => $innerValue): ?>
       <tr>
-        <?php foreach($value as $innerKey => $innerValue): ?>
         <th data-toggle="tooltip" data-trigger="click" data-delay='{"show":"100", "hide":"100"}' title="<?php echo $innerValue["name"] ?>" scope="row" class="p-0">
           <img class="w-50 h-auto" loading="lazy" src="assets/images/checklist/<?php echo $innerKey ?>.png">
         </th>
