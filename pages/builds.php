@@ -58,7 +58,7 @@
     </div>
 
   </div>
-  <!--- NOTES --->
+  <!-- NOTES -->
   <div class="row">
     <div class="col-xl-12 mt-4">
       <div class="card border-light">

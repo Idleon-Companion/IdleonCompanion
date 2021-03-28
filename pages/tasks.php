@@ -24,7 +24,7 @@
       <div class="list-group">
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
           <div class="d-flex w-100 justify-content-between">
-            <h3 class="mb-3">Daily</h5>
+            <h3 class="mb-3">Daily</h3>
             <p class="bs-component">
               <button id="btnCheck" type="button" class="btn btn-primary btn-lg btn-block">Check All</button>
             </p>
@@ -63,7 +63,7 @@
       <div class="list-group">
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
           <div class="d-flex w-100 justify-content-between">
-            <h3 class="mb-3">Every Three Days</h5>
+            <h3 class="mb-3">Every Three Days</h3>
           </div>
         </a>
       </div>
@@ -90,7 +90,7 @@
       <div class="list-group">
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
           <div class="d-flex w-100 justify-content-between">
-            <h3 class="mb-3">Weekly</h5>
+            <h3 class="mb-3">Weekly</h3>
           </div>
         </a>
       </div>
