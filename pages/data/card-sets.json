@@ -1,0 +1,166 @@
+{
+  "card_set_1": {
+    "title": "Woodcutting",
+    "core":{
+      "1":"Bleach_Logs",
+      "2":"Jungle_Logs",
+      "3":"Tropilogs",
+      "4":"Potty_Rolls"
+    },
+    "useful":{
+      "1":"Amarok_Normal",
+      "2":"Walking_Stick",
+      "3":"Slime"
+    },
+    "minimal":{
+      "1":"King_Doot",
+      "2":"Crystal_Carrot",
+      "3":"Mimic",
+      "4":"Giftmas_Blobulyte"
+    }
+  },
+  "card_set_2": {
+    "title": "Mining",
+    "core":{
+      "1":"Iron_Ore",
+      "2":"Gold_Ore",
+      "3":"Platinum_Ore",
+      "4":"Dementia_Ore"
+    },
+    "useful":{
+      "1":"Amarok_Normal",
+      "2":"Tyson",
+      "3":"Wode_Board",
+      "4":"Glublin"
+    },
+    "minimal":{
+      "1":"King_Doot",
+      "2":"Crystal_Carrot",
+      "3":"Mimic",
+      "4":"Giftmas_Blobulyte"
+    }
+  },
+  "card_set_3": {
+    "title": "Fishing",
+    "core":{
+      "1":"Hermit_Can",
+      "2":"Bloach",
+      "3":"Jellyfish",
+      "4":"Amarok_Normal"
+    },
+    "useful":{
+      "1":"Tyson",
+      "2":"Wode_Board"
+    },
+    "minimal":{
+      "1":"King_Doot",
+      "2":"Crystal_Carrot",
+      "3":"Mimic",
+      "4":"Giftmas_Blobulyte"
+    }
+  },
+  "card_set_4": {
+    "title": "Catching",
+    "core":{
+      "1":"Fruitfly",
+      "2":"Butterfly",
+      "3":"Sentient_Cereal",
+      "4":"Amarok_Normal"
+    },
+    "useful":{
+      "1":"Nutto",
+      "2":"Carrotman"
+    },
+    "minimal":{
+      "1":"King_Doot",
+      "2":"Crystal_Carrot",
+      "3":"Mimic",
+      "4":"Giftmas_Blobulyte"
+    }
+  },
+  "card_set_5": {
+    "title": "Active Farming",
+    "core":{
+      "1":"Efaunt_Normal",
+      "2":"Crystal_Crabal",
+      "3":"Moonmoon",
+      "4":"Ghost"
+    },
+    "useful":{
+      "1":"Fly",
+      "2":"Poop"
+    },
+    "minimal":{
+      "1":"Best_Damage",
+      "2":"Best_Accuracy",
+      "3":"Best_Droprate"
+    }
+  },
+  "card_set_6": {
+    "title": "AFK Farming",
+    "core":{
+      "1":"Efaunt_Normal",
+      "2":"Amarok_Chaotic",
+      "3":"Boop",
+      "4":"Crystal_Crabal"
+    },
+    "useful":{
+      "1":"Baby_Boa"
+    },
+    "minimal":{
+      "1":"Mafioso",
+      "2":"Dr_Defecaus",
+      "3":"Pincermin",
+      "4":"Sand_Giant",
+      "5":"Dig_Doug"
+    }
+  },
+  "card_set_7": {
+    "title": "Accuracy",
+    "core":{
+      "1":"Veiny_Logs",
+      "2":"Sand_Castle",
+      "3":"Wood_Mushroom"
+    },
+    "useful":{
+      "1":"Best_SecondaryAccuracy"
+    },
+    "minimal":{
+    }
+  },
+  "card_set_8": {
+  "title": "Damage",
+  "core":{
+    "1":"Dr_Defecaus",
+    "2":"Rat",
+    "3":"Mashed_Potato",
+    "4":"Pincermin"
+  },
+  "useful":{
+    "1":"Best_Damage"
+  },
+  "minimal":{
+    "1":"Best_Accuracy"
+  }
+},
+  "card_set_9": {
+  "title": "Droprate",
+  "core":{
+    "1":"King_Doot",
+    "2":"Crystal_Carrot",
+    "3":"Mimic",
+    "4":"Giftmas_Blobulyte"
+  },
+  "useful":{
+    "1":"Lustre_Ore",
+    "2":"Dig_Doug",
+    "3":"Red_Mushroom"
+  },
+  "minimal":{
+    "1":"Snelbie",
+    "2":"Gigafrog",
+    "3":"Poop",
+    "4":"Void_Ore"
+  }
+}
+}
