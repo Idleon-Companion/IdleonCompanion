@@ -160,9 +160,7 @@
 
     <div id="nav-tabContent" class="tab-content">
       <!--  TASKS  -->
-      <div class="tab-pane fade active show" id="tasks">
-        <Tasks />
-      </div>
+      <div class="tab-pane fade active show" id="tasks"><Tasks /></div>
       <!-- checklist -->
       <div class="tab-pane fade" id="checklist">
         <!-- <?php include "pages/checklist.php" ?> -->
@@ -172,9 +170,7 @@
         <!-- <?php include "pages/king-of-food.php" ?> -->
       </div>
       <!--  BUILDS  -->
-      <div class="tab-pane fade" id="builds">
-        <!-- <?php include "pages/builds.php" ?> -->
-      </div>
+      <div class="tab-pane fade" id="builds"><Builds /></div>
       <!--  CARD SETS -->
       <div class="tab-pane fade p-3" id="cards">
         <!-- <?php include "pages/cards.php" ?> -->
@@ -190,11 +186,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Tasks from "./Tasks.vue";
+import Builds from "../components/Builds.vue";
+import Tasks from "../components/Tasks.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
+    Builds,
     Tasks,
   },
 });

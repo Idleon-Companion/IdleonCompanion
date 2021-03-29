@@ -80,7 +80,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, onMounted, ref } from "vue";
-import taskData from "./data/tasks.json";
+import taskData from "../pages/data/tasks.json";
 
 type Task = {
   Category: string;
