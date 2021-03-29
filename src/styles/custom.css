@@ -43,7 +43,7 @@ th > img {
 }
 
 body {
-  background: rgb(31, 20, 21) url('../images/bg/night_desert.png') no-repeat center center fixed;
+  background: rgb(31, 20, 21) url('../assets/bg/night_desert.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
