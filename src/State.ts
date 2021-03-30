@@ -17,3 +17,64 @@ export class StateManager {
     localStorage.setItem(key, value);
   }
 }
+
+export enum Class {
+  Beginner = "Beginner",
+  Warrior = "Warrior",
+  Archer = "Archer",
+  Mage = "Mage",
+}
+
+export enum Subclass {
+  Journeyman = "Journeyman",
+  Barbarian = "Barbarian",
+  Squire = "Squire",
+  Bowman = "Bowman",
+  Hunter = "Hunter",
+  Wizard = "Wizard",
+  Shaman = "Shaman",
+}
+// Characters keep track of individual data
+export type Character = {
+  class: Class;
+  subclass: Subclass | null;
+  level: number;
+  name: string;
+  items: Record<string, boolean>;
+  statues: Record<string, number>;
+};
+export class CharacterManager {
+  public characters: Array<Character>;
+  private index: number;
+
+  constructor(characters: Array<Character>) {
+    this.characters = characters;
+    this.index = 0;
+  }
+
+  get numCharacters(): number {
+    return this.characters.length;
+  }
+
+  get curCharacter(): Character | null {
+    if (this.numCharacters > 0) {
+      return this.characters[this.index];
+    } else {
+      return null;
+    }
+  }
+
+  // Cycle to next character
+  nextCharacter() {
+    if (this.numCharacters > 0) {
+      this.index = (this.index + 1) % this.numCharacters;
+    }
+  }
+
+  // Cycle to previous character
+  prevCharacter() {
+    if (this.numCharacters > 0) {
+      this.index = (this.index - 1) % this.numCharacters;
+    }
+  }
+}

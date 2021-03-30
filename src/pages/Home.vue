@@ -156,6 +156,9 @@
         <a class="nav-link" data-toggle="tab" href="#cards">Card Sets</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#characters">Characters</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#credits">Credits</a>
       </li>
     </ul>
@@ -168,6 +171,7 @@
       <div class="tab-pane fade" id="picnic-quest"><PicnicQuest /></div>
       <div class="tab-pane fade" id="builds"><Builds /></div>
       <div class="tab-pane fade p-3" id="cards"><Cards /></div>
+      <div class="tab-pane fade p-3" id="characters"><Characters /></div>
       <div class="tab-pane fade" id="credits"><Credits /></div>
     </div>
   </div>
@@ -182,12 +186,14 @@ import Credits from "../components/Credits.vue";
 import PicnicQuest from "../components/PicnicQuest.vue";
 import ProgressTracker from "../components/ProgressTracker.vue";
 import Tasks from "../components/Tasks.vue";
+import Characters from "../pages/Characters.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
     Builds,
     Cards,
+    Characters,
     Credits,
     PicnicQuest,
     ProgressTracker,
