@@ -4,6 +4,7 @@ export class StateManager {
   constructor(version: string) {
     console.log(`Idleon Companion loaded - v${version}`);
     this.version = version;
+    // Perform version controlling here
   }
 
   // Load data from local storage

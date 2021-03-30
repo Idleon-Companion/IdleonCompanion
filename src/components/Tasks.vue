@@ -13,113 +13,104 @@
       </div>
     </div>
   </div>
-  <div class="row" v-for="(tasks, category) in allTasks" :key="category">
+  <div class="row">
     <div class="col-lg-12">
-      <div class="bs-component">
-        <div class="list-group">
-          <a
-            class="list-group-item list-group-item-action flex-column align-items-start active"
-          >
-            <div class="d-flex w-100 justify-content-between">
-              <h3 class="mb-3">{{ category }}</h3>
-              <p class="bs-component">
-                <button
-                  id="btnCheck"
-                  type="button"
-                  class="btn btn-primary btn-lg btn-block"
-                >
-                  Check All
-                </button>
-              </p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-12">
-      <div class="list-group checkbox-container">
+      <div v-for="(task, i) in tasks" :key="i">
         <label
-          v-for="(task, i) in tasks"
-          :for="category + i"
-          :key="category + i"
+          :for="'task' + i"
           class="list-group-item list-group-item-action active mb-0"
         >
           <div class="custom-control custom-checkbox">
             <input
-              :id="category + i"
+              :id="'task' + i"
               type="checkbox"
               class="custom-control-input"
-              :checked="task.Completed"
+              :checked="isTaskComplete(task)"
+              @change="handleTaskCheck(task)"
             />
-            <p class="custom-control-label">{{ task.Message }}</p>
+            <p class="custom-control-label">{{ taskText(task) }}</p>
           </div>
         </label>
       </div>
-      <!-- <div class="list-group checkbox-container">
-        <label
-          for="daily8"
-          class="list-group-item list-group-item-action active mb-0"
-        >
-          <div class="custom-control custom-checkbox">
-            <input
-              type="checkbox"
-              class="custom-control-input"
-              id="daily8"
-              unchecked
-            />
-            <p class="custom-control-label">
-              Kill Boops (in the secret area) and Dr Defecaus if possible
-              <span class="badge badge-info mx-4" id="boopsBadge"> 0:00 </span>
-            </p>
-          </div>
-        </label>
-      </div> -->
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, ref } from "vue";
-import taskData from "../data/tasks.json";
+import {
+  computed,
+  defineComponent,
+  inject,
+  onMounted,
+  reactive,
+  ref,
+} from "vue";
+import taskData from "../data/defaultTasks.json";
+
+import dayjs from "dayjs";
+import duration from "dayjs/plugin/duration";
+import relativeTime from "dayjs/plugin/relativeTime";
+import { StateManager } from "../State";
+dayjs.extend(duration);
+dayjs.extend(relativeTime);
 
 type Task = {
-  Category: string;
-  Message: string;
-  Completed: boolean;
+  lastCompleted: number;
+  message: string;
+  resetInterval: Record<string, number>;
 };
 
 export default defineComponent({
   name: "Tasks",
   setup() {
-    // Load task data and create map to track completion
-    let allTasks: Record<string, Array<Task>> = {};
-    let numTasks = 0;
-    for (const [category, tasks] of Object.entries(taskData)) {
-      allTasks[category] = new Array<Task>();
-      for (const t of tasks) {
-        let task: Task = {
-          Category: category,
-          Message: t,
-          Completed: false,
+    let tasks = reactive(Array<Task>());
+    // Load task data from state first if it exists
+    const state = inject("state") as StateManager;
+    let saved = JSON.parse(state.load("tasks"));
+    if (saved !== null) {
+      for (let task of saved) {
+        tasks.push(task);
+      }
+    } else {
+      // Load default task data and reset all timers
+      for (const task of taskData) {
+        let t: Task = {
+          message: task.task,
+          lastCompleted: 0,
+          resetInterval: task.reset,
         };
-        allTasks[category].push(task);
-        numTasks += 1;
+        tasks.push(t);
       }
     }
 
-    const tasksCompleted = computed(() => {
-      let completed = 0;
-      for (const tasks of Object.values(allTasks)) {
-        completed += tasks.filter((x) => x.Completed).length;
+    const isTaskComplete = (task: Task): boolean => {
+      let resetInterval = dayjs.duration(task.resetInterval);
+      let resetTime = dayjs(task.lastCompleted).add(resetInterval);
+      if (dayjs().isBefore(resetTime)) {
+        return true;
       }
-      return completed;
+      return false;
+    };
+
+    const tasksCompleted = computed(() => {
+      return tasks.filter((x) => isTaskComplete(x)).length;
     });
 
     const progressBar = ref();
     const updateProgressBar = () => {
       progressBar.value.style.width = `${
-        (tasksCompleted.value / numTasks) * 100
+        (tasksCompleted.value / tasks.length) * 100
       }%`;
+    };
+
+    const handleTaskCheck = (task: Task) => {
+      if (isTaskComplete(task)) {
+        task.lastCompleted = 0;
+      } else {
+        task.lastCompleted = dayjs().valueOf();
+      }
+      updateProgressBar();
+      state.save("tasks", JSON.stringify(tasks));
     };
 
     onMounted(() => {
@@ -127,10 +118,22 @@ export default defineComponent({
     });
 
     return {
-      allTasks,
+      handleTaskCheck,
+      isTaskComplete,
       progressBar,
+      tasks,
       updateProgressBar,
     };
+  },
+  methods: {
+    taskText(task: Task) {
+      let text = task.message;
+      if (this.isTaskComplete(task)) {
+        let diff = dayjs(task.lastCompleted).from(dayjs());
+        text += ` - Completed ${diff}`;
+      }
+      return text;
+    },
   },
 });
 </script>
