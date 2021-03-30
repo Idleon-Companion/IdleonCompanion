@@ -46,7 +46,7 @@
         <?php endfor ?>
       <?php endif ?>
         </tr>
-        <?php endforeach ?>
+      <?php endforeach ?>N
     </tbody>
     <?php endforeach ?>
   </table>
