@@ -44,7 +44,7 @@
             </div>
           </div>
           <div class="card-body border border-secondary rounded">
-            <p class="card-text">{{ activeBuild.comments_one }}</p>
+            <p class="card-text">{{ activeBuild.comment_one }}</p>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="card-body border border-secondary rounded">
-            <p class="card-text">{{ activeBuild.comments_two }}</p>
+            <p class="card-text">{{ activeBuild.comment_two }}</p>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@
             </div>
           </div>
           <div class="card-body border border-secondary rounded">
-            <p class="card-text">{{ activeBuild.comments_three }}</p>
+            <p class="card-text">{{ activeBuild.comment_three }}</p>
           </div>
         </div>
       </div>
