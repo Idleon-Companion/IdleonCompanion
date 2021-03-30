@@ -1,0 +1,120 @@
+<template>
+  <div class="row">
+    <div class="col-xl-12 py-4">
+      <fieldset class="form-group px-3">
+        <label for="customRange1"
+          >How many runs of Picnic Quest would you like to show?</label
+        >
+        <span class="badge badge-pill badge-secondary ml-3" id="foodPill">{{
+          repeat
+        }}</span>
+        <input
+          v-model="repeat"
+          type="range"
+          class="custom-range"
+          min="1"
+          max="30"
+          id="foodRange"
+        />
+      </fieldset>
+    </div>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Item</th>
+        <th scope="col">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="table-secondary"
+        v-for="(req, i) in picnicRequirements"
+        :key="i"
+      >
+        <th scope="row"><img :src="getFoodImagePath(req.name)" /></th>
+        <td>{{ req.name }}</td>
+        <td class="base">
+          {{ req.amount }} x {{ repeat }} = {{ req.amount * repeat }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref } from "vue";
+
+const picnicRequirements = [
+  {
+    name: "Frog Leg",
+    amount: 200,
+  },
+  {
+    name: "Bean Slices",
+    amount: 100,
+  },
+  {
+    name: "Peanut",
+    amount: 100,
+  },
+  {
+    name: "Bleach Logs",
+    amount: 1500,
+  },
+  {
+    name: "Grass Leaf",
+    amount: 50,
+  },
+  {
+    name: "Crude Oil",
+    amount: 200,
+  },
+  {
+    name: "Iron Bar",
+    amount: 100,
+  },
+  {
+    name: "Sculpting Tools",
+    amount: 1,
+  },
+  {
+    name: "Iron Helmet",
+    amount: 1,
+  },
+  {
+    name: "Kebab Sticks",
+    amount: 500,
+  },
+  {
+    name: "Magic Meatloaf",
+    amount: 1,
+  },
+  {
+    name: "Nuget Cake",
+    amount: 2,
+  },
+  {
+    name: "Midnight Cookie",
+    amount: 2,
+  },
+];
+
+export default defineComponent({
+  name: "Picnic Quest",
+  setup() {
+    const repeat = ref(1);
+    return {
+      picnicRequirements,
+      repeat,
+    };
+  },
+  methods: {
+    getFoodImagePath(item: string): string {
+      let cleaned = item.toLowerCase().replace(" ", "-");
+      return `assets/food/${cleaned}.png`;
+    },
+  },
+});
+</script>
