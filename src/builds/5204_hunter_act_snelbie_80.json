@@ -1,6 +1,7 @@
 {
   "title": "Hunter Active Snelbie (80+)",
-  "template": "hunter",
+  "class": "arc",
+  "subclass": "hun",
   "comment_one": "*50= IMPORTANT: You need ~540 mana to sustain, so level mana until you hit that\n*1 = Enough for 1.8k+ accuracy\nLevel agility last",
   "comment_two": "Movement speed doesn't matter at snelbies, so max piercing arrow then your 2 big damage talents",
   "comment_three": "Uwu Rawrr is the key for this build. If you have the desert respawn merit maxed, 60 in uwu is all you need.\nDon't go over 90 on traps\n*20 = Fill in damage with leftover points",

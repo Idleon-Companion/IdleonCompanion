@@ -1,6 +1,7 @@
 {
   "title": "Barbarian Active (100)",
-  "template": "barbarian",
+  "class": "war",
+  "subclass": "bar",
   "comment_one": "*1= Boost your wis to reliably hit crystal at nuttos/snelbies.\nAfter maxing dmg talents you want to go for hp talents, to boost \"Meatshank\" bonus",
   "comment_two": "After maxing dmg talents you want to go for hp talents, to boost \"Meatshank\" bonus",
   "comment_three": "Max \"Apocalypse Zow\", \"Back to Basics\" and \"No Pain No Gain\" then put points into other active skills.",

@@ -1,6 +1,7 @@
 {
   "title": "Shaman C.Amarok Killer (90+)",
-  "template": "shaman",
+  "class": "mag",
+  "subclass": "sha",
   "comment_one": "*1 = As much as needed to hit ~2.6k accuracy AFTER accuracy cards equipped\n*100 = max this last",
   "comment_two": "*100 talent to max before *99 to max\n*25 = Depends on chopping high score",
   "comment_three": "﻿﻿﻿Virile Vials are a huge damage boost, and crazy concotions will be your main source of burst damage",

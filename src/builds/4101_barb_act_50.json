@@ -1,6 +1,7 @@
 {
   "title": "Barbarian Active (50)",
-  "template": "barbarian",
+  "class": "war",
+  "subclass": "bar",
   "comment_one": "*1= Boost wis to have 405 accuracy (Sand castles) as thats the zone you will be spending quite some time at this level.\nPriority switches to Gilded sword > Meatshank > Sharpened axe",
   "comment_two": "Put 1 point into active skills, then 41 into 'Double strike' for 50%\nMaxing 'Carry a Big Stick' then putting 20 points each into 'Absolute Unit' and 'Strength in Numbers' is probably gonna take all your points at this level.",
   "comment_three": "Put 1 point in every active skill then everything into 'Back to Basics'",

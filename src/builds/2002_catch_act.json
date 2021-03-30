@@ -1,6 +1,7 @@
 {
   "title": "Catching Active / AFK (Bowman)",
-  "template": "bowman",
+  "class": "arc",
+  "subclass": "bow",
   "comment_one": "Max out both \"Elusive efficiency\"  and \"Quickness boots\"\n*1- you can invest into \"Broken time\" with excess points.",
   "comment_two": "Max \"Sanic speed\" and \"Garb of Un'AGI'ng Quality\" to boost \"Briar patch runner on tab 3\n\"Focused Soul\" for xp gains",
   "comment_three": "You have ability to invest into 3 efficiency skills overall, \"Briar patch runner\" and \"Teleki'Net'ic\" are both great sources of that.\nConsider maxing out \"Sunset on Hives\" for more afk  gains, \"Bug enthusiast\" is for speeding up xp gain.",

@@ -1,6 +1,7 @@
 {
   "title": "Journeyman AFK (~55)",
-  "template": "journeyman",
+  "class": "jma",
+  "subclass": "",
   "comment_one": "*1 = As much as needed for the zone you want to afk in.",
   "comment_two": "Leveling active skills will help with AFK damage, even if they arent combat related",
   "comment_three": "",

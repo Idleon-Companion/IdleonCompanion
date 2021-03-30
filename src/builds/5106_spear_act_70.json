@@ -1,6 +1,7 @@
 {
   "title": "\"Spearmen\" Active (~70+)",
-  "template": "bowman",
+  "class": "arc",
+  "subclass": "bow",
   "comment_one": "AGI as last thing to max\n*1 = As much as needed.\nUse extra points as you see fit. Crit, luck, wisdom/mana if you have mana issues",
   "comment_two": "Veins of inferal is very strong as you get higher smithing, Just watch your damage per point if you go past ~50 or so and compare to high poly limbs\n*1= extra points can go to AGI if you need damage to 1 shot, or drop rarity of not.",
   "comment_three": "Max \"SpeeDna\", \"Extendo Rangeo\" and \"Homing Arrows\", excess points can go towards maxing \"Magic Shortbow\" or \"Woah, that was fast!\"",

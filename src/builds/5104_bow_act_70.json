@@ -1,6 +1,7 @@
 {
   "title": "Bowman / Active (&lt;lvl 70)",
-  "template": "bowman",
+  "class": "arc",
+  "subclass": "bow",
   "comment_one": "Priority is \"Fist of Rage\" > \"Featherweight\" then dmg talents.\n*1 = As much as needed.",
   "comment_two": "You want to prioritise \"Strafe\" > \"Have Another!\" > \"High Polymer Limbs\" > \"Veins of the Infernal\" > \"Piercing Arrow\"\n*1= As much as needed for 130% with 5-15 points in \"Featherweight\"",
   "comment_three": "You want to prioritise \"SpeeDna\" up to 50-60 points first, then invest into \"Previous Points\"\nExcess points can go towards \"Homing Arrows\"",

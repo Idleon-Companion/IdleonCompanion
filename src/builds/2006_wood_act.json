@@ -1,6 +1,7 @@
 {
   "title": "Woodcutter Active / AFK (Mage)",
-  "template": "shaman",
+  "class": "mag",
+  "subclass": "sha",
   "comment_one": "You want to max \"Active AFKer\" and \"Smart Efficiency\", then \"Book of the Wise\".\n*1 - You can invest here if your alchemy bubble is giving nice bonus to efficiency.",
   "comment_two": "You want to max \"Log on Logs\", then mix chopping talents.\n*1 - You can invest here if your alchemy bubble is giving nice bonus to efficiency.",
   "comment_three": "Get \"Stupendous Statues\" and \"Earlier Education\" to 100.\nExcess points can go towards \"Wis Wumbo\"",

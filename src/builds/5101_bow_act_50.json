@@ -1,6 +1,7 @@
 {
   "title": "Bowman Active (50)",
-  "template": "bowman",
+  "class": "arc",
+  "subclass": "bow",
   "comment_one": "*1= Boost str to have 405 accuracy (Sand castles) as thats the zone you will be spending quite some time at this level.\nAt this level you can start prioritising \"Gilded sword\" over \"Sharpened axe\"",
   "comment_two": "You want to prioritise \"Strafe\" > \"Have Another!\" > \"High Polymer Limbs\" > \"Piercing Arrow\" >\"Veins of the Infernal\"\n*1= As much as needed for 130% with 5-15 points in \"Featherweight\"",
   "comment_three": "Put 1 point in each active skill then you want to prioritise \"SpeeDna\" up to 40 points first, then invest into \"Previous Points\"",

@@ -1,6 +1,7 @@
 {
   "title": "Journeyman Active (~70)",
-  "template": "journeyman",
+  "class": "jma",
+  "subclass": "",
   "comment_one": "Best best is to compare points and see what gives you more damage",
   "comment_two": "Whip is your only damaging skill and it isnt that strong, so activing will be rough",
   "comment_three": "",

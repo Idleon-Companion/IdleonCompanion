@@ -1,6 +1,7 @@
 {
   "title": "Barbarian Active (&lt;lvl 70)",
-  "template": "barbarian",
+  "class": "war",
+  "subclass": "bar",
   "comment_one": "Priority is \"Book of the Wise\" then dmg talents then \"Lucky Clover\" for more EXP gains.\n*1 = As much as needed.\n*2 = Put rest of points here.",
   "comment_two": "Go for 1 in each active skill, then 50 % in \"Double Strike\", max \"Carry A Big Stick\", then mix \"Absolute Unit\" and \"Strength in numbers\".\n",
   "comment_three": "Go for 1 in each active skill, then you want to max \"Back to Basics\",  after that max \"Bear Claw\" for faster clear.",

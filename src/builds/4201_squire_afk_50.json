@@ -1,6 +1,7 @@
 {
   "title": "Squire AFK (50)",
-  "template": "squire",
+  "class": "war",
+  "subclass": "sqr",
   "comment_one": "*1= Boost wis to have 405 accuracy (Sand castles) as thats the zone you will be spending quite some time at this level.\n\"Idle Brawling\" to 75 for 12%.\nPriority switches to Gilded sword > Meatshank > Sharpened axe",
   "comment_two": "You want to level up the three active skills to 35 and use \"Carry a Big Stick\" to get your sheet damage up",
   "comment_three": "Level the 4 active skills evenly on this tab\nIMPORTANT: Do not activate balanced spirit, just put it on your bar and never ever click it",

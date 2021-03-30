@@ -1,6 +1,7 @@
 {
   "title": "Archer Build (~35)",
-  "template": "archer",
+  "class": "arc",
+  "subclass": "",
   "comment_one": "*1 = As much as you to reach 218accuracy (for mimics)\nYou can mix \"Sharpened sword\" with \"Gilded sword\" in regular archer build.",
   "comment_two": "Put 1 points into each active skill then max \"High polymer limbs\"\nNot gonna lie, that's probably all the points youre gonna have at this level.",
   "comment_three": "",

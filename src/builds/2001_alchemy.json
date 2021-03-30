@@ -1,6 +1,7 @@
 {
   "title": "Alchemy / AFK Shaman",
-  "template": "shaman",
+  "class": "mag",
+  "subclass": "sha",
   "comment_one": "Max \"Book of the Wise\"",
   "comment_two": "Max \"Individual Insight\" and \"Untwisted Robes\"",
   "comment_three": "\"Cranium Cooking\" has too long cooldown to be considered effective right now.\nPick the alch talents as needed for your current goal. Most likely, you will do brew speed and sharing talent first",

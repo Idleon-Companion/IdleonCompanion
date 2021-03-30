@@ -1,6 +1,7 @@
 {
   "title": "Hunter AFK (~90)",
-  "template": "hunter",
+  "class": "arc",
+  "subclass": "hun",
   "comment_one": "Priority is \"Idle Shooting\" > \"Fist of Rage\" > \"Featherweight\" then dmg talents.\n\"Broken Time\" is nice talent point sink when you dont need accuracy/dmg.\n*1 =Once you are damage capped, max this at sand giants to 200% MS",
   "comment_two": "Prioritise  Strafe, then max \"Piercing Arrow\" and \"Kung Fu Kick\" , \"Polymer Limbs\" and \"Veins of the Infernal\" are good dmg boost.\n*1= Once you are damage capped with the above, push strafe and featherweight as high as you can as sand giants speed cap is 200%+ MS",
   "comment_three": "Level the 4 active skills evenly on this tab\n*20= Use this to bring your damage up as needed to hit damage cap",

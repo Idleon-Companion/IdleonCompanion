@@ -1,6 +1,7 @@
 {
   "title": "Fishing Active / AFK (Barbarian)",
-  "template": "barbarian",
+  "class": "war",
+  "subclass": "bar",
   "comment_one": "You want to max \"Idle Skilling\" and \"Brute Efficiency\", then  \"Fist of Rage\"",
   "comment_two": "Maxing \"Absolute Unit\" and \"Firmly Grasp it\" gives some efficiency.\n\"Tempestous Emotions\" provide extra xp.",
   "comment_three": "Max \"Worming Undercover\" and \"Catching some ZZZ's\", boost \"All fish diet\" if you're going for xp\n*1 = Boost it to around your minigame score.\n*2 = Excess points here.",

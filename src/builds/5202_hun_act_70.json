@@ -1,6 +1,7 @@
 {
   "title": "Hunter Active (~70)",
-  "template": "hunter",
+  "class": "arc",
+  "subclass": "hun",
   "comment_one": "*1 = Strength as needed for accuracy\n*2 = Extra points here after Gilded and Axe are maxed and you hit accuracy needs",
   "comment_two": "Limbs and Veins for damage. Piercing arrow for clear",
   "comment_three": "After you max damage from items, start working on uwu rawrrr and traps. Goal is to get both to 100.",

@@ -1,6 +1,7 @@
 {
   "title": "Smithing / AFK (Archer)",
-  "template": "bowman",
+  "class": "arc",
+  "subclass": "bow",
   "comment_one": "\"Broken Time\" is a nice way of speeding up anvil produce time. Max this.\nAgility also affects smithing speed.",
   "comment_two": "\"Godly Creation\" gives you 29% (lvl 100).\n \"Acme Anvil\" gives you anvil points to spend.\n\"Focused Soul\" will increase your xp gain from producing.\n\"Sanic Speed\" and \"Garb of Un'AGI'ng Quality\" will help you boosting your agility.",
   "comment_three": "\"Shwifty Statues\" Boosts your Anvil Statues.\n\"Agi Again\" will help boosting your production speed a bit.",

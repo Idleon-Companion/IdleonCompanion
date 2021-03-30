@@ -1,6 +1,7 @@
 {
   "title": "Barbarian Zow Farming (85)",
-  "template": "barbarian",
+  "class": "war",
+  "subclass": "bar",
   "comment_one": "*1= Boost your wis to reliably hit every mob in the game. After maxing dmg talents you want to go for hp talents, to boost \"Meatshank\" bonus",
   "comment_two": "After maxing dmg talents you want to go for hp talents, to boost \"Meatshank\" bonus\n*41= After you get minimum damage high enough to 1 shot the mob your farming, move these points to %HP",
   "comment_three": "Max \"Monster decimator\" and \"Back to Basics\", then put points into active skills.\n*1 = max it around 5 \"Apocalypse zow\" procs\n*20 = max this after maxing Zow",

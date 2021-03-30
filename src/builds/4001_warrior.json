@@ -1,6 +1,7 @@
 {
   "title": "Warrior Build (~35)",
-  "template": "warrior",
+  "class": "war",
+  "subclass": "",
   "comment_one": "*1 = As much as you to reach 218 accuracy (for mimics) After fixing Accuracy prioritise Sharpened axe > Gilded Sword > Meatshank",
   "comment_two": "Put 1 points into each active skill then max 'Carry a Big Stick'\nNot gonna lie, that's probably all the points youre gonna have at this level.",
   "comment_three": "",

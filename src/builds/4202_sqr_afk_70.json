@@ -1,6 +1,7 @@
 {
   "title": "Squire AFK (~lvl 70)",
-  "template": "squire",
+  "class": "war",
+  "subclass": "sqr",
   "comment_one": "Priority is \"Idle Skilling\" > \"Book of the Wise\" then dmg talents.\n*1 = As much as needed for the zone you want to afk in.",
   "comment_two": "Go for ~50 in each active skill, then you want to max \"Carry A Big Stick\", then mix \"Absolute Unit\" and \"Strength in numbers\".",
   "comment_three": "Level the 4 active skills evenly on this tab\nIMPORTANT: Do not activate balanced spirit, just put it on your bar and never ever click it",

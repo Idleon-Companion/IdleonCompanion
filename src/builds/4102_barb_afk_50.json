@@ -1,6 +1,7 @@
 {
   "title": "Barbarian AFK (50)",
-  "template": "barbarian",
+  "class": "war",
+  "subclass": "bar",
   "comment_one": "*1= Boost wis to have 405 accuracy (Sand castles) as thats the zone you will be spending quite some time at this level.\n\"Idle Brawling\" to 75 for 12%\nPriority switches to Gilded sword > Meatshank > Sharpened axe",
   "comment_two": "You want to level up active skills to about 35.\n\"Carry a Big Stick\", \"Absolute unit\" and \"Strength in Numbers\" have less priority in afk builds.",
   "comment_three": "Level up \"Bear Strike\" and \"Axe hurl\" to around 30, still 1 point into \"Mocking shout\".\n*1= you can put some points into \"Back to basics\" if youre lacking points on tab 2.",

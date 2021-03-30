@@ -1,6 +1,7 @@
 {
   "title": "Journeyman AFK (~70)",
-  "template": "journeyman",
+  "class": "jma",
+  "subclass": "",
   "comment_one": "Journeyman has 4 talents that impact damage in tab 1. Once you get those maxed, it is up to you what you want - you can go for HP/defense for survivability, movespeed, etc",
   "comment_two": "Leveling active skills will help with AFK damage, even if they arent combat related.\n*1 - At this point, you can start putting some points into non-combat bonuses, depending on what you are looking for",
   "comment_three": "",
