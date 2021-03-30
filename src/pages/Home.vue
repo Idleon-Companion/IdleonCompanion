@@ -5,7 +5,7 @@
         <img
           class="img d-inline my-4 ml-4"
           style="height: 6rem"
-          src="../assets/bg/logo-clean.png"
+          src="assets/bg/logo-clean.png"
         />
         <h1 class="display-4 d-sm-inline-block d-none align-middle ml-4">
           Idleon Companion
@@ -145,7 +145,9 @@
         <a class="nav-link" data-toggle="tab" href="#checklist">Checklist</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#calc">King of Food</a>
+        <a class="nav-link" data-toggle="tab" href="#picnic-quest"
+          >King of Food</a
+        >
       </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#builds">Builds</a>
@@ -165,20 +167,11 @@
       <div class="tab-pane fade" id="checklist">
         <!-- <?php include "pages/checklist.php" ?> -->
       </div>
-      <!--  KING OF FOOD  -->
-      <div class="tab-pane fade" id="calc">
-        <!-- <?php include "pages/king-of-food.php" ?> -->
-      </div>
+      <div class="tab-pane fade" id="picnic-quest"><PicnicQuest /></div>
       <!--  BUILDS  -->
       <div class="tab-pane fade" id="builds"><Builds /></div>
-      <!--  CARD SETS -->
-      <div class="tab-pane fade p-3" id="cards">
-        <!-- <?php include "pages/cards.php" ?> -->
-      </div>
-      <!--  CREDITS -->
-      <div class="tab-pane fade" id="credits">
-        <!-- <?php include "pages/credits.php" ?> -->
-      </div>
+      <div class="tab-pane fade p-3" id="cards"><Cards /></div>
+      <div class="tab-pane fade" id="credits"><Credits /></div>
     </div>
   </div>
   <div class="footer m-5"></div>
@@ -187,12 +180,18 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Builds from "../components/Builds.vue";
+import Cards from "../components/Cards.vue";
+import Credits from "../components/Credits.vue";
+import PicnicQuest from "../components/PicnicQuest.vue";
 import Tasks from "../components/Tasks.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
     Builds,
+    Cards,
+    Credits,
+    PicnicQuest,
     Tasks,
   },
 });

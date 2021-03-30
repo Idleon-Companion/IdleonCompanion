@@ -15,7 +15,7 @@
           <div class="card-body talent-container p-2" id="skill_tab_one">
             <div v-for="i in 15" :key="i" class="bs-component disabled">
               <img
-                src="../assets/talents/empty.png"
+                src="assets/talents/empty.png"
                 class="img-fuid img-thumbnail"
               />
               <p
@@ -34,7 +34,7 @@
           <div class="card-body talent-container p-2" id="skill_tab_one">
             <div v-for="i in 15" :key="i" class="bs-component disabled">
               <img
-                src="../assets/talents/empty.png"
+                src="assets/talents/empty.png"
                 class="img-fuid img-thumbnail"
               />
               <p
@@ -53,7 +53,7 @@
           <div class="card-body talent-container p-2" id="skill_tab_one">
             <div v-for="i in 15" :key="i" class="bs-component disabled">
               <img
-                src="../assets/talents/empty.png"
+                src="assets/talents/empty.png"
                 class="img-fuid img-thumbnail"
               />
               <p
