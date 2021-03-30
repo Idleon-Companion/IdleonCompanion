@@ -136,11 +136,10 @@ export default defineComponent({
       if (role === "") {
         image = "empty";
       }
-      if (role === "sqr" && slot < 15 && slot >= 11) {
-        image = "sqr-filler";
-      }
-      if (role === "hun" && slot < 15 && slot >= 11) {
-        image = "hun-filler";
+      if (slot >= 11 && slot < 15) {
+        if (["sqr", "hun", "wiz"].includes(role)) {
+          image = role + "-filler";
+        }
       }
       return `assets/talents/${image}.png`;
     },
