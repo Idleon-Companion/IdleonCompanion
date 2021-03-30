@@ -5,19 +5,11 @@
     </h4>
     <div v-else>
       <h4>Your Characters</h4>
-      <div
+      <CharacterCard
         v-for="(char, i) in chars.characters"
         :key="i"
-        class="bg-secondary p-2 w-50 mx-auto"
-      >
-        <div class="d-flex">
-          <img :src="getClassImagePath(char)" class="char-icon" />
-          <div class="d-flex flex-column">
-            <div>{{ char.name }}</div>
-            <em>Level {{ char.level }} - {{ charClassText(char) }}</em>
-          </div>
-        </div>
-      </div>
+        :char="char"
+      />
     </div>
 
     <h2>Add New Character</h2>
@@ -48,10 +40,15 @@
 
 <script lang="ts">
 import { defineComponent, inject, reactive } from "vue";
-import { Class, Subclass, Character, CharacterManager } from "../State";
+import { Class, Character, CharacterManager } from "../State";
+
+import CharacterCard from "../components/CharacterCard.vue";
 
 export default defineComponent({
   name: "Characters",
+  components: {
+    CharacterCard,
+  },
   setup() {
     const chars = inject("chars") as CharacterManager;
     const newChar = reactive({
@@ -82,28 +79,10 @@ export default defineComponent({
       newChar,
     };
   },
-  methods: {
-    charClassText(char: Character): string {
-      let classes = [char.class, char.subclass].filter((x) => x !== null);
-      return classes.join(" / ");
-    },
-    getClassImagePath(char: Character): string {
-      let image = char.class as string;
-      if (char.subclass) {
-        image = char.subclass as string;
-      }
-      return `assets/classes/${image}.png`;
-    },
-  },
 });
 </script>
 
 <style>
-.char-icon {
-  object-fit: contain;
-  height: 4rem;
-  width: 4rem;
-}
 .char-input {
   outline: none;
   padding: 0.25rem;
