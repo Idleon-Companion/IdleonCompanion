@@ -10,6 +10,7 @@
         <h1 class="display-4 d-sm-inline-block d-none align-middle ml-4">
           Idleon Companion
         </h1>
+        <CharacterSelector />
       </div>
       <div class="col-xs-3">
         <a
@@ -183,6 +184,7 @@ import { defineComponent } from "vue";
 import Builds from "../components/Builds.vue";
 import Cards from "../components/Cards.vue";
 import Credits from "../components/Credits.vue";
+import CharacterSelector from "../components/CharacterSelector.vue";
 import PicnicQuest from "../components/PicnicQuest.vue";
 import ProgressTracker from "../components/ProgressTracker.vue";
 import Tasks from "../components/Tasks.vue";
@@ -194,6 +196,7 @@ export default defineComponent({
     Builds,
     Cards,
     Characters,
+    CharacterSelector,
     Credits,
     PicnicQuest,
     ProgressTracker,

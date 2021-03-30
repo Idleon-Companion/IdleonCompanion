@@ -5,11 +5,7 @@
     </h4>
     <div v-else>
       <h4>Your Characters</h4>
-      <CharacterCard
-        v-for="(char, i) in chars.characters"
-        :key="i"
-        :char="char"
-      />
+      <CharacterCard v-for="(char, i) in characters" :key="i" :char="char" />
     </div>
 
     <h2>Add New Character</h2>
@@ -70,12 +66,13 @@ export default defineComponent({
       } as Character;
       newChar.name = "";
       newChar.level = 1;
-      chars.characters.push(char);
+      chars.characters.value.push(char);
     };
 
     return {
       addCharacter,
       chars,
+      characters: chars.characters.value,
       newChar,
     };
   },

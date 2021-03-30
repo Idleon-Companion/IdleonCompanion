@@ -1,3 +1,5 @@
+import { ref, Ref } from "vue";
+
 export class StateManager {
   private version: string;
 
@@ -44,21 +46,21 @@ export type Character = {
   statues: Record<string, number>;
 };
 export class CharacterManager {
-  public characters: Array<Character>;
+  public characters: Ref<Array<Character>>;
   private index: number;
 
   constructor(characters: Array<Character>) {
-    this.characters = characters;
+    this.characters = ref(characters);
     this.index = 0;
   }
 
   get numCharacters(): number {
-    return this.characters.length;
+    return this.characters.value.length;
   }
 
   get curCharacter(): Character | null {
     if (this.numCharacters > 0) {
-      return this.characters[this.index];
+      return this.characters.value[this.index];
     } else {
       return null;
     }

@@ -22,7 +22,11 @@ export default defineComponent({
       type: Object as PropType<Character>,
     },
   },
-  setup() {},
+  setup(props) {
+    return {
+      char: props.char,
+    };
+  },
   methods: {
     charClassText(char: Character): string {
       let classes = [char.class, char.subclass].filter((x) => x !== null);
