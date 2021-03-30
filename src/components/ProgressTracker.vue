@@ -38,7 +38,7 @@
                 class="custom-control-input"
                 type="checkbox"
                 :id="item.name"
-                :checked="checklist[item.name]"
+                :checked="checklist[item.name][0]"
                 @change="handleProgressCheck(item.name)"
               />
               <label class="custom-control-label" :for="item.name"></label>
@@ -50,8 +50,8 @@
                 class="custom-control-input"
                 type="checkbox"
                 :id="item.name + n"
-                :checked="checklist[item.name + '-' + n]"
-                @change="handleProgressCheck(item.name + '-' + n)"
+                :checked="checklist[item.name][n]"
+                @change="handleProgressCheck(item.name, n)"
               />
               <label class="custom-control-label" :for="item.name + n"></label>
             </div>
@@ -72,33 +72,34 @@ export default defineComponent({
   setup() {
     const numCharacters = ref(7);
 
-    const checklist: Record<string, boolean> = {};
+    const checklist: Record<string, Array<boolean>> = {};
     const state = inject("state") as StateManager;
     const saved = JSON.parse(state.load("checklist"));
 
     for (const data of Object.values(checklistData)) {
       for (const item of data.items) {
         if (data.global) {
-          if (saved !== null && saved[item.name]) {
-            checklist[item.name] = true;
+          if (saved !== null && saved[item.name][0]) {
+            checklist[item.name] = [true];
           } else {
-            checklist[item.name] = false;
+            checklist[item.name] = [false];
           }
         } else {
-          for (const n of Array(numCharacters.value).keys()) {
-            let key = `${item.name}-${n}`;
-            if (saved !== null && saved[key]) {
-              checklist[key] = true;
-            } else {
-              checklist[key] = false;
-            }
+          if (saved !== null) {
+            checklist[item.name] = saved[item.name];
+          } else {
+            checklist[item.name] = new Array(numCharacters.value).fill(false);
           }
         }
       }
     }
 
-    const handleProgressCheck = (item: string) => {
-      checklist[item] = !checklist[item];
+    const handleProgressCheck = (item: string, n?: number) => {
+      if (n !== undefined) {
+        checklist[item][n] = !checklist[item][n];
+      } else {
+        checklist[item][0] = !checklist[item][0];
+      }
       state.save("checklist", JSON.stringify(checklist));
     };
 
