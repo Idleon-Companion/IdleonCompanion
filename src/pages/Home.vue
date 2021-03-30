@@ -113,7 +113,7 @@
           </div>
           <div class="modal-body">
             <p class="text-light">
-              Your timer expired, Would you like to reset your daily tasks?.
+              Your timer expired, would you like to reset your daily tasks?
             </p>
           </div>
           <div class="modal-footer">
@@ -146,7 +146,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#picnic-quest"
-          >King of Food</a
+          >Picnic Quest</a
         >
       </li>
       <li class="nav-item">
@@ -164,11 +164,8 @@
       <!--  TASKS  -->
       <div class="tab-pane fade active show" id="tasks"><Tasks /></div>
       <!-- checklist -->
-      <div class="tab-pane fade" id="checklist">
-        <!-- <?php include "pages/checklist.php" ?> -->
-      </div>
+      <div class="tab-pane fade" id="checklist"><ProgressTracker /></div>
       <div class="tab-pane fade" id="picnic-quest"><PicnicQuest /></div>
-      <!--  BUILDS  -->
       <div class="tab-pane fade" id="builds"><Builds /></div>
       <div class="tab-pane fade p-3" id="cards"><Cards /></div>
       <div class="tab-pane fade" id="credits"><Credits /></div>
@@ -183,6 +180,7 @@ import Builds from "../components/Builds.vue";
 import Cards from "../components/Cards.vue";
 import Credits from "../components/Credits.vue";
 import PicnicQuest from "../components/PicnicQuest.vue";
+import ProgressTracker from "../components/ProgressTracker.vue";
 import Tasks from "../components/Tasks.vue";
 
 export default defineComponent({
@@ -192,6 +190,7 @@ export default defineComponent({
     Cards,
     Credits,
     PicnicQuest,
+    ProgressTracker,
     Tasks,
   },
 });
