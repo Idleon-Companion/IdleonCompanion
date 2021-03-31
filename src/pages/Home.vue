@@ -1,26 +1,11 @@
 <template>
   <div class="container">
     <div class="row justify-content-between pt-3">
-      <div class="col-xs-9">
-        <img
-          class="img d-inline my-4 ml-4"
-          style="height: 6rem"
-          src="assets/bg/logo-clean.png"
-        />
-        <h1 class="display-4 d-sm-inline-block d-none align-middle ml-4">
-          Idleon Companion
-        </h1>
+      <div class="d-flex align-items-center">
+        <div id="logo" class="display-4">Idleon Companion</div>
       </div>
-      <div class="col-xs-3">
-        <a
-          type="button"
-          class="btn btn-outline-light m-2"
-          data-toggle="modal"
-          data-target="#clockModal"
-        >
-          <p class="m-0 text-left"><small>Reset Timer</small></p>
-          <h3 class="display-4 m-0" id="clock"></h3>
-        </a>
+      <div class="col-4">
+        <CharacterSelector />
       </div>
     </div>
     <!-- Modal -->
@@ -156,6 +141,9 @@
         <a class="nav-link" data-toggle="tab" href="#cards">Card Sets</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#characters">Characters</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#credits">Credits</a>
       </li>
     </ul>
@@ -168,6 +156,7 @@
       <div class="tab-pane fade" id="picnic-quest"><PicnicQuest /></div>
       <div class="tab-pane fade" id="builds"><Builds /></div>
       <div class="tab-pane fade p-3" id="cards"><Cards /></div>
+      <div class="tab-pane fade p-3" id="characters"><Characters /></div>
       <div class="tab-pane fade" id="credits"><Credits /></div>
     </div>
   </div>
@@ -179,15 +168,19 @@ import { defineComponent } from "vue";
 import Builds from "../components/Builds.vue";
 import Cards from "../components/Cards.vue";
 import Credits from "../components/Credits.vue";
+import CharacterSelector from "../components/CharacterSelector.vue";
 import PicnicQuest from "../components/PicnicQuest.vue";
 import ProgressTracker from "../components/ProgressTracker.vue";
 import Tasks from "../components/Tasks.vue";
+import Characters from "../pages/Characters.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
     Builds,
     Cards,
+    Characters,
+    CharacterSelector,
     Credits,
     PicnicQuest,
     ProgressTracker,
