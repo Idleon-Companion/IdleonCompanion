@@ -1,15 +1,20 @@
 <template>
   <div class="bg-dark p-4 rounded">
-    <h4 v-if="chars.numCharacters === 0">
+    <h4 v-if="numCharacters === 0">
       You have no characters. Add new ones below!
     </h4>
     <div v-else>
-      <h4>Your Characters</h4>
-      <CharacterCard v-for="(char, i) in characters" :key="i" :char="char" />
+      <h4>Edit Characters (TODO)</h4>
+      <div
+        v-for="(char, i) in characters"
+        :key="i"
+        class="bg-primary p-2 w-25 rounded mb-1"
+      >
+        <CharacterCard :char="char" />
+      </div>
     </div>
-
-    <h2>Add New Character</h2>
-    <div class="row w-50 flex-column p-3">
+    <h4 class="mt-4">Add New Character</h4>
+    <div class="row w-50 flex-column px-3">
       <label for="newchar-name">Name</label>
       <input
         id="newchar-name"
@@ -35,8 +40,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, inject, reactive } from "vue";
-import { Class, Character, CharacterManager } from "../State";
+import { defineComponent, reactive } from "vue";
+import { Class, Character, useCharacters } from "../composables/Characters";
 
 import CharacterCard from "../components/CharacterCard.vue";
 
@@ -46,7 +51,7 @@ export default defineComponent({
     CharacterCard,
   },
   setup() {
-    const chars = inject("chars") as CharacterManager;
+    const { characters, numCharacters } = useCharacters();
     const newChar = reactive({
       name: "",
       level: 1,
@@ -66,14 +71,14 @@ export default defineComponent({
       } as Character;
       newChar.name = "";
       newChar.level = 1;
-      chars.characters.value.push(char);
+      characters.value.push(char);
     };
 
     return {
       addCharacter,
-      chars,
-      characters: chars.characters.value,
+      characters,
       newChar,
+      numCharacters,
     };
   },
 });

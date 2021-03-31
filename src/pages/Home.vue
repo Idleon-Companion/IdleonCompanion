@@ -1,27 +1,11 @@
 <template>
   <div class="container">
     <div class="row justify-content-between pt-3">
-      <div class="col-xs-9">
-        <img
-          class="img d-inline my-4 ml-4"
-          style="height: 6rem"
-          src="assets/bg/logo-clean.png"
-        />
-        <h1 class="display-4 d-sm-inline-block d-none align-middle ml-4">
-          Idleon Companion
-        </h1>
-        <CharacterSelector />
+      <div class="d-flex align-items-center">
+        <div id="logo" class="display-4">Idleon Companion</div>
       </div>
-      <div class="col-xs-3">
-        <a
-          type="button"
-          class="btn btn-outline-light m-2"
-          data-toggle="modal"
-          data-target="#clockModal"
-        >
-          <p class="m-0 text-left"><small>Reset Timer</small></p>
-          <h3 class="display-4 m-0" id="clock"></h3>
-        </a>
+      <div class="col-4">
+        <CharacterSelector />
       </div>
     </div>
     <!-- Modal -->
