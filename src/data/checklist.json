@@ -283,5 +283,215 @@
         "name": "Storage Chest 99C"
       }
     ]
+  },
+  "Combat Stamps": {
+    "global": true,
+    "items": [
+      {
+        "name": "Sword Stamp"
+      },
+      {
+        "name": "Heart Stamp"
+      },
+      {
+        "name": "Mana Stamp"
+      },
+      {
+        "name": "Tomahawk Stamp"
+      },
+      {
+        "name": "Target Stamp"
+      },
+      {
+        "name": "Shield Stamp"
+      },
+      {
+        "name": "Longsword Stamp"
+      },
+      {
+        "name": "Kapow Stamp"
+      },
+      {
+        "name": "Fist Stamp"
+      },
+      {
+        "name": "Battleaxe Stamp"
+      },
+      {
+        "name": "Agile Stamp"
+      },
+      {
+        "name": "Vitality Stamp"
+      },
+      {
+        "name": "Book Stamp"
+      },
+      {
+        "name": "Manamoar Stamp"
+      },
+      {
+        "name": "Clover Stamp"
+      },
+      {
+        "name": "Scimitar Stamp"
+      },
+      {
+        "name": "Bullseye Stamp"
+      },
+      {
+        "name": "Feather Stamp"
+      },
+      {
+        "name": "Polearm Stamp"
+      },
+      {
+        "name": "Violence Stamp"
+      },
+      {
+        "name": "Buckler Stamp"
+      },
+      {
+        "name": "Sukka Foo"
+      },
+      {
+        "name": "Arcane Stamp"
+      },
+      {
+        "name": "Steve Sword"
+      },
+      {
+        "name": "Blover Stamp"
+      },
+      {
+        "name": "Stat Graph Stamp"
+      },
+      {
+        "name": "Sword Stamp"
+      }
+    ]
+  },
+  "Skill Stamps": {
+    "global": true,
+    "items": [
+      {
+        "name": "Pickaxe Stamp"
+      },
+      {
+        "name": "Hatchet Stamp"
+      },
+      {
+        "name": "Anvil Zoomer Stamp"
+      },
+      {
+        "name": "Lil' Mining Baggy Stamp"
+      },
+      {
+        "name": "Twin Ores Stamp"
+      },
+      {
+        "name": "Choppin' Bag Stamp"
+      },
+      {
+        "name": "Duplogs Stamp"
+      },
+      {
+        "name": "Matty Bag Stamp"
+      },
+      {
+        "name": "Smart Dirt Stamp"
+      },
+      {
+        "name": "Cool Diggy Tool Stamp"
+      },
+      {
+        "name": "High IQ Lumber Stamp"
+      },
+      {
+        "name": "Swag Swingy Tool Stamp"
+      },
+      {
+        "name": "Smartas Smithing Stamp"
+      },
+      {
+        "name": "Alch Go Brrr Stamp"
+      },
+      {
+        "name": "Brainstew Stamp"
+      },
+      {
+        "name": "Drippy Drop Stamp"
+      },
+      {
+        "name": "Droplots Stamp"
+      },
+      {
+        "name": "Fishing Rod Stamp"
+      },
+      {
+        "name": "Fishhead Stamp"
+      },
+      {
+        "name": "Catch Net Stamp"
+      },
+      {
+        "name": "Fly Intel Stamp"
+      },
+      {
+        "name": "Bag o Heads Stamp"
+      },
+      {
+        "name": "Holy Mackerel Stamp"
+      },
+      {
+        "name": "Bugsack Stamp"
+      },
+      {
+        "name": "Buzz Buzz Stamp"
+      }
+    ]
+  },
+  "Misc Stamps": {
+    "global": true,
+    "items": [
+      {
+        "name": "Questin Stamp"
+      },
+      {
+        "name": "Mason Jar Stamp"
+      },
+      {
+        "name": "Crystallin Stamp"
+      },
+      {
+        "name": "Apple Stamp"
+      },
+      {
+        "name": "Potion Stamp"
+      },
+      {
+        "name": "Golden Apple Stamp"
+      },
+      {
+        "name": "Card Stamp"
+      },
+      {
+        "name": "Talent I Stamp"
+      },
+      {
+        "name": "Talent II Stamp"
+      },
+      {
+        "name": "Talent III Stamp"
+      },
+      {
+        "name": "Talent IV Stamp"
+      },
+      {
+        "name": "Talent V Stamp"
+      },
+      {
+        "name": "Talent S Stamp"
+      }
+    ]
   }
 }
