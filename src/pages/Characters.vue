@@ -8,9 +8,12 @@
       <div
         v-for="(char, i) in characters"
         :key="i"
-        class="bg-primary p-2 w-25 rounded mb-1"
+        class="d-flex align-items-center justify-content-between bg-primary p-2 w-25 rounded mb-1"
       >
         <CharacterCard :char="char" />
+        <div class="char-delete-icon" @click="deleteCharacter(i)">
+          <div class="iconify" data-icon="mdi:close"></div>
+        </div>
       </div>
     </div>
     <h4 class="mt-4">Add New Character</h4>
@@ -41,7 +44,12 @@
 
 <script lang="ts">
 import { defineComponent, reactive } from "vue";
-import { Class, Character, useCharacters } from "../composables/Characters";
+import {
+  Class,
+  Character,
+  Statues,
+  useCharacters,
+} from "../composables/Characters";
 
 import CharacterCard from "../components/CharacterCard.vue";
 
@@ -51,7 +59,7 @@ export default defineComponent({
     CharacterCard,
   },
   setup() {
-    const { characters, numCharacters } = useCharacters();
+    const { characters, numCharacters, saveCharacters } = useCharacters();
     const newChar = reactive({
       name: "",
       level: 1,
@@ -69,13 +77,23 @@ export default defineComponent({
         class: Class.Beginner,
         subclass: null,
       } as Character;
+      for (const name of Statues) {
+        char.statues[name] = 0;
+      }
       newChar.name = "";
       newChar.level = 1;
       characters.value.push(char);
+      saveCharacters();
+    };
+
+    const deleteCharacter = (i: number) => {
+      console.log("deleting:", i);
+      characters.value.splice(i, 1);
     };
 
     return {
       addCharacter,
+      deleteCharacter,
       characters,
       newChar,
       numCharacters,
@@ -84,9 +102,15 @@ export default defineComponent({
 });
 </script>
 
-<style>
-.char-input {
-  outline: none;
-  padding: 0.25rem;
-}
+<style scoped lang="sass">
+.char-delete-icon
+  cursor: pointer
+  font-size: 1.5rem
+  transition: 0.3s
+  &:hover
+    color: lighten(red, 15%)
+
+.char-input
+  outline: none
+  padding: 0.25rem
 </style>

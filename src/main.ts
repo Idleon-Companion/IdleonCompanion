@@ -7,7 +7,7 @@ import { useCharacters } from "./composables/Characters";
 
 const state = new StateManager(version);
 const { characters } = useCharacters();
-let charData = state.load("characters");
+let charData = state.load("chars");
 if (charData !== null) {
   characters.value = JSON.parse(charData);
 }
