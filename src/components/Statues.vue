@@ -13,13 +13,20 @@
     </div>
     <div class="statue-info">
       <h4>{{ curStatue }} Statue</h4>
-      <h5>Level {{ statues[curStatue] }}</h5>
+      <h5 class="d-flex align-items-center justify-content-center">
+        <div class="mr-2">Level</div>
+        <input
+          class="statue-level"
+          v-model="statues[curStatue]"
+          type="number"
+        />
+      </h5>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from "vue";
+import { defineComponent, ref } from "vue";
 
 import { useCharacters, Statues } from "../composables/Characters";
 
@@ -76,6 +83,11 @@ export default defineComponent({
     flex-direction: column
     justify-self: center
     padding: 1.5rem
+    .statue-level
+      background: var(--secondary)
+      border: none
+      outline: none
+      padding: 0.25rem
 .statue
   border-radius: 50%
   color: white
