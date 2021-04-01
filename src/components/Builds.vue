@@ -19,7 +19,7 @@
       <div class="card border-primary mb-2">
         <div class="card-header">Tab 1</div>
         <div class="card-body talent-container p-2" id="skill_tab_one">
-          <div v-for="i in 10" :key="i" class="bs-component disabled">
+          <div v-for="i in 10" :key="i" class="disabled">
             <img
               :src="getTalentImagePath('all', 1, i)"
               class="img-fuid img-thumbnail"
@@ -30,7 +30,7 @@
               {{ activeBuild.tab_one[i] }}
             </p>
           </div>
-          <div v-for="i in 5" :key="i" class="bs-component disabled">
+          <div v-for="i in 5" :key="i" class="disabled">
             <img
               :src="getTalentImagePath(activeBuild.class, 1, i)"
               class="img-fuid img-thumbnail"
@@ -51,7 +51,7 @@
       <div class="card border-primary mb-2">
         <div class="card-header">Tab 2</div>
         <div class="card-body talent-container p-2" id="skill_tab_one">
-          <div v-for="i in 15" :key="i" class="bs-component disabled">
+          <div v-for="i in 15" :key="i" class="disabled">
             <img
               :src="getTalentImagePath(activeBuild.class, 2, i)"
               class="img-fuid img-thumbnail"
@@ -76,7 +76,7 @@
       <div class="card border-primary mb-2">
         <div class="card-header">Tab 3</div>
         <div class="card-body talent-container p-2" id="skill_tab_one">
-          <div v-for="i in 15" :key="i" class="bs-component disabled">
+          <div v-for="i in 15" :key="i" class="disabled">
             <img
               :src="getTalentImagePath(activeBuild.subclass, 3, i)"
               class="img-fuid img-thumbnail"

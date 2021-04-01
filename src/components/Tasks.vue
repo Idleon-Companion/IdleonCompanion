@@ -1,15 +1,13 @@
 <template>
   <div class="row">
     <div class="col-lg-12 mt-3">
-      <div class="bs-component">
-        <div class="progress">
-          <div
-            id="progress"
-            class="progress-bar bg-success"
-            role="progressbar"
-            ref="progressBar"
-          ></div>
-        </div>
+      <div class="progress">
+        <div
+          id="progress"
+          class="progress-bar bg-success"
+          role="progressbar"
+          ref="progressBar"
+        ></div>
       </div>
     </div>
   </div>
