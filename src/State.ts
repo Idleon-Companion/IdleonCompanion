@@ -5,6 +5,10 @@ export class StateManager {
     console.log(`Idleon Companion loaded - v${version}`);
     this.version = version;
     // Perform version controlling here
+    if (version < "0.1.0") {
+      // Consider all previous stored data invalid
+      localStorage.clear();
+    }
   }
 
   // Load data from local storage

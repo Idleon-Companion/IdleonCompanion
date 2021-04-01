@@ -130,6 +130,9 @@
         <a class="nav-link" data-toggle="tab" href="#checklist">Checklist</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#statues">Statues</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#picnic-quest"
           >Picnic Quest</a
         >
@@ -149,10 +152,9 @@
     </ul>
 
     <div id="nav-tabContent" class="tab-content">
-      <!--  TASKS  -->
       <div class="tab-pane fade active show" id="tasks"><Tasks /></div>
-      <!-- checklist -->
       <div class="tab-pane fade" id="checklist"><ProgressTracker /></div>
+      <div class="tab-pane fade" id="statues"><Statues /></div>
       <div class="tab-pane fade" id="picnic-quest"><PicnicQuest /></div>
       <div class="tab-pane fade" id="builds"><Builds /></div>
       <div class="tab-pane fade p-3" id="cards"><Cards /></div>
@@ -171,6 +173,7 @@ import Credits from "../components/Credits.vue";
 import CharacterSelector from "../components/CharacterSelector.vue";
 import PicnicQuest from "../components/PicnicQuest.vue";
 import ProgressTracker from "../components/ProgressTracker.vue";
+import Statues from "../components/Statues.vue";
 import Tasks from "../components/Tasks.vue";
 import Characters from "../pages/Characters.vue";
 
@@ -184,6 +187,7 @@ export default defineComponent({
     Credits,
     PicnicQuest,
     ProgressTracker,
+    Statues,
     Tasks,
   },
 });
