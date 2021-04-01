@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
-    <div class="row justify-content-between pt-3">
-      <div class="d-flex align-items-center">
-        <div id="logo" class="display-4">Idleon Companion</div>
+  <div class="container pt-3">
+    <div class="row justify-content-between mb-5">
+      <div class="col-8 align-items-center">
+        <div id="logo" class="display-4 text-light">Idleon Companion</div>
       </div>
       <div class="col-4">
         <CharacterSelector />
@@ -122,42 +122,52 @@
       </div>
     </div>
     <!-- Nav -->
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs nav-dark" role="tablist">
+			<li class="nav-item">
+				<button class="nav-link text-light" 
+        data-bs-toggle="tab" data-bs-target="#tasks" type="button" 
+        role="tab" aria-controls="profile" aria-selected="false">Tasks</button>
+			</li>
+			<li class="nav-item">
+				<button class="nav-link text-light" 
+        data-bs-toggle="tab" data-bs-target="#checklist" type="button" 
+        role="tab" aria-controls="profile" aria-selected="false">Checklist</button>
+			</li>
+			<li class="nav-item">
+				<button class="nav-link text-light" 
+        data-bs-toggle="tab" data-bs-target="#picnic-quest" type="button" 
+        role="tab" aria-controls="profile" aria-selected="false">Picnic Quest</button>
+			</li>
+			<li class="nav-item">
+				<button class="nav-link text-light" 
+        data-bs-toggle="tab" data-bs-target="#builds" type="button" 
+        role="tab" aria-controls="profile" aria-selected="false">Builds</button>
+			</li>
+			<li class="nav-item">
+				<button class="nav-link text-light" 
+        data-bs-toggle="tab" data-bs-target="#cards" type="button" 
+        role="tab" aria-controls="profile" aria-selected="false">Card Sets</button>
+			</li>
       <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#tasks">Tasks</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#checklist">Checklist</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#picnic-quest"
-          >Picnic Quest</a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#builds">Builds</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#cards">Card Sets</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#characters">Characters</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#credits">Credits</a>
-      </li>
-    </ul>
+				<button class="nav-link text-light" 
+        data-bs-toggle="tab" data-bs-target="#characters" type="button" 
+        role="tab" aria-controls="profile" aria-selected="false">Characters</button>
+			</li>
+			<li class="nav-item">
+				<button class="nav-link text-light" 
+        data-bs-toggle="tab" data-bs-target="#credits" type="button" 
+        role="tab" aria-controls="profile" aria-selected="false">Credits</button>
+			</li>
+		</ul>
 
     <div id="nav-tabContent" class="tab-content">
-      <!--  TASKS  -->
       <div class="tab-pane fade active show" id="tasks"><Tasks /></div>
-      <!-- checklist -->
-      <div class="tab-pane fade" id="checklist"><ProgressTracker /></div>
-      <div class="tab-pane fade" id="picnic-quest"><PicnicQuest /></div>
-      <div class="tab-pane fade" id="builds"><Builds /></div>
-      <div class="tab-pane fade p-3" id="cards"><Cards /></div>
-      <div class="tab-pane fade p-3" id="characters"><Characters /></div>
-      <div class="tab-pane fade" id="credits"><Credits /></div>
+      <div class="tab-pane fade jumbotron" id="checklist"><ProgressTracker /></div>
+      <div class="tab-pane fade jumbotron" id="picnic-quest"><PicnicQuest /></div>
+      <div class="tab-pane fade jumbotron" id="builds"><Builds /></div>
+      <div class="tab-pane fade jumbotron" id="cards"><Cards /></div>
+      <div class="tab-pane fade jumbotron" id="characters"><Characters /></div>
+      <div class="tab-pane fade jumbotron" id="credits"><Credits /></div>
     </div>
   </div>
   <div class="footer m-5"></div>

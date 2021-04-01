@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-dark p-4 rounded">
-    <h4 v-if="numCharacters === 0">
+  <div class="p-4 rounded">
+    <h4 v-if="numCharacters === 0" class="text-light">
       You have no characters. Add new ones below!
     </h4>
     <div v-else>
-      <h4>Edit Characters (TODO)</h4>
+      <h4 class="text-light">Edit Characters (TODO)</h4>
       <div
         v-for="(char, i) in characters"
         :key="i"
@@ -13,7 +13,7 @@
         <CharacterCard :char="char" />
       </div>
     </div>
-    <h4 class="mt-4">Add New Character</h4>
+    <h4 class="text-light mt-4">Add New Character</h4>
     <div class="row w-50 flex-column px-3">
       <label for="newchar-name">Name</label>
       <input

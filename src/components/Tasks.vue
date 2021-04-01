@@ -18,18 +18,16 @@
       <div v-for="(task, i) in tasks" :key="i">
         <label
           :for="'task' + i"
-          class="list-group-item list-group-item-action active mb-0"
+          class="list-group-item list-group-item-action py-3"
         >
-          <div class="custom-control custom-checkbox">
-            <input
-              :id="'task' + i"
-              type="checkbox"
-              class="custom-control-input"
-              :checked="isTaskComplete(task)"
-              @change="handleTaskCheck(task)"
-            />
-            <p class="custom-control-label">{{ taskText(task) }}</p>
-          </div>
+        <input
+          :id="'task' + i"
+          type="checkbox"
+          class="form-check-input me-2"
+          :checked="isTaskComplete(task)"
+          @change="handleTaskCheck(task)"
+        />
+        {{ taskText(task) }}
         </label>
       </div>
     </div>

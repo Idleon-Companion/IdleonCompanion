@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron pt-3">
+  <div class="text-light">
     <div class="row">
       <div class="col">
         <h2 class="display-4">Credits</h2>
@@ -42,8 +42,8 @@
               They always say time changes things, but you actually have to
               change them yourself.
             </p>
-            <footer class="blockquote-footer">Andy Warhol</footer>
           </blockquote>
+          <figcaption class="blockquote-footer">Andy Warhol</figcaption>
         </div>
       </div>
     </div>
