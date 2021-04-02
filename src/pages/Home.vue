@@ -133,6 +133,11 @@
         data-bs-toggle="tab" data-bs-target="#checklist" type="button" 
         role="tab" aria-controls="profile" aria-selected="false">Checklist</button>
 			</li>
+      <li class="nav-item">
+        <button class="nav-link text-light" 
+        data-bs-toggle="tab" data-bs-target="#statues" type="button"
+        role="tab" aria-controls="profile" aria-selected="false">Statues</button>
+      </li>
 			<li class="nav-item">
 				<button class="nav-link text-light" 
         data-bs-toggle="tab" data-bs-target="#picnic-quest" type="button" 
@@ -163,6 +168,7 @@
     <div id="nav-tabContent" class="tab-content">
       <div class="tab-pane fade active show" id="tasks"><Tasks /></div>
       <div class="tab-pane fade jumbotron" id="checklist"><ProgressTracker /></div>
+      <div class="tab-pane fade" id="statues"><Statues /></div>
       <div class="tab-pane fade jumbotron" id="picnic-quest"><PicnicQuest /></div>
       <div class="tab-pane fade jumbotron" id="builds"><Builds /></div>
       <div class="tab-pane fade jumbotron" id="cards"><Cards /></div>
@@ -181,6 +187,7 @@ import Credits from "../components/Credits.vue";
 import CharacterSelector from "../components/CharacterSelector.vue";
 import PicnicQuest from "../components/PicnicQuest.vue";
 import ProgressTracker from "../components/ProgressTracker.vue";
+import Statues from "../components/Statues.vue";
 import Tasks from "../components/Tasks.vue";
 import Characters from "../pages/Characters.vue";
 
@@ -194,6 +201,7 @@ export default defineComponent({
     Credits,
     PicnicQuest,
     ProgressTracker,
+    Statues,
     Tasks,
   },
 });

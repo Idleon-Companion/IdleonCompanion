@@ -67,11 +67,19 @@ export default defineComponent({
 });
 </script>
 
-<style>
-.char-select-item {
-  padding: 0.35rem;
-}
-.char-select-item:not(:last-child) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+<style scoped lang="sass">
+.dropdown-menu
+  border: none
+  border-radius: 0
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.3)
+  width: 100%
+.char-select-item
+  cursor: pointer
+  opacity: 0.5
+  padding: 0.35rem
+  transition: 0.2s
+  &:hover
+    opacity: 1.0
+.char-select-item:not(:last-child)
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1)
 </style>
