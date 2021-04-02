@@ -1,17 +1,16 @@
 <template>
-  <div class="col table-responsive px-0 mt-3">
+  <div class="col table-responsive">
     <table
       v-for="(data, category) in checklistData"
       :key="category"
-      class="table text-center table-hover w-50 mx-auto"
+      class="table text-center table-hover mx-auto"
       id="checklist"
-      style="background-color: rgba(39, 43, 48, 0.8)"
     >
       <thead>
         <tr>
           <th class="table-info" colspan="8">{{ category }}</th>
         </tr>
-        <tr>
+        <tr class="text-light">
           <th scope="col">Character</th>
           <th v-for="n in numCharacters" :key="n" scope="col">{{ n }}</th>
         </tr>
@@ -19,42 +18,35 @@
       <tbody>
         <tr v-for="(item, i) in data.items" :key="i">
           <th
-            data-toggle="tooltip"
-            data-trigger="click"
-            data-delay='{"show":"100", "hide":"100"}'
             :title="item.name"
             scope="row"
             class="p-0"
           >
             <img
-              class="w-50 h-auto"
+              class="m-1"
               loading="lazy"
               :src="getItemImagePath(item.name)"
             />
           </th>
           <td v-if="data.global" :colspan="numCharacters">
-            <div class="custom-control custom-checkbox">
-              <input
-                class="custom-control-input"
-                type="checkbox"
-                :id="item.name"
-                :checked="checklist[item.name][0]"
-                @change="handleProgressCheck(item.name)"
-              />
-              <label class="custom-control-label" :for="item.name"></label>
-            </div>
+            <input
+              class="form-check-input"
+              type="checkbox"
+              :id="item.name"
+              :checked="checklist[item.name][0]"
+              @change="handleProgressCheck(item.name)"
+            />
+            <label class="form-check-label" :for="item.name"></label>
           </td>
           <td v-else v-for="n in numCharacters" :key="n">
-            <div class="custom-control custom-checkbox">
-              <input
-                class="custom-control-input"
-                type="checkbox"
-                :id="item.name + n"
-                :checked="checklist[item.name][n]"
-                @change="handleProgressCheck(item.name, n)"
-              />
-              <label class="custom-control-label" :for="item.name + n"></label>
-            </div>
+            <input
+              class="form-check-input"
+              type="checkbox"
+              :id="item.name + n"
+              :checked="checklist[item.name][n]"
+              @change="handleProgressCheck(item.name, n)"
+            />
+            <label class="form-check-label" :for="item.name + n"></label>
           </td>
         </tr>
       </tbody>
