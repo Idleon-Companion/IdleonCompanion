@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primary p-3 rounded-bottom">
+  <div class="">
     <h4>Statues</h4>
     <div v-if="Object.keys(statues).length > 0" class="statue-wrapper">
       <div class="statue-ring">

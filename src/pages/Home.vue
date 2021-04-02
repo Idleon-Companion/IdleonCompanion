@@ -168,7 +168,7 @@
     <div id="nav-tabContent" class="tab-content">
       <div class="tab-pane fade active show" id="tasks"><Tasks /></div>
       <div class="tab-pane fade jumbotron" id="checklist"><ProgressTracker /></div>
-      <div class="tab-pane fade" id="statues"><Statues /></div>
+      <div class="tab-pane fade jumbotron" id="statues"><Statues /></div>
       <div class="tab-pane fade jumbotron" id="picnic-quest"><PicnicQuest /></div>
       <div class="tab-pane fade jumbotron" id="builds"><Builds /></div>
       <div class="tab-pane fade jumbotron" id="cards"><Cards /></div>
