@@ -1,6 +1,14 @@
-# Vue 3 + Typescript + Vite
+# Idleon Companion
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+A companion website for the game [Legends of Idleon](https://www.legendsofidleon.com)
+
+### Vue 3 + Typescript + Vite
+
+To run the project, download yarn with `npm install -g yarn`  
+
+and then run the following:  
+`yarn` - install dependencies  
+`yarn dev` - run in localhost
 
 ## Recommended IDE Setup
 

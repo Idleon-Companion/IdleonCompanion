@@ -1,17 +1,19 @@
 <template>
   <div class="row">
-    <div class="col-xl-12 py-4">
-      <fieldset class="form-group px-3">
-        <label for="customRange1"
+    <div class="col-xl-12">
+      <fieldset class="px-3">
+        <label 
+          class="text-light form-label"
+          for="foodRange"
           >How many runs of Picnic Quest would you like to show?</label
         >
-        <span class="badge badge-pill badge-secondary ml-3" id="foodPill">{{
+        <span class="badge bg-secondary ms-3" id="foodPill">{{
           repeat
         }}</span>
         <input
           v-model="repeat"
           type="range"
-          class="custom-range"
+          class="form-range"
           min="1"
           max="30"
           id="foodRange"
@@ -29,7 +31,7 @@
     </thead>
     <tbody>
       <tr
-        class="table-secondary"
+        class="text-light"
         v-for="(req, i) in picnicRequirements"
         :key="i"
       >
