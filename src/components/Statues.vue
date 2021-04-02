@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <h4>Statues</h4>
-    <div v-if="Object.keys(statues).length > 0" class="statue-wrapper">
+    <div v-if="curCharacter !== null" class="statue-wrapper">
       <div class="statue-ring">
         <div
           class="statue"
@@ -23,7 +23,7 @@
             class="statue-level"
             type="number"
             min="0"
-            @change="setStatueLevel($event.target.value)"
+            @change="setStatueLevel"
           />
         </h5>
         <div class="statue-text my-2">
@@ -60,7 +60,8 @@ export default defineComponent({
       return s;
     });
 
-    const setStatueLevel = (level: string) => {
+    const setStatueLevel = (event: Event) => {
+      let level = (event.target as HTMLInputElement).value;
       if (curCharacter.value === null) {
         return;
       }

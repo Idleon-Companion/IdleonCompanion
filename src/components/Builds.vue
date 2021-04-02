@@ -14,7 +14,7 @@
     </div>
   </div>
   <!-- TALENTS -->
-  <div v-if="build" class="row justify-content-center" id="buildContent">
+  <div v-if="activeBuild" class="row justify-content-center" id="buildContent">
     <div class="col-xl-4" style="max-width: 400px">
       <div class="card border-primary mb-2">
         <div class="card-header">Tab 1</div>
@@ -27,7 +27,7 @@
             <p
               class="text-light text-center bg-secondary border rounded skill m-0"
             >
-              {{ activeBuild.tab_one[i] }}
+              {{ activeBuild.tab_one && activeBuild.tab_one[i] }}
             </p>
           </div>
           <div v-for="i in 5" :key="i" class="disabled">
@@ -38,7 +38,7 @@
             <p
               class="text-light text-center bg-secondary border rounded skill m-0"
             >
-              {{ activeBuild.tab_one[i + 10] }}
+              {{ activeBuild.tab_one && activeBuild.tab_one[i + 10] }}
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@
             <p
               class="text-light text-center bg-secondary border rounded skill m-0"
             >
-              {{ activeBuild.tab_two[i] }}
+              {{ activeBuild.tab_two && activeBuild.tab_two[i] }}
             </p>
           </div>
         </div>
@@ -68,11 +68,7 @@
         </div>
       </div>
     </div>
-    <div
-      v-if="activeBuild.subclass"
-      class="col-xl-4"
-      style="max-width: 400px"
-    >
+    <div v-if="activeBuild.subclass" class="col-xl-4" style="max-width: 400px">
       <div class="card border-primary mb-2">
         <div class="card-header">Tab 3</div>
         <div class="card-body talent-container p-2" id="skill_tab_one">
@@ -84,7 +80,7 @@
             <p
               class="text-light text-center bg-secondary border rounded skill m-0"
             >
-              {{ activeBuild.tab_three[i] }}
+              {{ activeBuild.tab_three && activeBuild.tab_three[i] }}
             </p>
           </div>
         </div>
@@ -95,7 +91,7 @@
     </div>
   </div>
   <!-- NOTES -->
-  <div v-if="build" class="row">
+  <div v-if="activeBuild" class="row">
     <div class="col-xl-12 mt-4">
       <div class="card border-light">
         <div class="card-body">
@@ -110,14 +106,27 @@
 import { computed, defineComponent, ref } from "vue";
 import buildData from "../data/builds.json";
 
+type Build = {
+  title: string;
+  class: string;
+  subclass: string;
+  comment_one: string;
+  comment_two: string;
+  comment_three: string;
+  notes: string;
+  tab_one?: Record<string, string>;
+  tab_two?: Record<string, string>;
+  tab_three?: Record<string, string>;
+};
+
 export default defineComponent({
   name: "Builds",
   setup() {
-    const builds: Record<string, object> = buildData;
+    const builds: Record<string, Build> = buildData;
     const build = ref("");
     const activeBuild = computed(() => {
       if (build.value === "") {
-        return {};
+        return null;
       }
       return builds[build.value];
     });

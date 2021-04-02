@@ -8,7 +8,7 @@
     >
       <thead>
         <tr>
-          <th class="table-info" colspan="8">{{ category }}</th>
+          <th class="table-info" :colspan="8">{{ category }}</th>
         </tr>
         <tr class="text-light">
           <th scope="col">Character</th>
@@ -17,11 +17,7 @@
       </thead>
       <tbody>
         <tr v-for="(item, i) in data.items" :key="i">
-          <th
-            :title="item.name"
-            scope="row"
-            class="p-0"
-          >
+          <th :title="item.name" scope="row" class="p-0">
             <img
               class="m-1"
               loading="lazy"

@@ -54,7 +54,7 @@ export function useCharacters() {
     return characters.value.length;
   });
 
-  const curCharacter = computed(() => {
+  const curCharacter = computed<Character | null>(() => {
     if (numCharacters.value > 0) {
       return characters.value[charIndex.value];
     }

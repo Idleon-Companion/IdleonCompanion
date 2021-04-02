@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex char-card">
+  <div v-if="char !== null" class="d-flex char-card">
     <img :src="getClassImagePath(char)" class="char-icon" />
     <div class="d-flex flex-column">
       <div class="char-name">{{ char.name }}</div>
@@ -20,7 +20,7 @@ export default defineComponent({
   props: {
     char: {
       required: true,
-      type: Object as PropType<Character>,
+      type: Object as PropType<Character | null>,
     },
   },
   methods: {
