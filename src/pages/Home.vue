@@ -144,6 +144,9 @@
         <a class="nav-link" data-toggle="tab" href="#characters">Characters</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#packmulecrafter">PackMuleCrafter</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#credits">Credits</a>
       </li>
     </ul>
@@ -157,6 +160,7 @@
       <div class="tab-pane fade" id="builds"><Builds /></div>
       <div class="tab-pane fade p-3" id="cards"><Cards /></div>
       <div class="tab-pane fade p-3" id="characters"><Characters /></div>
+      <div class="tab-pane fade p-3" id="packmulecrafter"><PackMuleCrafter /></div>
       <div class="tab-pane fade" id="credits"><Credits /></div>
     </div>
   </div>
@@ -169,6 +173,7 @@ import Builds from "../components/Builds.vue";
 import Cards from "../components/Cards.vue";
 import Credits from "../components/Credits.vue";
 import CharacterSelector from "../components/CharacterSelector.vue";
+import PackMuleCrafter from "../components/PackMuleCrafter.vue";
 import PicnicQuest from "../components/PicnicQuest.vue";
 import ProgressTracker from "../components/ProgressTracker.vue";
 import Tasks from "../components/Tasks.vue";
@@ -182,6 +187,7 @@ export default defineComponent({
     Characters,
     CharacterSelector,
     Credits,
+    PackMuleCrafter,
     PicnicQuest,
     ProgressTracker,
     Tasks,
