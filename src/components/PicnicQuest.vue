@@ -23,7 +23,7 @@
   </div>
   <table class="table table-hover">
     <thead>
-      <tr>
+      <tr class="text-light">
         <th scope="col"></th>
         <th scope="col">Item</th>
         <th scope="col">Amount</th>
