@@ -84,8 +84,6 @@ import {
   Statues,
   useCharacters,
 } from "../composables/Characters";
-import * as bootstrap from "bootstrap";
-
 import checklistData from "../data/checklist.json";
 
 import CharacterCard from "../components/CharacterCard.vue";
@@ -132,15 +130,6 @@ export default defineComponent({
       characters.value.splice(i, 1);
       saveCharacters();
     };
-
-    onMounted(() => {
-      var tooltipTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      );
-      tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    });
 
     const charChecklist = computed(() => {
       // Global items are managed on the progress tracker/checklist page

@@ -31,7 +31,6 @@
 
 <script lang="ts">
 import { computed, defineComponent, inject, onMounted, ref } from "vue";
-import * as bootstrap from "bootstrap";
 import checklistData from "../data/checklist.json";
 import { StateManager } from "../State";
 
@@ -41,15 +40,6 @@ export default defineComponent({
     const checklist = ref({} as Record<string, boolean>);
     const state = inject("state") as StateManager;
     const saved = JSON.parse(state.load("checklist"));
-
-    onMounted(() => {
-      var tooltipTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      );
-      tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    });
 
     const globalChecklist = computed(() => {
       // Non-global items are managed on the characters page
