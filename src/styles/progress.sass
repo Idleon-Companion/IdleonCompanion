@@ -1,0 +1,21 @@
+@import './base.sass'
+.progress-group
+  display: flex
+  flex-direction: column
+  .progress-category
+    background: $info
+    border-radius: 0.5rem
+    font-size: 1.25rem
+    font-weight: bold
+    text-align: center
+    text-shadow: 2px 3px 8px rgba(0,0,0,0.5)
+    padding: 0.5rem
+  .progress-items
+    display: flex
+    flex-wrap: wrap
+    .progress-item
+      cursor: pointer
+      img
+        height: 72px
+        width: 72px
+        object-fit: contain

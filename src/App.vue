@@ -6,7 +6,9 @@
 import { defineComponent } from "vue";
 import Home from "./pages/Home.vue";
 
-import "./styles/custom.css";
+import "./styles/base.sass";
+import "./styles/progress.sass";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
 export default defineComponent({
   name: "App",
@@ -15,5 +17,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style></style>
