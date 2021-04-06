@@ -176,6 +176,18 @@
         </button>
       </li>
       <li class="nav-item">
+				<button class="nav-link text-light" 
+        data-bs-toggle="tab" 
+        data-bs-target="#stamps" 
+        type="button" 
+        role="tab" 
+        aria-controls="profile" 
+        aria-selected="false"
+       >
+        Stamps
+        </button>
+			</li>
+      <li class="nav-item">
         <button
           class="nav-link text-light"
           data-bs-toggle="tab"
@@ -231,13 +243,10 @@
 
     <div id="nav-tabContent" class="tab-content">
       <div class="tab-pane fade active show" id="tasks"><Tasks /></div>
-      <div class="tab-pane fade jumbotron" id="checklist">
-        <ProgressTracker />
-      </div>
+      <div class="tab-pane fade jumbotron" id="checklist"><ProgressTracker /></div>
       <div class="tab-pane fade jumbotron" id="statues"><Statues /></div>
-      <div class="tab-pane fade jumbotron" id="picnic-quest">
-        <PicnicQuest />
-      </div>
+      <div class="tab-pane fade jumbotron" id="stamps"><Stamps /></div>
+      <div class="tab-pane fade jumbotron" id="picnic-quest"><PicnicQuest /></div>
       <div class="tab-pane fade jumbotron" id="builds"><Builds /></div>
       <div class="tab-pane fade jumbotron" id="cards"><Cards /></div>
       <div class="tab-pane fade jumbotron" id="characters"><Characters /></div>
@@ -257,7 +266,9 @@ import PicnicQuest from "../components/PicnicQuest.vue";
 import ProgressTracker from "../components/ProgressTracker.vue";
 import Statues from "../components/Statues.vue";
 import Tasks from "../components/Tasks.vue";
+import Stamps from "../components/Stamps.vue";
 import Characters from "../pages/Characters.vue";
+
 
 export default defineComponent({
   name: "Home",
@@ -271,6 +282,7 @@ export default defineComponent({
     ProgressTracker,
     Statues,
     Tasks,
+    Stamps,
   },
 });
 </script>
