@@ -1,26 +1,11 @@
 <template>
-  <div class="container">
-    <div class="row justify-content-between pt-3">
-      <div class="col-xs-9">
-        <img
-          class="img d-inline my-4 ml-4"
-          style="height: 6rem"
-          src="assets/bg/logo-clean.png"
-        />
-        <h1 class="display-4 d-sm-inline-block d-none align-middle ml-4">
-          Idleon Companion
-        </h1>
+  <div class="container pt-3">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-auto align-items-center">
+        <div id="logo" class="display-4 text-light">Idleon Companion</div>
       </div>
-      <div class="col-xs-3">
-        <a
-          type="button"
-          class="btn btn-outline-light m-2"
-          data-toggle="modal"
-          data-target="#clockModal"
-        >
-          <p class="m-0 text-left"><small>Reset Timer</small></p>
-          <h3 class="display-4 m-0" id="clock"></h3>
-        </a>
+      <div class="col-md-4 col-12">
+        <CharacterSelector />
       </div>
     </div>
     <!-- Modal -->
@@ -137,38 +122,126 @@
       </div>
     </div>
     <!-- Nav -->
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs nav-dark" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#tasks">Tasks</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#checklist">Checklist</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#picnic-quest"
-          >Picnic Quest</a
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#tasks"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
         >
+          Tasks
+        </button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#builds">Builds</a>
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#checklist"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Checklist
+        </button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#cards">Card Sets</a>
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#statues"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Statues
+        </button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#credits">Credits</a>
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#picnic-quest"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Picnic Quest
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#builds"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Builds
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#cards"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Card Sets
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#characters"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Characters
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#credits"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Credits
+        </button>
       </li>
     </ul>
 
     <div id="nav-tabContent" class="tab-content">
-      <!--  TASKS  -->
       <div class="tab-pane fade active show" id="tasks"><Tasks /></div>
-      <!-- checklist -->
-      <div class="tab-pane fade" id="checklist"><ProgressTracker /></div>
-      <div class="tab-pane fade" id="picnic-quest"><PicnicQuest /></div>
-      <div class="tab-pane fade" id="builds"><Builds /></div>
-      <div class="tab-pane fade p-3" id="cards"><Cards /></div>
-      <div class="tab-pane fade" id="credits"><Credits /></div>
+      <div class="tab-pane fade jumbotron" id="checklist">
+        <ProgressTracker />
+      </div>
+      <div class="tab-pane fade jumbotron" id="statues"><Statues /></div>
+      <div class="tab-pane fade jumbotron" id="picnic-quest">
+        <PicnicQuest />
+      </div>
+      <div class="tab-pane fade jumbotron" id="builds"><Builds /></div>
+      <div class="tab-pane fade jumbotron" id="cards"><Cards /></div>
+      <div class="tab-pane fade jumbotron" id="characters"><Characters /></div>
+      <div class="tab-pane fade jumbotron" id="credits"><Credits /></div>
     </div>
   </div>
   <div class="footer m-5"></div>
@@ -179,18 +252,24 @@ import { defineComponent } from "vue";
 import Builds from "../components/Builds.vue";
 import Cards from "../components/Cards.vue";
 import Credits from "../components/Credits.vue";
+import CharacterSelector from "../components/CharacterSelector.vue";
 import PicnicQuest from "../components/PicnicQuest.vue";
 import ProgressTracker from "../components/ProgressTracker.vue";
+import Statues from "../components/Statues.vue";
 import Tasks from "../components/Tasks.vue";
+import Characters from "../pages/Characters.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
     Builds,
     Cards,
+    Characters,
+    CharacterSelector,
     Credits,
     PicnicQuest,
     ProgressTracker,
+    Statues,
     Tasks,
   },
 });

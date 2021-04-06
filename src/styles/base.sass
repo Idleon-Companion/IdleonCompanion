@@ -1,0 +1,52 @@
+
+@import './variables.sass'
+@import '../../node_modules/bootstrap/scss/bootstrap.scss'
+
+body
+  background: rgb(31, 20, 21) url('../assets/bg/night_desert.png') no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  background-size: cover
+  -o-background-size: cover
+
+[data-enabled]
+  transition: 0.3s
+[data-enabled='false']
+  opacity: 0.5
+  filter: grayscale(1)
+
+th
+  > img
+    height: 50px
+
+  & > div.disabled
+    opacity: 70%
+
+.card-text
+  white-space: pre-line
+
+.card-sets-container-6
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+  grid-template-rows: 1fr
+  gap: 0px 0px
+  grid-template-areas: "......"
+
+.card-set
+  height: 90px
+
+.card-title
+  position: absolute
+  opacity: 80%
+
+#calc
+  background-color: rgba(28, 30, 34,0.7)
+  border-radius: 5px
+
+.jumbotron
+  padding: 3rem
+  background-color: rgba(28, 30, 34, 0.8)
+  border-radius: 5px
+
+.nav-tabs .nav-link.active
+  background-color: rgb(28, 30, 34)

@@ -1,12 +1,12 @@
 <template>
   <div v-for="(cardset, i) in cardData" :key="i">
-    <div class="h1">{{ cardset.title }}</div>
-    <div class="row justify-content-left p-3">
+    <div class="h1 text-light">{{ cardset.title }}</div>
+    <div class="row justify-content-start p-3">
       <div
-        class="bs-component border border-secondary rounded p-2"
+        class="col-4 border border-secondary rounded p-2 w-auto"
         style="min-width: 150px"
       >
-        <span class="badge badge-pill badge-primary card-title px-4 py-1"
+        <span class="badge bg-secondary card-title px-4 py-1"
           >Core Cards</span
         >
         <img
@@ -18,10 +18,10 @@
         />
       </div>
       <div
-        class="bs-component border border-secondary rounded p-2"
+        class="col-4 border border-secondary rounded p-2 w-auto"
         style="min-width: 150px"
       >
-        <span class="badge badge-pill badge-primary card-title px-4 py-1"
+        <span class="badge bg-secondary card-title px-4 py-1"
           >Useful Cards</span
         >
         <img
@@ -34,10 +34,10 @@
       </div>
       <div
         v-if="Object.keys(cardset.minimal).length"
-        class="bs-component border border-secondary rounded p-2"
+        class="col-4 border border-secondary rounded p-2 w-auto"
         style="min-width: 150px"
       >
-        <span class="badge badge-pill badge-primary card-title px-4 py-1"
+        <span class="badge bg-secondary card-title px-4 py-1"
           >Minimal Benefits</span
         >
         <img
