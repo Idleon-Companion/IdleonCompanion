@@ -77,7 +77,6 @@ export function useCharacters() {
 
   // Save data to local storage
   const saveCharacters = () => {
-    console.log("Saving!", characters.value);
     localStorage.setItem("chars", JSON.stringify(characters.value));
   };
 

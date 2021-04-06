@@ -1,42 +1,39 @@
 <template>
-  <div class="">
-    <h4>Statues</h4>
-    <div v-if="curCharacter !== null" class="statue-wrapper">
-      <div class="statue-ring">
-        <div
-          class="statue"
-          v-for="(statue, i) in Object.keys(statues)"
-          :key="i"
-          :data-active="curStatue === statue"
-          :style="statuePos(i)"
-          @mouseover="curStatue = statue"
-        >
-          <img :src="getStatueImagePath(statue)" />
-        </div>
-      </div>
-      <div class="statue-info">
-        <div class="statue-name">{{ curStatue }} Statue</div>
-        <h5 class="d-flex align-items-center justify-content-center mt-3">
-          <div class="statue-text">Level</div>
-          <input
-            :value="curCharacter.statues[curStatue]"
-            class="statue-level"
-            type="number"
-            min="0"
-            @change="setStatueLevel"
-          />
-        </h5>
-        <div class="statue-text my-2">
-          <em
-            >{{ 123 }} statues to level
-            {{ curCharacter.statues[curStatue] + 1 }}</em
-          >
-        </div>
-        <div class="statue-text">+{{ 5 }}% NOTHING LOL</div>
+  <h2 class="text-white">Statues</h2>
+  <div v-if="curCharacter !== null" class="statue-wrapper">
+    <div class="statue-list">
+      <div
+        class="statue"
+        v-for="(statue, i) in Object.keys(statues)"
+        :key="i"
+        :data-active="curStatue === statue"
+        @click="curStatue = statue"
+      >
+        <img :src="getStatueImagePath(statue)" />
       </div>
     </div>
-    <div v-else>You have no characters created.</div>
+    <div class="statue-info col-12 col-md-8">
+      <div class="statue-name">{{ curStatue }} Statue</div>
+      <h5 class="d-flex align-items-center justify-content-center mt-3">
+        <div class="statue-text">Level</div>
+        <input
+          :value="curCharacter.statues[curStatue]"
+          class="statue-level"
+          type="number"
+          min="0"
+          @change="setStatueLevel"
+        />
+      </h5>
+      <div class="statue-text my-2">
+        <em
+          >{{ 123 }} statues to level
+          {{ curCharacter.statues[curStatue] + 1 }}</em
+        >
+      </div>
+      <div class="statue-text">+{{ 5 }}% NOTHING LOL</div>
+    </div>
   </div>
+  <div v-else>You have no characters created.</div>
 </template>
 
 <script lang="ts">
@@ -86,42 +83,24 @@ export default defineComponent({
       let s = statue.replace(" ", "_");
       return `assets/statues/${s}_Statue.png`;
     },
-    statuePos(i: number) {
-      let deg = (360 / Object.keys(this.statues).length) * i;
-      let theta = (deg * Math.PI) / 180;
-      let radius = 300;
-      let x = radius * Math.cos(theta);
-      let y = radius * Math.sin(theta);
-      return {
-        top: y + "px",
-        left: x + "px",
-      };
-    },
   },
 });
 </script>
 
 <style lang="sass" scoped>
 .statue-wrapper
-  align-items: center
   display: flex
-  justify-content: center
-  width: 100%
-  min-height: 75vh
-  position: relative
-
+  flex-direction: column
 .statue-info
   align-items: center
-  background: lighten(#3a3f44, 5%)
-  border-radius: 50%
+  background: #3a3f44
+  border-radius: 5px
   color: darken(white, 5%)
   display: flex
   flex-direction: column
   justify-content: center
+  margin: 1rem auto
   padding: 1.5rem
-  position: absolute
-  width: 25rem
-  height: 25rem
   /* Chrome, Safari, Edge, Opera */
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button
@@ -146,8 +125,10 @@ export default defineComponent({
     padding: 0.15rem
     text-align: center
     width: 25%
-.statue-ring
-  position: relative
+.statue-list
+  display: flex
+  flex-wrap: wrap
+
   .statue
     border-radius: 50%
     color: white
@@ -155,9 +136,6 @@ export default defineComponent({
     padding: 1rem
     width: 96px
     height: 96px
-    margin-left: -48px
-    margin-top: -48px
-    position: absolute
     transition: 0.3s
     img
       width: 72px
