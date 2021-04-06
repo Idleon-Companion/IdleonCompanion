@@ -1,10 +1,10 @@
 <template>
   <div class="container pt-3">
-    <div class="row justify-content-between mb-5">
-      <div class="col-8 align-items-center">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-auto align-items-center">
         <div id="logo" class="display-4 text-light">Idleon Companion</div>
       </div>
-      <div class="col-4">
+      <div class="col-md-4 col-12">
         <CharacterSelector />
       </div>
     </div>
@@ -123,52 +123,123 @@
     </div>
     <!-- Nav -->
     <ul class="nav nav-tabs nav-dark" role="tablist">
-			<li class="nav-item">
-				<button class="nav-link text-light" 
-        data-bs-toggle="tab" data-bs-target="#tasks" type="button" 
-        role="tab" aria-controls="profile" aria-selected="false">Tasks</button>
-			</li>
-			<li class="nav-item">
-				<button class="nav-link text-light" 
-        data-bs-toggle="tab" data-bs-target="#checklist" type="button" 
-        role="tab" aria-controls="profile" aria-selected="false">Checklist</button>
-			</li>
       <li class="nav-item">
-        <button class="nav-link text-light" 
-        data-bs-toggle="tab" data-bs-target="#statues" type="button"
-        role="tab" aria-controls="profile" aria-selected="false">Statues</button>
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#tasks"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Tasks
+        </button>
       </li>
-			<li class="nav-item">
-				<button class="nav-link text-light" 
-        data-bs-toggle="tab" data-bs-target="#stamps" type="button" 
-        role="tab" aria-controls="profile" aria-selected="false">Stamps</button>
-			</li>
-			<li class="nav-item">
-				<button class="nav-link text-light" 
-        data-bs-toggle="tab" data-bs-target="#picnic-quest" type="button" 
-        role="tab" aria-controls="profile" aria-selected="false">Picnic Quest</button>
-			</li>
-			<li class="nav-item">
-				<button class="nav-link text-light" 
-        data-bs-toggle="tab" data-bs-target="#builds" type="button" 
-        role="tab" aria-controls="profile" aria-selected="false">Builds</button>
-			</li>
-			<li class="nav-item">
-				<button class="nav-link text-light" 
-        data-bs-toggle="tab" data-bs-target="#cards" type="button" 
-        role="tab" aria-controls="profile" aria-selected="false">Card Sets</button>
-			</li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#checklist"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Checklist
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#statues"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Statues
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#picnic-quest"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Picnic Quest
+        </button>
+      </li>
       <li class="nav-item">
 				<button class="nav-link text-light" 
-        data-bs-toggle="tab" data-bs-target="#characters" type="button" 
-        role="tab" aria-controls="profile" aria-selected="false">Characters</button>
+        data-bs-toggle="tab" 
+        data-bs-target="#stamps" 
+        type="button" 
+        role="tab" 
+        aria-controls="profile" 
+        aria-selected="false"
+       >
+        Stamps
+        </button>
 			</li>
-			<li class="nav-item">
-				<button class="nav-link text-light" 
-        data-bs-toggle="tab" data-bs-target="#credits" type="button" 
-        role="tab" aria-controls="profile" aria-selected="false">Credits</button>
-			</li>
-		</ul>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#builds"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Builds
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#cards"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Card Sets
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#characters"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Characters
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#credits"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Credits
+        </button>
+      </li>
+    </ul>
 
     <div id="nav-tabContent" class="tab-content">
       <div class="tab-pane fade active show" id="tasks"><Tasks /></div>

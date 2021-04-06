@@ -2,14 +2,10 @@
   <div class="row">
     <div class="col-xl-12">
       <fieldset class="px-3">
-        <label 
-          class="text-light form-label"
-          for="foodRange"
+        <label class="text-light form-label" for="foodRange"
           >How many runs of Picnic Quest would you like to show?</label
         >
-        <span class="badge bg-secondary ms-3" id="foodPill">{{
-          repeat
-        }}</span>
+        <span class="badge bg-secondary ms-3" id="foodPill">{{ repeat }}</span>
         <input
           v-model="repeat"
           type="range"
@@ -21,7 +17,7 @@
       </fieldset>
     </div>
   </div>
-  <table class="table table-hover">
+  <table class="table table-hover w-75 mx-auto">
     <thead>
       <tr class="text-light">
         <th scope="col"></th>
@@ -31,11 +27,13 @@
     </thead>
     <tbody>
       <tr
-        class="text-light"
+        class="text-light align-middle"
         v-for="(req, i) in picnicRequirements"
         :key="i"
       >
-        <th scope="row"><img :src="getFoodImagePath(req.name)" /></th>
+        <th scope="row">
+          <img :src="getFoodImagePath(req.name)" />
+        </th>
         <td>{{ req.name }}</td>
         <td class="base">
           {{ req.amount }} x {{ repeat }} = {{ req.amount * repeat }}
