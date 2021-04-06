@@ -10,7 +10,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "2": {
         "name": "Heart Stamp",
@@ -23,7 +23,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "3": {
         "name": "Mana Stamp",
@@ -36,7 +36,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "4": {
         "name": "Tomahawk Stamp",
@@ -49,7 +49,7 @@
         "diffRatio": 4,
         "par1": 6,
         "par2": 40,
-        "func": "decay"
+        "func": "Decay"
     },
     "5": {
         "name": "Target Stamp",
@@ -62,7 +62,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "6": {
         "name": "Shield Stamp",
@@ -75,7 +75,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "7": {
         "name": "Longsword Stamp",
@@ -88,7 +88,7 @@
         "diffRatio": 4,
         "par1": 2,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "8": {
         "name": "Kapow Stamp",
@@ -101,7 +101,7 @@
         "diffRatio": 3,
         "par1": 8,
         "par2": 40,
-        "func": "decay"
+        "func": "Decay"
     },
     "9": {
         "name": "Fist Stamp",
@@ -114,7 +114,7 @@
         "diffRatio": 2,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "10": {
         "name": "Battleaxe Stamp",
@@ -127,7 +127,7 @@
         "diffRatio": 4,
         "par1": 10,
         "par2": 40,
-        "func": "decay"
+        "func": "Decay"
     },
     "11": {
         "name": "Agile Stamp",
@@ -140,7 +140,7 @@
         "diffRatio": 2,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "12": {
         "name": "Vitality Stamp",
@@ -153,7 +153,7 @@
         "diffRatio": 4,
         "par1": 2,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "13": {
         "name": "Book Stamp",
@@ -166,7 +166,7 @@
         "diffRatio": 2,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "14": {
         "name": "Manamoar Stamp",
@@ -179,7 +179,7 @@
         "diffRatio": 3,
         "par1": 2,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "15": {
         "name": "Clover Stamp",
@@ -192,7 +192,7 @@
         "diffRatio": 2,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "16": {
         "name": "Scimitar Stamp",
@@ -205,7 +205,7 @@
         "diffRatio": 4,
         "par1": 3,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "17": {
         "name": "Bullseye Stamp",
@@ -218,7 +218,7 @@
         "diffRatio": 5,
         "par1": 2,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "18": {
         "name": "Feather Stamp",
@@ -231,7 +231,7 @@
         "diffRatio": 5,
         "par1": 5,
         "par2": 50,
-        "func": "decay"
+        "func": "Decay"
     },
     "19": {
         "name": "Polearm Stamp",
@@ -244,7 +244,7 @@
         "diffRatio": 6,
         "par1": 16,
         "par2": 40,
-        "func": "decay"
+        "func": "Decay"
     },
     "20": {
         "name": "Violence Stamp",
@@ -257,7 +257,7 @@
         "diffRatio": 5,
         "par1": 10,
         "par2": 50,
-        "func": "decay"
+        "func": "Decay"
     },
     "21": {
         "name": "Buckler Stamp",
@@ -270,7 +270,7 @@
         "diffRatio": 7,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "23": {
         "name": "Sukka Foo",
@@ -283,7 +283,7 @@
         "diffRatio": 10,
         "par1": 24,
         "par2": 60,
-        "func": "decay"
+        "func": "Decay"
     },
     "24": {
         "name": "Arcane Stamp",
@@ -296,7 +296,7 @@
         "diffRatio": 3,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "26": {
         "name": "Steve Sword",
@@ -309,7 +309,7 @@
         "diffRatio": 10,
         "par1": 20,
         "par2": 60,
-        "func": "decay"
+        "func": "Decay"
     },
     "27": {
         "name": "Blover Stamp",
@@ -322,7 +322,7 @@
         "diffRatio": 3,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "28": {
         "name": "Stat Graph Stamp",
@@ -335,7 +335,7 @@
         "diffRatio": 2,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1000": {
         "name": "Pickaxe Stamp",
@@ -348,7 +348,7 @@
         "diffRatio": 10,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1002": {
         "name": "Hatchet Stamp",
@@ -361,7 +361,7 @@
         "diffRatio": 10,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1003": {
         "name": "Anvil Zoomer Stamp",
@@ -374,7 +374,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1004": {
         "name": "Lil' Mining Baggy Stamp",
@@ -387,7 +387,7 @@
         "diffRatio": 10,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1005": {
         "name": "Twin Ores Stamp",
@@ -400,7 +400,7 @@
         "diffRatio": 5,
         "par1": 15,
         "par2": 40,
-        "func": "decay"
+        "func": "Decay"
     },
     "1006": {
         "name": "Choppin' Bag Stamp",
@@ -413,7 +413,7 @@
         "diffRatio": 10,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1007": {
         "name": "Duplogs Stamp",
@@ -426,7 +426,7 @@
         "diffRatio": 5,
         "par1": 15,
         "par2": 40,
-        "func": "decay"
+        "func": "Decay"
     },
     "1008": {
         "name": "Matty Bag Stamp",
@@ -439,7 +439,7 @@
         "diffRatio": 10,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1009": {
         "name": "Smart Dirt Stamp",
@@ -452,7 +452,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1010": {
         "name": "Cool Diggy Tool Stamp",
@@ -465,7 +465,7 @@
         "diffRatio": 10,
         "par1": 2,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1011": {
         "name": "High IQ Lumber Stamp",
@@ -478,7 +478,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1012": {
         "name": "Swag Swingy Tool Stamp",
@@ -491,7 +491,7 @@
         "diffRatio": 10,
         "par1": 2,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1013": {
         "name": "Alch Go Brrr Stamp",
@@ -504,7 +504,7 @@
         "diffRatio": 4,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1014": {
         "name": "Brainstew Stamps",
@@ -517,7 +517,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1015": {
         "name": "Drippy Drop Stamp",
@@ -530,7 +530,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1016": {
         "name": "Droplots Stamp",
@@ -543,7 +543,7 @@
         "diffRatio": 2,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1017": {
         "name": "Fishing Rod Stamp",
@@ -556,7 +556,7 @@
         "diffRatio": 5,
         "par1": 2,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1018": {
         "name": "Fishhead Stamp",
@@ -569,7 +569,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1019": {
         "name": "Catch Net Stamp",
@@ -582,7 +582,7 @@
         "diffRatio": 5,
         "par1": 2,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1020": {
         "name": "Fly Intel Stamp",
@@ -595,7 +595,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1021": {
         "name": "Bag o Heads Stamp",
@@ -608,7 +608,7 @@
         "diffRatio": 8,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1022": {
         "name": "Holy Mackerel Stamp",
@@ -621,7 +621,7 @@
         "diffRatio": 5,
         "par1": 20,
         "par2": 40,
-        "func": "decay"
+        "func": "Decay"
     },
     "1023": {
         "name": "Bugsack Stamp",
@@ -634,7 +634,7 @@
         "diffRatio": 8,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "1024": {
         "name": "Buzz Buzz Stamp",
@@ -647,7 +647,7 @@
         "diffRatio": 5,
         "par1": 20,
         "par2": 40,
-        "func": "decay"
+        "func": "Decay"
     },
     "2000": {
         "name": "Questin Stamp",
@@ -660,7 +660,7 @@
         "diffRatio": 10,
         "par1": 70,
         "par2": 50,
-        "func": "decay"
+        "func": "Decay"
     },
     "2002": {
         "name": "Mason Jar Stamp",
@@ -673,7 +673,7 @@
         "diffRatio": 4,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "2003": {
         "name": "Crystallin",
@@ -686,7 +686,7 @@
         "diffRatio": 10,
         "par1": 110,
         "par2": 50,
-        "func": "decay"
+        "func": "Decay"
     },
     "2005": {
         "name": "Apple Stamp",
@@ -699,7 +699,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "2006": {
         "name": "Potion Stamp",
@@ -712,7 +712,7 @@
         "diffRatio": 5,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "2007": {
         "name": "Golden Apple Stamp",
@@ -725,7 +725,7 @@
         "diffRatio": 4,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "2009": {
         "name": "Card Stamp",
@@ -738,7 +738,7 @@
         "diffRatio": 10,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "2013": {
         "name": "Talent I Stamp",
@@ -751,7 +751,7 @@
         "diffRatio": 2,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     },
     "2014": {
         "name": "Talent II Stamp",
@@ -764,6 +764,6 @@
         "diffRatio": 2,
         "par1": 1,
         "par2": 0,
-        "func": "add"
+        "func": "Add"
     }
 }

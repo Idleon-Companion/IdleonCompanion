@@ -1,12 +1,13 @@
 <template>
   <span class="d-flex">
-    <template v-for="(value, key) in splitValues(value)" :key="key">
-      <img 
-        v-if="(value != '')" 
-        :src="getCoinImagePath(key)" 
-        class="img-fuid h-100 align-self-center mx-1" 
+    <template v-for="(value, key) in splitValues(Number(value))" :key="key">
+      <template v-if="value">
+      <img
+        :src="getCoinImagePath(key)"
+        class="img-fuid h-100 align-self-center mx-1"
       />
       {{ value }}
+      </template>
     </template>
   </span>
 </template>
@@ -15,11 +16,11 @@
 import { defineComponent } from "vue";
 
 type Coin = {
-  bronze: string;
-  silver: string;
-  gold: string;
-  plat: string;
-  dem: string;
+  bronze: number;
+  silver: number;
+  gold: number;
+  plat: number;
+  dem: number;
 };
 
 export default defineComponent({
@@ -31,27 +32,23 @@ export default defineComponent({
     },
   },
   methods: {
-    splitValues(value: string): Coin {
-      let coins = {
-        dem: "",
-        plat: "",
-        gold: "",
-        silver: "",
-        bronze: "",
+    splitValues(value: number): Coin {
+      let v = value;
+      let a = [];
+      let n = 5; // number of distinct coin types
+      while (n--) {
+        let c = Math.pow(100, n);
+        a.push(Math.floor(v / c));
+        v %= c;
+      }
+
+      return {
+        dem: a[0],
+        plat: a[1],
+        gold: a[2],
+        silver: a[3],
+        bronze: a[4],
       };
-
-      coins["bronze"] = value.slice(-2);
-      value = value.slice(0, -2);
-      coins["silver"] = value.slice(-2);
-      value = value.slice(0, -2);
-      coins["gold"] = value.slice(-2);
-      value = value.slice(0, -2);
-      coins["plat"] = value.slice(-2);
-      value = value.slice(0, -2);
-      coins["dem"] = value.slice(-2);
-      value = value.slice(0, -2);
-
-      return coins;
     },
     getCoinImagePath(name: string): string {
       return `assets/misc/${name}_coin.png`;

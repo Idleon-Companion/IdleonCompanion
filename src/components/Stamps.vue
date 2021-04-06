@@ -79,7 +79,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-import { calculateGrowth } from "../composables/Utilities";
+import { Growth } from "../composables/Utilities";
 import stampsData from "../data/stampsData.json";
 import CoinDisplay from "./CoinDisplay.vue";
 
@@ -105,7 +105,7 @@ export default defineComponent({
   setup() {
     const stamps: Record<any, Stamp> = stampsData;
     const stamp = ref("");
-    const lvl = ref("1");
+    const lvl = ref(1);
     const activeStamp = computed(() => {
       if (stamp.value === "") {
         return null;
@@ -152,7 +152,7 @@ export default defineComponent({
     },
     calculateBonus(activeStamp: Stamp, lvl: number): number {
       let s = activeStamp;
-      return calculateGrowth(s.func, lvl, s.par1, s.par2);
+      return Growth[s.func](lvl, s.par1, s.par2);
     },
   },
 });
