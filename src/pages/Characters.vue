@@ -54,14 +54,12 @@
           <div class="progress-items">
             <div v-for="(item, i) in data.items" :key="i">
               <div class="progress-item">
-                <img
+                <GameAsset
                   class="m-1"
-                  loading="lazy"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="bottom"
+                  :width="72"
                   :title="item.name"
                   :src="getItemImagePath(item.name)"
-                  :data-enabled="
+                  :enabled="
                     curCharacter !== null &&
                     curCharacter.items[item.name] === true
                   "
@@ -77,7 +75,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, reactive, ref } from "vue";
+import { computed, defineComponent, reactive } from "vue";
 import {
   Class,
   Character,
@@ -87,11 +85,13 @@ import {
 import checklistData from "../data/checklist.json";
 
 import CharacterCard from "../components/CharacterCard.vue";
+import GameAsset from "../components/GameAsset.vue";
 
 export default defineComponent({
   name: "Characters",
   components: {
     CharacterCard,
+    GameAsset,
   },
   setup() {
     const {
