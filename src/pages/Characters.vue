@@ -24,7 +24,7 @@
         v-model="newChar.name"
         type="text"
         placeholder="Name"
-        maxlength="16"
+        maxlength="14"
         class="col-6 form-control"
       />
       <label for="newchar-level" class="my-2 text-light">Level</label>
