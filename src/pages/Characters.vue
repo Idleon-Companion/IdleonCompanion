@@ -8,7 +8,7 @@
       <div
         v-for="(char, i) in characters"
         :key="i"
-        class="d-flex align-items-center justify-content-between bg-primary p-2 w-25 rounded mb-1"
+        class="col-12 col-md-6 d-flex align-items-center justify-content-between bg-primary p-2 rounded mb-1"
       >
         <CharacterCard :char="char" />
         <div class="char-delete-icon" @click="deleteCharacter(i)">
@@ -24,6 +24,7 @@
         v-model="newChar.name"
         type="text"
         placeholder="Name"
+        maxlength="14"
         class="col-6 form-control"
       />
       <label for="newchar-level" class="my-2 text-light">Level</label>
