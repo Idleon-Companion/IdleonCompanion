@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
-    <div class="row justify-content-between pt-3">
-      <div class="d-flex align-items-center">
-        <div id="logo" class="display-4">Idleon Companion</div>
+  <div class="container pt-3">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-auto align-items-center">
+        <div id="logo" class="display-4 text-light">Idleon Companion</div>
       </div>
-      <div class="col-4">
+      <div class="col-md-4 col-12">
         <CharacterSelector />
       </div>
     </div>
@@ -122,37 +122,139 @@
       </div>
     </div>
     <!-- Nav -->
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs nav-dark" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#tasks">Tasks</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#checklist">Checklist</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#picnic-quest"
-          >Picnic Quest</a
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#tasks"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
         >
+          Tasks
+        </button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#builds">Builds</a>
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#checklist"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Checklist
+        </button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#cards">Card Sets</a>
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#statues"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Statues
+        </button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#characters">Characters</a>
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#picnic-quest"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Picnic Quest
+        </button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#packmulecrafter">PackMuleCrafter</a>
+				<button class="nav-link text-light" 
+        data-bs-toggle="tab" 
+        data-bs-target="#stamps" 
+        type="button" 
+        role="tab" 
+        aria-controls="profile" 
+        aria-selected="false"
+       >
+        Stamps
+        </button>
+			</li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#builds"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Builds
+        </button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#credits">Credits</a>
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#cards"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Card Sets
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#characters"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Characters
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#packmulecrafter"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          PackMuleCrafter
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#credits"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Credits
+        </button>
       </li>
     </ul>
 
     <div id="nav-tabContent" class="tab-content">
-      <!--  TASKS  -->
       <div class="tab-pane fade active show" id="tasks"><Tasks /></div>
       <!-- checklist -->
       <div class="tab-pane fade" id="checklist"><ProgressTracker /></div>
@@ -176,8 +278,11 @@ import CharacterSelector from "../components/CharacterSelector.vue";
 import PackMuleCrafter from "../components/PackMuleCrafter.vue";
 import PicnicQuest from "../components/PicnicQuest.vue";
 import ProgressTracker from "../components/ProgressTracker.vue";
+import Statues from "../components/Statues.vue";
 import Tasks from "../components/Tasks.vue";
+import Stamps from "../components/Stamps.vue";
 import Characters from "../pages/Characters.vue";
+
 
 export default defineComponent({
   name: "Home",
@@ -190,7 +295,9 @@ export default defineComponent({
     PackMuleCrafter,
     PicnicQuest,
     ProgressTracker,
+    Statues,
     Tasks,
+    Stamps,
   },
 });
 </script>

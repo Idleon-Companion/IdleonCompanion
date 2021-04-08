@@ -16,6 +16,26 @@ export enum Subclass {
   Wizard = "Wizard",
   Shaman = "Shaman",
 }
+
+// All statues in the game
+export const Statues = [
+  "Anvil",
+  "Beholder",
+  "Bullseye",
+  "Cauldron",
+  "Exp Book",
+  "Feasty",
+  "Health",
+  "Kachow",
+  "Lumberbob",
+  "Mining",
+  "Oceanman",
+  "Ol Reliable",
+  "Power",
+  "Speed",
+  "Thicc Skin",
+];
+
 // Characters keep track of individual data
 export type Character = {
   class: Class;
@@ -34,7 +54,7 @@ export function useCharacters() {
     return characters.value.length;
   });
 
-  const curCharacter = computed(() => {
+  const curCharacter = computed<Character | null>(() => {
     if (numCharacters.value > 0) {
       return characters.value[charIndex.value];
     }
@@ -55,6 +75,11 @@ export function useCharacters() {
     }
   };
 
+  // Save data to local storage
+  const saveCharacters = () => {
+    localStorage.setItem("chars", JSON.stringify(characters.value));
+  };
+
   return {
     characters,
     charIndex,
@@ -62,5 +87,6 @@ export function useCharacters() {
     numCharacters,
     nextCharacter,
     prevCharacter,
+    saveCharacters,
   };
 }
