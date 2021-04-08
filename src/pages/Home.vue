@@ -230,6 +230,19 @@
         <button
           class="nav-link text-light"
           data-bs-toggle="tab"
+          data-bs-target="#packmulecrafter"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          PackMuleCrafter
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
           data-bs-target="#credits"
           type="button"
           role="tab"
@@ -243,14 +256,14 @@
 
     <div id="nav-tabContent" class="tab-content">
       <div class="tab-pane fade active show" id="tasks"><Tasks /></div>
-      <div class="tab-pane fade jumbotron" id="checklist"><ProgressTracker /></div>
-      <div class="tab-pane fade jumbotron" id="statues"><Statues /></div>
-      <div class="tab-pane fade jumbotron" id="stamps"><Stamps /></div>
-      <div class="tab-pane fade jumbotron" id="picnic-quest"><PicnicQuest /></div>
-      <div class="tab-pane fade jumbotron" id="builds"><Builds /></div>
-      <div class="tab-pane fade jumbotron" id="cards"><Cards /></div>
-      <div class="tab-pane fade jumbotron" id="characters"><Characters /></div>
-      <div class="tab-pane fade jumbotron" id="credits"><Credits /></div>
+      <!-- checklist -->
+      <div class="tab-pane fade" id="checklist"><ProgressTracker /></div>
+      <div class="tab-pane fade" id="picnic-quest"><PicnicQuest /></div>
+      <div class="tab-pane fade" id="builds"><Builds /></div>
+      <div class="tab-pane fade p-3" id="cards"><Cards /></div>
+      <div class="tab-pane fade p-3" id="characters"><Characters /></div>
+      <div class="tab-pane fade p-3" id="packmulecrafter"><PackMuleCrafter /></div>
+      <div class="tab-pane fade" id="credits"><Credits /></div>
     </div>
   </div>
   <div class="footer m-5"></div>
@@ -262,6 +275,7 @@ import Builds from "../components/Builds.vue";
 import Cards from "../components/Cards.vue";
 import Credits from "../components/Credits.vue";
 import CharacterSelector from "../components/CharacterSelector.vue";
+import PackMuleCrafter from "../components/PackMuleCrafter.vue";
 import PicnicQuest from "../components/PicnicQuest.vue";
 import ProgressTracker from "../components/ProgressTracker.vue";
 import Statues from "../components/Statues.vue";
@@ -278,6 +292,7 @@ export default defineComponent({
     Characters,
     CharacterSelector,
     Credits,
+    PackMuleCrafter,
     PicnicQuest,
     ProgressTracker,
     Statues,
