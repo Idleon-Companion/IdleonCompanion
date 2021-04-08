@@ -12,14 +12,12 @@
       <div class="progress-items">
         <div v-for="(item, i) in data.items" :key="i">
           <div class="progress-item">
-            <img
+            <GameAsset
               class="m-1"
-              loading="lazy"
-              data-bs-toggle="tooltip"
-              data-bs-placement="bottom"
+              :height="72"
               :title="item.name"
               :src="getItemImagePath(item.name)"
-              :data-enabled="checklist[item.name]"
+              :enabled="checklist[item.name]"
               @click="handleProgressCheck(item.name)"
             />
           </div>
@@ -34,8 +32,13 @@ import { computed, defineComponent, inject, onMounted, ref } from "vue";
 import checklistData from "../data/checklist.json";
 import { StateManager } from "../State";
 
+import GameAsset from "./GameAsset.vue";
+
 export default defineComponent({
   name: "ProgressTracker",
+  components: {
+    GameAsset,
+  },
   setup() {
     const checklist = ref({} as Record<string, boolean>);
     const state = inject("state") as StateManager;
