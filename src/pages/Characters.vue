@@ -61,7 +61,7 @@
                   data-bs-toggle="tooltip"
                   data-bs-placement="bottom"
                   :title="item.name"
-                  :src="getItemImagePath(item.name)"
+                  :src="getItemImagePath(item.name, data.assetDir)"
                   :data-enabled="
                     curCharacter !== null &&
                     curCharacter.items[item.name] === true
@@ -165,9 +165,9 @@ export default defineComponent({
     };
   },
   methods: {
-    getItemImagePath(item: string): string {
+    getItemImagePath(item: string, dir: string): string {
       let cleaned = item.replace(/ /g, "_");
-      return `assets/checklist/${cleaned}.png`;
+      return `assets/${dir}/${cleaned}.png`;
     },
   },
 });

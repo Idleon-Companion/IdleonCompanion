@@ -18,7 +18,7 @@
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"
               :title="item.name"
-              :src="getItemImagePath(item.name)"
+              :src="getItemImagePath(item.name, data.assetDir)"
               :data-enabled="checklist[item.name]"
               @click="handleProgressCheck(item.name)"
             />
@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, inject, onMounted, ref } from "vue";
+import { computed, defineComponent, inject, ref } from "vue";
 import checklistData from "../data/checklist.json";
 import { StateManager } from "../State";
 
@@ -73,9 +73,9 @@ export default defineComponent({
     };
   },
   methods: {
-    getItemImagePath(item: string): string {
+    getItemImagePath(item: string, dir: string): string {
       let cleaned = item.replace(/ /g, "_");
-      return `assets/checklist/${cleaned}.png`;
+      return `assets/${dir}/${cleaned}.png`;
     },
   },
 });

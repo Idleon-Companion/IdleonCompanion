@@ -1,6 +1,7 @@
 {
   "Inventory Bags": {
     "global": false,
+    "assetDir": "checklist",
     "items": [
       {
         "name": "Blunderbag",
@@ -61,6 +62,7 @@
   },
   "Gem Shop Bags": {
     "global": true,
+    "assetDir": "checklist",
     "items": [
       {
         "name": "Inventory Bag U"
@@ -84,6 +86,7 @@
   },
   "Capacity Pouches": {
     "global": false,
+    "assetDir": "checklist",
     "items": [
       {
         "name": "Mini Materials Pouch"
@@ -197,6 +200,7 @@
   },
   "Storage Chests": {
     "global": true,
+    "assetDir": "checklist",
     "items": [
       {
         "name": "Dank Paypay Chest"
@@ -286,6 +290,7 @@
   },
   "Combat Stamps": {
     "global": true,
+    "assetDir": "stamps",
     "items": [
       {
         "name": "Sword Stamp"
@@ -372,6 +377,7 @@
   },
   "Skill Stamps": {
     "global": true,
+    "assetDir": "stamps",
     "items": [
       {
         "name": "Pickaxe Stamp"
@@ -452,6 +458,7 @@
   },
   "Misc Stamps": {
     "global": true,
+    "assetDir": "stamps",
     "items": [
       {
         "name": "Questin Stamp"
