@@ -256,14 +256,15 @@
 
     <div id="nav-tabContent" class="tab-content">
       <div class="tab-pane fade active show" id="tasks"><Tasks /></div>
-      <!-- checklist -->
-      <div class="tab-pane fade" id="checklist"><ProgressTracker /></div>
-      <div class="tab-pane fade" id="picnic-quest"><PicnicQuest /></div>
-      <div class="tab-pane fade" id="builds"><Builds /></div>
-      <div class="tab-pane fade p-3" id="cards"><Cards /></div>
-      <div class="tab-pane fade p-3" id="characters"><Characters /></div>
-      <div class="tab-pane fade p-3" id="packmulecrafter"><PackMuleCrafter /></div>
-      <div class="tab-pane fade" id="credits"><Credits /></div>
+      <div class="tab-pane fade jumbotron" id="checklist"><ProgressTracker /></div>
+      <div class="tab-pane fade jumbotron" id="statues"><Statues /></div>
+      <div class="tab-pane fade jumbotron" id="stamps"><Stamps /></div>
+      <div class="tab-pane fade jumbotron" id="picnic-quest"><PicnicQuest /></div>
+      <div class="tab-pane fade jumbotron" id="builds"><Builds /></div>
+      <div class="tab-pane fade jumbotron" id="cards"><Cards /></div>
+      <div class="tab-pane fade jumbotron" id="characters"><Characters /></div>
+      <div class="tab-pane fade jumbotron" id="packmulecrafter"><PackMuleCrafter /></div>
+      <div class="tab-pane fade jumbotron" id="credits"><Credits /></div>
     </div>
   </div>
   <div class="footer m-5"></div>
