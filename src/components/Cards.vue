@@ -1,8 +1,11 @@
 <template>
   <div class="col-12" v-for="(cardset, i) in cardData" :key="i">
     <div class="h1 text-light">{{ cardset.title }}</div>
-    <div class="row justify-content-start border border-secondary rounded">
-      <div class="col-4 p-2">
+    <div class="row justify-content-start">
+      <div
+        class="col-4 border border-secondary rounded p-2 w-auto"
+        style="min-width: 150px"
+      >
         <span class="badge bg-secondary card-title">Core Cards</span>
         <GameAsset
           v-for="(card, c) in cardset.core"
@@ -12,7 +15,10 @@
           :title="card.replace('_', ' ')"
         />
       </div>
-      <div class="col-4 p-2 border-start border-end border-secondary">
+      <div
+        class="col-4 border border-secondary rounded p-2 w-auto"
+        style="min-width: 150px"
+      >
         <span class="badge bg-secondary card-title px-4 py-1"
           >Useful Cards</span
         >
@@ -24,7 +30,10 @@
           :title="card.replace('_', ' ')"
         />
       </div>
-      <div class="col-4 p-2">
+      <div
+        class="col-4 border border-secondary rounded p-2 w-auto"
+        style="min-width: 150px"
+      >
         <span class="badge bg-secondary card-title px-4 py-1"
           >Minimal Benefits</span
         >
