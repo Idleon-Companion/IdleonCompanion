@@ -22,7 +22,7 @@
         </div>
         <div class="d-flex align-items-center">
           <img
-            class="char-class-img border border-secondary rounded-circle me-3"
+            class="char-class-img border border-secondary me-3"
             :src="Assets.CharImage(curCharacter)"
             data-bs-toggle="modal"
             data-bs-target="#char-class-selector"
@@ -73,7 +73,7 @@
                 <div class="modal-footer">
                   <button
                     type="button"
-                    class="btn btn-primary"
+                    class="btn btn-secondary"
                     data-bs-dismiss="modal"
                     aria-label="Close"
                   >
@@ -145,14 +145,12 @@
             <div class="progress-items">
               <div v-for="(item, i) in data.items" :key="i">
                 <div class="progress-item">
-                  <img
+                  <GameAsset
                     class="m-1"
-                    loading="lazy"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="bottom"
+                    :width="72"
                     :title="item.name"
                     :src="getItemImagePath(item.name)"
-                    :data-enabled="
+                    :enabled="
                       curCharacter !== null &&
                       curCharacter.items[item.name] === true
                     "
@@ -178,15 +176,17 @@ import {
   Subclass,
   useCharacters,
 } from "../composables/Characters";
+import { Assets } from "../composables/Utilities";
 import checklistData from "../data/checklist.json";
 
 import CharacterCard from "../components/CharacterCard.vue";
-import { Assets } from "../composables/Utilities";
+import GameAsset from "../components/GameAsset.vue";
 
 export default defineComponent({
   name: "Characters",
   components: {
     CharacterCard,
+    GameAsset,
   },
   setup() {
     const {
@@ -293,17 +293,19 @@ export default defineComponent({
     font-weight: bold
     margin: 0.1rem 0
   .char-class-img
+    border-radius: 50%
     cursor: pointer
     height: 5rem
     width: 5rem
-    padding: 0.5rem
+    padding: 0.25rem
     object-fit: contain
     transition: 0.3s
     &:hover
       transform: scale(1.1)
+      background: rgba(white, 0.05)
   .char-input
     background: none
-    border: 1px solid white
+    border: 1px solid darken(white, 25%)
     border-radius: 0.25rem
     color: white
     outline: none
