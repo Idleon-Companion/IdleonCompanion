@@ -17,10 +17,10 @@
       </fieldset>
     </div>
   </div>
-  <table class="table table-hover w-75 mx-auto">
+  <table class="table table-hover">
     <thead>
       <tr class="text-light">
-        <th scope="col"></th>
+        <th scope="col" class="col-2"></th>
         <th scope="col">Item</th>
         <th scope="col">Amount</th>
       </tr>
@@ -31,9 +31,13 @@
         v-for="(req, i) in picnicRequirements"
         :key="i"
       >
-        <th scope="row">
-          <img :src="getFoodImagePath(req.name)" />
-        </th>
+        <td>
+          <GameAsset
+            :width="72"
+            :image="getFoodImagePath(req.name)"
+            :title="req.name"
+          />
+        </td>
         <td>{{ req.name }}</td>
         <td class="base">
           {{ req.amount }} x {{ repeat }} = {{ req.amount * repeat }}
@@ -45,6 +49,8 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+
+import GameAsset from "./GameAsset.vue";
 
 const picnicRequirements = [
   {
@@ -103,6 +109,9 @@ const picnicRequirements = [
 
 export default defineComponent({
   name: "Picnic Quest",
+  components: {
+    GameAsset,
+  },
   setup() {
     const repeat = ref(1);
     return {
