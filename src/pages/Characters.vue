@@ -59,7 +59,7 @@
                   class="m-1"
                   :width="72"
                   :title="item.name"
-                  :src="getItemImagePath(item.name)"
+                  :image="getItemImagePath(item.name)"
                   :enabled="
                     curCharacter !== null &&
                     curCharacter.items[item.name] === true

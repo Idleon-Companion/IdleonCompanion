@@ -34,7 +34,7 @@
         <td>
           <GameAsset
             :width="72"
-            :src="getFoodImagePath(req.name)"
+            :image="getFoodImagePath(req.name)"
             :title="req.name"
           />
         </td>
