@@ -1,71 +1,161 @@
 <template>
   <div class="rounded">
-    <h4 v-if="numCharacters === 0" class="text-light">
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-dark" @click="newCharacter">
+        <div class="iconify" data-icon="mdi-plus"></div>
+        New Character
+      </button>
+    </div>
+    <h4
+      v-if="numCharacters === 0"
+      class="text-light d-flex justify-content-center"
+    >
       You have no characters. Add new ones below!
     </h4>
     <div v-else>
-      <h4 class="text-light">Edit Characters (TODO)</h4>
-      <div
-        v-for="(char, i) in characters"
-        :key="i"
-        class="col-12 col-md-6 d-flex align-items-center justify-content-between bg-primary p-2 rounded mb-1"
-      >
-        <CharacterCard :char="char" />
-        <div class="char-delete-icon" @click="deleteCharacter(i)">
-          <div class="iconify" data-icon="mdi:close"></div>
+      <div class="char-editor bg-primary p-3 mt-2 rounded">
+        <div class="d-flex justify-content-between">
+          <h2 class="text-light">Editing {{ curCharacter.name }}</h2>
+          <button class="btn char-delete-btn" @click="deleteCharacter">
+            Delete
+          </button>
+        </div>
+        <div class="d-flex align-items-center">
+          <img
+            class="char-class-img border border-secondary me-3"
+            :src="Assets.CharImage(curCharacter)"
+            data-bs-toggle="modal"
+            data-bs-target="#char-class-selector"
+          />
+          <div
+            id="char-class-selector"
+            class="modal fade"
+            tabindex="-1"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+            >
+              <div class="modal-content bg-primary">
+                <div class="modal-header">
+                  <h5 class="modal-title text-light">
+                    Select Character Class/Subclass
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="d-flex flex-wrap modal-body">
+                  <img
+                    v-for="(class_, i) in Class"
+                    :key="i"
+                    :src="Assets.ClassImage(class_)"
+                    :title="class_"
+                    class="char-class-img"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="bottom"
+                    @click="setClass(class_)"
+                  />
+                  <img
+                    v-for="(subclass, i) in Subclass"
+                    :key="i"
+                    :src="Assets.ClassImage(subclass)"
+                    :title="subclass"
+                    class="char-class-img"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="bottom"
+                    @click="setClass(subclass)"
+                  />
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column">
+            <label for="char-name">Name</label>
+            <input
+              id="char-name"
+              class="char-input"
+              type="text"
+              spellcheck="false"
+              maxlength="14"
+              v-model="curCharacter.name"
+              @change="saveCharacters"
+            />
+            <label for="char-level">Level</label>
+            <input
+              id="char-level"
+              class="char-input"
+              type="number"
+              :min="1"
+              v-model="curCharacter.level"
+              @change="saveCharacters"
+            />
+          </div>
+          <div class="d-flex flex-wrap flex-column ms-2">
+            <label>Skills</label>
+            <div
+              v-for="(level, skill) in curCharacter.skills"
+              :key="skill"
+              class="char-skill mb-1"
+            >
+              <img
+                class="char-skill-img me-2"
+                :src="Assets.IconImage(skill)"
+                :title="skill"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+              />
+              <input
+                :id="'char-skill-' + skill"
+                class="char-input skill-input"
+                type="number"
+                :min="0"
+                v-model="curCharacter.skills[skill]"
+                @change="saveCharacters"
+              />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <h4 class="text-light mt-4">Add New Character</h4>
-    <div class="row w-50 flex-column bg-primary m-0 p-2 rounded">
-      <label for="newchar-name" class="my-2 text-light">Name</label>
-      <input
-        id="newchar-name"
-        v-model="newChar.name"
-        type="text"
-        placeholder="Name"
-        maxlength="14"
-        class="col-6 form-control"
-      />
-      <label for="newchar-level" class="my-2 text-light">Level</label>
-      <input
-        id="newchar-level"
-        v-model="newChar.level"
-        type="number"
-        min="1"
-        placeholder="Level"
-        class="col-3 form-control"
-      />
-      <button class="btn btn-dark col-6 mt-4" @click="addCharacter">Add</button>
-    </div>
-    <h4 class="text-light mt-4">
-      Character Progress {{ curCharacter ? " - " + curCharacter.name : "" }}
-    </h4>
-    <div class="char-progress">
-      <div class="col progress-tracker">
-        <div
-          v-for="(data, category) in charChecklist"
-          :key="category"
-          class="progress-group"
-          id="checklist"
-        >
-          <div class="progress-category text-light col-12 col-md-6 my-3">
-            {{ category }}
-          </div>
-          <div class="progress-items">
-            <div v-for="(item, i) in data.items" :key="i">
-              <div class="progress-item">
-                <GameAsset
-                  class="m-1"
-                  :width="72"
-                  :title="item.name"
-                  :image="getItemImagePath(item.name)"
-                  :enabled="
-                    curCharacter !== null &&
-                    curCharacter.items[item.name] === true
-                  "
-                  @click="handleProgressCheck(item.name)"
-                />
+      <div class="char-progress">
+        <h4 class="text-light mt-4">Character Progress</h4>
+        <div class="col progress-tracker">
+          <div
+            v-for="(data, category) in charChecklist"
+            :key="category"
+            class="progress-group"
+            id="checklist"
+          >
+            <div class="progress-category text-light col-12 col-md-6 my-3">
+              {{ category }}
+            </div>
+            <div class="progress-items">
+              <div v-for="(item, i) in data.items" :key="i">
+                <div class="progress-item">
+                  <GameAsset
+                    class="m-1"
+                    :width="72"
+                    :title="item.name"
+                    :image="getItemImagePath(item.name)"
+                    :enabled="
+                      curCharacter !== null &&
+                      curCharacter.items[item.name] === true
+                    "
+                    @click="handleProgressCheck(item.name)"
+                  />
               </div>
             </div>
           </div>
@@ -76,13 +166,16 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, reactive } from "vue";
+import { computed, defineComponent } from "vue";
 import {
   Class,
   Character,
+  Skills,
   Statues,
+  Subclass,
   useCharacters,
 } from "../composables/Characters";
+import { Assets } from "../composables/Utilities";
 import checklistData from "../data/checklist.json";
 
 import CharacterCard from "../components/CharacterCard.vue";
@@ -97,38 +190,37 @@ export default defineComponent({
   setup() {
     const {
       characters,
+      charIndex,
       curCharacter,
       numCharacters,
       saveCharacters,
+      setClass,
     } = useCharacters();
-    const newChar = reactive({
-      name: "",
-      level: 1,
-    });
 
-    const addCharacter = () => {
-      if (newChar.name === "") {
-        return;
-      }
+    const newCharacter = () => {
       let char = {
-        name: newChar.name,
-        level: newChar.level,
+        name: "Character " + (numCharacters.value + 1),
+        level: 1,
         items: {},
+        skills: {},
         statues: {},
         class: Class.Beginner,
         subclass: null,
       } as Character;
+      for (const skill of Skills) {
+        char.skills[skill] = 0;
+      }
       for (const name of Statues) {
         char.statues[name] = 0;
       }
-      newChar.name = "";
-      newChar.level = 1;
       characters.value.push(char);
+      charIndex.value = characters.value.length - 1;
       saveCharacters();
     };
 
-    const deleteCharacter = (i: number) => {
-      characters.value.splice(i, 1);
+    const deleteCharacter = () => {
+      characters.value.splice(charIndex.value, 1);
+      charIndex.value = 0;
       saveCharacters();
     };
 
@@ -154,14 +246,19 @@ export default defineComponent({
     };
 
     return {
-      addCharacter,
+      Assets,
       characters,
+      charIndex,
+      Class,
       curCharacter,
       deleteCharacter,
       charChecklist,
       handleProgressCheck,
-      newChar,
+      newCharacter,
       numCharacters,
+      saveCharacters,
+      setClass,
+      Subclass,
     };
   },
   methods: {
@@ -174,10 +271,47 @@ export default defineComponent({
 </script>
 
 <style scoped lang="sass">
+@import '../styles/base.sass'
+.char-delete-btn
+  background: darken($red, 25%)
+  color: white
+  &:hover
+    background: darken($red, 20%)
+    color: white
 .char-delete-icon
   cursor: pointer
   font-size: 1.5rem
   transition: 0.3s
   &:hover
     color: lighten(red, 15%)
+
+.char-editor
+  label
+    color: darken(white, 15%)
+    font-size: 1.15rem
+    font-weight: bold
+    margin: 0.1rem 0
+  .char-class-img
+    border-radius: 50%
+    cursor: pointer
+    height: 5rem
+    width: 5rem
+    padding: 0.25rem
+    object-fit: contain
+    transition: 0.3s
+    &:hover
+      transform: scale(1.1)
+      background: rgba(white, 0.05)
+  .char-input
+    background: none
+    border: 1px solid darken(white, 25%)
+    border-radius: 0.25rem
+    color: white
+    outline: none
+    padding: 0.5rem
+    &.skill-input
+      width: 5rem
+  .char-skill-img
+    width: 2rem
+    object-fit: contain
 </style>
