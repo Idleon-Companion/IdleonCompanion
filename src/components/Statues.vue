@@ -26,11 +26,13 @@
       </h5>
       <div class="statue-text my-2">
         <em
-          >{{ 123 }} statues to level
-          {{ curCharacter.statues[curStatue] + 1 }}</em
+          >{{
+            Math.round(Math.pow(curCharacter.statues[curStatue], 1.35) + 1)
+          }}
+          statues to level {{ curCharacter.statues[curStatue] + 1 }}</em
         >
       </div>
-      <div class="statue-text">+{{ 5 }}% NOTHING LOL</div>
+      <div class="statue-text">{{ bonusText }}</div>
     </div>
   </div>
   <div v-else>You have no characters created.</div>
@@ -70,7 +72,79 @@ export default defineComponent({
       saveCharacters();
     };
 
+    const bonusText = computed(() => {
+      let base = 0;
+      let effect = "";
+      let level = curCharacter.value
+        ? curCharacter.value.statues[curStatue.value]
+        : 0;
+      switch (curStatue.value) {
+        case "Anvil":
+          base = 0.5;
+          effect = "% Production Speed";
+          break;
+        case "Beholder":
+          base = 0.2;
+          effect = "% Crit Chance";
+          break;
+        case "Bullseye":
+          base = 0.8;
+          effect = "% Accuracy";
+          break;
+        case "Cauldron":
+          base = 0.5;
+          effect = "% Alchemy Exp";
+          break;
+        case "Exp Book":
+          base = 0.1;
+          effect = "% Class Exp";
+          break;
+        case "Feasty":
+          base = 1;
+          effect = "% Food Effect";
+          break;
+        case "Health":
+          base = 3;
+          effect = " Base Health";
+          break;
+        case "Kachow":
+          base = 0.4;
+          effect = "% Crit Damage";
+          break;
+        case "Lumberbob":
+          base = 0.3;
+          effect = " Choppin Power";
+          break;
+        case "Mining":
+          base = 0.3;
+          effect = " Mining Power";
+          break;
+        case "Oceanman":
+          base = 0.3;
+          effect = " Fishing Power";
+          break;
+        case "Ol Reliable":
+          base = 0.3;
+          effect = " Catching Power";
+          break;
+        case "Power":
+          base = 3;
+          effect = " Base Damage";
+          break;
+        case "Speed":
+          base = 0.1;
+          effect = "% Move Speed";
+          break;
+        case "Thicc Skin":
+          base = 1;
+          effect = " Base Defence";
+          break;
+      }
+      return `+${base * level}${effect}`;
+    });
+
     return {
+      bonusText,
       curCharacter,
       curStatue,
       saveCharacters,

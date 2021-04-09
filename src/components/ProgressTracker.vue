@@ -16,7 +16,7 @@
               class="m-1"
               :height="72"
               :title="item.name"
-              :src="getItemImagePath(item.name)"
+              :image="getItemImagePath(item.name)"
               :enabled="checklist[item.name]"
               @click="handleProgressCheck(item.name)"
             />
