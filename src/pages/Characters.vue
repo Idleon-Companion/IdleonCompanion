@@ -149,7 +149,7 @@
                     class="m-1"
                     :width="72"
                     :title="item.name"
-                    :image="getItemImagePath(item.name)"
+                    :image="getItemImagePath(item.name, data.assetDir)"
                     :enabled="
                       curCharacter !== null &&
                       curCharacter.items[item.name] === true
@@ -263,9 +263,9 @@ export default defineComponent({
     };
   },
   methods: {
-    getItemImagePath(item: string): string {
+    getItemImagePath(item: string, dir: string): string {
       let cleaned = item.replace(/ /g, "_");
-      return `assets/checklist/${cleaned}.png`;
+      return `assets/${dir}/${cleaned}.png`;
     },
   },
 });

@@ -16,8 +16,8 @@
               class="m-1"
               :height="72"
               :title="item.name"
-              :image="getItemImagePath(item.name)"
-              :enabled="checklist[item.name]"
+              :image="getItemImagePath(item.name, data.assetDir)"
+              :data-enabled="checklist[item.name]"
               @click="handleProgressCheck(item.name)"
             />
           </div>
@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, inject, onMounted, ref } from "vue";
+import { computed, defineComponent, inject, ref } from "vue";
 import checklistData from "../data/checklist.json";
 import { StateManager } from "../State";
 
@@ -76,9 +76,9 @@ export default defineComponent({
     };
   },
   methods: {
-    getItemImagePath(item: string): string {
+    getItemImagePath(item: string, dir: string): string {
       let cleaned = item.replace(/ /g, "_");
-      return `assets/checklist/${cleaned}.png`;
+      return `assets/${dir}/${cleaned}.png`;
     },
   },
 });
