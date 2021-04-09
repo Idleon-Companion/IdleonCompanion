@@ -1,7 +1,7 @@
 <template>
   <div v-if="char !== null" class="d-flex char-card">
-    <img :src="getClassImagePath(char)" class="char-icon" />
-    <div class="d-flex flex-column">
+    <img :src="Assets.CharImage(char)" class="char-icon" />
+    <div class="d-flex flex-column ms-2">
       <div class="char-name">{{ char.name }}</div>
       <div class="char-meta">
         <div class="char-level">Lv. {{ char.level }}</div>
@@ -14,6 +14,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import { Character } from "../composables/Characters";
+import { Assets } from "../composables/Utilities";
 
 export default defineComponent({
   name: "CharacterCard",
@@ -23,23 +24,23 @@ export default defineComponent({
       type: Object as PropType<Character | null>,
     },
   },
+  setup() {
+    return {
+      Assets,
+    };
+  },
   methods: {
     charClassText(char: Character): string {
       let classes = [char.class, char.subclass].filter((x) => x !== null);
-      return classes.join(" / ");
-    },
-    getClassImagePath(char: Character): string {
-      let image = char.class as string;
-      if (char.subclass) {
-        image = char.subclass as string;
-      }
-      return `assets/classes/${image}.png`;
+      return classes.join(" > ");
     },
   },
 });
 </script>
 
 <style scoped lang="sass">
+@import '../styles/base.sass'
+
 .char-icon
   object-fit: contain
   height: 4rem
@@ -55,8 +56,9 @@ export default defineComponent({
     color: darken(white, 10%)
     display: flex
     .char-level
-      background: var(--purple)
+      background: $purple
       border-radius: 0.2rem
+      font-weight: bold
       padding: 0.1rem 0.25rem
     .char-class
       font-style: italic
