@@ -156,6 +156,7 @@
                     "
                     @click="handleProgressCheck(item.name)"
                   />
+                </div>
               </div>
             </div>
           </div>
