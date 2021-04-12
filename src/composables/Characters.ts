@@ -17,6 +17,15 @@ export enum Subclass {
   Shaman = "Shaman",
 }
 
+export const Skills = [
+  "Mining",
+  "Smithing",
+  "Choppin'",
+  "Fishing",
+  "Alchemy",
+  "Catching",
+];
+
 // All statues in the game
 export const Statues = [
   "Anvil",
@@ -43,6 +52,7 @@ export type Character = {
   level: number;
   name: string;
   items: Record<string, boolean>;
+  skills: Record<string, number>;
   statues: Record<string, number>;
 };
 
@@ -80,6 +90,52 @@ export function useCharacters() {
     localStorage.setItem("chars", JSON.stringify(characters.value));
   };
 
+  // Set character class/subclass
+  const setClass = (value: Class | Subclass) => {
+    if (curCharacter.value === null) {
+      return;
+    }
+    for (const c in Class) {
+      if (value === c) {
+        curCharacter.value.class = value as Class;
+        curCharacter.value.subclass = null;
+        saveCharacters();
+        return;
+      }
+    }
+    switch (value) {
+      case Subclass.Barbarian:
+        curCharacter.value.class = Class.Warrior;
+        curCharacter.value.subclass = value;
+        break;
+      case Subclass.Squire:
+        curCharacter.value.class = Class.Warrior;
+        curCharacter.value.subclass = value;
+        break;
+      case Subclass.Bowman:
+        curCharacter.value.class = Class.Archer;
+        curCharacter.value.subclass = value;
+        break;
+      case Subclass.Hunter:
+        curCharacter.value.class = Class.Archer;
+        curCharacter.value.subclass = value;
+        break;
+      case Subclass.Shaman:
+        curCharacter.value.class = Class.Mage;
+        curCharacter.value.subclass = value;
+        break;
+      case Subclass.Wizard:
+        curCharacter.value.class = Class.Mage;
+        curCharacter.value.subclass = value;
+        break;
+      case Subclass.Journeyman:
+        curCharacter.value.class = Class.Beginner;
+        curCharacter.value.subclass = value;
+        break;
+    }
+    saveCharacters();
+  };
+
   return {
     characters,
     charIndex,
@@ -88,5 +144,6 @@ export function useCharacters() {
     nextCharacter,
     prevCharacter,
     saveCharacters,
+    setClass,
   };
 }
