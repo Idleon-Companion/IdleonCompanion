@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-12 rounded-bottom">
       <div
         v-for="(task, i) in tasks"
         class="list-group-item list-group-item-action text-light py-3 task"
@@ -40,53 +40,65 @@
     </div>
   </div>
   <div class="row mx-0 text-light mt-2">
-    <div class="col-12 bg-primary rounded p-3 d-flex flex-column">
+    <div class="bg-primary rounded p-3 m-0 d-flex row">
       <h4>Add New Task</h4>
-      <label for="new-task-text">Task</label>
-      <input
-        id="new-task-text"
-        type="text"
-        v-model="newTask.text"
-        placeholder="Collect 300 Green Spores"
-      />
-      <div class="d-flex mt-2 align-items-center">
-        Reset every
-        <input
-          id="new-task-days"
-          class="mx-1 col-2 col-md-1"
-          type="numeric"
-          :min="0"
-          v-model="newTask.resetDays"
+      <div class="d-flex flex-column col-12 col-md-6">
+        <label for="new-task-text">Task</label>
+        <textarea
+          id="new-task-text"
+          v-resizable
+          v-model="newTask.text"
+          placeholder="Collect 300 Green Spores"
         />
-        days
+        <label for="new-task-categories" class="mt-1">Categories</label>
         <input
-          id="new-task-hours"
-          class="mx-1 col-2 col-md-1"
-          type="numeric"
-          :min="1"
-          v-model="newTask.resetHours"
+          id="new-task-categories"
+          type="text"
+          v-model="newTask.categories"
+          placeholder="guild, colosseum, quests"
         />
-        hours
       </div>
-      <label for="new-task-categories">Categories</label>
-      <input
-        id="new-task-categories"
-        type="text"
-        v-model="newTask.categories"
-        placeholder="guild, colosseum, quests"
-      />
-      <div class="new-task-sync-desc">
-        Tasks will be reset according to the game clock (enable for daily tasks)
+      <div class="d-flex flex-column col-12 col-md-6 justify-content-center">
+        <div class="new-task-sync-desc">
+          Enable sync to reset according to game clock (set your in-game reset
+          time below)
+        </div>
+        <div class="d-flex">
+          <div class="new-task-reset-time">
+            <input type="time" v-model="dailyReset" />
+          </div>
+          <div
+            class="new-task-sync p-1 ms-2 col-2 text-center rounded"
+            @click="newTask.sync = !newTask.sync"
+          >
+            Sync: {{ newTask.sync ? "On" : "Off" }}
+          </div>
+        </div>
+        <div class="d-flex align-items-center mt-2">
+          <div class="d-flex align-items-center">
+            Reset every
+            <input
+              id="new-task-days"
+              class="mx-1 col-2 col-md-1"
+              type="numeric"
+              :min="0"
+              v-model="newTask.resetDays"
+            />
+            days
+            <input
+              id="new-task-hours"
+              class="mx-1 col-2 col-md-1"
+              type="numeric"
+              :min="1"
+              v-model="newTask.resetHours"
+            />
+            hours
+          </div>
+          <button class="btn new-task-btn col-2 p-2 mt-2" @click="addTask">
+            Add Task
+          </button>
+        </div>
       </div>
-      <div
-        class="new-task-sync p-1 col-2 text-center rounded"
-        @click="newTask.sync = !newTask.sync"
-      >
-        Sync: {{ newTask.sync ? "On" : "Off" }}
-      </div>
-      <button class="btn new-task-btn col-2 p-2 mt-2" @click="addTask">
-        Add Task
-      </button>
     </div>
   </div>
 </template>
@@ -105,13 +117,10 @@ import taskData from "../data/defaultTasks.json";
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import relativeTime from "dayjs/plugin/relativeTime";
-import timezone from "dayjs/plugin/timezone";
 import { StateManager } from "../State";
 dayjs.locale;
 dayjs.extend(duration);
 dayjs.extend(relativeTime);
-dayjs.extend(timezone);
-dayjs.tz.setDefault("America/New_York");
 
 type Task = {
   lastCompleted: number; // Unix timestamp of last completion
@@ -128,13 +137,15 @@ export default defineComponent({
   name: "Tasks",
   setup() {
     let tasks = reactive(Array<Task>());
+    let dailyReset = ref("12:00");
     // Load task data from state first if it exists
     const state = inject("state") as StateManager;
     let saved = JSON.parse(state.load("tasks"));
     if (saved !== null) {
-      for (let task of saved) {
+      for (let task of saved.tasks) {
         tasks.push(task);
       }
+      dailyReset.value = saved.dailyReset;
     } else {
       // Load default task data and reset all timers
       // Daily reset is at 5:50am for America/New York? (Needs confirmation)?
@@ -153,7 +164,7 @@ export default defineComponent({
     const curTime = ref(dayjs().valueOf());
     setInterval(() => {
       curTime.value = dayjs().valueOf();
-    }, 1000);
+    }, 5000);
 
     const isTaskComplete = (task: Task): boolean => {
       let resetInterval = dayjs.duration(task.reset);
@@ -173,7 +184,13 @@ export default defineComponent({
       progressBar.value.style.width = `${
         (tasksCompleted.value / tasks.length) * 100
       }%`;
-      state.save("tasks", JSON.stringify(tasks));
+      state.save(
+        "tasks",
+        JSON.stringify({
+          tasks: tasks,
+          dailyReset: dailyReset.value,
+        })
+      );
     };
 
     const handleTaskCheck = (task: Task) => {
@@ -189,8 +206,8 @@ export default defineComponent({
     const newTask = reactive({
       text: "",
       categories: "",
-      resetHours: 12,
-      resetDays: 0,
+      resetHours: 0,
+      resetDays: 1,
       sync: false,
     });
     const addTask = () => {
@@ -204,6 +221,8 @@ export default defineComponent({
         sync: newTask.sync,
       };
       tasks.push(t);
+      newTask.text = "";
+      newTask.categories = "";
       updateTasks();
     };
 
@@ -218,6 +237,7 @@ export default defineComponent({
 
     return {
       addTask,
+      dailyReset,
       curTime,
       handleTaskCheck,
       isTaskComplete,
@@ -241,23 +261,33 @@ export default defineComponent({
     },
     taskResetTimeText(task: Task): string {
       if (this.isTaskComplete(task)) {
-        let resetTime = task.lastCompleted + task.reset;
+        let timeUntilReset = task.lastCompleted + task.reset;
+        let daily = this.dailyReset.split(":");
         if (task.sync) {
-          let dailyReset = dayjs()
+          // Calaculate offset from daily reset time
+          let offset = dayjs()
             .startOf("day")
-            .add(dayjs.duration({ hours: 5, minutes: 50 }))
+            .add(
+              dayjs.duration({
+                hours: parseInt(daily[0]),
+                minutes: parseInt(daily[1]),
+              })
+            )
             .subtract(this.curTime)
             .valueOf();
           // Handle negative value
-          if (dailyReset < 0) {
-            dailyReset += DAY;
+          if (offset < 0) {
+            offset += DAY;
           }
-          resetTime -= Math.min(DAY, task.reset) - dailyReset;
+          timeUntilReset -= Math.min(DAY, task.reset) - offset;
         }
         // Use for testing task reset time
-        let diff = dayjs.duration(resetTime - this.curTime);
-        return "Reset in " + diff.format("D[D] H[h] mm[m] ss[s]");
-        // return dayjs(this.curTime).to(task.lastCompleted + task.reset);
+        let diff = dayjs.duration(timeUntilReset - this.curTime);
+        let format = diff.format("H[h] mm[m]");
+        if (diff.days() > 0) {
+          format = diff.format("D[d] H[h] mm[m]");
+        }
+        return "Reset in " + format;
       }
       return "";
     },
@@ -291,7 +321,7 @@ export default defineComponent({
   border-radius: 5px
   font-size: 0.85rem
   font-weight: bold
-  margin-right: 0.1rem
+  margin-right: 0.25rem
   padding: 0.1rem 0.35rem
   text-transform: uppercase
 .new-task-sync-desc
