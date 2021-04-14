@@ -304,12 +304,6 @@ export default defineComponent({
       transform: scale(1.1)
       background: rgba(white, 0.05)
   .char-input
-    background: none
-    border: 1px solid darken(white, 25%)
-    border-radius: 0.25rem
-    color: white
-    outline: none
-    padding: 0.5rem
     &.skill-input
       width: 5rem
   .char-skill-img

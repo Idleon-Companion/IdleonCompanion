@@ -1,68 +1,46 @@
 [
   {
     "task": "Check the daily GP quests and make sure to get them done",
-    "reset": {
-      "days": 1
-    }
+    "reset": 1
   },
   {
     "task": "Do the daily tasks in the bottom right of the task board for the 10GP each and crafting unlock points",
-    "reset": {
-      "days": 1
-    }
+    "reset": 1
   },
   {
     "task": "Check your alchemy and make sure to spend all your liquids - ideally keep stocked up on Distilled Water and level up Grind Time at least once every day",
-    "reset": {
-      "days": 1
-    }
+    "reset": 1
   },
   {
     "task": "Check your post office orders and move your characters so you can get all 3 done if feasible",
-    "reset": {
-      "days": 1
-    }
+    "reset": 1
   },
   {
     "task": "Make sure all your characters have enough food/enough inventory space/all their talent points spent. Also quick deposit anvil production from each character",
-    "reset": {
-      "days": 1
-    }
+    "reset": 1
   },
   {
     "task": "Buy the 4 talent reset shards (one from each shop Grasslands Town, Forest, Fishing and Desert) and the Silver Antique from Forest Villas shop",
-    "reset": {
-      "days": 1
-    }
+    "reset": 1
   },
   {
     "task": "Kill Boops (in the secret area) and Dr Defecaus if possible",
-    "reset": {
-      "days": 1
-    }
+    "reset": 1
   },
   {
     "task": "Buy anything else from shops you like to stock every day - e.g. town teleports, small mana, small hp potions, strength statue",
-    "reset": {
-      "days": 1
-    }
+    "reset": 1
   },
   {
     "task": "Collect boss keys from the Dog Bone ghost for Amarok and Djonnut the Genie for Efaunt",
-    "reset": {
-      "days": 3
-    }
+    "reset": 1
   },
   {
     "task": "Collect Colosseum entry tickets from each Colosseum NPC",
-    "reset": {
-      "days": 3
-    }
+    "reset": 3
   },
   {
     "task": "Get all your weekly guild quests done - see the #guild-and-gp-guide for more tips on these.",
-    "reset": {
-      "days": 7
-    }
+    "reset": 7
   }
 ]
