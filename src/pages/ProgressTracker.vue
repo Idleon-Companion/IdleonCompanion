@@ -14,7 +14,7 @@
           <div class="progress-item">
             <GameAsset
               class="m-1"
-              :height="72"
+              :height="64"
               :title="item.name"
               :image="getItemImagePath(item.name, data.assetDir)"
               :data-enabled="checklist[item.name]"
@@ -32,7 +32,7 @@ import { computed, defineComponent, inject, ref } from "vue";
 import checklistData from "../data/checklist.json";
 import { StateManager } from "../State";
 
-import GameAsset from "./GameAsset.vue";
+import GameAsset from "../components/GameAsset.vue";
 
 export default defineComponent({
   name: "ProgressTracker",
