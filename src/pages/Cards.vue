@@ -12,7 +12,7 @@
           :key="c"
           :height="72"
           :image="getCardImagePath(card)"
-          :title="card.replace('_', ' ')"
+          :title="card.replace(/_/g, ' ')"
         />
       </div>
       <div
@@ -25,7 +25,7 @@
           :key="c"
           :height="72"
           :image="getCardImagePath(card)"
-          :title="card.replace('_', ' ')"
+          :title="card.replace(/_/g, ' ')"
         />
       </div>
       <div
@@ -38,7 +38,7 @@
           :key="c"
           :height="72"
           :image="getCardImagePath(card)"
-          :title="card.replace('_', ' ')"
+          :title="card.replace(/_/g, ' ')"
         />
       </div>
     </div>
