@@ -65,7 +65,7 @@
         </div>
         <div class="d-flex">
           <div class="new-task-reset-time">
-            <input type="time" v-model="dailyReset" />
+            <input type="time" v-model="dailyReset" @change="updateTasks" />
           </div>
           <div
             class="new-task-sync p-1 ms-2 col-2 text-center rounded"
@@ -162,9 +162,30 @@ export default defineComponent({
     }
 
     const curTime = ref(dayjs().valueOf());
-    setInterval(() => {
+    const offsetTime = ref(0);
+    const setOffsetTime = () => {
       curTime.value = dayjs().valueOf();
-    }, 5000);
+      // Calculate offset from daily reset time
+      let daily = dailyReset.value.split(":");
+      let offset = dayjs()
+        .startOf("day")
+        .subtract(curTime.value)
+        .add(
+          dayjs.duration({
+            hours: parseInt(daily[0]),
+            minutes: parseInt(daily[1]),
+          })
+        )
+        .valueOf();
+      // Handle negative value
+      if (offset < 0) {
+        offset += DAY;
+      }
+      offsetTime.value = offset;
+    };
+    setOffsetTime();
+    // Update day intervals
+    setInterval(setOffsetTime, 1000);
 
     const isTaskComplete = (task: Task): boolean => {
       let resetInterval = dayjs.duration(task.reset);
@@ -237,14 +258,16 @@ export default defineComponent({
 
     return {
       addTask,
-      dailyReset,
       curTime,
+      dailyReset,
       handleTaskCheck,
       isTaskComplete,
       newTask,
+      offsetTime,
       progressBar,
       removeTask,
       tasks,
+      updateTasks,
     };
   },
   methods: {
@@ -260,32 +283,17 @@ export default defineComponent({
       return text;
     },
     taskResetTimeText(task: Task): string {
+      let x = "HH[h] mm[m] ss[s]";
       if (this.isTaskComplete(task)) {
-        let timeUntilReset = task.lastCompleted + task.reset;
-        let daily = this.dailyReset.split(":");
+        let timeUntilReset = task.lastCompleted + task.reset - this.curTime;
         if (task.sync) {
-          // Calaculate offset from daily reset time
-          let offset = dayjs()
-            .startOf("day")
-            .add(
-              dayjs.duration({
-                hours: parseInt(daily[0]),
-                minutes: parseInt(daily[1]),
-              })
-            )
-            .subtract(this.curTime)
-            .valueOf();
-          // Handle negative value
-          if (offset < 0) {
-            offset += DAY;
-          }
-          timeUntilReset -= Math.min(DAY, task.reset) - offset;
+          timeUntilReset = task.reset - (DAY - this.offsetTime);
         }
         // Use for testing task reset time
-        let diff = dayjs.duration(timeUntilReset - this.curTime);
-        let format = diff.format("H[h] mm[m]");
+        let diff = dayjs.duration(timeUntilReset);
+        let format = diff.format("H[h] mm[m] ss[s]");
         if (diff.days() > 0) {
-          format = diff.format("D[d] H[h] mm[m]");
+          format = diff.format("D[d] H[h] mm[m] ss[s]");
         }
         return "Reset in " + format;
       }
