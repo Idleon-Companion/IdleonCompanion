@@ -49,24 +49,24 @@
                   ></button>
                 </div>
                 <div class="d-flex flex-wrap modal-body">
-                  <img
+                  <GameAsset
                     v-for="(class_, i) in Class"
                     :key="i"
-                    :src="Assets.ClassImage(class_)"
+                    :image="Assets.ClassImage(class_)"
+                    :height="72"
+                    :width="72"
                     :title="class_"
-                    class="char-class-img"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="bottom"
+                    class="char-class-img m-1"
                     @click="setClass(class_)"
                   />
-                  <img
+                  <GameAsset
                     v-for="(subclass, i) in Subclass"
                     :key="i"
-                    :src="Assets.ClassImage(subclass)"
+                    :image="Assets.ClassImage(subclass)"
+                    :height="72"
+                    :width="72"
                     :title="subclass"
-                    class="char-class-img"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="bottom"
+                    class="char-class-img m-1"
                     @click="setClass(subclass)"
                   />
                 </div>
@@ -111,12 +111,10 @@
               :key="skill"
               class="char-skill mb-1"
             >
-              <img
+              <GameAsset
                 class="char-skill-img me-2"
-                :src="Assets.IconImage(skill)"
+                :image="Assets.IconImage(skill)"
                 :title="skill"
-                data-bs-toggle="tooltip"
-                data-bs-placement="bottom"
               />
               <input
                 :id="'char-skill-' + skill"
@@ -178,10 +176,8 @@ import {
 } from "../composables/Characters";
 import { Assets } from "../composables/Utilities";
 import checklistData from "../data/checklist.json";
-
 import CharacterCard from "../components/CharacterCard.vue";
 import GameAsset from "../components/GameAsset.vue";
-
 export default defineComponent({
   name: "Characters",
   components: {
@@ -197,7 +193,6 @@ export default defineComponent({
       saveCharacters,
       setClass,
     } = useCharacters();
-
     const newCharacter = () => {
       let char = {
         name: "Character " + (numCharacters.value + 1),
@@ -218,13 +213,11 @@ export default defineComponent({
       charIndex.value = characters.value.length - 1;
       saveCharacters();
     };
-
     const deleteCharacter = () => {
       characters.value.splice(charIndex.value, 1);
       charIndex.value = 0;
       saveCharacters();
     };
-
     const charChecklist = computed(() => {
       // Global items are managed on the progress tracker/checklist page
       return Object.entries(checklistData)
@@ -234,7 +227,6 @@ export default defineComponent({
           return obj;
         }, {} as Record<string, any>);
     });
-
     const handleProgressCheck = (item: string) => {
       if (curCharacter.value !== null) {
         if (curCharacter.value.items[item] !== undefined) {
@@ -245,7 +237,6 @@ export default defineComponent({
         saveCharacters();
       }
     };
-
     return {
       Assets,
       characters,
@@ -285,7 +276,6 @@ export default defineComponent({
   transition: 0.3s
   &:hover
     color: lighten(red, 15%)
-
 .char-editor
   label
     color: darken(white, 15%)
@@ -304,6 +294,12 @@ export default defineComponent({
       transform: scale(1.1)
       background: rgba(white, 0.05)
   .char-input
+    background: none
+    border: 1px solid darken(white, 25%)
+    border-radius: 0.25rem
+    color: white
+    outline: none
+    padding: 0.5rem
     &.skill-input
       width: 5rem
   .char-skill-img
