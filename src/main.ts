@@ -1,6 +1,9 @@
 import { version } from "../package.json";
 import { createApp } from "vue";
+import VueTippy from "vue-tippy";
 import App from "./App.vue";
+
+import "tippy.js/dist/tippy.css";
 
 import { StateManager } from "./State";
 import { useCharacters } from "./composables/Characters";
@@ -21,4 +24,12 @@ createApp(App)
     },
   })
   .provide("state", state)
+  .use(VueTippy, {
+    directive: "tooltip",
+    component: "Tooltip",
+    defaultProps: {
+      placement: "bottom",
+      offset: [0, 30],
+    },
+  })
   .mount("#app");
