@@ -187,13 +187,15 @@ export default defineComponent({
     // Update day intervals
     setInterval(setOffsetTime, 1000);
 
-    const isTaskComplete = (task: Task): boolean => {
-      let resetInterval = dayjs.duration(task.reset);
-      let resetTime = dayjs(task.lastCompleted).add(resetInterval);
-      if (dayjs().isBefore(resetTime)) {
-        return true;
+    const timeUntilReset = (task: Task): number => {
+      if (task.sync) {
+        return task.reset - (DAY - offsetTime.value);
       }
-      return false;
+      return task.lastCompleted + task.reset - curTime.value;
+    };
+
+    const isTaskComplete = (task: Task): boolean => {
+      return task.lastCompleted > 0 && timeUntilReset(task) > 0;
     };
 
     const tasksCompleted = computed(() => {
@@ -258,39 +260,21 @@ export default defineComponent({
 
     return {
       addTask,
-      curTime,
       dailyReset,
       handleTaskCheck,
       isTaskComplete,
       newTask,
-      offsetTime,
       progressBar,
       removeTask,
       tasks,
+      timeUntilReset,
       updateTasks,
     };
   },
   methods: {
-    taskResetText(task: Task): string {
-      let duration = dayjs.duration(task.reset);
-      let text = "";
-      if (duration.days() > 0) {
-        text += `${duration.days()}D `;
-      }
-      if (duration.hours() > 0) {
-        text += `${duration.hours()}H `;
-      }
-      return text;
-    },
     taskResetTimeText(task: Task): string {
-      let x = "HH[h] mm[m] ss[s]";
       if (this.isTaskComplete(task)) {
-        let timeUntilReset = task.lastCompleted + task.reset - this.curTime;
-        if (task.sync) {
-          timeUntilReset = task.reset - (DAY - this.offsetTime);
-        }
-        // Use for testing task reset time
-        let diff = dayjs.duration(timeUntilReset);
+        let diff = dayjs.duration(this.timeUntilReset(task));
         let format = diff.format("H[h] mm[m] ss[s]");
         if (diff.days() > 0) {
           format = diff.format("D[d] H[h] mm[m] ss[s]");
