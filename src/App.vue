@@ -3,8 +3,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
 import Home from "./pages/Home.vue";
+import * as bootstrap from "bootstrap";
 
 import "./styles/base.sass";
 import "./styles/progress.sass";
@@ -15,6 +16,15 @@ export default defineComponent({
   components: {
     Home,
   },
-  setup() {},
+  setup() {
+    onMounted(() => {
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  },
 });
 </script>
