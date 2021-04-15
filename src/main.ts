@@ -2,6 +2,8 @@ import { version } from "../package.json";
 import { createApp } from "vue";
 import App from "./App.vue";
 
+//temp
+
 import { StateManager } from "./State";
 import { useCharacters } from "./composables/Characters";
 
