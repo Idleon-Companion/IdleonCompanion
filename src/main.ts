@@ -11,4 +11,14 @@ let charData = state.load("chars");
 if (charData !== null) {
   characters.value = JSON.parse(charData);
 }
-createApp(App).provide("state", state).mount("#app");
+createApp(App)
+  .directive("resizable", {
+    updated(el) {
+      el.addEventListener("input", (e: any) => {
+        e.target.style.height = "auto";
+        e.target.style.height = e.target.scrollHeight + "px";
+      });
+    },
+  })
+  .provide("state", state)
+  .mount("#app");
