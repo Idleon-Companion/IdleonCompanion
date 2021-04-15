@@ -10,6 +10,10 @@ export class StateManager {
       // Consider all previous stored data invalid
       localStorage.clear();
     }
+    if (savedVersion < "0.1.1") {
+      // Task reworked to allow custom tasks
+      localStorage.removeItem("tasks");
+    }
     localStorage.setItem("version", version);
   }
 
