@@ -1,8 +1,8 @@
 <template>
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-8">
+  <div class="row mb-4 justify-content-center">
+    <div class="col-8">
       <div class="input-group">
-        <select v-model="stamp" class="" id="stampSelector">
+        <select v-model="stamp" class="form-select" id="stampSelector">
           <option value="" selected>Select Your Stamp</option>
           <option v-for="(stamp, id) in stamps" :key="id" :value="id">
             {{ stamp.name }}
@@ -11,40 +11,48 @@
       </div>
 
       <div v-if="activeStamp" class="col-12 d-flex" id="stampContent">
-        <div class="text-light bg-primary rounded mt-2 p-4 w-100">
-          <div class="d-flex align-items-center justify-content-center">
-            <div class="d-flex me-4">
-              <GameAsset
+        <div class="card mb-3 w-100">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex p-4">
+              <img
                 :src="getStampImagePath(activeStamp.name)"
-                :height="96"
+                class="img-fluid w-100 align-self-center m-auto"
               />
             </div>
-            <div class="d-block-flex">
-              <div class="py-2 d-block-flex w-100">
-                <strong class="h3">{{ activeStamp.name }}</strong>
-                <div>
-                  <label for="stamp-lvl" class="h5 m-2 ms-0">Level</label>
-                  <input v-model="lvl" type="number" min="1" id="stamp-lvl" />
-                </div>
+            <div class="col-md-8 d-block-flex">
+              <div
+                class="card-header d-inline-flex w-100 justify-content-between"
+              >
+                <strong class="align-self-center">{{
+                  activeStamp.name
+                }}</strong>
+                <input
+                  v-model="lvl"
+                  class="form-control w-25"
+                  type="number"
+                  min="1"
+                  id="Stamplvl"
+                  placeholder="Insert you stamp level"
+                />
               </div>
-              <ul class="rounded list-group list-group-flush">
-                <li class="list-group-item text-light bg-secondary">
-                  +{{
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  {{
                     calculateBonus(activeStamp, Number(lvl)) +
                     " " +
                     activeStamp.bonus
                   }}
                 </li>
-                <li class="list-group-item text-light bg-secondary">
+                <li class="list-group-item">
                   <CoinDisplay
                     :value="String(calculateCoinCost(activeStamp, Number(lvl)))"
                   />
                 </li>
-                <li class="list-group-item text-light bg-secondary">
+                <li class="list-group-item">
                   <span v-if="Number(lvl) % activeStamp.diffRatio == 0">
-                    <GameAsset
+                    <img
                       :src="getMaterialImagePath(activeStamp.material)"
-                      :height="64"
+                      class="img-fluid h-auto"
                     />
                     {{
                       calculateMaterialsCost(activeStamp, Number(lvl)) +
@@ -52,7 +60,7 @@
                       activeStamp.material
                     }}
                   </span>
-                  <span v-else class="text-light bg-secondary">
+                  <span v-else class="text-muted">
                     Next Material cost in
                     {{
                       activeStamp.diffRatio -
@@ -73,9 +81,7 @@
 import { computed, defineComponent, ref } from "vue";
 import { Growth } from "../composables/Utilities";
 import stampsData from "../data/stampsData.json";
-
-import CoinDisplay from "../components/CoinDisplay.vue";
-import GameAsset from "../components/GameAsset.vue";
+import CoinDisplay from "./CoinDisplay.vue";
 
 type Stamp = {
   name: string;
@@ -95,7 +101,6 @@ export default defineComponent({
   name: "Stamps",
   components: {
     CoinDisplay,
-    GameAsset,
   },
   setup() {
     const stamps: Record<any, Stamp> = stampsData;

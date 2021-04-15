@@ -9,7 +9,7 @@
         <input
           v-model="repeat"
           type="range"
-          class="form-range border-none"
+          class="form-range"
           min="1"
           max="30"
           id="foodRange"
@@ -33,7 +33,7 @@
       >
         <td>
           <GameAsset
-            :height="72"
+            :width="72"
             :image="getFoodImagePath(req.name)"
             :title="req.name"
           />
@@ -50,7 +50,7 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 
-import GameAsset from "../components/GameAsset.vue";
+import GameAsset from "./GameAsset.vue";
 
 const picnicRequirements = [
   {
