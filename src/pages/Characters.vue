@@ -49,24 +49,24 @@
                   ></button>
                 </div>
                 <div class="d-flex flex-wrap modal-body">
-                  <img
+                  <GameAsset
                     v-for="(class_, i) in Class"
                     :key="i"
-                    :src="Assets.ClassImage(class_)"
+                    :image="Assets.ClassImage(class_)"
+                    :height="72"
+                    :width="72"
                     :title="class_"
-                    class="char-class-img"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="bottom"
+                    class="char-class-img m-1"
                     @click="setClass(class_)"
                   />
-                  <img
+                  <GameAsset
                     v-for="(subclass, i) in Subclass"
                     :key="i"
-                    :src="Assets.ClassImage(subclass)"
+                    :image="Assets.ClassImage(subclass)"
+                    :height="72"
+                    :width="72"
                     :title="subclass"
-                    class="char-class-img"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="bottom"
+                    class="char-class-img m-1"
                     @click="setClass(subclass)"
                   />
                 </div>
@@ -111,12 +111,10 @@
               :key="skill"
               class="char-skill mb-1"
             >
-              <img
+              <GameAsset
                 class="char-skill-img me-2"
-                :src="Assets.IconImage(skill)"
+                :image="Assets.IconImage(skill)"
                 :title="skill"
-                data-bs-toggle="tooltip"
-                data-bs-placement="bottom"
               />
               <input
                 :id="'char-skill-' + skill"

@@ -1,14 +1,18 @@
 <template>
-  <img
-    class="img-fluid asset"
-    data-bs-toggle="tooltip"
-    data-bs-placement="bottom"
-    loading="lazy"
-    :data-enabled="enabled"
-    :title="title"
-    :src="image"
-    :style="computedStyle"
-  />
+  <Tooltip>
+    <img
+      class="img-fluid asset"
+      loading="lazy"
+      :data-enabled="enabled"
+      :src="image"
+      :style="computedStyle"
+    />
+    <template #content>
+      <slot name="tooltip">
+        <div>{{ title }}</div>
+      </slot>
+    </template>
+  </Tooltip>
 </template>
 
 <script lang="ts">
