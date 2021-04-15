@@ -1,7 +1,7 @@
 <template>
   <div class="row pl-3 mb-4">
     <div class="input-group">
-      <select v-model="build" class="form-select" id="buildSelector">
+      <select v-model="build" id="buildSelector">
         <option value="" selected>Select Your Build</option>
         <option
           v-for="(build, buildID) in builds"
