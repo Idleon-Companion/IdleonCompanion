@@ -176,17 +176,18 @@
         </button>
       </li>
       <li class="nav-item">
-				<button class="nav-link text-light" 
-        data-bs-toggle="tab" 
-        data-bs-target="#stamps" 
-        type="button" 
-        role="tab" 
-        aria-controls="profile" 
-        aria-selected="false"
-       >
-        Stamps
+        <button
+          class="nav-link text-light"
+          data-bs-toggle="tab"
+          data-bs-target="#stamps"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          Stamps
         </button>
-			</li>
+      </li>
       <li class="nav-item">
         <button
           class="nav-link text-light"
@@ -256,14 +257,20 @@
 
     <div id="nav-tabContent" class="tab-content">
       <div class="tab-pane fade active show" id="tasks"><Tasks /></div>
-      <div class="tab-pane fade jumbotron" id="checklist"><ProgressTracker /></div>
+      <div class="tab-pane fade jumbotron" id="checklist">
+        <ProgressTracker />
+      </div>
       <div class="tab-pane fade jumbotron" id="statues"><Statues /></div>
       <div class="tab-pane fade jumbotron" id="stamps"><Stamps /></div>
-      <div class="tab-pane fade jumbotron" id="picnic-quest"><PicnicQuest /></div>
+      <div class="tab-pane fade jumbotron" id="picnic-quest">
+        <PicnicQuest />
+      </div>
       <div class="tab-pane fade jumbotron" id="builds"><Builds /></div>
       <div class="tab-pane fade jumbotron" id="cards"><Cards /></div>
       <div class="tab-pane fade jumbotron" id="characters"><Characters /></div>
-      <div class="tab-pane fade jumbotron" id="packmulecrafter"><PackMuleCrafter /></div>
+      <div class="tab-pane fade jumbotron" id="packmulecrafter">
+        <PackMuleCrafter />
+      </div>
       <div class="tab-pane fade jumbotron" id="credits"><Credits /></div>
     </div>
   </div>
@@ -272,18 +279,17 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Builds from "../components/Builds.vue";
-import Cards from "../components/Cards.vue";
-import Credits from "../components/Credits.vue";
+import Builds from "./Builds.vue";
+import Cards from "./Cards.vue";
+import Credits from "./Credits.vue";
 import CharacterSelector from "../components/CharacterSelector.vue";
-import PackMuleCrafter from "../components/PackMuleCrafter.vue";
-import PicnicQuest from "../components/PicnicQuest.vue";
-import ProgressTracker from "../components/ProgressTracker.vue";
-import Statues from "../components/Statues.vue";
-import Tasks from "../components/Tasks.vue";
-import Stamps from "../components/Stamps.vue";
+import PackMuleCrafter from "./PackMuleCrafter.vue";
+import PicnicQuest from "./PicnicQuest.vue";
+import ProgressTracker from "./ProgressTracker.vue";
+import Statues from "./Statues.vue";
+import Tasks from "./Tasks.vue";
+import Stamps from "./Stamps.vue";
 import Characters from "../pages/Characters.vue";
-
 
 export default defineComponent({
   name: "Home",

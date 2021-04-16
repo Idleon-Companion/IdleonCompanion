@@ -33,7 +33,7 @@
       >
         <td>
           <GameAsset
-            :width="72"
+            :height="72"
             :image="getFoodImagePath(req.name)"
             :title="req.name"
           />
@@ -50,7 +50,7 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 
-import GameAsset from "./GameAsset.vue";
+import GameAsset from "../components/GameAsset.vue";
 
 const picnicRequirements = [
   {

@@ -10,39 +10,35 @@
         <GameAsset
           v-for="(card, c) in cardset.core"
           :key="c"
-          :height="90"
+          :height="72"
           :image="getCardImagePath(card)"
-          :title="card.replace('_', ' ')"
+          :title="card.replace(/_/g, ' ')"
         />
       </div>
       <div
         class="col-4 border border-secondary rounded p-2 w-auto"
         style="min-width: 150px"
       >
-        <span class="badge bg-secondary card-title px-4 py-1"
-          >Useful Cards</span
-        >
+        <span class="badge bg-secondary card-title">Useful Cards</span>
         <GameAsset
           v-for="(card, c) in cardset.useful"
           :key="c"
-          :height="90"
+          :height="72"
           :image="getCardImagePath(card)"
-          :title="card.replace('_', ' ')"
+          :title="card.replace(/_/g, ' ')"
         />
       </div>
       <div
         class="col-4 border border-secondary rounded p-2 w-auto"
         style="min-width: 150px"
       >
-        <span class="badge bg-secondary card-title px-4 py-1"
-          >Minimal Benefits</span
-        >
+        <span class="badge bg-secondary card-title">Minimal Benefits</span>
         <GameAsset
           v-for="(card, c) in cardset.minimal"
           :key="c"
-          :height="90"
+          :height="72"
           :image="getCardImagePath(card)"
-          :title="card.replace('_', ' ')"
+          :title="card.replace(/_/g, ' ')"
         />
       </div>
     </div>
@@ -53,7 +49,7 @@
 import { defineComponent } from "vue";
 import cardData from "../data/card-sets.json";
 
-import GameAsset from "./GameAsset.vue";
+import GameAsset from "../components/GameAsset.vue";
 
 export default defineComponent({
   name: "Cards",
@@ -79,5 +75,5 @@ export default defineComponent({
 
 .card-title
   position: absolute
-  opacity: 80%
+  opacity: 90%
 </style>
