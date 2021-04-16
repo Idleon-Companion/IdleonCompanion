@@ -24,9 +24,9 @@
             :key="i"
             :data-enabled="getTalent('tab_one', i) != '0'"
           >
-            <img
-              :src="getTalentImagePath('all', 1, i)"
-              class="img-fluid img-thumbnail"
+            <GameAsset
+              :image="getTalentImagePath('all', 1, i)"
+              :thumbnail="true"
             />
             <div class="border rounded-bottom skill mb-1">
               {{ getTalent("tab_one", i) }}
@@ -114,6 +114,8 @@
 import { computed, defineComponent, ref } from "vue";
 import buildData from "../data/builds.json";
 
+import GameAsset from "../components/GameAsset.vue";
+
 type Build = {
   title: string;
   class: string;
@@ -129,6 +131,9 @@ type Build = {
 
 export default defineComponent({
   name: "Builds",
+  components: {
+    GameAsset,
+  },
   setup() {
     const builds: Record<string, Build> = buildData;
     const build = ref("");

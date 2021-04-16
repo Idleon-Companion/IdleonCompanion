@@ -1,8 +1,8 @@
 <template>
-  <Tooltip>
+  <Tooltip v-if="title">
     <img
-      class="img-fluid asset"
       loading="lazy"
+      :class="computedClass"
       :data-enabled="enabled"
       :src="image"
       :style="computedStyle"
@@ -13,6 +13,14 @@
       </slot>
     </template>
   </Tooltip>
+  <img
+    v-else
+    loading="lazy"
+    :class="computedClass"
+    :data-enabled="enabled"
+    :src="image"
+    :style="computedStyle"
+  />
 </template>
 
 <script lang="ts">
@@ -33,11 +41,23 @@ export default defineComponent({
       type: String,
     },
     title: String,
+    thumbnail: {
+      default: false,
+      type: Boolean,
+    },
     width: {
       type: Number,
     },
   },
   setup(props) {
+    const computedClass = computed(() => {
+      let cssClass = "img-fluid asset";
+      if (props.thumbnail) {
+        cssClass += " img-thumbnail";
+      }
+      return cssClass;
+    });
+
     const computedStyle = computed(() => {
       let height = props.height ? props.height + "px" : "auto";
       let width = props.width ? props.width + "px" : "auto";
@@ -48,6 +68,7 @@ export default defineComponent({
     });
 
     return {
+      computedClass,
       computedStyle,
     };
   },

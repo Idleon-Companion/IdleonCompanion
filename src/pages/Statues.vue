@@ -35,7 +35,7 @@
       <div class="statue-text">{{ bonusText }}</div>
     </div>
   </div>
-  <div v-else>You have no characters created.</div>
+  <div v-else class="h5 text-light">You have no characters created.</div>
 </template>
 
 <script lang="ts">

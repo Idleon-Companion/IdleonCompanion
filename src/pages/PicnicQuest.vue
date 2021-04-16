@@ -9,7 +9,7 @@
         <input
           v-model="repeat"
           type="range"
-          class="form-range border-none"
+          class="form-range"
           min="1"
           max="30"
           id="foodRange"
