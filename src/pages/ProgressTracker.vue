@@ -37,7 +37,11 @@
               :image="Assets.CardImage(card.id)"
               :data-enabled="cards[card.id] !== 0"
               @click="handleCardClick(card.id)"
-            />
+            >
+              <template #tooltip>
+                <div class="text-center" v-html="cardText(card)"></div>
+              </template>
+            </GameAsset>
             <GameAsset
               v-if="cards[card.id] > 1"
               class="card-border"
@@ -56,7 +60,7 @@ import { computed, defineComponent, inject, ref } from "vue";
 import checklistData from "../data/checklist.json";
 import { StateManager } from "../State";
 
-import GameAsset from "./GameAsset.vue";
+import GameAsset from "../components/GameAsset.vue";
 import { Assets } from "../composables/Utilities";
 import { Card, CardCategory, Cards } from "../composables/Cards";
 
@@ -134,7 +138,11 @@ export default defineComponent({
     cardText(card: Card): string {
       let name = card.id.replace(/_/g, " ");
       let bonus = this.cards[card.id] * card.base;
-      return `${name} (+${bonus} ${card.effect})`;
+      let text = `${name}<br>+${bonus} ${card.effect}`;
+      if (card.source) {
+        text += `<br><em>Source: ${card.source}</em>`;
+      }
+      return text;
     },
     getItemImagePath(item: string, dir: string): string {
       let cleaned = item.replace(/ /g, "_");
