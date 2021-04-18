@@ -15,7 +15,7 @@
           <div class="d-flex align-items-center justify-content-center">
             <div class="d-flex me-4">
               <GameAsset
-                :src="getStampImagePath(activeStamp.name)"
+                :image="getStampImagePath(activeStamp.name)"
                 :height="96"
               />
             </div>
@@ -43,7 +43,7 @@
                 <li class="list-group-item text-light bg-secondary">
                   <span v-if="Number(lvl) % activeStamp.diffRatio == 0">
                     <GameAsset
-                      :src="getMaterialImagePath(activeStamp.material)"
+                      :image="getMaterialImagePath(activeStamp.material)"
                       :height="64"
                     />
                     {{

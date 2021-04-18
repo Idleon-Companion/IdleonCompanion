@@ -64,11 +64,11 @@ export function useCharacters() {
     return characters.value.length;
   });
 
-  const curCharacter = computed<Character | null>(() => {
+  const curCharacter = computed<Character>(() => {
     if (numCharacters.value > 0) {
       return characters.value[charIndex.value];
     }
-    return null;
+    return {} as Character;
   });
 
   // Cycle to next character

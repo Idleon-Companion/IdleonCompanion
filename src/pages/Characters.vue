@@ -90,7 +90,7 @@
               class="char-input"
               type="text"
               spellcheck="false"
-              maxlength="14"
+              :maxlength="14"
               v-model="curCharacter.name"
               @change="saveCharacters"
             />
