@@ -1,11 +1,13 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Build and Deploy
+name: Build
 
 on:
   push:
-    branches: [ master ]
+    branches-ignore:
+      - 'master'
+
 
 jobs:
   build:
@@ -30,10 +32,4 @@ jobs:
       run: yarn
     
     - name: Build
-      run: yarn build --base=/IdleonCompanion/
-    
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.1
-      with:
-        branch: gh-pages # The branch the action should deploy to.
-        folder: dist # The folder the action should deploy.
+      run: yarn build

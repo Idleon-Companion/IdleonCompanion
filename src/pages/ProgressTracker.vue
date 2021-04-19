@@ -15,7 +15,7 @@
               class="m-1"
               :height="64"
               :title="item.name"
-              :image="getItemImagePath(item.name, data.assetDir)"
+              :image="Assets.FromDir(item.name, data.assetDir)"
               :data-enabled="checklist[item.name]"
               @click="handleProgressCheck(item.name)"
             />
@@ -143,10 +143,6 @@ export default defineComponent({
         text += `<br><em>Source: ${card.source}</em>`;
       }
       return text;
-    },
-    getItemImagePath(item: string, dir: string): string {
-      let cleaned = item.replace(/ /g, "_");
-      return `assets/${dir}/${cleaned}.png`;
     },
   },
 });

@@ -11,7 +11,7 @@
           v-for="(card, c) in cardset.core"
           :key="c"
           :height="72"
-          :image="getCardImagePath(card)"
+          :image="Assets.CardImage(card)"
           :title="card.replace(/_/g, ' ')"
         />
       </div>
@@ -24,7 +24,7 @@
           v-for="(card, c) in cardset.useful"
           :key="c"
           :height="72"
-          :image="getCardImagePath(card)"
+          :image="Assets.CardImage(card)"
           :title="card.replace(/_/g, ' ')"
         />
       </div>
@@ -37,7 +37,7 @@
           v-for="(card, c) in cardset.minimal"
           :key="c"
           :height="72"
-          :image="getCardImagePath(card)"
+          :image="Assets.CardImage(card)"
           :title="card.replace(/_/g, ' ')"
         />
       </div>
@@ -50,6 +50,7 @@ import { defineComponent } from "vue";
 import cardData from "../data/card-sets.json";
 
 import GameAsset from "../components/GameAsset.vue";
+import { Assets } from "../composables/Utilities";
 
 export default defineComponent({
   name: "Cards",
@@ -58,13 +59,9 @@ export default defineComponent({
   },
   setup() {
     return {
+      Assets,
       cardData,
     };
-  },
-  methods: {
-    getCardImagePath(card: string): string {
-      return `assets/cards/${card}_Card.png`;
-    },
   },
 });
 </script>

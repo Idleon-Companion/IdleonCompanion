@@ -405,11 +405,11 @@ export const Cards: Card[] = [
     source: "Baba Yaga (1/33.3)",
   },
   {
-    id: "Dr_Defecaus",
+    id: "Dr._Defecaus",
     category: CardCategory.Bosses,
     effect: Effects.TotalDamage,
     base: 5,
-    source: "Dr Defecaus (1/33.3)",
+    source: "Dr. Defecaus (1/33.3)",
   },
   {
     id: "Boop",

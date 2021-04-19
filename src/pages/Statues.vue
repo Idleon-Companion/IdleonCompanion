@@ -9,7 +9,7 @@
         :data-active="curStatue === statue"
         @click="curStatue = statue"
       >
-        <img :src="getStatueImagePath(statue)" />
+        <img :src="Assets.StampImage(statue.replace(/ /g, '_'))" />
       </div>
     </div>
     <div class="statue-info col-12 col-md-8">
@@ -42,6 +42,7 @@
 import { computed, defineComponent, ref } from "vue";
 
 import { useCharacters, Statues } from "../composables/Characters";
+import { Assets } from "../composables/Utilities";
 
 export default defineComponent({
   name: "Statues",
@@ -144,6 +145,7 @@ export default defineComponent({
     });
 
     return {
+      Assets,
       bonusText,
       curCharacter,
       curStatue,
@@ -151,12 +153,6 @@ export default defineComponent({
       setStatueLevel,
       statues,
     };
-  },
-  methods: {
-    getStatueImagePath(statue: string): string {
-      let s = statue.replace(" ", "_");
-      return `assets/statues/${s}_Statue.png`;
-    },
   },
 });
 </script>
