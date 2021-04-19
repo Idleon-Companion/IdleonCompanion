@@ -30,7 +30,7 @@ export default defineComponent({
   props: {
     value: {
       required: true,
-      type: String,
+      type: Number,
     },
   },
   setup() {
