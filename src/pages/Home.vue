@@ -279,17 +279,18 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Builds from "./Builds.vue";
-import Cards from "./Cards.vue";
-import Credits from "./Credits.vue";
-import CharacterSelector from "../components/CharacterSelector.vue";
-import PackMuleCrafter from "./PackMuleCrafter.vue";
-import PicnicQuest from "./PicnicQuest.vue";
-import ProgressTracker from "./ProgressTracker.vue";
-import Statues from "./Statues.vue";
-import Tasks from "./Tasks.vue";
-import Stamps from "./Stamps.vue";
-import Characters from "../pages/Characters.vue";
+
+import CharacterSelector from "~/components/CharacterSelector.vue";
+import Builds from "~/pages/Builds.vue";
+import Cards from "~/pages/Cards.vue";
+import Characters from "~/pages/Characters.vue";
+import Credits from "~/pages/Credits.vue";
+import PackMuleCrafter from "~/pages/PackMuleCrafter.vue";
+import PicnicQuest from "~/pages/PicnicQuest.vue";
+import ProgressTracker from "~/pages/ProgressTracker.vue";
+import Statues from "~/pages/Statues.vue";
+import Tasks from "~/pages/Tasks.vue";
+import Stamps from "~/pages/Stamps.vue";
 
 export default defineComponent({
   name: "Home",

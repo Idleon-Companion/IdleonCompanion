@@ -166,6 +166,9 @@
 
 <script lang="ts">
 import { computed, defineComponent } from "vue";
+
+import CharacterCard from "~/components/CharacterCard.vue";
+import GameAsset from "~/components/GameAsset.vue";
 import {
   Class,
   Character,
@@ -176,8 +179,6 @@ import {
 } from "../composables/Characters";
 import { Assets } from "../composables/Utilities";
 import checklistData from "../data/checklist.json";
-import CharacterCard from "../components/CharacterCard.vue";
-import GameAsset from "../components/GameAsset.vue";
 export default defineComponent({
   name: "Characters",
   components: {

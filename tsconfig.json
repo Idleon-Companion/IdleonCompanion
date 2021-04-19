@@ -1,4 +1,5 @@
 {
+  "baseUrl": "./src",
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -11,5 +12,8 @@
     "lib": ["esnext", "dom"],
     "types": ["node", "vite/client"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "paths": {
+    "~/*": "src/*"
+  },
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue"]
 }

@@ -114,7 +114,7 @@
 import { computed, defineComponent, ref } from "vue";
 import buildData from "../data/builds.json";
 
-import GameAsset from "../components/GameAsset.vue";
+import GameAsset from "~/components/GameAsset.vue";
 
 type Build = {
   title: string;
