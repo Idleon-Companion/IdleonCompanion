@@ -7,7 +7,7 @@
       </button>
     </div>
     <h4
-      v-if="numCharacters === 0"
+      v-if="curCharacter === null"
       class="text-light d-flex justify-content-center"
     >
       You have no characters. Add new ones below!
@@ -147,7 +147,7 @@
                     class="m-1"
                     :width="72"
                     :title="item.name"
-                    :image="getItemImagePath(item.name, data.assetDir)"
+                    :image="Assets.FromDir(item.name, data.assetDir)"
                     :enabled="
                       curCharacter !== null &&
                       curCharacter.items[item.name] === true
@@ -166,6 +166,7 @@
 
 <script lang="ts">
 import { computed, defineComponent } from "vue";
+
 import {
   Class,
   Character,
@@ -252,12 +253,6 @@ export default defineComponent({
       setClass,
       Subclass,
     };
-  },
-  methods: {
-    getItemImagePath(item: string, dir: string): string {
-      let cleaned = item.replace(/ /g, "_");
-      return `assets/${dir}/${cleaned}.png`;
-    },
   },
 });
 </script>

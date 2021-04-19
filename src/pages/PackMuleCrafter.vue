@@ -156,12 +156,12 @@ import { computed, defineComponent, ref } from "vue";
 import packMuleData from "../data/packMule.json";
 
 type PackMuleObject = {
-  tier : number;
+  tier: number;
   items: number;
   recipes: Array<string>;
   materials: Array<string>;
   caps: Array<Record<string, number>>;
-}
+};
 
 export default defineComponent({
   name: "PackMuleCrafter",
@@ -169,12 +169,14 @@ export default defineComponent({
     const data: Record<string, PackMuleObject> = packMuleData;
     const anvilTab = ref("");
     const taskTier = ref("");
-    const recommended = computed((): PackMuleObject => {
-      if (anvilTab.value === "" || taskTier.value === "") {
-        return {} as PackMuleObject;
+    const recommended = computed(
+      (): PackMuleObject => {
+        if (anvilTab.value === "" || taskTier.value === "") {
+          return {} as PackMuleObject;
+        }
+        return data[`${anvilTab.value}${taskTier.value}`];
       }
-      return data[`${anvilTab.value}${taskTier.value}`];
-    });
+    );
     return { data, anvilTab, taskTier, recommended };
   },
 });

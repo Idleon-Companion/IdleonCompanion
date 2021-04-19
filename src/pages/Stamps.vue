@@ -15,8 +15,9 @@
           <div class="d-flex align-items-center justify-content-center">
             <div class="d-flex me-4">
               <GameAsset
-                :image="getStampImagePath(activeStamp.name)"
+                :image="Assets.StampImage(activeStamp.name.replace(/ /g, '_'))"
                 :height="96"
+                :title="activeStamp.name"
               />
             </div>
             <div class="d-block-flex">
@@ -30,34 +31,31 @@
               <ul class="rounded list-group list-group-flush">
                 <li class="list-group-item text-light bg-secondary">
                   +{{
-                    calculateBonus(activeStamp, Number(lvl)) +
-                    " " +
-                    activeStamp.bonus
+                    calculateBonus(activeStamp, lvl) + " " + activeStamp.bonus
                   }}
                 </li>
                 <li class="list-group-item text-light bg-secondary">
-                  <CoinDisplay
-                    :value="String(calculateCoinCost(activeStamp, Number(lvl)))"
-                  />
+                  <CoinDisplay :value="calculateCoinCost(activeStamp, lvl)" />
                 </li>
                 <li class="list-group-item text-light bg-secondary">
                   <span v-if="Number(lvl) % activeStamp.diffRatio == 0">
                     <GameAsset
-                      :image="getMaterialImagePath(activeStamp.material)"
+                      :image="
+                        Assets.MaterialImage(
+                          activeStamp.material.replace(/ /g, '_')
+                        )
+                      "
                       :height="64"
                     />
                     {{
-                      calculateMaterialsCost(activeStamp, Number(lvl)) +
+                      calculateMaterialsCost(activeStamp, lvl) +
                       " " +
                       activeStamp.material
                     }}
                   </span>
                   <span v-else class="text-light bg-secondary">
                     Next Material cost in
-                    {{
-                      activeStamp.diffRatio -
-                      (Number(lvl) % activeStamp.diffRatio)
-                    }}
+                    {{ activeStamp.diffRatio - (lvl % activeStamp.diffRatio) }}
                   </span>
                 </li>
               </ul>
@@ -76,6 +74,7 @@ import stampsData from "../data/stampsData.json";
 
 import CoinDisplay from "../components/CoinDisplay.vue";
 import GameAsset from "../components/GameAsset.vue";
+import { Assets } from "../composables/Utilities";
 
 type Stamp = {
   name: string;
@@ -110,21 +109,13 @@ export default defineComponent({
 
     return {
       activeStamp,
+      Assets,
       stamp,
       stamps,
       lvl,
     };
   },
   methods: {
-    getMaterialImagePath(name: string): string {
-      let image = name.split(" ").join("_");
-      return `assets/materials/${image}.png`;
-    },
-    getStampImagePath(name: string): string {
-      let image = name.split(" ").join("_");
-      image = image.replace("'", "-");
-      return `assets/stamps/${image}.png`;
-    },
     calculateCoinCost(activeStamp: Stamp, lvl: number): number {
       let s = activeStamp;
       return Math.floor(
