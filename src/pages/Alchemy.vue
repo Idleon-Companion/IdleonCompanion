@@ -14,34 +14,40 @@
             v-model="alchemy.upgrades[color][n - 1]"
             type="number"
             :min="0"
+            @change="saveAlchemy"
           />
         </div>
       </div>
     </div>
-    <div class="h2 text-light">Alchemy Vials</div>
+    <div class="h2 text-light my-3">Alchemy Vials</div>
     <div class="d-flex flex-wrap">
-      <div v-for="vial in Vials" :key="vial.name" class="vial-wrapper m-1">
-        <div class="vial-material">
-          <GameAsset
-            :image="Assets.FromDir(vial.material, 'materials')"
-            :height="64"
-            :title="vial.name"
-            :data-enabled="alchemy.vials[vial.name] !== 0"
-          >
-            <template #tooltip>
-              <div
-                class="text-center"
-                v-html="vialText(vial, alchemy.vials[vial.name])"
-              ></div>
-            </template>
-          </GameAsset>
-        </div>
+      <div
+        v-for="vial in Vials"
+        :key="vial.name"
+        class="vial-wrapper m-1"
+        @click="handleVialClick(vial.name, +1)"
+        @contextmenu.prevent="handleVialClick(vial.name, -1)"
+      >
         <GameAsset
           class="vial-bottle"
           :image="
             Assets.FromDir('Vials' + (alchemy.vials[vial.name] + 1), 'alchemy')
           "
+          :title="vial.name"
           :height="96"
+        >
+          <template #tooltip>
+            <div
+              class="text-center"
+              v-html="vialText(vial, alchemy.vials[vial.name])"
+            ></div>
+          </template>
+        </GameAsset>
+        <GameAsset
+          class="vial-material"
+          :image="Assets.FromDir(vial.material, 'materials')"
+          :height="48"
+          :data-enabled="alchemy.vials[vial.name] !== 0"
         />
       </div>
     </div>
@@ -85,13 +91,34 @@ export default defineComponent({
       alchemy.upgrades[c as Color] = upgrades;
     }
     for (const v of Vials) {
-      alchemy.vials[v.name || ""] = 3;
+      alchemy.vials[v.name || ""] = 0;
+    }
+    // Load from local storage
+    var saved = state.load("alchemy");
+    if (saved !== null) {
+      let data: AlchemyData = JSON.parse(saved);
+      for (const [color, upgrades] of Object.entries(data.upgrades)) {
+        for (let i = 0; i < upgrades.length; i += 1) {
+          alchemy.upgrades[color as Color][i] = upgrades[i];
+        }
+      }
+      for (const [vial, level] of Object.entries(data.vials)) {
+        alchemy.vials[vial] = level;
+      }
     }
 
     // Input handlers
     const VIAL_TIERS = 10;
-    const handleVialClick = (name: string) => {
-      alchemy.vials[name] = (alchemy.vials[name] + 1) % VIAL_TIERS;
+    const handleVialClick = (name: string, step: number) => {
+      let tier = (alchemy.vials[name] + step) % VIAL_TIERS;
+      if (tier < 0) {
+        tier = VIAL_TIERS - 1;
+      }
+      alchemy.vials[name] = tier;
+      saveAlchemy();
+    };
+
+    const saveAlchemy = () => {
       state.save("alchemy", JSON.stringify(alchemy));
     };
 
@@ -100,6 +127,7 @@ export default defineComponent({
       Assets,
       colors,
       handleVialClick,
+      saveAlchemy,
       upgradeCount,
       Vials,
     };
@@ -111,9 +139,13 @@ export default defineComponent({
         /_/g,
         " "
       )} to next level`;
-      return `${vial.name}<br><em>+${vial.base * level} ${
-        vial.effect
-      }<br>${costText}</em>`;
+      let effect = vial.effect || "???";
+      if (!effect.startsWith("%")) {
+        effect = " " + effect;
+      }
+      return `${vial.name}<br><em>${vial.base < 0 ? "" : "+"}${
+        vial.base * level
+      }${effect}<br>${costText}</em>`;
     },
   },
 });
@@ -122,14 +154,16 @@ export default defineComponent({
 <style lang="sass" scoped>
 .vial-wrapper
   position: relative
-  width: 62px
-  height: 100px
+  width: 72px
+  top: 0.5rem
+  height: 96px
   .vial-material
-    margin-left: 3px
     height: auto
+    pointer-events: none
     position: absolute
   .vial-bottle
-    z-index: 0
+    cursor: pointer
+    bottom: 22px
+    left: -14px
     position: absolute
-    pointer-events: none
 </style>
