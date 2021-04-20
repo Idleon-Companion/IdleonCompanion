@@ -507,7 +507,7 @@
         "func": "Add"
     },
     "1014": {
-        "name": "Brainstew Stamps",
+        "name": "Brainstew Stamp",
         "material": "Gold Ore",
         "bonus": "% Alch Exp",
         "baseCoinCost": 1250,
@@ -676,7 +676,7 @@
         "func": "Add"
     },
     "2003": {
-        "name": "Crystallin",
+        "name": "Crystallin Stamp",
         "material": "Boring Brick",
         "bonus": "Crystal Monster% Spawn Chance",
         "baseCoinCost": 800,

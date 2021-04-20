@@ -62,18 +62,18 @@
       <p>Please keep the following in mind while crafting:</p>
       <ul>
         <li>
-          Recipes need to be crafted in the order they are listed, as thats how
+          Recipes need to be crafted in the order they are listed, as that's how
           they were successfully tested
         </li>
         <li>
-          Remember to combine "not full" stacks of materails when possible, as
+          Remember to combine "not full" stacks of materials when possible, as
           that was taken into account during testing
         </li>
         <li>
-          The list of Inventory Capacity Setups are not a perfect calculation,
+          The list of Inventory Capacity Setups are not a perfect calculation
           and there can be variation between setups for a given number of slots
-          and list of materials. These lists are always looking to be improved,
-          and should always be considered a possibility and not "the best".
+          and list of materials. These lists are always looking to be improved
+          and should always be considered a possibility, not "the best"
         </li>
       </ul>
       <div class="row">
