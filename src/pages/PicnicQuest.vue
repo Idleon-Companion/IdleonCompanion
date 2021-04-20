@@ -34,7 +34,7 @@
         <td>
           <GameAsset
             :height="72"
-            :image="getFoodImagePath(req.name)"
+            :image="Assets.MaterialImage(req.name.replace(/ /g, '_'))"
             :title="req.name"
           />
         </td>
@@ -51,6 +51,7 @@
 import { defineComponent, ref } from "vue";
 
 import GameAsset from "../components/GameAsset.vue";
+import { Assets } from "../composables/Utilities";
 
 const picnicRequirements = [
   {
@@ -115,15 +116,10 @@ export default defineComponent({
   setup() {
     const repeat = ref(1);
     return {
+      Assets,
       picnicRequirements,
       repeat,
     };
-  },
-  methods: {
-    getFoodImagePath(item: string): string {
-      let cleaned = item.toLowerCase().replace(" ", "-");
-      return `assets/food/${cleaned}.png`;
-    },
   },
 });
 </script>

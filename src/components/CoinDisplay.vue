@@ -2,11 +2,11 @@
   <span class="d-flex">
     <template v-for="(value, key) in splitValues(Number(value))" :key="key">
       <template v-if="value">
-      <img
-        :src="getCoinImagePath(key)"
-        class="img-fuid h-100 align-self-center mx-1"
-      />
-      {{ value }}
+        <img
+          :src="Assets.MiscImage(key + '_coin')"
+          class="img-fuid h-100 align-self-center mx-1"
+        />
+        {{ value }}
       </template>
     </template>
   </span>
@@ -14,6 +14,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
+import { Assets } from "../composables/Utilities";
 
 type Coin = {
   bronze: number;
@@ -28,8 +30,13 @@ export default defineComponent({
   props: {
     value: {
       required: true,
-      type: String,
+      type: Number,
     },
+  },
+  setup() {
+    return {
+      Assets,
+    };
   },
   methods: {
     splitValues(value: number): Coin {
@@ -49,9 +56,6 @@ export default defineComponent({
         silver: a[3],
         bronze: a[4],
       };
-    },
-    getCoinImagePath(name: string): string {
-      return `assets/misc/${name}_coin.png`;
     },
   },
 });

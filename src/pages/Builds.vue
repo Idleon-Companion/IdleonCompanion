@@ -25,7 +25,7 @@
             :data-enabled="getTalent('tab_one', i) != '0'"
           >
             <GameAsset
-              :image="getTalentImagePath('all', 1, i)"
+              :image="Assets.TalentImage('all', 1, i)"
               :thumbnail="true"
             />
             <div class="border rounded-bottom skill mb-1">
@@ -38,7 +38,7 @@
             :data-enabled="getTalent('tab_one', i + 10) != '0'"
           >
             <img
-              :src="getTalentImagePath(activeBuild.class, 1, i)"
+              :src="Assets.TalentImage(activeBuild.class, 1, i)"
               class="img-fluid img-thumbnail"
             />
             <div class="border rounded-bottom skill mb-1">
@@ -61,7 +61,7 @@
             :data-enabled="getTalent('tab_two', i) != '0'"
           >
             <img
-              :src="getTalentImagePath(activeBuild.class, 2, i)"
+              :src="Assets.TalentImage(activeBuild.class, 2, i)"
               class="img-fluid img-thumbnail"
             />
             <div class="border rounded-bottom skill mb-1">
@@ -84,7 +84,7 @@
             :data-enabled="getTalent('tab_three', i) != '0'"
           >
             <img
-              :src="getTalentImagePath(activeBuild.subclass, 3, i)"
+              :src="Assets.TalentImage(activeBuild.subclass, 3, i)"
               class="img-fuid img-thumbnail"
             />
             <div class="border rounded-bottom skill mb-1">
@@ -114,7 +114,8 @@
 import { computed, defineComponent, ref } from "vue";
 import buildData from "../data/builds.json";
 
-import GameAsset from "~/components/GameAsset.vue";
+import GameAsset from "../components/GameAsset.vue";
+import { Assets } from "../composables/Utilities";
 
 type Build = {
   title: string;
@@ -146,6 +147,7 @@ export default defineComponent({
 
     return {
       activeBuild,
+      Assets,
       build,
       builds,
     };
@@ -156,18 +158,6 @@ export default defineComponent({
         return this.activeBuild[tab]?.[slot] || "0";
       }
       return "0";
-    },
-    getTalentImagePath(role: string, tab: number, slot: number): string {
-      let image = `${role}-${tab}-${slot}`;
-      if (role === "") {
-        image = "empty";
-      }
-      if (slot >= 11 && slot < 15) {
-        if (["sqr", "hun", "wiz"].includes(role)) {
-          image = role + "-filler";
-        }
-      }
-      return `assets/talents/${image}.png`;
     },
   },
 });

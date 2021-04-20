@@ -49,8 +49,37 @@ export class Assets {
     return `assets/classes/${c}.png`;
   }
 
+  static FromDir(item: string, dir: string): string {
+    let cleaned = item.replace(/ /g, "_");
+    return `assets/${dir}/${cleaned}.png`;
+  }
+
   static IconImage(icon: string): string {
     return `assets/icons/${icon}_Icon.png`;
+  }
+
+  static MaterialImage(item: string): string {
+    return `assets/materials/${item}.png`;
+  }
+
+  static MiscImage(item: string): string {
+    return `assets/misc/${item}.png`;
+  }
+
+  static StampImage(item: string): string {
+    return `assets/stamps/${item}.png`;
+  }
+  static TalentImage(role: string, tab: number, slot: number): string {
+    let image = `${role}-${tab}-${slot}`;
+    if (role === "") {
+      image = "empty";
+    }
+    if (slot >= 11 && slot < 15) {
+      if (["sqr", "hun", "wiz"].includes(role)) {
+        image = role + "-filler";
+      }
+    }
+    return `assets/talents/${image}.png`;
   }
 }
 
