@@ -135,10 +135,9 @@ export default defineComponent({
   methods: {
     vialText(vial: Vial, level: number): string {
       let cost = VialCost[level];
-      let costText = `${cost} ${vial.material.replace(
-        /_/g,
-        " "
-      )} to next level`;
+      let costText = `${cost} ${vial.material.replace(/_/g, " ")} + ${
+        3 * level
+      } Water Droplets to next level`;
       let effect = vial.effect || "???";
       if (!effect.startsWith("%")) {
         effect = " " + effect;
