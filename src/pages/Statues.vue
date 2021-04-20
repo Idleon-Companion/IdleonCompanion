@@ -9,7 +9,7 @@
         :data-active="curStatue === statue"
         @click="curStatue = statue"
       >
-        <img :src="Assets.StampImage(statue.replace(/ /g, '_'))" />
+        <img :src="Assets.StatueImage(statue.replace(/ /g, '_'))" />
       </div>
     </div>
     <div class="statue-info col-12 col-md-8">

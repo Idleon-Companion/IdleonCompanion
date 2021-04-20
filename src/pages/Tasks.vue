@@ -63,19 +63,19 @@
           Enable sync to reset according to game clock (set your in-game reset
           time below)
         </div>
-        <div class="d-flex">
-          <div class="new-task-reset-time">
+        <div class="d-flex flex-wrap new-task-time-row">
+          <div class="new-task-reset-time me-2">
             <input type="time" v-model="dailyReset" @change="updateTasks" />
           </div>
           <div
-            class="new-task-sync p-1 ms-2 col-2 text-center rounded"
+            class="new-task-sync p-1 col-2 text-center rounded"
             @click="newTask.sync = !newTask.sync"
           >
             Sync: {{ newTask.sync ? "On" : "Off" }}
           </div>
         </div>
-        <div class="d-flex align-items-center mt-2">
-          <div class="d-flex align-items-center">
+        <div class="d-flex flex-wrap align-items-center mt-2 new-task-reset-row">
+          <div class="d-flex align-items-center new-task-reset-input">
             Reset every
             <input
               id="new-task-days"
@@ -319,7 +319,10 @@ export default defineComponent({
 .new-task-sync-desc
   margin-top: 0.25rem
   font-style: italic
+.new-task-time-row > *
+  margin-top: 0.25rem
 .new-task-sync
+  min-width: 100px
   background: lighten($primary, 8%)
   cursor: pointer
   font-size: 1.25rem
@@ -327,7 +330,14 @@ export default defineComponent({
   transition: 0.3s
   &:hover
     background: lighten($primary, 12%)
+.new-task-reset-input
+  flex: 4
+  min-width: 265px
+.new-task-reset-input > input
+  min-width: 2.5rem
 .new-task-btn
+  flex: 1
+  min-width: 100px
   background: lighten($primary, 10%)
   color: darken(white, 10%)
   transition: 0.3s

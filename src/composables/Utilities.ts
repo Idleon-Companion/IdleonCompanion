@@ -34,7 +34,7 @@ export class Assets {
   }
 
   static CardBorderImage(tier: number): string {
-    return `assets/cards/tier${tier}_Border.png`;
+    return `assets/cards/Tier${tier}_Border.png`;
   }
 
   static CharImage(char: Character): string {
@@ -69,6 +69,11 @@ export class Assets {
   static StampImage(item: string): string {
     return `assets/stamps/${item}.png`;
   }
+
+  static StatueImage(item: string): string {
+    return `assets/statues/${item}_Statue.png`;
+  }
+
   static TalentImage(role: string, tab: number, slot: number): string {
     let image = `${role}-${tab}-${slot}`;
     if (role === "") {
