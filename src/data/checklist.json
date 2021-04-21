@@ -89,112 +89,148 @@
     "assetDir": "checklist",
     "items": [
       {
-        "name": "Mini Materials Pouch"
+        "name": "Mini Materials Pouch",
+        "cycle": "Materials Pouch"
       },
       {
-        "name": "Cramped Materials Pouch"
+        "name": "Cramped Materials Pouch",
+        "cycle": "Materials Pouch"
       },
       {
-        "name": "Small Materials Pouch"
+        "name": "Small Materials Pouch",
+        "cycle": "Materials Pouch"
       },
       {
-        "name": "Average Materials Pouch"
+        "name": "Average Materials Pouch",
+        "cycle": "Materials Pouch"
       },
       {
-        "name": "Sizable Materials Pouch"
+        "name": "Sizable Materials Pouch",
+        "cycle": "Materials Pouch"
       },
       {
-        "name": "Big Materials Pouch"
+        "name": "Big Materials Pouch",
+        "cycle": "Materials Pouch"
       },
       {
-        "name": "Miniature Mining Pouch"
+        "name": "Miniature Mining Pouch",
+        "cycle": "Mining Pouch"
       },
       {
-        "name": "Cramped Mining Pouch"
+        "name": "Cramped Mining Pouch",
+        "cycle": "Mining Pouch"
       },
       {
-        "name": "Small Mining Pouch"
+        "name": "Small Mining Pouch",
+        "cycle": "Mining Pouch"
       },
       {
-        "name": "Average Mining Pouch"
+        "name": "Average Mining Pouch",
+        "cycle": "Mining Pouch"
       },
       {
-        "name": "Sizable Mining Pouch"
+        "name": "Sizable Mining Pouch",
+        "cycle": "Mining Pouch"
       },
       {
-        "name": "Big Mining Pouch"
+        "name": "Big Mining Pouch",
+        "cycle": "Mining Pouch"
       },
       {
-        "name": "Miniature Fish Pouch"
+        "name": "Miniature Fish Pouch",
+        "cycle": "Fishing Pouch"
       },
       {
-        "name": "Cramped Fish Pouch"
+        "name": "Cramped Fish Pouch",
+        "cycle": "Fishing Pouch"
       },
       {
-        "name": "Small Fish Pouch"
+        "name": "Small Fish Pouch",
+        "cycle": "Fishing Pouch"
       },
       {
-        "name": "Average Fish Pouch"
+        "name": "Average Fish Pouch",
+        "cycle": "Fishing Pouch"
       },
       {
-        "name": "Sizable Fish Pouch"
+        "name": "Sizable Fish Pouch",
+        "cycle": "Fishing Pouch"
       },
       {
-        "name": "Big Fish Pouch"
+        "name": "Big Fish Pouch",
+        "cycle": "Fishing Pouch"
       },
       {
-        "name": "Miniscule Food Pouch"
+        "name": "Miniscule Food Pouch",
+        "cycle": "Food Pouch"
       },
       {
-        "name": "Cramped Food Pouch"
+        "name": "Cramped Food Pouch",
+        "cycle": "Food Pouch"
       },
       {
-        "name": "Small Food Pouch"
+        "name": "Small Food Pouch",
+        "cycle": "Food Pouch"
       },
       {
-        "name": "Average Food Pouch"
+        "name": "Average Food Pouch",
+        "cycle": "Food Pouch"
       },
       {
-        "name": "Sizable Food Pouch"
+        "name": "Sizable Food Pouch",
+        "cycle": "Food Pouch"
       },
       {
-        "name": "Big Food Pouch"
+        "name": "Big Food Pouch",
+        "cycle": "Food Pouch"
       },
       {
-        "name": "Miniature Choppin Pouch"
+        "name": "Miniature Choppin Pouch",
+        "cycle": "Choppin Pouch"
       },
       {
-        "name": "Cramped Choppin Pouch"
+        "name": "Cramped Choppin Pouch",
+        "cycle": "Choppin Pouch"
       },
       {
-        "name": "Small Choppin Pouch"
+        "name": "Small Choppin Pouch",
+        "cycle": "Choppin Pouch"
       },
       {
-        "name": "Average Choppin Pouch"
+        "name": "Average Choppin Pouch",
+        "cycle": "Choppin Pouch"
       },
       {
-        "name": "Sizable Choppin Pouch"
+        "name": "Sizable Choppin Pouch",
+        "cycle": "Choppin Pouch"
       },
       {
-        "name": "Big Choppin Pouch"
+        "name": "Big Choppin Pouch",
+        "cycle": "Choppin Pouch"
       },
       {
-        "name": "Miniature Bug Pouch"
+        "name": "Miniature Bug Pouch",
+        "cycle": "Bug Pouch"
       },
       {
-        "name": "Cramped Bug Pouch"
+        "name": "Cramped Bug Pouch",
+        "cycle": "Bug Pouch"
       },
       {
-        "name": "Small Bug Pouch"
+        "name": "Small Bug Pouch",
+        "cycle": "Bug Pouch"
       },
       {
-        "name": "Average Bug Pouch"
+        "name": "Average Bug Pouch",
+        "cycle": "Bug Pouch"
       },
       {
-        "name": "Sizable Bug Pouch"
+        "name": "Sizable Bug Pouch",
+        "cycle": "Bug Pouch"
       },
       {
-        "name": "Big Bug Pouch"
+        "name": "Big Bug Pouch",
+        "cycle": "Bug Pouch"
       }
     ]
   },

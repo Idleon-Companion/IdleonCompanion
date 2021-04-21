@@ -1,5 +1,5 @@
 <template>
-  <div v-if="numCharacters === 0" class="text-light">
+  <div v-if="curCharacter === null" class="text-light">
     Add your characters on the "Character" tab.
   </div>
   <div v-else class="d-flex flex-column bg-dark">
@@ -11,7 +11,6 @@
         class="btn btn-dark dropdown-toggle border-0 rounded-0"
         id="char-select-menu-btn"
         data-bs-toggle="dropdown"
-        aria-haspopup="true"
         aria-expanded="false"
       >
         Switch character
