@@ -249,16 +249,8 @@ export default defineComponent({
 
     const isEnabled = (name: string): boolean => {
       // Item is selected
-      if (
-        curCharacter.value !== null &&
-        curCharacter.value.items[name] === true
-      ) {
-        return true;
-      }
-      // Item is first in cycle
       return (
-        itemCycle[name] !== undefined &&
-        cycles[itemCycle[name]].indexOf(name) === 0
+        curCharacter.value !== null && curCharacter.value.items[name] === true
       );
     };
 
@@ -278,15 +270,28 @@ export default defineComponent({
       if (curCharacter.value !== null) {
         // Cyclical items
         if (itemCycle[item] !== undefined) {
+          let hasBag = curCharacter.value.items[item];
+          delete curCharacter.value.items[item];
           let c = cycles[itemCycle[item]];
+          if (cycle === 1 && !hasBag) {
+            cycle = 0;
+          }
           let i = c.indexOf(item) + cycle;
+          let state = true;
           if (i >= c.length) {
             i = 0;
+            state = false;
           } else if (i < 0) {
-            i = c.length - 1;
+            if (hasBag) {
+              i = 0;
+              state = false;
+            } else {
+              i = c.length - 1;
+            }
           }
-          delete curCharacter.value.items[item];
-          curCharacter.value.items[c[i]] = true;
+          if (state) {
+            curCharacter.value.items[c[i]] = true;
+          }
         } else {
           // Normal items
           if (curCharacter.value.items[item] !== undefined) {
