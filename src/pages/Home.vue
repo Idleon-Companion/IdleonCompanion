@@ -79,6 +79,7 @@ export default defineComponent({
   },
   setup() {
     const tabs = {
+      Characters: Characters,
       Tasks: Tasks,
       Progress_Tracker: ProgressTracker,
       Picnic_Quest: PicnicQuest,
@@ -88,7 +89,6 @@ export default defineComponent({
       Pack_Mule_Crafter: PackMuleCrafter,
       Builds: Builds,
       Cards: Cards,
-      Characters: Characters,
       Credits: Credits,
     };
     return {
