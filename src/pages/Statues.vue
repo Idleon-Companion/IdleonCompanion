@@ -1,38 +1,55 @@
 <template>
   <h2 class="text-white">Statues</h2>
   <div v-if="curCharacter !== null" class="statue-wrapper">
-    <div class="statue-list">
-      <div
-        class="statue"
-        v-for="(statue, i) in Object.keys(statues)"
-        :key="i"
-        :data-active="curStatue === statue"
-        @click="curStatue = statue"
-      >
-        <img :src="Assets.StatueImage(statue.replace(/ /g, '_'))" />
+    <div class="d-flex flex-wrap justify-content-around">
+      <div class="d-flex flex-column my-2 col-12 col-md-7">
+        <div class="statue-list">
+          <div
+            class="statue"
+            v-for="(statue, i) in Object.keys(statues)"
+            :key="i"
+            :data-active="curStatue === statue"
+            @click="curStatue = statue"
+          >
+            <img :src="Assets.StatueImage(statue.replace(/ /g, '_'))" />
+            <div class="statue-level-badge">
+              {{ curCharacter.statues[statue] }}
+            </div>
+          </div>
+        </div>
+        <div class="statue-info">
+          <div class="statue-name">{{ curStatue }} Statue</div>
+          <h5 class="d-flex align-items-center justify-content-center mt-3">
+            <div class="statue-text">Level</div>
+            <input
+              :value="curCharacter.statues[curStatue]"
+              class="statue-level"
+              type="number"
+              min="0"
+              @change="setStatueLevel"
+            />
+          </h5>
+          <div class="statue-text my-2">
+            <em
+              >{{
+                Math.round(Math.pow(curCharacter.statues[curStatue], 1.35) + 1)
+              }}
+              statues to level {{ curCharacter.statues[curStatue] + 1 }}</em
+            >
+          </div>
+          <div class="statue-text">{{ bonusText(curStatue) }}</div>
+        </div>
       </div>
-    </div>
-    <div class="statue-info col-12 col-md-8">
-      <div class="statue-name">{{ curStatue }} Statue</div>
-      <h5 class="d-flex align-items-center justify-content-center mt-3">
-        <div class="statue-text">Level</div>
-        <input
-          :value="curCharacter.statues[curStatue]"
-          class="statue-level"
-          type="number"
-          min="0"
-          @change="setStatueLevel"
-        />
-      </h5>
-      <div class="statue-text my-2">
-        <em
-          >{{
-            Math.round(Math.pow(curCharacter.statues[curStatue], 1.35) + 1)
-          }}
-          statues to level {{ curCharacter.statues[curStatue] + 1 }}</em
+      <div class="statue-buffs rounded col-12 col-md-4">
+        <div class="text-light h2">Total Buffs</div>
+        <div
+          v-for="(buff, i) in statueBuffs"
+          :key="i"
+          class="statue-buff text-light h6"
         >
+          {{ buff }}
+        </div>
       </div>
-      <div class="statue-text">{{ bonusText }}</div>
     </div>
   </div>
   <div v-else class="h5 text-light">You have no characters created.</div>
@@ -41,19 +58,20 @@
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
 
-import { useCharacters, Statues } from "../composables/Characters";
+import { useCharacters } from "../composables/Characters";
+import { Statues } from "../composables/Statues";
 import { Assets } from "../composables/Utilities";
 
 export default defineComponent({
   name: "Statues",
   setup() {
     const { curCharacter, saveCharacters } = useCharacters();
-    const curStatue = ref(Statues[0]);
+    const curStatue = ref("Anvil");
 
     const statues = computed(() => {
       let s = {} as Record<string, number>;
       if (curCharacter.value !== null) {
-        for (const name of Statues) {
+        for (const name of Object.keys(Statues)) {
           s[name] = curCharacter.value.statues[name];
         }
       }
@@ -73,75 +91,24 @@ export default defineComponent({
       saveCharacters();
     };
 
-    const bonusText = computed(() => {
-      let base = 0;
-      let effect = "";
-      let level = curCharacter.value
-        ? curCharacter.value.statues[curStatue.value]
-        : 0;
-      switch (curStatue.value) {
-        case "Anvil":
-          base = 0.5;
-          effect = "% Production Speed";
-          break;
-        case "Beholder":
-          base = 0.2;
-          effect = "% Crit Chance";
-          break;
-        case "Bullseye":
-          base = 0.8;
-          effect = "% Accuracy";
-          break;
-        case "Cauldron":
-          base = 0.5;
-          effect = "% Alchemy Exp";
-          break;
-        case "Exp Book":
-          base = 0.1;
-          effect = "% Class Exp";
-          break;
-        case "Feasty":
-          base = 1;
-          effect = "% Food Effect";
-          break;
-        case "Health":
-          base = 3;
-          effect = " Base Health";
-          break;
-        case "Kachow":
-          base = 0.4;
-          effect = "% Crit Damage";
-          break;
-        case "Lumberbob":
-          base = 0.3;
-          effect = " Choppin Power";
-          break;
-        case "Mining":
-          base = 0.3;
-          effect = " Mining Power";
-          break;
-        case "Oceanman":
-          base = 0.3;
-          effect = " Fishing Power";
-          break;
-        case "Ol Reliable":
-          base = 0.3;
-          effect = " Catching Power";
-          break;
-        case "Power":
-          base = 3;
-          effect = " Base Damage";
-          break;
-        case "Speed":
-          base = 0.1;
-          effect = "% Move Speed";
-          break;
-        case "Thicc Skin":
-          base = 1;
-          effect = " Base Defence";
-          break;
+    const bonusText = (statue: string) => {
+      let level = curCharacter.value ? curCharacter.value.statues[statue] : 0;
+      let data = Statues[statue];
+      let effect = data.effect as string;
+      if (!effect.startsWith("%")) {
+        effect = " " + effect;
       }
-      return `+${base * level}${effect}`;
+      return `+${Number((data.base * level).toFixed(2))}${effect}`;
+    };
+
+    const statueBuffs = computed(() => {
+      let a = [];
+      for (const s of Object.keys(Statues)) {
+        if (curCharacter.value !== null && curCharacter.value.statues[s] > 0) {
+          a.push(bonusText(s));
+        }
+      }
+      return a;
     });
 
     return {
@@ -151,6 +118,7 @@ export default defineComponent({
       curStatue,
       saveCharacters,
       setStatueLevel,
+      statueBuffs,
       statues,
     };
   },
@@ -158,28 +126,28 @@ export default defineComponent({
 </script>
 
 <style lang="sass" scoped>
+@import '../styles/base.sass'
+
 .statue-wrapper
   display: flex
   flex-direction: column
+.statue-level-badge
+  text-align: center
+  background: $primary
+  border-radius: 5rem
+  margin: 0 auto
+  margin-top: 0.25rem
+  width: 75%
 .statue-info
   align-items: center
-  background: #3a3f44
+  background: $primary
   border-radius: 5px
   color: darken(white, 5%)
   display: flex
   flex-direction: column
   justify-content: center
-  margin: 1rem auto
+  margin-top: 2rem
   padding: 1.5rem
-  /* Chrome, Safari, Edge, Opera */
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button
-    -webkit-appearance: none
-    margin: 0
-
-  /* Firefox */
-  input[type=number]
-    -moz-appearance: textfield
   .statue-name
     font-size: 2rem
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2)
@@ -190,14 +158,19 @@ export default defineComponent({
     color: white
     border: none
     border-radius: 3px
-    margin: 0 0.25rem
+    margin: 0 0.5rem
     outline: none
     padding: 0.15rem
     text-align: center
     width: 25%
+.statue-buffs
+  background: $primary
+  padding: 1.5rem
 .statue-list
   display: flex
   flex-wrap: wrap
+  @media (max-width: 768px)
+    justify-content: center
 
   .statue
     border-radius: 50%
@@ -214,7 +187,7 @@ export default defineComponent({
       margin-left: -4px
       object-fit: contain
     &:hover
-      transform: scale(1.30)
+      transform: scale(1.20)
     &[data-active='true']
-      background: rgba(255, 255, 255, 0.1)
+      background: rgba(white, 0.2)
 </style>
