@@ -1,16 +1,25 @@
 <template>
   <div class="row pl-3 mb-4">
-    <div class="input-group">
-      <select v-model="build" id="buildSelector">
-        <option value="" selected>Select Your Build</option>
-        <option
-          v-for="(build, buildID) in builds"
-          :key="buildID"
-          :value="buildID"
-        >
-          {{ build.title }}
-        </option>
-      </select>
+    <div class="d-flex">
+      <div class="d-flex flex-column col-3">
+        <div class="text-light h4">Filter By Class</div>
+        <select v-model="buildClass" id="buildClass">
+          <option value="all" selected>All</option>
+          <option v-for="(c, v) in classes" :key="c" :value="c">{{ v }}</option>
+        </select>
+      </div>
+      <div class="input-group build-selector mx-2">
+        <select v-model="build" id="buildSelector">
+          <option value="" selected>Select Your Build</option>
+          <option
+            v-for="(build, buildID) in filteredBuilds"
+            :key="buildID"
+            :value="buildID"
+          >
+            {{ build.title }}
+          </option>
+        </select>
+      </div>
     </div>
   </div>
   <!-- TALENTS -->
@@ -145,11 +154,35 @@ export default defineComponent({
       return builds[build.value];
     });
 
+    const classes: Record<string, string> = {
+      Beginner: "",
+      Journeyman: "jma",
+      Warrior: "war",
+      Archer: "arc",
+      Mage: "mag",
+    };
+
+    const buildClass = ref("all");
+    const filteredBuilds = computed(() => {
+      let filtered: Record<string, Build> = {};
+      if (buildClass.value !== "all") {
+        for (const [name, build] of Object.entries(builds)) {
+          if (buildClass.value === build.class) {
+            filtered[name] = build;
+          }
+        }
+        return filtered;
+      }
+      return builds;
+    });
+
     return {
       activeBuild,
       Assets,
       build,
-      builds,
+      buildClass,
+      classes,
+      filteredBuilds,
     };
   },
   methods: {
@@ -174,6 +207,11 @@ export default defineComponent({
   background: $secondary
   color: darken(white, 10%)
   font-weight: bold
+
+.build-selector
+  display: flex
+  height: 3rem
+  align-self: flex-end
 
 .talent-container
   display: grid

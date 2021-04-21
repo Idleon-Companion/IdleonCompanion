@@ -2,7 +2,7 @@
   <div class="container pt-3">
     <div class="row justify-content-between align-items-center">
       <div class="col-auto align-items-center d-flex">
-        <img id="logo" src="logo.png" />
+        <img id="logo" src="/logo.png" />
         <div id="logo-text" class="display-4 text-light">Idleon Companion</div>
       </div>
       <div class="col-md-4 col-12">
