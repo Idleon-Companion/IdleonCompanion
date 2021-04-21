@@ -176,9 +176,9 @@ import {
   Statues,
   Subclass,
   useCharacters,
-} from "../composables/Characters";
-import { Assets } from "../composables/Utilities";
-import checklistData from "../data/checklist.json";
+} from "~/composables/Characters";
+import { Assets } from "~/composables/Utilities";
+import checklistData from "~/data/checklist.json";
 export default defineComponent({
   name: "Characters",
   components: {

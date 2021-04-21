@@ -112,10 +112,10 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-import buildData from "../data/builds.json";
+import buildData from "~/data/builds.json";
 
-import GameAsset from "../components/GameAsset.vue";
-import { Assets } from "../composables/Utilities";
+import GameAsset from "~/components/GameAsset.vue";
+import { Assets } from "~/composables/Utilities";
 
 type Build = {
   title: string;

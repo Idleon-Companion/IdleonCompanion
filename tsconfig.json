@@ -1,6 +1,6 @@
 {
-  "baseUrl": "./src",
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
@@ -10,10 +10,10 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
-    "types": ["node", "vite/client"]
-  },
-  "paths": {
-    "~/*": "src/*"
+    "types": ["node", "vite/client"],
+    "paths": {
+      "~/*": ["src/*"]
+    }
   },
   "include": ["**/*.ts", "**/*.d.ts", "**/*.vue"]
 }

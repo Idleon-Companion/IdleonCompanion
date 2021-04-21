@@ -5,10 +5,10 @@ export type Vial = {
   roll: number;
   material: string;
   base: number;
-  effect: string;
+  effect?: string;
 };
 
-export const Vials: Partial<Vial>[] = [
+export const Vials: Vial[] = [
   {
     name: "Copper Corona",
     roll: 1,

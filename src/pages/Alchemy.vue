@@ -56,11 +56,11 @@
 
 <script lang="ts">
 import { defineComponent, inject, reactive } from "vue";
-import { StateManager } from "../State";
+import { StateManager } from "~/State";
 
 import GameAsset from "~/components/GameAsset.vue";
-import { Assets } from "../composables/Utilities";
-import { Color, Vial, Vials, VialCost } from "../composables/Alchemy";
+import { Assets } from "~/composables/Utilities";
+import { Color, Vial, Vials, VialCost } from "~/composables/Alchemy";
 
 type AlchemyData = {
   vials: Record<string, number>;
@@ -75,7 +75,7 @@ export default defineComponent({
   setup() {
     const state = inject("state") as StateManager;
 
-    const colors = ["Orange", "Green", "Purple", "Yellow"];
+    const colors: Color[] = ["Orange", "Green", "Purple", "Yellow"];
     const upgradeCount = 10;
 
     const alchemy = reactive({

@@ -57,12 +57,12 @@
 
 <script lang="ts">
 import { computed, defineComponent, inject, ref } from "vue";
-import checklistData from "../data/checklist.json";
-import { StateManager } from "../State";
+import checklistData from "~/data/checklist.json";
+import { StateManager } from "~/State";
 
-import GameAsset from "../components/GameAsset.vue";
-import { Assets } from "../composables/Utilities";
-import { Card, CardCategory, Cards } from "../composables/Cards";
+import GameAsset from "~/components/GameAsset.vue";
+import { Assets } from "~/composables/Utilities";
+import { Card, CardCategory, Cards } from "~/composables/Cards";
 
 export default defineComponent({
   name: "ProgressTracker",

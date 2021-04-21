@@ -153,7 +153,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-import packMuleData from "../data/packMule.json";
+import packMuleData from "~/data/packMule.json";
 
 type PackMuleObject = {
   tier: number;
