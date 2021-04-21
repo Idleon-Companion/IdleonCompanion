@@ -41,8 +41,8 @@
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
 
-import { useCharacters, Statues } from "../composables/Characters";
-import { Assets } from "../composables/Utilities";
+import { useCharacters, Statues } from "~/composables/Characters";
+import { Assets } from "~/composables/Utilities";
 
 export default defineComponent({
   name: "Statues",

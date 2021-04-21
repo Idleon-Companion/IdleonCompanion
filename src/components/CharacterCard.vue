@@ -13,8 +13,8 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { Character } from "../composables/Characters";
-import { Assets } from "../composables/Utilities";
+import { Character } from "~/composables/Characters";
+import { Assets } from "~/composables/Utilities";
 
 export default defineComponent({
   name: "CharacterCard",

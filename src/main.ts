@@ -1,7 +1,7 @@
 import { version } from "../package.json";
 import { createApp } from "vue";
 import VueTippy from "vue-tippy";
-import App from "./App.vue";
+import App from "~/App.vue";
 
 import "tippy.js/dist/tippy.css";
 

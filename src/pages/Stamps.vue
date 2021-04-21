@@ -69,12 +69,12 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-import { Growth } from "../composables/Utilities";
-import stampsData from "../data/stampsData.json";
+import { Growth } from "~/composables/Utilities";
+import stampsData from "~/data/stampsData.json";
 
-import CoinDisplay from "../components/CoinDisplay.vue";
-import GameAsset from "../components/GameAsset.vue";
-import { Assets } from "../composables/Utilities";
+import CoinDisplay from "~/components/CoinDisplay.vue";
+import GameAsset from "~/components/GameAsset.vue";
+import { Assets } from "~/composables/Utilities";
 
 type Stamp = {
   name: string;

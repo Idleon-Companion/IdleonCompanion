@@ -50,8 +50,8 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 
-import GameAsset from "../components/GameAsset.vue";
-import { Assets } from "../composables/Utilities";
+import GameAsset from "~/components/GameAsset.vue";
+import { Assets } from "~/composables/Utilities";
 
 const picnicRequirements = [
   {

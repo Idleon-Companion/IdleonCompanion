@@ -15,7 +15,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import { Assets } from "../composables/Utilities";
+import { Assets } from "~/composables/Utilities";
 
 type Coin = {
   bronze: number;

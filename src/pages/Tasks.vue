@@ -74,7 +74,9 @@
             Sync: {{ newTask.sync ? "On" : "Off" }}
           </div>
         </div>
-        <div class="d-flex flex-wrap align-items-center mt-2 new-task-reset-row">
+        <div
+          class="d-flex flex-wrap align-items-center mt-2 new-task-reset-row"
+        >
           <div class="d-flex align-items-center new-task-reset-input">
             Reset every
             <input
@@ -112,12 +114,12 @@ import {
   reactive,
   ref,
 } from "vue";
-import taskData from "../data/defaultTasks.json";
+import taskData from "~/data/defaultTasks.json";
 
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import relativeTime from "dayjs/plugin/relativeTime";
-import { StateManager } from "../State";
+import { StateManager } from "~/State";
 dayjs.locale;
 dayjs.extend(duration);
 dayjs.extend(relativeTime);

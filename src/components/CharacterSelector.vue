@@ -35,8 +35,8 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import CharacterCard from "../components/CharacterCard.vue";
-import { useCharacters } from "../composables/Characters";
+import CharacterCard from "~/components/CharacterCard.vue";
+import { useCharacters } from "~/composables/Characters";
 
 export default defineComponent({
   name: "CharacterSelector",
