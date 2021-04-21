@@ -1,4 +1,70 @@
 <template>
+  <div class="row mx-0 text-light mt-2">
+    <div class="bg-primary rounded p-3 m-0 d-flex row">
+      <h4>Add New Task</h4>
+      <div class="d-flex flex-column col-12 col-md-6">
+        <label for="new-task-text">Task</label>
+        <textarea
+          id="new-task-text"
+          v-resizable
+          v-model="newTask.text"
+          placeholder="Collect 300 Green Spores"
+        />
+        <label for="new-task-categories" class="mt-1">Categories</label>
+        <input
+          id="new-task-categories"
+          type="text"
+          v-model="newTask.categories"
+          placeholder="guild, colosseum, quests"
+        />
+      </div>
+      <div
+        class="d-flex flex-column col-12 col-md-6 my-1 justify-content-center"
+      >
+        <div class="new-task-sync-desc">
+          Enable sync to reset according to game clock (set your in-game reset
+          time below)
+        </div>
+        <div class="d-flex flex-wrap new-task-time-row">
+          <div class="new-task-reset-time me-2">
+            <input type="time" v-model="dailyReset" @change="updateTasks" />
+          </div>
+          <div
+            class="new-task-sync p-1 col-2 text-center rounded"
+            @click="newTask.sync = !newTask.sync"
+          >
+            Sync: {{ newTask.sync ? "On" : "Off" }}
+          </div>
+        </div>
+        <div
+          class="d-flex flex-wrap align-items-center mt-2 new-task-reset-row"
+        >
+          <div class="d-flex align-items-center new-task-reset-input">
+            Reset every
+            <input
+              id="new-task-days"
+              class="mx-1 col-2 col-md-1"
+              type="numeric"
+              :min="0"
+              v-model="newTask.resetDays"
+            />
+            days
+            <input
+              id="new-task-hours"
+              class="mx-1 col-2 col-md-1"
+              type="numeric"
+              :min="1"
+              v-model="newTask.resetHours"
+            />
+            hours
+          </div>
+          <button class="btn new-task-btn col-2 p-2 mt-2" @click="addTask">
+            Add Task
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col-lg-12 mt-3">
       <div class="progress">
@@ -35,68 +101,6 @@
           <div class="task-delete" @click.stop="removeTask(i)">
             <div class="iconify" data-icon="mdi:delete"></div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row mx-0 text-light mt-2">
-    <div class="bg-primary rounded p-3 m-0 d-flex row">
-      <h4>Add New Task</h4>
-      <div class="d-flex flex-column col-12 col-md-6">
-        <label for="new-task-text">Task</label>
-        <textarea
-          id="new-task-text"
-          v-resizable
-          v-model="newTask.text"
-          placeholder="Collect 300 Green Spores"
-        />
-        <label for="new-task-categories" class="mt-1">Categories</label>
-        <input
-          id="new-task-categories"
-          type="text"
-          v-model="newTask.categories"
-          placeholder="guild, colosseum, quests"
-        />
-      </div>
-      <div class="d-flex flex-column col-12 col-md-6 justify-content-center">
-        <div class="new-task-sync-desc">
-          Enable sync to reset according to game clock (set your in-game reset
-          time below)
-        </div>
-        <div class="d-flex flex-wrap new-task-time-row">
-          <div class="new-task-reset-time me-2">
-            <input type="time" v-model="dailyReset" @change="updateTasks" />
-          </div>
-          <div
-            class="new-task-sync p-1 col-2 text-center rounded"
-            @click="newTask.sync = !newTask.sync"
-          >
-            Sync: {{ newTask.sync ? "On" : "Off" }}
-          </div>
-        </div>
-        <div class="d-flex flex-wrap align-items-center mt-2 new-task-reset-row">
-          <div class="d-flex align-items-center new-task-reset-input">
-            Reset every
-            <input
-              id="new-task-days"
-              class="mx-1 col-2 col-md-1"
-              type="numeric"
-              :min="0"
-              v-model="newTask.resetDays"
-            />
-            days
-            <input
-              id="new-task-hours"
-              class="mx-1 col-2 col-md-1"
-              type="numeric"
-              :min="1"
-              v-model="newTask.resetHours"
-            />
-            hours
-          </div>
-          <button class="btn new-task-btn col-2 p-2 mt-2" @click="addTask">
-            Add Task
-          </button>
         </div>
       </div>
     </div>
