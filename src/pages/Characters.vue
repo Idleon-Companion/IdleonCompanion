@@ -101,7 +101,7 @@
               class="char-input"
               type="number"
               :min="1"
-              v-model="curCharacter.level"
+              v-model.number="curCharacter.level"
               @change="saveCharacters"
             />
           </div>
@@ -118,11 +118,11 @@
                 :title="skill"
               />
               <input
-                :id="'char-skill-' + skill"
+                v-model.number="curCharacter.skills[skill]"
                 class="char-input skill-input"
                 type="number"
+                :id="'char-skill-' + skill"
                 :min="0"
-                v-model="curCharacter.skills[skill]"
                 @change="saveCharacters"
               />
             </div>
@@ -157,7 +157,11 @@
                     :enabled="isEnabled(item.name)"
                     @click="handleProgressCheck(item.name, +1)"
                     @contextmenu.prevent="handleProgressCheck(item.name, -1)"
-                  />
+                  >
+                    <template #tooltip>
+                      <div class="text-center" v-html="Text.Item(item)"></div>
+                    </template>
+                  </GameAsset>
                 </div>
               </div>
             </div>
@@ -181,7 +185,7 @@ import {
   Subclass,
   useCharacters,
 } from "~/composables/Characters";
-import { Assets } from "~/composables/Utilities";
+import { Assets, Text } from "~/composables/Utilities";
 import checklistData from "~/data/checklist.json";
 export default defineComponent({
   name: "Characters",
@@ -199,15 +203,7 @@ export default defineComponent({
       setClass,
     } = useCharacters();
     const newCharacter = () => {
-      let char = {
-        name: "",
-        level: 1,
-        items: {},
-        skills: {},
-        statues: {},
-        class: Class.Beginner,
-        subclass: null,
-      } as Character;
+      let char = new Character();
       for (const skill of Skills) {
         char.skills[skill] = 0;
       }
@@ -320,6 +316,7 @@ export default defineComponent({
       saveCharacters,
       setClass,
       Subclass,
+      Text,
     };
   },
 });
