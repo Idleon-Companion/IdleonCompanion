@@ -47,10 +47,10 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import cardData from "../data/card-sets.json";
+import cardData from "~/data/card-sets.json";
 
-import GameAsset from "../components/GameAsset.vue";
-import { Assets } from "../composables/Utilities";
+import GameAsset from "~/components/GameAsset.vue";
+import { Assets } from "~/composables/Utilities";
 
 export default defineComponent({
   name: "Cards",

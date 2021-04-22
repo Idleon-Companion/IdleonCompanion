@@ -1,3 +1,4 @@
+import checklistData from "./data/checklist.json";
 export class StateManager {
   private version: string;
 
@@ -14,7 +15,19 @@ export class StateManager {
       // Task reworked to allow custom tasks
       localStorage.removeItem("tasks");
     }
-    localStorage.setItem("version", version);
+    if (savedVersion < "0.1.2") {
+      // Add cycle items (Capacity Pouches)
+      let chars = JSON.parse(this.load("chars"));
+      if (chars !== null) {
+        for (const c of chars) {
+          for (const item of checklistData["Capacity Pouches"]["items"]) {
+            delete c.items[item.name];
+          }
+        }
+      }
+      this.save("chars", JSON.stringify(chars));
+    }
+    this.save("version", version);
   }
 
   // Load data from local storage

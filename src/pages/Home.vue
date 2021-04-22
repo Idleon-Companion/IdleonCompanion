@@ -9,270 +9,38 @@
         <CharacterSelector />
       </div>
     </div>
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="clockModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Configure Reset Timer
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p class="text-light">
-              Insert the hours and minutes of your reset timer
-            </p>
-            <div class="input-group">
-              <input
-                class="form-control w-25"
-                type="number"
-                id="hours"
-                min="0"
-                max="24"
-                placeholder="Hours"
-              />
-              <input
-                class="form-control w-25"
-                type="number"
-                id="minutes"
-                min="0"
-                max="60"
-                placeholder="Minutes"
-              />
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button
-              onclick="saveOffset()"
-              type="button"
-              class="btn btn-primary"
-              data-dismiss="modal"
-            >
-              Save changes
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade"
-      id="resetModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="resetModal"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="resetModalLabel">It's a new day!</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p class="text-light">
-              Your timer expired, would you like to reset your daily tasks?
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button
-              onclick="resetDailies()"
-              type="button"
-              class="btn btn-primary"
-              data-dismiss="modal"
-            >
-              Reset Dailies
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Nav -->
     <ul class="nav nav-tabs nav-dark" role="tablist">
-      <li class="nav-item">
+      <li v-for="tab in Object.keys(tabs)" :key="tab" class="nav-item">
         <button
           class="nav-link text-light"
           data-bs-toggle="tab"
-          data-bs-target="#tasks"
+          :data-bs-target="'#' + tab"
           type="button"
           role="tab"
           aria-controls="profile"
-          aria-selected="false"
+          :aria-selected="tab === 'Tasks'"
         >
-          Tasks
-        </button>
-      </li>
-      <li class="nav-item">
-        <button
-          class="nav-link text-light"
-          data-bs-toggle="tab"
-          data-bs-target="#checklist"
-          type="button"
-          role="tab"
-          aria-controls="profile"
-          aria-selected="false"
-        >
-          Checklist
-        </button>
-      </li>
-      <li class="nav-item">
-        <button
-          class="nav-link text-light"
-          data-bs-toggle="tab"
-          data-bs-target="#statues"
-          type="button"
-          role="tab"
-          aria-controls="profile"
-          aria-selected="false"
-        >
-          Statues
-        </button>
-      </li>
-      <li class="nav-item">
-        <button
-          class="nav-link text-light"
-          data-bs-toggle="tab"
-          data-bs-target="#picnic-quest"
-          type="button"
-          role="tab"
-          aria-controls="profile"
-          aria-selected="false"
-        >
-          Picnic Quest
-        </button>
-      </li>
-      <li class="nav-item">
-        <button
-          class="nav-link text-light"
-          data-bs-toggle="tab"
-          data-bs-target="#stamps"
-          type="button"
-          role="tab"
-          aria-controls="profile"
-          aria-selected="false"
-        >
-          Stamps
-        </button>
-      </li>
-      <li class="nav-item">
-        <button
-          class="nav-link text-light"
-          data-bs-toggle="tab"
-          data-bs-target="#builds"
-          type="button"
-          role="tab"
-          aria-controls="profile"
-          aria-selected="false"
-        >
-          Builds
-        </button>
-      </li>
-      <li class="nav-item">
-        <button
-          class="nav-link text-light"
-          data-bs-toggle="tab"
-          data-bs-target="#cards"
-          type="button"
-          role="tab"
-          aria-controls="profile"
-          aria-selected="false"
-        >
-          Card Sets
-        </button>
-      </li>
-      <li class="nav-item">
-        <button
-          class="nav-link text-light"
-          data-bs-toggle="tab"
-          data-bs-target="#characters"
-          type="button"
-          role="tab"
-          aria-controls="profile"
-          aria-selected="false"
-        >
-          Characters
-        </button>
-      </li>
-      <li class="nav-item">
-        <button
-          class="nav-link text-light"
-          data-bs-toggle="tab"
-          data-bs-target="#packmulecrafter"
-          type="button"
-          role="tab"
-          aria-controls="profile"
-          aria-selected="false"
-        >
-          PackMuleCrafter
-        </button>
-      </li>
-      <li class="nav-item">
-        <button
-          class="nav-link text-light"
-          data-bs-toggle="tab"
-          data-bs-target="#credits"
-          type="button"
-          role="tab"
-          aria-controls="profile"
-          aria-selected="false"
-        >
-          Credits
+          {{ tab.replace(/_/g, " ") }}
         </button>
       </li>
     </ul>
 
     <div id="nav-tabContent" class="tab-content">
-      <div class="tab-pane fade active show" id="tasks"><Tasks /></div>
-      <div class="tab-pane fade jumbotron" id="checklist">
-        <ProgressTracker />
+      <div
+        v-for="(component, tab) in tabs"
+        :key="tab"
+        :class="{
+          'tab-pane': true,
+          fade: true,
+          active: tab === 'Tasks',
+          show: tab === 'Tasks',
+          jumbotron: tab !== 'Tasks',
+        }"
+        :id="tab"
+      >
+        <component :is="tab.replace(/_/g, '')"></component>
       </div>
-      <div class="tab-pane fade jumbotron" id="statues"><Statues /></div>
-      <div class="tab-pane fade jumbotron" id="stamps"><Stamps /></div>
-      <div class="tab-pane fade jumbotron" id="picnic-quest">
-        <PicnicQuest />
-      </div>
-      <div class="tab-pane fade jumbotron" id="builds"><Builds /></div>
-      <div class="tab-pane fade jumbotron" id="cards"><Cards /></div>
-      <div class="tab-pane fade jumbotron" id="characters"><Characters /></div>
-      <div class="tab-pane fade jumbotron" id="packmulecrafter">
-        <PackMuleCrafter />
-      </div>
-      <div class="tab-pane fade jumbotron" id="credits"><Credits /></div>
     </div>
   </div>
   <div class="footer m-5"></div>
@@ -280,21 +48,24 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Builds from "./Builds.vue";
-import Cards from "./Cards.vue";
-import Credits from "./Credits.vue";
-import CharacterSelector from "../components/CharacterSelector.vue";
-import PackMuleCrafter from "./PackMuleCrafter.vue";
-import PicnicQuest from "./PicnicQuest.vue";
-import ProgressTracker from "./ProgressTracker.vue";
-import Statues from "./Statues.vue";
-import Tasks from "./Tasks.vue";
-import Stamps from "./Stamps.vue";
-import Characters from "../pages/Characters.vue";
+
+import CharacterSelector from "~/components/CharacterSelector.vue";
+import Alchemy from "~/pages/Alchemy.vue";
+import Builds from "~/pages/Builds.vue";
+import Cards from "~/pages/Cards.vue";
+import Characters from "~/pages/Characters.vue";
+import Credits from "~/pages/Credits.vue";
+import PackMuleCrafter from "~/pages/PackMuleCrafter.vue";
+import PicnicQuest from "~/pages/PicnicQuest.vue";
+import ProgressTracker from "~/pages/ProgressTracker.vue";
+import Statues from "~/pages/Statues.vue";
+import Tasks from "~/pages/Tasks.vue";
+import Stamps from "~/pages/Stamps.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
+    Alchemy,
     Builds,
     Cards,
     Characters,
@@ -306,6 +77,24 @@ export default defineComponent({
     Statues,
     Tasks,
     Stamps,
+  },
+  setup() {
+    const tabs = {
+      Characters: Characters,
+      Tasks: Tasks,
+      Progress_Tracker: ProgressTracker,
+      Picnic_Quest: PicnicQuest,
+      Stamps: Stamps,
+      Statues: Statues,
+      Alchemy: Alchemy,
+      Pack_Mule_Crafter: PackMuleCrafter,
+      Builds: Builds,
+      Cards: Cards,
+      Credits: Credits,
+    };
+    return {
+      tabs,
+    };
   },
 });
 </script>

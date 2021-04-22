@@ -116,12 +116,12 @@ import {
   reactive,
   ref,
 } from "vue";
-import taskData from "../data/defaultTasks.json";
+import taskData from "~/data/defaultTasks.json";
 
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import relativeTime from "dayjs/plugin/relativeTime";
-import { StateManager } from "../State";
+import { StateManager } from "~/State";
 dayjs.locale;
 dayjs.extend(duration);
 dayjs.extend(relativeTime);

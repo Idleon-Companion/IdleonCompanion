@@ -90,6 +90,7 @@
               class="char-input"
               type="text"
               spellcheck="false"
+              placeholder="Name"
               :maxlength="14"
               v-model="curCharacter.name"
               @change="saveCharacters"
@@ -144,15 +145,18 @@
               <div v-for="(item, i) in data.items" :key="i">
                 <div class="progress-item">
                   <GameAsset
+                    v-if="
+                      !item.cycle ||
+                      cycleIndex(item.cycle) ===
+                        cycles[item.cycle].indexOf(item.name)
+                    "
                     class="m-1"
                     :width="72"
                     :title="item.name"
                     :image="Assets.FromDir(item.name, data.assetDir)"
-                    :enabled="
-                      curCharacter !== null &&
-                      curCharacter.items[item.name] === true
-                    "
-                    @click="handleProgressCheck(item.name)"
+                    :enabled="isEnabled(item.name)"
+                    @click="handleProgressCheck(item.name, +1)"
+                    @contextmenu.prevent="handleProgressCheck(item.name, -1)"
                   />
                 </div>
               </div>
@@ -165,20 +169,20 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from "vue";
+import { defineComponent } from "vue";
 
+import CharacterCard from "~/components/CharacterCard.vue";
+import GameAsset from "~/components/GameAsset.vue";
 import {
   Class,
   Character,
   Skills,
   Subclass,
   useCharacters,
-} from "../composables/Characters";
-import { Statues } from "../composables/Statues";
-import { Assets } from "../composables/Utilities";
-import checklistData from "../data/checklist.json";
-import CharacterCard from "../components/CharacterCard.vue";
-import GameAsset from "../components/GameAsset.vue";
+} from "~/composables/Characters";
+import { Statues } from "~/composables/Statues";
+import { Assets } from "~/composables/Utilities";
+import checklistData from "~/data/checklist.json";
 export default defineComponent({
   name: "Characters",
   components: {
@@ -196,7 +200,7 @@ export default defineComponent({
     } = useCharacters();
     const newCharacter = () => {
       let char = {
-        name: "Character " + (numCharacters.value + 1),
+        name: "",
         level: 1,
         items: {},
         skills: {},
@@ -219,21 +223,82 @@ export default defineComponent({
       charIndex.value = 0;
       saveCharacters();
     };
-    const charChecklist = computed(() => {
-      // Global items are managed on the progress tracker/checklist page
-      return Object.entries(checklistData)
-        .filter(([_, value]) => !value.global)
-        .reduce((obj, [key, value]) => {
-          obj[key] = value;
-          return obj;
-        }, {} as Record<string, any>);
-    });
-    const handleProgressCheck = (item: string) => {
+
+    const charChecklist = Object.entries(checklistData)
+      .filter(([_, value]) => !value.global)
+      .reduce((obj, [key, value]) => {
+        obj[key] = value;
+        return obj;
+      }, {} as Record<string, any>);
+
+    type CycleData = Record<string, string[]>;
+    var cycles: CycleData = {};
+    var itemCycle: Record<string, string> = {};
+    for (const data of Object.values(charChecklist)) {
+      for (const item of data.items) {
+        if (item.cycle !== undefined) {
+          itemCycle[item.name] = item.cycle;
+          if (item.cycle in cycles) {
+            cycles[item.cycle].push(item.name);
+          } else {
+            cycles[item.cycle] = [item.name];
+          }
+        }
+      }
+    }
+
+    const isEnabled = (name: string): boolean => {
+      // Item is selected
+      return (
+        curCharacter.value !== null && curCharacter.value.items[name] === true
+      );
+    };
+
+    const cycleIndex = (cycle: string): number => {
+      if (curCharacter.value === null) {
+        return 0;
+      }
+      for (const item of cycles[cycle]) {
+        if (curCharacter.value.items[item] === true) {
+          return cycles[cycle].indexOf(item);
+        }
+      }
+      return 0;
+    };
+
+    const handleProgressCheck = (item: string, cycle: number) => {
       if (curCharacter.value !== null) {
-        if (curCharacter.value.items[item] !== undefined) {
-          curCharacter.value.items[item] = !curCharacter.value.items[item];
+        // Cyclical items
+        if (itemCycle[item] !== undefined) {
+          let hasBag = curCharacter.value.items[item];
+          delete curCharacter.value.items[item];
+          let c = cycles[itemCycle[item]];
+          if (cycle === 1 && !hasBag) {
+            cycle = 0;
+          }
+          let i = c.indexOf(item) + cycle;
+          let state = true;
+          if (i >= c.length) {
+            i = 0;
+            state = false;
+          } else if (i < 0) {
+            if (hasBag) {
+              i = 0;
+              state = false;
+            } else {
+              i = c.length - 1;
+            }
+          }
+          if (state) {
+            curCharacter.value.items[c[i]] = true;
+          }
         } else {
-          curCharacter.value.items[item] = true;
+          // Normal items
+          if (curCharacter.value.items[item] !== undefined) {
+            curCharacter.value.items[item] = !curCharacter.value.items[item];
+          } else {
+            curCharacter.value.items[item] = true;
+          }
         }
         saveCharacters();
       }
@@ -244,9 +309,12 @@ export default defineComponent({
       charIndex,
       Class,
       curCharacter,
+      cycles,
+      cycleIndex,
       deleteCharacter,
       charChecklist,
       handleProgressCheck,
+      isEnabled,
       newCharacter,
       numCharacters,
       saveCharacters,
