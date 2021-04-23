@@ -191,6 +191,9 @@ export default defineComponent({
 
     const timeUntilReset = (task: Task): number => {
       if (task.sync) {
+        if (curTime.value - task.lastCompleted > task.reset) {
+          return -1;
+        }
         return task.reset - (DAY - offsetTime.value);
       }
       return task.lastCompleted + task.reset - curTime.value;
