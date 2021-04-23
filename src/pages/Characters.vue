@@ -177,10 +177,10 @@ import {
   Class,
   Character,
   Skills,
-  Statues,
   Subclass,
   useCharacters,
 } from "~/composables/Characters";
+import { Statues } from "~/composables/Statues";
 import { Assets } from "~/composables/Utilities";
 import checklistData from "~/data/checklist.json";
 export default defineComponent({
@@ -211,7 +211,7 @@ export default defineComponent({
       for (const skill of Skills) {
         char.skills[skill] = 0;
       }
-      for (const name of Statues) {
+      for (const name of Object.keys(Statues)) {
         char.statues[name] = 0;
       }
       characters.value.push(char);

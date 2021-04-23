@@ -3,9 +3,9 @@ import { Effects } from "./Utilities";
 export enum CardCategory {
   BlunderHills = "Blunder Hills",
   YumYumDesert = "Yum Yum Desert",
-  FrostbiteTundra = "Frostbite Tundra",
   EasyResources = "Easy Resources",
   MediumResources = "Medium Resources",
+  FrostbiteTundra = "Frostbite Tundra",
   Bosses = "Bosses",
   Events = "Events",
 }
@@ -433,13 +433,6 @@ export const Cards: Card[] = [
     source: "Chaotic Amarok (1/50)",
   },
   {
-    id: "Normal_Efaunt",
-    category: CardCategory.Bosses,
-    effect: Effects.MonsterExp,
-    base: 5,
-    source: "Normal Efaunt (1/28.6)",
-  },
-  {
     id: "Biggie_Hours",
     category: CardCategory.Bosses,
     effect: Effects.DoubleAfkChance,
@@ -452,6 +445,13 @@ export const Cards: Card[] = [
     effect: Effects.DropRate,
     base: 6,
     source: "King Doot (1/25)",
+  },
+  {
+    id: "Normal_Efaunt",
+    category: CardCategory.Bosses,
+    effect: Effects.MonsterExp,
+    base: 5,
+    source: "Normal Efaunt (1/28.6)",
   },
   {
     id: "Chaotic_Efaunt",

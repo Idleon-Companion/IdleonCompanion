@@ -1,44 +1,4 @@
 <template>
-  <div class="row">
-    <div class="col-lg-12 mt-3">
-      <div class="progress">
-        <div
-          id="progress"
-          class="progress-bar bg-success"
-          role="progressbar"
-          ref="progressBar"
-        ></div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12 rounded-bottom">
-      <div
-        v-for="(task, i) in tasks"
-        class="list-group-item list-group-item-action text-light py-3 task"
-        :key="i"
-        :data-complete="isTaskComplete(task)"
-        @click="handleTaskCheck(task)"
-      >
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="d-flex flex-column">
-            <div class="task-text">{{ task.text }}</div>
-            <div class="d-flex align-items-center mt-1">
-              <div class="task-tags d-flex">
-                <div v-for="(tag, j) in task.tags" :key="j" class="task-tag">
-                  {{ tag }}
-                </div>
-              </div>
-              <div class="task-timer">{{ taskResetTimeText(task) }}</div>
-            </div>
-          </div>
-          <div class="task-delete" @click.stop="removeTask(i)">
-            <div class="iconify" data-icon="mdi:delete"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="row mx-0 text-light mt-2">
     <div class="bg-primary rounded p-3 m-0 d-flex row">
       <h4>Add New Task</h4>
@@ -58,7 +18,9 @@
           placeholder="guild, colosseum, quests"
         />
       </div>
-      <div class="d-flex flex-column col-12 col-md-6 justify-content-center">
+      <div
+        class="d-flex flex-column col-12 col-md-6 my-1 justify-content-center"
+      >
         <div class="new-task-sync-desc">
           Enable sync to reset according to game clock (set your in-game reset
           time below)
@@ -99,6 +61,46 @@
           <button class="btn new-task-btn col-2 p-2 mt-2" @click="addTask">
             Add Task
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 mt-3">
+      <div class="progress">
+        <div
+          id="progress"
+          class="progress-bar bg-success"
+          role="progressbar"
+          ref="progressBar"
+        ></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 rounded-bottom">
+      <div
+        v-for="(task, i) in tasks"
+        class="list-group-item list-group-item-action text-light py-3 task"
+        :key="i"
+        :data-complete="isTaskComplete(task)"
+        @click="handleTaskCheck(task)"
+      >
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex flex-column">
+            <div class="task-text">{{ task.text }}</div>
+            <div class="d-flex align-items-center mt-1">
+              <div class="task-tags d-flex">
+                <div v-for="(tag, j) in task.tags" :key="j" class="task-tag">
+                  {{ tag }}
+                </div>
+              </div>
+              <div class="task-timer">{{ taskResetTimeText(task) }}</div>
+            </div>
+          </div>
+          <div class="task-delete" @click.stop="removeTask(i)">
+            <div class="iconify" data-icon="mdi:delete"></div>
+          </div>
         </div>
       </div>
     </div>

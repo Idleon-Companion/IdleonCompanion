@@ -26,25 +26,6 @@ export const Skills = [
   "Catching",
 ];
 
-// All statues in the game
-export const Statues = [
-  "Anvil",
-  "Beholder",
-  "Bullseye",
-  "Cauldron",
-  "Exp Book",
-  "Feasty",
-  "Health",
-  "Kachow",
-  "Lumberbob",
-  "Mining",
-  "Oceanman",
-  "Ol Reliable",
-  "Power",
-  "Speed",
-  "Thicc Skin",
-];
-
 // Characters keep track of individual data
 export type Character = {
   class: Class;
