@@ -21,7 +21,7 @@
           type="button"
           role="tab"
           aria-controls="profile"
-          :aria-selected="tab === 'Tasks'"
+          :aria-selected="tab === defaultTab"
         >
           {{ tab.replace(/_/g, " ") }}
         </button>
@@ -35,9 +35,9 @@
         :class="{
           'tab-pane': true,
           fade: true,
-          active: tab === 'Tasks',
-          show: tab === 'Tasks',
-          jumbotron: tab !== 'Tasks',
+          active: tab === defaultTab,
+          show: tab === defaultTab,
+          jumbotron: tab !== defaultTab,
         }"
         :id="tab"
       >
@@ -94,7 +94,9 @@ export default defineComponent({
       Cards: Cards,
       Credits: Credits,
     };
+    const defaultTab = 'Characters';
     return {
+      defaultTab,
       tabs,
     };
   },
