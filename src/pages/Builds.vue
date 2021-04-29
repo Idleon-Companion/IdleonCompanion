@@ -1,25 +1,32 @@
 <template>
-  <div class="row pl-3 mb-4">
-    <div class="d-flex">
-      <div class="d-flex flex-column col-3">
-        <div class="text-light h4">Filter By Class</div>
-        <select v-model="buildClass" id="buildClass">
-          <option value="all" selected>All</option>
-          <option v-for="(c, v) in classes" :key="c" :value="c">{{ v }}</option>
-        </select>
-      </div>
-      <div class="input-group build-selector mx-2">
-        <select v-model="build" id="buildSelector">
-          <option value="" selected>Select Your Build</option>
-          <option
-            v-for="(build, buildID) in filteredBuilds"
-            :key="buildID"
-            :value="buildID"
-          >
-            {{ build.title }}
-          </option>
-        </select>
-      </div>
+  <div class="row px-3 my-3">
+    <div class="col-md input-group build-selector p-0">
+      <span class="input-group-text">Class: </span>
+      <select 
+        v-model="buildClass" 
+        id="buildClass"
+        class="form-select"
+      >
+        <option value="all" selected>All</option>
+        <option v-for="(c, v) in classes" :key="c" :value="c">{{ v }}</option>
+      </select>
+    </div>
+    <div class="col-md input-group build-selector p-0">
+      <span class="input-group-text">Build: </span>
+      <select 
+        v-model="build" 
+        id="buildSelector"
+        class="form-select"  
+      >
+        <option value="" selected>Select Your Build</option>
+        <option
+          v-for="(build, buildID) in filteredBuilds"
+          :key="buildID"
+          :value="buildID"
+        >
+          {{ build.title }}
+        </option>
+      </select>
     </div>
   </div>
   <!-- TALENTS -->

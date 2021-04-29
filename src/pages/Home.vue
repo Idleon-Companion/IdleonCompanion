@@ -1,6 +1,6 @@
 <template>
   <div class="container pt-3">
-    <div class="row justify-content-between align-items-center">
+    <div class="row justify-content-between align-items-center mb-3">
       <div class="col-auto align-items-center d-flex">
         <img id="logo" src="/logo.png" />
         <div id="logo-text" class="ms-2 display-4 text-light">
@@ -12,7 +12,7 @@
       </div>
     </div>
     <!-- Nav -->
-    <ul class="nav nav-tabs nav-dark" role="tablist">
+    <ul class="nav nav-tabs nav-dark mt-3" role="tablist">
       <li v-for="tab in Object.keys(tabs)" :key="tab" class="nav-item">
         <button
           class="nav-link text-light"
@@ -37,7 +37,7 @@
           fade: true,
           active: tab === defaultTab,
           show: tab === defaultTab,
-          jumbotron: tab !== defaultTab,
+          //jumbotron: tab !== defaultTab,
         }"
         :id="tab"
       >
@@ -57,12 +57,9 @@ import Builds from "~/pages/Builds.vue";
 import Cards from "~/pages/Cards.vue";
 import Characters from "~/pages/Characters.vue";
 import Credits from "~/pages/Credits.vue";
-import PackMuleCrafter from "~/pages/PackMuleCrafter.vue";
-import PicnicQuest from "~/pages/PicnicQuest.vue";
 import ProgressTracker from "~/pages/ProgressTracker.vue";
-import Statues from "~/pages/Statues.vue";
 import Tasks from "~/pages/Tasks.vue";
-import Stamps from "~/pages/Stamps.vue";
+import Calculators from "~/pages/Calculators.vue";
 
 export default defineComponent({
   name: "Home",
@@ -73,25 +70,19 @@ export default defineComponent({
     Characters,
     CharacterSelector,
     Credits,
-    PackMuleCrafter,
-    PicnicQuest,
     ProgressTracker,
-    Statues,
     Tasks,
-    Stamps,
+    Calculators,
   },
   setup() {
     const tabs = {
       Characters: Characters,
       Tasks: Tasks,
       Progress_Tracker: ProgressTracker,
-      Picnic_Quest: PicnicQuest,
-      Stamps: Stamps,
-      Statues: Statues,
       Alchemy: Alchemy,
-      Pack_Mule_Crafter: PackMuleCrafter,
       Builds: Builds,
       Cards: Cards,
+      Calculators: Calculators,
       Credits: Credits,
     };
     const defaultTab = 'Characters';

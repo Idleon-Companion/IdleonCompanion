@@ -1,5 +1,5 @@
 <template>
-  <div class="row mx-0 text-light mt-2">
+  <div class="row mx-0 text-light mt-3">
     <div class="bg-primary rounded p-3 m-0 d-flex row">
       <div class="d-flex align-items-end justify-content-between">
         <h4>Add New Task</h4>

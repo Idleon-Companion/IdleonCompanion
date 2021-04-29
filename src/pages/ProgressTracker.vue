@@ -24,7 +24,7 @@
       </div>
     </div>
     <div v-for="(category, j) in CardCategory" :key="j" class="progress-group">
-      <div class="progress-category text-light col-12 col-md-6 my-3">
+      <div class="progress-category text-light col-md-6 my-3">
         {{ category }} Cards
       </div>
       <div class="progress-items">

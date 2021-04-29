@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column alchemy-wrapper">
+  <div class="d-flex flex-column alchemy-wrapper mt-3">
     <div class="h2 text-light">Alchemy Upgrades</div>
     <div class="d-flex flex-wrap justify-content-center">
       <div v-for="(color, i) in colors" :key="i" class="alchemy-upgrades">
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="h2 text-light my-3">Alchemy Vials</div>
-    <div class="d-flex flex-wrap">
+    <div class="d-flex flex-wrap bg-primary">
       <div
         v-for="vial in Vials"
         :key="vial.name"

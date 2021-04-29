@@ -131,14 +131,14 @@
       </div>
       <div class="char-progress">
         <h4 class="text-light mt-4">Character Progress</h4>
-        <div class="col progress-tracker">
+        <div class="row progress-tracker">
           <div
             v-for="(data, category) in charChecklist"
             :key="category"
-            class="progress-group"
+            class="progress-group col-lg mb-4"
             id="checklist"
           >
-            <div class="progress-category text-light col-12 col-md-6 my-3">
+            <div class="progress-category text-light my-3">
               {{ category }}
             </div>
             <div class="progress-items">
@@ -163,6 +163,7 @@
             </div>
           </div>
         </div>
+        <statues-section />
       </div>
     </div>
   </div>
@@ -183,11 +184,14 @@ import {
 import { Statues } from "~/composables/Statues";
 import { Assets } from "~/composables/Utilities";
 import checklistData from "~/data/checklist.json";
+import StatuesSection from "~/pages/Statues.vue";
+
 export default defineComponent({
   name: "Characters",
   components: {
     CharacterCard,
     GameAsset,
+    StatuesSection,
   },
   setup() {
     const {
