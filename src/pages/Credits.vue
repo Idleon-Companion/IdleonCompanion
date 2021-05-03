@@ -4,9 +4,9 @@
       <iframe
         src="https://discord.com/widget?id=829063242227777566&theme=dark"
         height="320"
-        allowtransparency="true"
-        frameborder="0"
         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+        :allowtransparency="true"
+        :frameborder="0"
       ></iframe>
       <div class="col">
         <h2 class="display-4 text-left">Credits</h2>
