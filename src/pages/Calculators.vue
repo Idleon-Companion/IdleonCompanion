@@ -16,7 +16,7 @@
       </li>
     </ul>
 
-    <div id="nav-tabContent-nested" class="tab-content">
+    <div id="nav-tabContent-calcs" class="tab-content">
       <div
         v-for="(component, tab) in tabs"
         :key="tab"
@@ -55,7 +55,7 @@ export default defineComponent({
       Stamps: Stamps,
       Pack_Mule_Crafter: PackMuleCrafter,
     };
-    const defaultTab = "Stamps";
+    const defaultTab = "Picnic_Quest";
     return {
       defaultTab,
       tabs,

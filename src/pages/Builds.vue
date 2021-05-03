@@ -1,4 +1,11 @@
 <template>
+  <div class="row ">
+    <div>
+    <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+      Use this tool to display builds recommendations, filtered by class.
+    </p>
+    </div>
+  </div>
   <div class="row px-3 my-3">
     <div class="col-md input-group build-selector p-0">
       <span class="input-group-text">Class: </span>

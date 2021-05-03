@@ -1,4 +1,11 @@
 <template>
+  <div class="row">
+    <div>
+    <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+      Track your account progress! Here you can check all of the global collectibles in game. Click on a cards to cycle through rarity levels. 
+    </p>
+    </div>
+  </div>
   <div class="col progress-tracker">
     <div
       v-for="(data, category) in globalChecklist"

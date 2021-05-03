@@ -1,4 +1,11 @@
 <template>
+  <div class="row ">
+    <div>
+    <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+      This list shows possible cards sets grouped by usage. Cards are listed from the most to the least useful, left to right.
+    </p>
+    </div>
+  </div>
   <div class="p-3" id="card-wrapper">
     <div class="col-12" v-for="(cardset, i) in cardData" :key="i">
       <div class="h1 text-light">{{ cardset.title }}</div>

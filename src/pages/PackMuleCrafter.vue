@@ -1,5 +1,12 @@
 <template>
   <!-- Dropdown Selectors -->
+  <div class="row ">
+    <div>
+    <p class="h6 text-light bg-primary p-3 mb-4 rounded">
+      Use this page to help plan the Pack Mule Crafter W1 Task. Select your highest unlocked Anvil Tab, and what task tier you need to complete. 
+    </p>
+    </div>
+  </div>
   <div class="container text-light" id="selectors">
     <div class="row">
       <!-- Anvil Tab Selector -->

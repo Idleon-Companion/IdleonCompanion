@@ -1,24 +1,34 @@
 <template>
-  <div class="rounded">
-    <div class="d-flex justify-content-end">
-      <button class="btn btn-dark" @click="newCharacter">
-        <div class="iconify" data-icon="mdi-plus"></div>
-        New Character
-      </button>
+  <div class="row ">
+    <div>
+    <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+        In this tab you can create, modify and manage all your characters. Keep track of individual stats like statues, pouches and inventory slots. 
+        <br/>Switch between all your created characters using the "switch character" menu in the card above
+    </p>
     </div>
-    <h4
-      v-if="curCharacter === null"
-      class="text-light d-flex justify-content-center"
-    >
+  </div>
+  <div  class="row justify-content-center" v-if="curCharacter === null">
+    <h4 class="text-light d-flex justify-content-center">
       You have no characters. Add new ones below!
     </h4>
+    <button class="btn-lg btn-dark mt-2 w-25" @click="newCharacter">
+      <div class="iconify" data-icon="mdi-plus"></div>
+      New Character
+    </button>
+  </div>
     <div v-else>
-      <div class="char-editor bg-primary p-3 mt-2 rounded">
+      <div class="char-editor bg-primary p-3 rounded">
         <div class="d-flex justify-content-between">
           <h2 class="text-light">Editing {{ curCharacter.name }}</h2>
-          <button class="btn char-delete-btn" @click="deleteCharacter">
-            Delete
-          </button>
+          <div class="btn-group">
+            <button class="btn btn-dark" @click="newCharacter">
+              <div class="iconify" data-icon="mdi-plus"></div>
+              New Character
+            </button>
+            <button class="btn char-delete-btn" @click="deleteCharacter">
+              Delete
+            </button>
+          </div>
         </div>
         <div class="d-flex align-items-center">
           <img
@@ -166,7 +176,6 @@
         <statues-section />
       </div>
     </div>
-  </div>
 </template>
 
 <script lang="ts">

@@ -1,4 +1,12 @@
 <template>
+  <div class="row ">
+    <div>
+    <p class="h6 text-light bg-primary p-3 mb-4 rounded">
+      This page shows a list of all available stamps, and allows you to calculate how much money and materials are needed for each level. 
+      <br/>Due to some limitations in the formula, atm it doesn't take into account the cost-decreasing effect of bribes and other factors.
+    </p>
+    </div>
+  </div>
   <div class="row justify-content-center">
     <div class="col-12 col-md-8">
       <div class="input-group">
@@ -9,7 +17,6 @@
           </option>
         </select>
       </div>
-
       <div v-if="activeStamp" class="col-12 d-flex" id="stampContent">
         <div class="text-light bg-primary rounded mt-2 p-4 w-100">
           <div class="d-flex align-items-center justify-content-center">

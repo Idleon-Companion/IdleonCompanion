@@ -1,4 +1,11 @@
 <template>
+  <div class="row">
+    <div>
+    <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+      Use this section to write down your bubbles' levels and to keep track of vials colors and requirements.
+    </p>
+    </div>
+  </div>
   <div class="d-flex flex-column alchemy-wrapper mt-3">
     <div class="h2 text-light">Alchemy Upgrades</div>
     <div class="d-flex flex-wrap justify-content-center">
@@ -20,7 +27,7 @@
       </div>
     </div>
     <div class="h2 text-light my-3">Alchemy Vials</div>
-    <div class="d-flex flex-wrap bg-primary">
+    <div class="d-flex flex-wrap">
       <div
         v-for="vial in Vials"
         :key="vial.name"

@@ -1,5 +1,13 @@
 <template>
-  <div class="row mx-0 text-light mt-3">
+  <div class="row ">
+    <div>
+    <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+      Use this page to keep track of your to-do list. You can use the default tasks or make your own! 
+      Each task comes with an individual timer to keep track of time left until reset.
+    </p>
+    </div>
+  </div>
+  <div class="row mx-0 text-light">
     <div class="bg-primary rounded p-3 m-0 d-flex row">
       <div class="d-flex align-items-end justify-content-between">
         <h4>Add New Task</h4>
