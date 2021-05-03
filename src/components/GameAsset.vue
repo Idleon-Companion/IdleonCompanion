@@ -7,7 +7,7 @@
       :src="image"
       :style="computedStyle"
     />
-    <template #content>
+    <template #content class="abc">
       <slot name="tooltip">
         <div>{{ title }}</div>
       </slot>

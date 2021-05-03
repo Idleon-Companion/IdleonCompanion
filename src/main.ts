@@ -6,13 +6,18 @@ import App from "~/App.vue";
 import "tippy.js/dist/tippy.css";
 
 import { StateManager } from "./State";
-import { useCharacters } from "./composables/Characters";
+import { Character, useCharacters } from "./composables/Characters";
 
 const state = new StateManager(version);
 const { characters } = useCharacters();
 let charData = state.load("chars");
 if (charData !== null) {
-  characters.value = JSON.parse(charData);
+  let chars = JSON.parse(charData);
+  for (const c of chars) {
+    let newChar = new Character();
+    Object.assign(newChar, c);
+    characters.value.push(newChar);
+  }
 }
 createApp(App)
   .directive("resizable", {
