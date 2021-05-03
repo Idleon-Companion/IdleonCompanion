@@ -1,8 +1,11 @@
 <template>
   <div class="container pt-3">
     <div class="row justify-content-between align-items-center">
-      <div class="col-auto align-items-center">
-        <div id="logo" class="display-4 text-light">Idleon Companion</div>
+      <div class="col-auto align-items-center d-flex">
+        <img id="logo" src="/logo.png" />
+        <div id="logo-text" class="ms-2 display-4 text-light">
+          Idleon Companion
+        </div>
       </div>
       <div class="col-md-4 col-12">
         <CharacterSelector />
@@ -18,7 +21,7 @@
           type="button"
           role="tab"
           aria-controls="profile"
-          :aria-selected="tab === 'Tasks'"
+          :aria-selected="tab === defaultTab"
         >
           {{ tab.replace(/_/g, " ") }}
         </button>
@@ -32,9 +35,9 @@
         :class="{
           'tab-pane': true,
           fade: true,
-          active: tab === 'Tasks',
-          show: tab === 'Tasks',
-          jumbotron: tab !== 'Tasks',
+          active: tab === defaultTab,
+          show: tab === defaultTab,
+          jumbotron: tab !== defaultTab,
         }"
         :id="tab"
       >
@@ -91,9 +94,17 @@ export default defineComponent({
       Cards: Cards,
       Credits: Credits,
     };
+    const defaultTab = 'Characters';
     return {
+      defaultTab,
       tabs,
     };
   },
 });
 </script>
+
+<style lang="sass" scoped>
+#logo
+  cursor: pointer
+  object-fit: contain
+</style>

@@ -1,47 +1,15 @@
 <template>
-  <div class="row">
-    <div class="col-lg-12 mt-3">
-      <div class="progress">
-        <div
-          id="progress"
-          class="progress-bar bg-success"
-          role="progressbar"
-          ref="progressBar"
-        ></div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12 rounded-bottom">
-      <div
-        v-for="(task, i) in tasks"
-        class="list-group-item list-group-item-action text-light py-3 task"
-        :key="i"
-        :data-complete="isTaskComplete(task)"
-        @click="handleTaskCheck(task)"
-      >
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="d-flex flex-column">
-            <div class="task-text">{{ task.text }}</div>
-            <div class="d-flex align-items-center mt-1">
-              <div class="task-tags d-flex">
-                <div v-for="(tag, j) in task.tags" :key="j" class="task-tag">
-                  {{ tag }}
-                </div>
-              </div>
-              <div class="task-timer">{{ taskResetTimeText(task) }}</div>
-            </div>
-          </div>
-          <div class="task-delete" @click.stop="removeTask(i)">
-            <div class="iconify" data-icon="mdi:delete"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="row mx-0 text-light mt-2">
     <div class="bg-primary rounded p-3 m-0 d-flex row">
-      <h4>Add New Task</h4>
+      <div class="d-flex align-items-end justify-content-between">
+        <h4>Add New Task</h4>
+        <button
+          class="btn btn-info text-light p-2 mt-2"
+          @click="loadDefaultTasks"
+        >
+          <b>Add Default Tasks</b>
+        </button>
+      </div>
       <div class="d-flex flex-column col-12 col-md-6">
         <label for="new-task-text">Task</label>
         <textarea
@@ -58,7 +26,9 @@
           placeholder="guild, colosseum, quests"
         />
       </div>
-      <div class="d-flex flex-column col-12 col-md-6 justify-content-center">
+      <div
+        class="d-flex flex-column col-12 col-md-6 my-1 justify-content-center"
+      >
         <div class="new-task-sync-desc">
           Enable sync to reset according to game clock (set your in-game reset
           time below)
@@ -103,6 +73,46 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-lg-12 mt-3">
+      <div class="progress">
+        <div
+          id="progress"
+          class="progress-bar bg-success"
+          role="progressbar"
+          ref="progressBar"
+        ></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 rounded-bottom">
+      <div
+        v-for="(task, i) in tasks"
+        class="list-group-item list-group-item-action text-light py-3 task"
+        :key="i"
+        :data-complete="isTaskComplete(task)"
+        @click="handleTaskCheck(task)"
+      >
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex flex-column">
+            <div class="task-text">{{ task.text }}</div>
+            <div class="d-flex align-items-center mt-1">
+              <div class="task-tags d-flex">
+                <div v-for="(tag, j) in task.tags" :key="j" class="task-tag">
+                  {{ tag }}
+                </div>
+              </div>
+              <div class="task-timer">{{ taskResetTimeText(task) }}</div>
+            </div>
+          </div>
+          <div class="task-delete" @click.stop="removeTask(i)">
+            <div class="iconify" data-icon="mdi:delete"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -140,15 +150,8 @@ export default defineComponent({
   setup() {
     let tasks = reactive(Array<Task>());
     let dailyReset = ref("12:00");
-    // Load task data from state first if it exists
-    const state = inject("state") as StateManager;
-    let saved = JSON.parse(state.load("tasks"));
-    if (saved !== null) {
-      for (let task of saved.tasks) {
-        tasks.push(task);
-      }
-      dailyReset.value = saved.dailyReset;
-    } else {
+
+    const loadDefaultTasks = () => {
       // Load default task data and reset all timers
       // Daily reset is at 5:50am for America/New York? (Needs confirmation)?
       for (const task of taskData) {
@@ -159,8 +162,22 @@ export default defineComponent({
           tags: ["Default"],
           sync: true,
         };
-        tasks.push(t);
+        if (tasks.filter((x) => x.text === task.task).length === 0) {
+          tasks.push(t);
+        }
       }
+    };
+
+    // Load task data from state first if it exists
+    const state = inject("state") as StateManager;
+    let saved = JSON.parse(state.load("tasks"));
+    if (saved !== null) {
+      for (let task of saved.tasks) {
+        tasks.push(task);
+      }
+      dailyReset.value = saved.dailyReset;
+    } else {
+      loadDefaultTasks();
     }
 
     const curTime = ref(dayjs().valueOf());
@@ -191,6 +208,9 @@ export default defineComponent({
 
     const timeUntilReset = (task: Task): number => {
       if (task.sync) {
+        if (curTime.value - task.lastCompleted > task.reset) {
+          return -1;
+        }
         return task.reset - (DAY - offsetTime.value);
       }
       return task.lastCompleted + task.reset - curTime.value;
@@ -265,6 +285,7 @@ export default defineComponent({
       dailyReset,
       handleTaskCheck,
       isTaskComplete,
+      loadDefaultTasks,
       newTask,
       progressBar,
       removeTask,

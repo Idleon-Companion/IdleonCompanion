@@ -29,33 +29,6 @@ export const Skills = [
   "Catching",
 ];
 
-// All statues in the game
-export const Statues = [
-  "Anvil",
-  "Beholder",
-  "Bullseye",
-  "Cauldron",
-  "Exp Book",
-  "Feasty",
-  "Health",
-  "Kachow",
-  "Lumberbob",
-  "Mining",
-  "Oceanman",
-  "Ol Reliable",
-  "Power",
-  "Speed",
-  "Thicc Skin",
-];
-
-const characters = ref(Array<Character>());
-const charIndex = ref(0);
-
-// Save data to local storage
-const saveCharacters = () => {
-  localStorage.setItem("chars", JSON.stringify(characters.value));
-};
-
 // Characters keep track of individual data
 export class Character {
   public class: Class;
@@ -124,6 +97,14 @@ export class Character {
     return this.items[item] === true;
   }
 }
+
+const characters = ref(Array<Character>());
+const charIndex = ref(0);
+
+// Save data to local storage
+const saveCharacters = () => {
+  localStorage.setItem("chars", JSON.stringify(characters.value));
+};
 
 export function useCharacters() {
   const numCharacters = computed(() => {
