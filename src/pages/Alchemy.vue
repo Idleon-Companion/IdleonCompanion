@@ -2,7 +2,7 @@
   <div class="row">
     <div>
     <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
-      Use this section to write down your bubbles' levels and to keep track of vials colors and requirements.
+      Track your alchemy progress for bubbles and vials, and see costs/bonuses for vials.
     </p>
     </div>
   </div>
