@@ -4,34 +4,6 @@
     "assetDir": "checklist",
     "items": [
       {
-        "name": "Blunderbag",
-        "notes": "test test"
-      },
-      {
-        "name": "Snakeskinventory Bag"
-      },
-      {
-        "name": "Sandy Satchel"
-      },
-      {
-        "name": "Totally Normal And Not Fake Bag"
-      },
-      {
-        "name": "Bummo Bag"
-      },
-      {
-        "name": "Capitalist Case"
-      },
-      {
-        "name": "Wealthy Wallet"
-      },
-      {
-        "name": "Prosperous Pouch"
-      },
-      {
-        "name": "Sack of Success"
-      },
-      {
         "name": "Inventory Bag A"
       },
       {
@@ -57,6 +29,34 @@
       },
       {
         "name": "Inventory Bag I"
+      },
+      {
+        "name": "Snakeskinventory Bag"
+      },
+      {
+        "name": "Totally Normal And Not Fake Bag"
+      },
+      {
+        "name": "Blunderbag",
+        "notes": "test test"
+      },
+      {
+        "name": "Sandy Satchel"
+      },
+      {
+        "name": "Bummo Bag"
+      },
+      {
+        "name": "Capitalist Case"
+      },
+      {
+        "name": "Wealthy Wallet"
+      },
+      {
+        "name": "Prosperous Pouch"
+      },
+      {
+        "name": "Sack of Success"
       }
     ]
   },
@@ -239,9 +239,6 @@
     "assetDir": "checklist",
     "items": [
       {
-        "name": "Dank Paypay Chest"
-      },
-      {
         "name": "Storage Chest 1"
       },
       {
@@ -321,6 +318,9 @@
       },
       {
         "name": "Storage Chest 99C"
+      },
+      {
+        "name": "Dank Paypay Chest"
       }
     ]
   },
