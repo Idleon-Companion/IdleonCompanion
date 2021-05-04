@@ -32,12 +32,7 @@
                 <strong class="h3">{{ activeStamp.name }}</strong>
                 <div>
                   <label for="stamp-lvl" class="h5 m-2 ms-0">Level</label>
-                  <input
-                    v-model.number="lvl"
-                    type="number"
-                    min="1"
-                    id="stamp-lvl"
-                  />
+                  <input v-model="lvl" type="number" min="1" id="stamp-lvl" />
                 </div>
               </div>
               <ul class="rounded list-group list-group-flush">

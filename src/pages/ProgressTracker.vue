@@ -25,11 +25,7 @@
               :image="Assets.FromDir(item.name, data.assetDir)"
               :data-enabled="checklist[item.name]"
               @click="handleProgressCheck(item.name)"
-            >
-              <template #tooltip>
-                <div class="text-center" v-html="Text.Item(item)"></div>
-              </template>
-            </GameAsset>
+            />
           </div>
         </div>
       </div>
@@ -68,12 +64,12 @@
 
 <script lang="ts">
 import { computed, defineComponent, inject, ref } from "vue";
+import checklistData from "~/data/checklist.json";
+import { StateManager } from "~/State";
 
 import GameAsset from "~/components/GameAsset.vue";
+import { Assets } from "~/composables/Utilities";
 import { Card, CardCategory, Cards } from "~/composables/Cards";
-import { useChecklist } from "~/composables/Checklist";
-import { Assets, ItemGroup, Text } from "~/composables/Utilities";
-import { StateManager } from "~/State";
 
 export default defineComponent({
   name: "ProgressTracker",
@@ -81,7 +77,7 @@ export default defineComponent({
     GameAsset,
   },
   setup() {
-    const { checklist, checklistData } = useChecklist();
+    const checklist = ref({} as Record<string, boolean>);
     const state = inject("state") as StateManager;
     var saved = JSON.parse(state.load("checklist"));
 
@@ -92,7 +88,7 @@ export default defineComponent({
         .reduce((obj, [key, value]) => {
           obj[key] = value;
           return obj;
-        }, {} as Record<string, ItemGroup>);
+        }, {} as Record<string, any>);
     });
 
     for (const data of Object.values(globalChecklist.value)) {
@@ -143,7 +139,6 @@ export default defineComponent({
       globalChecklist,
       handleCardClick,
       handleProgressCheck,
-      Text,
     };
   },
   methods: {
