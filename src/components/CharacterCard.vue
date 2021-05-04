@@ -2,7 +2,7 @@
   <div v-if="char !== null" class="d-flex char-card">
     <img :src="Assets.CharImage(char)" class="char-icon" />
     <div class="d-flex flex-column ms-2">
-      <div class="char-name">{{ char.name }}</div>
+      <div class="char-name">{{ char.name || "No Name" }}</div>
       <div class="char-meta">
         <div class="char-level">Lv. {{ char.level }}</div>
         <div class="char-class">{{ charClassText(char) }}</div>

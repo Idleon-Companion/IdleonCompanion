@@ -31,12 +31,26 @@ input, textarea, select
   padding: 0.5rem
 input[type='range']
   border: none
+select
+  background: darken($primary, 5%)
+  border: 1px solid $primary
+  cursor: pointer
 option
-  color: black
+  background: darken($primary, 5%)
+  color: darken(white, 25%)
 textarea
   height: 40px
   overflow: hidden
   resize: none
+button
+  background: lighten($primary, 10%)
+  border: none
+  color: darken(white, 10%)
+  outline: none
+  transition: 0.3s
+  &:hover
+    background: lighten($primary, 15%)
+    color: darken(white, 10%)
 
 #calc
   background-color: rgba(28, 30, 34,0.7)
