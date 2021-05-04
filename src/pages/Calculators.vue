@@ -37,9 +37,11 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
 import PackMuleCrafter from "~/pages/PackMuleCrafter.vue";
 import PicnicQuest from "~/pages/PicnicQuest.vue";
 import Stamps from "~/pages/Stamps.vue";
+
 export default defineComponent({
   name: "Calculators",
   components: {
@@ -67,3 +69,4 @@ export default defineComponent({
     cursor: pointer
     object-fit: contain
 </style>
+

@@ -1,6 +1,6 @@
 <template>
   <!-- Dropdown Selectors -->
-    <div class="row">
+   <div class="row">
     <div>
       <p class="h6 text-light bg-primary p-3 mb-4 rounded">
         Use this page to help plan the Pack Mule Crafter W1 Task. Select your

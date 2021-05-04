@@ -18,7 +18,7 @@
       New Character
     </button>
   </div>
-    <div v-else>
+   <div v-else>
     <div class="char-editor bg-primary p-3 rounded">
       <div class="d-flex justify-content-between">
         <h2 class="text-light">Editing {{ curCharacter.name || "No Name" }}</h2>
@@ -46,7 +46,7 @@
           aria-hidden="true"
         >
           <div
-           class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
           >
             <div class="modal-content bg-primary">
               <div class="modal-header">
@@ -180,6 +180,7 @@
         </div>
        <statues-section />
       </div>
+      <statues-section />
     </div>
   </div>
 </template>
