@@ -32,7 +32,7 @@
           </button>
         </div>
       </div>
-      <div class="d-flex align-items-center">
+      <div class="d-flex align-items-center flex-wrap">
         <img
           class="char-class-img border border-secondary me-3"
           :src="Assets.CharImage(curCharacter)"
@@ -55,9 +55,9 @@
                 </h5>
                 <button
                   type="button"
-                  class="btn-close"
+                  class="iconify char-class-close"
+                  data-icon="mdi-close"
                   data-bs-dismiss="modal"
-                  aria-label="Close"
                 ></button>
               </div>
               <div class="d-flex flex-wrap modal-body">
@@ -69,7 +69,7 @@
                   :width="72"
                   :title="class_"
                   class="char-class-img m-1"
-                  @click="setClass(class_)"
+                  @click="curCharacter !== null && curCharacter.setClass(class_)"
                 />
                 <GameAsset
                   v-for="(subclass, i) in Subclass"
@@ -79,13 +79,13 @@
                   :width="72"
                   :title="subclass"
                   class="char-class-img m-1"
-                  @click="setClass(subclass)"
+                  @click="curCharacter !== null &&  curCharacter.setClass(subclass)"
                 />
               </div>
               <div class="modal-footer">
                 <button
                   type="button"
-                  class="btn btn-secondary"
+                  class="btn btn-dark"
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 >
@@ -193,7 +193,7 @@ import {
   useCharacters,
 } from "~/composables/Characters";
 import { Statues } from "~/composables/Statues";
-import { Assets } from "~/composables/Utilities";
+import { Assets, Text } from "~/composables/Utilities";
 import checklistData from "~/data/checklist.json";
 import StatuesSection from "~/pages/Statues.vue";
 
@@ -211,18 +211,9 @@ export default defineComponent({
       curCharacter,
       numCharacters,
       saveCharacters,
-      setClass,
     } = useCharacters();
     const newCharacter = () => {
-      let char = {
-        name: "",
-        level: 1,
-        items: {},
-        skills: {},
-        statues: {},
-        class: Class.Beginner,
-        subclass: null,
-      } as Character;
+      let char = new Character();
       for (const skill of Skills) {
         char.skills[skill] = 0;
       }
@@ -333,8 +324,8 @@ export default defineComponent({
       newCharacter,
       numCharacters,
       saveCharacters,
-      setClass,
       Subclass,
+      Text,
     };
   },
 });
@@ -377,4 +368,6 @@ export default defineComponent({
   .char-skill-img
     width: 2rem
     object-fit: contain
+.char-class-close
+  color: white
 </style>

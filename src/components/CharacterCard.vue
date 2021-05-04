@@ -8,31 +8,73 @@
         <div class="char-class">{{ charClassText(char) }}</div>
       </div>
     </div>
+    <div class="d-flex flex-column ms-auto align-items-end text-light">
+      <div class="d-flex align-items-center">
+        <div class="iconify" data-icon="mdi-sack"></div>
+        <div class="ms-1 char-text-sm">{{ char.bagSlots }} Slots</div>
+      </div>
+      <div class="d-flex">
+        <GameAsset
+          v-for="(skill, i) in topSkills"
+          :key="i"
+          :height="24"
+          :title="skill"
+          :image="Assets.IconImage(skill)"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
-import { Character } from "~/composables/Characters";
+import { computed, defineComponent, PropType } from "vue";
+
+import GameAsset from "~/components/GameAsset.vue";
+import { Character, Skills, useCharacters } from "~/composables/Characters";
 import { Assets } from "~/composables/Utilities";
 
 export default defineComponent({
   name: "CharacterCard",
+  components: {
+    GameAsset,
+  },
   props: {
     char: {
       required: true,
       type: Object as PropType<Character | null>,
     },
   },
-  setup() {
+  setup(props) {
+    const { characters } = useCharacters();
+
+    const topSkills = computed(() => {
+      let top = [];
+      if (props.char !== null) {
+        for (const skill of Skills) {
+          let best = props.char.skills[skill] > 0;
+          for (const c of characters.value) {
+            if (c.skills[skill] > props.char.skills[skill]) {
+              best = false;
+              break;
+            }
+          }
+          if (best) {
+            top.push(skill);
+          }
+        }
+      }
+      return top.slice(0, 3);
+    });
+
     return {
       Assets,
+      characters,
+      topSkills,
     };
   },
   methods: {
     charClassText(char: Character): string {
-      let classes = [char.class, char.subclass].filter((x) => x !== null);
-      return classes.join(" > ");
+      return char.subclass || char.class;
     },
   },
 });
@@ -54,13 +96,16 @@ export default defineComponent({
   .char-meta
     align-items: center
     color: darken(white, 10%)
+    margin-top: 0.15rem
     display: flex
     .char-level
       background: $purple
       border-radius: 0.2rem
       font-weight: bold
-      padding: 0.1rem 0.25rem
+      padding: 0.05rem 0.25rem
     .char-class
-      font-style: italic
       margin-left: 0.25rem
+      font-weight: 500
+  .char-text-sm
+    font-size: 0.85rem
 </style>

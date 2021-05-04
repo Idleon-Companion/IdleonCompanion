@@ -18,7 +18,7 @@
           />
           <input
             class="col-4"
-            v-model="alchemy.upgrades[color][n - 1]"
+            v-model.number="alchemy.upgrades[color][n - 1]"
             type="number"
             :min="0"
             @change="saveAlchemy"
