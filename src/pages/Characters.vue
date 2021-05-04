@@ -32,7 +32,7 @@
           </button>
         </div>
       </div>
-      <div class="d-flex align-items-center">
+      <div class="d-flex align-items-center flex-wrap">
         <img
           class="char-class-img border border-secondary me-3"
           :src="Assets.CharImage(curCharacter)"
@@ -69,7 +69,7 @@
                   :width="72"
                   :title="class_"
                   class="char-class-img m-1"
-                  @click="curCharacter.setClass(class_)"
+                  @click="curCharacter !== null && curCharacter.setClass(class_)"
                 />
                 <GameAsset
                   v-for="(subclass, i) in Subclass"
@@ -79,7 +79,7 @@
                   :width="72"
                   :title="subclass"
                   class="char-class-img m-1"
-                  @click="curCharacter.setClass(subclass)"
+                  @click="curCharacter !== null &&  curCharacter.setClass(subclass)"
                 />
               </div>
               <div class="modal-footer">
