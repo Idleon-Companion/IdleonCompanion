@@ -1,25 +1,32 @@
 <template>
-  <div class="row pl-3 mb-4">
-    <div class="d-flex">
-      <div class="d-flex flex-column col-3">
-        <div class="text-light h4">Filter By Class</div>
-        <select v-model="buildClass" id="buildClass">
-          <option value="all" selected>All</option>
-          <option v-for="(c, v) in classes" :key="c" :value="c">{{ v }}</option>
-        </select>
-      </div>
-      <div class="input-group build-selector mx-2">
-        <select v-model="build" id="buildSelector">
-          <option value="" selected>Select Your Build</option>
-          <option
-            v-for="(build, buildID) in filteredBuilds"
-            :key="buildID"
-            :value="buildID"
-          >
-            {{ build.title }}
-          </option>
-        </select>
-      </div>
+  <div class="row">
+    <div>
+      <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+        Browse through our list of suggested builds, filtered by character
+        class.
+      </p>
+    </div>
+  </div>
+  <div class="row px-3 my-3">
+    <div class="col-md input-group build-selector p-0">
+      <span class="input-group-text bg-dark text-light">Class</span>
+      <select v-model="buildClass" id="buildClass">
+        <option value="all" selected>All</option>
+        <option v-for="(c, v) in classes" :key="c" :value="c">{{ v }}</option>
+      </select>
+    </div>
+    <div class="col-md input-group build-selector p-0">
+      <span class="input-group-text bg-dark text-light">Build</span>
+      <select v-model="build" id="buildSelector">
+        <option value="" selected>Select Your Build</option>
+        <option
+          v-for="(build, buildID) in filteredBuilds"
+          :key="buildID"
+          :value="buildID"
+        >
+          {{ build.title }}
+        </option>
+      </select>
     </div>
   </div>
   <!-- TALENTS -->
@@ -212,7 +219,11 @@ export default defineComponent({
   display: flex
   height: 3rem
   align-self: flex-end
-
+  select
+    width: 80%
+.input-group-text
+  border: 1px solid $primary
+  
 .talent-container
   display: grid
   grid-template-columns: repeat(5, 1fr)

@@ -1,5 +1,12 @@
 <template>
-  <div class="d-flex flex-column alchemy-wrapper">
+ <div class="row">
+    <div>
+    <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+      Track your alchemy progress for bubbles and vials, and see costs/bonuses for vials.
+    </p>
+    </div>
+  </div>
+  <div class="d-flex flex-column alchemy-wrapper mt-3">
     <div class="h2 text-light">Alchemy Upgrades</div>
     <div class="d-flex flex-wrap justify-content-center">
       <div v-for="(color, i) in colors" :key="i" class="alchemy-upgrades">

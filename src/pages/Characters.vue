@@ -1,144 +1,155 @@
 <template>
-  <div class="rounded">
-    <div class="d-flex justify-content-end">
-      <button class="btn btn-dark" @click="newCharacter">
-        <div class="iconify" data-icon="mdi-plus"></div>
-        New Character
-      </button>
+  <div class="row">
+    <div>
+      <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+        In this tab you can create, modify and manage all your characters. Keep
+        track of individual stats like statues, pouches and inventory slots.
+        <br />Switch between all of your created characters using the "Switch
+        character" menu in the top-right of the page.
+      </p>
     </div>
-    <h4
-      v-if="curCharacter === null"
-      class="text-light d-flex justify-content-center"
-    >
+  </div>
+  <div class="row justify-content-center" v-if="curCharacter === null">
+    <h4 class="text-light d-flex justify-content-center">
       You have no characters. Add new ones below!
     </h4>
+    <button class="btn-lg btn-dark mt-2 w-25" @click="newCharacter">
+      <div class="iconify" data-icon="mdi-plus"></div>
+      New Character
+    </button>
+  </div>
     <div v-else>
-      <div class="char-editor bg-primary p-3 mt-2 rounded">
-        <div class="d-flex justify-content-between">
-          <h2 class="text-light">Editing {{ curCharacter.name }}</h2>
+    <div class="char-editor bg-primary p-3 rounded">
+      <div class="d-flex justify-content-between">
+        <h2 class="text-light">Editing {{ curCharacter.name || "No Name" }}</h2>
+        <div class="btn-group">
+          <button class="btn btn-dark" @click="newCharacter">
+            <div class="iconify" data-icon="mdi-plus"></div>
+            New Character
+          </button>
           <button class="btn char-delete-btn" @click="deleteCharacter">
             Delete
           </button>
         </div>
-        <div class="d-flex align-items-center">
-          <img
-            class="char-class-img border border-secondary me-3"
-            :src="Assets.CharImage(curCharacter)"
-            data-bs-toggle="modal"
-            data-bs-target="#char-class-selector"
-          />
+      </div>
+      <div class="d-flex align-items-center">
+        <img
+          class="char-class-img border border-secondary me-3"
+          :src="Assets.CharImage(curCharacter)"
+          data-bs-toggle="modal"
+          data-bs-target="#char-class-selector"
+        />
+        <div
+          id="char-class-selector"
+          class="modal fade"
+          tabindex="-1"
+          aria-hidden="true"
+        >
           <div
-            id="char-class-selector"
-            class="modal fade"
-            tabindex="-1"
-            aria-hidden="true"
+           class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
           >
-            <div
-              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-            >
-              <div class="modal-content bg-primary">
-                <div class="modal-header">
-                  <h5 class="modal-title text-light">
-                    Select Character Class/Subclass
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="d-flex flex-wrap modal-body">
-                  <GameAsset
-                    v-for="(class_, i) in Class"
-                    :key="i"
-                    :image="Assets.ClassImage(class_)"
-                    :height="72"
-                    :width="72"
-                    :title="class_"
-                    class="char-class-img m-1"
-                    @click="setClass(class_)"
-                  />
-                  <GameAsset
-                    v-for="(subclass, i) in Subclass"
-                    :key="i"
-                    :image="Assets.ClassImage(subclass)"
-                    :height="72"
-                    :width="72"
-                    :title="subclass"
-                    class="char-class-img m-1"
-                    @click="setClass(subclass)"
-                  />
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  >
-                    Save
-                  </button>
-                </div>
+            <div class="modal-content bg-primary">
+              <div class="modal-header">
+                <h5 class="modal-title text-light">
+                  Select Character Class/Subclass
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="d-flex flex-wrap modal-body">
+                <GameAsset
+                  v-for="(class_, i) in Class"
+                  :key="i"
+                  :image="Assets.ClassImage(class_)"
+                  :height="72"
+                  :width="72"
+                  :title="class_"
+                  class="char-class-img m-1"
+                  @click="setClass(class_)"
+                />
+                <GameAsset
+                  v-for="(subclass, i) in Subclass"
+                  :key="i"
+                  :image="Assets.ClassImage(subclass)"
+                  :height="72"
+                  :width="72"
+                  :title="subclass"
+                  class="char-class-img m-1"
+                  @click="setClass(subclass)"
+                />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                >
+                  Save
+                </button>
               </div>
             </div>
           </div>
-          <div class="d-flex flex-column">
-            <label for="char-name">Name</label>
-            <input
-              id="char-name"
-              class="char-input"
-              type="text"
-              spellcheck="false"
-              placeholder="Name"
-              :maxlength="14"
-              v-model="curCharacter.name"
-              @change="saveCharacters"
+        </div>
+        <div class="d-flex flex-column">
+          <label for="char-name">Name</label>
+          <input
+            id="char-name"
+            class="char-input"
+            type="text"
+            spellcheck="false"
+            placeholder="Name"
+            :maxlength="14"
+            v-model="curCharacter.name"
+            @change="saveCharacters"
+          />
+          <label for="char-level">Level</label>
+          <input
+            id="char-level"
+            class="char-input"
+            type="number"
+            :min="1"
+            v-model="curCharacter.level"
+            @change="saveCharacters"
+          />
+        </div>
+        <div class="d-flex flex-wrap flex-column ms-2">
+          <label>Skills</label>
+          <div
+            v-for="(level, skill) in curCharacter.skills"
+            :key="skill"
+            class="char-skill mb-1"
+          >
+            <GameAsset
+              class="char-skill-img me-2"
+              :image="Assets.IconImage(skill)"
+              :title="skill"
             />
-            <label for="char-level">Level</label>
             <input
-              id="char-level"
-              class="char-input"
+              :id="'char-skill-' + skill"
+              class="char-input skill-input"
               type="number"
-              :min="1"
-              v-model.number="curCharacter.level"
+              :min="0"
+              v-model="curCharacter.skills[skill]"
               @change="saveCharacters"
             />
-          </div>
-          <div class="d-flex flex-wrap flex-column ms-2">
-            <label>Skills</label>
-            <div
-              v-for="(level, skill) in curCharacter.skills"
-              :key="skill"
-              class="char-skill mb-1"
-            >
-              <GameAsset
-                class="char-skill-img me-2"
-                :image="Assets.IconImage(skill)"
-                :title="skill"
-              />
-              <input
-                v-model.number="curCharacter.skills[skill]"
-                class="char-input skill-input"
-                type="number"
-                :id="'char-skill-' + skill"
-                :min="0"
-                @change="saveCharacters"
-              />
-            </div>
           </div>
         </div>
       </div>
       <div class="char-progress">
         <h4 class="text-light mt-4">Character Progress</h4>
-        <div class="col progress-tracker">
+        <div class="row progress-tracker">
           <div
             v-for="(data, category) in charChecklist"
             :key="category"
-            class="progress-group"
+            class="progress-group col-lg mb-4"
             id="checklist"
           >
-            <div class="progress-category text-light col-12 col-md-6 my-3">
+            <div class="progress-category text-light my-3">
               {{ category }}
             </div>
             <div class="progress-items">
@@ -167,6 +178,7 @@
             </div>
           </div>
         </div>
+       <statues-section />
       </div>
     </div>
   </div>
@@ -187,11 +199,14 @@ import {
 import { Statues } from "~/composables/Statues";
 import { Assets, Text } from "~/composables/Utilities";
 import checklistData from "~/data/checklist.json";
+import StatuesSection from "~/pages/Statues.vue";
+
 export default defineComponent({
   name: "Characters",
   components: {
     CharacterCard,
     GameAsset,
+    StatuesSection,
   },
   setup() {
     const {

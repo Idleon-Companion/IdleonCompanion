@@ -4,42 +4,6 @@
     "assetDir": "checklist",
     "items": [
       {
-        "name": "Blunderbag",
-        "bagSlots": 4
-      },
-      {
-        "name": "Snakeskinventory Bag",
-        "bagSlots": 2
-      },
-      {
-        "name": "Sandy Satchel",
-        "bagSlots": 4
-      },
-      {
-        "name": "Totally Normal And Not Fake Bag",
-        "bagSlots": 2
-      },
-      {
-        "name": "Bummo Bag",
-        "bagSlots": 1
-      },
-      {
-        "name": "Capitalist Case",
-        "bagSlots": 1
-      },
-      {
-        "name": "Wealthy Wallet",
-        "bagSlots": 1
-      },
-      {
-        "name": "Prosperous Pouch",
-        "bagSlots": 1
-      },
-      {
-        "name": "Sack of Success",
-        "bagSlots": 2
-      },
-      {
         "name": "Inventory Bag A",
         "bagSlots": 1
       },
@@ -73,6 +37,42 @@
       },
       {
         "name": "Inventory Bag I",
+        "bagSlots": 2
+      },
+      {
+        "name": "Snakeskinventory Bag",
+        "bagSlots": 2
+      },
+      {
+        "name": "Totally Normal And Not Fake Bag",
+        "bagSlots": 2
+      },
+      {
+        "name": "Blunderbag",
+        "bagSlots": 4
+      },
+      {
+        "name": "Sandy Satchel",
+        "bagSlots": 4
+      },
+      {
+        "name": "Bummo Bag",
+        "bagSlots": 1
+      },
+      {
+        "name": "Capitalist Case",
+        "bagSlots": 1
+      },
+      {
+        "name": "Wealthy Wallet",
+        "bagSlots": 1
+      },
+      {
+        "name": "Prosperous Pouch",
+        "bagSlots": 1
+      },
+      {
+        "name": "Sack of Success",
         "bagSlots": 2
       }
     ]
@@ -262,9 +262,6 @@
     "assetDir": "checklist",
     "items": [
       {
-        "name": "Dank Paypay Chest"
-      },
-      {
         "name": "Storage Chest 1"
       },
       {
@@ -344,6 +341,9 @@
       },
       {
         "name": "Storage Chest 99C"
+      },
+      {
+        "name": "Dank Paypay Chest"
       }
     ]
   },
@@ -558,3 +558,4 @@
     ]
   }
 }
+ 

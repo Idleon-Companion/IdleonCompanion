@@ -1,6 +1,6 @@
 <template>
-  <h2 class="text-white">Statues</h2>
-  <div v-if="curCharacter !== null" class="statue-wrapper">
+  <h4 class="text-white">Statues</h4>
+  <div v-if="curCharacter !== null" class="statue-wrapper jumbotron">
     <div class="d-flex flex-wrap justify-content-around">
       <div class="d-flex flex-column my-2 col-12 col-md-7">
         <div class="statue-list">
