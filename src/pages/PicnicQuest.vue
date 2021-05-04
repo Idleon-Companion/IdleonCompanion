@@ -2,7 +2,7 @@
   <div class="row">
     <div>
      <p class="h6 text-light bg-primary p-3 mb-4 rounded">
-        Use this table to calculate how many runs are necessary for the Pinic Quest's King of Food Tropy. Use the slider to select the number of runs to display.
+        Use this table to calculate how many runs are necessary for the Pinic Quest's King of Food Trophy. Use the slider to select the number of runs to display.
      </p>
     </div>
     <div class="col-xl-12">
