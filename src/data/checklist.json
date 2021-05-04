@@ -4,59 +4,76 @@
     "assetDir": "checklist",
     "items": [
       {
-        "name": "Inventory Bag A"
+        "name": "Inventory Bag A",
+        "bagSlots": 1
       },
       {
-        "name": "Inventory Bag B"
+        "name": "Inventory Bag B",
+        "bagSlots": 1
       },
       {
-        "name": "Inventory Bag C"
+        "name": "Inventory Bag C",
+        "bagSlots": 1
       },
       {
-        "name": "Inventory Bag D"
+        "name": "Inventory Bag D",
+        "bagSlots": 2
       },
       {
-        "name": "Inventory Bag E"
+        "name": "Inventory Bag E",
+        "bagSlots": 2
       },
       {
-        "name": "Inventory Bag F"
+        "name": "Inventory Bag F",
+        "bagSlots": 2
       },
       {
-        "name": "Inventory Bag G"
+        "name": "Inventory Bag G",
+        "bagSlots": 2
       },
       {
-        "name": "Inventory Bag H"
+        "name": "Inventory Bag H",
+        "bagSlots": 2
       },
       {
-        "name": "Inventory Bag I"
+        "name": "Inventory Bag I",
+        "bagSlots": 2
       },
       {
-        "name": "Snakeskinventory Bag"
+        "name": "Snakeskinventory Bag",
+        "bagSlots": 2
       },
       {
-        "name": "Totally Normal And Not Fake Bag"
+        "name": "Totally Normal And Not Fake Bag",
+        "bagSlots": 2
       },
       {
         "name": "Blunderbag",
-        "notes": "test test"
+        "bagSlots": 4
       },
       {
-        "name": "Sandy Satchel"
+        "name": "Sandy Satchel",
+        "bagSlots": 4
       },
       {
-        "name": "Bummo Bag"
+        "name": "Bummo Bag",
+        "bagSlots": 1
       },
       {
-        "name": "Capitalist Case"
+        "name": "Capitalist Case",
+        "bagSlots": 1
       },
       {
-        "name": "Wealthy Wallet"
+        "name": "Wealthy Wallet",
+        "bagSlots": 1
       },
       {
-        "name": "Prosperous Pouch"
+        "name": "Prosperous Pouch",
+        "bagSlots": 1
       },
       {
-        "name": "Sack of Success"
+        "name": "Sack of Success",
+        "bagSlots": 2
       }
     ]
   },
@@ -65,22 +82,28 @@
     "assetDir": "checklist",
     "items": [
       {
-        "name": "Inventory Bag U"
+        "name": "Inventory Bag U",
+        "bagSlots": 4
       },
       {
-        "name": "Inventory Bag V"
+        "name": "Inventory Bag V",
+        "bagSlots": 4
       },
       {
-        "name": "Inventory Bag W"
+        "name": "Inventory Bag W",
+        "bagSlots": 4
       },
       {
-        "name": "Inventory Bag X"
+        "name": "Inventory Bag X",
+        "bagSlots": 4
       },
       {
-        "name": "Inventory Bag Y"
+        "name": "Inventory Bag Y",
+        "bagSlots": 4
       },
       {
-        "name": "Inventory Bag Z"
+        "name": "Inventory Bag Z",
+        "bagSlots": 4
       }
     ]
   },
