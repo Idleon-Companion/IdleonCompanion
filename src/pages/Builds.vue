@@ -2,7 +2,7 @@
   <div class="row ">
     <div>
     <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
-      Use this tool to display builds recommendations, filtered by class.
+      Browse through our list of suggested builds, filtered by character class.
     </p>
     </div>
   </div>
