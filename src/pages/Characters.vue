@@ -3,7 +3,7 @@
     <div>
     <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
         In this tab you can create, modify and manage all your characters. Keep track of individual stats like statues, pouches and inventory slots. 
-        <br/>Switch between all your created characters using the "switch character" menu in the card above
+        <br/>Switch between all of your created characters using the "Switch character" menu in the top-right of the page.
     </p>
     </div>
   </div>
