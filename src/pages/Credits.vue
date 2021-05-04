@@ -1,5 +1,5 @@
 <template>
-  <div class="text-light">
+  <div class="text-light jumbotron">
     <div class="row">
       <iframe
         src="https://discord.com/widget?id=829063242227777566&theme=dark"
