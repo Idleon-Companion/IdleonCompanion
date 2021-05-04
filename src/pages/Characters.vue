@@ -193,7 +193,7 @@ import {
   useCharacters,
 } from "~/composables/Characters";
 import { Statues } from "~/composables/Statues";
-import { Assets } from "~/composables/Utilities";
+import { Assets, Text } from "~/composables/Utilities";
 import checklistData from "~/data/checklist.json";
 import StatuesSection from "~/pages/Statues.vue";
 
@@ -214,15 +214,7 @@ export default defineComponent({
       setClass,
     } = useCharacters();
     const newCharacter = () => {
-      let char = {
-        name: "",
-        level: 1,
-        items: {},
-        skills: {},
-        statues: {},
-        class: Class.Beginner,
-        subclass: null,
-      } as Character;
+      let char = new Character();
       for (const skill of Skills) {
         char.skills[skill] = 0;
       }
@@ -335,6 +327,7 @@ export default defineComponent({
       saveCharacters,
       setClass,
       Subclass,
+      Text,
     };
   },
 });
