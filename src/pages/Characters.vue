@@ -19,7 +19,7 @@
     <div v-else>
       <div class="char-editor bg-primary p-3 rounded">
         <div class="d-flex justify-content-between">
-          <h2 class="text-light">Editing {{ curCharacter.name }}</h2>
+          <h2 class="text-light">Editing {{ curCharacter.name || "No Name" }}</h2>
           <div class="btn-group">
             <button class="btn btn-dark" @click="newCharacter">
               <div class="iconify" data-icon="mdi-plus"></div>
@@ -375,4 +375,5 @@ export default defineComponent({
   .char-skill-img
     width: 2rem
     object-fit: contain
+ 
 </style>
