@@ -132,23 +132,6 @@ export function useCharacters() {
     }
   };
 
-  // Set character class/subclass
-  const setClass = (value: Class | Subclass) => {
-    if (curCharacter.value === null) {
-      return;
-    }
-    for (const c in Class) {
-      if (value === c) {
-        curCharacter.value.class = value as Class;
-        curCharacter.value.subclass = null;
-        saveCharacters();
-        return;
-      }
-    }
-
-    saveCharacters();
-  };
-
   return {
     characters,
     charIndex,
@@ -157,6 +140,5 @@ export function useCharacters() {
     nextCharacter,
     prevCharacter,
     saveCharacters,
-    setClass,
   };
 }

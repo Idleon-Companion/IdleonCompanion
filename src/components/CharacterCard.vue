@@ -51,7 +51,7 @@ export default defineComponent({
       let top = [];
       if (props.char !== null) {
         for (const skill of Skills) {
-          let best = true;
+          let best = props.char.skills[skill] > 0;
           for (const c of characters.value) {
             if (c.skills[skill] > props.char.skills[skill]) {
               best = false;
