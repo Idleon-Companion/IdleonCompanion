@@ -88,28 +88,6 @@ export class Assets {
   }
 }
 
-export type Item = {
-  name: string;
-  bagSlots?: number;
-  cycle?: string;
-};
-
-export type ItemGroup = {
-  global: boolean;
-  assetDir: string;
-  items: Item[];
-};
-
-export class Text {
-  static Item(item: Item): string {
-    let text = item.name;
-    if (item.bagSlots !== undefined) {
-      text += `<br>+${item.bagSlots} Inventory Slots`;
-    }
-    return text;
-  }
-}
-
 export enum Effects {
   // Base
   BaseDamage = "Base Damage",
