@@ -69,7 +69,9 @@
                   :width="72"
                   :title="class_"
                   class="char-class-img m-1"
-                  @click="curCharacter !== null && curCharacter.setClass(class_)"
+                  @click="
+                    curCharacter !== null && curCharacter.setClass(class_)
+                  "
                 />
                 <GameAsset
                   v-for="(subclass, i) in Subclass"
@@ -79,7 +81,9 @@
                   :width="72"
                   :title="subclass"
                   class="char-class-img m-1"
-                  @click="curCharacter !== null &&  curCharacter.setClass(subclass)"
+                  @click="
+                    curCharacter !== null && curCharacter.setClass(subclass)
+                  "
                 />
               </div>
               <div class="modal-footer">
@@ -210,7 +214,6 @@ export default defineComponent({
       charIndex,
       curCharacter,
       numCharacters,
-      saveCharacters,
     } = useCharacters();
     const newCharacter = () => {
       let char = new Character();
@@ -222,12 +225,10 @@ export default defineComponent({
       }
       characters.value.push(char);
       charIndex.value = characters.value.length - 1;
-      saveCharacters();
     };
     const deleteCharacter = () => {
       characters.value.splice(charIndex.value, 1);
       charIndex.value = 0;
-      saveCharacters();
     };
 
     const charChecklist = Object.entries(checklistData)
@@ -306,7 +307,6 @@ export default defineComponent({
             curCharacter.value.items[item] = true;
           }
         }
-        saveCharacters();
       }
     };
     return {
@@ -323,7 +323,6 @@ export default defineComponent({
       isEnabled,
       newCharacter,
       numCharacters,
-      saveCharacters,
       Subclass,
       Text,
     };

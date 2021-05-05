@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@types/bootstrap": "^5.0.12",
+    "@vueuse/core": "^4.9.1",
     "bootstrap": "^5.0.0-beta3",
     "dayjs": "^1.10.4",
     "vue": "^3.0.5",
