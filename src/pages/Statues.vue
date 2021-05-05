@@ -9,7 +9,7 @@
             v-for="(statue, i) in Object.keys(statues)"
             :key="i"
             :data-active="curStatue === statue"
-            @click="curStatue = statue"
+            @click="setCurStatue(statue)"
           >
             <img :src="Assets.StatueImage(statue.replace(/ /g, '_'))" />
             <div class="statue-level-badge">
@@ -59,7 +59,7 @@
 import { computed, defineComponent, ref } from "vue";
 
 import { useCharacters } from "~/composables/Characters";
-import { StatueName, Statues } from '~/composables/Statues'
+import { StatueName, Statues } from "~/composables/Statues";
 import { Assets } from "~/composables/Utilities";
 
 export default defineComponent({
@@ -77,6 +77,10 @@ export default defineComponent({
       }
       return s;
     });
+
+    const setCurStatue = (statue: string) => {
+      curStatue.value = statue as StatueName;
+    };
 
     const setStatueLevel = (event: Event) => {
       let level = (event.target as HTMLInputElement).value;
@@ -117,6 +121,7 @@ export default defineComponent({
       curCharacter,
       curStatue,
       saveCharacters,
+      setCurStatue,
       setStatueLevel,
       statueBuffs,
       statues,
