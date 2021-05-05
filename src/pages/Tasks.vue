@@ -1,10 +1,11 @@
 <template>
-  <div class="row ">
+  <div class="row">
     <div>
-    <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
-      Use this page to keep track of your to-do list. You can use the default tasks or make your own! 
-      Each task comes with an individual timer to keep track of time left until reset.
-    </p>
+      <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+        Use this page to keep track of your to-do list. You can use the default
+        tasks or make your own! Each task comes with an individual timer to keep
+        track of time left until reset.
+      </p>
     </div>
   </div>
   <div class="row mx-0 text-light">
@@ -124,31 +125,17 @@
 </template>
 
 <script lang="ts">
-import {
-  computed,
-  defineComponent,
-  inject,
-  onMounted,
-  reactive,
-  ref,
-} from "vue";
+import { computed, defineComponent, onMounted, reactive, ref } from "vue";
+import { useState } from "~/State";
+import { Task } from "~/composables/Progress";
 import taskData from "~/data/defaultTasks.json";
 
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import relativeTime from "dayjs/plugin/relativeTime";
-import { StateManager } from "~/State";
 dayjs.locale;
 dayjs.extend(duration);
 dayjs.extend(relativeTime);
-
-type Task = {
-  lastCompleted: number; // Unix timestamp of last completion
-  text: string; // Text to display for task
-  tags: string[]; // Tags for filtering/sorting
-  reset: number; // Milliseconds to reset task
-  sync: boolean; // Handles time based on in-game clock
-};
 
 const HOUR = dayjs.duration({ hours: 1 }).asMilliseconds();
 const DAY = dayjs.duration({ hours: 24 }).asMilliseconds();
@@ -156,12 +143,14 @@ const DAY = dayjs.duration({ hours: 24 }).asMilliseconds();
 export default defineComponent({
   name: "Tasks",
   setup() {
-    let tasks = reactive(Array<Task>());
-    let dailyReset = ref("12:00");
+    onMounted(() => updateTasks());
+
+    const state = useState();
+    const tasks = ref(state.value.tasks.tasks);
+    const dailyReset = ref(state.value.tasks.dailyReset);
 
     const loadDefaultTasks = () => {
       // Load default task data and reset all timers
-      // Daily reset is at 5:50am for America/New York? (Needs confirmation)?
       for (const task of taskData) {
         let t: Task = {
           text: task.task,
@@ -170,23 +159,14 @@ export default defineComponent({
           tags: ["Default"],
           sync: true,
         };
-        if (tasks.filter((x) => x.text === task.task).length === 0) {
-          tasks.push(t);
+        if (tasks.value.filter((x) => x.text === task.task).length === 0) {
+          tasks.value.push(t);
         }
       }
     };
 
     // Load task data from state first if it exists
-    const state = inject("state") as StateManager;
-    let saved = JSON.parse(state.load("tasks"));
-    if (saved !== null) {
-      for (let task of saved.tasks) {
-        tasks.push(task);
-      }
-      dailyReset.value = saved.dailyReset;
-    } else {
-      loadDefaultTasks();
-    }
+    loadDefaultTasks();
 
     const curTime = ref(dayjs().valueOf());
     const offsetTime = ref(0);
@@ -229,21 +209,14 @@ export default defineComponent({
     };
 
     const tasksCompleted = computed(() => {
-      return tasks.filter((x) => isTaskComplete(x)).length;
+      return tasks.value.filter((x) => isTaskComplete(x)).length;
     });
 
     const progressBar = ref();
     const updateTasks = () => {
       progressBar.value.style.width = `${
-        (tasksCompleted.value / tasks.length) * 100
+        (tasksCompleted.value / tasks.value.length) * 100
       }%`;
-      state.save(
-        "tasks",
-        JSON.stringify({
-          tasks: tasks,
-          dailyReset: dailyReset.value,
-        })
-      );
     };
 
     const handleTaskCheck = (task: Task) => {
@@ -273,20 +246,16 @@ export default defineComponent({
           : [],
         sync: newTask.sync,
       };
-      tasks.push(t);
+      tasks.value.push(t);
       newTask.text = "";
       newTask.categories = "";
       updateTasks();
     };
 
     const removeTask = (i: number) => {
-      tasks.splice(i, 1);
+      tasks.value.splice(i, 1);
       updateTasks();
     };
-
-    onMounted(() => {
-      updateTasks();
-    });
 
     return {
       addTask,

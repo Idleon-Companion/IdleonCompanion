@@ -1,3 +1,8 @@
+export type AlchemyData = {
+  vials: Record<string, number>;
+  upgrades: Record<Color, number[]>;
+};
+
 export type Color = "Orange" | "Green" | "Purple" | "Yellow";
 
 export type Vial = {
@@ -5,7 +10,7 @@ export type Vial = {
   roll: number;
   material: string;
   base: number;
-  effect?: string;
+  effect: string;
 };
 
 export const Vials: Vial[] = [
@@ -42,14 +47,14 @@ export const Vials: Vial[] = [
     roll: 40,
     material: "Copper_Bar",
     base: 3,
-    effect: "Water Droplet max capacity"
+    effect: "Water Droplet max capacity",
   },
   {
     name: "Dieter Drenk",
     roll: 40,
     material: "Bean_Slices",
     base: 1,
-    effect: "% money from Monsters" ,
+    effect: "% money from Monsters",
   },
   {
     name: "Thumb Pow",
@@ -98,7 +103,7 @@ export const Vials: Vial[] = [
     roll: 83,
     material: "Gold_Ore",
     base: 1,
-    effect:"% Shop sell Price",
+    effect: "% Shop sell Price",
   },
   {
     name: "Ramificoction",
@@ -112,29 +117,28 @@ export const Vials: Vial[] = [
     roll: 87,
     material: "Goldfish",
     base: 1,
-    effect: " chance for a kill to count double"
+    effect: " chance for a kill to count double",
   },
   {
     name: "Fly in my Drink",
     roll: 87,
     material: "Fly",
     base: 3,
-    effect:" base Accuracy",
+    effect: " base Accuracy",
   },
   {
     name: "Slug Slurp",
     roll: 89,
     material: "Hermit_Can",
     base: 2,
-    effect: " Post Office box Points"
-
+    effect: " Post Office box Points",
   },
   {
     name: "Mimicraught",
     roll: 90,
     material: "Megalodon_Tooth",
     base: 1,
-    effect: "% Exp from Monsters"
+    effect: "% Exp from Monsters",
   },
   {
     name: "Tail Time",
