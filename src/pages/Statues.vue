@@ -66,7 +66,7 @@ export default defineComponent({
   name: "Statues",
   setup() {
     const { curCharacter, saveCharacters } = useCharacters();
-    const curStatue = ref("Anvil");
+    const curStatue = ref("Power");
 
     const statues = computed(() => {
       let s = {} as Record<string, number>;
