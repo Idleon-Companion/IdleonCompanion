@@ -59,14 +59,14 @@
 import { computed, defineComponent, ref } from "vue";
 
 import { useCharacters } from "~/composables/Characters";
-import { Statues } from "~/composables/Statues";
+import { StatueName, Statues } from '~/composables/Statues'
 import { Assets } from "~/composables/Utilities";
 
 export default defineComponent({
   name: "Statues",
   setup() {
     const { curCharacter, saveCharacters } = useCharacters();
-    const curStatue = ref("Power");
+    const curStatue = ref<StatueName>("Power");
 
     const statues = computed(() => {
       let s = {} as Record<string, number>;
@@ -91,7 +91,7 @@ export default defineComponent({
       saveCharacters();
     };
 
-    const bonusText = (statue: string) => {
+    const bonusText = (statue: StatueName) => {
       let level = curCharacter.value ? curCharacter.value.statues[statue] : 0;
       let data = Statues[statue];
       let effect = data.effect as string;
@@ -103,7 +103,7 @@ export default defineComponent({
 
     const statueBuffs = computed(() => {
       let a = [];
-      for (const s of Object.keys(Statues)) {
+      for (const s of Object.keys(Statues) as Array<StatueName>) {
         if (curCharacter.value !== null && curCharacter.value.statues[s] > 0) {
           a.push(bonusText(s));
         }
