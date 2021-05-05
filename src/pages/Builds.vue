@@ -63,14 +63,18 @@
           </div>
         </div>
         <div class="card-body border border-secondary rounded-bottom">
-          <p class="card-text">{{ activeBuild.comment_one }}</p>
+          <div class="card-text">
+            <p v-for="line in commentToLines(activeBuild.comment_one)">
+              {{ line }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
     <div v-if="activeBuild.class" class="col-xl-4" style="max-width: 400px">
       <div class="card border-primary mb-2">
         <div class="card-header">Tab 2</div>
-        <div class="card-body talent-container p-3" id="skill_tab_one">
+        <div class="card-body talent-container p-3" id="skill_tab_two">
           <div
             v-for="i in 15"
             :key="i"
@@ -86,14 +90,18 @@
           </div>
         </div>
         <div class="card-body border border-secondary rounded-bottom">
-          <p class="card-text">{{ activeBuild.comment_two }}</p>
+          <div class="card-text">
+            <p v-for="line in commentToLines(activeBuild.comment_two)">
+              {{ line }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
     <div v-if="activeBuild.subclass" class="col-xl-4" style="max-width: 400px">
       <div class="card border-primary mb-2">
         <div class="card-header">Tab 3</div>
-        <div class="card-body talent-container p-3" id="skill_tab_one">
+        <div class="card-body talent-container p-3" id="skill_tab_three">
           <div
             v-for="i in 15"
             :key="i"
@@ -109,7 +117,11 @@
           </div>
         </div>
         <div class="card-body border border-secondary rounded-bottom">
-          <p class="card-text">{{ activeBuild.comment_three }}</p>
+          <div class="card-text">
+            <p v-for="line in commentToLines(activeBuild.comment_three)">
+              {{ line }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -154,12 +166,7 @@ export default defineComponent({
   setup() {
     const builds: Record<string, Build> = buildData;
     const build = ref("");
-    const activeBuild = computed(() => {
-      if (build.value === "") {
-        return null;
-      }
-      return builds[build.value];
-    });
+    const activeBuild = computed(() => build.value === '' ? null : builds[build.value]);
 
     const classes: Record<string, string> = {
       Beginner: "",
@@ -172,15 +179,15 @@ export default defineComponent({
     const buildClass = ref("all");
     const filteredBuilds = computed(() => {
       let filtered: Record<string, Build> = {};
-      if (buildClass.value !== "all") {
-        for (const [name, build] of Object.entries(builds)) {
-          if (buildClass.value === build.class) {
-            filtered[name] = build;
-          }
-        }
-        return filtered;
+      if (buildClass.value === 'all') {
+        return builds
       }
-      return builds;
+      for (const [name, build] of Object.entries(builds)) {
+        if (buildClass.value === build.class) {
+          filtered[name] = build
+        }
+      }
+      return filtered
     });
 
     return {
@@ -190,6 +197,7 @@ export default defineComponent({
       buildClass,
       classes,
       filteredBuilds,
+      commentToLines: (comment: string) => comment.split('\n')
     };
   },
   methods: {
