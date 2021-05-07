@@ -1,10 +1,11 @@
 <template>
   <div class="row">
     <div>
-    <p class="h6 text-light bg-primary p-3 mb-4 rounded">
-      Use this table to calculate how many runs are necessary for the Pinic Quest's King of Food Trophy. Use the slider to select the number of runs to display.
-    </p>
-  </div>
+      <p class="h6 text-light bg-primary p-3 mb-4 rounded">
+        Use this tool to calculate material costs for the Pinic Quest's King of
+        Food Trophy. Use the slider to select the number of runs to display.
+      </p>
+    </div>
     <div class="col-xl-12">
       <fieldset class="px-3">
         <label class="text-light form-label" for="foodRange"
@@ -22,34 +23,20 @@
       </fieldset>
     </div>
   </div>
-  <table class="table table-hover">
-    <thead>
-      <tr class="text-light">
-        <th scope="col" class="col-2"></th>
-        <th scope="col">Item</th>
-        <th scope="col">Amount</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        class="text-light align-middle"
-        v-for="(req, i) in picnicRequirements"
-        :key="i"
+  <div class="d-flex justify-content-center flex-wrap">
+    <div v-for="(req, i) in picnicRequirements" :key="i" class="quest-item">
+      <GameAsset
+        :height="72"
+        :image="Assets.MaterialImage(req.name.replace(/ /g, '_'))"
+        :title="req.name"
       >
-        <td>
-          <GameAsset
-            :height="72"
-            :image="Assets.MaterialImage(req.name.replace(/ /g, '_'))"
-            :title="req.name"
-          />
-        </td>
-        <td>{{ req.name }}</td>
-        <td class="base">
-          {{ req.amount }} x {{ repeat }} = {{ req.amount * repeat }}
-        </td>
-      </tr>
-    </tbody>
-  </table>
+        <template #tooltip>
+          <div v-html="req.name"></div>
+        </template>
+      </GameAsset>
+      <div class="quest-amount">{{ req.amount * repeat }}</div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -128,3 +115,20 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="sass" scoped>
+@import '../styles/base.sass'
+.quest-item
+  border: 1px solid $primary
+  background: darken($primary, 10%)
+  border-radius: 0.25rem
+  display: flex
+  margin: 0.25rem
+  flex-direction: column
+  align-items: center
+  padding: 0.2rem
+.quest-amount
+  font-size: 1.05rem
+  font-weight: 500
+  color: $secondary
+</style>
