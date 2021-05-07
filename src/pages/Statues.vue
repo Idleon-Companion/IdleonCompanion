@@ -9,7 +9,7 @@
             v-for="(statue, i) in Object.keys(statues)"
             :key="i"
             :data-active="curStatue === statue"
-            @click="curStatue = statue"
+            @click="setCurStatue(statue)"
           >
             <img :src="Assets.StatueImage(statue.replace(/ /g, '_'))" />
             <div class="statue-level-badge">
@@ -59,14 +59,14 @@
 import { computed, defineComponent, ref } from "vue";
 
 import { useCharacters } from "~/composables/Characters";
-import { Statues } from "~/composables/Statues";
+import { StatueName, Statues } from "~/composables/Statues";
 import { Assets } from "~/composables/Utilities";
 
 export default defineComponent({
   name: "Statues",
   setup() {
     const { curCharacter, saveCharacters } = useCharacters();
-    const curStatue = ref("Anvil");
+    const curStatue = ref<StatueName>("Power");
 
     const statues = computed(() => {
       let s = {} as Record<string, number>;
@@ -77,6 +77,10 @@ export default defineComponent({
       }
       return s;
     });
+
+    const setCurStatue = (statue: string) => {
+      curStatue.value = statue as StatueName;
+    };
 
     const setStatueLevel = (event: Event) => {
       let level = (event.target as HTMLInputElement).value;
@@ -91,7 +95,7 @@ export default defineComponent({
       saveCharacters();
     };
 
-    const bonusText = (statue: string) => {
+    const bonusText = (statue: StatueName) => {
       let level = curCharacter.value ? curCharacter.value.statues[statue] : 0;
       let data = Statues[statue];
       let effect = data.effect as string;
@@ -103,7 +107,7 @@ export default defineComponent({
 
     const statueBuffs = computed(() => {
       let a = [];
-      for (const s of Object.keys(Statues)) {
+      for (const s of Object.keys(Statues) as Array<StatueName>) {
         if (curCharacter.value !== null && curCharacter.value.statues[s] > 0) {
           a.push(bonusText(s));
         }
@@ -117,6 +121,7 @@ export default defineComponent({
       curCharacter,
       curStatue,
       saveCharacters,
+      setCurStatue,
       setStatueLevel,
       statueBuffs,
       statues,
