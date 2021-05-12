@@ -88,6 +88,15 @@ export const Changelog: ChangelogEntry[] = [
         "Tasks: fix time clock sync issues",
       ],
     },
-    date: "Unreleased",
+    date: "May 5, 2021",
+  },
+  {
+    version: "0.2.1 (Cloud Storage)",
+    changes: {
+      features: [
+        "Accounts: Create an account to save your data to the cloud and sync between multiple devices",
+      ],
+    },
+    date: "???",
   },
 ];

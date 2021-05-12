@@ -22,7 +22,6 @@
             v-model.number="alchemy.upgrades[color][n - 1]"
             type="number"
             :min="0"
-            @change="saveAlchemy"
           />
         </div>
       </div>

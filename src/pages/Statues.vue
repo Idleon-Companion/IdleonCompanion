@@ -65,7 +65,7 @@ import { Assets } from "~/composables/Utilities";
 export default defineComponent({
   name: "Statues",
   setup() {
-    const { curCharacter, saveCharacters } = useCharacters();
+    const { curCharacter } = useCharacters();
     const curStatue = ref<StatueName>("Power");
 
     const statues = computed(() => {
@@ -92,7 +92,6 @@ export default defineComponent({
         n = parseInt(level);
       }
       curCharacter.value.statues[curStatue.value] = n;
-      saveCharacters();
     };
 
     const bonusText = (statue: StatueName) => {
@@ -120,7 +119,6 @@ export default defineComponent({
       bonusText,
       curCharacter,
       curStatue,
-      saveCharacters,
       setCurStatue,
       setStatueLevel,
       statueBuffs,
