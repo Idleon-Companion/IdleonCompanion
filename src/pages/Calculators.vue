@@ -40,6 +40,7 @@ import { defineComponent } from "vue";
 
 import PackMuleCrafter from "~/pages/PackMuleCrafter.vue";
 import PicnicQuest from "~/pages/PicnicQuest.vue";
+import RecipeCalculator from "~/pages/RecipeCalculator.vue";
 import Stamps from "~/pages/Stamps.vue";
 
 export default defineComponent({
@@ -47,6 +48,7 @@ export default defineComponent({
   components: {
     PackMuleCrafter,
     PicnicQuest,
+    RecipeCalculator,
     Stamps,
   },
   setup() {
@@ -54,6 +56,7 @@ export default defineComponent({
       Picnic_Quest: PicnicQuest,
       Stamps: Stamps,
       Pack_Mule_Crafter: PackMuleCrafter,
+      Recipe_Calculator: RecipeCalculator,
     };
     const defaultTab = "Picnic_Quest";
     return {
