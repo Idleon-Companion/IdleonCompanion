@@ -9,7 +9,7 @@
   </div>
   <div class="row px-3 my-3">
     <div class="col-md input-group build-selector p-0">
-      <span class="input-group-text bg-dark text-light">Class</span>
+      <span class="input-group-text">Class</span>
       <select v-model="buildClass" id="buildClass">
         <option value="all" selected>All</option>
         <option v-for="(c, v) in classes" :key="c" :value="c">{{ v }}</option>
@@ -229,9 +229,6 @@ export default defineComponent({
   align-self: flex-end
   select
     width: 80%
-
-.input-group-text
-  border: 1px solid $primary
 
 .talent-container
   display: grid
