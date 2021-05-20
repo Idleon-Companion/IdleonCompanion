@@ -52,6 +52,20 @@ button
     background: lighten($primary, 15%)
     color: darken(white, 10%)
 
+.input-group
+  .input-group-text
+    border: 1px solid $primary
+    background: $dark
+    color: white
+  input
+    border: 1px solid $primary
+    background: darken($primary, 5%)
+    color: white
+    &:focus
+      border: 1px solid $primary
+      background: lighten($primary, 5%)
+      color: white
+
 #calc
   background-color: rgba(28, 30, 34,0.7)
   border-radius: 5px
