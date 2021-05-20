@@ -1,8 +1,12 @@
 <template>
   <div class="row d-flex mt-3 mx-0 justify-content-center">
     <div id="firebase-auth" v-if="user === null"></div>
-    <div v-else id="auth-info" @click="signOut">
-      You are currently logged in! Click to sign out.
+    <div v-else id="auth-info">
+      <div @click="signOut">
+        You are currently logged in! Click to sign out.
+      </div>
+      <button @click="loadCloud">Load Data</button>
+      <button @click="saveCloud">Save to Cloud</button>
     </div>
   </div>
   <div class="row">
@@ -139,6 +143,7 @@
               :title="skill"
             />
             <input
+              v-if="curCharacter !== null"
               :id="'char-skill-' + skill"
               class="char-input skill-input"
               type="number"
@@ -315,13 +320,15 @@ export default defineComponent({
     };
 
     // User authentication
-    const { user } = useAuth();
+    const { user, loadCloud, saveCloud } = useAuth();
     const loadSignInUI = () => {
       // FirebaseUI config.
       const uiConfig = {
         callbacks: {
           signInSuccessWithAuthResult: ({ user: userdata }: any) => {
             user.value = userdata;
+            // TODO: automatically load data on sign in
+            // loadCloud();
             return false;
           },
         },
@@ -354,16 +361,18 @@ export default defineComponent({
       Assets,
       characters,
       charIndex,
+      charChecklist,
       Class,
       curCharacter,
       cycles,
       cycleIndex,
       deleteCharacter,
-      charChecklist,
       handleProgressCheck,
       isEnabled,
+      loadCloud,
       newCharacter,
       numCharacters,
+      saveCloud,
       signOut,
       Subclass,
       Text,

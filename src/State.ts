@@ -75,6 +75,7 @@ export function versionControl() {
 
 // Firebase Initialization
 import firebase from "firebase/app";
+import "firebase/database";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDP9fu1062i82w64K9LgKHFFMDgPtUj6k4",
@@ -89,11 +90,37 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const firebaseApp = firebase.initializeApp(firebaseConfig);
-// export const db = firebaseApp.database();
 
 export const useAuth = () => {
   const auth = firebaseApp.auth();
+  const db = firebaseApp.database();
   const user = ref(auth.currentUser);
 
-  return { auth, user };
+  const state = useState();
+
+  const loadCloud = () => {
+    if (user.value === null) {
+      return null;
+    }
+    return db
+      .ref("/users/" + user.value.uid)
+      .once("value")
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          const data = JSON.parse(snapshot.val());
+          state.value = data;
+          // Ensure cloud data is up to date!
+          versionControl();
+        }
+      });
+  };
+
+  const saveCloud = () => {
+    if (user.value === null) {
+      return null;
+    }
+    return db.ref("/users/" + user.value.uid).set(JSON.stringify(state.value));
+  };
+
+  return { auth, loadCloud, saveCloud, user };
 };
