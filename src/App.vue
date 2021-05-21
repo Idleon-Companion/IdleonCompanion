@@ -20,14 +20,8 @@ export default defineComponent({
   setup() {
     onMounted(versionControl);
     const state = useState();
-    const { characters } = useCharacters();
-    // Load saved state
-    let chars = state.value.chars;
-    for (const c of chars) {
-      let newChar = new Character();
-      Object.assign(newChar, c);
-      characters.value.push(newChar);
-    }
+    const { characters, createCharactersFromData } = useCharacters();
+    createCharactersFromData(state.value.chars);
     // Watch for changes, and update local state
     watchEffect(() => {
       state.value.chars = characters.value;

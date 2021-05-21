@@ -110,6 +110,15 @@ export function useCharacters() {
     return null;
   });
 
+  // Create new character class objects from data (from existing state)
+  const createCharactersFromData = (data: Character[]) => {
+    for (const c of data) {
+      let newChar = new Character();
+      Object.assign(newChar, c);
+      characters.value.push(newChar);
+    }
+  };
+
   // Cycle to next character
   const nextCharacter = () => {
     if (numCharacters.value > 0) {
@@ -127,6 +136,7 @@ export function useCharacters() {
   return {
     characters,
     charIndex,
+    createCharactersFromData,
     curCharacter,
     numCharacters,
     nextCharacter,
