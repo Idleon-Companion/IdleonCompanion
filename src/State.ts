@@ -4,7 +4,7 @@ import { createGlobalState, useStorage } from "@vueuse/core";
 import { ref } from "vue";
 import { AlchemyData } from "~/composables/Alchemy";
 import { Task } from "~/composables/Progress";
-import { Character } from "~/composables/Characters";
+import { Character, useCharacters } from "~/composables/Characters";
 
 const StorageKey = "idleon-companion";
 export const useState = createGlobalState(() =>
@@ -97,6 +97,7 @@ export const useAuth = () => {
   const user = ref(auth.currentUser);
 
   const state = useState();
+  const { createCharactersFromData } = useCharacters();
 
   const loadCloud = () => {
     if (user.value === null) {
@@ -108,9 +109,12 @@ export const useAuth = () => {
       .then((snapshot) => {
         if (snapshot.exists()) {
           const data = JSON.parse(snapshot.val());
+          console.log("Loaded cloud data:", data);
           state.value = data;
           // Ensure cloud data is up to date!
           versionControl();
+          // Load characters as class instances
+          createCharactersFromData(state.value.chars);
         }
       });
   };

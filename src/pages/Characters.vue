@@ -1,7 +1,10 @@
 <template>
   <div class="row d-flex mt-3 mx-0 justify-content-center">
-    <div id="firebase-auth" v-if="user === null"></div>
-    <div v-else id="auth-info">
+    <div
+      id="firebase-auth"
+      :style="user === null ? '' : { display: 'none' }"
+    ></div>
+    <div v-if="user !== null" id="auth-info">
       <div @click="signOut">
         You are currently logged in! Click to sign out.
       </div>
@@ -13,8 +16,8 @@
     <div>
       <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
         In this tab you can create, modify and manage all your characters and
-        account settings. Keep track of individual stats like statues, pouches
-        and inventory slots.
+        load/save data from the cloud (for multi-device sync). Keep track of
+        individual stats like statues, pouches and inventory slots.
         <br />Switch between all of your created characters using the "Switch
         character" menu in the top-right of the page.
       </p>
@@ -321,27 +324,27 @@ export default defineComponent({
 
     // User authentication
     const { user, loadCloud, saveCloud } = useAuth();
-    const loadSignInUI = () => {
-      // FirebaseUI config.
-      const uiConfig = {
-        callbacks: {
-          signInSuccessWithAuthResult: ({ user: userdata }: any) => {
-            user.value = userdata;
-            // TODO: automatically load data on sign in
-            // loadCloud();
-            return false;
-          },
+    // FirebaseUI config.
+    const uiConfig = {
+      callbacks: {
+        signInSuccessWithAuthResult: ({ user: userdata }: any) => {
+          user.value = userdata;
+          // TODO: automatically load data on sign in
+          // loadCloud();
+          return false;
         },
-        signInOptions: [
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-          firebase.auth.GithubAuthProvider.PROVIDER_ID,
-          firebase.auth.EmailAuthProvider.PROVIDER_ID,
-          firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID,
-        ],
-      };
+      },
+      signInOptions: [
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.GithubAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID,
+      ],
+    };
 
-      // Initialize the FirebaseUI Widget using Firebase.
-      const ui = new firebaseui.auth.AuthUI(firebase.auth());
+    // Initialize the FirebaseUI Widget using Firebase.
+    const ui = new firebaseui.auth.AuthUI(firebase.auth());
+    const loadSignInUI = () => {
       // The start method will wait until the DOM is loaded.
       ui.start("#firebase-auth", uiConfig);
     };
@@ -353,6 +356,7 @@ export default defineComponent({
         .signOut()
         .then(() => {
           user.value = null;
+          ui.reset();
           loadSignInUI();
         });
     };
