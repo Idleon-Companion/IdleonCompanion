@@ -69,7 +69,9 @@
                   :width="72"
                   :title="class_"
                   class="char-class-img m-1"
-                  @click="curCharacter !== null && curCharacter.setClass(class_)"
+                  @click="
+                    curCharacter !== null && curCharacter.setClass(class_)
+                  "
                 />
                 <GameAsset
                   v-for="(subclass, i) in Subclass"
@@ -79,7 +81,9 @@
                   :width="72"
                   :title="subclass"
                   class="char-class-img m-1"
-                  @click="curCharacter !== null &&  curCharacter.setClass(subclass)"
+                  @click="
+                    curCharacter !== null && curCharacter.setClass(subclass)
+                  "
                 />
               </div>
               <div class="modal-footer">
@@ -103,7 +107,7 @@
             type="text"
             spellcheck="false"
             placeholder="Name"
-            :maxlength="14"
+            :maxlength="16"
             v-model="curCharacter.name"
             @change="saveCharacters"
           />
@@ -113,7 +117,7 @@
             class="char-input"
             type="number"
             :min="1"
-            v-model="curCharacter.level"
+            v-model.number="curCharacter.level"
             @change="saveCharacters"
           />
         </div>
@@ -130,11 +134,12 @@
               :title="skill"
             />
             <input
+              v-if="curCharacter !== null"
               :id="'char-skill-' + skill"
               class="char-input skill-input"
               type="number"
               :min="0"
-              v-model="curCharacter.skills[skill]"
+              v-model.number="curCharacter.skills[skill]"
               @change="saveCharacters"
             />
           </div>
