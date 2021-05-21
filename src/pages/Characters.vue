@@ -120,6 +120,7 @@
             v-model.number="curCharacter.level"
             @change="saveCharacters"
           />
+          <div class="total-level">Total Level: {{ totalCharLevel }}</div>
         </div>
         <div class="d-flex flex-wrap flex-column ms-2">
           <label>Skills</label>
@@ -186,7 +187,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { computed, defineComponent } from "vue";
 
 import CharacterCard from "~/components/CharacterCard.vue";
 import GameAsset from "~/components/GameAsset.vue";
@@ -234,6 +235,14 @@ export default defineComponent({
       charIndex.value = 0;
       saveCharacters();
     };
+
+    const totalCharLevel = computed(() => {
+      let total = 0;
+      for (const c of characters.value) {
+        total += c.level;
+      }
+      return total;
+    });
 
     const charChecklist = Object.entries(checklistData)
       .filter(([_, value]) => !value.global)
@@ -331,6 +340,7 @@ export default defineComponent({
       saveCharacters,
       Subclass,
       Text,
+      totalCharLevel,
     };
   },
 });
@@ -375,4 +385,9 @@ export default defineComponent({
     object-fit: contain
 .char-class-close
   color: white
+.total-level
+  color: darken(white, 10%)
+  font-weight: 600
+  font-size: 0.9rem
+  margin-top: 0.25rem
 </style>
