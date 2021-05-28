@@ -60,6 +60,7 @@ import Credits from "~/pages/Credits.vue";
 import ProgressTracker from "~/pages/ProgressTracker.vue";
 import Tasks from "~/pages/Tasks.vue";
 import Calculators from "~/pages/Calculators.vue";
+import SweetSpot from "~/pages/SweetSpot.vue";
 
 export default defineComponent({
   name: "Home",
@@ -73,6 +74,7 @@ export default defineComponent({
     ProgressTracker,
     Tasks,
     Calculators,
+    SweetSpot,
   },
   setup() {
     const tabs = {
@@ -82,6 +84,7 @@ export default defineComponent({
       Alchemy: Alchemy,
       Builds: Builds,
       Cards: Cards,
+      Sweet_Spot: SweetSpot,
       Calculators: Calculators,
       Credits: Credits,
     };

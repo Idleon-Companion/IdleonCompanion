@@ -1,0 +1,25 @@
+{
+
+	"Green_Mushroom": {
+		"name": "Green Mushroom",
+		"attack": "1",
+		"health" : "10",
+		"exp" : "2",
+		"accLow" : "1",
+		"accHigh" : "2",
+		"respawnRate" : "35",
+		"numMobs" : "14",
+		"fWeight" : "7"
+	},
+	"Frog": {
+		"name": "Frog",
+		"attack": "5",
+		"health" : "50",
+		"exp" : "7",
+		"accLow" : "1",
+		"accHigh" : "3",
+		"respawnRate" : "40",
+		"numMobs" : "34",
+		"fWeight" : "21"
+	}
+}
