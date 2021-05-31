@@ -64,7 +64,7 @@
         </div>
         <div class="card-body border border-secondary rounded-bottom">
           <div class="card-text">
-            <p v-for="line in commentToLines(activeBuild.comment_one)">
+            <p v-for="(line, n) in commentToLines(activeBuild.comment_one)" :key='n'>
               {{ line }}
             </p>
           </div>
@@ -91,7 +91,7 @@
         </div>
         <div class="card-body border border-secondary rounded-bottom">
           <div class="card-text">
-            <p v-for="line in commentToLines(activeBuild.comment_two)">
+            <p v-for="(line, n) in commentToLines(activeBuild.comment_two)" :key='n'>
               {{ line }}
             </p>
           </div>
@@ -118,7 +118,7 @@
         </div>
         <div class="card-body border border-secondary rounded-bottom">
           <div class="card-text">
-            <p v-for="line in commentToLines(activeBuild.comment_three)">
+            <p v-for="(line, n) in commentToLines(activeBuild.comment_three)" :key='n'>
               {{ line }}
             </p>
           </div>

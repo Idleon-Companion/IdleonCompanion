@@ -91,20 +91,18 @@ export const Changelog: ChangelogEntry[] = [
     date: "May 5, 2021",
   },
   {
-    version: "0.2.1",
+    version: "0.2.1 (Cloud Storage)",
     changes: {
       features: [
+        "Accounts: Create an account to save your data to the cloud and sync between multiple devices",
         "Recipe Calculator: select an Anvil recipe and a quantity, and get a list of materials needed",
       ],
-      changes: [
-        "UI: compact Layout for Picnic Quest calc",
-
-      ],
+      changes: ["UI: compact Layout for Picnic Quest calc"],
       fixes: [
         "Statues rearrenged to display in the same order as they are ingame",
-        "Build info now correctly wrap to a newline"
+        "Build info now correctly wrap to a newline",
       ],
     },
-    date: "May 19, 2021",
+    date: "May 31, 2021",
   },
 ];

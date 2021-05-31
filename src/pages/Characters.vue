@@ -1,9 +1,16 @@
 <template>
+  <div class="row d-flex mt-3 mx-0 justify-content-center">
+    <div id="firebase-auth" v-if="user === null"></div>
+    <div v-else id="auth-info" @click="signOut">
+      You are currently logged in! Click to sign out.
+    </div>
+  </div>
   <div class="row">
     <div>
       <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
-        In this tab you can create, modify and manage all your characters. Keep
-        track of individual stats like statues, pouches and inventory slots.
+        In this tab you can create, modify and manage all your characters and
+        account settings. Keep track of individual stats like statues, pouches
+        and inventory slots.
         <br />Switch between all of your created characters using the "Switch
         character" menu in the top-right of the page.
       </p>
@@ -109,7 +116,6 @@
             placeholder="Name"
             :maxlength="14"
             v-model="curCharacter.name"
-            @change="saveCharacters"
           />
           <label for="char-level">Level</label>
           <input
@@ -118,7 +124,6 @@
             type="number"
             :min="1"
             v-model="curCharacter.level"
-            @change="saveCharacters"
           />
         </div>
         <div class="d-flex flex-wrap flex-column ms-2">
@@ -134,12 +139,12 @@
               :title="skill"
             />
             <input
+              v-if="curCharacter"
               :id="'char-skill-' + skill"
               class="char-input skill-input"
               type="number"
               :min="0"
               v-model="curCharacter.skills[skill]"
-              @change="saveCharacters"
             />
           </div>
         </div>
@@ -185,7 +190,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import firebase from "firebase/app";
+import * as firebaseui from "firebaseui";
+import "firebaseui/dist/firebaseui.css";
+import { defineComponent, onMounted } from "vue";
 
 import CharacterCard from "~/components/CharacterCard.vue";
 import GameAsset from "~/components/GameAsset.vue";
@@ -200,6 +208,7 @@ import { Statues } from "~/composables/Statues";
 import { Assets, Text } from "~/composables/Utilities";
 import checklistData from "~/data/checklist.json";
 import StatuesSection from "~/pages/Statues.vue";
+import { useAuth } from "~/State";
 
 export default defineComponent({
   name: "Characters",
@@ -209,12 +218,8 @@ export default defineComponent({
     StatuesSection,
   },
   setup() {
-    const {
-      characters,
-      charIndex,
-      curCharacter,
-      numCharacters,
-    } = useCharacters();
+    const { characters, charIndex, curCharacter, numCharacters } =
+      useCharacters();
     const newCharacter = () => {
       let char = new Character();
       for (const skill of Skills) {
@@ -309,6 +314,43 @@ export default defineComponent({
         }
       }
     };
+
+    // User authentication
+    const { user } = useAuth();
+    const loadSignInUI = () => {
+      // FirebaseUI config.
+      const uiConfig = {
+        callbacks: {
+          signInSuccessWithAuthResult: ({ user: userdata }: any) => {
+            user.value = userdata;
+            return false;
+          },
+        },
+        signInOptions: [
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.GithubAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+          firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID,
+        ],
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      const ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start("#firebase-auth", uiConfig);
+    };
+    onMounted(loadSignInUI);
+
+    const signOut = () => {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          user.value = null;
+          loadSignInUI();
+        });
+    };
+
     return {
       Assets,
       characters,
@@ -323,8 +365,10 @@ export default defineComponent({
       isEnabled,
       newCharacter,
       numCharacters,
+      signOut,
       Subclass,
       Text,
+      user,
     };
   },
 });
@@ -332,6 +376,17 @@ export default defineComponent({
 
 <style scoped lang="sass">
 @import '../styles/base.sass'
+
+#auth-info
+  background: darken($success, 10%)
+  border-radius: 0.25rem
+  color: white
+  cursor: pointer
+  font-weight: 500
+  padding: 0.75rem
+  transition: 0.3s
+  &:hover
+    background: darken($success, 5%)
 .char-delete-btn
   background: darken($red, 25%)
   color: white
