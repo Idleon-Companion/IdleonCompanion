@@ -1,7 +1,6 @@
-import { computed, ref } from "vue";
-
+import { computed, ref, watch } from "vue";
+import { useState } from "~/State";
 import checklistData from "~/data/checklist.json";
-import { useChecklist } from "~/composables/Checklist";
 
 export enum Class {
   Beginner = "Beginner",
@@ -54,7 +53,6 @@ export class Character {
       if (x === c) {
         this.class = c as Class;
         this.subclass = null;
-        saveCharacters();
         return;
       }
     }
@@ -68,12 +66,11 @@ export class Character {
       [Subclass.Journeyman]: Class.Beginner,
     }[c as Subclass];
     this.subclass = c as Subclass;
-    saveCharacters();
   }
 
   get bagSlots(): number {
     let slots = 16; // Base inventory slots
-    const { checklist } = useChecklist();
+    const { checklist } = useState().value;
     // Character items
     for (const category of ["Inventory Bags"] as const) {
       for (const item of checklistData[category].items) {
@@ -85,7 +82,7 @@ export class Character {
     // Global items
     for (const category of ["Gem Shop Bags"] as const) {
       for (const item of checklistData[category].items) {
-        if (checklist.value[item.name] === true) {
+        if (checklist[item.name] === true) {
           slots += item.bagSlots;
         }
       }
@@ -98,13 +95,8 @@ export class Character {
   }
 }
 
-const characters = ref(Array<Character>());
 const charIndex = ref(0);
-
-// Save data to local storage
-const saveCharacters = () => {
-  localStorage.setItem("chars", JSON.stringify(characters.value));
-};
+const characters = ref(Array<Character>());
 
 export function useCharacters() {
   const numCharacters = computed(() => {
@@ -117,6 +109,16 @@ export function useCharacters() {
     }
     return null;
   });
+
+  // Create new character class objects from data (from existing state)
+  const createCharactersFromData = (data: Character[]) => {
+    characters.value = [];
+    for (const c of data) {
+      let newChar = new Character();
+      Object.assign(newChar, c);
+      characters.value.push(newChar);
+    }
+  };
 
   // Cycle to next character
   const nextCharacter = () => {
@@ -135,10 +137,10 @@ export function useCharacters() {
   return {
     characters,
     charIndex,
+    createCharactersFromData,
     curCharacter,
     numCharacters,
     nextCharacter,
     prevCharacter,
-    saveCharacters,
   };
 }

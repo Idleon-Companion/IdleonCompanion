@@ -1,9 +1,10 @@
 <template>
   <div class="row">
     <div>
-    <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
-      Track your alchemy progress for bubbles and vials, and see costs/bonuses for vials.
-    </p>
+      <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+        Track your alchemy progress for bubbles and vials, and see costs/bonuses
+        for vials.
+      </p>
     </div>
   </div>
   <div class="d-flex flex-column alchemy-wrapper mt-3">
@@ -21,7 +22,6 @@
             v-model.number="alchemy.upgrades[color][n - 1]"
             type="number"
             :min="0"
-            @change="saveAlchemy"
           />
         </div>
       </div>
@@ -62,17 +62,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, inject, reactive } from "vue";
-import { StateManager } from "~/State";
+import { defineComponent, ref } from "vue";
 
 import GameAsset from "~/components/GameAsset.vue";
 import { Assets } from "~/composables/Utilities";
 import { Color, Vial, Vials, VialCost } from "~/composables/Alchemy";
-
-type AlchemyData = {
-  vials: Record<string, number>;
-  upgrades: Record<Color, number[]>;
-};
+import { useState } from "~/State";
 
 export default defineComponent({
   name: "Alchemy",
@@ -80,53 +75,34 @@ export default defineComponent({
     GameAsset,
   },
   setup() {
-    const state = inject("state") as StateManager;
-
     const colors: Color[] = ["Orange", "Green", "Purple", "Yellow"];
     const upgradeCount = 10;
 
-    const alchemy = reactive({
-      upgrades: {},
-      vials: {},
-    } as AlchemyData);
-
+    const state = useState();
+    const alchemy = ref(state.value.alchemy);
     for (const c of colors) {
-      let upgrades = Array<number>();
-      for (let i = 0; i < upgradeCount; i += 1) {
-        upgrades.push(0);
+      for (
+        let i = 0;
+        i < upgradeCount - alchemy.value.upgrades[c].length;
+        i += 1
+      ) {
+        alchemy.value.upgrades[c].push(0);
       }
-      alchemy.upgrades[c as Color] = upgrades;
     }
     for (const v of Vials) {
-      alchemy.vials[v.name || ""] = 0;
-    }
-    // Load from local storage
-    var saved = state.load("alchemy");
-    if (saved !== null) {
-      let data: AlchemyData = JSON.parse(saved);
-      for (const [color, upgrades] of Object.entries(data.upgrades)) {
-        for (let i = 0; i < upgrades.length; i += 1) {
-          alchemy.upgrades[color as Color][i] = upgrades[i];
-        }
-      }
-      for (const [vial, level] of Object.entries(data.vials)) {
-        alchemy.vials[vial] = level;
+      if (!(v.name in alchemy.value.vials)) {
+        alchemy.value.vials[v.name] = 0;
       }
     }
 
     // Input handlers
     const VIAL_TIERS = 10;
     const handleVialClick = (name: string, step: number) => {
-      let tier = (alchemy.vials[name] + step) % VIAL_TIERS;
+      let tier = (alchemy.value.vials[name] + step) % VIAL_TIERS;
       if (tier < 0) {
         tier = VIAL_TIERS - 1;
       }
-      alchemy.vials[name] = tier;
-      saveAlchemy();
-    };
-
-    const saveAlchemy = () => {
-      state.save("alchemy", JSON.stringify(alchemy));
+      alchemy.value.vials[name] = tier;
     };
 
     return {
@@ -134,7 +110,6 @@ export default defineComponent({
       Assets,
       colors,
       handleVialClick,
-      saveAlchemy,
       upgradeCount,
       Vials,
     };

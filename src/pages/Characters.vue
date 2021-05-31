@@ -1,9 +1,25 @@
 <template>
+  <div class="row d-flex mt-3 mx-0 justify-content-center">
+    <div
+      id="firebase-auth"
+      :style="user === null ? '' : { display: 'none' }"
+    ></div>
+    <div v-if="user !== null" id="auth-info">
+      <div class="d-flex justify-content-between">
+        <div>
+          <button @click="loadCloud">Load cloud data</button>
+          <button @click="saveCloud">Save cloud data</button>
+        </div>
+        <button @click="signOut">Sign out</button>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div>
       <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
-        In this tab you can create, modify and manage all your characters. Keep
-        track of individual stats like statues, pouches and inventory slots.
+        In this tab you can create, modify and manage all your characters and
+        load/save data from the cloud (for multi-device sync). Keep track of
+        individual stats like statues, pouches and inventory slots.
         <br />Switch between all of your created characters using the "Switch
         character" menu in the top-right of the page.
       </p>
@@ -109,7 +125,6 @@
             placeholder="Name"
             :maxlength="16"
             v-model="curCharacter.name"
-            @change="saveCharacters"
           />
           <label for="char-level">Level</label>
           <input
@@ -118,7 +133,6 @@
             type="number"
             :min="1"
             v-model.number="curCharacter.level"
-            @change="saveCharacters"
           />
           <div class="total-level">Total Level: {{ totalCharLevel }}</div>
         </div>
@@ -141,7 +155,6 @@
               type="number"
               :min="0"
               v-model.number="curCharacter.skills[skill]"
-              @change="saveCharacters"
             />
           </div>
         </div>
@@ -187,7 +200,11 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from "vue";
+import firebase from "firebase/app";
+import * as firebaseui from "firebaseui";
+import "firebaseui/dist/firebaseui.css";
+import { computed, defineComponent, onMounted } from "vue";
+import { useToast } from "vue-toastification";
 
 import CharacterCard from "~/components/CharacterCard.vue";
 import GameAsset from "~/components/GameAsset.vue";
@@ -202,6 +219,7 @@ import { Statues } from "~/composables/Statues";
 import { Assets, Text } from "~/composables/Utilities";
 import checklistData from "~/data/checklist.json";
 import StatuesSection from "~/pages/Statues.vue";
+import { useAuth } from "~/State";
 
 export default defineComponent({
   name: "Characters",
@@ -211,13 +229,10 @@ export default defineComponent({
     StatuesSection,
   },
   setup() {
-    const {
-      characters,
-      charIndex,
-      curCharacter,
-      numCharacters,
-      saveCharacters,
-    } = useCharacters();
+    const { characters, charIndex, curCharacter, numCharacters } =
+      useCharacters();
+
+    const toast = useToast();
     const newCharacter = () => {
       let char = new Character();
       for (const skill of Skills) {
@@ -228,12 +243,11 @@ export default defineComponent({
       }
       characters.value.push(char);
       charIndex.value = characters.value.length - 1;
-      saveCharacters();
+      toast.info("New character created.");
     };
     const deleteCharacter = () => {
       characters.value.splice(charIndex.value, 1);
       charIndex.value = 0;
-      saveCharacters();
     };
 
     const totalCharLevel = computed(() => {
@@ -320,27 +334,68 @@ export default defineComponent({
             curCharacter.value.items[item] = true;
           }
         }
-        saveCharacters();
       }
     };
+
+    // User authentication
+    const { user, loadCloud, saveCloud } = useAuth();
+    // FirebaseUI config.
+    const uiConfig = {
+      callbacks: {
+        signInSuccessWithAuthResult: ({ user: userdata }: any) => {
+          user.value = userdata;
+          return false;
+        },
+      },
+      signInOptions: [
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.GithubAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID,
+      ],
+    };
+
+    // Initialize the FirebaseUI Widget using Firebase.
+    const ui = new firebaseui.auth.AuthUI(firebase.auth());
+    const loadSignInUI = () => {
+      // The start method will wait until the DOM is loaded.
+      ui.start("#firebase-auth", uiConfig);
+    };
+    onMounted(loadSignInUI);
+
+    const signOut = () => {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          user.value = null;
+          ui.reset();
+          loadSignInUI();
+        });
+      toast.info("You have been signed out.");
+    };
+
     return {
       Assets,
       characters,
       charIndex,
+      charChecklist,
       Class,
       curCharacter,
       cycles,
       cycleIndex,
       deleteCharacter,
-      charChecklist,
       handleProgressCheck,
       isEnabled,
+      loadCloud,
       newCharacter,
       numCharacters,
-      saveCharacters,
+      saveCloud,
+      signOut,
       Subclass,
       Text,
       totalCharLevel,
+      user,
     };
   },
 });
@@ -348,6 +403,18 @@ export default defineComponent({
 
 <style scoped lang="sass">
 @import '../styles/base.sass'
+
+#auth-info
+  background: $primary
+  border-radius: 0.25rem
+  color: white
+  cursor: pointer
+  font-weight: 500
+  padding: 0.5rem
+  transition: 0.3s
+  button
+    border-radius: 3px
+    margin: 0 0.25rem
 .char-delete-btn
   background: darken($red, 25%)
   color: white

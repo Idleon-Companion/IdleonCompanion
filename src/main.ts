@@ -1,25 +1,19 @@
-import { version } from "../package.json";
 import { createApp } from "vue";
 import VueTippy from "vue-tippy";
+import Toast, { PluginOptions } from "vue-toastification";
 import App from "~/App.vue";
 
 import "tippy.js/dist/tippy.css";
+import "vue-toastification/dist/index.css";
 
-import { StateManager } from "./State";
-import { Character, useCharacters } from "./composables/Characters";
-
-const state = new StateManager(version);
-const { characters } = useCharacters();
-let charData = state.load("chars");
-if (charData !== null) {
-  let chars = JSON.parse(charData);
-  for (const c of chars) {
-    let newChar = new Character();
-    Object.assign(newChar, c);
-    characters.value.push(newChar);
-  }
-}
+const toastOptions: PluginOptions = {
+  pauseOnFocusLoss: false,
+  pauseOnHover: false,
+  showCloseButtonOnHover: true,
+  timeout: 2500,
+};
 createApp(App)
+  .component("Toast", Toast)
   .directive("resizable", {
     updated(el) {
       el.addEventListener("input", (e: any) => {
@@ -28,7 +22,6 @@ createApp(App)
       });
     },
   })
-  .provide("state", state)
   .use(VueTippy, {
     directive: "tooltip",
     component: "Tooltip",
@@ -37,4 +30,5 @@ createApp(App)
       offset: [0, 30],
     },
   })
+  .use(Toast, toastOptions)
   .mount("#app");

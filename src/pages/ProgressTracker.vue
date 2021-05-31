@@ -1,9 +1,10 @@
 <template>
   <div class="row">
     <div>
-    <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
-      Track your account progress! Here you can check all of the global collectibles in game. Click on a cards to cycle through rarity levels. 
-    </p>
+      <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+        Track your account progress! Here you can check all of the global
+        collectibles in game. Click on a cards to cycle through rarity levels.
+      </p>
     </div>
   </div>
   <div class="col progress-tracker">
@@ -67,13 +68,13 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, inject, ref } from "vue";
+import { computed, defineComponent, ref } from "vue";
+import checklistData from "~/data/checklist.json";
 
 import GameAsset from "~/components/GameAsset.vue";
 import { Card, CardCategory, Cards } from "~/composables/Cards";
-import { useChecklist } from "~/composables/Checklist";
 import { Assets, ItemGroup, Text } from "~/composables/Utilities";
-import { StateManager } from "~/State";
+import { useState } from "~/State";
 
 export default defineComponent({
   name: "ProgressTracker",
@@ -81,10 +82,6 @@ export default defineComponent({
     GameAsset,
   },
   setup() {
-    const { checklist, checklistData } = useChecklist();
-    const state = inject("state") as StateManager;
-    var saved = JSON.parse(state.load("checklist"));
-
     const globalChecklist = computed(() => {
       // Non-global items are managed on the characters page
       return Object.entries(checklistData)
@@ -95,9 +92,11 @@ export default defineComponent({
         }, {} as Record<string, ItemGroup>);
     });
 
+    const state = useState();
+    const checklist = ref(state.value.checklist);
     for (const data of Object.values(globalChecklist.value)) {
       for (const item of data.items) {
-        if (saved !== null && saved[item.name]) {
+        if (checklist.value[item.name]) {
           checklist.value[item.name] = true;
         } else {
           checklist.value[item.name] = false;
@@ -105,9 +104,8 @@ export default defineComponent({
       }
     }
 
-    const cards = ref({} as Record<string, number>);
+    const cards = ref(state.value.cards);
     const cardData = ref({} as Record<string, Card[]>);
-    saved = JSON.parse(state.load("cards"));
     for (const card of Cards) {
       // Group by category for template
       if (card.category in cardData.value) {
@@ -116,9 +114,7 @@ export default defineComponent({
         cardData.value[card.category] = [card];
       }
       // Load from local state
-      if (saved !== null && saved[card.id]) {
-        cards.value[card.id] = saved[card.id];
-      } else {
+      if (!(card.id in cards.value)) {
         cards.value[card.id] = 0;
       }
     }
@@ -127,11 +123,9 @@ export default defineComponent({
     const CARD_TIERS = 5;
     const handleCardClick = (id: string) => {
       cards.value[id] = (cards.value[id] + 1) % CARD_TIERS;
-      state.save("cards", JSON.stringify(cards.value));
     };
     const handleProgressCheck = (item: string) => {
       checklist.value[item] = !checklist.value[item];
-      state.save("checklist", JSON.stringify(checklist.value));
     };
 
     return {
