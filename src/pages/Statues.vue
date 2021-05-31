@@ -12,7 +12,7 @@
             @click="setCurStatue(statue)"
           >
             <img :src="Assets.StatueImage(statue.replace(/ /g, '_'))" />
-            <div class="statue-level-badge">
+            <div v-if="curCharacter" class="statue-level-badge">
               {{ curCharacter.statues[statue] }}
             </div>
           </div>

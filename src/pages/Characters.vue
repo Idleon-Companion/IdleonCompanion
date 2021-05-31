@@ -132,7 +132,7 @@
             class="char-input"
             type="number"
             :min="1"
-            v-model="curCharacter.level"
+            v-model.number="curCharacter.level"
           />
         </div>
         <div class="d-flex flex-wrap flex-column ms-2">
@@ -153,7 +153,7 @@
               class="char-input skill-input"
               type="number"
               :min="0"
-              v-model="curCharacter.skills[skill]"
+              v-model.number="curCharacter.skills[skill]"
             />
           </div>
         </div>
