@@ -90,10 +90,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const firebaseApp = firebase.initializeApp(firebaseConfig);
-firebaseApp.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
 
 export const useAuth = () => {
   const auth = firebaseApp.auth();
+  auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
   const db = firebaseApp.database();
   const user = ref(auth.currentUser);
 

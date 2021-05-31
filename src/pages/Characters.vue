@@ -194,6 +194,12 @@
       <statues-section />
     </div>
   </div>
+  <Toast
+    v-if="user !== null"
+    id="sign-in-success"
+    title="Success!"
+    text="You have been signed in."
+  />
 </template>
 
 <script lang="ts">
@@ -329,8 +335,6 @@ export default defineComponent({
       callbacks: {
         signInSuccessWithAuthResult: ({ user: userdata }: any) => {
           user.value = userdata;
-          // TODO: automatically load data on sign in
-          // loadCloud();
           return false;
         },
       },
