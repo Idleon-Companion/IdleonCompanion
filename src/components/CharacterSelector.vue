@@ -8,7 +8,7 @@
     </div>
     <div class="dropdown">
       <button
-        class="btn btn-dark dropdown-toggle border-0 rounded-0"
+        class="btn btn-dark dropdown-toggle border-0 rounded-0 w-100"
         id="char-select-menu-btn"
         data-bs-toggle="dropdown"
         aria-expanded="false"
@@ -33,7 +33,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { computed, defineComponent } from "vue";
 
 import CharacterCard from "~/components/CharacterCard.vue";
 import { useCharacters } from "~/composables/Characters";
@@ -44,12 +44,8 @@ export default defineComponent({
     CharacterCard,
   },
   setup() {
-    const {
-      characters,
-      charIndex,
-      curCharacter,
-      numCharacters,
-    } = useCharacters();
+    const { characters, charIndex, curCharacter, numCharacters } =
+      useCharacters();
 
     const updateChar = (i: number) => {
       charIndex.value = i;

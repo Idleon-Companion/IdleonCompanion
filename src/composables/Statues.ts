@@ -1,4 +1,4 @@
-import { Effects } from './Utilities'
+import { Effects } from "./Utilities";
 
 // All statues in the game
 type Statue = {
@@ -7,81 +7,81 @@ type Statue = {
 };
 
 export type StatueName =
-  'Power'
-  | 'Speed'
-  | 'Mining'
-  | 'Feasty'
-  | 'Health'
-  | 'Kachow'
-  | 'Lumberbob'
-  | 'Thicc Skin'
-  | 'Oceanman'
-  | 'Ol Reliable'
-  | 'Exp Book'
-  | 'Anvil'
-  | 'Cauldron'
-  | 'Beholder'
-  | 'Bullseye'
+  | "Power"
+  | "Speed"
+  | "Mining"
+  | "Feasty"
+  | "Health"
+  | "Kachow"
+  | "Lumberbob"
+  | "Thicc Skin"
+  | "Oceanman"
+  | "Ol Reliable"
+  | "Exp Book"
+  | "Anvil"
+  | "Cauldron"
+  | "Beholder"
+  | "Bullseye";
 
 export const Statues: Record<StatueName, Statue> = {
   Power: {
     base: 3,
-    effect: Effects.BaseDamage
+    effect: Effects.BaseDamage,
   },
   Speed: {
     base: 0.1,
-    effect: Effects.MoveSpeed
+    effect: Effects.MoveSpeed,
   },
   Mining: {
     base: 0.3,
-    effect: Effects.MiningPower
+    effect: Effects.MiningBase,
   },
   Feasty: {
     base: 1,
-    effect: Effects.FoodEffect
+    effect: Effects.FoodEffect,
   },
   Health: {
     base: 3,
-    effect: Effects.BaseHP
+    effect: Effects.BaseHP,
   },
   Kachow: {
     base: 0.4,
-    effect: Effects.CritDamage
+    effect: Effects.CritDamage,
   },
   Lumberbob: {
     base: 0.3,
-    effect: Effects.ChoppinPower
+    effect: Effects.ChoppinBase,
   },
-  'Thicc Skin': {
+  "Thicc Skin": {
     base: 1,
-    effect: Effects.BaseDefense
+    effect: Effects.BaseDefense,
   },
   Oceanman: {
     base: 0.3,
-    effect: Effects.FishingPower
+    effect: Effects.FishingBase,
   },
-  'Ol Reliable': {
+  "Ol Reliable": {
     base: 0.3,
-    effect: Effects.CatchingPower
+    effect: Effects.CatchingBase,
   },
-  'Exp Book': {
+  "Exp Book": {
     base: 0.1,
-    effect: Effects.ClassExp
+    effect: Effects.ClassExp,
   },
   Anvil: {
     base: 0.5,
-    effect: Effects.ProductionSpeed
+    effect: Effects.ProductionSpeed,
   },
   Cauldron: {
     base: 0.5,
-    effect: Effects.AlchemyExp
+    effect: Effects.AlchemyExp,
   },
   Beholder: {
     base: 0.2,
-    effect: Effects.CritChance
+    effect: Effects.CritChance,
   },
   Bullseye: {
     base: 0.8,
-    effect: Effects.TotalAccuracy
+    effect: Effects.TotalAccuracy,
   },
-}
+};

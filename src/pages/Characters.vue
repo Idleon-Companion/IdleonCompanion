@@ -69,7 +69,9 @@
                   :width="72"
                   :title="class_"
                   class="char-class-img m-1"
-                  @click="curCharacter !== null && curCharacter.setClass(class_)"
+                  @click="
+                    curCharacter !== null && curCharacter.setClass(class_)
+                  "
                 />
                 <GameAsset
                   v-for="(subclass, i) in Subclass"
@@ -79,7 +81,9 @@
                   :width="72"
                   :title="subclass"
                   class="char-class-img m-1"
-                  @click="curCharacter !== null &&  curCharacter.setClass(subclass)"
+                  @click="
+                    curCharacter !== null && curCharacter.setClass(subclass)
+                  "
                 />
               </div>
               <div class="modal-footer">
@@ -103,7 +107,7 @@
             type="text"
             spellcheck="false"
             placeholder="Name"
-            :maxlength="14"
+            :maxlength="16"
             v-model="curCharacter.name"
             @change="saveCharacters"
           />
@@ -113,9 +117,10 @@
             class="char-input"
             type="number"
             :min="1"
-            v-model="curCharacter.level"
+            v-model.number="curCharacter.level"
             @change="saveCharacters"
           />
+          <div class="total-level">Total Level: {{ totalCharLevel }}</div>
         </div>
         <div class="d-flex flex-wrap flex-column ms-2">
           <label>Skills</label>
@@ -130,11 +135,12 @@
               :title="skill"
             />
             <input
+              v-if="curCharacter !== null"
               :id="'char-skill-' + skill"
               class="char-input skill-input"
               type="number"
               :min="0"
-              v-model="curCharacter.skills[skill]"
+              v-model.number="curCharacter.skills[skill]"
               @change="saveCharacters"
             />
           </div>
@@ -181,7 +187,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { computed, defineComponent } from "vue";
 
 import CharacterCard from "~/components/CharacterCard.vue";
 import GameAsset from "~/components/GameAsset.vue";
@@ -229,6 +235,14 @@ export default defineComponent({
       charIndex.value = 0;
       saveCharacters();
     };
+
+    const totalCharLevel = computed(() => {
+      let total = 0;
+      for (const c of characters.value) {
+        total += c.level;
+      }
+      return total;
+    });
 
     const charChecklist = Object.entries(checklistData)
       .filter(([_, value]) => !value.global)
@@ -326,6 +340,7 @@ export default defineComponent({
       saveCharacters,
       Subclass,
       Text,
+      totalCharLevel,
     };
   },
 });
@@ -370,4 +385,9 @@ export default defineComponent({
     object-fit: contain
 .char-class-close
   color: white
+.total-level
+  color: darken(white, 10%)
+  font-weight: 600
+  font-size: 0.9rem
+  margin-top: 0.25rem
 </style>
