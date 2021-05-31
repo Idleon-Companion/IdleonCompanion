@@ -112,6 +112,7 @@ export function useCharacters() {
 
   // Create new character class objects from data (from existing state)
   const createCharactersFromData = (data: Character[]) => {
+    characters.value = [];
     for (const c of data) {
       let newChar = new Character();
       Object.assign(newChar, c);
