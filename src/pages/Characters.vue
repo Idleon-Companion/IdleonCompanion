@@ -123,7 +123,7 @@
             type="text"
             spellcheck="false"
             placeholder="Name"
-            :maxlength="14"
+            :maxlength="16"
             v-model="curCharacter.name"
           />
           <label for="char-level">Level</label>
@@ -134,6 +134,7 @@
             :min="1"
             v-model.number="curCharacter.level"
           />
+          <div class="total-level">Total Level: {{ totalCharLevel }}</div>
         </div>
         <div class="d-flex flex-wrap flex-column ms-2">
           <label>Skills</label>
@@ -202,7 +203,7 @@
 import firebase from "firebase/app";
 import * as firebaseui from "firebaseui";
 import "firebaseui/dist/firebaseui.css";
-import { defineComponent, onMounted } from "vue";
+import { computed, defineComponent, onMounted } from "vue";
 import { useToast } from "vue-toastification";
 
 import CharacterCard from "~/components/CharacterCard.vue";
@@ -248,6 +249,14 @@ export default defineComponent({
       characters.value.splice(charIndex.value, 1);
       charIndex.value = 0;
     };
+
+    const totalCharLevel = computed(() => {
+      let total = 0;
+      for (const c of characters.value) {
+        total += c.level;
+      }
+      return total;
+    });
 
     const charChecklist = Object.entries(checklistData)
       .filter(([_, value]) => !value.global)
@@ -385,6 +394,7 @@ export default defineComponent({
       signOut,
       Subclass,
       Text,
+      totalCharLevel,
       user,
     };
   },
@@ -442,4 +452,9 @@ export default defineComponent({
     object-fit: contain
 .char-class-close
   color: white
+.total-level
+  color: darken(white, 10%)
+  font-weight: 600
+  font-size: 0.9rem
+  margin-top: 0.25rem
 </style>
