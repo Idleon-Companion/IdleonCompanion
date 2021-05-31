@@ -2,6 +2,7 @@ import checklistData from "./data/checklist.json";
 import { version } from "../package.json";
 import { createGlobalState, useStorage } from "@vueuse/core";
 import { ref } from "vue";
+import { useToast } from "vue-toastification";
 import { AlchemyData } from "~/composables/Alchemy";
 import { Task } from "~/composables/Progress";
 import { Character, useCharacters } from "~/composables/Characters";
@@ -97,6 +98,8 @@ export const useAuth = () => {
   const db = firebaseApp.database();
   const user = ref(auth.currentUser);
 
+  const toast = useToast();
+
   const state = useState();
   const { createCharactersFromData } = useCharacters();
 
@@ -110,12 +113,14 @@ export const useAuth = () => {
       .then((snapshot) => {
         if (snapshot.exists()) {
           const data = JSON.parse(snapshot.val());
-          console.log("Loaded cloud data:", data);
           state.value = data;
           // Ensure cloud data is up to date!
           versionControl();
           // Load characters as class instances
           createCharactersFromData(state.value.chars);
+          toast.success("Cloud data loaded!");
+        } else {
+          toast.error("No data found on the cloud.");
         }
       });
   };
@@ -124,6 +129,7 @@ export const useAuth = () => {
     if (user.value === null) {
       return null;
     }
+    toast.success("Data saved to the cloud.");
     return db.ref("/users/" + user.value.uid).set(JSON.stringify(state.value));
   };
 

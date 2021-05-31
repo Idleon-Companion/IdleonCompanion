@@ -1218,6 +1218,11 @@ vue-tippy@^6.0.0-alpha.28:
   dependencies:
     tippy.js "^6.2.6"
 
+vue-toastification@^2.0.0-rc.1:
+  version "2.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/vue-toastification/-/vue-toastification-2.0.0-rc.1.tgz#6a994c19635a493eec0ee290e84a966e07c709d2"
+  integrity sha512-hjauv/FyesNZdwcr5m1SCyvu1JmlB+Ts5bTptDLDmsYYlj6Oqv8NYakiElpCF+Abwkn9J/AChh6FwkTL1HOb7Q==
+
 vue-tsc@^0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/vue-tsc/-/vue-tsc-0.0.8.tgz#2b2912d0c11e0d7bfd8d4ea89883c5acd722ac39"

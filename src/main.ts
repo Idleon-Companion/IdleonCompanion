@@ -1,10 +1,17 @@
 import { createApp } from "vue";
 import VueTippy from "vue-tippy";
-import Toast from "~/components/Toast.vue";
+import Toast, { PluginOptions } from "vue-toastification";
 import App from "~/App.vue";
 
 import "tippy.js/dist/tippy.css";
+import "vue-toastification/dist/index.css";
 
+const toastOptions: PluginOptions = {
+  pauseOnFocusLoss: false,
+  pauseOnHover: false,
+  showCloseButtonOnHover: true,
+  timeout: 2500,
+};
 createApp(App)
   .component("Toast", Toast)
   .directive("resizable", {
@@ -23,4 +30,5 @@ createApp(App)
       offset: [0, 30],
     },
   })
+  .use(Toast, toastOptions)
   .mount("#app");

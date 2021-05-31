@@ -5,11 +5,13 @@
       :style="user === null ? '' : { display: 'none' }"
     ></div>
     <div v-if="user !== null" id="auth-info">
-      <div @click="signOut">
-        You are currently logged in! Click to sign out.
+      <div class="d-flex justify-content-between">
+        <div>
+          <button @click="loadCloud">Load cloud data</button>
+          <button @click="saveCloud">Save cloud data</button>
+        </div>
+        <button @click="signOut">Sign out</button>
       </div>
-      <button @click="loadCloud">Load Data</button>
-      <button @click="saveCloud">Save to Cloud</button>
     </div>
   </div>
   <div class="row">
@@ -194,12 +196,6 @@
       <statues-section />
     </div>
   </div>
-  <Toast
-    v-if="user !== null"
-    id="sign-in-success"
-    title="Success!"
-    text="You have been signed in."
-  />
 </template>
 
 <script lang="ts">
@@ -207,6 +203,7 @@ import firebase from "firebase/app";
 import * as firebaseui from "firebaseui";
 import "firebaseui/dist/firebaseui.css";
 import { defineComponent, onMounted } from "vue";
+import { useToast } from "vue-toastification";
 
 import CharacterCard from "~/components/CharacterCard.vue";
 import GameAsset from "~/components/GameAsset.vue";
@@ -233,6 +230,8 @@ export default defineComponent({
   setup() {
     const { characters, charIndex, curCharacter, numCharacters } =
       useCharacters();
+
+    const toast = useToast();
     const newCharacter = () => {
       let char = new Character();
       for (const skill of Skills) {
@@ -243,6 +242,7 @@ export default defineComponent({
       }
       characters.value.push(char);
       charIndex.value = characters.value.length - 1;
+      toast.info("New character created.");
     };
     const deleteCharacter = () => {
       characters.value.splice(charIndex.value, 1);
@@ -363,6 +363,7 @@ export default defineComponent({
           ui.reset();
           loadSignInUI();
         });
+      toast.info("You have been signed out.");
     };
 
     return {
@@ -394,15 +395,16 @@ export default defineComponent({
 @import '../styles/base.sass'
 
 #auth-info
-  background: darken($success, 10%)
+  background: $primary
   border-radius: 0.25rem
   color: white
   cursor: pointer
   font-weight: 500
-  padding: 0.75rem
+  padding: 0.5rem
   transition: 0.3s
-  &:hover
-    background: darken($success, 5%)
+  button
+    border-radius: 3px
+    margin: 0 0.25rem
 .char-delete-btn
   background: darken($red, 25%)
   color: white

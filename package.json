@@ -15,7 +15,8 @@
     "firebase": "^8.6.0",
     "firebaseui": "^4.8.0",
     "vue": "^3.0.5",
-    "vue-tippy": "^6.0.0-alpha.28"
+    "vue-tippy": "^6.0.0-alpha.28",
+    "vue-toastification": "^2.0.0-rc.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.37",
