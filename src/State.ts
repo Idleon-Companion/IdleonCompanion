@@ -26,7 +26,7 @@ export const useState = createGlobalState(() =>
       tasks: Array<Task>(),
       dailyReset: "12:00",
     },
-    version: "0.2.0",
+    version: "0.2.1",
   })
 );
 
@@ -105,6 +105,7 @@ export const useAuth = () => {
 
   const loadCloud = () => {
     if (user.value === null) {
+      toast.error("You are not logged in!");
       return null;
     }
     return db
@@ -113,11 +114,13 @@ export const useAuth = () => {
       .then((snapshot) => {
         if (snapshot.exists()) {
           const data = JSON.parse(snapshot.val());
+          console.log("Loading data:", data);
           state.value = data;
           // Ensure cloud data is up to date!
           versionControl();
           // Load characters as class instances
           createCharactersFromData(state.value.chars);
+          console.log("After version controlling:", state.value);
           toast.success("Cloud data loaded!");
         } else {
           toast.error("No data found on the cloud.");
@@ -127,9 +130,11 @@ export const useAuth = () => {
 
   const saveCloud = () => {
     if (user.value === null) {
+      toast.error("You are not logged in!");
       return null;
     }
     toast.success("Data saved to the cloud.");
+    console.log("Saving data:", state.value);
     return db.ref("/users/" + user.value.uid).set(JSON.stringify(state.value));
   };
 

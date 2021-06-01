@@ -1,19 +1,4 @@
 <template>
-  <div class="row d-flex mt-3 mx-0 justify-content-center">
-    <div
-      id="firebase-auth"
-      :style="user === null ? '' : { display: 'none' }"
-    ></div>
-    <div v-if="user !== null" id="auth-info">
-      <div class="d-flex justify-content-between">
-        <div>
-          <button @click="loadCloud">Load cloud data</button>
-          <button @click="saveCloud">Save cloud data</button>
-        </div>
-        <button @click="signOut">Sign out</button>
-      </div>
-    </div>
-  </div>
   <div class="row">
     <div>
       <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
@@ -48,7 +33,7 @@
           </button>
         </div>
       </div>
-      <div class="d-flex align-items-center flex-wrap">
+      <div class="d-flex align-items-center flex-wrap h-100 border">
         <img
           class="char-class-img border border-secondary me-3"
           :src="Assets.CharImage(curCharacter)"
@@ -158,6 +143,9 @@
             />
           </div>
         </div>
+        <div class="ms-auto border">
+          <CloudData />
+        </div>
       </div>
     </div>
     <div class="char-progress">
@@ -200,13 +188,11 @@
 </template>
 
 <script lang="ts">
-import firebase from "firebase/app";
-import * as firebaseui from "firebaseui";
-import "firebaseui/dist/firebaseui.css";
 import { computed, defineComponent, onMounted } from "vue";
 import { useToast } from "vue-toastification";
 
 import CharacterCard from "~/components/CharacterCard.vue";
+import CloudData from "~/components/CloudData.vue";
 import GameAsset from "~/components/GameAsset.vue";
 import {
   Class,
@@ -225,6 +211,7 @@ export default defineComponent({
   name: "Characters",
   components: {
     CharacterCard,
+    CloudData,
     GameAsset,
     StatuesSection,
   },
@@ -250,7 +237,7 @@ export default defineComponent({
       charIndex.value = 0;
     };
 
-    const totalCharLevel = computed(() => {
+    const totalCharLevel = computed<number>(() => {
       let total = 0;
       for (const c of characters.value) {
         total += c.level;
@@ -337,44 +324,6 @@ export default defineComponent({
       }
     };
 
-    // User authentication
-    const { user, loadCloud, saveCloud } = useAuth();
-    // FirebaseUI config.
-    const uiConfig = {
-      callbacks: {
-        signInSuccessWithAuthResult: ({ user: userdata }: any) => {
-          user.value = userdata;
-          return false;
-        },
-      },
-      signInOptions: [
-        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        firebase.auth.GithubAuthProvider.PROVIDER_ID,
-        firebase.auth.EmailAuthProvider.PROVIDER_ID,
-        firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID,
-      ],
-    };
-
-    // Initialize the FirebaseUI Widget using Firebase.
-    const ui = new firebaseui.auth.AuthUI(firebase.auth());
-    const loadSignInUI = () => {
-      // The start method will wait until the DOM is loaded.
-      ui.start("#firebase-auth", uiConfig);
-    };
-    onMounted(loadSignInUI);
-
-    const signOut = () => {
-      firebase
-        .auth()
-        .signOut()
-        .then(() => {
-          user.value = null;
-          ui.reset();
-          loadSignInUI();
-        });
-      toast.info("You have been signed out.");
-    };
-
     return {
       Assets,
       characters,
@@ -387,15 +336,11 @@ export default defineComponent({
       deleteCharacter,
       handleProgressCheck,
       isEnabled,
-      loadCloud,
       newCharacter,
       numCharacters,
-      saveCloud,
-      signOut,
       Subclass,
       Text,
       totalCharLevel,
-      user,
     };
   },
 });
@@ -403,18 +348,6 @@ export default defineComponent({
 
 <style scoped lang="sass">
 @import '../styles/base.sass'
-
-#auth-info
-  background: $primary
-  border-radius: 0.25rem
-  color: white
-  cursor: pointer
-  font-weight: 500
-  padding: 0.5rem
-  transition: 0.3s
-  button
-    border-radius: 3px
-    margin: 0 0.25rem
 .char-delete-btn
   background: darken($red, 25%)
   color: white
