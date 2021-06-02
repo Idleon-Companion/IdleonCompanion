@@ -3,7 +3,8 @@
     Add your characters on the "Character" tab.
   </div>
   <div v-else class="d-flex flex-column bg-dark">
-    <div class="bg-primary p-2 rounded-top">
+    <CloudData v-if="user !== null" />
+    <div class="bg-primary p-2">
       <CharacterCard :char="curCharacter" />
     </div>
     <div class="dropdown">
@@ -33,17 +34,21 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from "vue";
+import { defineComponent } from "vue";
 
 import CharacterCard from "~/components/CharacterCard.vue";
+import CloudData from "~/components/CloudData.vue";
 import { useCharacters } from "~/composables/Characters";
+import { useAuth } from "~/State";
 
 export default defineComponent({
   name: "CharacterSelector",
   components: {
     CharacterCard,
+    CloudData,
   },
   setup() {
+    const { user } = useAuth();
     const { characters, charIndex, curCharacter, numCharacters } =
       useCharacters();
 
@@ -57,6 +62,7 @@ export default defineComponent({
       curCharacter,
       numCharacters,
       updateChar,
+      user,
     };
   },
 });

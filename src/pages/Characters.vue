@@ -33,7 +33,7 @@
           </button>
         </div>
       </div>
-      <div class="d-flex align-items-center flex-wrap h-100 border">
+      <div class="d-flex align-items-center flex-wrap">
         <img
           class="char-class-img border border-secondary me-3"
           :src="Assets.CharImage(curCharacter)"
@@ -143,7 +143,7 @@
             />
           </div>
         </div>
-        <div class="ms-auto border">
+        <div v-if="user === null" class="ms-auto">
           <CloudData />
         </div>
       </div>
@@ -216,6 +216,7 @@ export default defineComponent({
     StatuesSection,
   },
   setup() {
+    const { user } = useAuth();
     const { characters, charIndex, curCharacter, numCharacters } =
       useCharacters();
 
@@ -341,6 +342,7 @@ export default defineComponent({
       Subclass,
       Text,
       totalCharLevel,
+      user,
     };
   },
 });

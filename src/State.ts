@@ -90,13 +90,15 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+type UserState = firebase.User | null;
 const firebaseApp = firebase.initializeApp(firebaseConfig);
+const user = ref(null as UserState);
 
 export const useAuth = () => {
   const auth = firebaseApp.auth();
   auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+  user.value = auth.currentUser;
   const db = firebaseApp.database();
-  const user = ref(auth.currentUser);
 
   const toast = useToast();
 
@@ -114,13 +116,11 @@ export const useAuth = () => {
       .then((snapshot) => {
         if (snapshot.exists()) {
           const data = JSON.parse(snapshot.val());
-          console.log("Loading data:", data);
           state.value = data;
           // Ensure cloud data is up to date!
           versionControl();
           // Load characters as class instances
           createCharactersFromData(state.value.chars);
-          console.log("After version controlling:", state.value);
           toast.success("Cloud data loaded!");
         } else {
           toast.error("No data found on the cloud.");
@@ -134,7 +134,6 @@ export const useAuth = () => {
       return null;
     }
     toast.success("Data saved to the cloud.");
-    console.log("Saving data:", state.value);
     return db.ref("/users/" + user.value.uid).set(JSON.stringify(state.value));
   };
 

@@ -3,10 +3,18 @@
     id="firebase-auth"
     :style="user === null ? '' : { display: 'none' }"
   ></div>
-  <div v-if="user !== null" id="auth-info h-full">
-    <div class="d-flex flex-column">
-      <button @click="loadCloud">Load cloud data</button>
-      <button @click="saveCloud">Save cloud data</button>
+  <div v-if="user !== null" id="auth-info" class="p-1">
+    <div class="d-flex justify-content-between">
+      <div class="d-flex align-items-center">
+        <button @click="loadCloud">
+          <div class="iconify" data-icon="mdi:cloud-download"></div>
+          Load
+        </button>
+        <button @click="saveCloud">
+          <div class="iconify" data-icon="mdi:cloud-upload"></div>
+          Save
+        </button>
+      </div>
       <button @click="signOut">Sign out</button>
     </div>
   </div>
@@ -44,7 +52,9 @@ export default defineComponent({
     };
 
     // Initialize the FirebaseUI Widget using Firebase.
-    const ui = new firebaseui.auth.AuthUI(firebase.auth());
+    const ui =
+      firebaseui.auth.AuthUI.getInstance() ||
+      new firebaseui.auth.AuthUI(firebase.auth());
     const loadSignInUI = () => {
       // The start method will wait until the DOM is loaded.
       ui.start("#firebase-auth", uiConfig);
@@ -66,6 +76,7 @@ export default defineComponent({
     return {
       loadCloud,
       saveCloud,
+      signOut,
       user,
     };
   },
@@ -76,13 +87,10 @@ export default defineComponent({
 @import '../styles/base.sass'
 #auth-info
   background: $primary
-  border-radius: 0.25rem
   color: white
   cursor: pointer
-  font-weight: 500
-  padding: 0.5rem
   transition: 0.3s
   button
-    border-radius: 3px
+    border-radius: 2px
     margin: 0 0.25rem
 </style>
