@@ -26,7 +26,7 @@ export const useState = createGlobalState(() =>
       tasks: Array<Task>(),
       dailyReset: "12:00",
     },
-    version: "0.2.0",
+    version: "0.2.1",
   })
 );
 
@@ -90,13 +90,15 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+type UserState = firebase.User | null;
 const firebaseApp = firebase.initializeApp(firebaseConfig);
+const user = ref(null as UserState);
 
 export const useAuth = () => {
   const auth = firebaseApp.auth();
   auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+  user.value = auth.currentUser;
   const db = firebaseApp.database();
-  const user = ref(auth.currentUser);
 
   const toast = useToast();
 
@@ -105,6 +107,7 @@ export const useAuth = () => {
 
   const loadCloud = () => {
     if (user.value === null) {
+      toast.error("You are not logged in!");
       return null;
     }
     return db
@@ -127,6 +130,7 @@ export const useAuth = () => {
 
   const saveCloud = () => {
     if (user.value === null) {
+      toast.error("You are not logged in!");
       return null;
     }
     toast.success("Data saved to the cloud.");
