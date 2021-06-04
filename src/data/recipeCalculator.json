@@ -1864,7 +1864,7 @@
       },
       {
         "name": "Leather Hide",
-        "quantity": 6000
+        "quantity": 400
       }
     ]
   },
@@ -1947,7 +1947,7 @@
       },
       {
         "name": "Platinum Bar",
-        "quantity": 1000
+        "quantity": 800
       },
       {
         "name": "Pincer Arm",
@@ -1997,11 +1997,11 @@
       },
       {
         "name": "Tropilogs",
-        "quantity": 8000
+        "quantity": 6500
       },
       {
         "name": "Chain Link",
-        "quantity": 6000
+        "quantity": 5000
       }
     ]
   },
@@ -2055,7 +2055,7 @@
       },
       {
         "name": "Platinum Bar",
-        "quantity": 1000
+        "quantity": 800
       }
     ]
   },
@@ -2101,11 +2101,11 @@
       },
       {
         "name": "Fruitfly",
-        "quantity": 8000
+        "quantity": 7000
       },
       {
         "name": "Platinum Ore",
-        "quantity": 6000
+        "quantity": 3000
       }
     ]
   },
@@ -3025,7 +3025,7 @@
       },
       {
         "name": "Leather Hide",
-        "quantity": 12000
+        "quantity": 800
       },
       {
         "name": "Melty Cube",
@@ -3132,7 +3132,7 @@
       },
       {
         "name": "Platinum Bar",
-        "quantity": 2000
+        "quantity": 1600
       },
       {
         "name": "Pincer Arm",
@@ -3194,11 +3194,11 @@
       },
       {
         "name": "Tropilogs",
-        "quantity": 16000
+        "quantity": 13000
       },
       {
         "name": "Chain Link",
-        "quantity": 12000
+        "quantity": 10000
       },
       {
         "name": "Tundra Logs",
@@ -3264,7 +3264,7 @@
       },
       {
         "name": "Platinum Bar",
-        "quantity": 2000
+        "quantity": 1600
       },
       {
         "name": "Dementia Bar",
@@ -3326,11 +3326,11 @@
       },
       {
         "name": "Fruitfly",
-        "quantity": 16000
+        "quantity": 14000
       },
       {
         "name": "Platinum Ore",
-        "quantity": 12000
+        "quantity": 6000
       },
       {
         "name": "Mosquisnow",
@@ -3730,7 +3730,7 @@
       },
       {
         "name": "Leather Hide",
-        "quantity": 36000
+        "quantity": 2400
       },
       {
         "name": "Melty Cube",
@@ -3861,7 +3861,7 @@
       },
       {
         "name": "Platinum Bar",
-        "quantity": 4000
+        "quantity": 3200
       },
       {
         "name": "Pincer Arm",
@@ -3931,11 +3931,11 @@
       },
       {
         "name": "Tropilogs",
-        "quantity": 32000
+        "quantity": 26000
       },
       {
         "name": "Chain Link",
-        "quantity": 24000
+        "quantity": 20000
       },
       {
         "name": "Tundra Logs",
@@ -4009,7 +4009,7 @@
       },
       {
         "name": "Platinum Bar",
-        "quantity": 4000
+        "quantity": 3200
       },
       {
         "name": "Dementia Bar",
@@ -4079,11 +4079,11 @@
       },
       {
         "name": "Fruitfly",
-        "quantity": 32000
+        "quantity": 28000
       },
       {
         "name": "Platinum Ore",
-        "quantity": 24000
+        "quantity": 12000
       },
       {
         "name": "Mosquisnow",
