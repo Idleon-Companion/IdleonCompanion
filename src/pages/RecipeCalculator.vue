@@ -42,6 +42,7 @@
 				/>
 			</div>
 		</div>
+		Version 1.20b
 		<div v-if="tab" class="text-light">
 			<h4>Materials</h4>
 			<div
