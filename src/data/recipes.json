@@ -136,7 +136,7 @@
         ]
       ]
     },
-    "Cramped Mining\nPouch": {
+    "Cramped Mining Pouch": {
       "Materials": [
         [
           0,
@@ -164,7 +164,7 @@
         ]
       ]
     },
-    "Cramped\nChoppin Pouch": {
+    "Cramped Choppin Pouch": {
       "Materials": [
         [
           0,
@@ -216,7 +216,7 @@
         ]
       ]
     },
-    "Cramped Food\nPouch": {
+    "Cramped Food Pouch": {
       "Materials": [
         [
           0,
@@ -240,7 +240,7 @@
         ]
       ]
     },
-    "Cramped Material\nPouch": {
+    "Cramped Material Pouch": {
       "Materials": [
         [
           0,
@@ -486,7 +486,7 @@
         ]
       ]
     },
-    "Small Mining\nPouch": {
+    "Small Mining Pouch": {
       "Materials": [
         [
           0,
@@ -509,7 +509,7 @@
         ]
       ]
     },
-    "Small Choppin\nPouch": {
+    "Small Choppin Pouch": {
       "Materials": [
         [
           0,
@@ -728,7 +728,7 @@
         ],
         [
           0,
-          "Small Mana\nPotion",
+          "Small Mana Potion",
           2
         ]
       ]
@@ -742,7 +742,7 @@
         ],
         [
           0,
-          "Small Life\nPotion",
+          "Small Life Potion",
           3
         ]
       ]
@@ -867,7 +867,7 @@
         ]
       ]
     },
-    "Bleached Designer\nWode Patch Pants": {
+    "Bleached Designer Wode Patch Pants": {
       "Materials": [
         [
           0,
@@ -901,7 +901,7 @@
         ]
       ]
     },
-    "Dirty Coal Miner\nBaggy Soot Pants": {
+    "Dirty Coal Miner Baggy Soot Pants": {
       "Materials": [
         [
           0,
@@ -1149,11 +1149,11 @@
         ]
       ]
     },
-    "Blunderhills NPC\nCompletion Token": {
+    "Blunderhills NPC Completion Token": {
       "Materials": [
         [
           0,
-          "Easy Blunderhills\nNPC Token",
+          "Easy Blunderhills NPC Token",
           1
         ],
         [
@@ -1178,7 +1178,7 @@
         ],
         [
           0,
-          "Med Blunderhills\nNPC Token",
+          "Med Blunderhills NPC Token",
           1
         ],
         [
@@ -1198,12 +1198,12 @@
         ],
         [
           1,
-          "Papua Piggea\nToken",
+          "Papua Piggea Token",
           1
         ],
         [
           0,
-          "Hard Blunderhills\nNPC Token",
+          "Hard Blunderhills NPC Token",
           1
         ],
         [
@@ -1228,7 +1228,7 @@
         ]
       ]
     },
-    "Blunder Skills\nCompletion Token": {
+    "Blunder Skills Completion Token": {
       "Materials": [
         [
           0,
@@ -1262,7 +1262,7 @@
         ]
       ]
     },
-    "Blunderhills Misc\nCompletion Token": {
+    "Blunderhills Misc Completion Token": {
       "Materials": [
         [
           0,
@@ -1296,7 +1296,7 @@
         ]
       ]
     },
-    "Easy Blunderhills\nNPC Token": {
+    "Easy Blunderhills NPC Token": {
       "Materials": [
         [
           0,
@@ -1320,7 +1320,7 @@
         ]
       ]
     },
-    "Med Blunderhills\nNPC Token": {
+    "Med Blunderhills NPC Token": {
       "Materials": [
         [
           0,
@@ -1339,12 +1339,12 @@
         ],
         [
           0,
-          "Papua Piggea\nToken",
+          "Papua Piggea Token",
           1
         ]
       ]
     },
-    "Hard Blunderhills\nNPC Token": {
+    "Hard Blunderhills NPC Token": {
       "Materials": [
         [
           0,
@@ -1464,11 +1464,11 @@
         ]
       ]
     },
-    "Chaotic Amarok\nPendant": {
+    "Chaotic Amarok Pendant": {
       "Materials": [
         [
           0,
-          "Chaotic Amarok\nSlab",
+          "Chaotic Amarok Slab",
           4
         ],
         [
@@ -1497,7 +1497,7 @@
         ]
       ]
     },
-    "Cramped Fish\nPouch": {
+    "Cramped Fish Pouch": {
       "Materials": [
         [
           0,
@@ -1520,7 +1520,7 @@
         ]
       ]
     },
-    "Cramped Bug\nPouch": {
+    "Cramped Bug Pouch": {
       "Materials": [
         [
           0,
@@ -1548,7 +1548,7 @@
         ]
       ]
     },
-    "Small Fish\nPouch": {
+    "Small Fish Pouch": {
       "Materials": [
         [
           0,
@@ -1581,7 +1581,7 @@
         ]
       ]
     },
-    "Small Bug\nPouch": {
+    "Small Bug Pouch": {
       "Materials": [
         [
           0,
@@ -1609,7 +1609,7 @@
         ]
       ]
     },
-    "Small Critter\nPouch": {
+    "Small Critter Pouch": {
       "Materials": [
         [
           0,
@@ -1637,7 +1637,7 @@
         ]
       ]
     },
-    "Small Soul\nPouch": {
+    "Small Soul Pouch": {
       "Materials": [
         [
           0,
@@ -1929,11 +1929,11 @@
         ]
       ]
     },
-    "Average Mining\nPouch": {
+    "Average Mining Pouch": {
       "Materials": [
         [
           0,
-          "Cramped Mining\nPouch",
+          "Cramped Mining Pouch",
           5
         ],
         [
@@ -1943,7 +1943,7 @@
         ],
         [
           0,
-          "Small Mining\nPouch",
+          "Small Mining Pouch",
           3
         ],
         [
@@ -1987,11 +1987,11 @@
         ]
       ]
     },
-    "Average Choppin\nPouch": {
+    "Average Choppin Pouch": {
       "Materials": [
         [
           0,
-          "Cramped\nChoppin Pouch",
+          "Cramped Choppin Pouch",
           5
         ],
         [
@@ -2006,7 +2006,7 @@
         ],
         [
           0,
-          "Small Choppin\nPouch",
+          "Small Choppin Pouch",
           3
         ],
         [
@@ -2055,11 +2055,11 @@
         ]
       ]
     },
-    "Average Fish\nPouch": {
+    "Average Fish Pouch": {
       "Materials": [
         [
           0,
-          "Cramped Fish\nPouch",
+          "Cramped Fish Pouch",
           5
         ],
         [
@@ -2069,7 +2069,7 @@
         ],
         [
           0,
-          "Small Fish\nPouch",
+          "Small Fish Pouch",
           3
         ],
         [
@@ -2123,11 +2123,11 @@
         ]
       ]
     },
-    "Average Bug\nPouch": {
+    "Average Bug Pouch": {
       "Materials": [
         [
           0,
-          "Cramped Bug\nPouch",
+          "Cramped Bug Pouch",
           5
         ],
         [
@@ -2137,7 +2137,7 @@
         ],
         [
           0,
-          "Small Bug\nPouch",
+          "Small Bug Pouch",
           3
         ],
         [
@@ -2195,11 +2195,11 @@
         ]
       ]
     },
-    "Average Food\nPouch": {
+    "Average Food Pouch": {
       "Materials": [
         [
           0,
-          "Cramped Food\nPouch",
+          "Cramped Food Pouch",
           7
         ],
         [
@@ -2239,7 +2239,7 @@
         ],
         [
           1,
-          "Small Mana\nPotion",
+          "Small Mana Potion",
           1200
         ],
         [
@@ -2254,16 +2254,16 @@
         ],
         [
           1,
-          "Small Life\nPotion",
+          "Small Life Potion",
           1800
         ]
       ]
     },
-    "Average Material\nPouch": {
+    "Average Material Pouch": {
       "Materials": [
         [
           0,
-          "Cramped Material\nPouch",
+          "Cramped Material Pouch",
           7
         ],
         [
@@ -2619,7 +2619,7 @@
         ]
       ]
     },
-    "Sizable Mining\nPouch": {
+    "Sizable Mining Pouch": {
       "Materials": [
         [
           0,
@@ -2628,12 +2628,12 @@
         ],
         [
           0,
-          "Average Mining\nPouch",
+          "Average Mining Pouch",
           3
         ],
         [
           1,
-          "Cramped Mining\nPouch",
+          "Cramped Mining Pouch",
           15
         ],
         [
@@ -2643,7 +2643,7 @@
         ],
         [
           1,
-          "Small Mining\nPouch",
+          "Small Mining Pouch",
           9
         ],
         [
@@ -2702,7 +2702,7 @@
         ]
       ]
     },
-    "Sizable Choppin\nPouch": {
+    "Sizable Choppin Pouch": {
       "Materials": [
         [
           0,
@@ -2711,12 +2711,12 @@
         ],
         [
           0,
-          "Average Choppin\nPouch",
+          "Average Choppin Pouch",
           3
         ],
         [
           1,
-          "Cramped\nChoppin Pouch",
+          "Cramped Choppin Pouch",
           15
         ],
         [
@@ -2731,7 +2731,7 @@
         ],
         [
           1,
-          "Small Choppin\nPouch",
+          "Small Choppin Pouch",
           9
         ],
         [
@@ -2795,7 +2795,7 @@
         ]
       ]
     },
-    "Sizable Fish\nPouch": {
+    "Sizable Fish Pouch": {
       "Materials": [
         [
           0,
@@ -2804,12 +2804,12 @@
         ],
         [
           0,
-          "Average Fish\nPouch",
+          "Average Fish Pouch",
           3
         ],
         [
           1,
-          "Cramped Fish\nPouch",
+          "Cramped Fish Pouch",
           15
         ],
         [
@@ -2819,7 +2819,7 @@
         ],
         [
           1,
-          "Small Fish\nPouch",
+          "Small Fish Pouch",
           9
         ],
         [
@@ -2888,7 +2888,7 @@
         ]
       ]
     },
-    "Sizable Bug\nPouch": {
+    "Sizable Bug Pouch": {
       "Materials": [
         [
           0,
@@ -2897,12 +2897,12 @@
         ],
         [
           0,
-          "Average Bug\nPouch",
+          "Average Bug Pouch",
           3
         ],
         [
           1,
-          "Cramped Bug\nPouch",
+          "Cramped Bug Pouch",
           15
         ],
         [
@@ -2912,7 +2912,7 @@
         ],
         [
           1,
-          "Small Bug\nPouch",
+          "Small Bug Pouch",
           9
         ],
         [
@@ -2932,7 +2932,7 @@
         ]
       ]
     },
-    "Sizable Food\nPouch": {
+    "Sizable Food Pouch": {
       "Materials": [
         [
           0,
@@ -2946,12 +2946,12 @@
         ],
         [
           0,
-          "Average Food\nPouch",
+          "Average Food Pouch",
           2
         ],
         [
           1,
-          "Cramped Food\nPouch",
+          "Cramped Food Pouch",
           14
         ],
         [
@@ -2991,7 +2991,7 @@
         ],
         [
           2,
-          "Small Mana\nPotion",
+          "Small Mana Potion",
           2400
         ],
         [
@@ -3006,12 +3006,12 @@
         ],
         [
           2,
-          "Small Life\nPotion",
+          "Small Life Potion",
           3600
         ]
       ]
     },
-    "Sizable Materials\nPouch": {
+    "Sizable Materials Pouch": {
       "Materials": [
         [
           0,
@@ -3025,12 +3025,12 @@
         ],
         [
           0,
-          "Average Material\nPouch",
+          "Average Material Pouch",
           2
         ],
         [
           1,
-          "Cramped Material\nPouch",
+          "Cramped Material Pouch",
           14
         ],
         [
@@ -3615,12 +3615,12 @@
         ],
         [
           0,
-          "Average Strength\nPotion",
+          "Average Strength Potion",
           2
         ]
       ]
     },
-    "Buttered Toasted\nButter": {
+    "Buttered Toasted Butter": {
       "Materials": [
         [
           0,
@@ -3662,7 +3662,7 @@
         ],
         [
           0,
-          "Snakeskinventory\nBag",
+          "Snakeskinventory Bag",
           1
         ],
         [
@@ -3681,12 +3681,12 @@
         ],
         [
           0,
-          "Trimmed Rune\nPlatelegs",
+          "Trimmed Rune Platelegs",
           1
         ],
         [
           0,
-          "Armor Upgrade\nStone C",
+          "Armor Upgrade Stone C",
           2
         ],
         [
@@ -3749,7 +3749,7 @@
         ]
       ]
     },
-    "Efaunts Broken\nAnkles": {
+    "Efaunts Broken Ankles": {
       "Materials": [
         [
           0,
@@ -3926,7 +3926,7 @@
         ]
       ]
     },
-    "Sizable Critter\nPouch": {
+    "Sizable Critter Pouch": {
       "Materials": [
         [
           0,
@@ -3954,7 +3954,7 @@
         ]
       ]
     },
-    "Sizable Soul\nPouch": {
+    "Sizable Soul Pouch": {
       "Materials": [
         [
           0,
@@ -4451,7 +4451,7 @@
         ]
       ]
     },
-    "Big Mining\nPouch": {
+    "Big Mining Pouch": {
       "Materials": [
         [
           0,
@@ -4460,7 +4460,7 @@
         ],
         [
           0,
-          "Sizable Mining\nPouch",
+          "Sizable Mining Pouch",
           2
         ],
         [
@@ -4470,12 +4470,12 @@
         ],
         [
           1,
-          "Average Mining\nPouch",
+          "Average Mining Pouch",
           6
         ],
         [
           2,
-          "Cramped Mining\nPouch",
+          "Cramped Mining Pouch",
           30
         ],
         [
@@ -4485,7 +4485,7 @@
         ],
         [
           2,
-          "Small Mining\nPouch",
+          "Small Mining Pouch",
           18
         ],
         [
@@ -4559,7 +4559,7 @@
         ]
       ]
     },
-    "Big Choppin\nPouch": {
+    "Big Choppin Pouch": {
       "Materials": [
         [
           0,
@@ -4568,7 +4568,7 @@
         ],
         [
           0,
-          "Sizable Choppin\nPouch",
+          "Sizable Choppin Pouch",
           2
         ],
         [
@@ -4578,12 +4578,12 @@
         ],
         [
           1,
-          "Average Choppin\nPouch",
+          "Average Choppin Pouch",
           6
         ],
         [
           2,
-          "Cramped\nChoppin Pouch",
+          "Cramped Choppin Pouch",
           30
         ],
         [
@@ -4598,7 +4598,7 @@
         ],
         [
           2,
-          "Small Choppin\nPouch",
+          "Small Choppin Pouch",
           18
         ],
         [
@@ -4613,7 +4613,7 @@
         ]
       ]
     },
-    "Dementia Rod\nfor Fishing": {
+    "Dementia Rod for Fishing": {
       "Materials": [
         [
           0,
@@ -4677,7 +4677,7 @@
         ]
       ]
     },
-    "Big Fish\nPouch": {
+    "Big Fish Pouch": {
       "Materials": [
         [
           0,
@@ -4691,7 +4691,7 @@
         ],
         [
           0,
-          "Sizable Fish\nPouch",
+          "Sizable Fish Pouch",
           2
         ],
         [
@@ -4701,12 +4701,12 @@
         ],
         [
           1,
-          "Average Fish\nPouch",
+          "Average Fish Pouch",
           6
         ],
         [
           2,
-          "Cramped Fish\nPouch",
+          "Cramped Fish Pouch",
           30
         ],
         [
@@ -4716,7 +4716,7 @@
         ],
         [
           2,
-          "Small Fish\nPouch",
+          "Small Fish Pouch",
           18
         ],
         [
@@ -4800,7 +4800,7 @@
         ]
       ]
     },
-    "Big Bug\nPouch": {
+    "Big Bug Pouch": {
       "Materials": [
         [
           0,
@@ -4809,7 +4809,7 @@
         ],
         [
           0,
-          "Sizable Bug\nPouch",
+          "Sizable Bug Pouch",
           2
         ],
         [
@@ -4819,12 +4819,12 @@
         ],
         [
           1,
-          "Average Bug\nPouch",
+          "Average Bug Pouch",
           6
         ],
         [
           2,
-          "Cramped Bug\nPouch",
+          "Cramped Bug Pouch",
           30
         ],
         [
@@ -4834,7 +4834,7 @@
         ],
         [
           2,
-          "Small Bug\nPouch",
+          "Small Bug Pouch",
           18
         ],
         [
@@ -4883,7 +4883,7 @@
         ]
       ]
     },
-    "Big Critter\nPouch": {
+    "Big Critter Pouch": {
       "Materials": [
         [
           0,
@@ -4892,7 +4892,7 @@
         ],
         [
           0,
-          "Sizable Critter\nPouch",
+          "Sizable Critter Pouch",
           2
         ],
         [
@@ -4936,7 +4936,7 @@
         ]
       ]
     },
-    "Big Soul\nPouch": {
+    "Big Soul Pouch": {
       "Materials": [
         [
           0,
@@ -4945,7 +4945,7 @@
         ],
         [
           0,
-          "Sizable Soul\nPouch",
+          "Sizable Soul Pouch",
           2
         ],
         [
@@ -4969,7 +4969,7 @@
         ]
       ]
     },
-    "Big Food\nPouch": {
+    "Big Food Pouch": {
       "Materials": [
         [
           0,
@@ -4983,12 +4983,12 @@
         ],
         [
           1,
-          "Average Strength\nPotion",
+          "Average Strength Potion",
           3000
         ],
         [
           0,
-          "Buttered Toasted\nButter",
+          "Buttered Toasted Butter",
           1500
         ],
         [
@@ -5008,7 +5008,7 @@
         ],
         [
           0,
-          "Sizable Food\nPouch",
+          "Sizable Food Pouch",
           2
         ],
         [
@@ -5023,12 +5023,12 @@
         ],
         [
           1,
-          "Average Food\nPouch",
+          "Average Food Pouch",
           4
         ],
         [
           2,
-          "Cramped Food\nPouch",
+          "Cramped Food Pouch",
           28
         ],
         [
@@ -5068,7 +5068,7 @@
         ],
         [
           3,
-          "Small Mana\nPotion",
+          "Small Mana Potion",
           4800
         ],
         [
@@ -5083,12 +5083,12 @@
         ],
         [
           3,
-          "Small Life\nPotion",
+          "Small Life Potion",
           7200
         ]
       ]
     },
-    "Big Materials\nPouch": {
+    "Big Materials Pouch": {
       "Materials": [
         [
           0,
@@ -5102,7 +5102,7 @@
         ],
         [
           0,
-          "Sizable Materials\nPouch",
+          "Sizable Materials Pouch",
           2
         ],
         [
@@ -5117,12 +5117,12 @@
         ],
         [
           1,
-          "Average Material\nPouch",
+          "Average Material Pouch",
           4
         ],
         [
           2,
-          "Cramped Material\nPouch",
+          "Cramped Material Pouch",
           28
         ],
         [
@@ -5152,7 +5152,7 @@
         ]
       ]
     },
-    "Void Imperium\nHelmet": {
+    "Void Imperium Helmet": {
       "Materials": [
         [
           0,
@@ -5211,7 +5211,7 @@
         ]
       ]
     },
-    "Void Imperium\nPlatebody": {
+    "Void Imperium Platebody": {
       "Materials": [
         [
           0,
@@ -5270,7 +5270,7 @@
         ]
       ]
     },
-    "Void Imperium\nShardshins": {
+    "Void Imperium Shardshins": {
       "Materials": [
         [
           0,
@@ -5329,7 +5329,7 @@
         ]
       ]
     },
-    "Void Imperium\nKicks": {
+    "Void Imperium Kicks": {
       "Materials": [
         [
           0,
@@ -5422,7 +5422,7 @@
         ],
         [
           0,
-          "Eternal Lord of \nThe Undying Ember",
+          "Eternal Lord of  The Undying Ember",
           5
         ],
         [
@@ -5704,7 +5704,7 @@
         ]
       ]
     },
-    "Large Mining\nPouch": {
+    "Large Mining Pouch": {
       "Materials": [
         [
           0,
@@ -5713,7 +5713,7 @@
         ],
         [
           0,
-          "Big Mining\nPouch",
+          "Big Mining Pouch",
           2
         ],
         [
@@ -5723,7 +5723,7 @@
         ],
         [
           1,
-          "Sizable Mining\nPouch",
+          "Sizable Mining Pouch",
           4
         ],
         [
@@ -5733,12 +5733,12 @@
         ],
         [
           2,
-          "Average Mining\nPouch",
+          "Average Mining Pouch",
           12
         ],
         [
           3,
-          "Cramped Mining\nPouch",
+          "Cramped Mining Pouch",
           60
         ],
         [
@@ -5748,7 +5748,7 @@
         ],
         [
           3,
-          "Small Mining\nPouch",
+          "Small Mining Pouch",
           36
         ],
         [
@@ -5832,7 +5832,7 @@
         ]
       ]
     },
-    "Large Choppin\nPouch": {
+    "Large Choppin Pouch": {
       "Materials": [
         [
           0,
@@ -5841,7 +5841,7 @@
         ],
         [
           0,
-          "Big Choppin\nPouch",
+          "Big Choppin Pouch",
           2
         ],
         [
@@ -5851,7 +5851,7 @@
         ],
         [
           1,
-          "Sizable Choppin\nPouch",
+          "Sizable Choppin Pouch",
           4
         ],
         [
@@ -5861,12 +5861,12 @@
         ],
         [
           2,
-          "Average Choppin\nPouch",
+          "Average Choppin Pouch",
           12
         ],
         [
           3,
-          "Cramped\nChoppin Pouch",
+          "Cramped Choppin Pouch",
           60
         ],
         [
@@ -5881,7 +5881,7 @@
         ],
         [
           3,
-          "Small Choppin\nPouch",
+          "Small Choppin Pouch",
           36
         ],
         [
@@ -5910,7 +5910,7 @@
         ],
         [
           0,
-          "Dementia Rod\nfor Fishing",
+          "Dementia Rod for Fishing",
           2
         ],
         [
@@ -5975,7 +5975,7 @@
         ]
       ]
     },
-    "Large Fish\nPouch": {
+    "Large Fish Pouch": {
       "Materials": [
         [
           0,
@@ -5984,7 +5984,7 @@
         ],
         [
           0,
-          "Big Fish\nPouch",
+          "Big Fish Pouch",
           2
         ],
         [
@@ -5999,7 +5999,7 @@
         ],
         [
           1,
-          "Sizable Fish\nPouch",
+          "Sizable Fish Pouch",
           4
         ],
         [
@@ -6009,12 +6009,12 @@
         ],
         [
           2,
-          "Average Fish\nPouch",
+          "Average Fish Pouch",
           12
         ],
         [
           3,
-          "Cramped Fish\nPouch",
+          "Cramped Fish Pouch",
           60
         ],
         [
@@ -6024,7 +6024,7 @@
         ],
         [
           3,
-          "Small Fish\nPouch",
+          "Small Fish Pouch",
           36
         ],
         [
@@ -6118,7 +6118,7 @@
         ]
       ]
     },
-    "Large Bug\nPouch": {
+    "Large Bug Pouch": {
       "Materials": [
         [
           0,
@@ -6127,7 +6127,7 @@
         ],
         [
           0,
-          "Big Bug\nPouch",
+          "Big Bug Pouch",
           2
         ],
         [
@@ -6137,7 +6137,7 @@
         ],
         [
           1,
-          "Sizable Bug\nPouch",
+          "Sizable Bug Pouch",
           4
         ],
         [
@@ -6147,12 +6147,12 @@
         ],
         [
           2,
-          "Average Bug\nPouch",
+          "Average Bug Pouch",
           12
         ],
         [
           3,
-          "Cramped Bug\nPouch",
+          "Cramped Bug Pouch",
           60
         ],
         [
@@ -6162,7 +6162,7 @@
         ],
         [
           3,
-          "Small Bug\nPouch",
+          "Small Bug Pouch",
           36
         ],
         [
@@ -6186,7 +6186,7 @@
       "Materials": [
         [
           0,
-          "Eternal Lord of \nThe Undying Ember",
+          "Eternal Lord of  The Undying Ember",
           6
         ],
         [
@@ -6221,7 +6221,7 @@
         ]
       ]
     },
-    "Large Critter\nPouch": {
+    "Large Critter Pouch": {
       "Materials": [
         [
           0,
@@ -6230,7 +6230,7 @@
         ],
         [
           0,
-          "Big Critter\nPouch",
+          "Big Critter Pouch",
           2
         ],
         [
@@ -6240,7 +6240,7 @@
         ],
         [
           1,
-          "Sizable Critter\nPouch",
+          "Sizable Critter Pouch",
           4
         ],
         [
@@ -6294,7 +6294,7 @@
         ]
       ]
     },
-    "Large Soul\nPouch": {
+    "Large Soul Pouch": {
       "Materials": [
         [
           0,
@@ -6303,7 +6303,7 @@
         ],
         [
           0,
-          "Big Soul\nPouch",
+          "Big Soul Pouch",
           2
         ],
         [
@@ -6313,7 +6313,7 @@
         ],
         [
           1,
-          "Sizable Soul\nPouch",
+          "Sizable Soul Pouch",
           4
         ],
         [
@@ -6328,7 +6328,7 @@
         ]
       ]
     },
-    "Large Food\nPouch": {
+    "Large Food Pouch": {
       "Materials": [
         [
           0,
@@ -6367,7 +6367,7 @@
         ],
         [
           0,
-          "Big Food\nPouch",
+          "Big Food Pouch",
           1
         ],
         [
@@ -6382,12 +6382,12 @@
         ],
         [
           2,
-          "Average Strength\nPotion",
+          "Average Strength Potion",
           3000
         ],
         [
           1,
-          "Buttered Toasted\nButter",
+          "Buttered Toasted Butter",
           1500
         ],
         [
@@ -6407,7 +6407,7 @@
         ],
         [
           1,
-          "Sizable Food\nPouch",
+          "Sizable Food Pouch",
           2
         ],
         [
@@ -6422,12 +6422,12 @@
         ],
         [
           2,
-          "Average Food\nPouch",
+          "Average Food Pouch",
           4
         ],
         [
           3,
-          "Cramped Food\nPouch",
+          "Cramped Food Pouch",
           28
         ],
         [
@@ -6467,7 +6467,7 @@
         ],
         [
           4,
-          "Small Mana\nPotion",
+          "Small Mana Potion",
           4800
         ],
         [
@@ -6482,12 +6482,12 @@
         ],
         [
           4,
-          "Small Life\nPotion",
+          "Small Life Potion",
           7200
         ]
       ]
     },
-    "Large Materials\nPouch": {
+    "Large Materials Pouch": {
       "Materials": [
         [
           0,
@@ -6501,7 +6501,7 @@
         ],
         [
           0,
-          "Big Materials\nPouch",
+          "Big Materials Pouch",
           2
         ],
         [
@@ -6516,7 +6516,7 @@
         ],
         [
           1,
-          "Sizable Materials\nPouch",
+          "Sizable Materials Pouch",
           4
         ],
         [
@@ -6531,12 +6531,12 @@
         ],
         [
           2,
-          "Average Material\nPouch",
+          "Average Material Pouch",
           8
         ],
         [
           3,
-          "Cramped Material\nPouch",
+          "Cramped Material Pouch",
           56
         ],
         [
@@ -6580,7 +6580,7 @@
         ],
         [
           0,
-          "Eternal Lord of \nThe Undying Ember",
+          "Eternal Lord of  The Undying Ember",
           1
         ],
         [
@@ -6599,7 +6599,7 @@
         ],
         [
           0,
-          "Void Imperium\nHelmet",
+          "Void Imperium Helmet",
           1
         ],
         [
@@ -6673,7 +6673,7 @@
         ],
         [
           0,
-          "Void Imperium\nHelmet",
+          "Void Imperium Helmet",
           1
         ],
         [
@@ -6733,7 +6733,7 @@
         ]
       ]
     },
-    "Conquistador\nPlume": {
+    "Conquistador Plume": {
       "Materials": [
         [
           0,
@@ -6742,7 +6742,7 @@
         ],
         [
           0,
-          "Void Imperium\nHelmet",
+          "Void Imperium Helmet",
           1
         ],
         [
@@ -6802,7 +6802,7 @@
         ]
       ]
     },
-    "Adornment of the\nHigh Priest": {
+    "Adornment of the High Priest": {
       "Materials": [
         [
           0,
@@ -6811,7 +6811,7 @@
         ],
         [
           0,
-          "Void Imperium\nHelmet",
+          "Void Imperium Helmet",
           1
         ],
         [
@@ -6925,7 +6925,7 @@
         ],
         [
           0,
-          "Void Imperium\nPlatebody",
+          "Void Imperium Platebody",
           1
         ],
         [
@@ -6994,7 +6994,7 @@
         ],
         [
           0,
-          "Void Imperium\nPlatebody",
+          "Void Imperium Platebody",
           1
         ],
         [
@@ -7063,7 +7063,7 @@
         ],
         [
           0,
-          "Void Imperium\nPlatebody",
+          "Void Imperium Platebody",
           1
         ],
         [
@@ -7132,7 +7132,7 @@
         ],
         [
           0,
-          "Void Imperium\nPlatebody",
+          "Void Imperium Platebody",
           1
         ],
         [
