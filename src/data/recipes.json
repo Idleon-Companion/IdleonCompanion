@@ -1,0 +1,7238 @@
+{
+  "1": {
+    "Boxing Gloves": {
+      "Materials": [
+        [
+          0,
+          "Crimson String",
+          1
+        ],
+        [
+          0,
+          "Cue Tape",
+          5
+        ]
+      ]
+    },
+    "Wooden Spear": {
+      "Materials": [
+        [
+          0,
+          "Spore Cap",
+          25
+        ],
+        [
+          0,
+          "Copper Bar",
+          10
+        ]
+      ]
+    },
+    "Wooden Bow": {
+      "Materials": [
+        [
+          0,
+          "Spore Cap",
+          25
+        ],
+        [
+          0,
+          "Thread",
+          30
+        ]
+      ]
+    },
+    "Gnarled Wand": {
+      "Materials": [
+        [
+          0,
+          "Spore Cap",
+          25
+        ],
+        [
+          0,
+          "Oak Logs",
+          30
+        ]
+      ]
+    },
+    "Farmer Brim": {
+      "Materials": [
+        [
+          0,
+          "Spore Cap",
+          5
+        ],
+        [
+          0,
+          "Copper Ore",
+          15
+        ]
+      ]
+    },
+    "Orange Tee": {
+      "Materials": [
+        [
+          0,
+          "Spore Cap",
+          10
+        ],
+        [
+          0,
+          "Oak Logs",
+          15
+        ]
+      ]
+    },
+    "Torn Jeans": {
+      "Materials": [
+        [
+          0,
+          "Frog Leg",
+          20
+        ],
+        [
+          0,
+          "Copper Bar",
+          8
+        ],
+        [
+          0,
+          "Thread",
+          15
+        ]
+      ]
+    },
+    "Flip Flops": {
+      "Materials": [
+        [
+          0,
+          "Bean Slices",
+          30
+        ],
+        [
+          0,
+          "Copper Bar",
+          20
+        ],
+        [
+          0,
+          "Grass Leaf",
+          20
+        ]
+      ]
+    },
+    "Copper Pickaxe": {
+      "Materials": [
+        [
+          0,
+          "Copper Bar",
+          13
+        ],
+        [
+          0,
+          "Frog Leg",
+          30
+        ]
+      ]
+    },
+    "Cramped Mining\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Copper Ore",
+          120
+        ]
+      ]
+    },
+    "Copper Chopper": {
+      "Materials": [
+        [
+          0,
+          "Copper Bar",
+          13
+        ],
+        [
+          0,
+          "Oak Logs",
+          30
+        ],
+        [
+          0,
+          "Thread",
+          15
+        ]
+      ]
+    },
+    "Cramped\nChoppin Pouch": {
+      "Materials": [
+        [
+          0,
+          "Oak Logs",
+          150
+        ],
+        [
+          0,
+          "Trusty Nails",
+          30
+        ]
+      ]
+    },
+    "Leather Cap": {
+      "Materials": [
+        [
+          0,
+          "Frog Leg",
+          25
+        ],
+        [
+          0,
+          "Oak Logs",
+          45
+        ],
+        [
+          0,
+          "Thread",
+          13
+        ]
+      ]
+    },
+    "The Stingers": {
+      "Materials": [
+        [
+          0,
+          "Copper Bar",
+          20
+        ],
+        [
+          0,
+          "Oak Logs",
+          75
+        ],
+        [
+          0,
+          "Trusty Nails",
+          20
+        ]
+      ]
+    },
+    "Cramped Food\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Nomwich",
+          75
+        ],
+        [
+          0,
+          "Hot Dog",
+          25
+        ],
+        [
+          0,
+          "Oak Logs",
+          60
+        ],
+        [
+          0,
+          "Copper Bar",
+          15
+        ]
+      ]
+    },
+    "Cramped Material\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Trusty Nails",
+          80
+        ],
+        [
+          0,
+          "Frog Leg",
+          40
+        ],
+        [
+          0,
+          "Bean Slices",
+          30
+        ]
+      ]
+    },
+    "Copper Helmet": {
+      "Materials": [
+        [
+          0,
+          "Copper Bar",
+          30
+        ],
+        [
+          0,
+          "Bean Slices",
+          50
+        ]
+      ]
+    },
+    "Copper Platebody": {
+      "Materials": [
+        [
+          0,
+          "Copper Bar",
+          45
+        ],
+        [
+          0,
+          "Trusty Nails",
+          120
+        ]
+      ]
+    },
+    "Copper Platelegs": {
+      "Materials": [
+        [
+          0,
+          "Copper Bar",
+          60
+        ],
+        [
+          0,
+          "Bleach Logs",
+          150
+        ]
+      ]
+    },
+    "Copper Boots": {
+      "Materials": [
+        [
+          0,
+          "Copper Bar",
+          125
+        ]
+      ]
+    },
+    "Militia Helm": {
+      "Materials": [
+        [
+          0,
+          "Iron Bar",
+          25
+        ],
+        [
+          0,
+          "Copper Ore",
+          150
+        ],
+        [
+          0,
+          "Copper Helmet",
+          2
+        ],
+        [
+          1,
+          "Copper Bar",
+          60
+        ],
+        [
+          1,
+          "Bean Slices",
+          100
+        ]
+      ]
+    },
+    "Thief Hood": {
+      "Materials": [
+        [
+          0,
+          "Iron Bar",
+          25
+        ],
+        [
+          0,
+          "Thread",
+          150
+        ],
+        [
+          0,
+          "Copper Helmet",
+          2
+        ],
+        [
+          1,
+          "Copper Bar",
+          60
+        ],
+        [
+          1,
+          "Bean Slices",
+          100
+        ]
+      ]
+    },
+    "Top Hat": {
+      "Materials": [
+        [
+          0,
+          "Iron Bar",
+          25
+        ],
+        [
+          0,
+          "Oak Logs",
+          200
+        ],
+        [
+          0,
+          "Copper Helmet",
+          2
+        ],
+        [
+          1,
+          "Copper Bar",
+          60
+        ],
+        [
+          1,
+          "Bean Slices",
+          100
+        ]
+      ]
+    },
+    "Party Hat": {
+      "Materials": [
+        [
+          0,
+          "Iron Bar",
+          200
+        ],
+        [
+          0,
+          "Copper Helmet",
+          4
+        ],
+        [
+          1,
+          "Copper Bar",
+          120
+        ],
+        [
+          1,
+          "Bean Slices",
+          200
+        ]
+      ]
+    },
+    "Steel Axe": {
+      "Materials": [
+        [
+          0,
+          "Slime Sludge",
+          125
+        ],
+        [
+          0,
+          "Boring Brick",
+          125
+        ]
+      ]
+    },
+    "Birch Longbow": {
+      "Materials": [
+        [
+          0,
+          "Slime Sludge",
+          125
+        ],
+        [
+          0,
+          "Bleach Logs",
+          250
+        ]
+      ]
+    },
+    "Quarterstaff": {
+      "Materials": [
+        [
+          0,
+          "Slime Sludge",
+          125
+        ],
+        [
+          0,
+          "Copper Bar",
+          100
+        ]
+      ]
+    },
+    "Copper Band": {
+      "Materials": [
+        [
+          0,
+          "Copper Bar",
+          300
+        ]
+      ]
+    },
+    "Iron Pickaxe": {
+      "Materials": [
+        [
+          0,
+          "Iron Bar",
+          100
+        ],
+        [
+          0,
+          "Carrot Cube",
+          200
+        ]
+      ]
+    },
+    "Small Mining\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Iron Ore",
+          700
+        ]
+      ]
+    },
+    "Iron Hatchet": {
+      "Materials": [
+        [
+          0,
+          "Jungle Logs",
+          250
+        ],
+        [
+          0,
+          "Boring Brick",
+          125
+        ]
+      ]
+    },
+    "Small Choppin\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Bleach Logs",
+          800
+        ]
+      ]
+    },
+    "Iron Helmet": {
+      "Materials": [
+        [
+          0,
+          "Iron Bar",
+          125
+        ],
+        [
+          0,
+          "Goblin Ear",
+          300
+        ]
+      ]
+    },
+    "Iron Platebody": {
+      "Materials": [
+        [
+          0,
+          "Iron Bar",
+          150
+        ],
+        [
+          0,
+          "Jungle Logs",
+          600
+        ]
+      ]
+    },
+    "Iron Platelegs": {
+      "Materials": [
+        [
+          0,
+          "Iron Bar",
+          170
+        ],
+        [
+          0,
+          "Boring Brick",
+          225
+        ]
+      ]
+    },
+    "Anvil Tab 2": {
+      "Materials": [
+        [
+          0,
+          "Iron Bar",
+          250
+        ],
+        [
+          0,
+          "Chain Link",
+          200
+        ],
+        [
+          0,
+          "Forest Fibres",
+          400
+        ],
+        [
+          0,
+          "Bullfrog Horn",
+          250
+        ]
+      ]
+    },
+    "Blue Tee": {
+      "Materials": [
+        [
+          0,
+          "Spore Cap",
+          25
+        ],
+        [
+          0,
+          "Oak Logs",
+          50
+        ],
+        [
+          0,
+          "Orange Tee",
+          2
+        ],
+        [
+          1,
+          "Spore Cap",
+          20
+        ],
+        [
+          1,
+          "Oak Logs",
+          30
+        ]
+      ]
+    },
+    "Sleek Shank": {
+      "Materials": [
+        [
+          0,
+          "Thread",
+          300
+        ],
+        [
+          0,
+          "Wooden Spear",
+          3
+        ],
+        [
+          1,
+          "Spore Cap",
+          75
+        ],
+        [
+          1,
+          "Copper Bar",
+          30
+        ],
+        [
+          0,
+          "Wooden Bow",
+          3
+        ],
+        [
+          1,
+          "Spore Cap",
+          75
+        ],
+        [
+          1,
+          "Thread",
+          90
+        ],
+        [
+          0,
+          "Gnarled Wand",
+          3
+        ],
+        [
+          1,
+          "Spore Cap",
+          75
+        ],
+        [
+          1,
+          "Oak Logs",
+          90
+        ]
+      ]
+    },
+    "Iron Boots": {
+      "Materials": [
+        [
+          0,
+          "Trusty Nails",
+          500
+        ],
+        [
+          0,
+          "Iron Bar",
+          125
+        ],
+        [
+          0,
+          "Copper Boots",
+          2
+        ],
+        [
+          1,
+          "Copper Bar",
+          250
+        ]
+      ]
+    },
+    "Steel Band": {
+      "Materials": [
+        [
+          0,
+          "Iron Bar",
+          600
+        ]
+      ]
+    },
+    "Purple Tupacband": {
+      "Materials": [
+        [
+          0,
+          "Bleach Logs",
+          100
+        ],
+        [
+          0,
+          "Iron Ore",
+          50
+        ],
+        [
+          0,
+          "Crude Oil",
+          60
+        ]
+      ]
+    },
+    "Icing Ironbite": {
+      "Materials": [
+        [
+          0,
+          "Iron Ore",
+          5
+        ],
+        [
+          0,
+          "Small Mana\nPotion",
+          2
+        ]
+      ]
+    },
+    "Saucy Logfries": {
+      "Materials": [
+        [
+          0,
+          "Jungle Logs",
+          6
+        ],
+        [
+          0,
+          "Small Life\nPotion",
+          3
+        ]
+      ]
+    },
+    "Goo Galoshes": {
+      "Materials": [
+        [
+          0,
+          "Slime Sludge",
+          600
+        ],
+        [
+          0,
+          "Jungle Logs",
+          1000
+        ],
+        [
+          0,
+          "Copper Boots",
+          2
+        ],
+        [
+          1,
+          "Copper Bar",
+          250
+        ]
+      ]
+    },
+    "Fur Shirt": {
+      "Materials": [
+        [
+          0,
+          "Goblin Ear",
+          500
+        ],
+        [
+          0,
+          "Iron Bar",
+          500
+        ]
+      ]
+    },
+    "Hide Shirt": {
+      "Materials": [
+        [
+          0,
+          "Bleach Logs",
+          325
+        ],
+        [
+          0,
+          "Copper Platebody",
+          2
+        ],
+        [
+          1,
+          "Copper Bar",
+          90
+        ],
+        [
+          1,
+          "Trusty Nails",
+          240
+        ],
+        [
+          0,
+          "Steel Axe",
+          1
+        ],
+        [
+          1,
+          "Slime Sludge",
+          125
+        ],
+        [
+          1,
+          "Boring Brick",
+          125
+        ]
+      ]
+    },
+    "Eco Friendly Oil": {
+      "Materials": [
+        [
+          0,
+          "Crude Oil",
+          1
+        ],
+        [
+          0,
+          "Grass Leaf",
+          1
+        ]
+      ]
+    },
+    "Dooble Goopi": {
+      "Materials": [
+        [
+          0,
+          "Slime Sludge",
+          1000
+        ],
+        [
+          0,
+          "Copper Band",
+          1
+        ],
+        [
+          1,
+          "Copper Bar",
+          300
+        ],
+        [
+          0,
+          "Steel Band",
+          1
+        ],
+        [
+          1,
+          "Iron Bar",
+          600
+        ]
+      ]
+    },
+    "Bleached Designer\nWode Patch Pants": {
+      "Materials": [
+        [
+          0,
+          "Torn Jeans",
+          10
+        ],
+        [
+          1,
+          "Frog Leg",
+          200
+        ],
+        [
+          1,
+          "Copper Bar",
+          80
+        ],
+        [
+          1,
+          "Thread",
+          150
+        ],
+        [
+          0,
+          "Plank",
+          275
+        ],
+        [
+          0,
+          "Bleach Logs",
+          700
+        ]
+      ]
+    },
+    "Dirty Coal Miner\nBaggy Soot Pants": {
+      "Materials": [
+        [
+          0,
+          "Torn Jeans",
+          8
+        ],
+        [
+          1,
+          "Frog Leg",
+          160
+        ],
+        [
+          1,
+          "Copper Bar",
+          64
+        ],
+        [
+          1,
+          "Thread",
+          120
+        ],
+        [
+          0,
+          "Iron Ore",
+          200
+        ]
+      ]
+    },
+    "Peanut": {
+      "Materials": [
+        [
+          0,
+          "Hot Dog",
+          2
+        ],
+        [
+          0,
+          "Copper Ore",
+          1
+        ],
+        [
+          0,
+          "Bleach Logs",
+          1
+        ]
+      ]
+    },
+    "Golden Peanut": {
+      "Materials": [
+        [
+          0,
+          "Not Yet",
+          1
+        ],
+        [
+          0,
+          "Copper Ore",
+          1
+        ]
+      ]
+    },
+    "Blunderbag": {
+      "Materials": [
+        [
+          0,
+          "Spore Tee",
+          2
+        ],
+        [
+          0,
+          "Dank Paypay Chest",
+          1
+        ],
+        [
+          0,
+          "Spore Cap",
+          169
+        ]
+      ]
+    },
+    "Purple Tee": {
+      "Materials": [
+        [
+          0,
+          "Red Spore Cap",
+          40
+        ],
+        [
+          0,
+          "Bleach Logs",
+          100
+        ],
+        [
+          0,
+          "Orange Tee",
+          3
+        ],
+        [
+          1,
+          "Spore Cap",
+          30
+        ],
+        [
+          1,
+          "Oak Logs",
+          45
+        ]
+      ]
+    },
+    "Green Tee": {
+      "Materials": [
+        [
+          0,
+          "Thread",
+          150
+        ],
+        [
+          0,
+          "Spore Tee",
+          2
+        ],
+        [
+          0,
+          "Orange Tee",
+          3
+        ],
+        [
+          1,
+          "Spore Cap",
+          30
+        ],
+        [
+          1,
+          "Oak Logs",
+          45
+        ]
+      ]
+    },
+    "Black Tee": {
+      "Materials": [
+        [
+          0,
+          "Orange Tee",
+          5
+        ],
+        [
+          1,
+          "Spore Cap",
+          50
+        ],
+        [
+          1,
+          "Oak Logs",
+          75
+        ],
+        [
+          0,
+          "Blue Tee",
+          3
+        ],
+        [
+          1,
+          "Spore Cap",
+          75
+        ],
+        [
+          1,
+          "Oak Logs",
+          150
+        ],
+        [
+          1,
+          "Orange Tee",
+          6
+        ],
+        [
+          2,
+          "Spore Cap",
+          60
+        ],
+        [
+          2,
+          "Oak Logs",
+          90
+        ],
+        [
+          0,
+          "Purple Tee",
+          3
+        ],
+        [
+          1,
+          "Red Spore Cap",
+          120
+        ],
+        [
+          1,
+          "Bleach Logs",
+          300
+        ],
+        [
+          1,
+          "Orange Tee",
+          9
+        ],
+        [
+          2,
+          "Spore Cap",
+          90
+        ],
+        [
+          2,
+          "Oak Logs",
+          135
+        ],
+        [
+          0,
+          "Green Tee",
+          3
+        ],
+        [
+          1,
+          "Thread",
+          450
+        ],
+        [
+          1,
+          "Spore Tee",
+          6
+        ],
+        [
+          1,
+          "Orange Tee",
+          9
+        ],
+        [
+          2,
+          "Spore Cap",
+          90
+        ],
+        [
+          2,
+          "Oak Logs",
+          135
+        ]
+      ]
+    },
+    "Blunderhills NPC\nCompletion Token": {
+      "Materials": [
+        [
+          0,
+          "Easy Blunderhills\nNPC Token",
+          1
+        ],
+        [
+          1,
+          "Woodsman Token",
+          1
+        ],
+        [
+          1,
+          "Glumlee Token",
+          1
+        ],
+        [
+          1,
+          "Stiltzcho Token",
+          1
+        ],
+        [
+          1,
+          "Funguy Token",
+          1
+        ],
+        [
+          0,
+          "Med Blunderhills\nNPC Token",
+          1
+        ],
+        [
+          1,
+          "Krunk Token",
+          1
+        ],
+        [
+          1,
+          "Tiki Chief Token",
+          1
+        ],
+        [
+          1,
+          "Dog Bone Token",
+          1
+        ],
+        [
+          1,
+          "Papua Piggea\nToken",
+          1
+        ],
+        [
+          0,
+          "Hard Blunderhills\nNPC Token",
+          1
+        ],
+        [
+          1,
+          "Picnic Token",
+          1
+        ],
+        [
+          1,
+          "TP Pete Token",
+          1
+        ],
+        [
+          1,
+          "Sproutinald Token",
+          1
+        ],
+        [
+          1,
+          "Dazey Token",
+          1
+        ]
+      ]
+    },
+    "Blunder Skills\nCompletion Token": {
+      "Materials": [
+        [
+          0,
+          "Platinum Bar",
+          1000
+        ],
+        [
+          0,
+          "Veiny Logs",
+          2000
+        ],
+        [
+          0,
+          "Amarok Helmet",
+          1
+        ],
+        [
+          1,
+          "Amarok Slab",
+          20
+        ],
+        [
+          1,
+          "Forest Fibres",
+          2500
+        ],
+        [
+          1,
+          "Woodular Circle",
+          8
+        ]
+      ]
+    },
+    "Blunderhills Misc\nCompletion Token": {
+      "Materials": [
+        [
+          0,
+          "Golden Peanut",
+          30
+        ],
+        [
+          1,
+          "Not Yet",
+          30
+        ],
+        [
+          1,
+          "Copper Ore",
+          30
+        ],
+        [
+          0,
+          "Golden Plop",
+          12
+        ],
+        [
+          0,
+          "Bolt Cutters",
+          1
+        ],
+        [
+          0,
+          "Carrot Launcher",
+          2
+        ]
+      ]
+    },
+    "Easy Blunderhills\nNPC Token": {
+      "Materials": [
+        [
+          0,
+          "Woodsman Token",
+          1
+        ],
+        [
+          0,
+          "Glumlee Token",
+          1
+        ],
+        [
+          0,
+          "Stiltzcho Token",
+          1
+        ],
+        [
+          0,
+          "Funguy Token",
+          1
+        ]
+      ]
+    },
+    "Med Blunderhills\nNPC Token": {
+      "Materials": [
+        [
+          0,
+          "Krunk Token",
+          1
+        ],
+        [
+          0,
+          "Tiki Chief Token",
+          1
+        ],
+        [
+          0,
+          "Dog Bone Token",
+          1
+        ],
+        [
+          0,
+          "Papua Piggea\nToken",
+          1
+        ]
+      ]
+    },
+    "Hard Blunderhills\nNPC Token": {
+      "Materials": [
+        [
+          0,
+          "Picnic Token",
+          1
+        ],
+        [
+          0,
+          "TP Pete Token",
+          1
+        ],
+        [
+          0,
+          "Sproutinald Token",
+          1
+        ],
+        [
+          0,
+          "Dazey Token",
+          1
+        ]
+      ]
+    },
+    "Amarok Helmet": {
+      "Materials": [
+        [
+          0,
+          "Amarok Slab",
+          20
+        ],
+        [
+          0,
+          "Forest Fibres",
+          2500
+        ],
+        [
+          0,
+          "Woodular Circle",
+          8
+        ]
+      ]
+    },
+    "Amarok Bodyplate": {
+      "Materials": [
+        [
+          0,
+          "Amarok Slab",
+          10
+        ],
+        [
+          0,
+          "Iron Bar",
+          400
+        ],
+        [
+          0,
+          "Corn Kernels",
+          900
+        ]
+      ]
+    },
+    "Amarok Hinds": {
+      "Materials": [
+        [
+          0,
+          "Amarok Slab",
+          6
+        ],
+        [
+          0,
+          "Chain Link",
+          400
+        ],
+        [
+          0,
+          "Bullfrog Horn",
+          700
+        ]
+      ]
+    },
+    "Amarok Paws": {
+      "Materials": [
+        [
+          0,
+          "Amarok Slab",
+          5
+        ],
+        [
+          0,
+          "Grass Leaf",
+          125
+        ],
+        [
+          0,
+          "Iron Boots",
+          1
+        ],
+        [
+          1,
+          "Trusty Nails",
+          500
+        ],
+        [
+          1,
+          "Iron Bar",
+          125
+        ],
+        [
+          1,
+          "Copper Boots",
+          2
+        ],
+        [
+          2,
+          "Copper Bar",
+          250
+        ]
+      ]
+    },
+    "Chaotic Amarok\nPendant": {
+      "Materials": [
+        [
+          0,
+          "Chaotic Amarok\nSlab",
+          4
+        ],
+        [
+          0,
+          "Amarok Slab",
+          10
+        ],
+        [
+          0,
+          "Distilled Water",
+          25
+        ]
+      ]
+    },
+    "Copper Fish Rod": {
+      "Materials": [
+        [
+          0,
+          "Copper Bar",
+          200
+        ],
+        [
+          0,
+          "Goldfish",
+          400
+        ]
+      ]
+    },
+    "Cramped Fish\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Goldfish",
+          180
+        ]
+      ]
+    },
+    "Copper Netted Net": {
+      "Materials": [
+        [
+          0,
+          "Jungle Logs",
+          500
+        ],
+        [
+          0,
+          "Fly",
+          400
+        ]
+      ]
+    },
+    "Cramped Bug\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Fly",
+          180
+        ]
+      ]
+    },
+    "Iron Fishing Rod": {
+      "Materials": [
+        [
+          0,
+          "Iron Bar",
+          300
+        ],
+        [
+          0,
+          "Hermit Can",
+          850
+        ],
+        [
+          0,
+          "Distilled Water",
+          3
+        ]
+      ]
+    },
+    "Small Fish\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Hermit Can",
+          425
+        ],
+        [
+          0,
+          "Distilled Water",
+          2
+        ]
+      ]
+    },
+    "Reinforced Net": {
+      "Materials": [
+        [
+          0,
+          "Forest Fibres",
+          800
+        ],
+        [
+          0,
+          "Butterfly",
+          850
+        ],
+        [
+          0,
+          "Distilled Water",
+          3
+        ]
+      ]
+    },
+    "Small Bug\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Butterfly",
+          425
+        ],
+        [
+          0,
+          "Distilled Water",
+          2
+        ]
+      ]
+    },
+    "Silkskin Traps": {
+      "Materials": [
+        [
+          0,
+          "Poison Froge",
+          1
+        ],
+        [
+          0,
+          "Redox Salts",
+          5
+        ]
+      ]
+    },
+    "Small Critter\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Froge",
+          200
+        ],
+        [
+          0,
+          "Redox Salts",
+          3
+        ]
+      ]
+    },
+    "Ceramic Skull": {
+      "Materials": [
+        [
+          0,
+          "Forest Soul",
+          250
+        ],
+        [
+          0,
+          "Redox Salts",
+          5
+        ]
+      ]
+    },
+    "Small Soul\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Forest Soul",
+          200
+        ],
+        [
+          0,
+          "Redox Salts",
+          3
+        ]
+      ]
+    }
+  },
+  "2": {
+    "Gold Helmet": {
+      "Materials": [
+        [
+          0,
+          "Fly",
+          2000
+        ],
+        [
+          0,
+          "Copper Helmet",
+          4
+        ],
+        [
+          1,
+          "Copper Bar",
+          120
+        ],
+        [
+          1,
+          "Bean Slices",
+          200
+        ],
+        [
+          0,
+          "Gold Bar",
+          250
+        ]
+      ]
+    },
+    "Gold Platebody": {
+      "Materials": [
+        [
+          0,
+          "Pocket Sand",
+          1500
+        ],
+        [
+          0,
+          "Copper Platebody",
+          5
+        ],
+        [
+          1,
+          "Copper Bar",
+          225
+        ],
+        [
+          1,
+          "Trusty Nails",
+          600
+        ],
+        [
+          0,
+          "Gold Bar",
+          350
+        ]
+      ]
+    },
+    "Gold Platelegs": {
+      "Materials": [
+        [
+          0,
+          "Goldfish",
+          500
+        ],
+        [
+          0,
+          "Copper Platelegs",
+          6
+        ],
+        [
+          1,
+          "Copper Bar",
+          360
+        ],
+        [
+          1,
+          "Bleach Logs",
+          900
+        ],
+        [
+          0,
+          "Gold Bar",
+          475
+        ]
+      ]
+    },
+    "Gold Boots": {
+      "Materials": [
+        [
+          0,
+          "Gold Bar",
+          600
+        ],
+        [
+          0,
+          "Iron Boots",
+          2
+        ],
+        [
+          1,
+          "Trusty Nails",
+          1000
+        ],
+        [
+          1,
+          "Iron Bar",
+          250
+        ],
+        [
+          1,
+          "Copper Boots",
+          4
+        ],
+        [
+          2,
+          "Copper Bar",
+          500
+        ],
+        [
+          0,
+          "Distilled Water",
+          4
+        ]
+      ]
+    },
+    "Bandage Wraps": {
+      "Materials": [
+        [
+          0,
+          "Cue Tape",
+          5000
+        ],
+        [
+          0,
+          "The Stingers",
+          5
+        ],
+        [
+          1,
+          "Copper Bar",
+          100
+        ],
+        [
+          1,
+          "Oak Logs",
+          375
+        ],
+        [
+          1,
+          "Trusty Nails",
+          100
+        ],
+        [
+          0,
+          "Potty Rolls",
+          2000
+        ]
+      ]
+    },
+    "Royal Bayonet": {
+      "Materials": [
+        [
+          0,
+          "Forest Fibres",
+          1250
+        ],
+        [
+          0,
+          "Steel Axe",
+          3
+        ],
+        [
+          1,
+          "Slime Sludge",
+          375
+        ],
+        [
+          1,
+          "Boring Brick",
+          375
+        ],
+        [
+          0,
+          "Distilled Water",
+          8
+        ]
+      ]
+    },
+    "Spiked Menace": {
+      "Materials": [
+        [
+          0,
+          "Gold Bar",
+          250
+        ],
+        [
+          0,
+          "Birch Longbow",
+          3
+        ],
+        [
+          1,
+          "Slime Sludge",
+          375
+        ],
+        [
+          1,
+          "Bleach Logs",
+          750
+        ],
+        [
+          0,
+          "Distilled Water",
+          8
+        ]
+      ]
+    },
+    "Starlight": {
+      "Materials": [
+        [
+          0,
+          "Chain Link",
+          1000
+        ],
+        [
+          0,
+          "Quarterstaff",
+          3
+        ],
+        [
+          1,
+          "Slime Sludge",
+          375
+        ],
+        [
+          1,
+          "Copper Bar",
+          300
+        ],
+        [
+          0,
+          "Distilled Water",
+          8
+        ]
+      ]
+    },
+    "Gold Pickaxe": {
+      "Materials": [
+        [
+          0,
+          "Megalodon Tooth",
+          2500
+        ],
+        [
+          0,
+          "Gold Bar",
+          800
+        ],
+        [
+          0,
+          "Iron Pickaxe",
+          3
+        ],
+        [
+          1,
+          "Iron Bar",
+          300
+        ],
+        [
+          1,
+          "Carrot Cube",
+          600
+        ]
+      ]
+    },
+    "Average Mining\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Cramped Mining\nPouch",
+          5
+        ],
+        [
+          1,
+          "Copper Ore",
+          600
+        ],
+        [
+          0,
+          "Small Mining\nPouch",
+          3
+        ],
+        [
+          1,
+          "Iron Ore",
+          2100
+        ],
+        [
+          0,
+          "Gold Ore",
+          1400
+        ]
+      ]
+    },
+    "Golden Axe": {
+      "Materials": [
+        [
+          0,
+          "Golden Dubloon",
+          5
+        ],
+        [
+          0,
+          "Crabby Cakey",
+          2000
+        ],
+        [
+          0,
+          "Iron Hatchet",
+          3
+        ],
+        [
+          1,
+          "Jungle Logs",
+          750
+        ],
+        [
+          1,
+          "Boring Brick",
+          375
+        ]
+      ]
+    },
+    "Average Choppin\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Cramped\nChoppin Pouch",
+          5
+        ],
+        [
+          1,
+          "Oak Logs",
+          750
+        ],
+        [
+          1,
+          "Trusty Nails",
+          150
+        ],
+        [
+          0,
+          "Small Choppin\nPouch",
+          3
+        ],
+        [
+          1,
+          "Bleach Logs",
+          2400
+        ],
+        [
+          0,
+          "Forest Fibres",
+          1800
+        ]
+      ]
+    },
+    "Gold Fishing Rod": {
+      "Materials": [
+        [
+          0,
+          "Hermit Can",
+          2500
+        ],
+        [
+          0,
+          "Leather Hide",
+          1000
+        ],
+        [
+          0,
+          "Iron Fishing Rod",
+          3
+        ],
+        [
+          1,
+          "Iron Bar",
+          900
+        ],
+        [
+          1,
+          "Hermit Can",
+          2550
+        ],
+        [
+          1,
+          "Distilled Water",
+          9
+        ]
+      ]
+    },
+    "Average Fish\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Cramped Fish\nPouch",
+          5
+        ],
+        [
+          1,
+          "Goldfish",
+          900
+        ],
+        [
+          0,
+          "Small Fish\nPouch",
+          3
+        ],
+        [
+          1,
+          "Hermit Can",
+          1275
+        ],
+        [
+          1,
+          "Distilled Water",
+          6
+        ],
+        [
+          0,
+          "Hermit Can",
+          1500
+        ]
+      ]
+    },
+    "Gilded Net": {
+      "Materials": [
+        [
+          0,
+          "Golden Dubloon",
+          5
+        ],
+        [
+          0,
+          "Butterfly",
+          2500
+        ],
+        [
+          0,
+          "Reinforced Net",
+          3
+        ],
+        [
+          1,
+          "Forest Fibres",
+          2400
+        ],
+        [
+          1,
+          "Butterfly",
+          2550
+        ],
+        [
+          1,
+          "Distilled Water",
+          9
+        ]
+      ]
+    },
+    "Average Bug\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Cramped Bug\nPouch",
+          5
+        ],
+        [
+          1,
+          "Fly",
+          900
+        ],
+        [
+          0,
+          "Small Bug\nPouch",
+          3
+        ],
+        [
+          1,
+          "Butterfly",
+          1275
+        ],
+        [
+          1,
+          "Distilled Water",
+          6
+        ],
+        [
+          0,
+          "Butterfly",
+          1600
+        ]
+      ]
+    },
+    "Defenders Dignity": {
+      "Materials": [
+        [
+          0,
+          "Goldfish",
+          16000
+        ],
+        [
+          0,
+          "Golden Plop",
+          17
+        ],
+        [
+          0,
+          "Distilled Water",
+          15
+        ]
+      ]
+    },
+    "Strung Bludgeon": {
+      "Materials": [
+        [
+          0,
+          "Bullfrog Horn",
+          9000
+        ],
+        [
+          0,
+          "Glass Shard",
+          10
+        ],
+        [
+          0,
+          "Distilled Water",
+          20
+        ]
+      ]
+    },
+    "Average Food\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Cramped Food\nPouch",
+          7
+        ],
+        [
+          1,
+          "Nomwich",
+          525
+        ],
+        [
+          1,
+          "Hot Dog",
+          175
+        ],
+        [
+          1,
+          "Oak Logs",
+          420
+        ],
+        [
+          1,
+          "Copper Bar",
+          105
+        ],
+        [
+          0,
+          "Meat Pie",
+          250
+        ],
+        [
+          0,
+          "Icing Ironbite",
+          600
+        ],
+        [
+          1,
+          "Iron Ore",
+          3000
+        ],
+        [
+          1,
+          "Small Mana\nPotion",
+          1200
+        ],
+        [
+          0,
+          "Saucy Logfries",
+          600
+        ],
+        [
+          1,
+          "Jungle Logs",
+          3600
+        ],
+        [
+          1,
+          "Small Life\nPotion",
+          1800
+        ]
+      ]
+    },
+    "Average Material\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Cramped Material\nPouch",
+          7
+        ],
+        [
+          1,
+          "Trusty Nails",
+          560
+        ],
+        [
+          1,
+          "Frog Leg",
+          280
+        ],
+        [
+          1,
+          "Bean Slices",
+          210
+        ],
+        [
+          0,
+          "Glass Shard",
+          1
+        ],
+        [
+          0,
+          "Chain Link",
+          1250
+        ]
+      ]
+    },
+    "Platinum Helmet": {
+      "Materials": [
+        [
+          0,
+          "Jellyfish",
+          4000
+        ],
+        [
+          0,
+          "Iron Helmet",
+          4
+        ],
+        [
+          1,
+          "Iron Bar",
+          500
+        ],
+        [
+          1,
+          "Goblin Ear",
+          1200
+        ],
+        [
+          0,
+          "Platinum Bar",
+          750
+        ]
+      ]
+    },
+    "Platinum Platbody": {
+      "Materials": [
+        [
+          0,
+          "Potato Remains",
+          5000
+        ],
+        [
+          0,
+          "Iron Platebody",
+          5
+        ],
+        [
+          1,
+          "Iron Bar",
+          750
+        ],
+        [
+          1,
+          "Jungle Logs",
+          3000
+        ],
+        [
+          0,
+          "Platinum Bar",
+          1000
+        ]
+      ]
+    },
+    "Platinum Shins": {
+      "Materials": [
+        [
+          0,
+          "Sentient Cereal",
+          500
+        ],
+        [
+          0,
+          "Iron Platelegs",
+          6
+        ],
+        [
+          1,
+          "Iron Bar",
+          1020
+        ],
+        [
+          1,
+          "Boring Brick",
+          1350
+        ],
+        [
+          0,
+          "Platinum Bar",
+          1250
+        ]
+      ]
+    },
+    "Platinum Boots": {
+      "Materials": [
+        [
+          0,
+          "Tropilogs",
+          8000
+        ],
+        [
+          0,
+          "Jellyfish",
+          8000
+        ],
+        [
+          0,
+          "Gold Boots",
+          3
+        ],
+        [
+          1,
+          "Gold Bar",
+          1800
+        ],
+        [
+          1,
+          "Iron Boots",
+          6
+        ],
+        [
+          2,
+          "Trusty Nails",
+          3000
+        ],
+        [
+          2,
+          "Iron Bar",
+          750
+        ],
+        [
+          2,
+          "Copper Boots",
+          12
+        ],
+        [
+          3,
+          "Copper Bar",
+          1500
+        ],
+        [
+          1,
+          "Distilled Water",
+          12
+        ]
+      ]
+    },
+    "Bullet": {
+      "Materials": [
+        [
+          0,
+          "Not Yet",
+          6
+        ]
+      ]
+    },
+    "Enforced Slasher": {
+      "Materials": [
+        [
+          0,
+          "Nuget Cake",
+          3
+        ],
+        [
+          0,
+          "Leather Hide",
+          6000
+        ],
+        [
+          0,
+          "Royal Bayonet",
+          2
+        ],
+        [
+          1,
+          "Forest Fibres",
+          2500
+        ],
+        [
+          1,
+          "Steel Axe",
+          6
+        ],
+        [
+          2,
+          "Slime Sludge",
+          750
+        ],
+        [
+          2,
+          "Boring Brick",
+          750
+        ],
+        [
+          1,
+          "Distilled Water",
+          16
+        ]
+      ]
+    },
+    "Pharoah Bow": {
+      "Materials": [
+        [
+          0,
+          "Woodular Circle",
+          3
+        ],
+        [
+          0,
+          "Bloach",
+          3200
+        ],
+        [
+          0,
+          "Spiked Menace",
+          2
+        ],
+        [
+          1,
+          "Gold Bar",
+          500
+        ],
+        [
+          1,
+          "Birch Longbow",
+          6
+        ],
+        [
+          2,
+          "Slime Sludge",
+          750
+        ],
+        [
+          2,
+          "Bleach Logs",
+          1500
+        ],
+        [
+          1,
+          "Distilled Water",
+          16
+        ]
+      ]
+    },
+    "Crows Nest": {
+      "Materials": [
+        [
+          0,
+          "Golden Plop",
+          3
+        ],
+        [
+          0,
+          "Fruitfly",
+          4000
+        ],
+        [
+          0,
+          "Starlight",
+          2
+        ],
+        [
+          1,
+          "Chain Link",
+          2000
+        ],
+        [
+          1,
+          "Quarterstaff",
+          6
+        ],
+        [
+          2,
+          "Slime Sludge",
+          750
+        ],
+        [
+          2,
+          "Copper Bar",
+          600
+        ],
+        [
+          1,
+          "Distilled Water",
+          16
+        ]
+      ]
+    },
+    "Platinum Pickaxe": {
+      "Materials": [
+        [
+          0,
+          "Platinum Bar",
+          1000
+        ],
+        [
+          0,
+          "Pincer Arm",
+          10500
+        ],
+        [
+          0,
+          "Gold Pickaxe",
+          2
+        ],
+        [
+          1,
+          "Megalodon Tooth",
+          5000
+        ],
+        [
+          1,
+          "Gold Bar",
+          1600
+        ],
+        [
+          1,
+          "Iron Pickaxe",
+          6
+        ],
+        [
+          2,
+          "Iron Bar",
+          600
+        ],
+        [
+          2,
+          "Carrot Cube",
+          1200
+        ]
+      ]
+    },
+    "Sizable Mining\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Platinum Ore",
+          6750
+        ],
+        [
+          0,
+          "Average Mining\nPouch",
+          3
+        ],
+        [
+          1,
+          "Cramped Mining\nPouch",
+          15
+        ],
+        [
+          2,
+          "Copper Ore",
+          1800
+        ],
+        [
+          1,
+          "Small Mining\nPouch",
+          9
+        ],
+        [
+          2,
+          "Iron Ore",
+          6300
+        ],
+        [
+          1,
+          "Gold Ore",
+          4200
+        ]
+      ]
+    },
+    "Plat Hatchet": {
+      "Materials": [
+        [
+          0,
+          "Tropilogs",
+          8000
+        ],
+        [
+          0,
+          "Chain Link",
+          6000
+        ],
+        [
+          0,
+          "Golden Axe",
+          2
+        ],
+        [
+          1,
+          "Golden Dubloon",
+          10
+        ],
+        [
+          1,
+          "Crabby Cakey",
+          4000
+        ],
+        [
+          1,
+          "Iron Hatchet",
+          6
+        ],
+        [
+          2,
+          "Jungle Logs",
+          1500
+        ],
+        [
+          2,
+          "Boring Brick",
+          750
+        ]
+      ]
+    },
+    "Sizable Choppin\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Tropilogs",
+          6750
+        ],
+        [
+          0,
+          "Average Choppin\nPouch",
+          3
+        ],
+        [
+          1,
+          "Cramped\nChoppin Pouch",
+          15
+        ],
+        [
+          2,
+          "Oak Logs",
+          2250
+        ],
+        [
+          2,
+          "Trusty Nails",
+          450
+        ],
+        [
+          1,
+          "Small Choppin\nPouch",
+          9
+        ],
+        [
+          2,
+          "Bleach Logs",
+          7200
+        ],
+        [
+          1,
+          "Forest Fibres",
+          5400
+        ]
+      ]
+    },
+    "Plat Fishing Rod": {
+      "Materials": [
+        [
+          0,
+          "Bloach",
+          7000
+        ],
+        [
+          0,
+          "Platinum Bar",
+          1000
+        ],
+        [
+          0,
+          "Gold Fishing Rod",
+          2
+        ],
+        [
+          1,
+          "Hermit Can",
+          5000
+        ],
+        [
+          1,
+          "Leather Hide",
+          2000
+        ],
+        [
+          1,
+          "Iron Fishing Rod",
+          6
+        ],
+        [
+          2,
+          "Iron Bar",
+          1800
+        ],
+        [
+          2,
+          "Hermit Can",
+          5100
+        ],
+        [
+          2,
+          "Distilled Water",
+          18
+        ]
+      ]
+    },
+    "Sizable Fish\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Bloach",
+          6750
+        ],
+        [
+          0,
+          "Average Fish\nPouch",
+          3
+        ],
+        [
+          1,
+          "Cramped Fish\nPouch",
+          15
+        ],
+        [
+          2,
+          "Goldfish",
+          2700
+        ],
+        [
+          1,
+          "Small Fish\nPouch",
+          9
+        ],
+        [
+          2,
+          "Hermit Can",
+          3825
+        ],
+        [
+          2,
+          "Distilled Water",
+          18
+        ],
+        [
+          1,
+          "Hermit Can",
+          4500
+        ]
+      ]
+    },
+    "Platinet": {
+      "Materials": [
+        [
+          0,
+          "Fruitfly",
+          8000
+        ],
+        [
+          0,
+          "Platinum Ore",
+          6000
+        ],
+        [
+          0,
+          "Gilded Net",
+          2
+        ],
+        [
+          1,
+          "Golden Dubloon",
+          10
+        ],
+        [
+          1,
+          "Butterfly",
+          5000
+        ],
+        [
+          1,
+          "Reinforced Net",
+          6
+        ],
+        [
+          2,
+          "Forest Fibres",
+          4800
+        ],
+        [
+          2,
+          "Butterfly",
+          5100
+        ],
+        [
+          2,
+          "Distilled Water",
+          18
+        ]
+      ]
+    },
+    "Sizable Bug\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Fruitfly",
+          6750
+        ],
+        [
+          0,
+          "Average Bug\nPouch",
+          3
+        ],
+        [
+          1,
+          "Cramped Bug\nPouch",
+          15
+        ],
+        [
+          2,
+          "Fly",
+          2700
+        ],
+        [
+          1,
+          "Small Bug\nPouch",
+          9
+        ],
+        [
+          2,
+          "Butterfly",
+          3825
+        ],
+        [
+          2,
+          "Distilled Water",
+          18
+        ],
+        [
+          1,
+          "Butterfly",
+          4800
+        ]
+      ]
+    },
+    "Sizable Food\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Golden Meat Pie",
+          9
+        ],
+        [
+          0,
+          "Nuget Cake",
+          6
+        ],
+        [
+          0,
+          "Average Food\nPouch",
+          2
+        ],
+        [
+          1,
+          "Cramped Food\nPouch",
+          14
+        ],
+        [
+          2,
+          "Nomwich",
+          1050
+        ],
+        [
+          2,
+          "Hot Dog",
+          350
+        ],
+        [
+          2,
+          "Oak Logs",
+          840
+        ],
+        [
+          2,
+          "Copper Bar",
+          210
+        ],
+        [
+          1,
+          "Meat Pie",
+          500
+        ],
+        [
+          1,
+          "Icing Ironbite",
+          1200
+        ],
+        [
+          2,
+          "Iron Ore",
+          6000
+        ],
+        [
+          2,
+          "Small Mana\nPotion",
+          2400
+        ],
+        [
+          1,
+          "Saucy Logfries",
+          1200
+        ],
+        [
+          2,
+          "Jungle Logs",
+          7200
+        ],
+        [
+          2,
+          "Small Life\nPotion",
+          3600
+        ]
+      ]
+    },
+    "Sizable Materials\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Golden Plop",
+          5
+        ],
+        [
+          0,
+          "Woodular Circle",
+          5
+        ],
+        [
+          0,
+          "Average Material\nPouch",
+          2
+        ],
+        [
+          1,
+          "Cramped Material\nPouch",
+          14
+        ],
+        [
+          2,
+          "Trusty Nails",
+          1120
+        ],
+        [
+          2,
+          "Frog Leg",
+          560
+        ],
+        [
+          2,
+          "Bean Slices",
+          420
+        ],
+        [
+          1,
+          "Glass Shard",
+          2
+        ],
+        [
+          1,
+          "Chain Link",
+          2500
+        ]
+      ]
+    },
+    "Anvil Tab 3": {
+      "Materials": [
+        [
+          0,
+          "Platinum Bar",
+          2000
+        ],
+        [
+          0,
+          "Bloach",
+          2000
+        ],
+        [
+          0,
+          "Fruitfly",
+          2000
+        ],
+        [
+          0,
+          "High Steaks",
+          1500
+        ]
+      ]
+    },
+    "Empty Box": {
+      "Materials": [
+        [
+          0,
+          "Hermit Can",
+          250
+        ],
+        [
+          0,
+          "Megalodon Tooth",
+          400
+        ],
+        [
+          0,
+          "Distilled Water",
+          4
+        ]
+      ]
+    },
+    "Googley Eyes": {
+      "Materials": [
+        [
+          0,
+          "Woodular Circle",
+          2
+        ],
+        [
+          0,
+          "Distilled Water",
+          5
+        ]
+      ]
+    },
+    "FMJ Bullet": {
+      "Materials": [
+        [
+          0,
+          "Gold Ore",
+          15
+        ],
+        [
+          0,
+          "Bullet",
+          2
+        ],
+        [
+          1,
+          "Copper Ore",
+          44
+        ]
+      ]
+    },
+    "Viking Cap": {
+      "Materials": [
+        [
+          0,
+          "Militia Helm",
+          5
+        ],
+        [
+          1,
+          "Iron Bar",
+          125
+        ],
+        [
+          1,
+          "Copper Ore",
+          750
+        ],
+        [
+          1,
+          "Copper Helmet",
+          10
+        ],
+        [
+          2,
+          "Copper Bar",
+          300
+        ],
+        [
+          2,
+          "Bean Slices",
+          500
+        ],
+        [
+          0,
+          "Gold Bar",
+          400
+        ],
+        [
+          0,
+          "Glass Shard",
+          2
+        ]
+      ]
+    },
+    "Sleek Coif": {
+      "Materials": [
+        [
+          0,
+          "Thief Hood",
+          5
+        ],
+        [
+          1,
+          "Iron Bar",
+          125
+        ],
+        [
+          1,
+          "Thread",
+          750
+        ],
+        [
+          1,
+          "Copper Helmet",
+          10
+        ],
+        [
+          2,
+          "Copper Bar",
+          300
+        ],
+        [
+          2,
+          "Bean Slices",
+          500
+        ],
+        [
+          0,
+          "Tropilogs",
+          2000
+        ],
+        [
+          0,
+          "Glass Shard",
+          2
+        ]
+      ]
+    },
+    "Witch Hat": {
+      "Materials": [
+        [
+          0,
+          "Top Hat",
+          5
+        ],
+        [
+          1,
+          "Iron Bar",
+          125
+        ],
+        [
+          1,
+          "Oak Logs",
+          1000
+        ],
+        [
+          1,
+          "Copper Helmet",
+          10
+        ],
+        [
+          2,
+          "Copper Bar",
+          300
+        ],
+        [
+          2,
+          "Bean Slices",
+          500
+        ],
+        [
+          0,
+          "Corn Kernels",
+          4000
+        ],
+        [
+          0,
+          "Glass Shard",
+          2
+        ]
+      ]
+    },
+    "Studded Hide": {
+      "Materials": [
+        [
+          0,
+          "Hide Shirt",
+          4
+        ],
+        [
+          1,
+          "Bleach Logs",
+          1300
+        ],
+        [
+          1,
+          "Copper Platebody",
+          8
+        ],
+        [
+          2,
+          "Copper Bar",
+          360
+        ],
+        [
+          2,
+          "Trusty Nails",
+          960
+        ],
+        [
+          1,
+          "Steel Axe",
+          4
+        ],
+        [
+          2,
+          "Slime Sludge",
+          500
+        ],
+        [
+          2,
+          "Boring Brick",
+          500
+        ],
+        [
+          0,
+          "Megalodon Tooth",
+          4000
+        ],
+        [
+          0,
+          "Nuget Cake",
+          1
+        ]
+      ]
+    },
+    "Feral Leathering": {
+      "Materials": [
+        [
+          0,
+          "Fur Shirt",
+          4
+        ],
+        [
+          1,
+          "Goblin Ear",
+          2000
+        ],
+        [
+          1,
+          "Iron Bar",
+          2000
+        ],
+        [
+          0,
+          "Stick",
+          3000
+        ],
+        [
+          0,
+          "Nuget Cake",
+          1
+        ]
+      ]
+    },
+    "Furled Robes": {
+      "Materials": [
+        [
+          0,
+          "Tattered Cloth",
+          4
+        ],
+        [
+          0,
+          "Leather Hide",
+          1500
+        ],
+        [
+          0,
+          "Nuget Cake",
+          1
+        ]
+      ]
+    },
+    "Cavern Trekkers": {
+      "Materials": [
+        [
+          0,
+          "Gold Boots",
+          1
+        ],
+        [
+          1,
+          "Gold Bar",
+          600
+        ],
+        [
+          1,
+          "Iron Boots",
+          2
+        ],
+        [
+          2,
+          "Trusty Nails",
+          1000
+        ],
+        [
+          2,
+          "Iron Bar",
+          250
+        ],
+        [
+          2,
+          "Copper Boots",
+          4
+        ],
+        [
+          3,
+          "Copper Bar",
+          500
+        ],
+        [
+          1,
+          "Distilled Water",
+          4
+        ],
+        [
+          0,
+          "Distilled Water",
+          9
+        ],
+        [
+          0,
+          "Copper Ore",
+          1500
+        ],
+        [
+          0,
+          "Iron Ore",
+          1200
+        ]
+      ]
+    },
+    "Angler Boots": {
+      "Materials": [
+        [
+          0,
+          "Gold Boots",
+          1
+        ],
+        [
+          1,
+          "Gold Bar",
+          600
+        ],
+        [
+          1,
+          "Iron Boots",
+          2
+        ],
+        [
+          2,
+          "Trusty Nails",
+          1000
+        ],
+        [
+          2,
+          "Iron Bar",
+          250
+        ],
+        [
+          2,
+          "Copper Boots",
+          4
+        ],
+        [
+          3,
+          "Copper Bar",
+          500
+        ],
+        [
+          1,
+          "Distilled Water",
+          4
+        ],
+        [
+          0,
+          "Distilled Water",
+          9
+        ],
+        [
+          0,
+          "Goldfish",
+          1250
+        ],
+        [
+          0,
+          "Hermit Can",
+          1000
+        ]
+      ]
+    },
+    "Logger Heels": {
+      "Materials": [
+        [
+          0,
+          "Gold Boots",
+          1
+        ],
+        [
+          1,
+          "Gold Bar",
+          600
+        ],
+        [
+          1,
+          "Iron Boots",
+          2
+        ],
+        [
+          2,
+          "Trusty Nails",
+          1000
+        ],
+        [
+          2,
+          "Iron Bar",
+          250
+        ],
+        [
+          2,
+          "Copper Boots",
+          4
+        ],
+        [
+          3,
+          "Copper Bar",
+          500
+        ],
+        [
+          1,
+          "Distilled Water",
+          4
+        ],
+        [
+          0,
+          "Distilled Water",
+          9
+        ],
+        [
+          0,
+          "Jungle Logs",
+          1600
+        ],
+        [
+          0,
+          "Forest Fibres",
+          1000
+        ]
+      ]
+    },
+    "Bandito Boots": {
+      "Materials": [
+        [
+          0,
+          "Gold Boots",
+          1
+        ],
+        [
+          1,
+          "Gold Bar",
+          600
+        ],
+        [
+          1,
+          "Iron Boots",
+          2
+        ],
+        [
+          2,
+          "Trusty Nails",
+          1000
+        ],
+        [
+          2,
+          "Iron Bar",
+          250
+        ],
+        [
+          2,
+          "Copper Boots",
+          4
+        ],
+        [
+          3,
+          "Copper Bar",
+          500
+        ],
+        [
+          1,
+          "Distilled Water",
+          4
+        ],
+        [
+          0,
+          "Distilled Water",
+          9
+        ],
+        [
+          0,
+          "Fly",
+          2000
+        ],
+        [
+          0,
+          "Butterfly",
+          1250
+        ]
+      ]
+    },
+    "Slurpin Herm": {
+      "Materials": [
+        [
+          0,
+          "Hermit Can",
+          5
+        ],
+        [
+          0,
+          "Average Strength\nPotion",
+          2
+        ]
+      ]
+    },
+    "Buttered Toasted\nButter": {
+      "Materials": [
+        [
+          0,
+          "Butterfly",
+          5
+        ],
+        [
+          0,
+          "Kebab Sticks",
+          1
+        ]
+      ]
+    },
+    "Dootjat Eye": {
+      "Materials": [
+        [
+          0,
+          "Silver Antique",
+          1
+        ],
+        [
+          0,
+          "Gold Bar",
+          80
+        ],
+        [
+          0,
+          "Ghost",
+          1
+        ]
+      ]
+    },
+    "Sandy Satchel": {
+      "Materials": [
+        [
+          0,
+          "Golden Plop",
+          1
+        ],
+        [
+          0,
+          "Snakeskinventory\nBag",
+          1
+        ],
+        [
+          0,
+          "Pocket Sand",
+          777
+        ]
+      ]
+    },
+    "Efaunt Helmet": {
+      "Materials": [
+        [
+          0,
+          "Ripped Tunic",
+          20
+        ],
+        [
+          0,
+          "Trimmed Rune\nPlatelegs",
+          1
+        ],
+        [
+          0,
+          "Armor Upgrade\nStone C",
+          2
+        ],
+        [
+          0,
+          "Dootjat Eye",
+          3
+        ],
+        [
+          1,
+          "Silver Antique",
+          3
+        ],
+        [
+          1,
+          "Gold Bar",
+          240
+        ],
+        [
+          1,
+          "Ghost",
+          3
+        ]
+      ]
+    },
+    "Efaunt Ribcage": {
+      "Materials": [
+        [
+          0,
+          "Ripped Tunic",
+          10
+        ],
+        [
+          0,
+          "Midnight Cookie",
+          10
+        ],
+        [
+          0,
+          "Distilled Water",
+          25
+        ]
+      ]
+    },
+    "Efaunt Hipilium": {
+      "Materials": [
+        [
+          0,
+          "Ripped Tunic",
+          7
+        ],
+        [
+          0,
+          "Minuteglass",
+          3
+        ],
+        [
+          0,
+          "Distilled Water",
+          25
+        ]
+      ]
+    },
+    "Efaunts Broken\nAnkles": {
+      "Materials": [
+        [
+          0,
+          "Ripped Tunic",
+          5
+        ],
+        [
+          0,
+          "Nuget Cake",
+          3
+        ],
+        [
+          0,
+          "Platinum Boots",
+          1
+        ],
+        [
+          1,
+          "Tropilogs",
+          8000
+        ],
+        [
+          1,
+          "Jellyfish",
+          8000
+        ],
+        [
+          1,
+          "Gold Boots",
+          3
+        ],
+        [
+          2,
+          "Gold Bar",
+          1800
+        ],
+        [
+          2,
+          "Iron Boots",
+          6
+        ],
+        [
+          3,
+          "Trusty Nails",
+          3000
+        ],
+        [
+          3,
+          "Iron Bar",
+          750
+        ],
+        [
+          3,
+          "Copper Boots",
+          12
+        ],
+        [
+          4,
+          "Copper Bar",
+          1500
+        ],
+        [
+          2,
+          "Distilled Water",
+          12
+        ]
+      ]
+    },
+    "Efaunt Trunculus": {
+      "Materials": [
+        [
+          0,
+          "Ribbed Tunic",
+          4
+        ],
+        [
+          0,
+          "Ripped Tunic",
+          15
+        ],
+        [
+          0,
+          "Bandage Wraps",
+          1
+        ],
+        [
+          1,
+          "Cue Tape",
+          5000
+        ],
+        [
+          1,
+          "The Stingers",
+          5
+        ],
+        [
+          2,
+          "Copper Bar",
+          100
+        ],
+        [
+          2,
+          "Oak Logs",
+          375
+        ],
+        [
+          2,
+          "Trusty Nails",
+          100
+        ],
+        [
+          1,
+          "Potty Rolls",
+          2000
+        ],
+        [
+          0,
+          "Pharoah Bow",
+          1
+        ],
+        [
+          1,
+          "Woodular Circle",
+          3
+        ],
+        [
+          1,
+          "Bloach",
+          3200
+        ],
+        [
+          1,
+          "Spiked Menace",
+          2
+        ],
+        [
+          2,
+          "Gold Bar",
+          500
+        ],
+        [
+          2,
+          "Birch Longbow",
+          6
+        ],
+        [
+          3,
+          "Slime Sludge",
+          750
+        ],
+        [
+          3,
+          "Bleach Logs",
+          1500
+        ],
+        [
+          2,
+          "Distilled Water",
+          16
+        ]
+      ]
+    },
+    "Wooden Traps": {
+      "Materials": [
+        [
+          0,
+          "Mutant Crabbo",
+          2
+        ],
+        [
+          0,
+          "Redox Salts",
+          20
+        ]
+      ]
+    },
+    "Sizable Critter\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Crabbo",
+          1000
+        ],
+        [
+          0,
+          "Redox Salts",
+          15
+        ]
+      ]
+    },
+    "Horned Skull": {
+      "Materials": [
+        [
+          0,
+          "Dune Soul",
+          1200
+        ],
+        [
+          0,
+          "Redox Salts",
+          25
+        ]
+      ]
+    },
+    "Sizable Soul\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Dune Soul",
+          1500
+        ],
+        [
+          0,
+          "Redox Salts",
+          20
+        ]
+      ]
+    }
+  },
+  "3": {
+    "Dementia Helmet": {
+      "Materials": [
+        [
+          0,
+          "Froge",
+          5000
+        ],
+        [
+          0,
+          "Platinum Helmet",
+          2
+        ],
+        [
+          1,
+          "Jellyfish",
+          8000
+        ],
+        [
+          1,
+          "Iron Helmet",
+          8
+        ],
+        [
+          2,
+          "Iron Bar",
+          1000
+        ],
+        [
+          2,
+          "Goblin Ear",
+          2400
+        ],
+        [
+          1,
+          "Platinum Bar",
+          1500
+        ],
+        [
+          0,
+          "Dementia Bar",
+          300
+        ]
+      ]
+    },
+    "Dementia Body": {
+      "Materials": [
+        [
+          0,
+          "Forest Soul",
+          1000
+        ],
+        [
+          0,
+          "Platinum Platbody",
+          2
+        ],
+        [
+          1,
+          "Potato Remains",
+          10000
+        ],
+        [
+          1,
+          "Iron Platebody",
+          10
+        ],
+        [
+          2,
+          "Iron Bar",
+          1500
+        ],
+        [
+          2,
+          "Jungle Logs",
+          6000
+        ],
+        [
+          1,
+          "Platinum Bar",
+          2000
+        ],
+        [
+          0,
+          "Dementia Bar",
+          350
+        ]
+      ]
+    },
+    "Dementia Shins": {
+      "Materials": [
+        [
+          0,
+          "Floof Ploof",
+          8000
+        ],
+        [
+          0,
+          "Platinum Shins",
+          2
+        ],
+        [
+          1,
+          "Sentient Cereal",
+          1000
+        ],
+        [
+          1,
+          "Iron Platelegs",
+          12
+        ],
+        [
+          2,
+          "Iron Bar",
+          2040
+        ],
+        [
+          2,
+          "Boring Brick",
+          2700
+        ],
+        [
+          1,
+          "Platinum Bar",
+          2500
+        ],
+        [
+          0,
+          "Dementia Bar",
+          400
+        ]
+      ]
+    },
+    "Dementia Boots": {
+      "Materials": [
+        [
+          0,
+          "Poison Froge",
+          3
+        ],
+        [
+          0,
+          "Platinum Boots",
+          1
+        ],
+        [
+          1,
+          "Tropilogs",
+          8000
+        ],
+        [
+          1,
+          "Jellyfish",
+          8000
+        ],
+        [
+          1,
+          "Gold Boots",
+          3
+        ],
+        [
+          2,
+          "Gold Bar",
+          1800
+        ],
+        [
+          2,
+          "Iron Boots",
+          6
+        ],
+        [
+          3,
+          "Trusty Nails",
+          3000
+        ],
+        [
+          3,
+          "Iron Bar",
+          750
+        ],
+        [
+          3,
+          "Copper Boots",
+          12
+        ],
+        [
+          4,
+          "Copper Bar",
+          1500
+        ],
+        [
+          2,
+          "Distilled Water",
+          12
+        ],
+        [
+          0,
+          "Dementia Bar",
+          500
+        ]
+      ]
+    },
+    "Uninflated Glove": {
+      "Materials": [
+        [
+          0,
+          "Melty Cube",
+          70000
+        ],
+        [
+          0,
+          "Bandage Wraps",
+          3
+        ],
+        [
+          1,
+          "Cue Tape",
+          15000
+        ],
+        [
+          1,
+          "The Stingers",
+          15
+        ],
+        [
+          2,
+          "Copper Bar",
+          300
+        ],
+        [
+          2,
+          "Oak Logs",
+          1125
+        ],
+        [
+          2,
+          "Trusty Nails",
+          300
+        ],
+        [
+          1,
+          "Potty Rolls",
+          6000
+        ]
+      ]
+    },
+    "The Ice Breaker": {
+      "Materials": [
+        [
+          0,
+          "Melty Cube",
+          25000
+        ],
+        [
+          0,
+          "Enforced Slasher",
+          2
+        ],
+        [
+          1,
+          "Nuget Cake",
+          6
+        ],
+        [
+          1,
+          "Leather Hide",
+          12000
+        ],
+        [
+          1,
+          "Royal Bayonet",
+          4
+        ],
+        [
+          2,
+          "Forest Fibres",
+          5000
+        ],
+        [
+          2,
+          "Steel Axe",
+          12
+        ],
+        [
+          3,
+          "Slime Sludge",
+          1500
+        ],
+        [
+          3,
+          "Boring Brick",
+          1500
+        ],
+        [
+          2,
+          "Distilled Water",
+          32
+        ],
+        [
+          0,
+          "Redox Salts",
+          150
+        ]
+      ]
+    },
+    "Blizzard Bow": {
+      "Materials": [
+        [
+          0,
+          "Forest Soul",
+          7000
+        ],
+        [
+          0,
+          "Pharoah Bow",
+          2
+        ],
+        [
+          1,
+          "Woodular Circle",
+          6
+        ],
+        [
+          1,
+          "Bloach",
+          6400
+        ],
+        [
+          1,
+          "Spiked Menace",
+          4
+        ],
+        [
+          2,
+          "Gold Bar",
+          1000
+        ],
+        [
+          2,
+          "Birch Longbow",
+          12
+        ],
+        [
+          3,
+          "Slime Sludge",
+          1500
+        ],
+        [
+          3,
+          "Bleach Logs",
+          3000
+        ],
+        [
+          2,
+          "Distilled Water",
+          32
+        ],
+        [
+          0,
+          "Redox Salts",
+          150
+        ]
+      ]
+    },
+    "Spriggly Storm": {
+      "Materials": [
+        [
+          0,
+          "Tundra Logs",
+          10000
+        ],
+        [
+          0,
+          "Crows Nest",
+          2
+        ],
+        [
+          1,
+          "Golden Plop",
+          6
+        ],
+        [
+          1,
+          "Fruitfly",
+          8000
+        ],
+        [
+          1,
+          "Starlight",
+          4
+        ],
+        [
+          2,
+          "Chain Link",
+          4000
+        ],
+        [
+          2,
+          "Quarterstaff",
+          12
+        ],
+        [
+          3,
+          "Slime Sludge",
+          1500
+        ],
+        [
+          3,
+          "Copper Bar",
+          1200
+        ],
+        [
+          2,
+          "Distilled Water",
+          32
+        ],
+        [
+          0,
+          "Redox Salts",
+          150
+        ]
+      ]
+    },
+    "Dementia Pickaxe": {
+      "Materials": [
+        [
+          0,
+          "Dementia Bar",
+          275
+        ],
+        [
+          0,
+          "Moustache Comb",
+          15000
+        ],
+        [
+          0,
+          "Platinum Pickaxe",
+          2
+        ],
+        [
+          1,
+          "Platinum Bar",
+          2000
+        ],
+        [
+          1,
+          "Pincer Arm",
+          21000
+        ],
+        [
+          1,
+          "Gold Pickaxe",
+          4
+        ],
+        [
+          2,
+          "Megalodon Tooth",
+          10000
+        ],
+        [
+          2,
+          "Gold Bar",
+          3200
+        ],
+        [
+          2,
+          "Iron Pickaxe",
+          12
+        ],
+        [
+          3,
+          "Iron Bar",
+          1200
+        ],
+        [
+          3,
+          "Carrot Cube",
+          2400
+        ]
+      ]
+    },
+    "Big Mining\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Dementia Ore",
+          17500
+        ],
+        [
+          0,
+          "Sizable Mining\nPouch",
+          2
+        ],
+        [
+          1,
+          "Platinum Ore",
+          13500
+        ],
+        [
+          1,
+          "Average Mining\nPouch",
+          6
+        ],
+        [
+          2,
+          "Cramped Mining\nPouch",
+          30
+        ],
+        [
+          3,
+          "Copper Ore",
+          3600
+        ],
+        [
+          2,
+          "Small Mining\nPouch",
+          18
+        ],
+        [
+          3,
+          "Iron Ore",
+          12600
+        ],
+        [
+          2,
+          "Gold Ore",
+          8400
+        ]
+      ]
+    },
+    "Dementia Dicer": {
+      "Materials": [
+        [
+          0,
+          "Tundra Logs",
+          15000
+        ],
+        [
+          0,
+          "Redox Salts",
+          50
+        ],
+        [
+          0,
+          "Plat Hatchet",
+          2
+        ],
+        [
+          1,
+          "Tropilogs",
+          16000
+        ],
+        [
+          1,
+          "Chain Link",
+          12000
+        ],
+        [
+          1,
+          "Golden Axe",
+          4
+        ],
+        [
+          2,
+          "Golden Dubloon",
+          20
+        ],
+        [
+          2,
+          "Crabby Cakey",
+          8000
+        ],
+        [
+          2,
+          "Iron Hatchet",
+          12
+        ],
+        [
+          3,
+          "Jungle Logs",
+          3000
+        ],
+        [
+          3,
+          "Boring Brick",
+          1500
+        ]
+      ]
+    },
+    "Big Choppin\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Tundra Logs",
+          20000
+        ],
+        [
+          0,
+          "Sizable Choppin\nPouch",
+          2
+        ],
+        [
+          1,
+          "Tropilogs",
+          13500
+        ],
+        [
+          1,
+          "Average Choppin\nPouch",
+          6
+        ],
+        [
+          2,
+          "Cramped\nChoppin Pouch",
+          30
+        ],
+        [
+          3,
+          "Oak Logs",
+          4500
+        ],
+        [
+          3,
+          "Trusty Nails",
+          900
+        ],
+        [
+          2,
+          "Small Choppin\nPouch",
+          18
+        ],
+        [
+          3,
+          "Bleach Logs",
+          14400
+        ],
+        [
+          2,
+          "Forest Fibres",
+          10800
+        ]
+      ]
+    },
+    "Dementia Rod\nfor Fishing": {
+      "Materials": [
+        [
+          0,
+          "Dementia Bar",
+          300
+        ],
+        [
+          0,
+          "Redox Salts",
+          50
+        ],
+        [
+          0,
+          "Plat Fishing Rod",
+          2
+        ],
+        [
+          1,
+          "Bloach",
+          14000
+        ],
+        [
+          1,
+          "Platinum Bar",
+          2000
+        ],
+        [
+          1,
+          "Gold Fishing Rod",
+          4
+        ],
+        [
+          2,
+          "Hermit Can",
+          10000
+        ],
+        [
+          2,
+          "Leather Hide",
+          4000
+        ],
+        [
+          2,
+          "Iron Fishing Rod",
+          12
+        ],
+        [
+          3,
+          "Iron Bar",
+          3600
+        ],
+        [
+          3,
+          "Hermit Can",
+          10200
+        ],
+        [
+          3,
+          "Distilled Water",
+          36
+        ]
+      ]
+    },
+    "Big Fish\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Crescent Scropie",
+          4
+        ],
+        [
+          0,
+          "Redox Salts",
+          50
+        ],
+        [
+          0,
+          "Sizable Fish\nPouch",
+          2
+        ],
+        [
+          1,
+          "Bloach",
+          13500
+        ],
+        [
+          1,
+          "Average Fish\nPouch",
+          6
+        ],
+        [
+          2,
+          "Cramped Fish\nPouch",
+          30
+        ],
+        [
+          3,
+          "Goldfish",
+          5400
+        ],
+        [
+          2,
+          "Small Fish\nPouch",
+          18
+        ],
+        [
+          3,
+          "Hermit Can",
+          7650
+        ],
+        [
+          3,
+          "Distilled Water",
+          36
+        ],
+        [
+          2,
+          "Hermit Can",
+          9000
+        ]
+      ]
+    },
+    "Dementia Net": {
+      "Materials": [
+        [
+          0,
+          "Mosquisnow",
+          15000
+        ],
+        [
+          0,
+          "Redox Salts",
+          50
+        ],
+        [
+          0,
+          "Platinet",
+          2
+        ],
+        [
+          1,
+          "Fruitfly",
+          16000
+        ],
+        [
+          1,
+          "Platinum Ore",
+          12000
+        ],
+        [
+          1,
+          "Gilded Net",
+          4
+        ],
+        [
+          2,
+          "Golden Dubloon",
+          20
+        ],
+        [
+          2,
+          "Butterfly",
+          10000
+        ],
+        [
+          2,
+          "Reinforced Net",
+          12
+        ],
+        [
+          3,
+          "Forest Fibres",
+          9600
+        ],
+        [
+          3,
+          "Butterfly",
+          10200
+        ],
+        [
+          3,
+          "Distilled Water",
+          36
+        ]
+      ]
+    },
+    "Big Bug\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Mosquisnow",
+          10000
+        ],
+        [
+          0,
+          "Sizable Bug\nPouch",
+          2
+        ],
+        [
+          1,
+          "Fruitfly",
+          13500
+        ],
+        [
+          1,
+          "Average Bug\nPouch",
+          6
+        ],
+        [
+          2,
+          "Cramped Bug\nPouch",
+          30
+        ],
+        [
+          3,
+          "Fly",
+          5400
+        ],
+        [
+          2,
+          "Small Bug\nPouch",
+          18
+        ],
+        [
+          3,
+          "Butterfly",
+          7650
+        ],
+        [
+          3,
+          "Distilled Water",
+          36
+        ],
+        [
+          2,
+          "Butterfly",
+          9600
+        ]
+      ]
+    },
+    "Natural Traps": {
+      "Materials": [
+        [
+          0,
+          "Nakeo Moleo",
+          5
+        ],
+        [
+          0,
+          "Redox Salts",
+          50
+        ],
+        [
+          0,
+          "Wooden Traps",
+          2
+        ],
+        [
+          1,
+          "Mutant Crabbo",
+          4
+        ],
+        [
+          1,
+          "Redox Salts",
+          40
+        ]
+      ]
+    },
+    "Big Critter\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Mousey",
+          10000
+        ],
+        [
+          0,
+          "Sizable Critter\nPouch",
+          2
+        ],
+        [
+          1,
+          "Crabbo",
+          2000
+        ],
+        [
+          1,
+          "Redox Salts",
+          30
+        ]
+      ]
+    },
+    "Prickle Skull": {
+      "Materials": [
+        [
+          0,
+          "Rooted Soul",
+          12500
+        ],
+        [
+          0,
+          "Redox Salts",
+          50
+        ],
+        [
+          0,
+          "Horned Skull",
+          2
+        ],
+        [
+          1,
+          "Dune Soul",
+          2400
+        ],
+        [
+          1,
+          "Redox Salts",
+          50
+        ]
+      ]
+    },
+    "Big Soul\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Rooted Soul",
+          8000
+        ],
+        [
+          0,
+          "Sizable Soul\nPouch",
+          2
+        ],
+        [
+          1,
+          "Dune Soul",
+          3000
+        ],
+        [
+          1,
+          "Redox Salts",
+          40
+        ]
+      ]
+    },
+    "Bullet": {
+      "Materials": [
+        [
+          0,
+          "Copper Ore",
+          22
+        ]
+      ]
+    },
+    "Big Food\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Slurpin Herm",
+          1500
+        ],
+        [
+          1,
+          "Hermit Can",
+          7500
+        ],
+        [
+          1,
+          "Average Strength\nPotion",
+          3000
+        ],
+        [
+          0,
+          "Buttered Toasted\nButter",
+          1500
+        ],
+        [
+          1,
+          "Butterfly",
+          7500
+        ],
+        [
+          1,
+          "Kebab Sticks",
+          1500
+        ],
+        [
+          0,
+          "Yeti Ham",
+          10000
+        ],
+        [
+          0,
+          "Sizable Food\nPouch",
+          2
+        ],
+        [
+          1,
+          "Golden Meat Pie",
+          18
+        ],
+        [
+          1,
+          "Nuget Cake",
+          12
+        ],
+        [
+          1,
+          "Average Food\nPouch",
+          4
+        ],
+        [
+          2,
+          "Cramped Food\nPouch",
+          28
+        ],
+        [
+          3,
+          "Nomwich",
+          2100
+        ],
+        [
+          3,
+          "Hot Dog",
+          700
+        ],
+        [
+          3,
+          "Oak Logs",
+          1680
+        ],
+        [
+          3,
+          "Copper Bar",
+          420
+        ],
+        [
+          2,
+          "Meat Pie",
+          1000
+        ],
+        [
+          2,
+          "Icing Ironbite",
+          2400
+        ],
+        [
+          3,
+          "Iron Ore",
+          12000
+        ],
+        [
+          3,
+          "Small Mana\nPotion",
+          4800
+        ],
+        [
+          2,
+          "Saucy Logfries",
+          2400
+        ],
+        [
+          3,
+          "Jungle Logs",
+          14400
+        ],
+        [
+          3,
+          "Small Life\nPotion",
+          7200
+        ]
+      ]
+    },
+    "Big Materials\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Sticky Stick",
+          15000
+        ],
+        [
+          0,
+          "Ice Age 3",
+          3
+        ],
+        [
+          0,
+          "Sizable Materials\nPouch",
+          2
+        ],
+        [
+          1,
+          "Golden Plop",
+          10
+        ],
+        [
+          1,
+          "Woodular Circle",
+          10
+        ],
+        [
+          1,
+          "Average Material\nPouch",
+          4
+        ],
+        [
+          2,
+          "Cramped Material\nPouch",
+          28
+        ],
+        [
+          3,
+          "Trusty Nails",
+          2240
+        ],
+        [
+          3,
+          "Frog Leg",
+          1120
+        ],
+        [
+          3,
+          "Bean Slices",
+          840
+        ],
+        [
+          2,
+          "Glass Shard",
+          4
+        ],
+        [
+          2,
+          "Chain Link",
+          5000
+        ]
+      ]
+    },
+    "Void Imperium\nHelmet": {
+      "Materials": [
+        [
+          0,
+          "Spontaneity Salts",
+          500
+        ],
+        [
+          0,
+          "Dementia Helmet",
+          2
+        ],
+        [
+          1,
+          "Froge",
+          10000
+        ],
+        [
+          1,
+          "Platinum Helmet",
+          4
+        ],
+        [
+          2,
+          "Jellyfish",
+          16000
+        ],
+        [
+          2,
+          "Iron Helmet",
+          16
+        ],
+        [
+          3,
+          "Iron Bar",
+          2000
+        ],
+        [
+          3,
+          "Goblin Ear",
+          4800
+        ],
+        [
+          2,
+          "Platinum Bar",
+          3000
+        ],
+        [
+          1,
+          "Dementia Bar",
+          600
+        ],
+        [
+          0,
+          "Void Bar",
+          1000
+        ]
+      ]
+    },
+    "Void Imperium\nPlatebody": {
+      "Materials": [
+        [
+          0,
+          "Audio Cord",
+          75000
+        ],
+        [
+          0,
+          "Dementia Body",
+          2
+        ],
+        [
+          1,
+          "Forest Soul",
+          2000
+        ],
+        [
+          1,
+          "Platinum Platbody",
+          4
+        ],
+        [
+          2,
+          "Potato Remains",
+          20000
+        ],
+        [
+          2,
+          "Iron Platebody",
+          20
+        ],
+        [
+          3,
+          "Iron Bar",
+          3000
+        ],
+        [
+          3,
+          "Jungle Logs",
+          12000
+        ],
+        [
+          2,
+          "Platinum Bar",
+          4000
+        ],
+        [
+          1,
+          "Dementia Bar",
+          700
+        ],
+        [
+          0,
+          "Void Bar",
+          500
+        ]
+      ]
+    },
+    "Void Imperium\nShardshins": {
+      "Materials": [
+        [
+          0,
+          "Wispy Lumber",
+          75000
+        ],
+        [
+          0,
+          "Dementia Shins",
+          2
+        ],
+        [
+          1,
+          "Floof Ploof",
+          16000
+        ],
+        [
+          1,
+          "Platinum Shins",
+          4
+        ],
+        [
+          2,
+          "Sentient Cereal",
+          2000
+        ],
+        [
+          2,
+          "Iron Platelegs",
+          24
+        ],
+        [
+          3,
+          "Iron Bar",
+          4080
+        ],
+        [
+          3,
+          "Boring Brick",
+          5400
+        ],
+        [
+          2,
+          "Platinum Bar",
+          5000
+        ],
+        [
+          1,
+          "Dementia Bar",
+          800
+        ],
+        [
+          0,
+          "Void Bar",
+          650
+        ]
+      ]
+    },
+    "Void Imperium\nKicks": {
+      "Materials": [
+        [
+          0,
+          "Flycicle",
+          60000
+        ],
+        [
+          0,
+          "Dementia Boots",
+          2
+        ],
+        [
+          1,
+          "Poison Froge",
+          6
+        ],
+        [
+          1,
+          "Platinum Boots",
+          2
+        ],
+        [
+          2,
+          "Tropilogs",
+          16000
+        ],
+        [
+          2,
+          "Jellyfish",
+          16000
+        ],
+        [
+          2,
+          "Gold Boots",
+          6
+        ],
+        [
+          3,
+          "Gold Bar",
+          3600
+        ],
+        [
+          3,
+          "Iron Boots",
+          12
+        ],
+        [
+          4,
+          "Trusty Nails",
+          6000
+        ],
+        [
+          4,
+          "Iron Bar",
+          1500
+        ],
+        [
+          4,
+          "Copper Boots",
+          24
+        ],
+        [
+          5,
+          "Copper Bar",
+          3000
+        ],
+        [
+          3,
+          "Distilled Water",
+          24
+        ],
+        [
+          1,
+          "Dementia Bar",
+          1000
+        ],
+        [
+          0,
+          "Void Bar",
+          725
+        ]
+      ]
+    },
+    "Deuscythe": {
+      "Materials": [
+        [
+          0,
+          "Black Lense",
+          4
+        ],
+        [
+          0,
+          "Eternal Lord of \nThe Undying Ember",
+          5
+        ],
+        [
+          0,
+          "The Ice Breaker",
+          3
+        ],
+        [
+          1,
+          "Melty Cube",
+          75000
+        ],
+        [
+          1,
+          "Enforced Slasher",
+          6
+        ],
+        [
+          2,
+          "Nuget Cake",
+          18
+        ],
+        [
+          2,
+          "Leather Hide",
+          36000
+        ],
+        [
+          2,
+          "Royal Bayonet",
+          12
+        ],
+        [
+          3,
+          "Forest Fibres",
+          15000
+        ],
+        [
+          3,
+          "Steel Axe",
+          36
+        ],
+        [
+          4,
+          "Slime Sludge",
+          4500
+        ],
+        [
+          4,
+          "Boring Brick",
+          4500
+        ],
+        [
+          3,
+          "Distilled Water",
+          96
+        ],
+        [
+          1,
+          "Redox Salts",
+          450
+        ]
+      ]
+    },
+    "Blackhole Bow": {
+      "Materials": [
+        [
+          0,
+          "Black Lense",
+          4
+        ],
+        [
+          0,
+          "Spontaneity Salts",
+          250
+        ],
+        [
+          0,
+          "Blizzard Bow",
+          3
+        ],
+        [
+          1,
+          "Forest Soul",
+          21000
+        ],
+        [
+          1,
+          "Pharoah Bow",
+          6
+        ],
+        [
+          2,
+          "Woodular Circle",
+          18
+        ],
+        [
+          2,
+          "Bloach",
+          19200
+        ],
+        [
+          2,
+          "Spiked Menace",
+          12
+        ],
+        [
+          3,
+          "Gold Bar",
+          3000
+        ],
+        [
+          3,
+          "Birch Longbow",
+          36
+        ],
+        [
+          4,
+          "Slime Sludge",
+          4500
+        ],
+        [
+          4,
+          "Bleach Logs",
+          9000
+        ],
+        [
+          3,
+          "Distilled Water",
+          96
+        ],
+        [
+          1,
+          "Redox Salts",
+          450
+        ]
+      ]
+    },
+    "Grey Gatsby": {
+      "Materials": [
+        [
+          0,
+          "Black Lense",
+          4
+        ],
+        [
+          0,
+          "Frigid Soul",
+          50000
+        ],
+        [
+          0,
+          "Spriggly Storm",
+          3
+        ],
+        [
+          1,
+          "Tundra Logs",
+          30000
+        ],
+        [
+          1,
+          "Crows Nest",
+          6
+        ],
+        [
+          2,
+          "Golden Plop",
+          18
+        ],
+        [
+          2,
+          "Fruitfly",
+          24000
+        ],
+        [
+          2,
+          "Starlight",
+          12
+        ],
+        [
+          3,
+          "Chain Link",
+          12000
+        ],
+        [
+          3,
+          "Quarterstaff",
+          36
+        ],
+        [
+          4,
+          "Slime Sludge",
+          4500
+        ],
+        [
+          4,
+          "Copper Bar",
+          3600
+        ],
+        [
+          3,
+          "Distilled Water",
+          96
+        ],
+        [
+          1,
+          "Redox Salts",
+          450
+        ]
+      ]
+    },
+    "Void Imperium Pik": {
+      "Materials": [
+        [
+          0,
+          "Void Bar",
+          400
+        ],
+        [
+          0,
+          "Dementia Pickaxe",
+          2
+        ],
+        [
+          1,
+          "Dementia Bar",
+          550
+        ],
+        [
+          1,
+          "Moustache Comb",
+          30000
+        ],
+        [
+          1,
+          "Platinum Pickaxe",
+          4
+        ],
+        [
+          2,
+          "Platinum Bar",
+          4000
+        ],
+        [
+          2,
+          "Pincer Arm",
+          42000
+        ],
+        [
+          2,
+          "Gold Pickaxe",
+          8
+        ],
+        [
+          3,
+          "Megalodon Tooth",
+          20000
+        ],
+        [
+          3,
+          "Gold Bar",
+          6400
+        ],
+        [
+          3,
+          "Iron Pickaxe",
+          24
+        ],
+        [
+          4,
+          "Iron Bar",
+          2400
+        ],
+        [
+          4,
+          "Carrot Cube",
+          4800
+        ]
+      ]
+    },
+    "Large Mining\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Void Ore",
+          25000
+        ],
+        [
+          0,
+          "Big Mining\nPouch",
+          2
+        ],
+        [
+          1,
+          "Dementia Ore",
+          35000
+        ],
+        [
+          1,
+          "Sizable Mining\nPouch",
+          4
+        ],
+        [
+          2,
+          "Platinum Ore",
+          27000
+        ],
+        [
+          2,
+          "Average Mining\nPouch",
+          12
+        ],
+        [
+          3,
+          "Cramped Mining\nPouch",
+          60
+        ],
+        [
+          4,
+          "Copper Ore",
+          7200
+        ],
+        [
+          3,
+          "Small Mining\nPouch",
+          36
+        ],
+        [
+          4,
+          "Iron Ore",
+          25200
+        ],
+        [
+          3,
+          "Gold Ore",
+          16800
+        ]
+      ]
+    },
+    "Void Imperium Axe": {
+      "Materials": [
+        [
+          0,
+          "Wispy Lumber",
+          50000
+        ],
+        [
+          0,
+          "Dementia Dicer",
+          2
+        ],
+        [
+          1,
+          "Tundra Logs",
+          30000
+        ],
+        [
+          1,
+          "Redox Salts",
+          100
+        ],
+        [
+          1,
+          "Plat Hatchet",
+          4
+        ],
+        [
+          2,
+          "Tropilogs",
+          32000
+        ],
+        [
+          2,
+          "Chain Link",
+          24000
+        ],
+        [
+          2,
+          "Golden Axe",
+          8
+        ],
+        [
+          3,
+          "Golden Dubloon",
+          40
+        ],
+        [
+          3,
+          "Crabby Cakey",
+          16000
+        ],
+        [
+          3,
+          "Iron Hatchet",
+          24
+        ],
+        [
+          4,
+          "Jungle Logs",
+          6000
+        ],
+        [
+          4,
+          "Boring Brick",
+          3000
+        ]
+      ]
+    },
+    "Large Choppin\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Wispy Lumber",
+          30000
+        ],
+        [
+          0,
+          "Big Choppin\nPouch",
+          2
+        ],
+        [
+          1,
+          "Tundra Logs",
+          40000
+        ],
+        [
+          1,
+          "Sizable Choppin\nPouch",
+          4
+        ],
+        [
+          2,
+          "Tropilogs",
+          27000
+        ],
+        [
+          2,
+          "Average Choppin\nPouch",
+          12
+        ],
+        [
+          3,
+          "Cramped\nChoppin Pouch",
+          60
+        ],
+        [
+          4,
+          "Oak Logs",
+          9000
+        ],
+        [
+          4,
+          "Trusty Nails",
+          1800
+        ],
+        [
+          3,
+          "Small Choppin\nPouch",
+          36
+        ],
+        [
+          4,
+          "Bleach Logs",
+          28800
+        ],
+        [
+          3,
+          "Forest Fibres",
+          21600
+        ]
+      ]
+    },
+    "Void Imperium Rod": {
+      "Materials": [
+        [
+          0,
+          "Spontaneity Salts",
+          200
+        ],
+        [
+          0,
+          "Minervowl",
+          3
+        ],
+        [
+          0,
+          "Dementia Rod\nfor Fishing",
+          2
+        ],
+        [
+          1,
+          "Dementia Bar",
+          600
+        ],
+        [
+          1,
+          "Redox Salts",
+          100
+        ],
+        [
+          1,
+          "Plat Fishing Rod",
+          4
+        ],
+        [
+          2,
+          "Bloach",
+          28000
+        ],
+        [
+          2,
+          "Platinum Bar",
+          4000
+        ],
+        [
+          2,
+          "Gold Fishing Rod",
+          8
+        ],
+        [
+          3,
+          "Hermit Can",
+          20000
+        ],
+        [
+          3,
+          "Leather Hide",
+          8000
+        ],
+        [
+          3,
+          "Iron Fishing Rod",
+          24
+        ],
+        [
+          4,
+          "Iron Bar",
+          7200
+        ],
+        [
+          4,
+          "Hermit Can",
+          20400
+        ],
+        [
+          4,
+          "Distilled Water",
+          72
+        ]
+      ]
+    },
+    "Large Fish\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Bloach",
+          50000
+        ],
+        [
+          0,
+          "Big Fish\nPouch",
+          2
+        ],
+        [
+          1,
+          "Crescent Scropie",
+          8
+        ],
+        [
+          1,
+          "Redox Salts",
+          100
+        ],
+        [
+          1,
+          "Sizable Fish\nPouch",
+          4
+        ],
+        [
+          2,
+          "Bloach",
+          27000
+        ],
+        [
+          2,
+          "Average Fish\nPouch",
+          12
+        ],
+        [
+          3,
+          "Cramped Fish\nPouch",
+          60
+        ],
+        [
+          4,
+          "Goldfish",
+          10800
+        ],
+        [
+          3,
+          "Small Fish\nPouch",
+          36
+        ],
+        [
+          4,
+          "Hermit Can",
+          15300
+        ],
+        [
+          4,
+          "Distilled Water",
+          72
+        ],
+        [
+          3,
+          "Hermit Can",
+          18000
+        ]
+      ]
+    },
+    "Void Imperium Net": {
+      "Materials": [
+        [
+          0,
+          "Flycicle",
+          50000
+        ],
+        [
+          0,
+          "Dementia Net",
+          2
+        ],
+        [
+          1,
+          "Mosquisnow",
+          30000
+        ],
+        [
+          1,
+          "Redox Salts",
+          100
+        ],
+        [
+          1,
+          "Platinet",
+          4
+        ],
+        [
+          2,
+          "Fruitfly",
+          32000
+        ],
+        [
+          2,
+          "Platinum Ore",
+          24000
+        ],
+        [
+          2,
+          "Gilded Net",
+          8
+        ],
+        [
+          3,
+          "Golden Dubloon",
+          40
+        ],
+        [
+          3,
+          "Butterfly",
+          20000
+        ],
+        [
+          3,
+          "Reinforced Net",
+          24
+        ],
+        [
+          4,
+          "Forest Fibres",
+          19200
+        ],
+        [
+          4,
+          "Butterfly",
+          20400
+        ],
+        [
+          4,
+          "Distilled Water",
+          72
+        ]
+      ]
+    },
+    "Large Bug\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Flycicle",
+          35000
+        ],
+        [
+          0,
+          "Big Bug\nPouch",
+          2
+        ],
+        [
+          1,
+          "Mosquisnow",
+          20000
+        ],
+        [
+          1,
+          "Sizable Bug\nPouch",
+          4
+        ],
+        [
+          2,
+          "Fruitfly",
+          27000
+        ],
+        [
+          2,
+          "Average Bug\nPouch",
+          12
+        ],
+        [
+          3,
+          "Cramped Bug\nPouch",
+          60
+        ],
+        [
+          4,
+          "Fly",
+          10800
+        ],
+        [
+          3,
+          "Small Bug\nPouch",
+          36
+        ],
+        [
+          4,
+          "Butterfly",
+          15300
+        ],
+        [
+          4,
+          "Distilled Water",
+          72
+        ],
+        [
+          3,
+          "Butterfly",
+          19200
+        ]
+      ]
+    },
+    "Steel Traps": {
+      "Materials": [
+        [
+          0,
+          "Eternal Lord of \nThe Undying Ember",
+          6
+        ],
+        [
+          0,
+          "Natural Traps",
+          1
+        ],
+        [
+          1,
+          "Nakeo Moleo",
+          5
+        ],
+        [
+          1,
+          "Redox Salts",
+          50
+        ],
+        [
+          1,
+          "Wooden Traps",
+          2
+        ],
+        [
+          2,
+          "Mutant Crabbo",
+          4
+        ],
+        [
+          2,
+          "Redox Salts",
+          40
+        ]
+      ]
+    },
+    "Large Critter\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Pingy",
+          30000
+        ],
+        [
+          0,
+          "Big Critter\nPouch",
+          2
+        ],
+        [
+          1,
+          "Mousey",
+          20000
+        ],
+        [
+          1,
+          "Sizable Critter\nPouch",
+          4
+        ],
+        [
+          2,
+          "Crabbo",
+          4000
+        ],
+        [
+          2,
+          "Redox Salts",
+          60
+        ]
+      ]
+    },
+    "Manifested Skull": {
+      "Materials": [
+        [
+          0,
+          "Frigid Soul",
+          50000
+        ],
+        [
+          0,
+          "Prickle Skull",
+          2
+        ],
+        [
+          1,
+          "Rooted Soul",
+          25000
+        ],
+        [
+          1,
+          "Redox Salts",
+          100
+        ],
+        [
+          1,
+          "Horned Skull",
+          4
+        ],
+        [
+          2,
+          "Dune Soul",
+          4800
+        ],
+        [
+          2,
+          "Redox Salts",
+          100
+        ]
+      ]
+    },
+    "Large Soul\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Frigid Soul",
+          30000
+        ],
+        [
+          0,
+          "Big Soul\nPouch",
+          2
+        ],
+        [
+          1,
+          "Rooted Soul",
+          16000
+        ],
+        [
+          1,
+          "Sizable Soul\nPouch",
+          4
+        ],
+        [
+          2,
+          "Dune Soul",
+          6000
+        ],
+        [
+          2,
+          "Redox Salts",
+          80
+        ]
+      ]
+    },
+    "Large Food\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Golden Ham",
+          10
+        ],
+        [
+          0,
+          "Critter Numnums",
+          30
+        ],
+        [
+          1,
+          "Crabbo",
+          3000
+        ],
+        [
+          1,
+          "Distilled Water",
+          30
+        ],
+        [
+          0,
+          "Soulble Gum",
+          30
+        ],
+        [
+          1,
+          "Dune Soul",
+          2100
+        ],
+        [
+          1,
+          "Distilled Water",
+          30
+        ],
+        [
+          0,
+          "Big Food\nPouch",
+          1
+        ],
+        [
+          1,
+          "Slurpin Herm",
+          1500
+        ],
+        [
+          2,
+          "Hermit Can",
+          7500
+        ],
+        [
+          2,
+          "Average Strength\nPotion",
+          3000
+        ],
+        [
+          1,
+          "Buttered Toasted\nButter",
+          1500
+        ],
+        [
+          2,
+          "Butterfly",
+          7500
+        ],
+        [
+          2,
+          "Kebab Sticks",
+          1500
+        ],
+        [
+          1,
+          "Yeti Ham",
+          10000
+        ],
+        [
+          1,
+          "Sizable Food\nPouch",
+          2
+        ],
+        [
+          2,
+          "Golden Meat Pie",
+          18
+        ],
+        [
+          2,
+          "Nuget Cake",
+          12
+        ],
+        [
+          2,
+          "Average Food\nPouch",
+          4
+        ],
+        [
+          3,
+          "Cramped Food\nPouch",
+          28
+        ],
+        [
+          4,
+          "Nomwich",
+          2100
+        ],
+        [
+          4,
+          "Hot Dog",
+          700
+        ],
+        [
+          4,
+          "Oak Logs",
+          1680
+        ],
+        [
+          4,
+          "Copper Bar",
+          420
+        ],
+        [
+          3,
+          "Meat Pie",
+          1000
+        ],
+        [
+          3,
+          "Icing Ironbite",
+          2400
+        ],
+        [
+          4,
+          "Iron Ore",
+          12000
+        ],
+        [
+          4,
+          "Small Mana\nPotion",
+          4800
+        ],
+        [
+          3,
+          "Saucy Logfries",
+          2400
+        ],
+        [
+          4,
+          "Jungle Logs",
+          14400
+        ],
+        [
+          4,
+          "Small Life\nPotion",
+          7200
+        ]
+      ]
+    },
+    "Large Materials\nPouch": {
+      "Materials": [
+        [
+          0,
+          "Audio Cord",
+          70000
+        ],
+        [
+          0,
+          "Black Lense",
+          3
+        ],
+        [
+          0,
+          "Big Materials\nPouch",
+          2
+        ],
+        [
+          1,
+          "Sticky Stick",
+          30000
+        ],
+        [
+          1,
+          "Ice Age 3",
+          6
+        ],
+        [
+          1,
+          "Sizable Materials\nPouch",
+          4
+        ],
+        [
+          2,
+          "Golden Plop",
+          20
+        ],
+        [
+          2,
+          "Woodular Circle",
+          20
+        ],
+        [
+          2,
+          "Average Material\nPouch",
+          8
+        ],
+        [
+          3,
+          "Cramped Material\nPouch",
+          56
+        ],
+        [
+          4,
+          "Trusty Nails",
+          4480
+        ],
+        [
+          4,
+          "Frog Leg",
+          2240
+        ],
+        [
+          4,
+          "Bean Slices",
+          1680
+        ],
+        [
+          3,
+          "Glass Shard",
+          8
+        ],
+        [
+          3,
+          "Chain Link",
+          10000
+        ]
+      ]
+    },
+    "Anvil Tab 4": {
+      "Materials": [
+        [
+          0,
+          "Not Yet",
+          6
+        ],
+        [
+          0,
+          "Frigid Soul",
+          22
+        ],
+        [
+          0,
+          "Eternal Lord of \nThe Undying Ember",
+          1
+        ],
+        [
+          0,
+          "Spontaneity Salts",
+          1
+        ]
+      ]
+    },
+    "Mark of Member": {
+      "Materials": [
+        [
+          0,
+          "Grandma Disguise",
+          1
+        ],
+        [
+          0,
+          "Void Imperium\nHelmet",
+          1
+        ],
+        [
+          1,
+          "Spontaneity Salts",
+          500
+        ],
+        [
+          1,
+          "Dementia Helmet",
+          2
+        ],
+        [
+          2,
+          "Froge",
+          10000
+        ],
+        [
+          2,
+          "Platinum Helmet",
+          4
+        ],
+        [
+          3,
+          "Jellyfish",
+          16000
+        ],
+        [
+          3,
+          "Iron Helmet",
+          16
+        ],
+        [
+          4,
+          "Iron Bar",
+          2000
+        ],
+        [
+          4,
+          "Goblin Ear",
+          4800
+        ],
+        [
+          3,
+          "Platinum Bar",
+          3000
+        ],
+        [
+          2,
+          "Dementia Bar",
+          600
+        ],
+        [
+          1,
+          "Void Bar",
+          1000
+        ],
+        [
+          0,
+          "Dioxide Synthesis",
+          500
+        ]
+      ]
+    },
+    "Murmillo Helm": {
+      "Materials": [
+        [
+          0,
+          "Dioxide Synthesis",
+          500
+        ],
+        [
+          0,
+          "Void Imperium\nHelmet",
+          1
+        ],
+        [
+          1,
+          "Spontaneity Salts",
+          500
+        ],
+        [
+          1,
+          "Dementia Helmet",
+          2
+        ],
+        [
+          2,
+          "Froge",
+          10000
+        ],
+        [
+          2,
+          "Platinum Helmet",
+          4
+        ],
+        [
+          3,
+          "Jellyfish",
+          16000
+        ],
+        [
+          3,
+          "Iron Helmet",
+          16
+        ],
+        [
+          4,
+          "Iron Bar",
+          2000
+        ],
+        [
+          4,
+          "Goblin Ear",
+          4800
+        ],
+        [
+          3,
+          "Platinum Bar",
+          3000
+        ],
+        [
+          2,
+          "Dementia Bar",
+          600
+        ],
+        [
+          1,
+          "Void Bar",
+          1000
+        ]
+      ]
+    },
+    "Conquistador\nPlume": {
+      "Materials": [
+        [
+          0,
+          "Dioxide Synthesis",
+          500
+        ],
+        [
+          0,
+          "Void Imperium\nHelmet",
+          1
+        ],
+        [
+          1,
+          "Spontaneity Salts",
+          500
+        ],
+        [
+          1,
+          "Dementia Helmet",
+          2
+        ],
+        [
+          2,
+          "Froge",
+          10000
+        ],
+        [
+          2,
+          "Platinum Helmet",
+          4
+        ],
+        [
+          3,
+          "Jellyfish",
+          16000
+        ],
+        [
+          3,
+          "Iron Helmet",
+          16
+        ],
+        [
+          4,
+          "Iron Bar",
+          2000
+        ],
+        [
+          4,
+          "Goblin Ear",
+          4800
+        ],
+        [
+          3,
+          "Platinum Bar",
+          3000
+        ],
+        [
+          2,
+          "Dementia Bar",
+          600
+        ],
+        [
+          1,
+          "Void Bar",
+          1000
+        ]
+      ]
+    },
+    "Adornment of the\nHigh Priest": {
+      "Materials": [
+        [
+          0,
+          "Dioxide Synthesis",
+          500
+        ],
+        [
+          0,
+          "Void Imperium\nHelmet",
+          1
+        ],
+        [
+          1,
+          "Spontaneity Salts",
+          500
+        ],
+        [
+          1,
+          "Dementia Helmet",
+          2
+        ],
+        [
+          2,
+          "Froge",
+          10000
+        ],
+        [
+          2,
+          "Platinum Helmet",
+          4
+        ],
+        [
+          3,
+          "Jellyfish",
+          16000
+        ],
+        [
+          3,
+          "Iron Helmet",
+          16
+        ],
+        [
+          4,
+          "Iron Bar",
+          2000
+        ],
+        [
+          4,
+          "Goblin Ear",
+          4800
+        ],
+        [
+          3,
+          "Platinum Bar",
+          3000
+        ],
+        [
+          2,
+          "Dementia Bar",
+          600
+        ],
+        [
+          1,
+          "Void Bar",
+          1000
+        ]
+      ]
+    },
+    "Member Hoodie": {
+      "Materials": [
+        [
+          0,
+          "Dioxide Synthesis",
+          500
+        ],
+        [
+          0,
+          "Uninflated Glove",
+          2
+        ],
+        [
+          1,
+          "Melty Cube",
+          140000
+        ],
+        [
+          1,
+          "Bandage Wraps",
+          6
+        ],
+        [
+          2,
+          "Cue Tape",
+          30000
+        ],
+        [
+          2,
+          "The Stingers",
+          30
+        ],
+        [
+          3,
+          "Copper Bar",
+          600
+        ],
+        [
+          3,
+          "Oak Logs",
+          2250
+        ],
+        [
+          3,
+          "Trusty Nails",
+          600
+        ],
+        [
+          2,
+          "Potty Rolls",
+          12000
+        ],
+        [
+          0,
+          "Void Imperium\nPlatebody",
+          1
+        ],
+        [
+          1,
+          "Audio Cord",
+          75000
+        ],
+        [
+          1,
+          "Dementia Body",
+          2
+        ],
+        [
+          2,
+          "Forest Soul",
+          2000
+        ],
+        [
+          2,
+          "Platinum Platbody",
+          4
+        ],
+        [
+          3,
+          "Potato Remains",
+          20000
+        ],
+        [
+          3,
+          "Iron Platebody",
+          20
+        ],
+        [
+          4,
+          "Iron Bar",
+          3000
+        ],
+        [
+          4,
+          "Jungle Logs",
+          12000
+        ],
+        [
+          3,
+          "Platinum Bar",
+          4000
+        ],
+        [
+          2,
+          "Dementia Bar",
+          700
+        ],
+        [
+          1,
+          "Void Bar",
+          500
+        ]
+      ]
+    },
+    "Damascus Plates": {
+      "Materials": [
+        [
+          0,
+          "Dioxide Synthesis",
+          500
+        ],
+        [
+          0,
+          "Void Imperium\nPlatebody",
+          1
+        ],
+        [
+          1,
+          "Audio Cord",
+          75000
+        ],
+        [
+          1,
+          "Dementia Body",
+          2
+        ],
+        [
+          2,
+          "Forest Soul",
+          2000
+        ],
+        [
+          2,
+          "Platinum Platbody",
+          4
+        ],
+        [
+          3,
+          "Potato Remains",
+          20000
+        ],
+        [
+          3,
+          "Iron Platebody",
+          20
+        ],
+        [
+          4,
+          "Iron Bar",
+          3000
+        ],
+        [
+          4,
+          "Jungle Logs",
+          12000
+        ],
+        [
+          3,
+          "Platinum Bar",
+          4000
+        ],
+        [
+          2,
+          "Dementia Bar",
+          700
+        ],
+        [
+          1,
+          "Void Bar",
+          500
+        ]
+      ]
+    },
+    "Evergreen Wraps": {
+      "Materials": [
+        [
+          0,
+          "Dioxide Synthesis",
+          500
+        ],
+        [
+          0,
+          "Void Imperium\nPlatebody",
+          1
+        ],
+        [
+          1,
+          "Audio Cord",
+          75000
+        ],
+        [
+          1,
+          "Dementia Body",
+          2
+        ],
+        [
+          2,
+          "Forest Soul",
+          2000
+        ],
+        [
+          2,
+          "Platinum Platbody",
+          4
+        ],
+        [
+          3,
+          "Potato Remains",
+          20000
+        ],
+        [
+          3,
+          "Iron Platebody",
+          20
+        ],
+        [
+          4,
+          "Iron Bar",
+          3000
+        ],
+        [
+          4,
+          "Jungle Logs",
+          12000
+        ],
+        [
+          3,
+          "Platinum Bar",
+          4000
+        ],
+        [
+          2,
+          "Dementia Bar",
+          700
+        ],
+        [
+          1,
+          "Void Bar",
+          500
+        ]
+      ]
+    },
+    "Elegantine Robes": {
+      "Materials": [
+        [
+          0,
+          "Dioxide Synthesis",
+          500
+        ],
+        [
+          0,
+          "Void Imperium\nPlatebody",
+          1
+        ],
+        [
+          1,
+          "Audio Cord",
+          75000
+        ],
+        [
+          1,
+          "Dementia Body",
+          2
+        ],
+        [
+          2,
+          "Forest Soul",
+          2000
+        ],
+        [
+          2,
+          "Platinum Platbody",
+          4
+        ],
+        [
+          3,
+          "Potato Remains",
+          20000
+        ],
+        [
+          3,
+          "Iron Platebody",
+          20
+        ],
+        [
+          4,
+          "Iron Bar",
+          3000
+        ],
+        [
+          4,
+          "Jungle Logs",
+          12000
+        ],
+        [
+          3,
+          "Platinum Bar",
+          4000
+        ],
+        [
+          2,
+          "Dementia Bar",
+          700
+        ],
+        [
+          1,
+          "Void Bar",
+          500
+        ]
+      ]
+    },
+    "Critter Numnums": {
+      "Materials": [
+        [
+          0,
+          "Crabbo",
+          100
+        ],
+        [
+          0,
+          "Distilled Water",
+          1
+        ]
+      ]
+    },
+    "Soulble Gum": {
+      "Materials": [
+        [
+          0,
+          "Dune Soul",
+          70
+        ],
+        [
+          0,
+          "Distilled Water",
+          1
+        ]
+      ]
+    },
+    "Shivering Sack": {
+      "Materials": [
+        [
+          0,
+          "Mamooth Hide Bag",
+          1
+        ],
+        [
+          0,
+          "Copper Ore",
+          22
+        ]
+      ]
+    }
+  }
+}

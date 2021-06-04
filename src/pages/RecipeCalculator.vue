@@ -10,64 +10,67 @@
   </div>
   <!-- Recipe + Quantity selectors -->
   <div class="row d-flex justify-content-between flex-wrap" id="selectors">
-    <!-- Recipe Selector -->
     <div class="col d-flex flex-wrap mb-3">
+			<!-- Recipe Selector -->
       <div class="col-auto mb-3 me-3">
         <select v-model="recipe" class="" id="recipe-selector">
-          <option value="" selected>Select Your Recipe</option>
-          <option v-for="(recipe, id) in data" :key="id" :value="id">
-            {{ recipe.name }}
+          <option value="" selected>Select the anvil tab</option>
+					<option v-for="(group, id) in data" :key="id" :value="id">
+            {{ id}}
           </option>
         </select>
       </div>
-      <!-- Quantity Input -->
-      <div class="col-auto">
-        <div class="input-group">
-          <span class="input-group-text">Quantity</span>
-          <input
-            v-model.number="quantity"
-            type="number"
-            min="1"
-            id="recipe-quantity"
-            class="form-control"
-          />
-        </div>
+			<div class="col-auto mb-3 me-3">
+        <select v-model="tab" class="" id="tab-selector">
+          <option value="" selected>Select Your Recipe</option>
+					<option v-for="(group, id) in data[recipe]" :key="id" :value="id">
+            {{ id}}
+          </option>
+        </select>
       </div>
-      <!-- Game Version Note -->
-    </div>
-    <div class="col-auto text-light">
-      <div id="version-group" class="p-2">
-        <h3>Last Updated</h3>
-        <p>v1.14</p>
-        <p>May 13, 2021</p>
-      </div>
-    </div>
-  </div>
-  <!-- Display Materials -->
-  <div v-if="recipe && quantity" class="text-light">
-    <h4>Materials</h4>
-    <div
-      class="row"
-      v-for="(material, index) in materials.materials"
-      :key="`material-${index}`"
-    >
-      <div class="border-top border-bottom col-sm-2">
-        {{ material.quantity * parseInt(quantity) }}
-      </div>
-      <div class="border-top border-bottom col-sm-10">
-        {{ material.name }}
-      </div>
-    </div>
+		</div>
+		<div class="col-auto">
+			<div class="input-group">
+				<span class="input-group-text">Quantity</span>
+				<input
+					v-model.number="quantity"
+					type="number"
+					min="1"
+					id="recipe-quantity"
+					class="form-control"
+				/>
+			</div>
+		</div>
+		<div v-if="tab" class="text-light">
+			<h4>Materials</h4>
+			<div
+				class="row"
+				v-for="(material) in data[recipe][tab]['Materials']"
+				:key="`material-${index}`"
+			>
+				<div class="border-top border-bottom col-sm-2 align-right">
+					{{ (material[2] * parseInt(quantity)).toLocaleString() }}
+				</div>
+				<div class="border-top border-bottom col-sm-10 padded-start">
+				{{ material[1].padStart(material[1].length+material[0]*4)}} 
+				</div>
+			</div>
+		</div>
   </div>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-import calculatorData from "~/data/recipeCalculator.json";
+import calculatorData from "~/data/recipes.json";
 
 type MaterialObject = {
-  name: string;
+  Recursive: boolean;
   quantity: number;
+};
+
+type TabObject = {
+	name : string
+	recipes: Array<RecipeObject>;
 };
 
 type RecipeObject = {
@@ -78,18 +81,12 @@ type RecipeObject = {
 export default defineComponent({
   name: "RecipeCalculator",
   setup() {
-    const data: Record<string, RecipeObject> = calculatorData;
+    const data = calculatorData;
+		console.log(data);
+		const tab = ref("");
     const recipe = ref("");
-    const quantity = ref("");
-    const materials = computed(
-      (): RecipeObject => {
-        if (recipe.value === "") {
-          return {} as RecipeObject;
-        }
-        return data[recipe.value];
-      }
-    );
-    return { data, recipe, quantity, materials };
+    const quantity = ref("1");
+    return { data, recipe, tab, quantity};
   },
 });
 </script>
