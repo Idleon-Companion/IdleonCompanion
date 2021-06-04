@@ -48,7 +48,8 @@
               :title="cardText(card)"
               :image="Assets.CardImage(card.id)"
               :data-enabled="cards[card.id] !== 0"
-              @click="handleCardClick(card.id)"
+              @click="handleCardClick(card.id, +1)"
+              @contextmenu.prevent="handleCardClick(card.id, -1)"
             >
               <template #tooltip>
                 <div class="text-center" v-html="cardText(card)"></div>
@@ -93,18 +94,18 @@ export default defineComponent({
     });
 
     const state = useState();
-    const checklist = ref(state.value.checklist);
+    const checklist = state.value.checklist;
     for (const data of Object.values(globalChecklist.value)) {
       for (const item of data.items) {
-        if (checklist.value[item.name]) {
-          checklist.value[item.name] = true;
+        if (checklist[item.name]) {
+          checklist[item.name] = true;
         } else {
-          checklist.value[item.name] = false;
+          checklist[item.name] = false;
         }
       }
     }
 
-    const cards = ref(state.value.cards);
+    const cards = state.value.cards;
     const cardData = ref({} as Record<string, Card[]>);
     for (const card of Cards) {
       // Group by category for template
@@ -114,18 +115,18 @@ export default defineComponent({
         cardData.value[card.category] = [card];
       }
       // Load from local state
-      if (!(card.id in cards.value)) {
-        cards.value[card.id] = 0;
+      if (!(card.id in cards)) {
+        cards[card.id] = 0;
       }
     }
 
     // Input handlers
     const CARD_TIERS = 5;
-    const handleCardClick = (id: string) => {
-      cards.value[id] = (cards.value[id] + 1) % CARD_TIERS;
+    const handleCardClick = (id: string, amount: number) => {
+      cards[id] = (cards[id] + amount) % CARD_TIERS;
     };
     const handleProgressCheck = (item: string) => {
-      checklist.value[item] = !checklist.value[item];
+      checklist[item] = !checklist[item];
     };
 
     return {

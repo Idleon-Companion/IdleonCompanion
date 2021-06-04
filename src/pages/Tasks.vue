@@ -146,8 +146,8 @@ export default defineComponent({
     onMounted(() => updateTasks());
 
     const state = useState();
-    const tasks = ref(state.value.tasks.tasks);
-    const dailyReset = ref(state.value.tasks.dailyReset);
+    const tasks = state.value.tasks.tasks;
+    const dailyReset = state.value.tasks.dailyReset;
 
     const loadDefaultTasks = () => {
       // Load default task data and reset all timers
@@ -159,8 +159,8 @@ export default defineComponent({
           tags: ["Default"],
           sync: true,
         };
-        if (tasks.value.filter((x) => x.text === task.task).length === 0) {
-          tasks.value.push(t);
+        if (tasks.filter((x) => x.text === task.task).length === 0) {
+          tasks.push(t);
         }
       }
     };
@@ -173,7 +173,7 @@ export default defineComponent({
     const setOffsetTime = () => {
       curTime.value = dayjs().valueOf();
       // Calculate offset from daily reset time
-      let daily = dailyReset.value.split(":");
+      let daily = dailyReset.split(":");
       let offset = dayjs()
         .startOf("day")
         .subtract(curTime.value)
@@ -209,13 +209,13 @@ export default defineComponent({
     };
 
     const tasksCompleted = computed(() => {
-      return tasks.value.filter((x) => isTaskComplete(x)).length;
+      return tasks.filter((x) => isTaskComplete(x)).length;
     });
 
     const progressBar = ref();
     const updateTasks = () => {
       progressBar.value.style.width = `${
-        (tasksCompleted.value / tasks.value.length) * 100
+        (tasksCompleted.value / tasks.length) * 100
       }%`;
     };
 
@@ -246,14 +246,14 @@ export default defineComponent({
           : [],
         sync: newTask.sync,
       };
-      tasks.value.push(t);
+      tasks.push(t);
       newTask.text = "";
       newTask.categories = "";
       updateTasks();
     };
 
     const removeTask = (i: number) => {
-      tasks.value.splice(i, 1);
+      tasks.splice(i, 1);
       updateTasks();
     };
 
