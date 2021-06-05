@@ -51,12 +51,25 @@
       v-for="(material, index) in materials.materials"
       :key="`material-${index}`"
     >
-      <div class="border-top border-bottom col-sm-2">
-        {{ material.quantity * parseInt(quantity) }}
+      <div
+        class="border-top border-bottom col-sm-2"
+      >
+        <GameAsset
+          :height="72"
+          :image="Assets.MaterialImage(material.name.replace(/ /g, '_'))"
+          :title="material.name"
+        >
+          <template #tooltip>
+            <div v-html="material.name"></div>
+          </template>
+        </GameAsset>
       </div>
-      <div class="border-top border-bottom col-sm-10">
-        {{ material.name }}
-      </div>
+      <div
+        class="border-top border-bottom col-sm-2 align-right"
+      >{{ (material.quantity * parseInt(quantity)).toLocaleString() }}</div>
+      <div
+        class="border-top border-bottom col-sm-6 padded-start"
+      >{{ material.name.padStart(material.name.length + material.indent * 4) }}</div>
     </div>
   </div>
 </template>
@@ -64,10 +77,13 @@
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
 import calculatorData from "~/data/recipeCalculator.json";
+import GameAsset from "~/components/GameAsset.vue";
+import { Assets } from "~/composables/Utilities";
 
 type MaterialObject = {
   name: string;
   quantity: number;
+  indent: number;
 };
 
 type RecipeObject = {
@@ -77,6 +93,9 @@ type RecipeObject = {
 
 export default defineComponent({
   name: "RecipeCalculator",
+  components: {
+    GameAsset
+  },
   setup() {
     const data: Record<string, RecipeObject> = calculatorData;
     const recipe = ref("");
@@ -89,7 +108,7 @@ export default defineComponent({
         return data[recipe.value];
       }
     );
-    return { data, recipe, quantity, materials };
+    return { Assets, data, recipe, quantity, materials };
   },
 });
 </script>
