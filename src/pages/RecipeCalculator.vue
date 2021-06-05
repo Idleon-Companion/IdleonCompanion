@@ -65,11 +65,11 @@
         </GameAsset>
       </div>
       <div
-        class="border-top border-bottom col-sm-2 align-right"
+        class="border-top border-bottom col-sm-2 recipe-quantity"
       >{{ (material.quantity * parseInt(quantity)).toLocaleString() }}</div>
       <div
         class="border-top border-bottom col-sm-6 padded-start"
-      >{{ material.name.padStart(material.name.length + material.indent * 4) }}</div>
+      >{{ material.name.padStart(material.name.length + material.indent * 12) }}</div>
     </div>
   </div>
 </template>
@@ -119,4 +119,9 @@ export default defineComponent({
 #version-group
   border: 2px solid $primary
   border-radius: 0.25rem
+.recipe-quantity
+  text-align: right
+	
+.padded-start
+  white-space: pre
 </style>
