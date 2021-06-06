@@ -111,12 +111,78 @@
 </div>
 
 
+<div class="input-group">
+        <select v-model="curEXPMonst" class="" id="monstSelector">
+          <option v-for="monster in monsters" :key="monster.name">
+            {{ monster.name }}
+          </option>
+        </select>
+</div>
+
+
+<div>
+<label for="expMonst" class="h5 m-2 ms-0">Ingame EXP</label>
+<input
+                    v-model.number="ingameEXPMonst"
+                    type="number"
+                    min="1"
+                    id="expMonst"
+/>
+</div>
+
+<div>
+<label for="cLevel" class="h5 m-2 ms-0">Character Level</label>
+<input
+                    v-model.number="charLevel"
+                    type="number"
+                    min="1"
+                    id="cLevel"
+/> <br>
+Required EXP for Level Up: {{ expNextLevel(charLevel).toFixed(0) }}
+<br>Hours to next level: {{ timeToLevel()[0] }}
+<br>EXP per hour {{ timeToLevel()[1] }}
+</div>
+<div>
+    <label for="startTime" class="h5 m-2 ms-0">Starting Time</label>
+      <input
+        id="startTime"
+        v-model="startExpTime"
+        type="text"
+        placeholder="HH:mm"
+      />
+<label for="startExp" class="h5 m-2 ms-0">Start EXP%</label>
+<input
+                    v-model.number="startExp"
+                    type="float"
+                    min="0.00"
+                    id="startExp"
+/>
+</div>
+
+<div>
+    <label for="endTime" class="h5 m-2 ms-0">Ending Time</label>
+      <input
+        id="endTime"
+        v-model="endExpTime"
+        type="text"
+        placeholder="HH:mm"
+      />
+<label for="endExp" class="h5 m-2 ms-0">End EXP%</label>
+<input
+                    v-model.number="endExp"
+                    type="float"
+                    min="0.00"
+                    id="endExp"
+/>
+</div>
+
+
 
 </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from "vue";
+import { computed, defineComponent, ref, BootstrapVue } from "vue";
 import monsterData from "~/data/monsterData.json";
 import { monsterWeight } from "~/composables/SweetSpotWeight";
 
@@ -158,14 +224,36 @@ export default defineComponent({
 			}
 		})
 
+		const monstEXPMul = computed(() => {
+			// Make sure the user selected something
+			if (curEXPMonst.value == "None") return 1;
+
+			// JSON monster names have underscores instead of spaces
+			let monstName = curEXPMonst.value.replace(/ /g, "_");
+
+			// Only calculate the multiplier if it's larger than the Wiki EXP
+			if( monsters[monstName].exp > ingameEXPMonst.value) return 1;
+			return  ingameEXPMonst.value / monsters[monstName].exp;
+		})
+
 		const accuracy = ref(2);
 		const critChance = ref(0);
 		const critDmg = ref(1.00);
-		const expMul = ref(1);
 
 		const charClass = ref("None");
 		const charSkill1 = ref(0);
 		const charSkill2 = ref(0);
+
+		const curEXPMonst = ref("None");
+		const ingameEXPMonst = ref(0);
+	
+		/* For EXP Calculator */
+		const charLevel = ref(1);
+		const startExpTime = ref("");
+		const startExp = ref("0.00");
+		const endExpTime = ref("");
+		const endExp = ref("0.00");
+		
 
 		// For multi-hit talents
 		const idleClasses = [
@@ -175,6 +263,72 @@ export default defineComponent({
 			"Mage",
 			"Journeyman"
 		];
+		
+		const expNextLevel = (level): number => {
+			// Calculation taken from the Idleon toolbox
+			let H = 15 + Math.pow(level, 1.9);	
+			let W = 1.208 - Math.min(0.164, (0.215*level)/(level + 100));
+
+			// I have no clue why Lava chose this formula
+			return (H + 11*level)*Math.pow(W,level) - 15;
+		}
+	
+		const timeToLevel = (): number => {
+			var timeStart = new Date("01/01/2007 " + startExpTime.value);
+			var timeEnd = new Date("01/01/2007 " + endExpTime.value);
+			console.log(timeStart);
+			console.log(timeEnd);
+		
+			var hourDiff = timeEnd - timeStart;
+			if(hourDiff < 0) hourDiff = 24 + hourDiff;
+
+
+			let curStart = expNextLevel(charLevel.value)*startExp.value/100;
+			let expReq = expNextLevel(charLevel.value);
+			let endExpReq = 0;
+			let curEnd = 0;
+			let expFarmed = 0;
+
+			// Assume they leveled up if their ending EXP is lower than the starting one
+			if(endExp.value < startExp.value) {
+				curEnd = expNextLevel(charLevel.value + 1)*endExp.value/100;
+
+				// If they leveled up, EXP required is for 1 level higher.
+				endExpReq = expNextLevel(charLevel.value + 1);
+
+				// Obtain the difference from their starting point to the level up
+				let exp1 = expReq - expReq*startExp.value/100;
+			
+				// Obtain how much they earned since their level up
+				let exp2 = curEnd;
+				console.log("exp1 :" + exp1);
+				console.log("exp2 :" + exp2);
+				console.log("+1 " + expNextLevel(charLevel.value + 1));
+				expFarmed = exp1 + exp2;
+			}
+			else {
+				// Current EXP of player
+				curEnd = expNextLevel(charLevel.value)*endExp.value/100;
+				// If they didn't level up, the EXP required is the one
+				// needed for the original level
+				endExpReq = expReq;
+				expFarmed = curEnd - curStart;
+			}
+
+	
+			hourDiff = hourDiff / 60 / 60 / 1000;
+			let expHr = expFarmed / hourDiff;
+			let remainTime = (endExpReq - curEnd) / expHr;
+
+			console.log("hourDiff " + hourDiff);
+			console.log("curStart " + curStart);
+			console.log("curEnd " + curEnd);
+			console.log("ExpFarmed " + expFarmed);
+			console.log("Remaing to farm" + (expReq - curEnd));
+			console.log("exp/Hr " + expHr);
+
+			return [remainTime,expHr];
+		}
 
 		const chanceToHit = (monster: Monster): number  => {
 			// Prevent high integer calculations so that my computer fans calm down 
@@ -250,7 +404,9 @@ export default defineComponent({
 		}
 
 		const monsterExpMul = (monster: Monster): number => {
-			return monster.exp*expMul.value;
+			//console.log(ingameEXPMonst.value);
+			//console.log(monstEXPMul.value);
+			return monster.exp*monstEXPMul.value;
 		}
 
 		const expPerSwing = (monster: Monster): number => {
@@ -272,8 +428,13 @@ export default defineComponent({
 
 
 		return { 
-		monsters, monsterWeight, minDmg, maxDmg, multiplier, accuracy, critChance, critDmg, expMul, 
-		charClass, charSkill1, charSkill2, idleClasses,
+		monsters, monsterWeight, minDmg, maxDmg, multiplier, monstEXPMul,
+		accuracy, critChance, critDmg, curEXPMonst, ingameEXPMonst, 
+		charClass, charSkill1, charSkill2, 
+
+		startExpTime, startExp, endExpTime, endExp, charLevel, idleClasses,
+		expNextLevel, timeToLevel,
+
 		chanceToHit, avgSwingToHit, minHitToKill, maxHitToKill, avgHitToKill,
 		avgSwingToKill, monsterExpMul, expPerSwing, bestMob };
 	},
