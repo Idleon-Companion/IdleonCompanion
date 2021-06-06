@@ -8,8 +8,7 @@
 		"accLow" : "1",
 		"accHigh" : "2",
 		"respawnRate" : "35",
-		"numMobs" : "14",
-		"fWeight" : "7"
+		"numMobs" : "14"
 	},
 	"Frog": {
 		"name": "Frog",
@@ -19,7 +18,6 @@
 		"accLow" : "1",
 		"accHigh" : "3",
 		"respawnRate" : "40",
-		"numMobs" : "34",
-		"fWeight" : "21"
+		"numMobs" : "34"
 	}
 }
