@@ -26,6 +26,9 @@ export const Skills = [
   "Fishing",
   "Alchemy",
   "Catching",
+  "Trapping",
+  "Construction",
+  "Worship",
 ];
 
 // Characters keep track of individual data

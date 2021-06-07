@@ -48,12 +48,20 @@
         "bagSlots": 2
       },
       {
+        "name": "Mamooth Hide Bag",
+        "bagSlots": 1
+      },
+      {
         "name": "Blunderbag",
         "bagSlots": 4
       },
       {
         "name": "Sandy Satchel",
         "bagSlots": 4
+      },
+      {
+        "name": "Shivering Sack",
+        "bagSlots": 3
       },
       {
         "name": "Bummo Bag",
@@ -136,6 +144,10 @@
         "cycle": "Materials Pouch"
       },
       {
+        "name": "Large Materials Pouch",
+        "cycle": "Materials Pouch"
+      },
+      {
         "name": "Miniature Mining Pouch",
         "cycle": "Mining Pouch"
       },
@@ -157,6 +169,10 @@
       },
       {
         "name": "Big Mining Pouch",
+        "cycle": "Mining Pouch"
+      },
+      {
+        "name": "Large Mining Pouch",
         "cycle": "Mining Pouch"
       },
       {
@@ -184,6 +200,10 @@
         "cycle": "Fishing Pouch"
       },
       {
+        "name": "Large Fish Pouch",
+        "cycle": "Fishing Pouch"
+      },
+      {
         "name": "Miniscule Food Pouch",
         "cycle": "Food Pouch"
       },
@@ -205,6 +225,10 @@
       },
       {
         "name": "Big Food Pouch",
+        "cycle": "Food Pouch"
+      },
+      {
+        "name": "Large Food Pouch",
         "cycle": "Food Pouch"
       },
       {
@@ -232,6 +256,10 @@
         "cycle": "Choppin Pouch"
       },
       {
+        "name": "Large Choppin Pouch",
+        "cycle": "Choppin Pouch"
+      },
+      {
         "name": "Miniature Bug Pouch",
         "cycle": "Bug Pouch"
       },
@@ -254,6 +282,42 @@
       {
         "name": "Big Bug Pouch",
         "cycle": "Bug Pouch"
+      },
+      {
+        "name": "Large Bug Pouch",
+        "cycle": "Bug Pouch"
+      },
+      {
+        "name": "Small Critter Pouch",
+        "cycle": "Critter Pouch"
+      },
+      {
+        "name": "Sizable Critter Pouch",
+        "cycle": "Critter Pouch"
+      },
+      {
+        "name": "Big Critter Pouch",
+        "cycle": "Critter Pouch"
+      },
+      {
+        "name": "Large Critter Pouch",
+        "cycle": "Critter Pouch"
+      },
+      {
+        "name": "Small Soul Pouch",
+        "cycle": "Soul Pouch"
+      },
+      {
+        "name": "Sizable Soul Pouch",
+        "cycle": "Soul Pouch"
+      },
+      {
+        "name": "Big Soul Pouch",
+        "cycle": "Soul Pouch"
+      },
+      {
+        "name": "Large Soul Pouch",
+        "cycle": "Soul Pouch"
       }
     ]
   },
@@ -305,6 +369,24 @@
       },
       {
         "name": "Storage Chest 15"
+      },
+      {
+        "name": "Storage Chest 16"
+      },
+      {
+        "name": "Storage Chest 17"
+      },
+      {
+        "name": "Storage Chest 18"
+      },
+      {
+        "name": "Storage Chest 19"
+      },
+      {
+        "name": "Storage Chest 20"
+      },
+      {
+        "name": "Storage Chest 21"
       },
       {
         "name": "Storage Chest 90"

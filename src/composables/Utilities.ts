@@ -170,9 +170,11 @@ export enum Effects {
   FishingExp = "% Fishing EXP",
   FishingPower = "% Fishing Power",
   WorshipCharge = "% Max Charge",
+  WoorshipBase = "Base Worship Power",
   TrappingShiny = "% Shiny Critter Chance",
   TrappingEfficiency = "% Trapping Efficiency",
   TrappingExp = "% Trapping EXP",
+  TrappingBase = "Base Trapping Power",
   // FishingSpeed = "% Fishing Speed",
   CatchingAfk = "% Catching Away Gains",
   CatchingBase = "Base Catching Power",
@@ -183,5 +185,6 @@ export enum Effects {
   ProductionSpeed = "% Total Production Speed",
   AlchemyExp = "% Alchemy EXP",
   CogSpeed = "% Cog Build Spd (Passive)",
+  ConstructionExp = "% Construction Exp",
   ShrineEffect = "% Shrine Effects"  
 }
