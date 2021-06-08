@@ -1,7 +1,7 @@
 import checklistData from "./data/checklist.json";
 import { version } from "../package.json";
 import { createGlobalState, useStorage } from "@vueuse/core";
-import { ref } from "vue";
+import { ref, toRef } from "vue";
 import { useToast } from "vue-toastification";
 import { AlchemyData } from "~/composables/Alchemy";
 import { Task } from "~/composables/Progress";
@@ -31,8 +31,8 @@ export const useState = createGlobalState(() =>
 );
 
 export function versionControl() {
-  let savedVersion = localStorage.getItem("version");
   const state = useState();
+  let savedVersion = localStorage.getItem("version");
   // Perform version controlling here
   if (savedVersion !== null) {
     // Consider all previous stored data invalid
@@ -76,6 +76,7 @@ export function versionControl() {
 
 // Firebase Initialization
 import firebase from "firebase/app";
+import "firebase/auth";
 import "firebase/database";
 
 const firebaseConfig = {
@@ -92,11 +93,11 @@ const firebaseConfig = {
 // Initialize Firebase
 type UserState = firebase.User | null;
 const firebaseApp = firebase.initializeApp(firebaseConfig);
+const auth = firebaseApp.auth();
+auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
 const user = ref(null as UserState);
 
 export const useAuth = () => {
-  const auth = firebaseApp.auth();
-  auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
   user.value = auth.currentUser;
   const db = firebaseApp.database();
 
@@ -116,7 +117,7 @@ export const useAuth = () => {
       .then((snapshot) => {
         if (snapshot.exists()) {
           const data = JSON.parse(snapshot.val());
-          state.value = data;
+          state.value = toRef(data);
           // Ensure cloud data is up to date!
           versionControl();
           // Load characters as class instances
