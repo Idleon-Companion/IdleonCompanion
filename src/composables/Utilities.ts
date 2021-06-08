@@ -79,11 +79,6 @@ export class Assets {
     if (role === "") {
       image = "empty";
     }
-    if (slot >= 11 && slot < 15) {
-      if (["sqr", "hun", "wiz"].includes(role)) {
-        image = role + "-filler";
-      }
-    }
     return `assets/talents/${image}.png`;
   }
 }
