@@ -146,8 +146,14 @@ export default defineComponent({
     onMounted(() => updateTasks());
 
     const state = useState();
-    const tasks = state.value.tasks.tasks;
-    const dailyReset = state.value.tasks.dailyReset;
+    const tasks = computed({
+      get: () => state.value.tasks.tasks,
+      set: (value) => (state.value.tasks.tasks = value),
+    });
+    const dailyReset = computed({
+      get: () => state.value.tasks.dailyReset,
+      set: (value) => (state.value.tasks.dailyReset = value),
+    });
 
     const loadDefaultTasks = () => {
       // Load default task data and reset all timers
@@ -159,8 +165,8 @@ export default defineComponent({
           tags: ["Default"],
           sync: true,
         };
-        if (tasks.filter((x) => x.text === task.task).length === 0) {
-          tasks.push(t);
+        if (tasks.value.filter((x) => x.text === task.task).length === 0) {
+          tasks.value.push(t);
         }
       }
     };
@@ -173,7 +179,7 @@ export default defineComponent({
     const setOffsetTime = () => {
       curTime.value = dayjs().valueOf();
       // Calculate offset from daily reset time
-      let daily = dailyReset.split(":");
+      let daily = dailyReset.value.split(":");
       let offset = dayjs()
         .startOf("day")
         .subtract(curTime.value)
@@ -209,13 +215,13 @@ export default defineComponent({
     };
 
     const tasksCompleted = computed(() => {
-      return tasks.filter((x) => isTaskComplete(x)).length;
+      return tasks.value.filter((x) => isTaskComplete(x)).length;
     });
 
     const progressBar = ref();
     const updateTasks = () => {
       progressBar.value.style.width = `${
-        (tasksCompleted.value / tasks.length) * 100
+        (tasksCompleted.value / tasks.value.length) * 100
       }%`;
     };
 
@@ -246,14 +252,14 @@ export default defineComponent({
           : [],
         sync: newTask.sync,
       };
-      tasks.push(t);
+      tasks.value.push(t);
       newTask.text = "";
       newTask.categories = "";
       updateTasks();
     };
 
     const removeTask = (i: number) => {
-      tasks.splice(i, 1);
+      tasks.value.splice(i, 1);
       updateTasks();
     };
 

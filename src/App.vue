@@ -3,11 +3,13 @@
 </template>
 
 <script lang="ts">
+import firebase from "firebase/app";
+import "firebase/auth";
 import { defineComponent, onMounted, watchEffect } from "vue";
 import Home from "~/pages/Home.vue";
 
 import { useCharacters } from "~/composables/Characters";
-import { versionControl, useState } from "./State";
+import { firebaseApp, versionControl, useState } from "./State";
 
 import "~/styles/base.sass";
 import "~/styles/progress.sass";
@@ -19,6 +21,8 @@ export default defineComponent({
   },
   setup() {
     onMounted(versionControl);
+    // Ensure Firebase is persistent (prevents repeated sign in)
+    firebaseApp.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
     // State for storage/persistence
     const state = useState();
     const { characters, createCharactersFromData } = useCharacters();

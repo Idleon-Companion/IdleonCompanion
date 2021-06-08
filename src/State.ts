@@ -31,8 +31,8 @@ export const useState = createGlobalState(() =>
 );
 
 export function versionControl() {
-  let savedVersion = localStorage.getItem("version");
   const state = useState();
+  let savedVersion = localStorage.getItem("version");
   // Perform version controlling here
   if (savedVersion !== null) {
     // Consider all previous stored data invalid
@@ -76,6 +76,7 @@ export function versionControl() {
 
 // Firebase Initialization
 import firebase from "firebase/app";
+import "firebase/auth";
 import "firebase/database";
 
 const firebaseConfig = {
@@ -91,12 +92,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 type UserState = firebase.User | null;
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+export const firebaseApp = firebase.initializeApp(firebaseConfig);
+const auth = firebaseApp.auth();
 const user = ref(null as UserState);
 
 export const useAuth = () => {
-  const auth = firebaseApp.auth();
-  auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
   user.value = auth.currentUser;
   const db = firebaseApp.database();
 
@@ -117,6 +117,7 @@ export const useAuth = () => {
         if (snapshot.exists()) {
           const data = JSON.parse(snapshot.val());
           state.value = data;
+          console.log("State.value:", state.value);
           // Ensure cloud data is up to date!
           versionControl();
           // Load characters as class instances
