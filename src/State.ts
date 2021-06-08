@@ -1,7 +1,7 @@
 import checklistData from "./data/checklist.json";
 import { version } from "../package.json";
 import { createGlobalState, useStorage } from "@vueuse/core";
-import { ref, toRef } from "vue";
+import { ref } from "vue";
 import { useToast } from "vue-toastification";
 import { AlchemyData } from "~/composables/Alchemy";
 import { Task } from "~/composables/Progress";
@@ -92,9 +92,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 type UserState = firebase.User | null;
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+export const firebaseApp = firebase.initializeApp(firebaseConfig);
 const auth = firebaseApp.auth();
-auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
 const user = ref(null as UserState);
 
 export const useAuth = () => {
@@ -117,7 +116,8 @@ export const useAuth = () => {
       .then((snapshot) => {
         if (snapshot.exists()) {
           const data = JSON.parse(snapshot.val());
-          state.value = toRef(data);
+          state.value = data;
+          console.log("State.value:", state.value);
           // Ensure cloud data is up to date!
           versionControl();
           // Load characters as class instances
