@@ -11,10 +11,13 @@
     </div>
   </div>
   <div class="row justify-content-center" v-if="curCharacter === null">
-    <h4 class="text-light d-flex justify-content-center">
+    <h4 class="text-light flex justify-center">
       You have no characters. Add new ones below!
     </h4>
-    <button class="btn-lg btn-dark mt-2 w-25" @click="newCharacter">
+    <button
+      class="btn-lg btn-dark mt-2 w-1/4 flex items-center justify-center"
+      @click="newCharacter"
+    >
       <div class="iconify" data-icon="mdi-plus"></div>
       New Character
     </button>
@@ -22,9 +25,11 @@
   <div v-else>
     <div class="char-editor bg-primary p-3 rounded">
       <div class="d-flex justify-content-between">
-        <h2 class="text-light">Editing {{ curCharacter.name || "No Name" }}</h2>
-        <div class="btn-group">
-          <button class="btn btn-dark" @click="newCharacter">
+        <div class="text-light h3">
+          Editing {{ curCharacter.name || "No Name" }}
+        </div>
+        <div class="btn-group flex">
+          <button class="btn btn-dark flex items-center" @click="newCharacter">
             <div class="iconify" data-icon="mdi-plus"></div>
             New Character
           </button>
@@ -33,9 +38,9 @@
           </button>
         </div>
       </div>
-      <div class="d-flex align-items-center flex-wrap">
+      <div class="flex flex-wrap">
         <img
-          class="char-class-img border border-secondary me-3"
+          class="char-class-img border border-secondary me-3 mt-3"
           :src="Assets.CharImage(curCharacter)"
           data-bs-toggle="modal"
           data-bs-target="#char-class-selector"
@@ -100,7 +105,7 @@
             </div>
           </div>
         </div>
-        <div class="d-flex flex-column">
+        <div class="flex flex-col">
           <label for="char-name">Name</label>
           <input
             id="char-name"
@@ -121,26 +126,28 @@
           />
           <div class="total-level">Total Level: {{ totalCharLevel }}</div>
         </div>
-        <div class="d-flex flex-wrap flex-column ms-2">
-          <label>Skills</label>
-          <div
-            v-for="(level, skill) in curCharacter.skills"
-            :key="skill"
-            class="char-skill mb-1"
-          >
-            <GameAsset
-              class="char-skill-img me-2"
-              :image="Assets.IconImage(skill)"
-              :title="skill"
-            />
-            <input
-              v-if="curCharacter !== null"
-              :id="'char-skill-' + skill"
-              class="char-input skill-input"
-              type="number"
-              :min="0"
-              v-model.number="curCharacter.skills[skill]"
-            />
+        <div class="w-1/4 ml-2">
+          <label class="pl-2">Skills</label>
+          <div class="flex flex-wrap">
+            <div
+              v-for="(level, skill) in curCharacter.skills"
+              :key="skill"
+              class="char-skill flex items-center mb-1"
+            >
+              <GameAsset
+                class="char-skill-img ml-2 mr-1"
+                :image="Assets.IconImage(skill)"
+                :title="skill"
+              />
+              <input
+                v-if="curCharacter !== null"
+                :id="'char-skill-' + skill"
+                class="char-input skill-input"
+                type="number"
+                :min="0"
+                v-model.number="curCharacter.skills[skill]"
+              />
+            </div>
           </div>
         </div>
         <div v-if="user === null" class="ms-auto">
@@ -182,7 +189,8 @@
           </div>
         </div>
       </div>
-      <statues-section />
+      <StatuesSection />
+      <Constellations />
     </div>
   </div>
 </template>
@@ -193,10 +201,11 @@ import { useToast } from "vue-toastification";
 
 import CharacterCard from "~/components/CharacterCard.vue";
 import CloudData from "~/components/CloudData.vue";
+import Constellations from "~/components/Constellations.vue";
 import GameAsset from "~/components/GameAsset.vue";
 import {
-  Class,
   Character,
+  Class,
   Skills,
   Subclass,
   useCharacters,
@@ -212,6 +221,7 @@ export default defineComponent({
   components: {
     CharacterCard,
     CloudData,
+    Constellations,
     GameAsset,
     StatuesSection,
   },

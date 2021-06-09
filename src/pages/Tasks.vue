@@ -11,7 +11,7 @@
   <div class="row mx-0 text-light">
     <div class="bg-primary rounded p-3 m-0 d-flex row">
       <div class="d-flex align-items-end justify-content-between">
-        <h4>Add New Task</h4>
+        <div class="h4">Add New Task</div>
         <button
           class="btn btn-info text-light p-2 mt-2"
           @click="loadDefaultTasks"

@@ -13,18 +13,18 @@
       :key="category"
       class="progress-group"
     >
-      <div class="progress-category text-light col-12 col-md-6 my-3">
+      <div class="progress-category text-light col-12 col-md-6 my-1">
         {{ category }}
       </div>
       <div class="progress-items">
         <div v-for="(item, i) in data.items" :key="i">
           <div class="progress-item">
             <GameAsset
-              class="m-1"
+              class="mx-1"
               :height="64"
               :title="item.name"
               :image="Assets.FromDir(item.name, data.assetDir)"
-              :data-enabled="checklist[item.name]"
+              :enabled="checklist[item.name]"
               @click="handleProgressCheck(item.name)"
             >
               <template #tooltip>
@@ -47,7 +47,7 @@
               :height="72"
               :title="cardText(card)"
               :image="Assets.CardImage(card.id)"
-              :data-enabled="cards[card.id] !== 0"
+              :enabled="cards[card.id] !== 0"
               @click="handleCardClick(card.id, +1)"
               @contextmenu.prevent="handleCardClick(card.id, -1)"
             >
@@ -129,7 +129,11 @@ export default defineComponent({
     // Input handlers
     const CARD_TIERS = 5;
     const handleCardClick = (id: string, amount: number) => {
-      state.value.cards[id] = (state.value.cards[id] + amount) % CARD_TIERS;
+      let cardTier = (state.value.cards[id] + amount) % CARD_TIERS;
+      if (cardTier < 0) {
+        cardTier = CARD_TIERS - 1;
+      }
+      state.value.cards[id] = cardTier;
     };
     const handleProgressCheck = (item: string) => {
       checklist.value[item] = !checklist.value[item];

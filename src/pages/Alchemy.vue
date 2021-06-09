@@ -19,9 +19,12 @@
           />
           <input
             class="col-4"
-            v-model.number="alchemy.upgrades[color][n - 1]"
             type="number"
             :min="0"
+            :value="alchemy.upgrades[color][n - 1]"
+            @change="
+              (e) => (alchemy.upgrades[color][n - 1] = parseInt(e.target.value))
+            "
           />
         </div>
       </div>

@@ -105,8 +105,7 @@ export class Text {
   }
 }
 
-export enum Effects {
-  // Base
+enum BaseEffects {
   BaseDamage = "Base Damage",
   BaseDefense = "Base Defense",
   BaseAccuracy = "Base Accuracy",
@@ -119,7 +118,9 @@ export enum Effects {
   MoveSpeed = "Move Speed",
   WeaponPower = "Weapon Power",
   MinimumDamage = "Minimum Damage",
-  // Multiplier
+}
+
+enum MultiplierEffects {
   FightingAfk = "% Fighting AFK Gain Rate",
   DoubleAfkChance = "% Double AFK Claim Chance",
   CritChance = "% Crit Chance",
@@ -136,13 +137,17 @@ export enum Effects {
   BoostFoodEffect = "% Boost Food Effect",
   NoFoodConsume = "% To not consume Food",
   DropRate = "% Total Drop Rate",
-  // Class Exp
+}
+
+enum ClassAndMonsterEffects {
   ClassExp = "% Class Exp",
   ExpConversion = "% EXP Conversion (Talent)",
   MonsterExpActive = "% Monster EXP (Active)",
   MonsterExp = "% Monster EXP",
   MonsterMoney = "% Money from Monsters",
-  // Skills
+}
+
+enum SkillEffects {
   SkillAfk = "% Skill AFK Gain Rate",
   SkillExp = "% Skill EXP",
   SmithingEfficiency = "% Total Smithing Efficiency",
@@ -176,10 +181,23 @@ export enum Effects {
   CatchingEfficiency = "% Total Catching Efficiency",
   CatchingExp = "% Catching EXP",
   CatchingPower = "% Catching Power",
-  // Passive Skills
+}
+
+enum PassiveEffects {
   ProductionSpeed = "% Total Production Speed",
   AlchemyExp = "% Alchemy EXP",
   CogSpeed = "% Cog Build Spd (Passive)",
   ConstructionExp = "% Construction Exp",
-  ShrineEffect = "% Shrine Effects"  
+  ShrineEffect = "% Shrine Effects",
 }
+
+export const Effects = {
+  ...BaseEffects,
+  ...MultiplierEffects,
+  ...ClassAndMonsterEffects,
+  ...SkillEffects,
+  ...PassiveEffects,
+};
+
+type ValueOf<T> = T[keyof T];
+export type EffectData = ValueOf<typeof Effects>;

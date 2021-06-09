@@ -1,4 +1,4 @@
-import { Effects } from "./Utilities";
+import { Effects, EffectData } from "./Utilities";
 
 export enum CardCategory {
   BlunderHills = "Blunder Hills",
@@ -13,7 +13,7 @@ export enum CardCategory {
 export type Card = {
   id: string;
   category: CardCategory;
-  effect: Effects;
+  effect: EffectData;
   base: number;
   source?: string;
 };

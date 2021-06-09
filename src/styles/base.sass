@@ -2,6 +2,10 @@
 @import './variables.sass'
 @import '../../node_modules/bootstrap/scss/bootstrap.scss'
 
+@tailwind base
+@tailwind components
+@tailwind utilities
+
 body
   background: rgb(31, 20, 21) url('../assets/bg/night_desert.png') no-repeat center center fixed
   -webkit-background-size: cover
@@ -14,6 +18,19 @@ body
 [data-enabled='false']
   opacity: 0.5
   filter: grayscale(1)
+
+h1
+  font-size: 2.5rem
+h2
+  font-size: 2rem
+h3
+  font-size: 1.75rem
+h4
+  font-size: 1.5rem
+h5
+  font-size: 1.25rem
+h6
+  font-size: 1rem
 
 th
   > img
@@ -67,7 +84,7 @@ button
       color: white
 
 #calc
-  background-color: rgba(28, 30, 34,0.7)
+  background-color: rgba(28, 30, 34, 0.7)
   border-radius: 5px
 
 .jumbotron
