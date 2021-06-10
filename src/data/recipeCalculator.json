@@ -2589,7 +2589,7 @@
       },
       {
         "name": "Leather Hide",
-        "quantity": 400,
+        "quantity": 2500,
         "indent": 0
       },
       {
@@ -4424,7 +4424,7 @@
       },
       {
         "name": "Leather Hide",
-        "quantity": 800,
+        "quantity": 5000,
         "indent": 1
       },
       {
@@ -5649,7 +5649,7 @@
       },
       {
         "name": "Leather Hide",
-        "quantity": 2400,
+        "quantity": 15000,
         "indent": 2
       },
       {
@@ -7453,8 +7453,13 @@
         "indent": 0
       },
       {
-        "name": "Copper Ore",
-        "quantity": 22,
+        "name": "Melty Cube",
+        "quantity": 2000,
+        "indent": 0
+      },
+      {
+        "name": "Yellow Snowflake",
+        "quantity": 3,
         "indent": 0
       }
     ]
