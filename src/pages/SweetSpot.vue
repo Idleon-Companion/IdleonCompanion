@@ -1,61 +1,28 @@
-	<template>
+<template>
+<div class="row">
+    <div>
+      <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+	A tool to give your top 3 <u>active</u> farming spots! The tool takes into account respawn time,
+	map complexity, and number of monsters on the map. <u>Active gains will not be the same as your AFK gains!</u>
+      </p>
+    </div>
+  </div>
 <div class="text-light bg-primary rounded mt-2 p-4 w-100">
-<table class="sweetspot_table">
-	<thead>
-	<tr>
-		<th scope="col">Name</th>
-	      <th scope="col">HP</th>
-	      <th scope="col">Chance to hit %</th>	
-	      <th scope="col">Avg Swings to kill</th>	
-	      <th scope="col">Monster EXP</th>	
-	      <th scope="col">Monster EXP with multiplier </th>	
-	      <th scope="col">EXP per Swing</th>	
-	      <th scope="col">Weight</th>	
-	      <th scope="col">Best Mob</th>	
-	</tr>
-	</thead>
-	<tbody>
-	<tr
-		v-for="monster in monsters"
-		:key="monster.name"
-	>
-		<td>{{monster.name}}</td>
-		<td>{{monster.health}}</td>
-		<td>{{chanceToHit(monster).toFixed(2)}}</td>
-		<td>{{avgSwingToKill(monster).toFixed(2)}}</td>
-		<td>{{monster.exp}}</td>
-		<td>{{monsterExpMul(monster).toFixed(2)}}</td>
-		<td>{{expPerSwing(monster).toFixed(2)}}</td>
-		<td>{{monsterWeight[monster.name][charClass]}}</td>
-		<td>{{bestMob(monster).toFixed(4)}}</td>
-	</tr>
-	</tbody>
-</table>
 <div>
-<label for="min-dmg" class="h5 m-2 ms-0">Minimum Damage</label>
+<label for="min-dmg" class="h5 m-2 ms-0">Damage</label>
 <input
                     v-model.number="minDmg"
                     type="number"
                     min="1"
                     id="min-dmg"
-                  /></div>
-<div>
-<label for="max-dmg" class="h5 m-2 ms-0">Maximum Damage</label>
+		    placeholder="Minimum Damage"
+                  /> -- 
 <input
                     v-model.number="maxDmg"
                     type="number"
                     min="1"
                     id="max-dmg"
-/>
-</div>
-
-<div>
-<label for="acc" class="h5 m-2 ms-0">Accuracy</label>
-<input
-                    v-model.number="accuracy"
-                    type="number"
-                    min="2"
-                    id="acc"
+		    placeholder="Maximum Damage"
 />
 </div>
 
@@ -66,6 +33,7 @@
                     type="float"
                     min="0.00"
                     id="critC"
+		    placeholder="Crit Chance Percent"
 />
 </div>
 
@@ -76,13 +44,26 @@
                     type="float"
                     min="1.00"
                     id="critD"
+		    placeholder="Crit Damage Multiplier"
+/>
+</div>
+
+
+<div>
+<label for="acc" class="h5 m-2 ms-0">Accuracy</label>
+<input
+                    v-model.number="accuracy"
+                    type="number"
+                    min="2"
+                    id="acc"
+		    placeholder=""
 />
 </div>
 
 
 
-
 <div class="input-group">
+<label for="charSelector" class="h5 m-2 ms-0">Subclass</label>
         <select v-model="charClass" class="" id="charSelector">
           <option v-for="idleClass in idleClasses">
             {{ idleClass }}
@@ -112,6 +93,7 @@
 
 
 <div class="input-group">
+<label for="monstSelector" class="h5 m-2 ms-0">Currently Farming</label>
         <select v-model="curEXPMonst" class="" id="monstSelector">
           <option v-for="monster in monsters" :key="monster.name">
             {{ monster.name }}
@@ -127,6 +109,7 @@
                     type="number"
                     min="1"
                     id="expMonst"
+		    placeholder=""
 />
 </div>
 
@@ -137,10 +120,7 @@
                     type="number"
                     min="1"
                     id="cLevel"
-/> <br>
-Required EXP for Level Up: {{ expNextLevel(charLevel).toFixed(0) }}
-<br>Hours to next level: {{ timeToLevel()[0] }}
-<br>EXP per hour {{ timeToLevel()[1] }}
+/> 
 </div>
 <div>
     <label for="startTime" class="h5 m-2 ms-0">Starting Time</label>
@@ -150,7 +130,7 @@ Required EXP for Level Up: {{ expNextLevel(charLevel).toFixed(0) }}
         type="text"
         placeholder="HH:mm"
       />
-<label for="startExp" class="h5 m-2 ms-0">Start EXP%</label>
+<label for="startExp" class="h5 m-2 ms-0">&nbsp; Start EXP%</label>
 <input
                     v-model.number="startExp"
                     type="float"
@@ -167,22 +147,70 @@ Required EXP for Level Up: {{ expNextLevel(charLevel).toFixed(0) }}
         type="text"
         placeholder="HH:mm"
       />
-<label for="endExp" class="h5 m-2 ms-0">End EXP%</label>
+<label for="endExp" class="h5 m-2 ms-0">&nbsp; End EXP%</label>
 <input
                     v-model.number="endExp"
                     type="float"
                     min="0.00"
                     id="endExp"
 />
+<br>
+Required EXP for Level Up: {{ expNextLevel(charLevel).toFixed(0) }}
+<br>Hours to next level: {{ timeToLevel()[0] }}
+<br>EXP per hour {{ timeToLevel()[1] }}
 </div>
 
+Your top three spots are<br>
+{{bestThreeMobs[0]}}<br>
+{{bestThreeMobs[1]}}<br>
+{{bestThreeMobs[2]}}
+<div>
+<a-collapse v-model="activeKey">
+<a-collapse-panel key="1" header="More Details">
+<table class="sweetspot_table">
+	<thead>
+	<tr>
+		<th scope="col">Name</th>
+	      <th scope="col">HP</th>
+	      <th scope="col">Chance to hit %</th>	
+	      <th scope="col">Avg Swings to kill</th>	
+	      <th scope="col">Monster EXP</th>	
+	      <th scope="col">Monster EXP with multiplier </th>	
+	      <th scope="col">EXP per Swing</th>	
+	      <th scope="col">Weight</th>	
+	      <th scope="col">Best Mob</th>	
+	</tr>
+	</thead>
+	<tbody>
+	<tr
+		v-for="monster in monsters"
+		:key="monster.name"
+	>
+		<td>{{monster.name}}</td>
+		<td>{{monster.health}}</td>
+		<td>{{chanceToHit(monster).toFixed(2)}}</td>
+		<td>{{avgSwingToKill(monster).toFixed(2)}}</td>
+		<td>{{monster.exp}}</td>
+		<td>{{monsterExpMul(monster).toFixed(2)}}</td>
+		<td>{{expPerSwing(monster).toFixed(2)}}</td>
+		<td>{{monsterWeight[monster.name][charClass]}}</td>
+		<td>{{bestMobArray[monster.name]}}</td> 
+	</tr> 
+	</tbody>
+</table>
+   <a-collapse-panel key="2" header="This is panel header 2" :disabled="false">
+        <p>Test</p>
+   </a-collapse-panel>
+</a-collapse-panel>
+</a-collapse>
+</div>
 
 
 </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref, BootstrapVue } from "vue";
+import { computed, defineComponent, ref } from "vue";
 import monsterData from "~/data/monsterData.json";
 import { monsterWeight } from "~/composables/SweetSpotWeight";
 
@@ -202,8 +230,9 @@ export default defineComponent({
 	name: "SweetSpot",
 	setup() {
 		const monsters: Record<string, Monster> = monsterData;
-		const minDmg = ref(1);
-		const maxDmg = ref(2);
+		const activeKey = ref('1');
+		const minDmg = ref("1");
+		const maxDmg = ref("2");
 		
 		// Code for double-hit skills
 		const multiplier = computed(() => {
@@ -229,30 +258,31 @@ export default defineComponent({
 			if (curEXPMonst.value == "None") return 1;
 
 			// JSON monster names have underscores instead of spaces
-			let monstName = curEXPMonst.value.replace(/ /g, "_");
+			let monstName = curEXPMonst.value;
 
 			// Only calculate the multiplier if it's larger than the Wiki EXP
 			if( monsters[monstName].exp > ingameEXPMonst.value) return 1;
 			return  ingameEXPMonst.value / monsters[monstName].exp;
 		})
 
-		const accuracy = ref(2);
-		const critChance = ref(0);
-		const critDmg = ref(1.00);
+	
+		const accuracy = ref("2");
+		const critChance = ref("17.9");
+		const critDmg = ref("1.43");
 
 		const charClass = ref("None");
-		const charSkill1 = ref(0);
-		const charSkill2 = ref(0);
+		const charSkill1 = ref("41");
+		const charSkill2 = ref("0");
 
 		const curEXPMonst = ref("None");
-		const ingameEXPMonst = ref(0);
+		const ingameEXPMonst = ref("");
 	
 		/* For EXP Calculator */
-		const charLevel = ref(1);
+		const charLevel = ref("");
 		const startExpTime = ref("");
-		const startExp = ref("0.00");
+		const startExp = ref("");
 		const endExpTime = ref("");
-		const endExp = ref("0.00");
+		const endExp = ref("");
 		
 
 		// For multi-hit talents
@@ -263,7 +293,31 @@ export default defineComponent({
 			"Mage",
 			"Journeyman"
 		];
-		
+
+		const bestMobArray = computed(() => {
+			let dict = {};
+			/*for(const [key, monster] of Object.entries(monsters)){
+				let curMobCalc = bestMob(monster);		
+				dict[monster.name] = curMobCalc;
+			}*/
+			return dict;
+		})
+	
+		const bestThreeMobs = computed(() => {
+			let dict = bestMobArray;
+			//Get the number of keys - easy using the array 'length' property
+		/*	var keys = Object.keys(dict);
+			let i, len = keys.length; 
+			keys.sort();
+					var sortedDict = [];
+			for (i = 0; i < 3; i++){
+			    let k = keys[i];
+			    sortedDict.push({'key': k, 'value':dict[k]});
+			}
+			return sortedDict;*/
+			return 0;
+		})		
+
 		const expNextLevel = (level): number => {
 			// Calculation taken from the Idleon toolbox
 			let H = 15 + Math.pow(level, 1.9);	
@@ -276,8 +330,8 @@ export default defineComponent({
 		const timeToLevel = (): number => {
 			var timeStart = new Date("01/01/2007 " + startExpTime.value);
 			var timeEnd = new Date("01/01/2007 " + endExpTime.value);
-			console.log(timeStart);
-			console.log(timeEnd);
+			//console.log(timeStart);
+			//console.log(timeEnd);
 		
 			var hourDiff = timeEnd - timeStart;
 			if(hourDiff < 0) hourDiff = 24 + hourDiff;
@@ -301,9 +355,9 @@ export default defineComponent({
 			
 				// Obtain how much they earned since their level up
 				let exp2 = curEnd;
-				console.log("exp1 :" + exp1);
-				console.log("exp2 :" + exp2);
-				console.log("+1 " + expNextLevel(charLevel.value + 1));
+				//console.log("exp1 :" + exp1);
+				//console.log("exp2 :" + exp2);
+				//console.log("+1 " + expNextLevel(charLevel.value + 1));
 				expFarmed = exp1 + exp2;
 			}
 			else {
@@ -320,20 +374,17 @@ export default defineComponent({
 			let expHr = expFarmed / hourDiff;
 			let remainTime = (endExpReq - curEnd) / expHr;
 
-			console.log("hourDiff " + hourDiff);
-			console.log("curStart " + curStart);
-			console.log("curEnd " + curEnd);
-			console.log("ExpFarmed " + expFarmed);
-			console.log("Remaing to farm" + (expReq - curEnd));
-			console.log("exp/Hr " + expHr);
+			//console.log("hourDiff " + hourDiff);
+			//console.log("curStart " + curStart);
+			//console.log("curEnd " + curEnd);
+			//console.log("ExpFarmed " + expFarmed);
+			//console.log("Remaing to farm" + (expReq - curEnd));
+			//console.log("exp/Hr " + expHr);
 
 			return [remainTime,expHr];
 		}
 
 		const chanceToHit = (monster: Monster): number  => {
-			// Prevent high integer calculations so that my computer fans calm down 
-			if(accuracy.value > monsters["Frog"].accHigh) return 1;
-
 			// Edge Case
 			if(accuracy.value < 2) return 0;
 	
@@ -416,10 +467,18 @@ export default defineComponent({
 		}
 		
 		const bestMob = (monster: Monster): number => {
+			// World 3 not ready
+			if(monster.numMobs == 1) return 0;
+
 			if ( avgSwingToKill <= 0 ) return 0;
+
+			// Edge case for Hunter
+			let classWeight = charClass.value;
+			if( classWeight == "Hunter") classWeight = "Archer";
+
 			// The monsterWeight is basically regression by hand based off exp/hr data
 			// Low respawn times are highly weighted
-			let weight = (monster.numMobs - monsterWeight[monster.name][charClass.value])/monster.respawnRate;
+			let weight = (monster.numMobs - monsterWeight[monster.name][classWeight])/monster.respawnRate;
 			// If the monster EXP is good, give a higher weight, but not too high
 			// So we use a log to flatten the top a tad
 			let magic = weight * Math.log10(monsterExpMul(monster));
@@ -427,7 +486,8 @@ export default defineComponent({
 		}
 
 
-		return { 
+		return {
+		activeKey, 
 		monsters, monsterWeight, minDmg, maxDmg, multiplier, monstEXPMul,
 		accuracy, critChance, critDmg, curEXPMonst, ingameEXPMonst, 
 		charClass, charSkill1, charSkill2, 
@@ -436,7 +496,7 @@ export default defineComponent({
 		expNextLevel, timeToLevel,
 
 		chanceToHit, avgSwingToHit, minHitToKill, maxHitToKill, avgHitToKill,
-		avgSwingToKill, monsterExpMul, expPerSwing, bestMob };
+		avgSwingToKill, monsterExpMul, expPerSwing, bestMob, bestMobArray, bestThreeMobs };
 	},
 
 	methods: {
