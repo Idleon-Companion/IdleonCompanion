@@ -106,6 +106,7 @@ export class Text {
 }
 
 enum BaseEffects {
+  BaseAllStats = "All Stats",
   BaseDamage = "Base Damage",
   BaseDefense = "Base Defense",
   BaseAccuracy = "Base Accuracy",
@@ -128,6 +129,7 @@ enum MultiplierEffects {
   TotalDamage = "% Total Damage",
   TotalHP = "% Total HP",
   TotalMP = "% Total MP",
+  TotalDefense = "% Defense",
   TotalAccuracy = "% Total Accuracy",
   MPRegen = "% MP Regen Rate",
   EquipmentDefense = "% Defense from Equipment",
@@ -145,29 +147,35 @@ enum ClassAndMonsterEffects {
   MonsterExpActive = "% Monster EXP (Active)",
   MonsterExp = "% Monster EXP",
   MonsterMoney = "% Money from Monsters",
+  BossDamage = "% Boss Damage",
+  MobRespawn = "% Mob Respawn Rate",
 }
 
 enum SkillEffects {
   SkillAfk = "% Skill AFK Gain Rate",
   SkillExp = "% Skill EXP",
+  SkillProwess = "% Skill Prowess",
   SmithingEfficiency = "% Total Smithing Efficiency",
   SmithingExp = "% Smithing EXP",
   MiningAfk = "% Mining Away Gains",
   MiningBase = "Base Mining Power",
   MiningEfficiency = "% Total Mining Efficiency",
   MiningExp = "% Mining EXP",
+  MiningMultiOre = "% Multi-Ore Chance",
   MiningPower = "% Mining Power",
   MiningSpeed = "% Mining Speed",
   ChoppinAfk = "% Choppin Away Gains",
   ChoppinBase = "Base Choppin Power",
   ChoppinEfficiency = "% Total Choppin Efficiency",
   ChoppinExp = "% Choppin EXP",
+  ChoppinMultiLog = "% Multi-Log Chance",
   ChoppinPower = "% Choppin Power",
   ChoppinSpeed = "% Choppin Speed",
   FishingAfk = "% Fishing Away Gains",
   FishingBase = "Base Fishing Power",
   FishingEfficiency = "% Total Fishing Efficiency",
   FishingExp = "% Fishing EXP",
+  FishingMultiFish = "% Multi-Fish Chance",
   FishingPower = "% Fishing Power",
   WorshipCharge = "% Max Charge",
   WoorshipBase = "Base Worship Power",
@@ -180,11 +188,13 @@ enum SkillEffects {
   CatchingBase = "Base Catching Power",
   CatchingEfficiency = "% Total Catching Efficiency",
   CatchingExp = "% Catching EXP",
+  CatchingMultiCatch = "% Multi-Catch Chance",
   CatchingPower = "% Catching Power",
 }
 
 enum PassiveEffects {
   ProductionSpeed = "% Total Production Speed",
+  TownSkillSpeed = "% Speed in Town Skills",
   AlchemyExp = "% Alchemy EXP",
   CogSpeed = "% Cog Build Spd (Passive)",
   ConstructionExp = "% Construction Exp",
@@ -192,7 +202,9 @@ enum PassiveEffects {
 }
 
 enum BonusEffects {
+  CarryCapacity = "% Carry Capacity",
   ExtraTalentPoints = "Talent Points",
+  MinigameReward = "% Minigame Reward",
 }
 
 export const Effects = {

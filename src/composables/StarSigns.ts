@@ -182,9 +182,255 @@ export const StarSigns: StarSign[] = [
     cost: 0,
   },
   {
+    id: "3",
+    name: "Dwardo Beardus",
+    bonus: {
+      [Effects.MiningEfficiency]: 5,
+      [Effects.MiningMultiOre]: 20,
+    },
+    cost: 2,
+  },
+  {
+    id: "4",
+    name: "Hipster Logger",
+    bonus: {
+      [Effects.ChoppinEfficiency]: 5,
+      [Effects.ChoppinMultiLog]: 20,
+    },
+    cost: 2,
+  },
+  {
+    id: "4a",
+    name: "Pie Seas",
+    bonus: {
+      [Effects.FishingEfficiency]: 5,
+      [Effects.FishingMultiFish]: 20,
+    },
+    cost: 2,
+  },
+  {
+    id: "4b",
+    name: "Miniature Game",
+    bonus: {
+      [Effects.MinigameReward]: 30,
+    },
+    cost: 2,
+  },
+  {
+    id: "4c",
+    name: "Shoe Fly",
+    bonus: {
+      [Effects.CatchingEfficiency]: 5,
+      [Effects.CatchingMultiCatch]: 20,
+    },
+    cost: 2,
+  },
+  {
+    id: "5",
+    name: "Pack Mule",
+    bonus: {
+      [Effects.CarryCapacity]: 10,
+    },
+    cost: 2,
+  },
+  {
+    id: "6",
+    name: "Pirate Booty",
+    bonus: {
+      [Effects.DropRate]: 5,
+    },
+    cost: 2,
+  },
+  {
+    id: "7",
+    name: "All Rounder",
+    bonus: {
+      [Effects.BaseAllStats]: 4,
+    },
+    cost: 2,
+  },
+  {
+    id: "7a",
+    name: "Muscle Man",
+    bonus: {
+      [Effects.BaseSTR]: 8,
+    },
+    cost: 1,
+  },
+  {
+    id: "7b",
+    name: "Fast Frog",
+    bonus: {
+      [Effects.BaseAGI]: 8,
+    },
+    cost: 1,
+  },
+  {
+    id: "7c",
+    name: "Smart Stooge",
+    bonus: {
+      [Effects.BaseWIS]: 8,
+    },
+    cost: 1,
+  },
+  {
+    id: "7d",
+    name: "Lucky Larry",
+    bonus: {
+      [Effects.BaseLUK]: 8,
+    },
+    cost: 1,
+  },
+  {
+    id: "8",
+    name: "Fatty Doodoo",
+    bonus: {
+      [Effects.MoveSpeed]: -3,
+      [Effects.TotalDefense]: 5,
+      [Effects.TotalDamage]: 2,
+    },
+    cost: 2,
+  },
+  {
+    id: "9",
+    name: "Robinhood",
+    bonus: {
+      [Effects.TotalAccuracy]: 4,
+      [Effects.MoveSpeed]: 2,
+    },
+    cost: 2,
+  },
+  {
+    id: "9a",
+    name: "Blue Hedgehog",
+    bonus: {
+      [Effects.MoveSpeed]: 4,
+    },
+    cost: 3,
+  },
+  {
+    id: "10",
+    name: "Ned Kelly",
+    bonus: {
+      [Effects.TotalDefense]: 6,
+      [Effects.WeaponPower]: 2,
+    },
+    cost: 2,
+  },
+  {
+    id: "10a",
+    name: "The Fallen Titan",
+    bonus: {
+      [Effects.BossDamage]: 3,
+      [Effects.CritChance]: 4,
+    },
+    cost: 2,
+  },
+  {
     id: "CR",
     name: "Chronus Cosmos All",
     bonus: {},
     cost: 3,
+  },
+  {
+    id: "11",
+    name: "Activelius",
+    bonus: {
+      [Effects.MonsterExpActive]: 15,
+    },
+    cost: 2,
+  },
+  {
+    id: "11a",
+    name: "Gum Drop",
+    bonus: {},
+    cost: 2,
+  },
+  {
+    id: "12",
+    name: "Mount Eaterest",
+    bonus: {
+      [Effects.NoFoodConsume]: 10,
+      [Effects.FoodEffect]: 15,
+    },
+    cost: 2,
+  },
+  {
+    id: "13",
+    name: "Bob Build Guy",
+    bonus: {
+      [Effects.TownSkillSpeed]: 10,
+    },
+    cost: 3,
+  },
+  {
+    id: "14",
+    name: "The Big Comatose",
+    bonus: {
+      [Effects.SkillAfk]: 2,
+    },
+    cost: 3,
+  },
+  {
+    id: "14a",
+    name: "Sir Savvy",
+    bonus: {
+      [Effects.SkillExp]: 3,
+    },
+    cost: 3,
+  },
+  {
+    id: "15",
+    name: "Silly Snoozer",
+    bonus: {
+      [Effects.FightingAfk]: 2,
+    },
+    cost: 3,
+  },
+  {
+    id: "15a",
+    name: "The Big Brain",
+    bonus: {
+      [Effects.ClassExp]: 3,
+    },
+    cost: 3,
+  },
+  {
+    id: "16",
+    name: "Grim Reaper",
+    bonus: {
+      [Effects.MobRespawn]: 2,
+    },
+    cost: 4,
+  },
+  {
+    id: "16a",
+    name: "The Forsaken",
+    bonus: {
+      [Effects.TotalHP]: -80,
+      [Effects.TotalDefense]: -50,
+      [Effects.FightingAfk]: 6,
+    },
+    cost: 4,
+  },
+  {
+    id: "17",
+    name: "The OG Skiller",
+    bonus: {
+      [Effects.CarryCapacity]: 5,
+      [Effects.SkillAfk]: 1,
+      [Effects.SkillProwess]: 2,
+    },
+    cost: 4,
+  },
+  {
+    id: "18",
+    name: "Mr No Sleep",
+    bonus: {
+      [Effects.FightingAfk]: -6,
+      [Effects.SkillAfk]: -6,
+      [Effects.CarryCapacity]: 30,
+    },
+    cost: 4,
   },
 ];
