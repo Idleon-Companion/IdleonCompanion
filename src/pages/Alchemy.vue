@@ -76,12 +76,13 @@ export default defineComponent({
   },
   setup() {
     const colors: Color[] = ["Orange", "Green", "Purple", "Yellow"];
-    const upgradeCount = 10;
+    const upgradeCount = 15;
 
     const state = useState();
     const alchemy = state.value.alchemy;
     for (const c of colors) {
-      for (let i = 0; i < upgradeCount - alchemy.upgrades[c].length; i += 1) {
+      let upgradeDiff = upgradeCount - alchemy.upgrades[c].length;
+      for (let i = 0; i < upgradeDiff; i += 1) {
         alchemy.upgrades[c].push(0);
       }
     }
