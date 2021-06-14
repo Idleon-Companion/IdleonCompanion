@@ -10,7 +10,7 @@
   "dependencies": {
     "@types/bootstrap": "^5.0.12",
     "@vueuse/core": "^4.9.1",
-    "bootstrap": "^5.0.0-beta3",
+    "bootstrap": "^5.0.1",
     "dayjs": "^1.10.4",
     "firebase": "^8.6.0",
     "firebaseui": "^4.8.0",

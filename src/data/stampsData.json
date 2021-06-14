@@ -273,7 +273,7 @@
         "func": "Add"
     },
     "23": {
-        "name": "Sukka Foo",
+        "name": "Sukka Foo Stamp",
         "material": "Amarok Slab",
         "bonus": "% Boss Damage",
         "baseCoinCost": 2500,
@@ -299,7 +299,7 @@
         "func": "Add"
     },
     "26": {
-        "name": "Steve Sword",
+        "name": "Steve Sword Stamp",
         "material": "Fruitfly",
         "bonus": "% Total Damage",
         "baseCoinCost": 10000,
