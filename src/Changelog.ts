@@ -105,4 +105,15 @@ export const Changelog: ChangelogEntry[] = [
     },
     date: "May 31, 2021",
   },
+  {
+    version: "0.2.2 (Calculators / Star Signs)",
+    changes: {
+      features: [
+        "Constellations: Track constellations unlocked on each character as well as equipped star signs",
+        "SweetSpot: Determine the best area in Idleon to farm for EXP",
+      ],
+      changes: ["UI: improved design of the recipe calculator"],
+    },
+    date: "June 2021",
+  },
 ];

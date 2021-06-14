@@ -163,4 +163,28 @@ export const StarSigns: StarSign[] = [
     },
     cost: 0,
   },
+  {
+    id: "1b",
+    name: "The Fuzzy Dice",
+    bonus: {
+      [Effects.ExtraTalentPoints]: 3,
+      [Effects.BaseLUK]: 3,
+    },
+    cost: 0,
+  },
+  {
+    id: "2",
+    name: "Flexo Bendo",
+    bonus: {
+      [Effects.MoveSpeed]: 2,
+      [Effects.BaseAGI]: 3,
+    },
+    cost: 0,
+  },
+  {
+    id: "CR",
+    name: "Chronus Cosmos All",
+    bonus: {},
+    cost: 3,
+  },
 ];

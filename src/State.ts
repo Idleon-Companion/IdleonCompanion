@@ -22,6 +22,7 @@ export const useState = createGlobalState(() =>
     cards: {} as Record<string, number>,
     chars: [] as Character[],
     checklist: {} as Record<string, boolean>,
+    starSigns: {} as Record<string, boolean>,
     tasks: {
       tasks: Array<Task>(),
       dailyReset: "12:00",
@@ -76,6 +77,9 @@ export function versionControl() {
       if (!state.value.chars[key].constellations) {
         state.value.chars[key].constellations = {};
       }
+    }
+    if (!state.value.starSigns) {
+      state.value.starSigns = {};
     }
   }
   if (state.value.version < "0.2.3") {

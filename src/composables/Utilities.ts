@@ -191,12 +191,17 @@ enum PassiveEffects {
   ShrineEffect = "% Shrine Effects",
 }
 
+enum BonusEffects {
+  ExtraTalentPoints = "Talent Points",
+}
+
 export const Effects = {
   ...BaseEffects,
   ...MultiplierEffects,
   ...ClassAndMonsterEffects,
   ...SkillEffects,
   ...PassiveEffects,
+  ...BonusEffects,
 };
 
 type ValueOf<T> = T[keyof T];
