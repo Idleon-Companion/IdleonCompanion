@@ -84,13 +84,13 @@ export default defineComponent({
       set: (value) => (state.value.alchemy = value),
     });
     for (const c of colors) {
-      let upgradeDiff = upgradeCount - alchemy.upgrades[c].length;
+      let upgradeDiff = upgradeCount - alchemy.value.upgrades[c].length;
       for (
         let i = 0; 
         i < upgradeDiff; 
         i += 1
       ) {
-        alchemy.upgrades[c].push(0);
+        alchemy.value.upgrades[c].push(0);
       }
     }
     for (const v of Vials) {
