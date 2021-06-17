@@ -22,9 +22,7 @@
             type="number"
             :min="0"
             :value="alchemy.upgrades[color][n - 1]"
-            @change="
-              (e) => (alchemy.upgrades[color][n - 1] = parseInt(e.target.value))
-            "
+            @change="handleAlchemyUpgrade($event, color, n - 1)"
           />
         </div>
       </div>
@@ -112,10 +110,17 @@ export default defineComponent({
       alchemy.value.vials[name] = tier;
     };
 
+    const handleAlchemyUpgrade = (ev: Event, color: Color, i: number) => {
+      let target = <HTMLInputElement>ev.target;
+      let val = target ? target.value : "0";
+      alchemy.value.upgrades[color][i] = parseInt(val);
+    };
+
     return {
       alchemy,
       Assets,
       colors,
+      handleAlchemyUpgrade,
       handleVialClick,
       upgradeCount,
       Vials,

@@ -98,6 +98,7 @@ export function versionControl() {
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
+import { Constellations } from "./composables/StarSigns";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDP9fu1062i82w64K9LgKHFFMDgPtUj6k4",

@@ -40,7 +40,7 @@
             </div>
             <div
               v-for="char in constellationCompletions(constellation.name)"
-              :key="char"
+              :key="char.name"
             >
               - {{ char.name }}
             </div>
@@ -126,15 +126,23 @@ export default defineComponent({
     });
 
     const starSignsEquippable = computed(() => {
-      return state.value.starSigns["CR"] ? 2 : 1;
+      if(state.value.starSigns){
+       return state.value.starSigns["CR"] ? 2 : 1;
+      } else {
+        return 0;
+      }
     });
 
     const starSignUnlocked = (id: string) => {
-      return state.value.starSigns[id];
+      if(state.value.starSigns){
+        return state.value.starSigns[id];
+      }
     };
 
     const toggleStarSign = (s: StarSign) => {
-      state.value.starSigns[s.id] = !state.value.starSigns[s.id];
+      if(state.value.starSigns){
+        state.value.starSigns[s.id] = !state.value.starSigns[s.id];
+      }
     };
 
     const toggleEquipStarSign = (s: StarSign) => {

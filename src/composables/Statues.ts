@@ -1,9 +1,9 @@
-import { Effects } from "./Utilities";
+import { EffectData, Effects } from "./Utilities";
 
 // All statues in the game
 type Statue = {
   base: number;
-  effect: Effects;
+  effect: EffectData;
 };
 
 export type StatueName =
