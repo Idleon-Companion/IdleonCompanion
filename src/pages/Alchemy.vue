@@ -62,7 +62,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { computed, defineComponent } from "vue";
 
 import GameAsset from "~/components/GameAsset.vue";
 import { Assets } from "~/composables/Utilities";
@@ -79,27 +79,34 @@ export default defineComponent({
     const upgradeCount = 15;
 
     const state = useState();
-    const alchemy = state.value.alchemy;
+    const alchemy = computed({
+      get: () => state.value.alchemy,
+      set: (value) => (state.value.alchemy = value),
+    });
     for (const c of colors) {
       let upgradeDiff = upgradeCount - alchemy.upgrades[c].length;
-      for (let i = 0; i < upgradeDiff; i += 1) {
+      for (
+        let i = 0; 
+        i < upgradeDiff; 
+        i += 1
+      ) {
         alchemy.upgrades[c].push(0);
       }
     }
     for (const v of Vials) {
-      if (!(v.name in alchemy.vials)) {
-        alchemy.vials[v.name] = 0;
+      if (!(v.name in alchemy.value.vials)) {
+        alchemy.value.vials[v.name] = 0;
       }
     }
 
     // Input handlers
     const VIAL_TIERS = 10;
     const handleVialClick = (name: string, step: number) => {
-      let tier = (alchemy.vials[name] + step) % VIAL_TIERS;
+      let tier = (alchemy.value.vials[name] + step) % VIAL_TIERS;
       if (tier < 0) {
         tier = VIAL_TIERS - 1;
       }
-      alchemy.vials[name] = tier;
+      alchemy.value.vials[name] = tier;
     };
 
     return {

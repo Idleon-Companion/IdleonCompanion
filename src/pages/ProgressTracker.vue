@@ -94,18 +94,24 @@ export default defineComponent({
     });
 
     const state = useState();
-    const checklist = state.value.checklist;
+    const checklist = computed({
+      get: () => state.value.checklist,
+      set: (value) => (state.value.checklist = value),
+    });
     for (const data of Object.values(globalChecklist.value)) {
       for (const item of data.items) {
-        if (checklist[item.name]) {
-          checklist[item.name] = true;
+        if (checklist.value[item.name]) {
+          checklist.value[item.name] = true;
         } else {
-          checklist[item.name] = false;
+          checklist.value[item.name] = false;
         }
       }
     }
 
-    const cards = state.value.cards;
+    const cards = computed({
+      get: () => state.value.cards,
+      set: (value) => (state.value.cards = value),
+    });
     const cardData = ref({} as Record<string, Card[]>);
     for (const card of Cards) {
       // Group by category for template
@@ -115,18 +121,18 @@ export default defineComponent({
         cardData.value[card.category] = [card];
       }
       // Load from local state
-      if (!(card.id in cards)) {
-        cards[card.id] = 0;
+      if (!(card.id in state.value.cards)) {
+        state.value.cards[card.id] = 0;
       }
     }
 
     // Input handlers
     const CARD_TIERS = 5;
     const handleCardClick = (id: string, amount: number) => {
-      cards[id] = (cards[id] + amount) % CARD_TIERS;
+      state.value.cards[id] = (state.value.cards[id] + amount) % CARD_TIERS;
     };
     const handleProgressCheck = (item: string) => {
-      checklist[item] = !checklist[item];
+      checklist.value[item] = !checklist.value[item];
     };
 
     return {

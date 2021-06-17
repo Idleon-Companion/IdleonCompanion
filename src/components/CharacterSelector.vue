@@ -4,7 +4,7 @@
   </div>
   <div v-else class="d-flex flex-column bg-dark">
     <CloudData v-if="user !== null" />
-    <div class="bg-primary p-2">
+    <div class="bg-primary p-2 cloud-data-header">
       <CharacterCard :char="curCharacter" />
     </div>
     <div class="dropdown">
@@ -69,6 +69,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="sass">
+@import '../styles/base.sass'
 .dropdown-menu
   border: none
   border-radius: 0
@@ -83,4 +84,6 @@ export default defineComponent({
     opacity: 1.0
 .char-select-item:not(:last-child)
   border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+.cloud-data-header
+  border-top: 1px solid rgba($dark, 0.5)
 </style>
