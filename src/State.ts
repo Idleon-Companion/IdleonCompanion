@@ -26,7 +26,7 @@ export const useState = createGlobalState(() =>
       tasks: Array<Task>(),
       dailyReset: "12:00",
     },
-    version: "0.2.1",
+    version: "0.2.3",
   })
 );
 
@@ -69,6 +69,17 @@ export function versionControl() {
       if (![StorageKey, "iconify"].includes(k)) {
         localStorage.removeItem(k);
       }
+    }
+  }
+  if (state.value.version < "0.2.3") {
+    let newSkills = ["Trapping","Construction", "Worship"];
+    let newStatues = ["Box","EhExPee","Seesaw","Twosoul"];
+    
+    for (const key in state.value.chars) {
+      for (const s of newSkills)
+        state.value.chars[key].skills[s] = 0;
+      for (const t of newStatues)
+        state.value.chars[key].statues[t] = 0; 
     }
   }
   state.value.version = version;
