@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col md:flex-row jumbotron mt-4">
-    <div class="w-full md:w-1/3 mt-0">
+    <div class="w-full mt-0 md:w-1/2">
       <div class="h4 text-white text-2xl">Constellations</div>
       <div
         v-for="(constellation, i) in constellations"
@@ -48,15 +48,15 @@
         </tooltip>
       </div>
     </div>
-    <div class="ml-4">
+    <div class="w-full ml-0 sm:mt-2 md:mt-0 md:ml-4">
       <div class="h4 text-white text-2xl">
         Star Signs ({{ starSignsEquipped }}/{{ starSignsEquippable }} Equipped)
       </div>
       <div class="flex flex-wrap">
         <div
-          v-for="(starSign, i) in starSigns"
+          v-for="(starSign, i) in allStarSigns"
           :key="i"
-          class="star-sign text-light p-2 m-1 rounded-lg"
+          class="star-sign text-light p-2 mr-2 mb-1 rounded-lg"
           :data-unlocked="starSignUnlocked(starSign.id)"
           @click="toggleStarSign(starSign)"
         >
@@ -99,6 +99,11 @@ export default defineComponent({
     const { characters, curCharacter } = useCharacters();
     const state = useState();
 
+    const starSigns = computed({
+      get: () => state.value.starSigns,
+      set: (value) => (state.value.starSigns = value),
+    });
+
     const constellationCompletions = (name: string) => {
       return characters.value.filter((x) => x.constellations[name] === true);
     };
@@ -126,23 +131,15 @@ export default defineComponent({
     });
 
     const starSignsEquippable = computed(() => {
-      if(state.value.starSigns){
-       return state.value.starSigns["CR"] ? 2 : 1;
-      } else {
-        return 0;
-      }
+      return starSigns.value["CR"] ? 2 : 1;
     });
 
     const starSignUnlocked = (id: string) => {
-      if(state.value.starSigns){
-        return state.value.starSigns[id];
-      }
+      return starSigns.value[id];
     };
 
     const toggleStarSign = (s: StarSign) => {
-      if(state.value.starSigns){
-        state.value.starSigns[s.id] = !state.value.starSigns[s.id];
-      }
+      starSigns.value[s.id] = !starSigns.value[s.id];
     };
 
     const toggleEquipStarSign = (s: StarSign) => {
@@ -152,7 +149,7 @@ export default defineComponent({
       if (curCharacter.value.starSigns[s.id] === true) {
         delete curCharacter.value.starSigns[s.id];
       } else if (
-        state.value.starSigns[s.id] &&
+        starSigns.value[s.id] &&
         starSignsEquipped.value < starSignsEquippable.value
       ) {
         curCharacter.value.starSigns[s.id] = true;
@@ -160,11 +157,11 @@ export default defineComponent({
     };
 
     return {
+      allStarSigns: StarSigns,
       constellationCompletions,
       constellations: Constellations,
       constellationUnlocked,
       curCharacter,
-      starSigns: StarSigns,
       starSignsEquipped,
       starSignsEquippable,
       starSignUnlocked,
@@ -191,12 +188,14 @@ export default defineComponent({
 .star-sign
   border: 1px solid $primary
   cursor: pointer
-  width: 10rem
+  width: 9rem
   transition: 0.2s
   &:hover
     background: lighten($primary, 5%)
+  &[data-unlocked='false']
+    background: none
   &[data-unlocked='true']
-    border-width: 0
+    border-color: transparent
     background: $primary
   [data-equipped='true']
     background: $indigo
