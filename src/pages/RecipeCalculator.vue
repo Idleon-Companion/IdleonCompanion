@@ -39,38 +39,19 @@
       <div id="version-group" class="p-2">
         <h3>Last Updated</h3>
         <p>v1.21</p>
-        <p>June 10, 2021</p>
+        <p>June 18, 2021</p>
       </div>
     </div>
   </div>
   <!-- Display Materials -->
   <div v-if="recipe && quantity" class="text-light">
     <h4>Materials</h4>
-    <div
-      class="row"
-      v-for="(material, index) in materials.materials"
-      :key="`material-${index}`"
-    >
-      <div
-        class="border-top border-bottom col-sm-2"
-      >
-        <GameAsset
-          :height="72"
-          :image="Assets.MaterialImage(material.name.replace(/ /g, '_'))"
-          :title="material.name"
-        >
-          <template #tooltip>
-            <div v-html="material.name"></div>
-          </template>
-        </GameAsset>
-      </div>
-      <div
-        class="border-top border-bottom col-sm-2 recipe-quantity"
-      >{{ (material.quantity * parseInt(quantity)).toLocaleString() }}</div>
-      <div
-        class="border-top border-bottom col-sm-6 padded-start"
-      >{{ material.name.padStart(material.name.length + material.indent * 12) }}</div>
-    </div>
+    <recipe-tree
+      :label="materials.name"
+      :nodes="materials.materials"
+      :quantity="1"
+      :depth="0"
+    />
   </div>
 </template>
 
@@ -78,12 +59,12 @@
 import { computed, defineComponent, ref } from "vue";
 import calculatorData from "~/data/recipeCalculator.json";
 import GameAsset from "~/components/GameAsset.vue";
+import RecipeTree from "~/components/RecipeTree.vue";
 import { Assets } from "~/composables/Utilities";
 
 type MaterialObject = {
   name: string;
   quantity: number;
-  indent: number;
 };
 
 type RecipeObject = {
@@ -94,7 +75,8 @@ type RecipeObject = {
 export default defineComponent({
   name: "RecipeCalculator",
   components: {
-    GameAsset
+    GameAsset,
+    RecipeTree
   },
   setup() {
     const data: Record<string, RecipeObject> = calculatorData;
