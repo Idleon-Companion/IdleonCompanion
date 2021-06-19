@@ -1,4 +1,4 @@
-import { computed, ref, watch } from "vue";
+import { computed, ref } from "vue";
 import { useState } from "~/State";
 import checklistData from "~/data/checklist.json";
 
@@ -40,6 +40,8 @@ export class Character {
   public items: Record<string, boolean>;
   public skills: Record<string, number>;
   public statues: Record<string, number>;
+  public constellations: Record<string, boolean>;
+  public starSigns: Record<string, boolean>;
 
   constructor() {
     this.class = Class.Beginner;
@@ -49,6 +51,8 @@ export class Character {
     this.items = {};
     this.skills = {};
     this.statues = {};
+    this.constellations = {};
+    this.starSigns = {};
   }
 
   setClass(c: Class | Subclass) {

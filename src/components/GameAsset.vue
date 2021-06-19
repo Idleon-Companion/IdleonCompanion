@@ -34,7 +34,9 @@ export default defineComponent({
       type: Boolean,
     },
     height: {
+      default: 0,
       type: Number,
+      required: false,
     },
     image: {
       required: true,

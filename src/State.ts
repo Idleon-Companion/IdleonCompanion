@@ -22,6 +22,7 @@ export const useState = createGlobalState(() =>
     cards: {} as Record<string, number>,
     chars: [] as Character[],
     checklist: {} as Record<string, boolean>,
+    starSigns: {} as Record<string, boolean>,
     tasks: {
       tasks: Array<Task>(),
       dailyReset: "12:00",
@@ -71,15 +72,23 @@ export function versionControl() {
       }
     }
   }
-  if (state.value.version < "0.2.3") {
-    let newSkills = ["Trapping","Construction", "Worship"];
-    let newStatues = ["Box","EhExPee","Seesaw","Twosoul"];
-    
+  if (state.value.version < "0.2.2") {
     for (const key in state.value.chars) {
-      for (const s of newSkills)
-        state.value.chars[key].skills[s] = 0;
-      for (const t of newStatues)
-        state.value.chars[key].statues[t] = 0; 
+      if (!state.value.chars[key].constellations) {
+        state.value.chars[key].constellations = {};
+      }
+    }
+    if (!state.value.starSigns) {
+      state.value.starSigns = {};
+    }
+  }
+  if (state.value.version < "0.2.3") {
+    let newSkills = ["Trapping", "Construction", "Worship"];
+    let newStatues = ["Box", "EhExPee", "Seesaw", "Twosoul"];
+
+    for (const key in state.value.chars) {
+      for (const s of newSkills) state.value.chars[key].skills[s] = 0;
+      for (const t of newStatues) state.value.chars[key].statues[t] = 0;
     }
   }
   state.value.version = version;
@@ -128,7 +137,6 @@ export const useAuth = () => {
         if (snapshot.exists()) {
           const data = JSON.parse(snapshot.val());
           state.value = data;
-          console.log("State.value:", state.value);
           // Ensure cloud data is up to date!
           versionControl();
           // Load characters as class instances

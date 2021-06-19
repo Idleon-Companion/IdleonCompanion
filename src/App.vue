@@ -5,7 +5,7 @@
 <script lang="ts">
 import firebase from "firebase/app";
 import "firebase/auth";
-import { defineComponent, onMounted, watchEffect } from "vue";
+import { defineComponent, onBeforeMount, onMounted, watchEffect } from "vue";
 import Home from "~/pages/Home.vue";
 
 import { useCharacters } from "~/composables/Characters";
@@ -20,7 +20,7 @@ export default defineComponent({
     Home,
   },
   setup() {
-    onMounted(versionControl);
+    onBeforeMount(versionControl);
     // Ensure Firebase is persistent (prevents repeated sign in)
     firebaseApp.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
     // State for storage/persistence

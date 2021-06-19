@@ -105,8 +105,8 @@ export class Text {
   }
 }
 
-export enum Effects {
-  // Base
+enum BaseEffects {
+  BaseAllStats = "All Stats",
   BaseDamage = "Base Damage",
   BaseDefense = "Base Defense",
   BaseAccuracy = "Base Accuracy",
@@ -119,7 +119,9 @@ export enum Effects {
   MoveSpeed = "Move Speed",
   WeaponPower = "Weapon Power",
   MinimumDamage = "Minimum Damage",
-  // Multiplier
+}
+
+enum MultiplierEffects {
   FightingAfk = "% Fighting AFK Gain Rate",
   DoubleAfkChance = "% Double AFK Claim Chance",
   CritChance = "% Crit Chance",
@@ -127,6 +129,7 @@ export enum Effects {
   TotalDamage = "% Total Damage",
   TotalHP = "% Total HP",
   TotalMP = "% Total MP",
+  TotalDefense = "% Defense",
   TotalAccuracy = "% Total Accuracy",
   MPRegen = "% MP Regen Rate",
   EquipmentDefense = "% Defense from Equipment",
@@ -136,33 +139,43 @@ export enum Effects {
   BoostFoodEffect = "% Boost Food Effect",
   NoFoodConsume = "% To not consume Food",
   DropRate = "% Total Drop Rate",
-  // Class Exp
+}
+
+enum ClassAndMonsterEffects {
   ClassExp = "% Class Exp",
   ExpConversion = "% EXP Conversion (Talent)",
   MonsterExpActive = "% Monster EXP (Active)",
   MonsterExp = "% Monster EXP",
   MonsterMoney = "% Money from Monsters",
-  // Skills
+  BossDamage = "% Boss Damage",
+  MobRespawn = "% Mob Respawn Rate",
+}
+
+enum SkillEffects {
   SkillAfk = "% Skill AFK Gain Rate",
   SkillExp = "% Skill EXP",
+  SkillProwess = "% Skill Prowess",
   SmithingEfficiency = "% Total Smithing Efficiency",
   SmithingExp = "% Smithing EXP",
   MiningAfk = "% Mining Away Gains",
   MiningBase = "Base Mining Power",
   MiningEfficiency = "% Total Mining Efficiency",
   MiningExp = "% Mining EXP",
+  MiningMultiOre = "% Multi-Ore Chance",
   MiningPower = "% Mining Power",
   MiningSpeed = "% Mining Speed",
   ChoppinAfk = "% Choppin Away Gains",
   ChoppinBase = "Base Choppin Power",
   ChoppinEfficiency = "% Total Choppin Efficiency",
   ChoppinExp = "% Choppin EXP",
+  ChoppinMultiLog = "% Multi-Log Chance",
   ChoppinPower = "% Choppin Power",
   ChoppinSpeed = "% Choppin Speed",
   FishingAfk = "% Fishing Away Gains",
   FishingBase = "Base Fishing Power",
   FishingEfficiency = "% Total Fishing Efficiency",
   FishingExp = "% Fishing EXP",
+  FishingMultiFish = "% Multi-Fish Chance",
   FishingPower = "% Fishing Power",
   WorshipCharge = "% Max Charge",
   WoorshipBase = "Base Worship Power",
@@ -175,11 +188,33 @@ export enum Effects {
   CatchingBase = "Base Catching Power",
   CatchingEfficiency = "% Total Catching Efficiency",
   CatchingExp = "% Catching EXP",
+  CatchingMultiCatch = "% Multi-Catch Chance",
   CatchingPower = "% Catching Power",
-  // Passive Skills
+}
+
+enum PassiveEffects {
   ProductionSpeed = "% Total Production Speed",
+  TownSkillSpeed = "% Speed in Town Skills",
   AlchemyExp = "% Alchemy EXP",
   CogSpeed = "% Cog Build Spd (Passive)",
   ConstructionExp = "% Construction Exp",
-  ShrineEffect = "% Shrine Effects"  
+  ShrineEffect = "% Shrine Effects",
 }
+
+enum BonusEffects {
+  CarryCapacity = "% Carry Capacity",
+  ExtraTalentPoints = "Talent Points",
+  MinigameReward = "% Minigame Reward",
+}
+
+export const Effects = {
+  ...BaseEffects,
+  ...MultiplierEffects,
+  ...ClassAndMonsterEffects,
+  ...SkillEffects,
+  ...PassiveEffects,
+  ...BonusEffects,
+};
+
+type ValueOf<T> = T[keyof T];
+export type EffectData = ValueOf<typeof Effects>;

@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
+import WindiCSS from "vite-plugin-windicss";
 
 // Generates the build data at compile-time
 import { readdirSync, readFileSync, writeFileSync } from "fs";
@@ -17,5 +18,5 @@ export default defineConfig({
   resolve: {
     alias: { "~": resolve(__dirname, "src") },
   },
-  plugins: [vue()],
+  plugins: [vue(), WindiCSS()],
 });
