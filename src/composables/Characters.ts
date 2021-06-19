@@ -103,9 +103,14 @@ export class Character {
 }
 
 const charIndex = ref(0);
-const characters = ref(Array<Character>());
 
 export function useCharacters() {
+  const state = useState();
+  const characters = computed({
+    get: () => state.value.chars,
+    set: (value) => (state.value.chars = value),
+  });
+
   const numCharacters = computed(() => {
     return characters.value.length;
   });
