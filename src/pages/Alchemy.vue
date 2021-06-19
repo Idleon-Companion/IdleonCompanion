@@ -18,7 +18,7 @@
             :height="64"
           />
           <input
-            class="col-4"
+            class="col-4 text-light p-2"
             type="number"
             :min="0"
             :value="alchemy.upgrades[color][n - 1]"

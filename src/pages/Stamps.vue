@@ -155,3 +155,7 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="sass" scoped>
+@import '../styles/base.sass'
+</style>
