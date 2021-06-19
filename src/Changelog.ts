@@ -110,9 +110,10 @@ export const Changelog: ChangelogEntry[] = [
     changes: {
       features: [
         "Constellations: Track constellations unlocked on each character as well as equipped star signs",
-        "SweetSpot: Determine the best area in Idleon to farm for EXP",
+        "W3 Data: Cards, Stamps, Skills, Materials, Recipes and Alchemy updated to Latest Version",
       ],
-      changes: ["UI: improved design of the recipe calculator"],
+      changes: [
+        "UI: improved design of the recipe calculator"],
     },
     date: "June 2021",
   },
