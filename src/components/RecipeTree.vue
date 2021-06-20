@@ -1,7 +1,7 @@
 <template>
-  <div class="tree-menu">
-    <div class="row border-top border-bottom">
-      <div class="col-sm-1">
+  <div class="tree-menu border-top border-bottom">
+    <div :style="indent">
+      <div v-bind:style="{padding: '5px'}">
         <GameAsset
           :height="72"
           :image="Assets.MaterialImage(label.replace(/ /g, '_'))"
@@ -12,8 +12,15 @@
           </template>
         </GameAsset>
       </div>
-      <div :style="indent" class="col-sm-11">
-        {{ parseInt(quantity).toLocaleString() }} {{ label }}
+      <div 
+        v-bind:style="{flex: '15%', textAlign: 'right', marginRight: '5%'}"
+      >
+        {{ parseInt(quantity).toLocaleString() }}
+      </div>
+      <div
+        v-bind:style="{flex: '80%'}"
+      >
+        {{ label }}
       </div>
     </div>
     <RecipeTree
@@ -42,7 +49,7 @@
     props: [ 'label', 'nodes', 'quantity', 'depth' ],
     computed: {
       indent() {
-        return { transform: `translate(${this.depth * 25}px)` }
+        return { transform: `translate(${this.depth * 40}px)`, display: 'flex' }
       }
     }
   }
