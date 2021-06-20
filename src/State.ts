@@ -27,14 +27,16 @@ export const useState = createGlobalState(() =>
       tasks: Array<Task>(),
       dailyReset: "12:00",
     },
-    version: "0.2.3",
+    version: "0.2.0",
   })
 );
 
 export function versionControl() {
+  // Perform version controlling here whenever there is new data that is persisted
+  // Make sure to update the version number in package.json!
   const state = useState();
   let savedVersion = localStorage.getItem("version");
-  // Perform version controlling here
+  // Legacy support for localStorage
   if (savedVersion !== null) {
     // Consider all previous stored data invalid
     if (savedVersion < "0.1.1") {
@@ -52,36 +54,41 @@ export function versionControl() {
         }
       }
     }
-  }
-  if (state.value.version < "0.2.0") {
-    for (const k of [
-      "alchemy",
-      "cards",
-      "chars",
-      "checklist",
-      "tasks",
-    ] as const) {
-      let value = localStorage.getItem(k);
-      if (value !== null) {
-        state.value[k] = JSON.parse(value);
+    if (savedVersion < "0.2.0") {
+      for (const k of [
+        "alchemy",
+        "cards",
+        "chars",
+        "checklist",
+        "tasks",
+      ] as const) {
+        let value = localStorage.getItem(k);
+        if (value !== null) {
+          state.value[k] = JSON.parse(value);
+        }
+      }
+      for (const k of Object.keys(localStorage)) {
+        if (![StorageKey, "iconify"].includes(k)) {
+          localStorage.removeItem(k);
+        }
       }
     }
-    for (const k of Object.keys(localStorage)) {
-      if (![StorageKey, "iconify"].includes(k)) {
-        localStorage.removeItem(k);
-      }
-    }
   }
+  // Add star signs and constellations
   if (state.value.version < "0.2.2") {
     for (const key in state.value.chars) {
       if (!state.value.chars[key].constellations) {
         state.value.chars[key].constellations = {};
+      }
+      if (!state.value.chars[key].starSigns) {
+        state.value.chars[key].starSigns = {};
       }
     }
     if (!state.value.starSigns) {
       state.value.starSigns = {};
     }
   }
+  // Add W3 skills and statues
   if (state.value.version < "0.2.3") {
     let newSkills = ["Trapping", "Construction", "Worship"];
     let newStatues = ["Box", "EhExPee", "Seesaw", "Twosoul"];
