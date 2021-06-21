@@ -16,7 +16,7 @@
                     min="1"
                     id="min-dmg"
 		    placeholder="Minimum Damage"
-                  /> -- 
+                  /> 
 <input
                     v-model.number="maxDmg"
                     type="number"
@@ -161,12 +161,7 @@ Required EXP for Level Up: {{ expNextLevel(charLevel).toFixed(0) }}
 </div>
 
 Your top three spots are<br>
-{{bestThreeMobs[0]}}<br>
-{{bestThreeMobs[1]}}<br>
-{{bestThreeMobs[2]}}
 <div>
-<a-collapse v-model="activeKey">
-<a-collapse-panel key="1" header="More Details">
 <table class="sweetspot_table">
 	<thead>
 	<tr>
@@ -193,18 +188,12 @@ Your top three spots are<br>
 		<td>{{monster.exp}}</td>
 		<td>{{monsterExpMul(monster).toFixed(2)}}</td>
 		<td>{{expPerSwing(monster).toFixed(2)}}</td>
-		<td>{{monsterWeight[monster.name][charClass]}}</td>
-		<td>{{bestMobArray[monster.name]}}</td> 
+		<!-- <td>{{monsterWeight[monster.name][charClass]}}</td>
+		<td>{{bestMobArray[monster.name]}}</td>  -->
 	</tr> 
 	</tbody>
 </table>
-   <a-collapse-panel key="2" header="This is panel header 2" :disabled="false">
-        <p>Test</p>
-   </a-collapse-panel>
-</a-collapse-panel>
-</a-collapse>
 </div>
-
 
 </div>
 </template>
@@ -230,7 +219,7 @@ export default defineComponent({
 	name: "SweetSpot",
 	setup() {
 		const monsters: Record<string, Monster> = monsterData;
-		const activeKey = ref('1');
+		const activeKey = ref("1");
 		const minDmg = ref("1");
 		const maxDmg = ref("2");
 		
@@ -267,8 +256,8 @@ export default defineComponent({
 
 	
 		const accuracy = ref("2");
-		const critChance = ref("17.9");
-		const critDmg = ref("1.43");
+		const critChance = ref("17");
+		const critDmg = ref("1");
 
 		const charClass = ref("None");
 		const charSkill1 = ref("41");
@@ -294,19 +283,19 @@ export default defineComponent({
 			"Journeyman"
 		];
 
-		const bestMobArray = computed(() => {
+		/*const bestMobArray = computed(() => {
 			let dict = {};
 			/*for(const [key, monster] of Object.entries(monsters)){
 				let curMobCalc = bestMob(monster);		
 				dict[monster.name] = curMobCalc;
-			}*/
+			}
 			return dict;
 		})
 	
 		const bestThreeMobs = computed(() => {
-			let dict = bestMobArray;
+			//let dict = bestMobArray;
 			//Get the number of keys - easy using the array 'length' property
-		/*	var keys = Object.keys(dict);
+		 	var keys = Object.keys(dict);
 			let i, len = keys.length; 
 			keys.sort();
 					var sortedDict = [];
@@ -314,9 +303,9 @@ export default defineComponent({
 			    let k = keys[i];
 			    sortedDict.push({'key': k, 'value':dict[k]});
 			}
-			return sortedDict;*/
+			return sortedDict;  
 			return 0;
-		})		
+		})*/	
 
 		const expNextLevel = (level): number => {
 			// Calculation taken from the Idleon toolbox
@@ -419,9 +408,9 @@ export default defineComponent({
 			// Prevent high calculation loads.
 			// If the range is too high, this will become approximate guess
 			// of the avg number of hits needed to kill the mob
-			let offset = 1;
+			/*let offset = 1;
 			let maxNumCalc = 100000;
-					if(maxDmg.value - minDmg.value > maxNumCalc) {
+			if(maxDmg.value - minDmg.value > maxNumCalc) {
 				offset = Math.round((maxDmg.value - minDmg.value)/maxNumCalc);
 			}
 
@@ -446,6 +435,11 @@ export default defineComponent({
 				numElements++;
 			}
 			return sum/numElements;
+			*/
+			let minHit = minHitToKill(monster);
+			let maxHit = maxHitToKill(monster);
+
+			return Math.ceil((minHit + maxHit)/2);
 		}
 
 		const avgSwingToKill = (monster: Monster): number => {
@@ -496,10 +490,7 @@ export default defineComponent({
 		expNextLevel, timeToLevel,
 
 		chanceToHit, avgSwingToHit, minHitToKill, maxHitToKill, avgHitToKill,
-		avgSwingToKill, monsterExpMul, expPerSwing, bestMob, bestMobArray, bestThreeMobs };
-	},
-
-	methods: {
+		avgSwingToKill, monsterExpMul, expPerSwing, bestMob };
 	}
 });
 </script>
