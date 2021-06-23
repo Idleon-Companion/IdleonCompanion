@@ -1,0 +1,1280 @@
+{
+  "Orange": {
+    "0": {
+      "Name": "ROID_RAGIN",
+      "Effect X1": "1",
+      "Effect X2": "0",
+      "Func": "add",
+      "Materials": [
+        {
+          "Name": "Oak Logs",
+          "Amount": 25,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "1": {
+      "Name": "WARRIORS_RULE",
+      "Effect X1": "2",
+      "Effect X2": "50",
+      "Func": "decayMulti",
+      "Materials": [
+        {
+          "Name": "Spore Cap",
+          "Amount": 20,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Thread",
+          "Amount": 3,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "2": {
+      "Name": "HEARTY_DIGGY",
+      "Effect X1": "50",
+      "Effect X2": "100",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Jungle Logs",
+          "Amount": 40,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Copper Bar",
+          "Amount": 18,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "3": {
+      "Name": "WYOMING_BLOOD",
+      "Effect X1": "23.5",
+      "Effect X2": "1.5",
+      "Func": "bigBase",
+      "Materials": [
+        {
+          "Name": "Fly",
+          "Amount": 30,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Goblin Ear",
+          "Amount": 50,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "4": {
+      "Name": "REELY_SMART",
+      "Effect X1": "100",
+      "Effect X2": "80",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Boring Brick",
+          "Amount": 25,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Crabby Cakey",
+          "Amount": 40,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "5": {
+      "Name": "BIG_MEATY_CLAWS",
+      "Effect X1": "1",
+      "Effect X2": "0.02",
+      "Func": "add",
+      "Materials": [
+        {
+          "Name": "Bleach Logs",
+          "Amount": 200,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Furled Flag",
+          "Amount": 75,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "6": {
+      "Name": "SPLOOSH_SPLOOSH",
+      "Effect X1": "23.5",
+      "Effect X2": "1.5",
+      "Func": "bigBase",
+      "Materials": [
+        {
+          "Name": "Hermit Can",
+          "Amount": 100,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "7": {
+      "Name": "STRONK_TOOLS",
+      "Effect X1": "65",
+      "Effect X2": "70",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Platinum Ore",
+          "Amount": 60,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Frog Leg",
+          "Amount": 200,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "8": {
+      "Name": "FMJ",
+      "Effect X1": "0.5",
+      "Effect X2": "0",
+      "Func": "add",
+      "Materials": [
+        {
+          "Name": "Fruitfly",
+          "Amount": 50,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Wakka Cherry",
+          "Amount": 140,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 5,
+          "isLiquid": 1
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "9": {
+      "Name": "BAPPITY_BOOPITY",
+      "Effect X1": "35",
+      "Effect X2": "100",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Pinion Spur",
+          "Amount": 100,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Jungle Logs",
+          "Amount": 700,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 5,
+          "isLiquid": 1
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "10": {
+      "Name": "BRITTLEY_SPEARS",
+      "Effect X1": "40",
+      "Effect X2": "50",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Froge",
+          "Amount": 10,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "11": {
+      "Name": "CALL_ME_BOB",
+      "Effect X1": "25",
+      "Effect X2": "2.5",
+      "Func": "bigBase",
+      "Materials": [
+        {
+          "Name": "Moustache Comb",
+          "Amount": 120,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "12": {
+      "Name": "CARPENTER",
+      "Effect X1": "2",
+      "Effect X2": "50",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Explosive Salts",
+          "Amount": 3,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "13": {
+      "Name": "BUFF_BOI_TALENT",
+      "Effect X1": "5",
+      "Effect X2": "1",
+      "Func": "bigBase",
+      "Materials": [
+        {
+          "Name": "Mousey",
+          "Amount": 50,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "14": {
+      "Name": "ORANGE_BARGAIN",
+      "Effect X1": "30",
+      "Effect X2": "60",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Frigid Soul",
+          "Amount": 30,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 5,
+          "isLiquid": 1
+        }
+      ]
+    }
+  },
+  "Green": {
+    "0": {
+      "Name": "SWIFT_STEPPIN",
+      "Effect X1": "1",
+      "Effect X2": "0",
+      "Func": "add",
+      "Materials": [
+        {
+          "Name": "Copper Ore",
+          "Amount": 15,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "1": {
+      "Name": "ARCHER_OR_BUST",
+      "Effect X1": "2",
+      "Effect X2": "50",
+      "Func": "decayMulti",
+      "Materials": [
+        {
+          "Name": "Spore Cap",
+          "Amount": 20,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Bleach Logs",
+          "Amount": 30,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "2": {
+      "Name": "HAMMER_HAMMER",
+      "Effect X1": "23",
+      "Effect X2": "2",
+      "Func": "bigBase",
+      "Materials": [
+        {
+          "Name": "Iron Ore",
+          "Amount": 30,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Bean Slices",
+          "Amount": 30,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "3": {
+      "Name": "LIL_BIG_DAMAGE",
+      "Effect X1": "20",
+      "Effect X2": "100",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Goldfish",
+          "Amount": 25,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Carrot Cube",
+          "Amount": 40,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "4": {
+      "Name": "ANVILNOMICS",
+      "Effect X1": "40",
+      "Effect X2": "100",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Forest Fibres",
+          "Amount": 50,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Gold Ore",
+          "Amount": 40,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "5": {
+      "Name": "QUICK_SLAP",
+      "Effect X1": "1",
+      "Effect X2": "0.02",
+      "Func": "add",
+      "Materials": [
+        {
+          "Name": "Coconotnotto",
+          "Amount": 90,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Boring Brick",
+          "Amount": 200,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "6": {
+      "Name": "SANIC_TOOLS",
+      "Effect X1": "65",
+      "Effect X2": "70",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Slime Sludge",
+          "Amount": 130,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Gold Bar",
+          "Amount": 6,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "7": {
+      "Name": "BUG]",
+      "Effect X1": "23.5",
+      "Effect X2": "1.5",
+      "Func": "bigBase",
+      "Materials": [
+        {
+          "Name": "Sentient Cereal",
+          "Amount": 70,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "8": {
+      "Name": "SHAQURACY",
+      "Effect X1": "1",
+      "Effect X2": "0",
+      "Func": "add",
+      "Materials": [
+        {
+          "Name": "Bloach",
+          "Amount": 65,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Tropilogs",
+          "Amount": 250,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 5,
+          "isLiquid": 1
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "9": {
+      "Name": "CHEAP_SHOT",
+      "Effect X1": "7",
+      "Effect X2": "100",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Mosquisnow",
+          "Amount": 35,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Singlecle",
+          "Amount": 150,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 5,
+          "isLiquid": 1
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "10": {
+      "Name": "BOW_JACK",
+      "Effect X1": "40",
+      "Effect X2": "50",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Forest Soul",
+          "Amount": 5,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "11": {
+      "Name": "CALL_ME_ASH",
+      "Effect X1": "25",
+      "Effect X2": "2",
+      "Func": "bigBase",
+      "Materials": [
+        {
+          "Name": "Tundra Logs",
+          "Amount": 100,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "12": {
+      "Name": "CUZ_I_CATCH_EM_ALL",
+      "Effect X1": "3",
+      "Effect X2": "100",
+      "Func": "decayMulti",
+      "Materials": [
+        {
+          "Name": "Rooted Soul",
+          "Amount": 25,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "13": {
+      "Name": "FAST_BOI_TALENT",
+      "Effect X1": "5",
+      "Effect X2": "1",
+      "Func": "bigBase",
+      "Materials": [
+        {
+          "Name": "Flycicle",
+          "Amount": 120,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "14": {
+      "Name": "GREEN_BARGAIN",
+      "Effect X1": "30",
+      "Effect X2": "60",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Owlio",
+          "Amount": 200,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 5,
+          "isLiquid": 1
+        }
+      ]
+    }
+  },
+  "Purple": {
+    "0": {
+      "Name": "STABLE_JENIUS",
+      "Effect X1": "1",
+      "Effect X2": "0",
+      "Func": "add",
+      "Materials": [
+        {
+          "Name": "Thread",
+          "Amount": 10,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "1": {
+      "Name": "MAGE_IS_BEST",
+      "Effect X1": "2",
+      "Effect X2": "50",
+      "Func": "decayMulti",
+      "Materials": [
+        {
+          "Name": "Spore Cap",
+          "Amount": 25,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Copper Bar",
+          "Amount": 13,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "2": {
+      "Name": "HOCUS_CHOPPUS",
+      "Effect X1": "50",
+      "Effect X2": "100",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Trusty Nails",
+          "Amount": 22,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Forest Fibres",
+          "Amount": 40,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "3": {
+      "Name": "MOLTO_LOGGO",
+      "Effect X1": "23.5",
+      "Effect X2": "1.5",
+      "Func": "bigBase",
+      "Materials": [
+        {
+          "Name": "Iron Bar",
+          "Amount": 21,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Megalodon Tooth",
+          "Amount": 30,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "4": {
+      "Name": "NOODUBBLE",
+      "Effect X1": "100",
+      "Effect X2": "60",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Chain Link",
+          "Amount": 20,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Hermit Can",
+          "Amount": 30,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "5": {
+      "Name": "NAME_I_GUESS",
+      "Effect X1": "1",
+      "Effect X2": "0.02",
+      "Func": "add",
+      "Materials": [
+        {
+          "Name": "Snake Skin",
+          "Amount": 110,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Gold Ore",
+          "Amount": 40,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "6": {
+      "Name": "LE_BRAIN_TOOLS",
+      "Effect X1": "65",
+      "Effect X2": "70",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Bleach Logs",
+          "Amount": 250,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Sentient Cereal",
+          "Amount": 55,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "7": {
+      "Name": "COOKIN_ROADKILL",
+      "Effect X1": "120",
+      "Effect X2": "70",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Potty Rolls",
+          "Amount": 75,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "8": {
+      "Name": "BREWSTACHIO",
+      "Effect X1": "50",
+      "Effect X2": "100",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "High Steaks",
+          "Amount": 150,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Bloach",
+          "Amount": 50,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 5,
+          "isLiquid": 1
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "9": {
+      "Name": "ALL_FOR_KILL",
+      "Effect X1": "40",
+      "Effect X2": "100",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Veiny Logs",
+          "Amount": 100,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Platinum Bar",
+          "Amount": 5,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 5,
+          "isLiquid": 1
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "10": {
+      "Name": "MATTY_STAFFORD",
+      "Effect X1": "40",
+      "Effect X2": "50",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Redox Salts",
+          "Amount": 3,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "11": {
+      "Name": "CALL_ME_POPE",
+      "Effect X1": "2.4",
+      "Effect X2": "70",
+      "Func": "decayMulti",
+      "Materials": [
+        {
+          "Name": "Crabbo",
+          "Amount": 25,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "12": {
+      "Name": "GOSPEL_LEADER",
+      "Effect X1": "80",
+      "Effect X2": "60",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Mosquisnow",
+          "Amount": 150,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "13": {
+      "Name": "SMART_BOI_TALENT",
+      "Effect X1": "5",
+      "Effect X2": "1",
+      "Func": "bigBase",
+      "Materials": [
+        {
+          "Name": "Sippy Straw",
+          "Amount": 150,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "14": {
+      "Name": "PURPLE_BARGAIN",
+      "Effect X1": "30",
+      "Effect X2": "60",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Forest Soul",
+          "Amount": 800,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 5,
+          "isLiquid": 1
+        }
+      ]
+    }
+  },
+  "Yellow": {
+    "0": {
+      "Name": "LOTTO_SKILLS",
+      "Effect X1": "1",
+      "Effect X2": "0",
+      "Func": "add",
+      "Materials": [
+        {
+          "Name": "Copper Ore",
+          "Amount": 11,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Oak Logs",
+          "Amount": 15,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Thread",
+          "Amount": 8,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "1": {
+      "Name": "DROPPIN_LOADS",
+      "Effect X1": "40",
+      "Effect X2": "70",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Goldfish",
+          "Amount": 20,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Fly",
+          "Amount": 30,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "2": {
+      "Name": "STARTUE_EXP",
+      "Effect X1": "25",
+      "Effect X2": "60",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Pocket Sand",
+          "Amount": 30,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Plank",
+          "Amount": 40,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "3": {
+      "Name": "LEVEL_UP_GIFT",
+      "Effect X1": "100",
+      "Effect X2": "30",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Iron Ore",
+          "Amount": 35,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Jungle Logs",
+          "Amount": 70,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Trusty Nails",
+          "Amount": 30,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 2,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "4": {
+      "Name": "PROWESESSARY",
+      "Effect X1": "1.5",
+      "Effect X2": "60",
+      "Func": "decayMulti",
+      "Materials": [
+        {
+          "Name": "Gold Bar",
+          "Amount": 25,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Potty Rolls",
+          "Amount": 50,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "5": {
+      "Name": "STAMP_TRAMP",
+      "Effect X1": "1",
+      "Effect X2": "0",
+      "Func": "add",
+      "Materials": [
+        {
+          "Name": "Butterfly",
+          "Amount": 65,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "6": {
+      "Name": "UNDEVELOPED_COSTS",
+      "Effect X1": "40",
+      "Effect X2": "70",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Jellyfish",
+          "Amount": 75,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 6,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "7": {
+      "Name": "DA_DAILY_DRIP",
+      "Effect X1": "30",
+      "Effect X2": "100",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Leather Hide",
+          "Amount": 125,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Water Droplets",
+          "Amount": 8,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "8": {
+      "Name": "GRIND_TIME",
+      "Effect X1": "9.7",
+      "Effect X2": ".3",
+      "Func": "bigBase",
+      "Materials": [
+        {
+          "Name": "Water Droplets",
+          "Amount": 50,
+          "isLiquid": 1
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 25,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "9": {
+      "Name": "LAAARRRRYYYY",
+      "Effect X1": "120",
+      "Effect X2": "100",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Dementia Ore",
+          "Amount": 50,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Shrapshell",
+          "Amount": 130,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "10": {
+      "Name": "COGS_FOR_HANDS",
+      "Effect X1": "4",
+      "Effect X2": "0",
+      "Func": "add",
+      "Materials": [
+        {
+          "Name": "Melty Cube",
+          "Amount": 50,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "11": {
+      "Name": "SAMPLE_IT",
+      "Effect X1": "12",
+      "Effect X2": "40",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Dune Soul",
+          "Amount": 15,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 3,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "12": {
+      "Name": "BIG_GAME_HUNTER",
+      "Effect X1": "70",
+      "Effect X2": "50",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Scorpie",
+          "Amount": 40,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "13": {
+      "Name": "IGNORE_OVERDUES",
+      "Effect X1": "100",
+      "Effect X2": "60",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Wispy Lumber",
+          "Amount": 120,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 4,
+          "isLiquid": 1
+        }
+      ]
+    },
+    "14": {
+      "Name": "YELLOW_BARGAIN",
+      "Effect X1": "30",
+      "Effect X2": "60",
+      "Func": "decay",
+      "Materials": [
+        {
+          "Name": "Pingy",
+          "Amount": 250,
+          "isLiquid": 0
+        },
+        {
+          "Name": "Liquid Nitrogen",
+          "Amount": 5,
+          "isLiquid": 1
+        }
+      ]
+    }
+  }
+}

@@ -3,142 +3,64 @@
     <div>
       <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
         Track your alchemy progress for bubbles and vials, and see costs/bonuses
-        for vials.
+        for vials. This got updated. 
       </p>
     </div>
   </div>
+  <ul class="nav nav-pills nav-fill mt-3" role="tablist">
+    <li v-for="tab in colors" :key="tab" class="nav-item">
+      <button
+        class="nav-link text-light"
+        data-bs-toggle="tab"
+        :data-bs-target="'#' + tab"
+        type="button"
+        role="tab"
+        aria-controls="profile"
+        :aria-selected="tab === Orange"
+        :style="{background: tab}"
+        v-on:click="setGroup(tab)"
+      >
+        {{ tab.replace(/_/g, " ") }}
+      </button>
+    </li>
+  </ul>
+
+
   <div class="d-flex flex-column alchemy-wrapper mt-3">
     <div class="h2 text-light">Alchemy Upgrades</div>
-    <div class="d-flex flex-wrap justify-content-center">
-      <div v-for="(color, i) in colors" :key="i" class="alchemy-upgrades">
-        <div v-for="n in upgradeCount" :key="color + n" class="d-flex mt-1">
-          <GameAsset
-            class="mx-1"
-            :image="Assets.FromDir(color + n, 'alchemy')"
-            :height="64"
-          />
-          <input
-            class="col-4 text-light p-2"
-            type="number"
-            :min="0"
-            :value="alchemy.upgrades[color][n - 1]"
-            @change="handleAlchemyUpgrade($event, color, n - 1)"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="h2 text-light my-3">Alchemy Vials</div>
-    <div class="d-flex flex-wrap">
-      <div
-        v-for="vial in Vials"
-        :key="vial.name"
-        class="vial-wrapper m-1"
-        @click="handleVialClick(vial.name, +1)"
-        @contextmenu.prevent="handleVialClick(vial.name, -1)"
-      >
-        <GameAsset
-          class="vial-bottle"
-          :image="
-            Assets.FromDir('Vials' + (alchemy.vials[vial.name] + 1), 'alchemy')
-          "
-          :title="vial.name"
-          :height="96"
-        >
-          <template #tooltip>
-            <div
-              class="text-center"
-              v-html="vialText(vial, alchemy.vials[vial.name])"
-            ></div>
-          </template>
-        </GameAsset>
-        <GameAsset
-          class="vial-material"
-          :image="Assets.FromDir(vial.material, 'materials')"
-          :height="48"
-          :data-enabled="alchemy.vials[vial.name] !== 0"
-        />
-      </div>
-    </div>
+    <AlchemyRow :group="activeGroup"/>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from "vue";
+import { computed, defineComponent, ref } from "vue";
 
 import GameAsset from "~/components/GameAsset.vue";
+import AlchemyRow from "~/components/AlchemyRow.vue";
 import { Assets } from "~/composables/Utilities";
 import { Color, Vial, Vials, VialCost } from "~/composables/Alchemy";
-import { useState } from "~/State";
+
 
 export default defineComponent({
   name: "Alchemy",
   components: {
     GameAsset,
+    AlchemyRow,
   },
   setup() {
     const colors: Color[] = ["Orange", "Green", "Purple", "Yellow"];
-    const upgradeCount = 15;
+    const activeGroup = ref("Orange"); 
 
-    const state = useState();
-    const alchemy = computed({
-      get: () => state.value.alchemy,
-      set: (value) => (state.value.alchemy = value),
-    });
-    for (const c of colors) {
-      let upgradeDiff = upgradeCount - alchemy.value.upgrades[c].length;
-      for (
-        let i = 0; 
-        i < upgradeDiff; 
-        i += 1
-      ) {
-        alchemy.value.upgrades[c].push(0);
-      }
-    }
-    for (const v of Vials) {
-      if (!(v.name in alchemy.value.vials)) {
-        alchemy.value.vials[v.name] = 0;
-      }
-    }
-
-    // Input handlers
-    const VIAL_TIERS = 10;
-    const handleVialClick = (name: string, step: number) => {
-      let tier = (alchemy.value.vials[name] + step) % VIAL_TIERS;
-      if (tier < 0) {
-        tier = VIAL_TIERS - 1;
-      }
-      alchemy.value.vials[name] = tier;
-    };
-
-    const handleAlchemyUpgrade = (ev: Event, color: Color, i: number) => {
-      let target = <HTMLInputElement>ev.target;
-      let val = target ? target.value : "0";
-      alchemy.value.upgrades[color][i] = parseInt(val);
-    };
-
-    return {
-      alchemy,
+    return {      
       Assets,
       colors,
-      handleAlchemyUpgrade,
-      handleVialClick,
-      upgradeCount,
+      activeGroup,
       Vials,
     };
   },
   methods: {
-    vialText(vial: Vial, level: number): string {
-      let cost = VialCost[level];
-      let costText = `${cost} ${vial.material.replace(/_/g, " ")} + ${
-        3 * level
-      } Water Droplets to next level`;
-      let effect = vial.effect || "???";
-      if (!effect.startsWith("%")) {
-        effect = " " + effect;
-      }
-      return `${vial.name}<br><em>${vial.base < 0 ? "" : "+"}${
-        vial.base * level
-      }${effect}<br>${costText}</em>`;
+    setGroup(tab: string) {
+      this.activeGroup = tab;
     },
   },
 });

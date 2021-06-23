@@ -17,6 +17,12 @@ export const useState = createGlobalState(() =>
         Purple: [],
         Yellow: [],
       },
+      goals: {
+        Orange: [],
+        Green: [],
+        Purple: [],
+        Yellow: [],
+      },
       vials: {},
     } as AlchemyData,
     cards: {} as Record<string, number>,
@@ -27,7 +33,7 @@ export const useState = createGlobalState(() =>
       tasks: Array<Task>(),
       dailyReset: "12:00",
     },
-    version: "0.2.0",
+    version: "0.2.4",
   })
 );
 
@@ -98,6 +104,10 @@ export function versionControl() {
       for (const t of newStatues) state.value.chars[key].statues[t] = 0;
     }
   }
+  if (state.value.version < "0.2.4") {
+    state.value.alchemy.goals = {"Orange": [], "Green": [], "Purple": [], "Yellow": []};
+  }
+
   state.value.version = version;
 }
 
@@ -105,6 +115,7 @@ export function versionControl() {
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
+import { stat } from "fs";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDP9fu1062i82w64K9LgKHFFMDgPtUj6k4",

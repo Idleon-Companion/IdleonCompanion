@@ -1,6 +1,10 @@
+import { isNumber } from "windicss/utils";
+import { Growth } from "./Utilities";
+
 export type AlchemyData = {
   vials: Record<string, number>;
   upgrades: Record<Color, number[]>;
+  goals: Record<Color, number>[];
 };
 
 export type Color = "Orange" | "Green" | "Purple" | "Yellow";
@@ -317,3 +321,32 @@ export const VialCost = [
   100e6,
   1e9,
 ];
+
+
+export type AlchFunc = (a: number, b: number, c:number, d:number, e: number) => any;
+
+export const Alch: Record<string, AlchFunc> = {
+  Multi: (bubbleLvl, cauldCostReduxLvl, bubbleCostBubbleLvl, bubbleCostVialLvl, bubbleTwelveLvl) => {
+    const costReduxBoost = Math.round(10 * Growth['Decay'](cauldCostReduxLvl, 90, 100)) / 10;
+    const oa = Math.max(0.1, 1 - costReduxBoost / 100);
+    const newBubble = Math.max(0.05, 1 - (Growth['Decay'](bubbleTwelveLvl, 30, 60)/100));
+    var discount = oa * newBubble * Math.max(0.05, 1 - (Growth["Decay"](bubbleCostBubbleLvl, 40, 70) + Growth["Add"](bubbleCostVialLvl, 1, 0)) / 100);
+    var multiplier = 
+      Math.pow(1.35 - (0.3 * bubbleLvl) / (50 + bubbleLvl), bubbleLvl) * discount;
+    return multiplier;
+  },
+  Discount: (none, cauldCostReduxLvl, bubbleCostBubbleLvl, bubbleCostVialLvl, bubbleTwelveLvl) => {
+    const costReduxBoost = Math.round(10 * Growth['Decay'](cauldCostReduxLvl, 90, 100)) / 10;
+    const oa = Math.max(0.1, 1 - costReduxBoost / 100);
+    const newBubble = Math.max(0.05, 1 - (Growth['Decay'](bubbleTwelveLvl, 30, 60)/100));
+    const undevCost = Growth["Decay"](bubbleCostBubbleLvl, 40, 70);
+    const vial = Growth["Add"](bubbleCostVialLvl, 1, 0);
+    const undev_vial = Math.max(0.05, 1 - (undevCost + vial) / 100);
+
+
+    var discount = oa * newBubble * undev_vial;
+    var result = [(1-oa)*100, (1-newBubble)*100, (1-undev_vial)*100, (1-discount)*100];
+    return result;
+  }
+
+};
