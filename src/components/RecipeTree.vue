@@ -13,9 +13,9 @@
         </GameAsset>
       </div>
       <div 
-        v-bind:style="{flex: '15%', textAlign: 'right', marginRight: '5%'}"
+        v-bind:style="{flex: '5%', textAlign: 'right', marginRight: '5%'}"
       >
-        {{ parseInt(quantity).toLocaleString() }}
+        {{ parseInt(quantity * toCraft).toLocaleString() }}
       </div>
       <div
         v-bind:style="{flex: '80%'}"
@@ -29,28 +29,36 @@
       :label="node.name"
       :quantity="node.quantity"
       :depth="depth + 1"
+      :toCraft="toCraft"
     >
     </RecipeTree>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+  import { computed, defineComponent } from "vue";
   import GameAsset from "~/components/GameAsset.vue";
   import { Assets } from "~/composables/Utilities";
 
-  export default { 
+  export default defineComponent({
     name: "RecipeTree",
     components: {
       GameAsset
     },
+    props: {
+      label: { type: String },
+      nodes: { type: Object },
+      quantity: { type: Number },
+      depth: { type: Number },
+      toCraft: { type: Number }
+    },
     setup() {
       return { Assets }
     },
-    props: [ 'label', 'nodes', 'quantity', 'depth' ],
     computed: {
       indent() {
         return { transform: `translate(${this.depth * 40}px)`, display: 'flex' }
       }
     }
-  }
+  });
 </script>

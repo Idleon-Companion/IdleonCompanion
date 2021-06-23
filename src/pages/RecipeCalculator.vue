@@ -39,7 +39,7 @@
       <div id="version-group" class="p-2">
         <h3>Last Updated</h3>
         <p>v1.21</p>
-        <p>June 18, 2021</p>
+        <p>June 22, 2021</p>
       </div>
     </div>
   </div>
@@ -51,6 +51,7 @@
       :nodes="materials.materials"
       :quantity="1"
       :depth="0"
+      :toCraft="quantity"
     />
   </div>
 </template>
