@@ -15,7 +15,7 @@
       <div 
         v-bind:style="{flex: '5%', textAlign: 'right', marginRight: '5%'}"
       >
-        {{ parseInt(quantity * toCraft).toLocaleString() }}
+        {{ computedQuantity }}
       </div>
       <div
         v-bind:style="{flex: '80%'}"
@@ -40,25 +40,34 @@
   import GameAsset from "~/components/GameAsset.vue";
   import { Assets } from "~/composables/Utilities";
 
+  type Indent = {
+    transform: String,
+    display: String
+  };
+
   export default defineComponent({
     name: "RecipeTree",
     components: {
       GameAsset
     },
     props: {
-      label: { type: String },
-      nodes: { type: Object },
-      quantity: { type: Number },
-      depth: { type: Number },
-      toCraft: { type: Number }
+      label: { type: String, required: true },
+      nodes: { type: Object, required: true },
+      quantity: { type: Number, required: true },
+      depth: { type: Number, required: true },
+      toCraft: { type: Number, required: true }
     },
-    setup() {
-      return { Assets }
-    },
-    computed: {
-      indent() {
-        return { transform: `translate(${this.depth * 40}px)`, display: 'flex' }
-      }
+    setup(props) {
+      const indent = computed(
+        (): Indent => {
+          return { transform: `translate(${props.depth * 40}px)`, display: 'flex' }
+        }
+      );
+      const computedQuantity = computed(
+        (): String => {
+          return (props.quantity * props.toCraft).toLocaleString();
+        });
+      return { Assets, computedQuantity, indent }
     }
   });
 </script>
