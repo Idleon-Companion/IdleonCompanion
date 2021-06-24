@@ -51,7 +51,7 @@
       :nodes="materials.materials"
       :quantity="1"
       :depth="0"
-      :toCraft="quantity"
+      :toCraft="Number(quantity)"
     />
   </div>
 </template>
