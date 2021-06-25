@@ -58,11 +58,9 @@
       toCraft: { type: Number, required: true }
     },
     setup(props) {
-      const indent = computed(
-        (): Indent => {
-          return { transform: `translate(${props.depth * 40}px)`, display: 'flex' }
-        }
-      );
+      const indent = computed(() => {
+        return { transform: `translate(${props.depth * 40}px)`, display: 'flex' }
+      });
       const computedQuantity = computed(
         (): String => {
           return (props.quantity * props.toCraft).toLocaleString();
