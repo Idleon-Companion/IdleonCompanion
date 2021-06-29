@@ -1382,6 +1382,84 @@
     ]
   },
   "67": {
+    "name": "Fishing Overalls",
+    "materials": [
+      {
+        "name": "Goldfish",
+        "quantity": 500
+      },
+      {
+        "name": "Bleached Designer Wode Patch Pants",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Plank",
+            "quantity": 825
+          },
+          {
+            "name": "Bleach Logs",
+            "quantity": 2100
+          },
+          {
+            "name": "Torn Jeans",
+            "quantity": 30,
+            "materials": [
+              {
+                "name": "Frog Leg",
+                "quantity": 600
+              },
+              {
+                "name": "Copper Bar",
+                "quantity": 240
+              },
+              {
+                "name": "Thread",
+                "quantity": 450
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "68": {
+    "name": "Bandito Pantaloon",
+    "materials": [
+      {
+        "name": "Fly",
+        "quantity": 500
+      },
+      {
+        "name": "Dirty Coal Miner Baggy Soot Pants",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Iron Ore",
+            "quantity": 600
+          },
+          {
+            "name": "Torn Jeans",
+            "quantity": 24,
+            "materials": [
+              {
+                "name": "Frog Leg",
+                "quantity": 480
+              },
+              {
+                "name": "Copper Bar",
+                "quantity": 192
+              },
+              {
+                "name": "Thread",
+                "quantity": 360
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "69": {
     "name": "Chaotic Amarok Pendant",
     "materials": [
       {
@@ -1398,7 +1476,7 @@
       }
     ]
   },
-  "68": {
+  "70": {
     "name": "Copper Fish Rod",
     "materials": [
       {
@@ -1411,7 +1489,7 @@
       }
     ]
   },
-  "69": {
+  "71": {
     "name": "Cramped Fish Pouch",
     "materials": [
       {
@@ -1420,7 +1498,7 @@
       }
     ]
   },
-  "70": {
+  "72": {
     "name": "Copper Netted Net",
     "materials": [
       {
@@ -1433,7 +1511,7 @@
       }
     ]
   },
-  "71": {
+  "73": {
     "name": "Cramped Bug Pouch",
     "materials": [
       {
@@ -1442,7 +1520,7 @@
       }
     ]
   },
-  "72": {
+  "74": {
     "name": "Iron Fishing Rod",
     "materials": [
       {
@@ -1459,7 +1537,7 @@
       }
     ]
   },
-  "73": {
+  "75": {
     "name": "Small Fish Pouch",
     "materials": [
       {
@@ -1472,7 +1550,7 @@
       }
     ]
   },
-  "74": {
+  "76": {
     "name": "Reinforced Net",
     "materials": [
       {
@@ -1489,7 +1567,7 @@
       }
     ]
   },
-  "75": {
+  "77": {
     "name": "Small Bug Pouch",
     "materials": [
       {
@@ -1502,7 +1580,7 @@
       }
     ]
   },
-  "76": {
+  "78": {
     "name": "Silkskin Traps",
     "materials": [
       {
@@ -1515,7 +1593,7 @@
       }
     ]
   },
-  "77": {
+  "79": {
     "name": "Small Critter Pouch",
     "materials": [
       {
@@ -1528,7 +1606,7 @@
       }
     ]
   },
-  "78": {
+  "80": {
     "name": "Ceramic Skull",
     "materials": [
       {
@@ -1541,7 +1619,7 @@
       }
     ]
   },
-  "79": {
+  "81": {
     "name": "Small Soul Pouch",
     "materials": [
       {
@@ -1554,7 +1632,7 @@
       }
     ]
   },
-  "80": {
+  "82": {
     "name": "Gold Helmet",
     "materials": [
       {
@@ -1581,7 +1659,7 @@
       }
     ]
   },
-  "81": {
+  "83": {
     "name": "Gold Platebody",
     "materials": [
       {
@@ -1608,7 +1686,7 @@
       }
     ]
   },
-  "82": {
+  "84": {
     "name": "Gold Platelegs",
     "materials": [
       {
@@ -1635,7 +1713,7 @@
       }
     ]
   },
-  "83": {
+  "85": {
     "name": "Gold Boots",
     "materials": [
       {
@@ -1672,7 +1750,7 @@
       }
     ]
   },
-  "84": {
+  "86": {
     "name": "Bandage Wraps",
     "materials": [
       {
@@ -1703,7 +1781,7 @@
       }
     ]
   },
-  "85": {
+  "87": {
     "name": "Royal Bayonet",
     "materials": [
       {
@@ -1730,7 +1808,7 @@
       }
     ]
   },
-  "86": {
+  "88": {
     "name": "Spiked Menace",
     "materials": [
       {
@@ -1757,7 +1835,7 @@
       }
     ]
   },
-  "87": {
+  "89": {
     "name": "Starlight",
     "materials": [
       {
@@ -1784,7 +1862,7 @@
       }
     ]
   },
-  "88": {
+  "90": {
     "name": "Gold Pickaxe",
     "materials": [
       {
@@ -1811,7 +1889,7 @@
       }
     ]
   },
-  "89": {
+  "91": {
     "name": "Average Mining Pouch",
     "materials": [
       {
@@ -1840,7 +1918,7 @@
       }
     ]
   },
-  "90": {
+  "92": {
     "name": "Golden Axe",
     "materials": [
       {
@@ -1867,7 +1945,7 @@
       }
     ]
   },
-  "91": {
+  "93": {
     "name": "Average Choppin Pouch",
     "materials": [
       {
@@ -1900,7 +1978,7 @@
       }
     ]
   },
-  "92": {
+  "94": {
     "name": "Gold Fishing Rod",
     "materials": [
       {
@@ -1931,7 +2009,7 @@
       }
     ]
   },
-  "93": {
+  "95": {
     "name": "Average Fish Pouch",
     "materials": [
       {
@@ -1964,7 +2042,7 @@
       }
     ]
   },
-  "94": {
+  "96": {
     "name": "Gilded Net",
     "materials": [
       {
@@ -1995,7 +2073,7 @@
       }
     ]
   },
-  "95": {
+  "97": {
     "name": "Average Bug Pouch",
     "materials": [
       {
@@ -2028,16 +2106,16 @@
       }
     ]
   },
-  "96": {
+  "98": {
     "name": "Defenders Dignity",
     "materials": [
       {
         "name": "Goldfish",
-        "quantity": 16000
+        "quantity": 10000
       },
       {
         "name": "Golden Plop",
-        "quantity": 17
+        "quantity": 4
       },
       {
         "name": "Distilled Water",
@@ -2045,7 +2123,7 @@
       }
     ]
   },
-  "97": {
+  "99": {
     "name": "Strung Bludgeon",
     "materials": [
       {
@@ -2062,7 +2140,7 @@
       }
     ]
   },
-  "98": {
+  "100": {
     "name": "Average Food Pouch",
     "materials": [
       {
@@ -2121,7 +2199,7 @@
       }
     ]
   },
-  "99": {
+  "101": {
     "name": "Average Material Pouch",
     "materials": [
       {
@@ -2152,12 +2230,12 @@
       }
     ]
   },
-  "100": {
+  "102": {
     "name": "Platinum Helmet",
     "materials": [
       {
         "name": "Jellyfish",
-        "quantity": 4000
+        "quantity": 2250
       },
       {
         "name": "Platinum Bar",
@@ -2179,7 +2257,7 @@
       }
     ]
   },
-  "101": {
+  "103": {
     "name": "Platinum Platbody",
     "materials": [
       {
@@ -2206,12 +2284,12 @@
       }
     ]
   },
-  "102": {
+  "104": {
     "name": "Platinum Shins",
     "materials": [
       {
         "name": "Sentient Cereal",
-        "quantity": 500
+        "quantity": 5000
       },
       {
         "name": "Platinum Bar",
@@ -2233,16 +2311,16 @@
       }
     ]
   },
-  "103": {
+  "105": {
     "name": "Platinum Boots",
     "materials": [
       {
         "name": "Tropilogs",
-        "quantity": 8000
+        "quantity": 7000
       },
       {
         "name": "Jellyfish",
-        "quantity": 8000
+        "quantity": 3000
       },
       {
         "name": "Gold Boots",
@@ -2284,7 +2362,7 @@
       }
     ]
   },
-  "104": {
+  "106": {
     "name": "Bullet",
     "materials": [
       {
@@ -2297,7 +2375,7 @@
       }
     ]
   },
-  "105": {
+  "107": {
     "name": "Enforced Slasher",
     "materials": [
       {
@@ -2338,7 +2416,7 @@
       }
     ]
   },
-  "106": {
+  "108": {
     "name": "Pharoah Bow",
     "materials": [
       {
@@ -2347,7 +2425,7 @@
       },
       {
         "name": "Bloach",
-        "quantity": 3200
+        "quantity": 1400
       },
       {
         "name": "Spiked Menace",
@@ -2379,7 +2457,7 @@
       }
     ]
   },
-  "107": {
+  "109": {
     "name": "Crows Nest",
     "materials": [
       {
@@ -2420,7 +2498,7 @@
       }
     ]
   },
-  "108": {
+  "110": {
     "name": "Platinum Pickaxe",
     "materials": [
       {
@@ -2461,7 +2539,7 @@
       }
     ]
   },
-  "109": {
+  "111": {
     "name": "Sizable Mining Pouch",
     "materials": [
       {
@@ -2500,7 +2578,7 @@
       }
     ]
   },
-  "110": {
+  "112": {
     "name": "Plat Hatchet",
     "materials": [
       {
@@ -2541,7 +2619,7 @@
       }
     ]
   },
-  "111": {
+  "113": {
     "name": "Sizable Choppin Pouch",
     "materials": [
       {
@@ -2584,12 +2662,12 @@
       }
     ]
   },
-  "112": {
+  "114": {
     "name": "Plat Fishing Rod",
     "materials": [
       {
         "name": "Bloach",
-        "quantity": 7000
+        "quantity": 2000
       },
       {
         "name": "Platinum Bar",
@@ -2629,12 +2707,12 @@
       }
     ]
   },
-  "113": {
+  "115": {
     "name": "Sizable Fish Pouch",
     "materials": [
       {
         "name": "Bloach",
-        "quantity": 6750
+        "quantity": 2500
       },
       {
         "name": "Average Fish Pouch",
@@ -2672,7 +2750,7 @@
       }
     ]
   },
-  "114": {
+  "116": {
     "name": "Platinet",
     "materials": [
       {
@@ -2717,7 +2795,7 @@
       }
     ]
   },
-  "115": {
+  "117": {
     "name": "Sizable Bug Pouch",
     "materials": [
       {
@@ -2760,7 +2838,7 @@
       }
     ]
   },
-  "116": {
+  "118": {
     "name": "Sizable Food Pouch",
     "materials": [
       {
@@ -2833,7 +2911,7 @@
       }
     ]
   },
-  "117": {
+  "119": {
     "name": "Sizable Materials Pouch",
     "materials": [
       {
@@ -2878,7 +2956,7 @@
       }
     ]
   },
-  "118": {
+  "120": {
     "name": "Anvil Tab 3",
     "materials": [
       {
@@ -2899,7 +2977,7 @@
       }
     ]
   },
-  "119": {
+  "121": {
     "name": "Empty Box",
     "materials": [
       {
@@ -2916,7 +2994,7 @@
       }
     ]
   },
-  "120": {
+  "122": {
     "name": "Googley Eyes",
     "materials": [
       {
@@ -2926,10 +3004,14 @@
       {
         "name": "Distilled Water",
         "quantity": 5
+      },
+      {
+        "name": "Capitalist Case",
+        "quantity": 1
       }
     ]
   },
-  "121": {
+  "123": {
     "name": "FMJ Bullet",
     "materials": [
       {
@@ -2952,7 +3034,7 @@
       }
     ]
   },
-  "122": {
+  "124": {
     "name": "Viking Cap",
     "materials": [
       {
@@ -2993,7 +3075,7 @@
       }
     ]
   },
-  "123": {
+  "125": {
     "name": "Sleek Coif",
     "materials": [
       {
@@ -3034,7 +3116,7 @@
       }
     ]
   },
-  "124": {
+  "126": {
     "name": "Witch Hat",
     "materials": [
       {
@@ -3075,7 +3157,7 @@
       }
     ]
   },
-  "125": {
+  "127": {
     "name": "Studded Hide",
     "materials": [
       {
@@ -3126,7 +3208,7 @@
       }
     ]
   },
-  "126": {
+  "128": {
     "name": "Feral Leathering",
     "materials": [
       {
@@ -3153,7 +3235,7 @@
       }
     ]
   },
-  "127": {
+  "129": {
     "name": "Furled Robes",
     "materials": [
       {
@@ -3170,7 +3252,7 @@
       }
     ]
   },
-  "128": {
+  "130": {
     "name": "Cavern Trekkers",
     "materials": [
       {
@@ -3225,7 +3307,7 @@
       }
     ]
   },
-  "129": {
+  "131": {
     "name": "Angler Boots",
     "materials": [
       {
@@ -3280,7 +3362,7 @@
       }
     ]
   },
-  "130": {
+  "132": {
     "name": "Logger Heels",
     "materials": [
       {
@@ -3335,7 +3417,7 @@
       }
     ]
   },
-  "131": {
+  "133": {
     "name": "Bandito Boots",
     "materials": [
       {
@@ -3390,7 +3472,7 @@
       }
     ]
   },
-  "132": {
+  "134": {
     "name": "Slurpin Herm",
     "materials": [
       {
@@ -3403,7 +3485,7 @@
       }
     ]
   },
-  "133": {
+  "135": {
     "name": "Buttered Toasted Butter",
     "materials": [
       {
@@ -3416,7 +3498,7 @@
       }
     ]
   },
-  "134": {
+  "136": {
     "name": "Dootjat Eye",
     "materials": [
       {
@@ -3433,7 +3515,7 @@
       }
     ]
   },
-  "135": {
+  "137": {
     "name": "Sandy Satchel",
     "materials": [
       {
@@ -3450,7 +3532,7 @@
       }
     ]
   },
-  "136": {
+  "138": {
     "name": "Efaunt Helmet",
     "materials": [
       {
@@ -3485,7 +3567,7 @@
       }
     ]
   },
-  "137": {
+  "139": {
     "name": "Efaunt Ribcage",
     "materials": [
       {
@@ -3502,7 +3584,7 @@
       }
     ]
   },
-  "138": {
+  "140": {
     "name": "Efaunt Hipilium",
     "materials": [
       {
@@ -3519,7 +3601,7 @@
       }
     ]
   },
-  "139": {
+  "141": {
     "name": "Efaunts Broken Ankles",
     "materials": [
       {
@@ -3536,11 +3618,11 @@
         "materials": [
           {
             "name": "Tropilogs",
-            "quantity": 8000
+            "quantity": 7000
           },
           {
             "name": "Jellyfish",
-            "quantity": 8000
+            "quantity": 3000
           },
           {
             "name": "Gold Boots",
@@ -3584,7 +3666,7 @@
       }
     ]
   },
-  "140": {
+  "142": {
     "name": "Efaunt Trunculus",
     "materials": [
       {
@@ -3637,7 +3719,7 @@
           },
           {
             "name": "Bloach",
-            "quantity": 3200
+            "quantity": 1400
           },
           {
             "name": "Spiked Menace",
@@ -3671,7 +3753,7 @@
       }
     ]
   },
-  "141": {
+  "143": {
     "name": "Wooden Traps",
     "materials": [
       {
@@ -3684,7 +3766,7 @@
       }
     ]
   },
-  "142": {
+  "144": {
     "name": "Sizable Critter Pouch",
     "materials": [
       {
@@ -3697,7 +3779,7 @@
       }
     ]
   },
-  "143": {
+  "145": {
     "name": "Horned Skull",
     "materials": [
       {
@@ -3710,7 +3792,7 @@
       }
     ]
   },
-  "144": {
+  "146": {
     "name": "Sizable Soul Pouch",
     "materials": [
       {
@@ -3723,7 +3805,211 @@
       }
     ]
   },
-  "145": {
+  "147": {
+    "name": "Yumyum Desert NPC Completion Token",
+    "materials": [
+      {
+        "name": "Easy Yumyum Dez NPC Token",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Bandit Bob Token",
+            "quantity": 1
+          },
+          {
+            "name": "Snake Jar Token",
+            "quantity": 1
+          },
+          {
+            "name": "Whattso Token",
+            "quantity": 1
+          },
+          {
+            "name": "Cowbo Jones Token",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "name": "Med Yumyum Dez NPC Token",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Carpetiem Token",
+            "quantity": 1
+          },
+          {
+            "name": "Goldric Token",
+            "quantity": 1
+          },
+          {
+            "name": "Fishpaste Token",
+            "quantity": 1
+          },
+          {
+            "name": "Cattleprod Token",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "name": "Hard Yumyum Dez NPC Token",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Loominadi Token",
+            "quantity": 1
+          },
+          {
+            "name": "Djonnut Token",
+            "quantity": 1
+          },
+          {
+            "name": "Scubidew Token",
+            "quantity": 1
+          },
+          {
+            "name": "Wellington Token",
+            "quantity": 1
+          }
+        ]
+      }
+    ]
+  },
+  "148": {
+    "name": "Yumyum Skills Completion Token",
+    "materials": [
+      {
+        "name": "Bloach",
+        "quantity": 4000
+      },
+      {
+        "name": "Fruitfly",
+        "quantity": 8000
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 50
+      }
+    ]
+  },
+  "149": {
+    "name": "Yumyum Misc Completion Token",
+    "materials": [
+      {
+        "name": "Minuteglass",
+        "quantity": 13
+      },
+      {
+        "name": "Ghost",
+        "quantity": 25
+      },
+      {
+        "name": "Fuscismatia",
+        "quantity": 2
+      },
+      {
+        "name": "Efaunt Helmet",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Ripped Tunic",
+            "quantity": 20
+          },
+          {
+            "name": "Trimmed Rune Platelegs",
+            "quantity": 1
+          },
+          {
+            "name": "Armor Upgrade Stone C",
+            "quantity": 2
+          },
+          {
+            "name": "Dootjat Eye",
+            "quantity": 3,
+            "materials": [
+              {
+                "name": "Silver Antique",
+                "quantity": 3
+              },
+              {
+                "name": "Gold Bar",
+                "quantity": 240
+              },
+              {
+                "name": "Ghost",
+                "quantity": 3
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "150": {
+    "name": "Easy Yumyum Dez NPC Token",
+    "materials": [
+      {
+        "name": "Bandit Bob Token",
+        "quantity": 1
+      },
+      {
+        "name": "Snake Jar Token",
+        "quantity": 1
+      },
+      {
+        "name": "Whattso Token",
+        "quantity": 1
+      },
+      {
+        "name": "Cowbo Jones Token",
+        "quantity": 1
+      }
+    ]
+  },
+  "151": {
+    "name": "Med Yumyum Dez NPC Token",
+    "materials": [
+      {
+        "name": "Carpetiem Token",
+        "quantity": 1
+      },
+      {
+        "name": "Goldric Token",
+        "quantity": 1
+      },
+      {
+        "name": "Fishpaste Token",
+        "quantity": 1
+      },
+      {
+        "name": "Cattleprod Token",
+        "quantity": 1
+      }
+    ]
+  },
+  "152": {
+    "name": "Hard Yumyum Dez NPC Token",
+    "materials": [
+      {
+        "name": "Loominadi Token",
+        "quantity": 1
+      },
+      {
+        "name": "Djonnut Token",
+        "quantity": 1
+      },
+      {
+        "name": "Scubidew Token",
+        "quantity": 1
+      },
+      {
+        "name": "Wellington Token",
+        "quantity": 1
+      }
+    ]
+  },
+  "153": {
     "name": "Dementia Helmet",
     "materials": [
       {
@@ -3740,7 +4026,7 @@
         "materials": [
           {
             "name": "Jellyfish",
-            "quantity": 8000
+            "quantity": 4500
           },
           {
             "name": "Platinum Bar",
@@ -3764,7 +4050,7 @@
       }
     ]
   },
-  "146": {
+  "154": {
     "name": "Dementia Body",
     "materials": [
       {
@@ -3805,7 +4091,7 @@
       }
     ]
   },
-  "147": {
+  "155": {
     "name": "Dementia Shins",
     "materials": [
       {
@@ -3822,7 +4108,7 @@
         "materials": [
           {
             "name": "Sentient Cereal",
-            "quantity": 1000
+            "quantity": 10000
           },
           {
             "name": "Platinum Bar",
@@ -3846,7 +4132,7 @@
       }
     ]
   },
-  "148": {
+  "156": {
     "name": "Dementia Boots",
     "materials": [
       {
@@ -3863,11 +4149,11 @@
         "materials": [
           {
             "name": "Tropilogs",
-            "quantity": 8000
+            "quantity": 7000
           },
           {
             "name": "Jellyfish",
-            "quantity": 8000
+            "quantity": 3000
           },
           {
             "name": "Gold Boots",
@@ -3911,7 +4197,7 @@
       }
     ]
   },
-  "149": {
+  "157": {
     "name": "Uninflated Glove",
     "materials": [
       {
@@ -3952,7 +4238,7 @@
       }
     ]
   },
-  "150": {
+  "158": {
     "name": "The Ice Breaker",
     "materials": [
       {
@@ -4007,7 +4293,7 @@
       }
     ]
   },
-  "151": {
+  "159": {
     "name": "Blizzard Bow",
     "materials": [
       {
@@ -4028,7 +4314,7 @@
           },
           {
             "name": "Bloach",
-            "quantity": 6400
+            "quantity": 2800
           },
           {
             "name": "Spiked Menace",
@@ -4062,7 +4348,7 @@
       }
     ]
   },
-  "152": {
+  "160": {
     "name": "Spriggly Storm",
     "materials": [
       {
@@ -4117,7 +4403,7 @@
       }
     ]
   },
-  "153": {
+  "161": {
     "name": "Dementia Pickaxe",
     "materials": [
       {
@@ -4172,7 +4458,7 @@
       }
     ]
   },
-  "154": {
+  "162": {
     "name": "Big Mining Pouch",
     "materials": [
       {
@@ -4221,7 +4507,7 @@
       }
     ]
   },
-  "155": {
+  "163": {
     "name": "Dementia Dicer",
     "materials": [
       {
@@ -4276,7 +4562,7 @@
       }
     ]
   },
-  "156": {
+  "164": {
     "name": "Big Choppin Pouch",
     "materials": [
       {
@@ -4329,7 +4615,7 @@
       }
     ]
   },
-  "157": {
+  "165": {
     "name": "Dementia Rod for Fishing",
     "materials": [
       {
@@ -4346,7 +4632,7 @@
         "materials": [
           {
             "name": "Bloach",
-            "quantity": 14000
+            "quantity": 4000
           },
           {
             "name": "Platinum Bar",
@@ -4388,7 +4674,7 @@
       }
     ]
   },
-  "158": {
+  "166": {
     "name": "Big Fish Pouch",
     "materials": [
       {
@@ -4405,7 +4691,7 @@
         "materials": [
           {
             "name": "Bloach",
-            "quantity": 13500
+            "quantity": 5000
           },
           {
             "name": "Average Fish Pouch",
@@ -4445,7 +4731,7 @@
       }
     ]
   },
-  "159": {
+  "167": {
     "name": "Dementia Net",
     "materials": [
       {
@@ -4504,7 +4790,7 @@
       }
     ]
   },
-  "160": {
+  "168": {
     "name": "Big Bug Pouch",
     "materials": [
       {
@@ -4557,7 +4843,7 @@
       }
     ]
   },
-  "161": {
+  "169": {
     "name": "Natural Traps",
     "materials": [
       {
@@ -4584,7 +4870,7 @@
       }
     ]
   },
-  "162": {
+  "170": {
     "name": "Big Critter Pouch",
     "materials": [
       {
@@ -4607,7 +4893,7 @@
       }
     ]
   },
-  "163": {
+  "171": {
     "name": "Prickle Skull",
     "materials": [
       {
@@ -4634,7 +4920,7 @@
       }
     ]
   },
-  "164": {
+  "172": {
     "name": "Big Soul Pouch",
     "materials": [
       {
@@ -4657,7 +4943,7 @@
       }
     ]
   },
-  "165": {
+  "173": {
     "name": "Big Food Pouch",
     "materials": [
       {
@@ -4768,7 +5054,7 @@
       }
     ]
   },
-  "166": {
+  "174": {
     "name": "Big Materials Pouch",
     "materials": [
       {
@@ -4827,7 +5113,7 @@
       }
     ]
   },
-  "167": {
+  "175": {
     "name": "Void Imperium Helmet",
     "materials": [
       {
@@ -4837,6 +5123,10 @@
       {
         "name": "Void Bar",
         "quantity": 1000
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 5
       },
       {
         "name": "Dementia Helmet",
@@ -4856,7 +5146,7 @@
             "materials": [
               {
                 "name": "Jellyfish",
-                "quantity": 16000
+                "quantity": 9000
               },
               {
                 "name": "Platinum Bar",
@@ -4882,7 +5172,7 @@
       }
     ]
   },
-  "168": {
+  "176": {
     "name": "Void Imperium Platebody",
     "materials": [
       {
@@ -4892,6 +5182,10 @@
       {
         "name": "Void Bar",
         "quantity": 500
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 4
       },
       {
         "name": "Dementia Body",
@@ -4937,7 +5231,7 @@
       }
     ]
   },
-  "169": {
+  "177": {
     "name": "Void Imperium Shardshins",
     "materials": [
       {
@@ -4947,6 +5241,10 @@
       {
         "name": "Void Bar",
         "quantity": 650
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 4
       },
       {
         "name": "Dementia Shins",
@@ -4966,7 +5264,7 @@
             "materials": [
               {
                 "name": "Sentient Cereal",
-                "quantity": 2000
+                "quantity": 20000
               },
               {
                 "name": "Platinum Bar",
@@ -4992,7 +5290,7 @@
       }
     ]
   },
-  "170": {
+  "178": {
     "name": "Void Imperium Kicks",
     "materials": [
       {
@@ -5002,6 +5300,10 @@
       {
         "name": "Void Bar",
         "quantity": 725
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 4
       },
       {
         "name": "Dementia Boots",
@@ -5021,11 +5323,11 @@
             "materials": [
               {
                 "name": "Tropilogs",
-                "quantity": 16000
+                "quantity": 14000
               },
               {
                 "name": "Jellyfish",
-                "quantity": 16000
+                "quantity": 6000
               },
               {
                 "name": "Gold Boots",
@@ -5071,7 +5373,7 @@
       }
     ]
   },
-  "171": {
+  "179": {
     "name": "Deuscythe",
     "materials": [
       {
@@ -5080,7 +5382,11 @@
       },
       {
         "name": "Eternal Lord of The Undying Ember",
-        "quantity": 5
+        "quantity": 10
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 7
       },
       {
         "name": "The Ice Breaker",
@@ -5140,7 +5446,7 @@
       }
     ]
   },
-  "172": {
+  "180": {
     "name": "Blackhole Bow",
     "materials": [
       {
@@ -5150,6 +5456,10 @@
       {
         "name": "Spontaneity Salts",
         "quantity": 250
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 7
       },
       {
         "name": "Blizzard Bow",
@@ -5173,7 +5483,7 @@
               },
               {
                 "name": "Bloach",
-                "quantity": 19200
+                "quantity": 8400
               },
               {
                 "name": "Spiked Menace",
@@ -5209,7 +5519,7 @@
       }
     ]
   },
-  "173": {
+  "181": {
     "name": "Grey Gatsby",
     "materials": [
       {
@@ -5218,7 +5528,11 @@
       },
       {
         "name": "Frigid Soul",
-        "quantity": 50000
+        "quantity": 8000
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 7
       },
       {
         "name": "Spriggly Storm",
@@ -5278,12 +5592,16 @@
       }
     ]
   },
-  "174": {
+  "182": {
     "name": "Void Imperium Pik",
     "materials": [
       {
         "name": "Void Bar",
         "quantity": 400
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 5
       },
       {
         "name": "Dementia Pickaxe",
@@ -5343,7 +5661,7 @@
       }
     ]
   },
-  "175": {
+  "183": {
     "name": "Large Mining Pouch",
     "materials": [
       {
@@ -5402,12 +5720,16 @@
       }
     ]
   },
-  "176": {
+  "184": {
     "name": "Void Imperium Axe",
     "materials": [
       {
         "name": "Wispy Lumber",
         "quantity": 50000
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 5
       },
       {
         "name": "Dementia Dicer",
@@ -5467,7 +5789,7 @@
       }
     ]
   },
-  "177": {
+  "185": {
     "name": "Large Choppin Pouch",
     "materials": [
       {
@@ -5530,7 +5852,7 @@
       }
     ]
   },
-  "178": {
+  "186": {
     "name": "Void Imperium Rod",
     "materials": [
       {
@@ -5540,6 +5862,10 @@
       {
         "name": "Minervowl",
         "quantity": 3
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 5
       },
       {
         "name": "Dementia Rod for Fishing",
@@ -5559,7 +5885,7 @@
             "materials": [
               {
                 "name": "Bloach",
-                "quantity": 28000
+                "quantity": 8000
               },
               {
                 "name": "Platinum Bar",
@@ -5603,7 +5929,7 @@
       }
     ]
   },
-  "179": {
+  "187": {
     "name": "Large Fish Pouch",
     "materials": [
       {
@@ -5628,7 +5954,7 @@
             "materials": [
               {
                 "name": "Bloach",
-                "quantity": 27000
+                "quantity": 10000
               },
               {
                 "name": "Average Fish Pouch",
@@ -5670,12 +5996,16 @@
       }
     ]
   },
-  "180": {
+  "188": {
     "name": "Void Imperium Net",
     "materials": [
       {
         "name": "Flycicle",
         "quantity": 50000
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 5
       },
       {
         "name": "Dementia Net",
@@ -5739,7 +6069,7 @@
       }
     ]
   },
-  "181": {
+  "189": {
     "name": "Large Bug Pouch",
     "materials": [
       {
@@ -5802,12 +6132,16 @@
       }
     ]
   },
-  "182": {
+  "190": {
     "name": "Steel Traps",
     "materials": [
       {
         "name": "Eternal Lord of The Undying Ember",
         "quantity": 6
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 5
       },
       {
         "name": "Natural Traps",
@@ -5839,7 +6173,7 @@
       }
     ]
   },
-  "183": {
+  "191": {
     "name": "Large Critter Pouch",
     "materials": [
       {
@@ -5872,12 +6206,16 @@
       }
     ]
   },
-  "184": {
+  "192": {
     "name": "Manifested Skull",
     "materials": [
       {
         "name": "Frigid Soul",
-        "quantity": 50000
+        "quantity": 6000
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 5
       },
       {
         "name": "Prickle Skull",
@@ -5909,11 +6247,11 @@
       }
     ]
   },
-  "185": {
+  "193": {
     "name": "Large Soul Pouch",
     "materials": [
       {
-        "name": "Frigid Soul",
+        "name": "Rooted Soul",
         "quantity": 30000
       },
       {
@@ -5942,7 +6280,7 @@
       }
     ]
   },
-  "186": {
+  "194": {
     "name": "Large Food Pouch",
     "materials": [
       {
@@ -6091,7 +6429,7 @@
       }
     ]
   },
-  "187": {
+  "195": {
     "name": "Large Materials Pouch",
     "materials": [
       {
@@ -6164,7 +6502,7 @@
       }
     ]
   },
-  "188": {
+  "196": {
     "name": "Anvil Tab 4",
     "materials": [
       {
@@ -6185,7 +6523,7 @@
       }
     ]
   },
-  "189": {
+  "197": {
     "name": "Mark of Member",
     "materials": [
       {
@@ -6209,6 +6547,10 @@
             "quantity": 1000
           },
           {
+            "name": "Dense Water",
+            "quantity": 5
+          },
+          {
             "name": "Dementia Helmet",
             "quantity": 2,
             "materials": [
@@ -6226,7 +6568,7 @@
                 "materials": [
                   {
                     "name": "Jellyfish",
-                    "quantity": 16000
+                    "quantity": 9000
                   },
                   {
                     "name": "Platinum Bar",
@@ -6254,7 +6596,7 @@
       }
     ]
   },
-  "190": {
+  "198": {
     "name": "Murmillo Helm",
     "materials": [
       {
@@ -6274,6 +6616,10 @@
             "quantity": 1000
           },
           {
+            "name": "Dense Water",
+            "quantity": 5
+          },
+          {
             "name": "Dementia Helmet",
             "quantity": 2,
             "materials": [
@@ -6291,7 +6637,7 @@
                 "materials": [
                   {
                     "name": "Jellyfish",
-                    "quantity": 16000
+                    "quantity": 9000
                   },
                   {
                     "name": "Platinum Bar",
@@ -6319,7 +6665,7 @@
       }
     ]
   },
-  "191": {
+  "199": {
     "name": "Conquistador Plume",
     "materials": [
       {
@@ -6339,6 +6685,10 @@
             "quantity": 1000
           },
           {
+            "name": "Dense Water",
+            "quantity": 5
+          },
+          {
             "name": "Dementia Helmet",
             "quantity": 2,
             "materials": [
@@ -6356,7 +6706,7 @@
                 "materials": [
                   {
                     "name": "Jellyfish",
-                    "quantity": 16000
+                    "quantity": 9000
                   },
                   {
                     "name": "Platinum Bar",
@@ -6384,7 +6734,7 @@
       }
     ]
   },
-  "192": {
+  "200": {
     "name": "Adornment of the High Priest",
     "materials": [
       {
@@ -6404,6 +6754,10 @@
             "quantity": 1000
           },
           {
+            "name": "Dense Water",
+            "quantity": 5
+          },
+          {
             "name": "Dementia Helmet",
             "quantity": 2,
             "materials": [
@@ -6421,7 +6775,7 @@
                 "materials": [
                   {
                     "name": "Jellyfish",
-                    "quantity": 16000
+                    "quantity": 9000
                   },
                   {
                     "name": "Platinum Bar",
@@ -6449,7 +6803,7 @@
       }
     ]
   },
-  "193": {
+  "201": {
     "name": "Member Hoodie",
     "materials": [
       {
@@ -6511,6 +6865,10 @@
             "quantity": 500
           },
           {
+            "name": "Dense Water",
+            "quantity": 4
+          },
+          {
             "name": "Dementia Body",
             "quantity": 2,
             "materials": [
@@ -6556,7 +6914,7 @@
       }
     ]
   },
-  "194": {
+  "202": {
     "name": "Damascus Plates",
     "materials": [
       {
@@ -6576,6 +6934,10 @@
             "quantity": 500
           },
           {
+            "name": "Dense Water",
+            "quantity": 4
+          },
+          {
             "name": "Dementia Body",
             "quantity": 2,
             "materials": [
@@ -6621,7 +6983,7 @@
       }
     ]
   },
-  "195": {
+  "203": {
     "name": "Evergreen Wraps",
     "materials": [
       {
@@ -6641,6 +7003,10 @@
             "quantity": 500
           },
           {
+            "name": "Dense Water",
+            "quantity": 4
+          },
+          {
             "name": "Dementia Body",
             "quantity": 2,
             "materials": [
@@ -6686,7 +7052,7 @@
       }
     ]
   },
-  "196": {
+  "204": {
     "name": "Elegantine Robes",
     "materials": [
       {
@@ -6706,6 +7072,10 @@
             "quantity": 500
           },
           {
+            "name": "Dense Water",
+            "quantity": 4
+          },
+          {
             "name": "Dementia Body",
             "quantity": 2,
             "materials": [
@@ -6751,7 +7121,7 @@
       }
     ]
   },
-  "197": {
+  "205": {
     "name": "Critter Numnums",
     "materials": [
       {
@@ -6764,7 +7134,7 @@
       }
     ]
   },
-  "198": {
+  "206": {
     "name": "Soulble Gum",
     "materials": [
       {
@@ -6777,7 +7147,7 @@
       }
     ]
   },
-  "199": {
+  "207": {
     "name": "Shivering Sack",
     "materials": [
       {
