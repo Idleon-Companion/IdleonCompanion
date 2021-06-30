@@ -323,29 +323,25 @@ export const VialCost = [
 ];
 
 
-export type AlchFunc = (a: number, b: number, c:number, d:number, e: number) => any;
+export type AlchFunc = (a: number, b: number, c:number, d:number, e: number, f:number) => any;
 
 export const Alch: Record<string, AlchFunc> = {
-  Multi: (bubbleLvl, cauldCostReduxLvl, bubbleCostBubbleLvl, bubbleCostVialLvl, bubbleTwelveLvl) => {
-    const costReduxBoost = Math.round(10 * Growth['Decay'](cauldCostReduxLvl, 90, 100)) / 10;
-    const oa = Math.max(0.1, 1 - costReduxBoost / 100);
-    const newBubble = Math.max(0.05, 1 - (Growth['Decay'](bubbleTwelveLvl, 30, 60)/100));
-    var discount = oa * newBubble * Math.max(0.05, 1 - (Growth["Decay"](bubbleCostBubbleLvl, 40, 70) + Growth["Add"](bubbleCostVialLvl, 1, 0)) / 100);
+  Multi: (bubbleLvl, cauldCostReduxLvl, bubbleCostBubbleLvl, bubbleCostVialLvl, bubbleTwelveLvl, tagLvl) => {
+    var discount = (100-Alch["Discount"](cauldCostReduxLvl, bubbleCostBubbleLvl, bubbleCostVialLvl, bubbleTwelveLvl, tagLvl, 0)[4])/100;
     var multiplier = 
       Math.pow(1.35 - (0.3 * bubbleLvl) / (50 + bubbleLvl), bubbleLvl) * discount;
     return multiplier;
   },
-  Discount: (none, cauldCostReduxLvl, bubbleCostBubbleLvl, bubbleCostVialLvl, bubbleTwelveLvl) => {
-    const costReduxBoost = Math.round(10 * Growth['Decay'](cauldCostReduxLvl, 90, 100)) / 10;
-    const oa = Math.max(0.1, 1 - costReduxBoost / 100);
+  Discount: (cauldCostReduxLvl, bubbleCostBubbleLvl, bubbleCostVialLvl, bubbleTwelveLvl, tagLvl, none) => {
+    const oa = Math.max(0.1, 1 - Growth['Decay'](cauldCostReduxLvl, 90, 100) / 100);
     const newBubble = Math.max(0.05, 1 - (Growth['Decay'](bubbleTwelveLvl, 30, 60)/100));
     const undevCost = Growth["Decay"](bubbleCostBubbleLvl, 40, 70);
     const vial = Growth["Add"](bubbleCostVialLvl, 1, 0);
     const undev_vial = Math.max(0.05, 1 - (undevCost + vial) / 100);
-
-
-    var discount = oa * newBubble * undev_vial;
-    var result = [(1-oa)*100, (1-newBubble)*100, (1-undev_vial)*100, (1-discount)*100];
+    const bargain_tag = Math.max(Math.pow(0.75, tagLvl), 0.1);
+    var discount = oa * newBubble * undev_vial * bargain_tag;
+    var result = [(1-oa)*100, (1-bargain_tag)*100, (1-newBubble)*100, (1-undev_vial)*100, (1-discount)*100];
+    console.log(`Alch[D] = ${result}`)
     return result;
   }
 

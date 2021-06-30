@@ -1,21 +1,35 @@
 <template>
   <div class="text-light">
-    {{group}} cauldron reduction level: 
-    <input
-      v-model="cauldRedux"
-      :style="{width: '70px'}"
-      type="number"
-      :min="0"
-      @change="handleAlchemyCauldron($event, group)"
-    /><br><br>
     <table 
       class="border-top border-bottom"
       :style="{width: '50%'}">
       <tr><th :style="{textAlign: 'center', width: '100%'}"> Cost Reductions </th></tr>
       <tr :style="{display: 'flex', justifyContent: 'space-between'}">
+        <th :style="{width: '25%', whiteSpace: 'pre'}">
+          Cauldron <br> Level: <br>
+          <input
+            v-model="cauldRedux"
+            :style="{width: '70px'}"
+            type="number"
+            :min="0"
+            @change="handleAlchemyCauldron($event, group)"
+          />
+        </th>
+        <th :style="{width: '25%', whiteSpace: 'pre'}">
+          Bargain tag <br> Level: <br>
+          <input
+            v-model="bargainLvl"
+            :style="{width: '70px'}"
+            type="number"
+            :min="0"
+            @change="handleBargainTag($event, group)"
+          />
+        </th>
+
+
         <th
           :style="{width: '25%', whiteSpace: 'pre'}"
-          v-for="d in ['Cauldron', 'XII Bubble', 'Yellow VI and\nIron bar vial', 'Total']"
+          v-for="d in ['XII Bubble', 'Yellow VI and\nIron bar vial', 'Total']"
           :key="d">
           {{d}}
         </th>
@@ -148,37 +162,32 @@ export default defineComponent({
     const amountBubbles = 15;
     const state = useState();
     const cauldRedux = ref(0);
-   
-    
+    const bargainLvl = ref(0);
+  
     const alchemy = computed({
       get: () => state.value.alchemy,
       set: (value) => (state.value.alchemy = value),
     });
   
+    // TODO: Not sure if this is actually needed. 
     if (alchemy.value.upgrades[props.group] !== undefined) {
       let upgradeDiff = amountBubbles - alchemy.value.upgrades[props.group].length;
       for (let i = 0; i < upgradeDiff; i += 1) {
         console.log(`Adding values in ${props.group} ${upgradeDiff}`)
         alchemy.value.upgrades[props.group].push(0);
       }
-
-      let goalDiff = amountBubbles - alchemy.value.goals[props.group].length;
-      for (let i = 0; i < goalDiff; i += 1) {
-        console.log(`Adding values in ${props.group} ${goalDiff}`)
-        alchemy.value.goals[props.group].push(0);
-      }
     }
 
     let twelveBubbleLevel = alchemy.value.upgrades[props.group][14];
     let undevLevel = alchemy.value.upgrades["Yellow"][6];
 
-    const discount = ref([0,0,0,0]);
+    let discount = ref([]);
 
     const handleAlchemyCauldron = (ev: Event, color: Color) => {
       let target = <HTMLInputElement>ev.target;
       twelveBubbleLevel = alchemy.value.upgrades[props.group][14];
-      discount.value = Alch['Discount'](0, Number(cauldRedux.value), undevLevel, 5, twelveBubbleLevel ); 
-      console.log(discount.value);
+      discount.value = Alch['Discount'](Number(cauldRedux.value), undevLevel, 5, twelveBubbleLevel, Number(bargainLvl.value), 42); 
+      console.log(discount);
     };
 
     const handleAlchemyUpgrade = (ev: Event, color: Color, i: number) => {
@@ -187,7 +196,7 @@ export default defineComponent({
       alchemy.value.upgrades[color][i] = parseInt(val);
       twelveBubbleLevel = alchemy.value.upgrades[props.group][14];
       undevLevel = alchemy.value.upgrades["Yellow"][6];
-      discount.value = Alch['Discount'](0, Number(cauldRedux.value), undevLevel, 5, twelveBubbleLevel ); 
+      discount.value = Alch['Discount'](Number(cauldRedux.value), undevLevel, 5, twelveBubbleLevel, Number(bargainLvl.value), 42); 
       console.log(discount);
     };
 
@@ -195,11 +204,15 @@ export default defineComponent({
       let target = <HTMLInputElement>ev.target;
       let val = target ? target.value : "0";
       alchemy.value.goals[color][i] = parseInt(val);
+    };
+
+     const handleBargainTag = (ev: Event, color: Color, i: number) => {
       twelveBubbleLevel = alchemy.value.upgrades[props.group][14];
       undevLevel = alchemy.value.upgrades["Yellow"][6];
-      discount.value = Alch['Discount'](0, Number(cauldRedux.value), undevLevel, 5, twelveBubbleLevel ); 
+      discount.value = Alch['Discount'](Number(cauldRedux.value), undevLevel, 5, twelveBubbleLevel, Number(bargainLvl.value), 42); 
       console.log(discount);
     };
+
 
     const effect = (bubble: Bubble, level: number) => {
       let funcStr = bubble.Func;
@@ -224,12 +237,12 @@ export default defineComponent({
       let undevLevel = alchemy.value.upgrades["Yellow"][6];
 
       let levelNow = alchemy.value.upgrades[props.group][bubbleIDX];
-      levelNow = (levelNow === undefined ? 0 : levelNow);
+      levelNow ?? 0;
       let levelGoal = alchemy.value.goals[props.group][bubbleIDX];
-      levelGoal = (levelGoal === undefined ? 0 : levelGoal);
+      levelGoal ?? 0;
       let matHisto = [0,0,0,0];
       for (var i = levelNow; i < levelGoal; i++) {
-        var multi = Alch["Multi"](i, Number(cauldRedux.value), undevLevel, 5, twelveBubbleLevel );
+        var multi = Alch["Multi"](i, Number(cauldRedux.value), undevLevel, 5, twelveBubbleLevel, 0 );
         bubble.Materials.forEach((m, y) => {
           if(m.isLiquid) {
             matHisto[y] += m.Amount + Math.floor(i/20);
@@ -265,6 +278,7 @@ export default defineComponent({
       handleAlchemyCauldron,
       handleAlchemyUpgrade,
       handleAlchemyGoal,
+      handleBargainTag,
       effect,
       computeMaterials,
       effectChange,
@@ -274,6 +288,7 @@ export default defineComponent({
       headers,
       props,
       cauldRedux,
+      bargainLvl,
       discount,
       Assets,
     };
