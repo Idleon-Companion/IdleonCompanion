@@ -341,7 +341,14 @@ export const Alch: Record<string, AlchFunc> = {
     const bargain_tag = Math.max(Math.pow(0.75, tagLvl), 0.1);
     var discount = oa * newBubble * undev_vial * bargain_tag;
     var result = [(1-oa)*100, (1-bargain_tag)*100, (1-newBubble)*100, (1-undev_vial)*100, (1-discount)*100];
-    console.log(`Alch[D] = ${result}`)
+
+    console.log(`Alch[D] = [
+      Cauldron:     ${((1-oa)*100).toFixed(2)}, 
+      Bargain:      ${((1-bargain_tag)*100).toFixed(2)}, 
+      Bubble XII:   ${((1-newBubble)*100).toFixed(2)}, 
+      Undev + vial: ${((1-undev_vial)*100).toFixed(2)}, 
+      Total:        ${((1-discount)*100).toFixed(2)}
+    ]`);
     return result;
   }
 
