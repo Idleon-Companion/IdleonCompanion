@@ -63,16 +63,17 @@
         </th>
       </tr>
       <tr :style="{display: 'flex'}">
+        <!-- <td>{{discount}}</td> -->
         <td
           :style="{width: '25%', textAlign: 'right', paddingRight: '25px'}"
-          v-for="d in discount" 
-          :key="d">
+          v-for="(d, index) in discount" 
+          :key="index">
           {{d.toFixed(2)}}%
         </td>
       </tr>
     </table>
     <br><br>
-    <AlchemyRow :group="activeGroup"/>
+    <AlchemyRow @custom-change="handleDiscountRecalc()" :group="activeGroup" :discount="discount" />
   </div>
 </template>
 
@@ -106,21 +107,19 @@ export default defineComponent({
 
     const handleDiscountRecalc = () => {
       console.log("Recalculate the discount");
-      console.log(`Color: ${activeGroup.value}`)
+      // console.log(`Color: ${activeGroup.value}`)
       let twelveBubbleLevel = alchemy.value.upgrades[activeGroup.value][14];
       let undevLevel = alchemy.value.upgrades["Yellow"][6];
-    
       let discountMulti = Alch['Discount'](
         Number(cauldRedux.value), 
         undevLevel, 
         5, // TODO: Missing vial info
         twelveBubbleLevel, 
-        Number(bargainLvl.value), 
-        0 // Empty variable
+        Number(bargainLvl.value)
         ); 
-      console.log(`${discountMulti} => ${discount.value}`);
+      // console.log(`${discountMulti} => ${discount.value}`);
       Object.assign(discount.value, discountMulti);
-      console.log(`${discountMulti} => ${discount.value}`);
+      // console.log(`${discountMulti} => ${discount.value}`);
       // discount.value = discountMulti;
       
     };

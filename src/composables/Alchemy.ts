@@ -323,31 +323,30 @@ export const VialCost = [
 ];
 
 
-export type AlchFunc = (a: number, b: number, c:number, d:number, e: number, f:number) => any;
+export type AlchFunc = (a: number, b: number, c:number, d:number, e: number) => any;
 
 export const Alch: Record<string, AlchFunc> = {
-  Multi: (bubbleLvl, cauldCostReduxLvl, bubbleCostBubbleLvl, bubbleCostVialLvl, bubbleTwelveLvl, tagLvl) => {
-    var discount = (100-Alch["Discount"](cauldCostReduxLvl, bubbleCostBubbleLvl, bubbleCostVialLvl, bubbleTwelveLvl, tagLvl, 0)[4])/100;
-    var multiplier = 
-      Math.pow(1.35 - (0.3 * bubbleLvl) / (50 + bubbleLvl), bubbleLvl) * discount;
-    return multiplier;
-  },
-  Discount: (cauldCostReduxLvl, bubbleCostBubbleLvl, bubbleCostVialLvl, bubbleTwelveLvl, tagLvl, none) => {
-    const oa = Math.max(0.1, 1 - Growth['Decay'](cauldCostReduxLvl, 90, 100) / 100);
-    const newBubble = Math.max(0.05, 1 - (Growth['Decay'](bubbleTwelveLvl, 30, 60)/100));
-    const undevCost = Growth["Decay"](bubbleCostBubbleLvl, 40, 70);
-    const vial = Growth["Add"](bubbleCostVialLvl, 1, 0);
-    const undev_vial = Math.max(0.05, 1 - (undevCost + vial) / 100);
+  Discount: (cauldCostReduxLvl, bubbleCostBubbleLvl, bubbleCostVialLvl, bubbleTwelveLvl, tagLvl) => {
+    const precision = 10000;
+
+    const costReduxBoost = Math.round(10 * Growth["Decay"](cauldCostReduxLvl, 90, 100)) / 10;
+    const oa          = Math.max(0.1, 1 - costReduxBoost / 100); // TODO: This one is off, but the total calculation is still correct
+    const newBubble   = Math.max(0.05, 1 - (Growth['Decay'](bubbleTwelveLvl, 30, 60)/100));
+    const undevCost   = Growth["Decay"](bubbleCostBubbleLvl, 40, 70);
+    const vial        = Growth["Add"](bubbleCostVialLvl, 1, 0);
+    const undev_vial  = Math.max(0.05, 1 - (undevCost + vial) / 100);
     const bargain_tag = Math.max(Math.pow(0.75, tagLvl), 0.1);
     var discount = oa * newBubble * undev_vial * bargain_tag;
-    var result = [(1-oa)*100, (1-bargain_tag)*100, (1-newBubble)*100, (1-undev_vial)*100, (1-discount)*100];
+    var result = [oa, bargain_tag, newBubble, undev_vial, discount];
+    result = result.map((a) => {
+      return (precision - Math.round(a*precision))/100});
 
     console.log(`Alch[D] = [
-      Cauldron:     ${((1-oa)*100).toFixed(2)}, 
-      Bargain:      ${((1-bargain_tag)*100).toFixed(2)}, 
-      Bubble XII:   ${((1-newBubble)*100).toFixed(2)}, 
-      Undev + vial: ${((1-undev_vial)*100).toFixed(2)}, 
-      Total:        ${((1-discount)*100).toFixed(2)}
+      Cauldron:     ${result[0].toFixed(2).padStart(5, " ")}, 
+      Bargain:      ${result[1].toFixed(2).padStart(5, " ")}, 
+      Bubble XII:   ${result[2].toFixed(2).padStart(5, " ")}, 
+      Undev + vial: ${result[3].toFixed(2).padStart(5, " ")}, 
+      Total:        ${result[4].toFixed(2).padStart(5, " ")}
     ]`);
     return result;
   }
