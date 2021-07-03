@@ -287,20 +287,26 @@
     "name": "Militia Helm",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 60
-      },
-      {
-        "name": "Bean Slices",
-        "quantity": 100
-      },
-      {
         "name": "Iron Bar",
         "quantity": 25
       },
       {
         "name": "Copper Ore",
         "quantity": 150
+      },
+      {
+        "name": "Copper Helmet",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Copper Bar",
+            "quantity": 60
+          },
+          {
+            "name": "Bean Slices",
+            "quantity": 100
+          }
+        ]
       }
     ]
   },
@@ -308,20 +314,26 @@
     "name": "Thief Hood",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 60
-      },
-      {
-        "name": "Bean Slices",
-        "quantity": 100
-      },
-      {
         "name": "Iron Bar",
         "quantity": 25
       },
       {
         "name": "Thread",
         "quantity": 150
+      },
+      {
+        "name": "Copper Helmet",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Copper Bar",
+            "quantity": 60
+          },
+          {
+            "name": "Bean Slices",
+            "quantity": 100
+          }
+        ]
       }
     ]
   },
@@ -329,20 +341,26 @@
     "name": "Top Hat",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 60
-      },
-      {
-        "name": "Bean Slices",
-        "quantity": 100
-      },
-      {
         "name": "Iron Bar",
         "quantity": 25
       },
       {
         "name": "Oak Logs",
         "quantity": 200
+      },
+      {
+        "name": "Copper Helmet",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Copper Bar",
+            "quantity": 60
+          },
+          {
+            "name": "Bean Slices",
+            "quantity": 100
+          }
+        ]
       }
     ]
   },
@@ -350,16 +368,22 @@
     "name": "Party Hat",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 120
-      },
-      {
-        "name": "Bean Slices",
-        "quantity": 200
-      },
-      {
         "name": "Iron Bar",
         "quantity": 200
+      },
+      {
+        "name": "Copper Helmet",
+        "quantity": 4,
+        "materials": [
+          {
+            "name": "Copper Bar",
+            "quantity": 120
+          },
+          {
+            "name": "Bean Slices",
+            "quantity": 200
+          }
+        ]
       }
     ]
   },
@@ -520,11 +544,25 @@
     "materials": [
       {
         "name": "Spore Cap",
-        "quantity": 45
+        "quantity": 25
       },
       {
         "name": "Oak Logs",
-        "quantity": 80
+        "quantity": 50
+      },
+      {
+        "name": "Orange Tee",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Spore Cap",
+            "quantity": 20
+          },
+          {
+            "name": "Oak Logs",
+            "quantity": 30
+          }
+        ]
       }
     ]
   },
@@ -532,20 +570,50 @@
     "name": "Sleek Shank",
     "materials": [
       {
-        "name": "Spore Cap",
-        "quantity": 225
-      },
-      {
-        "name": "Copper Bar",
-        "quantity": 30
-      },
-      {
         "name": "Thread",
-        "quantity": 390
+        "quantity": 300
       },
       {
-        "name": "Oak Logs",
-        "quantity": 90
+        "name": "Wooden Spear",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Spore Cap",
+            "quantity": 75
+          },
+          {
+            "name": "Copper Bar",
+            "quantity": 30
+          }
+        ]
+      },
+      {
+        "name": "Wooden Bow",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Spore Cap",
+            "quantity": 75
+          },
+          {
+            "name": "Thread",
+            "quantity": 90
+          }
+        ]
+      },
+      {
+        "name": "Gnarled Wand",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Spore Cap",
+            "quantity": 75
+          },
+          {
+            "name": "Oak Logs",
+            "quantity": 90
+          }
+        ]
       }
     ]
   },
@@ -553,16 +621,22 @@
     "name": "Iron Boots",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 250
-      },
-      {
         "name": "Trusty Nails",
         "quantity": 500
       },
       {
         "name": "Iron Bar",
         "quantity": 125
+      },
+      {
+        "name": "Copper Boots",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Copper Bar",
+            "quantity": 250
+          }
+        ]
       }
     ]
   },
@@ -622,16 +696,22 @@
     "name": "Goo Galoshes",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 250
-      },
-      {
         "name": "Slime Sludge",
         "quantity": 600
       },
       {
         "name": "Jungle Logs",
         "quantity": 1000
+      },
+      {
+        "name": "Copper Boots",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Copper Bar",
+            "quantity": 250
+          }
+        ]
       }
     ]
   },
@@ -652,24 +732,36 @@
     "name": "Hide Shirt",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 90
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 240
-      },
-      {
-        "name": "Slime Sludge",
-        "quantity": 125
-      },
-      {
-        "name": "Boring Brick",
-        "quantity": 125
-      },
-      {
         "name": "Bleach Logs",
         "quantity": 325
+      },
+      {
+        "name": "Copper Platebody",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Copper Bar",
+            "quantity": 90
+          },
+          {
+            "name": "Trusty Nails",
+            "quantity": 240
+          }
+        ]
+      },
+      {
+        "name": "Steel Axe",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Slime Sludge",
+            "quantity": 125
+          },
+          {
+            "name": "Boring Brick",
+            "quantity": 125
+          }
+        ]
       }
     ]
   },
@@ -690,16 +782,28 @@
     "name": "Dooble Goopi",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 300
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 600
-      },
-      {
         "name": "Slime Sludge",
         "quantity": 1000
+      },
+      {
+        "name": "Copper Band",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Copper Bar",
+            "quantity": 300
+          }
+        ]
+      },
+      {
+        "name": "Steel Band",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Iron Bar",
+            "quantity": 600
+          }
+        ]
       }
     ]
   },
@@ -707,24 +811,30 @@
     "name": "Bleached Designer Wode Patch Pants",
     "materials": [
       {
-        "name": "Frog Leg",
-        "quantity": 200
-      },
-      {
-        "name": "Copper Bar",
-        "quantity": 80
-      },
-      {
-        "name": "Thread",
-        "quantity": 150
-      },
-      {
         "name": "Plank",
         "quantity": 275
       },
       {
         "name": "Bleach Logs",
         "quantity": 700
+      },
+      {
+        "name": "Torn Jeans",
+        "quantity": 10,
+        "materials": [
+          {
+            "name": "Frog Leg",
+            "quantity": 200
+          },
+          {
+            "name": "Copper Bar",
+            "quantity": 80
+          },
+          {
+            "name": "Thread",
+            "quantity": 150
+          }
+        ]
       }
     ]
   },
@@ -732,20 +842,26 @@
     "name": "Dirty Coal Miner Baggy Soot Pants",
     "materials": [
       {
-        "name": "Frog Leg",
-        "quantity": 160
-      },
-      {
-        "name": "Copper Bar",
-        "quantity": 64
-      },
-      {
-        "name": "Thread",
-        "quantity": 120
-      },
-      {
         "name": "Iron Ore",
         "quantity": 200
+      },
+      {
+        "name": "Torn Jeans",
+        "quantity": 8,
+        "materials": [
+          {
+            "name": "Frog Leg",
+            "quantity": 160
+          },
+          {
+            "name": "Copper Bar",
+            "quantity": 64
+          },
+          {
+            "name": "Thread",
+            "quantity": 120
+          }
+        ]
       }
     ]
   },
@@ -770,20 +886,26 @@
     "name": "Golden Peanut",
     "materials": [
       {
-        "name": "Hot Dog",
-        "quantity": 200
-      },
-      {
-        "name": "Copper Ore",
-        "quantity": 100
-      },
-      {
-        "name": "Bleach Logs",
-        "quantity": 100
-      },
-      {
         "name": "Gold Bar",
         "quantity": 50
+      },
+      {
+        "name": "Peanut",
+        "quantity": 100,
+        "materials": [
+          {
+            "name": "Hot Dog",
+            "quantity": 200
+          },
+          {
+            "name": "Copper Ore",
+            "quantity": 100
+          },
+          {
+            "name": "Bleach Logs",
+            "quantity": 100
+          }
+        ]
       }
     ]
   },
@@ -808,20 +930,26 @@
     "name": "Purple Tee",
     "materials": [
       {
-        "name": "Spore Cap",
-        "quantity": 30
-      },
-      {
-        "name": "Oak Logs",
-        "quantity": 45
-      },
-      {
         "name": "Red Spore Cap",
         "quantity": 40
       },
       {
         "name": "Bleach Logs",
         "quantity": 100
+      },
+      {
+        "name": "Orange Tee",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Spore Cap",
+            "quantity": 30
+          },
+          {
+            "name": "Oak Logs",
+            "quantity": 45
+          }
+        ]
       }
     ]
   },
@@ -829,20 +957,26 @@
     "name": "Green Tee",
     "materials": [
       {
-        "name": "Spore Cap",
-        "quantity": 30
-      },
-      {
-        "name": "Oak Logs",
-        "quantity": 45
-      },
-      {
         "name": "Thread",
         "quantity": 150
       },
       {
         "name": "Spore Tee",
         "quantity": 2
+      },
+      {
+        "name": "Orange Tee",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Spore Cap",
+            "quantity": 30
+          },
+          {
+            "name": "Oak Logs",
+            "quantity": 45
+          }
+        ]
       }
     ]
   },
@@ -850,28 +984,102 @@
     "name": "Black Tee",
     "materials": [
       {
-        "name": "Spore Cap",
-        "quantity": 365
+        "name": "Orange Tee",
+        "quantity": 5,
+        "materials": [
+          {
+            "name": "Spore Cap",
+            "quantity": 50
+          },
+          {
+            "name": "Oak Logs",
+            "quantity": 75
+          }
+        ]
       },
       {
-        "name": "Oak Logs",
-        "quantity": 585
+        "name": "Blue Tee",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Spore Cap",
+            "quantity": 75
+          },
+          {
+            "name": "Oak Logs",
+            "quantity": 150
+          },
+          {
+            "name": "Orange Tee",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Spore Cap",
+                "quantity": 60
+              },
+              {
+                "name": "Oak Logs",
+                "quantity": 90
+              }
+            ]
+          }
+        ]
       },
       {
-        "name": "Red Spore Cap",
-        "quantity": 120
+        "name": "Purple Tee",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Red Spore Cap",
+            "quantity": 120
+          },
+          {
+            "name": "Bleach Logs",
+            "quantity": 300
+          },
+          {
+            "name": "Orange Tee",
+            "quantity": 9,
+            "materials": [
+              {
+                "name": "Spore Cap",
+                "quantity": 90
+              },
+              {
+                "name": "Oak Logs",
+                "quantity": 135
+              }
+            ]
+          }
+        ]
       },
       {
-        "name": "Bleach Logs",
-        "quantity": 300
-      },
-      {
-        "name": "Thread",
-        "quantity": 450
-      },
-      {
-        "name": "Spore Tee",
-        "quantity": 6
+        "name": "Green Tee",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Thread",
+            "quantity": 450
+          },
+          {
+            "name": "Spore Tee",
+            "quantity": 6
+          },
+          {
+            "name": "Orange Tee",
+            "quantity": 9,
+            "materials": [
+              {
+                "name": "Spore Cap",
+                "quantity": 90
+              },
+              {
+                "name": "Oak Logs",
+                "quantity": 135
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -879,52 +1087,70 @@
     "name": "Blunderhills NPC Completion Token",
     "materials": [
       {
-        "name": "Woodsman Token",
-        "quantity": 1
+        "name": "Easy Blunderhills NPC Token",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Woodsman Token",
+            "quantity": 1
+          },
+          {
+            "name": "Glumlee Token",
+            "quantity": 1
+          },
+          {
+            "name": "Stiltzcho Token",
+            "quantity": 1
+          },
+          {
+            "name": "Funguy Token",
+            "quantity": 1
+          }
+        ]
       },
       {
-        "name": "Glumlee Token",
-        "quantity": 1
+        "name": "Med Blunderhills NPC Token",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Krunk Token",
+            "quantity": 1
+          },
+          {
+            "name": "Tiki Chief Token",
+            "quantity": 1
+          },
+          {
+            "name": "Dog Bone Token",
+            "quantity": 1
+          },
+          {
+            "name": "Papua Piggea Token",
+            "quantity": 1
+          }
+        ]
       },
       {
-        "name": "Stiltzcho Token",
-        "quantity": 1
-      },
-      {
-        "name": "Funguy Token",
-        "quantity": 1
-      },
-      {
-        "name": "Krunk Token",
-        "quantity": 1
-      },
-      {
-        "name": "Tiki Chief Token",
-        "quantity": 1
-      },
-      {
-        "name": "Dog Bone Token",
-        "quantity": 1
-      },
-      {
-        "name": "Papua Piggea Token",
-        "quantity": 1
-      },
-      {
-        "name": "Picnic Token",
-        "quantity": 1
-      },
-      {
-        "name": "TP Pete Token",
-        "quantity": 1
-      },
-      {
-        "name": "Sproutinald Token",
-        "quantity": 1
-      },
-      {
-        "name": "Dazey Token",
-        "quantity": 1
+        "name": "Hard Blunderhills NPC Token",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Picnic Token",
+            "quantity": 1
+          },
+          {
+            "name": "TP Pete Token",
+            "quantity": 1
+          },
+          {
+            "name": "Sproutinald Token",
+            "quantity": 1
+          },
+          {
+            "name": "Dazey Token",
+            "quantity": 1
+          }
+        ]
       }
     ]
   },
@@ -932,46 +1158,36 @@
     "name": "Blunder Skills Completion Token",
     "materials": [
       {
-        "name": "Amarok Slab",
-        "quantity": 20
-      },
-      {
-        "name": "Forest Fibres",
-        "quantity": 2500
-      },
-      {
-        "name": "Woodular Circle",
-        "quantity": 8
-      },
-      {
         "name": "Platinum Bar",
         "quantity": 1000
       },
       {
         "name": "Veiny Logs",
         "quantity": 2000
+      },
+      {
+        "name": "Amarok Helmet",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Amarok Slab",
+            "quantity": 20
+          },
+          {
+            "name": "Forest Fibres",
+            "quantity": 2500
+          },
+          {
+            "name": "Woodular Circle",
+            "quantity": 8
+          }
+        ]
       }
     ]
   },
   "59": {
     "name": "Blunderhills Misc Completion Token",
     "materials": [
-      {
-        "name": "Hot Dog",
-        "quantity": 6000
-      },
-      {
-        "name": "Copper Ore",
-        "quantity": 3000
-      },
-      {
-        "name": "Bleach Logs",
-        "quantity": 3000
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 1500
-      },
       {
         "name": "Golden Plop",
         "quantity": 12
@@ -983,6 +1199,34 @@
       {
         "name": "Carrot Launcher",
         "quantity": 2
+      },
+      {
+        "name": "Golden Peanut",
+        "quantity": 30,
+        "materials": [
+          {
+            "name": "Gold Bar",
+            "quantity": 1500
+          },
+          {
+            "name": "Peanut",
+            "quantity": 3000,
+            "materials": [
+              {
+                "name": "Hot Dog",
+                "quantity": 6000
+              },
+              {
+                "name": "Copper Ore",
+                "quantity": 3000
+              },
+              {
+                "name": "Bleach Logs",
+                "quantity": 3000
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -1104,28 +1348,118 @@
     "name": "Amarok Paws",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 250
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 500
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 125
-      },
-      {
         "name": "Amarok Slab",
         "quantity": 5
       },
       {
         "name": "Grass Leaf",
         "quantity": 125
+      },
+      {
+        "name": "Iron Boots",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Trusty Nails",
+            "quantity": 500
+          },
+          {
+            "name": "Iron Bar",
+            "quantity": 125
+          },
+          {
+            "name": "Copper Boots",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Copper Bar",
+                "quantity": 250
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   "67": {
+    "name": "Fishing Overalls",
+    "materials": [
+      {
+        "name": "Goldfish",
+        "quantity": 500
+      },
+      {
+        "name": "Bleached Designer Wode Patch Pants",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Plank",
+            "quantity": 825
+          },
+          {
+            "name": "Bleach Logs",
+            "quantity": 2100
+          },
+          {
+            "name": "Torn Jeans",
+            "quantity": 30,
+            "materials": [
+              {
+                "name": "Frog Leg",
+                "quantity": 600
+              },
+              {
+                "name": "Copper Bar",
+                "quantity": 240
+              },
+              {
+                "name": "Thread",
+                "quantity": 450
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "68": {
+    "name": "Bandito Pantaloon",
+    "materials": [
+      {
+        "name": "Fly",
+        "quantity": 500
+      },
+      {
+        "name": "Dirty Coal Miner Baggy Soot Pants",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Iron Ore",
+            "quantity": 600
+          },
+          {
+            "name": "Torn Jeans",
+            "quantity": 24,
+            "materials": [
+              {
+                "name": "Frog Leg",
+                "quantity": 480
+              },
+              {
+                "name": "Copper Bar",
+                "quantity": 192
+              },
+              {
+                "name": "Thread",
+                "quantity": 360
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "69": {
     "name": "Chaotic Amarok Pendant",
     "materials": [
       {
@@ -1142,7 +1476,7 @@
       }
     ]
   },
-  "68": {
+  "70": {
     "name": "Copper Fish Rod",
     "materials": [
       {
@@ -1155,7 +1489,7 @@
       }
     ]
   },
-  "69": {
+  "71": {
     "name": "Cramped Fish Pouch",
     "materials": [
       {
@@ -1164,7 +1498,7 @@
       }
     ]
   },
-  "70": {
+  "72": {
     "name": "Copper Netted Net",
     "materials": [
       {
@@ -1177,7 +1511,7 @@
       }
     ]
   },
-  "71": {
+  "73": {
     "name": "Cramped Bug Pouch",
     "materials": [
       {
@@ -1186,7 +1520,7 @@
       }
     ]
   },
-  "72": {
+  "74": {
     "name": "Iron Fishing Rod",
     "materials": [
       {
@@ -1203,7 +1537,7 @@
       }
     ]
   },
-  "73": {
+  "75": {
     "name": "Small Fish Pouch",
     "materials": [
       {
@@ -1216,7 +1550,7 @@
       }
     ]
   },
-  "74": {
+  "76": {
     "name": "Reinforced Net",
     "materials": [
       {
@@ -1233,7 +1567,7 @@
       }
     ]
   },
-  "75": {
+  "77": {
     "name": "Small Bug Pouch",
     "materials": [
       {
@@ -1246,7 +1580,7 @@
       }
     ]
   },
-  "76": {
+  "78": {
     "name": "Silkskin Traps",
     "materials": [
       {
@@ -1259,7 +1593,7 @@
       }
     ]
   },
-  "77": {
+  "79": {
     "name": "Small Critter Pouch",
     "materials": [
       {
@@ -1272,7 +1606,7 @@
       }
     ]
   },
-  "78": {
+  "80": {
     "name": "Ceramic Skull",
     "materials": [
       {
@@ -1285,7 +1619,7 @@
       }
     ]
   },
-  "79": {
+  "81": {
     "name": "Small Soul Pouch",
     "materials": [
       {
@@ -1298,17 +1632,9 @@
       }
     ]
   },
-  "80": {
+  "82": {
     "name": "Gold Helmet",
     "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 120
-      },
-      {
-        "name": "Bean Slices",
-        "quantity": 200
-      },
       {
         "name": "Fly",
         "quantity": 2000
@@ -1316,20 +1642,26 @@
       {
         "name": "Gold Bar",
         "quantity": 250
+      },
+      {
+        "name": "Copper Helmet",
+        "quantity": 4,
+        "materials": [
+          {
+            "name": "Copper Bar",
+            "quantity": 120
+          },
+          {
+            "name": "Bean Slices",
+            "quantity": 200
+          }
+        ]
       }
     ]
   },
-  "81": {
+  "83": {
     "name": "Gold Platebody",
     "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 225
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 600
-      },
       {
         "name": "Pocket Sand",
         "quantity": 1500
@@ -1337,20 +1669,26 @@
       {
         "name": "Gold Bar",
         "quantity": 350
+      },
+      {
+        "name": "Copper Platebody",
+        "quantity": 5,
+        "materials": [
+          {
+            "name": "Copper Bar",
+            "quantity": 225
+          },
+          {
+            "name": "Trusty Nails",
+            "quantity": 600
+          }
+        ]
       }
     ]
   },
-  "82": {
+  "84": {
     "name": "Gold Platelegs",
     "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 360
-      },
-      {
-        "name": "Bleach Logs",
-        "quantity": 900
-      },
       {
         "name": "Goldfish",
         "quantity": 500
@@ -1358,24 +1696,26 @@
       {
         "name": "Gold Bar",
         "quantity": 475
+      },
+      {
+        "name": "Copper Platelegs",
+        "quantity": 6,
+        "materials": [
+          {
+            "name": "Copper Bar",
+            "quantity": 360
+          },
+          {
+            "name": "Bleach Logs",
+            "quantity": 900
+          }
+        ]
       }
     ]
   },
-  "83": {
+  "85": {
     "name": "Gold Boots",
     "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 500
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 1000
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 250
-      },
       {
         "name": "Gold Bar",
         "quantity": 600
@@ -1383,24 +1723,36 @@
       {
         "name": "Distilled Water",
         "quantity": 4
+      },
+      {
+        "name": "Iron Boots",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Trusty Nails",
+            "quantity": 1000
+          },
+          {
+            "name": "Iron Bar",
+            "quantity": 250
+          },
+          {
+            "name": "Copper Boots",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Copper Bar",
+                "quantity": 500
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "84": {
+  "86": {
     "name": "Bandage Wraps",
     "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 100
-      },
-      {
-        "name": "Oak Logs",
-        "quantity": 375
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 100
-      },
       {
         "name": "Cue Tape",
         "quantity": 5000
@@ -1408,20 +1760,30 @@
       {
         "name": "Potty Rolls",
         "quantity": 2000
+      },
+      {
+        "name": "The Stingers",
+        "quantity": 5,
+        "materials": [
+          {
+            "name": "Copper Bar",
+            "quantity": 100
+          },
+          {
+            "name": "Oak Logs",
+            "quantity": 375
+          },
+          {
+            "name": "Trusty Nails",
+            "quantity": 100
+          }
+        ]
       }
     ]
   },
-  "85": {
+  "87": {
     "name": "Royal Bayonet",
     "materials": [
-      {
-        "name": "Slime Sludge",
-        "quantity": 375
-      },
-      {
-        "name": "Boring Brick",
-        "quantity": 375
-      },
       {
         "name": "Forest Fibres",
         "quantity": 1250
@@ -1429,20 +1791,26 @@
       {
         "name": "Distilled Water",
         "quantity": 8
+      },
+      {
+        "name": "Steel Axe",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Slime Sludge",
+            "quantity": 375
+          },
+          {
+            "name": "Boring Brick",
+            "quantity": 375
+          }
+        ]
       }
     ]
   },
-  "86": {
+  "88": {
     "name": "Spiked Menace",
     "materials": [
-      {
-        "name": "Slime Sludge",
-        "quantity": 375
-      },
-      {
-        "name": "Bleach Logs",
-        "quantity": 750
-      },
       {
         "name": "Gold Bar",
         "quantity": 250
@@ -1450,20 +1818,26 @@
       {
         "name": "Distilled Water",
         "quantity": 8
+      },
+      {
+        "name": "Birch Longbow",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Slime Sludge",
+            "quantity": 375
+          },
+          {
+            "name": "Bleach Logs",
+            "quantity": 750
+          }
+        ]
       }
     ]
   },
-  "87": {
+  "89": {
     "name": "Starlight",
     "materials": [
-      {
-        "name": "Slime Sludge",
-        "quantity": 375
-      },
-      {
-        "name": "Copper Bar",
-        "quantity": 300
-      },
       {
         "name": "Chain Link",
         "quantity": 1000
@@ -1471,20 +1845,26 @@
       {
         "name": "Distilled Water",
         "quantity": 8
+      },
+      {
+        "name": "Quarterstaff",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Slime Sludge",
+            "quantity": 375
+          },
+          {
+            "name": "Copper Bar",
+            "quantity": 300
+          }
+        ]
       }
     ]
   },
-  "88": {
+  "90": {
     "name": "Gold Pickaxe",
     "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 300
-      },
-      {
-        "name": "Carrot Cube",
-        "quantity": 600
-      },
       {
         "name": "Megalodon Tooth",
         "quantity": 2500
@@ -1492,37 +1872,55 @@
       {
         "name": "Gold Bar",
         "quantity": 800
+      },
+      {
+        "name": "Iron Pickaxe",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Iron Bar",
+            "quantity": 300
+          },
+          {
+            "name": "Carrot Cube",
+            "quantity": 600
+          }
+        ]
       }
     ]
   },
-  "89": {
+  "91": {
     "name": "Average Mining Pouch",
     "materials": [
       {
-        "name": "Copper Ore",
-        "quantity": 600
-      },
-      {
-        "name": "Iron Ore",
-        "quantity": 2100
-      },
-      {
         "name": "Gold Ore",
         "quantity": 1400
+      },
+      {
+        "name": "Cramped Mining Pouch",
+        "quantity": 5,
+        "materials": [
+          {
+            "name": "Copper Ore",
+            "quantity": 600
+          }
+        ]
+      },
+      {
+        "name": "Small Mining Pouch",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Iron Ore",
+            "quantity": 2100
+          }
+        ]
       }
     ]
   },
-  "90": {
+  "92": {
     "name": "Golden Axe",
     "materials": [
-      {
-        "name": "Jungle Logs",
-        "quantity": 750
-      },
-      {
-        "name": "Boring Brick",
-        "quantity": 375
-      },
       {
         "name": "Golden Dubloon",
         "quantity": 5
@@ -1530,116 +1928,194 @@
       {
         "name": "Crabby Cakey",
         "quantity": 2000
-      }
-    ]
-  },
-  "91": {
-    "name": "Average Choppin Pouch",
-    "materials": [
-      {
-        "name": "Oak Logs",
-        "quantity": 750
       },
       {
-        "name": "Trusty Nails",
-        "quantity": 150
-      },
-      {
-        "name": "Bleach Logs",
-        "quantity": 2400
-      },
-      {
-        "name": "Forest Fibres",
-        "quantity": 1800
-      }
-    ]
-  },
-  "92": {
-    "name": "Gold Fishing Rod",
-    "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 900
-      },
-      {
-        "name": "Hermit Can",
-        "quantity": 5050
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 9
-      },
-      {
-        "name": "Leather Hide",
-        "quantity": 1000
+        "name": "Iron Hatchet",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Jungle Logs",
+            "quantity": 750
+          },
+          {
+            "name": "Boring Brick",
+            "quantity": 375
+          }
+        ]
       }
     ]
   },
   "93": {
-    "name": "Average Fish Pouch",
+    "name": "Average Choppin Pouch",
     "materials": [
       {
-        "name": "Goldfish",
-        "quantity": 900
+        "name": "Forest Fibres",
+        "quantity": 1800
       },
       {
-        "name": "Hermit Can",
-        "quantity": 2775
+        "name": "Cramped Choppin Pouch",
+        "quantity": 5,
+        "materials": [
+          {
+            "name": "Oak Logs",
+            "quantity": 750
+          },
+          {
+            "name": "Trusty Nails",
+            "quantity": 150
+          }
+        ]
       },
       {
-        "name": "Distilled Water",
-        "quantity": 6
+        "name": "Small Choppin Pouch",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Bleach Logs",
+            "quantity": 2400
+          }
+        ]
       }
     ]
   },
   "94": {
-    "name": "Gilded Net",
+    "name": "Gold Fishing Rod",
     "materials": [
       {
-        "name": "Forest Fibres",
-        "quantity": 2400
+        "name": "Hermit Can",
+        "quantity": 2500
       },
       {
-        "name": "Butterfly",
-        "quantity": 5050
+        "name": "Leather Hide",
+        "quantity": 1000
       },
       {
-        "name": "Distilled Water",
-        "quantity": 9
-      },
-      {
-        "name": "Golden Dubloon",
-        "quantity": 5
+        "name": "Iron Fishing Rod",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Iron Bar",
+            "quantity": 900
+          },
+          {
+            "name": "Hermit Can",
+            "quantity": 2550
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 9
+          }
+        ]
       }
     ]
   },
   "95": {
-    "name": "Average Bug Pouch",
+    "name": "Average Fish Pouch",
     "materials": [
       {
-        "name": "Fly",
-        "quantity": 900
+        "name": "Hermit Can",
+        "quantity": 1500
       },
       {
-        "name": "Butterfly",
-        "quantity": 2875
+        "name": "Cramped Fish Pouch",
+        "quantity": 5,
+        "materials": [
+          {
+            "name": "Goldfish",
+            "quantity": 900
+          }
+        ]
       },
       {
-        "name": "Distilled Water",
-        "quantity": 6
+        "name": "Small Fish Pouch",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Hermit Can",
+            "quantity": 1275
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 6
+          }
+        ]
       }
     ]
   },
   "96": {
+    "name": "Gilded Net",
+    "materials": [
+      {
+        "name": "Golden Dubloon",
+        "quantity": 5
+      },
+      {
+        "name": "Butterfly",
+        "quantity": 2500
+      },
+      {
+        "name": "Reinforced Net",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Forest Fibres",
+            "quantity": 2400
+          },
+          {
+            "name": "Butterfly",
+            "quantity": 2550
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 9
+          }
+        ]
+      }
+    ]
+  },
+  "97": {
+    "name": "Average Bug Pouch",
+    "materials": [
+      {
+        "name": "Butterfly",
+        "quantity": 1600
+      },
+      {
+        "name": "Cramped Bug Pouch",
+        "quantity": 5,
+        "materials": [
+          {
+            "name": "Fly",
+            "quantity": 900
+          }
+        ]
+      },
+      {
+        "name": "Small Bug Pouch",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Butterfly",
+            "quantity": 1275
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 6
+          }
+        ]
+      }
+    ]
+  },
+  "98": {
     "name": "Defenders Dignity",
     "materials": [
       {
         "name": "Goldfish",
-        "quantity": 16000
+        "quantity": 10000
       },
       {
         "name": "Golden Plop",
-        "quantity": 17
+        "quantity": 4
       },
       {
         "name": "Distilled Water",
@@ -1647,7 +2123,7 @@
       }
     ]
   },
-  "97": {
+  "99": {
     "name": "Strung Bludgeon",
     "materials": [
       {
@@ -1664,62 +2140,68 @@
       }
     ]
   },
-  "98": {
+  "100": {
     "name": "Average Food Pouch",
     "materials": [
       {
-        "name": "Nomwich",
-        "quantity": 525
-      },
-      {
-        "name": "Hot Dog",
-        "quantity": 175
-      },
-      {
-        "name": "Oak Logs",
-        "quantity": 420
-      },
-      {
-        "name": "Copper Bar",
-        "quantity": 105
-      },
-      {
-        "name": "Iron Ore",
-        "quantity": 3000
-      },
-      {
-        "name": "Small Mana Potion",
-        "quantity": 1200
-      },
-      {
-        "name": "Jungle Logs",
-        "quantity": 3600
-      },
-      {
-        "name": "Small Life Potion",
-        "quantity": 1800
-      },
-      {
         "name": "Meat Pie",
         "quantity": 250
+      },
+      {
+        "name": "Cramped Food Pouch",
+        "quantity": 7,
+        "materials": [
+          {
+            "name": "Nomwich",
+            "quantity": 525
+          },
+          {
+            "name": "Hot Dog",
+            "quantity": 175
+          },
+          {
+            "name": "Oak Logs",
+            "quantity": 420
+          },
+          {
+            "name": "Copper Bar",
+            "quantity": 105
+          }
+        ]
+      },
+      {
+        "name": "Icing Ironbite",
+        "quantity": 600,
+        "materials": [
+          {
+            "name": "Iron Ore",
+            "quantity": 3000
+          },
+          {
+            "name": "Small Mana Potion",
+            "quantity": 1200
+          }
+        ]
+      },
+      {
+        "name": "Saucy Logfries",
+        "quantity": 600,
+        "materials": [
+          {
+            "name": "Jungle Logs",
+            "quantity": 3600
+          },
+          {
+            "name": "Small Life Potion",
+            "quantity": 1800
+          }
+        ]
       }
     ]
   },
-  "99": {
+  "101": {
     "name": "Average Material Pouch",
     "materials": [
-      {
-        "name": "Trusty Nails",
-        "quantity": 560
-      },
-      {
-        "name": "Frog Leg",
-        "quantity": 280
-      },
-      {
-        "name": "Bean Slices",
-        "quantity": 210
-      },
       {
         "name": "Glass Shard",
         "quantity": 1
@@ -1727,41 +2209,57 @@
       {
         "name": "Chain Link",
         "quantity": 1250
+      },
+      {
+        "name": "Cramped Material Pouch",
+        "quantity": 7,
+        "materials": [
+          {
+            "name": "Trusty Nails",
+            "quantity": 560
+          },
+          {
+            "name": "Frog Leg",
+            "quantity": 280
+          },
+          {
+            "name": "Bean Slices",
+            "quantity": 210
+          }
+        ]
       }
     ]
   },
-  "100": {
+  "102": {
     "name": "Platinum Helmet",
     "materials": [
       {
-        "name": "Iron Bar",
-        "quantity": 500
-      },
-      {
-        "name": "Goblin Ear",
-        "quantity": 1200
-      },
-      {
         "name": "Jellyfish",
-        "quantity": 4000
+        "quantity": 2250
       },
       {
         "name": "Platinum Bar",
         "quantity": 750
+      },
+      {
+        "name": "Iron Helmet",
+        "quantity": 4,
+        "materials": [
+          {
+            "name": "Iron Bar",
+            "quantity": 500
+          },
+          {
+            "name": "Goblin Ear",
+            "quantity": 1200
+          }
+        ]
       }
     ]
   },
-  "101": {
+  "103": {
     "name": "Platinum Platbody",
     "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 750
-      },
-      {
-        "name": "Jungle Logs",
-        "quantity": 3000
-      },
       {
         "name": "Potato Remains",
         "quantity": 5000
@@ -1769,64 +2267,102 @@
       {
         "name": "Platinum Bar",
         "quantity": 1000
-      }
-    ]
-  },
-  "102": {
-    "name": "Platinum Shins",
-    "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 1020
       },
       {
-        "name": "Boring Brick",
-        "quantity": 1350
-      },
-      {
-        "name": "Sentient Cereal",
-        "quantity": 500
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 1250
-      }
-    ]
-  },
-  "103": {
-    "name": "Platinum Boots",
-    "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 1500
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 3000
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 750
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 1800
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 12
-      },
-      {
-        "name": "Tropilogs",
-        "quantity": 8000
-      },
-      {
-        "name": "Jellyfish",
-        "quantity": 8000
+        "name": "Iron Platebody",
+        "quantity": 5,
+        "materials": [
+          {
+            "name": "Iron Bar",
+            "quantity": 750
+          },
+          {
+            "name": "Jungle Logs",
+            "quantity": 3000
+          }
+        ]
       }
     ]
   },
   "104": {
+    "name": "Platinum Shins",
+    "materials": [
+      {
+        "name": "Sentient Cereal",
+        "quantity": 5000
+      },
+      {
+        "name": "Platinum Bar",
+        "quantity": 1250
+      },
+      {
+        "name": "Iron Platelegs",
+        "quantity": 6,
+        "materials": [
+          {
+            "name": "Iron Bar",
+            "quantity": 1020
+          },
+          {
+            "name": "Boring Brick",
+            "quantity": 1350
+          }
+        ]
+      }
+    ]
+  },
+  "105": {
+    "name": "Platinum Boots",
+    "materials": [
+      {
+        "name": "Tropilogs",
+        "quantity": 7000
+      },
+      {
+        "name": "Jellyfish",
+        "quantity": 3000
+      },
+      {
+        "name": "Gold Boots",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Gold Bar",
+            "quantity": 1800
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 12
+          },
+          {
+            "name": "Iron Boots",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Trusty Nails",
+                "quantity": 3000
+              },
+              {
+                "name": "Iron Bar",
+                "quantity": 750
+              },
+              {
+                "name": "Copper Boots",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Copper Bar",
+                    "quantity": 1500
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "106": {
     "name": "Bullet",
     "materials": [
       {
@@ -1839,83 +2375,91 @@
       }
     ]
   },
-  "105": {
+  "107": {
     "name": "Enforced Slasher",
     "materials": [
-      {
-        "name": "Slime Sludge",
-        "quantity": 750
-      },
-      {
-        "name": "Boring Brick",
-        "quantity": 750
-      },
-      {
-        "name": "Forest Fibres",
-        "quantity": 2500
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 16
-      },
       {
         "name": "Nuget Cake",
         "quantity": 3
       },
       {
         "name": "Leather Hide",
-        "quantity": 400
+        "quantity": 2500
+      },
+      {
+        "name": "Royal Bayonet",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Forest Fibres",
+            "quantity": 2500
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 16
+          },
+          {
+            "name": "Steel Axe",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Slime Sludge",
+                "quantity": 750
+              },
+              {
+                "name": "Boring Brick",
+                "quantity": 750
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "106": {
+  "108": {
     "name": "Pharoah Bow",
     "materials": [
-      {
-        "name": "Slime Sludge",
-        "quantity": 750
-      },
-      {
-        "name": "Bleach Logs",
-        "quantity": 1500
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 500
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 16
-      },
       {
         "name": "Woodular Circle",
         "quantity": 3
       },
       {
         "name": "Bloach",
-        "quantity": 3200
+        "quantity": 1400
+      },
+      {
+        "name": "Spiked Menace",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Gold Bar",
+            "quantity": 500
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 16
+          },
+          {
+            "name": "Birch Longbow",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Slime Sludge",
+                "quantity": 750
+              },
+              {
+                "name": "Bleach Logs",
+                "quantity": 1500
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "107": {
+  "109": {
     "name": "Crows Nest",
     "materials": [
-      {
-        "name": "Slime Sludge",
-        "quantity": 750
-      },
-      {
-        "name": "Copper Bar",
-        "quantity": 600
-      },
-      {
-        "name": "Chain Link",
-        "quantity": 2000
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 16
-      },
       {
         "name": "Golden Plop",
         "quantity": 3
@@ -1923,28 +2467,40 @@
       {
         "name": "Fruitfly",
         "quantity": 4000
+      },
+      {
+        "name": "Starlight",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Chain Link",
+            "quantity": 2000
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 16
+          },
+          {
+            "name": "Quarterstaff",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Slime Sludge",
+                "quantity": 750
+              },
+              {
+                "name": "Copper Bar",
+                "quantity": 600
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "108": {
+  "110": {
     "name": "Platinum Pickaxe",
     "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 600
-      },
-      {
-        "name": "Carrot Cube",
-        "quantity": 1200
-      },
-      {
-        "name": "Megalodon Tooth",
-        "quantity": 5000
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 1600
-      },
       {
         "name": "Platinum Bar",
         "quantity": 800
@@ -1952,49 +2508,79 @@
       {
         "name": "Pincer Arm",
         "quantity": 10500
+      },
+      {
+        "name": "Gold Pickaxe",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Megalodon Tooth",
+            "quantity": 5000
+          },
+          {
+            "name": "Gold Bar",
+            "quantity": 1600
+          },
+          {
+            "name": "Iron Pickaxe",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Iron Bar",
+                "quantity": 600
+              },
+              {
+                "name": "Carrot Cube",
+                "quantity": 1200
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "109": {
+  "111": {
     "name": "Sizable Mining Pouch",
     "materials": [
       {
-        "name": "Copper Ore",
-        "quantity": 1800
-      },
-      {
-        "name": "Iron Ore",
-        "quantity": 6300
-      },
-      {
-        "name": "Gold Ore",
-        "quantity": 4200
-      },
-      {
         "name": "Platinum Ore",
         "quantity": 6750
+      },
+      {
+        "name": "Average Mining Pouch",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Gold Ore",
+            "quantity": 4200
+          },
+          {
+            "name": "Cramped Mining Pouch",
+            "quantity": 15,
+            "materials": [
+              {
+                "name": "Copper Ore",
+                "quantity": 1800
+              }
+            ]
+          },
+          {
+            "name": "Small Mining Pouch",
+            "quantity": 9,
+            "materials": [
+              {
+                "name": "Iron Ore",
+                "quantity": 6300
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "110": {
+  "112": {
     "name": "Plat Hatchet",
     "materials": [
-      {
-        "name": "Jungle Logs",
-        "quantity": 1500
-      },
-      {
-        "name": "Boring Brick",
-        "quantity": 750
-      },
-      {
-        "name": "Golden Dubloon",
-        "quantity": 10
-      },
-      {
-        "name": "Crabby Cakey",
-        "quantity": 4000
-      },
       {
         "name": "Tropilogs",
         "quantity": 6500
@@ -2002,103 +2588,171 @@
       {
         "name": "Chain Link",
         "quantity": 5000
-      }
-    ]
-  },
-  "111": {
-    "name": "Sizable Choppin Pouch",
-    "materials": [
-      {
-        "name": "Oak Logs",
-        "quantity": 2250
       },
       {
-        "name": "Trusty Nails",
-        "quantity": 450
-      },
-      {
-        "name": "Bleach Logs",
-        "quantity": 7200
-      },
-      {
-        "name": "Forest Fibres",
-        "quantity": 5400
-      },
-      {
-        "name": "Tropilogs",
-        "quantity": 6750
-      }
-    ]
-  },
-  "112": {
-    "name": "Plat Fishing Rod",
-    "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 1800
-      },
-      {
-        "name": "Hermit Can",
-        "quantity": 10100
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 18
-      },
-      {
-        "name": "Leather Hide",
-        "quantity": 2000
-      },
-      {
-        "name": "Bloach",
-        "quantity": 7000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 800
+        "name": "Golden Axe",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Golden Dubloon",
+            "quantity": 10
+          },
+          {
+            "name": "Crabby Cakey",
+            "quantity": 4000
+          },
+          {
+            "name": "Iron Hatchet",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Jungle Logs",
+                "quantity": 1500
+              },
+              {
+                "name": "Boring Brick",
+                "quantity": 750
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   "113": {
-    "name": "Sizable Fish Pouch",
+    "name": "Sizable Choppin Pouch",
     "materials": [
       {
-        "name": "Goldfish",
-        "quantity": 2700
-      },
-      {
-        "name": "Hermit Can",
-        "quantity": 8325
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 18
-      },
-      {
-        "name": "Bloach",
+        "name": "Tropilogs",
         "quantity": 6750
+      },
+      {
+        "name": "Average Choppin Pouch",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Forest Fibres",
+            "quantity": 5400
+          },
+          {
+            "name": "Cramped Choppin Pouch",
+            "quantity": 15,
+            "materials": [
+              {
+                "name": "Oak Logs",
+                "quantity": 2250
+              },
+              {
+                "name": "Trusty Nails",
+                "quantity": 450
+              }
+            ]
+          },
+          {
+            "name": "Small Choppin Pouch",
+            "quantity": 9,
+            "materials": [
+              {
+                "name": "Bleach Logs",
+                "quantity": 7200
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   "114": {
-    "name": "Platinet",
+    "name": "Plat Fishing Rod",
     "materials": [
       {
-        "name": "Forest Fibres",
-        "quantity": 4800
+        "name": "Bloach",
+        "quantity": 2000
       },
       {
-        "name": "Butterfly",
-        "quantity": 10100
+        "name": "Platinum Bar",
+        "quantity": 800
       },
       {
-        "name": "Distilled Water",
-        "quantity": 18
+        "name": "Gold Fishing Rod",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Hermit Can",
+            "quantity": 5000
+          },
+          {
+            "name": "Leather Hide",
+            "quantity": 2000
+          },
+          {
+            "name": "Iron Fishing Rod",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Iron Bar",
+                "quantity": 1800
+              },
+              {
+                "name": "Hermit Can",
+                "quantity": 5100
+              },
+              {
+                "name": "Distilled Water",
+                "quantity": 18
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "115": {
+    "name": "Sizable Fish Pouch",
+    "materials": [
+      {
+        "name": "Bloach",
+        "quantity": 2500
       },
       {
-        "name": "Golden Dubloon",
-        "quantity": 10
-      },
+        "name": "Average Fish Pouch",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Hermit Can",
+            "quantity": 4500
+          },
+          {
+            "name": "Cramped Fish Pouch",
+            "quantity": 15,
+            "materials": [
+              {
+                "name": "Goldfish",
+                "quantity": 2700
+              }
+            ]
+          },
+          {
+            "name": "Small Fish Pouch",
+            "quantity": 9,
+            "materials": [
+              {
+                "name": "Hermit Can",
+                "quantity": 3825
+              },
+              {
+                "name": "Distilled Water",
+                "quantity": 18
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "116": {
+    "name": "Platinet",
+    "materials": [
       {
         "name": "Fruitfly",
         "quantity": 7000
@@ -2106,69 +2760,87 @@
       {
         "name": "Platinum Ore",
         "quantity": 3000
+      },
+      {
+        "name": "Gilded Net",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Golden Dubloon",
+            "quantity": 10
+          },
+          {
+            "name": "Butterfly",
+            "quantity": 5000
+          },
+          {
+            "name": "Reinforced Net",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Forest Fibres",
+                "quantity": 4800
+              },
+              {
+                "name": "Butterfly",
+                "quantity": 5100
+              },
+              {
+                "name": "Distilled Water",
+                "quantity": 18
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "115": {
+  "117": {
     "name": "Sizable Bug Pouch",
     "materials": [
       {
-        "name": "Fly",
-        "quantity": 2700
-      },
-      {
-        "name": "Butterfly",
-        "quantity": 8625
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 18
-      },
-      {
         "name": "Fruitfly",
         "quantity": 6750
+      },
+      {
+        "name": "Average Bug Pouch",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Butterfly",
+            "quantity": 4800
+          },
+          {
+            "name": "Cramped Bug Pouch",
+            "quantity": 15,
+            "materials": [
+              {
+                "name": "Fly",
+                "quantity": 2700
+              }
+            ]
+          },
+          {
+            "name": "Small Bug Pouch",
+            "quantity": 9,
+            "materials": [
+              {
+                "name": "Butterfly",
+                "quantity": 3825
+              },
+              {
+                "name": "Distilled Water",
+                "quantity": 18
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "116": {
+  "118": {
     "name": "Sizable Food Pouch",
     "materials": [
-      {
-        "name": "Nomwich",
-        "quantity": 1050
-      },
-      {
-        "name": "Hot Dog",
-        "quantity": 350
-      },
-      {
-        "name": "Oak Logs",
-        "quantity": 840
-      },
-      {
-        "name": "Copper Bar",
-        "quantity": 210
-      },
-      {
-        "name": "Iron Ore",
-        "quantity": 6000
-      },
-      {
-        "name": "Small Mana Potion",
-        "quantity": 2400
-      },
-      {
-        "name": "Jungle Logs",
-        "quantity": 7200
-      },
-      {
-        "name": "Small Life Potion",
-        "quantity": 3600
-      },
-      {
-        "name": "Meat Pie",
-        "quantity": 500
-      },
       {
         "name": "Golden Meat Pie",
         "quantity": 9
@@ -2176,32 +2848,72 @@
       {
         "name": "Nuget Cake",
         "quantity": 6
+      },
+      {
+        "name": "Average Food Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Meat Pie",
+            "quantity": 500
+          },
+          {
+            "name": "Cramped Food Pouch",
+            "quantity": 14,
+            "materials": [
+              {
+                "name": "Nomwich",
+                "quantity": 1050
+              },
+              {
+                "name": "Hot Dog",
+                "quantity": 350
+              },
+              {
+                "name": "Oak Logs",
+                "quantity": 840
+              },
+              {
+                "name": "Copper Bar",
+                "quantity": 210
+              }
+            ]
+          },
+          {
+            "name": "Icing Ironbite",
+            "quantity": 1200,
+            "materials": [
+              {
+                "name": "Iron Ore",
+                "quantity": 6000
+              },
+              {
+                "name": "Small Mana Potion",
+                "quantity": 2400
+              }
+            ]
+          },
+          {
+            "name": "Saucy Logfries",
+            "quantity": 1200,
+            "materials": [
+              {
+                "name": "Jungle Logs",
+                "quantity": 7200
+              },
+              {
+                "name": "Small Life Potion",
+                "quantity": 3600
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "117": {
+  "119": {
     "name": "Sizable Materials Pouch",
     "materials": [
-      {
-        "name": "Trusty Nails",
-        "quantity": 1120
-      },
-      {
-        "name": "Frog Leg",
-        "quantity": 560
-      },
-      {
-        "name": "Bean Slices",
-        "quantity": 420
-      },
-      {
-        "name": "Glass Shard",
-        "quantity": 2
-      },
-      {
-        "name": "Chain Link",
-        "quantity": 2500
-      },
       {
         "name": "Golden Plop",
         "quantity": 5
@@ -2209,10 +2921,42 @@
       {
         "name": "Woodular Circle",
         "quantity": 5
+      },
+      {
+        "name": "Average Material Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Glass Shard",
+            "quantity": 2
+          },
+          {
+            "name": "Chain Link",
+            "quantity": 2500
+          },
+          {
+            "name": "Cramped Material Pouch",
+            "quantity": 14,
+            "materials": [
+              {
+                "name": "Trusty Nails",
+                "quantity": 1120
+              },
+              {
+                "name": "Frog Leg",
+                "quantity": 560
+              },
+              {
+                "name": "Bean Slices",
+                "quantity": 420
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "118": {
+  "120": {
     "name": "Anvil Tab 3",
     "materials": [
       {
@@ -2233,7 +2977,7 @@
       }
     ]
   },
-  "119": {
+  "121": {
     "name": "Empty Box",
     "materials": [
       {
@@ -2250,7 +2994,7 @@
       }
     ]
   },
-  "120": {
+  "122": {
     "name": "Googley Eyes",
     "materials": [
       {
@@ -2260,45 +3004,39 @@
       {
         "name": "Distilled Water",
         "quantity": 5
+      },
+      {
+        "name": "Capitalist Case",
+        "quantity": 1
       }
     ]
   },
-  "121": {
+  "123": {
     "name": "FMJ Bullet",
     "materials": [
       {
-        "name": "Forest Fibres",
-        "quantity": 20
-      },
-      {
-        "name": "Fly",
-        "quantity": 20
-      },
-      {
         "name": "Gold Ore",
         "quantity": 15
+      },
+      {
+        "name": "Bullet",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Forest Fibres",
+            "quantity": 20
+          },
+          {
+            "name": "Fly",
+            "quantity": 20
+          }
+        ]
       }
     ]
   },
-  "122": {
+  "124": {
     "name": "Viking Cap",
     "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 300
-      },
-      {
-        "name": "Bean Slices",
-        "quantity": 500
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 125
-      },
-      {
-        "name": "Copper Ore",
-        "quantity": 750
-      },
       {
         "name": "Gold Bar",
         "quantity": 400
@@ -2306,28 +3044,40 @@
       {
         "name": "Glass Shard",
         "quantity": 2
+      },
+      {
+        "name": "Militia Helm",
+        "quantity": 5,
+        "materials": [
+          {
+            "name": "Iron Bar",
+            "quantity": 125
+          },
+          {
+            "name": "Copper Ore",
+            "quantity": 750
+          },
+          {
+            "name": "Copper Helmet",
+            "quantity": 10,
+            "materials": [
+              {
+                "name": "Copper Bar",
+                "quantity": 300
+              },
+              {
+                "name": "Bean Slices",
+                "quantity": 500
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "123": {
+  "125": {
     "name": "Sleek Coif",
     "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 300
-      },
-      {
-        "name": "Bean Slices",
-        "quantity": 500
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 125
-      },
-      {
-        "name": "Thread",
-        "quantity": 750
-      },
       {
         "name": "Tropilogs",
         "quantity": 2000
@@ -2335,28 +3085,40 @@
       {
         "name": "Glass Shard",
         "quantity": 2
+      },
+      {
+        "name": "Thief Hood",
+        "quantity": 5,
+        "materials": [
+          {
+            "name": "Iron Bar",
+            "quantity": 125
+          },
+          {
+            "name": "Thread",
+            "quantity": 750
+          },
+          {
+            "name": "Copper Helmet",
+            "quantity": 10,
+            "materials": [
+              {
+                "name": "Copper Bar",
+                "quantity": 300
+              },
+              {
+                "name": "Bean Slices",
+                "quantity": 500
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "124": {
+  "126": {
     "name": "Witch Hat",
     "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 300
-      },
-      {
-        "name": "Bean Slices",
-        "quantity": 500
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 125
-      },
-      {
-        "name": "Oak Logs",
-        "quantity": 1000
-      },
       {
         "name": "Corn Kernels",
         "quantity": 4000
@@ -2364,32 +3126,40 @@
       {
         "name": "Glass Shard",
         "quantity": 2
+      },
+      {
+        "name": "Top Hat",
+        "quantity": 5,
+        "materials": [
+          {
+            "name": "Iron Bar",
+            "quantity": 125
+          },
+          {
+            "name": "Oak Logs",
+            "quantity": 1000
+          },
+          {
+            "name": "Copper Helmet",
+            "quantity": 10,
+            "materials": [
+              {
+                "name": "Copper Bar",
+                "quantity": 300
+              },
+              {
+                "name": "Bean Slices",
+                "quantity": 500
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "125": {
+  "127": {
     "name": "Studded Hide",
     "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 360
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 960
-      },
-      {
-        "name": "Slime Sludge",
-        "quantity": 500
-      },
-      {
-        "name": "Boring Brick",
-        "quantity": 500
-      },
-      {
-        "name": "Bleach Logs",
-        "quantity": 1300
-      },
       {
         "name": "Megalodon Tooth",
         "quantity": 4000
@@ -2397,20 +3167,50 @@
       {
         "name": "Nuget Cake",
         "quantity": 1
+      },
+      {
+        "name": "Hide Shirt",
+        "quantity": 4,
+        "materials": [
+          {
+            "name": "Bleach Logs",
+            "quantity": 1300
+          },
+          {
+            "name": "Copper Platebody",
+            "quantity": 8,
+            "materials": [
+              {
+                "name": "Copper Bar",
+                "quantity": 360
+              },
+              {
+                "name": "Trusty Nails",
+                "quantity": 960
+              }
+            ]
+          },
+          {
+            "name": "Steel Axe",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Slime Sludge",
+                "quantity": 500
+              },
+              {
+                "name": "Boring Brick",
+                "quantity": 500
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "126": {
+  "128": {
     "name": "Feral Leathering",
     "materials": [
-      {
-        "name": "Goblin Ear",
-        "quantity": 2000
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 2000
-      },
       {
         "name": "Stick",
         "quantity": 3000
@@ -2418,10 +3218,24 @@
       {
         "name": "Nuget Cake",
         "quantity": 1
+      },
+      {
+        "name": "Fur Shirt",
+        "quantity": 4,
+        "materials": [
+          {
+            "name": "Goblin Ear",
+            "quantity": 2000
+          },
+          {
+            "name": "Iron Bar",
+            "quantity": 2000
+          }
+        ]
       }
     ]
   },
-  "127": {
+  "129": {
     "name": "Furled Robes",
     "materials": [
       {
@@ -2438,28 +3252,12 @@
       }
     ]
   },
-  "128": {
+  "130": {
     "name": "Cavern Trekkers",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 500
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 1000
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 250
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 600
-      },
-      {
         "name": "Distilled Water",
-        "quantity": 13
+        "quantity": 9
       },
       {
         "name": "Copper Ore",
@@ -2468,31 +3266,53 @@
       {
         "name": "Iron Ore",
         "quantity": 1200
+      },
+      {
+        "name": "Gold Boots",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Gold Bar",
+            "quantity": 600
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 4
+          },
+          {
+            "name": "Iron Boots",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Trusty Nails",
+                "quantity": 1000
+              },
+              {
+                "name": "Iron Bar",
+                "quantity": 250
+              },
+              {
+                "name": "Copper Boots",
+                "quantity": 4,
+                "materials": [
+                  {
+                    "name": "Copper Bar",
+                    "quantity": 500
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "129": {
+  "131": {
     "name": "Angler Boots",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 500
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 1000
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 250
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 600
-      },
-      {
         "name": "Distilled Water",
-        "quantity": 13
+        "quantity": 9
       },
       {
         "name": "Goldfish",
@@ -2501,31 +3321,53 @@
       {
         "name": "Hermit Can",
         "quantity": 1000
+      },
+      {
+        "name": "Gold Boots",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Gold Bar",
+            "quantity": 600
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 4
+          },
+          {
+            "name": "Iron Boots",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Trusty Nails",
+                "quantity": 1000
+              },
+              {
+                "name": "Iron Bar",
+                "quantity": 250
+              },
+              {
+                "name": "Copper Boots",
+                "quantity": 4,
+                "materials": [
+                  {
+                    "name": "Copper Bar",
+                    "quantity": 500
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "130": {
+  "132": {
     "name": "Logger Heels",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 500
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 1000
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 250
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 600
-      },
-      {
         "name": "Distilled Water",
-        "quantity": 13
+        "quantity": 9
       },
       {
         "name": "Jungle Logs",
@@ -2534,31 +3376,53 @@
       {
         "name": "Forest Fibres",
         "quantity": 1000
+      },
+      {
+        "name": "Gold Boots",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Gold Bar",
+            "quantity": 600
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 4
+          },
+          {
+            "name": "Iron Boots",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Trusty Nails",
+                "quantity": 1000
+              },
+              {
+                "name": "Iron Bar",
+                "quantity": 250
+              },
+              {
+                "name": "Copper Boots",
+                "quantity": 4,
+                "materials": [
+                  {
+                    "name": "Copper Bar",
+                    "quantity": 500
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "131": {
+  "133": {
     "name": "Bandito Boots",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 500
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 1000
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 250
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 600
-      },
-      {
         "name": "Distilled Water",
-        "quantity": 13
+        "quantity": 9
       },
       {
         "name": "Fly",
@@ -2567,10 +3431,48 @@
       {
         "name": "Butterfly",
         "quantity": 1250
+      },
+      {
+        "name": "Gold Boots",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Gold Bar",
+            "quantity": 600
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 4
+          },
+          {
+            "name": "Iron Boots",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Trusty Nails",
+                "quantity": 1000
+              },
+              {
+                "name": "Iron Bar",
+                "quantity": 250
+              },
+              {
+                "name": "Copper Boots",
+                "quantity": 4,
+                "materials": [
+                  {
+                    "name": "Copper Bar",
+                    "quantity": 500
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "132": {
+  "134": {
     "name": "Slurpin Herm",
     "materials": [
       {
@@ -2583,7 +3485,7 @@
       }
     ]
   },
-  "133": {
+  "135": {
     "name": "Buttered Toasted Butter",
     "materials": [
       {
@@ -2596,7 +3498,7 @@
       }
     ]
   },
-  "134": {
+  "136": {
     "name": "Dootjat Eye",
     "materials": [
       {
@@ -2613,7 +3515,7 @@
       }
     ]
   },
-  "135": {
+  "137": {
     "name": "Sandy Satchel",
     "materials": [
       {
@@ -2630,21 +3532,9 @@
       }
     ]
   },
-  "136": {
+  "138": {
     "name": "Efaunt Helmet",
     "materials": [
-      {
-        "name": "Silver Antique",
-        "quantity": 3
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 240
-      },
-      {
-        "name": "Ghost",
-        "quantity": 3
-      },
       {
         "name": "Ripped Tunic",
         "quantity": 20
@@ -2656,10 +3546,28 @@
       {
         "name": "Armor Upgrade Stone C",
         "quantity": 2
+      },
+      {
+        "name": "Dootjat Eye",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Silver Antique",
+            "quantity": 3
+          },
+          {
+            "name": "Gold Bar",
+            "quantity": 240
+          },
+          {
+            "name": "Ghost",
+            "quantity": 3
+          }
+        ]
       }
     ]
   },
-  "137": {
+  "139": {
     "name": "Efaunt Ribcage",
     "materials": [
       {
@@ -2676,7 +3584,7 @@
       }
     ]
   },
-  "138": {
+  "140": {
     "name": "Efaunt Hipilium",
     "materials": [
       {
@@ -2693,37 +3601,9 @@
       }
     ]
   },
-  "139": {
+  "141": {
     "name": "Efaunts Broken Ankles",
     "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 1500
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 3000
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 750
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 1800
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 12
-      },
-      {
-        "name": "Tropilogs",
-        "quantity": 8000
-      },
-      {
-        "name": "Jellyfish",
-        "quantity": 8000
-      },
       {
         "name": "Ripped Tunic",
         "quantity": 5
@@ -2731,56 +3611,64 @@
       {
         "name": "Nuget Cake",
         "quantity": 3
+      },
+      {
+        "name": "Platinum Boots",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Tropilogs",
+            "quantity": 7000
+          },
+          {
+            "name": "Jellyfish",
+            "quantity": 3000
+          },
+          {
+            "name": "Gold Boots",
+            "quantity": 3,
+            "materials": [
+              {
+                "name": "Gold Bar",
+                "quantity": 1800
+              },
+              {
+                "name": "Distilled Water",
+                "quantity": 12
+              },
+              {
+                "name": "Iron Boots",
+                "quantity": 6,
+                "materials": [
+                  {
+                    "name": "Trusty Nails",
+                    "quantity": 3000
+                  },
+                  {
+                    "name": "Iron Bar",
+                    "quantity": 750
+                  },
+                  {
+                    "name": "Copper Boots",
+                    "quantity": 12,
+                    "materials": [
+                      {
+                        "name": "Copper Bar",
+                        "quantity": 1500
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "140": {
+  "142": {
     "name": "Efaunt Trunculus",
     "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 100
-      },
-      {
-        "name": "Oak Logs",
-        "quantity": 375
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 100
-      },
-      {
-        "name": "Cue Tape",
-        "quantity": 5000
-      },
-      {
-        "name": "Potty Rolls",
-        "quantity": 2000
-      },
-      {
-        "name": "Slime Sludge",
-        "quantity": 750
-      },
-      {
-        "name": "Bleach Logs",
-        "quantity": 1500
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 500
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 16
-      },
-      {
-        "name": "Woodular Circle",
-        "quantity": 3
-      },
-      {
-        "name": "Bloach",
-        "quantity": 3200
-      },
       {
         "name": "Ribbed Tunic",
         "quantity": 4
@@ -2788,10 +3676,84 @@
       {
         "name": "Ripped Tunic",
         "quantity": 15
+      },
+      {
+        "name": "Bandage Wraps",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Cue Tape",
+            "quantity": 5000
+          },
+          {
+            "name": "Potty Rolls",
+            "quantity": 2000
+          },
+          {
+            "name": "The Stingers",
+            "quantity": 5,
+            "materials": [
+              {
+                "name": "Copper Bar",
+                "quantity": 100
+              },
+              {
+                "name": "Oak Logs",
+                "quantity": 375
+              },
+              {
+                "name": "Trusty Nails",
+                "quantity": 100
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pharoah Bow",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Woodular Circle",
+            "quantity": 3
+          },
+          {
+            "name": "Bloach",
+            "quantity": 1400
+          },
+          {
+            "name": "Spiked Menace",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Gold Bar",
+                "quantity": 500
+              },
+              {
+                "name": "Distilled Water",
+                "quantity": 16
+              },
+              {
+                "name": "Birch Longbow",
+                "quantity": 6,
+                "materials": [
+                  {
+                    "name": "Slime Sludge",
+                    "quantity": 750
+                  },
+                  {
+                    "name": "Bleach Logs",
+                    "quantity": 1500
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "141": {
+  "143": {
     "name": "Wooden Traps",
     "materials": [
       {
@@ -2804,7 +3766,7 @@
       }
     ]
   },
-  "142": {
+  "144": {
     "name": "Sizable Critter Pouch",
     "materials": [
       {
@@ -2817,7 +3779,7 @@
       }
     ]
   },
-  "143": {
+  "145": {
     "name": "Horned Skull",
     "materials": [
       {
@@ -2830,7 +3792,7 @@
       }
     ]
   },
-  "144": {
+  "146": {
     "name": "Sizable Soul Pouch",
     "materials": [
       {
@@ -2843,25 +3805,213 @@
       }
     ]
   },
-  "145": {
-    "name": "Dementia Helmet",
+  "147": {
+    "name": "Yumyum Desert NPC Completion Token",
     "materials": [
       {
-        "name": "Iron Bar",
-        "quantity": 1000
+        "name": "Easy Yumyum Dez NPC Token",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Bandit Bob Token",
+            "quantity": 1
+          },
+          {
+            "name": "Snake Jar Token",
+            "quantity": 1
+          },
+          {
+            "name": "Whattso Token",
+            "quantity": 1
+          },
+          {
+            "name": "Cowbo Jones Token",
+            "quantity": 1
+          }
+        ]
       },
       {
-        "name": "Goblin Ear",
-        "quantity": 2400
+        "name": "Med Yumyum Dez NPC Token",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Carpetiem Token",
+            "quantity": 1
+          },
+          {
+            "name": "Goldric Token",
+            "quantity": 1
+          },
+          {
+            "name": "Fishpaste Token",
+            "quantity": 1
+          },
+          {
+            "name": "Cattleprod Token",
+            "quantity": 1
+          }
+        ]
       },
       {
-        "name": "Jellyfish",
+        "name": "Hard Yumyum Dez NPC Token",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Loominadi Token",
+            "quantity": 1
+          },
+          {
+            "name": "Djonnut Token",
+            "quantity": 1
+          },
+          {
+            "name": "Scubidew Token",
+            "quantity": 1
+          },
+          {
+            "name": "Wellington Token",
+            "quantity": 1
+          }
+        ]
+      }
+    ]
+  },
+  "148": {
+    "name": "Yumyum Skills Completion Token",
+    "materials": [
+      {
+        "name": "Bloach",
+        "quantity": 4000
+      },
+      {
+        "name": "Fruitfly",
         "quantity": 8000
       },
       {
-        "name": "Platinum Bar",
-        "quantity": 1500
+        "name": "Dense Water",
+        "quantity": 50
+      }
+    ]
+  },
+  "149": {
+    "name": "Yumyum Misc Completion Token",
+    "materials": [
+      {
+        "name": "Minuteglass",
+        "quantity": 13
       },
+      {
+        "name": "Ghost",
+        "quantity": 25
+      },
+      {
+        "name": "Fuscismatia",
+        "quantity": 2
+      },
+      {
+        "name": "Efaunt Helmet",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Ripped Tunic",
+            "quantity": 20
+          },
+          {
+            "name": "Trimmed Rune Platelegs",
+            "quantity": 1
+          },
+          {
+            "name": "Armor Upgrade Stone C",
+            "quantity": 2
+          },
+          {
+            "name": "Dootjat Eye",
+            "quantity": 3,
+            "materials": [
+              {
+                "name": "Silver Antique",
+                "quantity": 3
+              },
+              {
+                "name": "Gold Bar",
+                "quantity": 240
+              },
+              {
+                "name": "Ghost",
+                "quantity": 3
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "150": {
+    "name": "Easy Yumyum Dez NPC Token",
+    "materials": [
+      {
+        "name": "Bandit Bob Token",
+        "quantity": 1
+      },
+      {
+        "name": "Snake Jar Token",
+        "quantity": 1
+      },
+      {
+        "name": "Whattso Token",
+        "quantity": 1
+      },
+      {
+        "name": "Cowbo Jones Token",
+        "quantity": 1
+      }
+    ]
+  },
+  "151": {
+    "name": "Med Yumyum Dez NPC Token",
+    "materials": [
+      {
+        "name": "Carpetiem Token",
+        "quantity": 1
+      },
+      {
+        "name": "Goldric Token",
+        "quantity": 1
+      },
+      {
+        "name": "Fishpaste Token",
+        "quantity": 1
+      },
+      {
+        "name": "Cattleprod Token",
+        "quantity": 1
+      }
+    ]
+  },
+  "152": {
+    "name": "Hard Yumyum Dez NPC Token",
+    "materials": [
+      {
+        "name": "Loominadi Token",
+        "quantity": 1
+      },
+      {
+        "name": "Djonnut Token",
+        "quantity": 1
+      },
+      {
+        "name": "Scubidew Token",
+        "quantity": 1
+      },
+      {
+        "name": "Wellington Token",
+        "quantity": 1
+      }
+    ]
+  },
+  "153": {
+    "name": "Dementia Helmet",
+    "materials": [
       {
         "name": "Froge",
         "quantity": 5000
@@ -2869,28 +4019,40 @@
       {
         "name": "Dementia Bar",
         "quantity": 300
+      },
+      {
+        "name": "Platinum Helmet",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Jellyfish",
+            "quantity": 4500
+          },
+          {
+            "name": "Platinum Bar",
+            "quantity": 1500
+          },
+          {
+            "name": "Iron Helmet",
+            "quantity": 8,
+            "materials": [
+              {
+                "name": "Iron Bar",
+                "quantity": 1000
+              },
+              {
+                "name": "Goblin Ear",
+                "quantity": 2400
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "146": {
+  "154": {
     "name": "Dementia Body",
     "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 1500
-      },
-      {
-        "name": "Jungle Logs",
-        "quantity": 6000
-      },
-      {
-        "name": "Potato Remains",
-        "quantity": 10000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 2000
-      },
       {
         "name": "Forest Soul",
         "quantity": 1000
@@ -2898,28 +4060,40 @@
       {
         "name": "Dementia Bar",
         "quantity": 350
+      },
+      {
+        "name": "Platinum Platbody",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Potato Remains",
+            "quantity": 10000
+          },
+          {
+            "name": "Platinum Bar",
+            "quantity": 2000
+          },
+          {
+            "name": "Iron Platebody",
+            "quantity": 10,
+            "materials": [
+              {
+                "name": "Iron Bar",
+                "quantity": 1500
+              },
+              {
+                "name": "Jungle Logs",
+                "quantity": 6000
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "147": {
+  "155": {
     "name": "Dementia Shins",
     "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 2040
-      },
-      {
-        "name": "Boring Brick",
-        "quantity": 2700
-      },
-      {
-        "name": "Sentient Cereal",
-        "quantity": 1000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 2500
-      },
       {
         "name": "Floof Ploof",
         "quantity": 8000
@@ -2927,40 +4101,40 @@
       {
         "name": "Dementia Bar",
         "quantity": 400
+      },
+      {
+        "name": "Platinum Shins",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Sentient Cereal",
+            "quantity": 10000
+          },
+          {
+            "name": "Platinum Bar",
+            "quantity": 2500
+          },
+          {
+            "name": "Iron Platelegs",
+            "quantity": 12,
+            "materials": [
+              {
+                "name": "Iron Bar",
+                "quantity": 2040
+              },
+              {
+                "name": "Boring Brick",
+                "quantity": 2700
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "148": {
+  "156": {
     "name": "Dementia Boots",
     "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 1500
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 3000
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 750
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 1800
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 12
-      },
-      {
-        "name": "Tropilogs",
-        "quantity": 8000
-      },
-      {
-        "name": "Jellyfish",
-        "quantity": 8000
-      },
       {
         "name": "Poison Froge",
         "quantity": 3
@@ -2968,65 +4142,105 @@
       {
         "name": "Dementia Bar",
         "quantity": 500
+      },
+      {
+        "name": "Platinum Boots",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Tropilogs",
+            "quantity": 7000
+          },
+          {
+            "name": "Jellyfish",
+            "quantity": 3000
+          },
+          {
+            "name": "Gold Boots",
+            "quantity": 3,
+            "materials": [
+              {
+                "name": "Gold Bar",
+                "quantity": 1800
+              },
+              {
+                "name": "Distilled Water",
+                "quantity": 12
+              },
+              {
+                "name": "Iron Boots",
+                "quantity": 6,
+                "materials": [
+                  {
+                    "name": "Trusty Nails",
+                    "quantity": 3000
+                  },
+                  {
+                    "name": "Iron Bar",
+                    "quantity": 750
+                  },
+                  {
+                    "name": "Copper Boots",
+                    "quantity": 12,
+                    "materials": [
+                      {
+                        "name": "Copper Bar",
+                        "quantity": 1500
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "149": {
+  "157": {
     "name": "Uninflated Glove",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 300
-      },
-      {
-        "name": "Oak Logs",
-        "quantity": 1125
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 300
-      },
-      {
-        "name": "Cue Tape",
-        "quantity": 15000
-      },
-      {
-        "name": "Potty Rolls",
-        "quantity": 6000
-      },
-      {
         "name": "Melty Cube",
         "quantity": 70000
+      },
+      {
+        "name": "Bandage Wraps",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Cue Tape",
+            "quantity": 15000
+          },
+          {
+            "name": "Potty Rolls",
+            "quantity": 6000
+          },
+          {
+            "name": "The Stingers",
+            "quantity": 15,
+            "materials": [
+              {
+                "name": "Copper Bar",
+                "quantity": 300
+              },
+              {
+                "name": "Oak Logs",
+                "quantity": 1125
+              },
+              {
+                "name": "Trusty Nails",
+                "quantity": 300
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "150": {
+  "158": {
     "name": "The Ice Breaker",
     "materials": [
-      {
-        "name": "Slime Sludge",
-        "quantity": 1500
-      },
-      {
-        "name": "Boring Brick",
-        "quantity": 1500
-      },
-      {
-        "name": "Forest Fibres",
-        "quantity": 5000
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 32
-      },
-      {
-        "name": "Nuget Cake",
-        "quantity": 6
-      },
-      {
-        "name": "Leather Hide",
-        "quantity": 800
-      },
       {
         "name": "Melty Cube",
         "quantity": 25000
@@ -3034,36 +4248,54 @@
       {
         "name": "Redox Salts",
         "quantity": 150
+      },
+      {
+        "name": "Enforced Slasher",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Nuget Cake",
+            "quantity": 6
+          },
+          {
+            "name": "Leather Hide",
+            "quantity": 5000
+          },
+          {
+            "name": "Royal Bayonet",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Forest Fibres",
+                "quantity": 5000
+              },
+              {
+                "name": "Distilled Water",
+                "quantity": 32
+              },
+              {
+                "name": "Steel Axe",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Slime Sludge",
+                    "quantity": 1500
+                  },
+                  {
+                    "name": "Boring Brick",
+                    "quantity": 1500
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "151": {
+  "159": {
     "name": "Blizzard Bow",
     "materials": [
-      {
-        "name": "Slime Sludge",
-        "quantity": 1500
-      },
-      {
-        "name": "Bleach Logs",
-        "quantity": 3000
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 1000
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 32
-      },
-      {
-        "name": "Woodular Circle",
-        "quantity": 6
-      },
-      {
-        "name": "Bloach",
-        "quantity": 6400
-      },
       {
         "name": "Forest Soul",
         "quantity": 7000
@@ -3071,36 +4303,54 @@
       {
         "name": "Redox Salts",
         "quantity": 150
+      },
+      {
+        "name": "Pharoah Bow",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Woodular Circle",
+            "quantity": 6
+          },
+          {
+            "name": "Bloach",
+            "quantity": 2800
+          },
+          {
+            "name": "Spiked Menace",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Gold Bar",
+                "quantity": 1000
+              },
+              {
+                "name": "Distilled Water",
+                "quantity": 32
+              },
+              {
+                "name": "Birch Longbow",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Slime Sludge",
+                    "quantity": 1500
+                  },
+                  {
+                    "name": "Bleach Logs",
+                    "quantity": 3000
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "152": {
+  "160": {
     "name": "Spriggly Storm",
     "materials": [
-      {
-        "name": "Slime Sludge",
-        "quantity": 1500
-      },
-      {
-        "name": "Copper Bar",
-        "quantity": 1200
-      },
-      {
-        "name": "Chain Link",
-        "quantity": 4000
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 32
-      },
-      {
-        "name": "Golden Plop",
-        "quantity": 6
-      },
-      {
-        "name": "Fruitfly",
-        "quantity": 8000
-      },
       {
         "name": "Tundra Logs",
         "quantity": 10000
@@ -3108,36 +4358,54 @@
       {
         "name": "Redox Salts",
         "quantity": 150
+      },
+      {
+        "name": "Crows Nest",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Golden Plop",
+            "quantity": 6
+          },
+          {
+            "name": "Fruitfly",
+            "quantity": 8000
+          },
+          {
+            "name": "Starlight",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Chain Link",
+                "quantity": 4000
+              },
+              {
+                "name": "Distilled Water",
+                "quantity": 32
+              },
+              {
+                "name": "Quarterstaff",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Slime Sludge",
+                    "quantity": 1500
+                  },
+                  {
+                    "name": "Copper Bar",
+                    "quantity": 1200
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "153": {
+  "161": {
     "name": "Dementia Pickaxe",
     "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 1200
-      },
-      {
-        "name": "Carrot Cube",
-        "quantity": 2400
-      },
-      {
-        "name": "Megalodon Tooth",
-        "quantity": 10000
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 3200
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 1600
-      },
-      {
-        "name": "Pincer Arm",
-        "quantity": 21000
-      },
       {
         "name": "Dementia Bar",
         "quantity": 275
@@ -3145,61 +4413,103 @@
       {
         "name": "Moustache Comb",
         "quantity": 15000
+      },
+      {
+        "name": "Platinum Pickaxe",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Platinum Bar",
+            "quantity": 1600
+          },
+          {
+            "name": "Pincer Arm",
+            "quantity": 21000
+          },
+          {
+            "name": "Gold Pickaxe",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Megalodon Tooth",
+                "quantity": 10000
+              },
+              {
+                "name": "Gold Bar",
+                "quantity": 3200
+              },
+              {
+                "name": "Iron Pickaxe",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Iron Bar",
+                    "quantity": 1200
+                  },
+                  {
+                    "name": "Carrot Cube",
+                    "quantity": 2400
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "154": {
+  "162": {
     "name": "Big Mining Pouch",
     "materials": [
       {
-        "name": "Copper Ore",
-        "quantity": 3600
-      },
-      {
-        "name": "Iron Ore",
-        "quantity": 12600
-      },
-      {
-        "name": "Gold Ore",
-        "quantity": 8400
-      },
-      {
-        "name": "Platinum Ore",
-        "quantity": 13500
-      },
-      {
         "name": "Dementia Ore",
         "quantity": 17500
+      },
+      {
+        "name": "Sizable Mining Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Platinum Ore",
+            "quantity": 13500
+          },
+          {
+            "name": "Average Mining Pouch",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Gold Ore",
+                "quantity": 8400
+              },
+              {
+                "name": "Cramped Mining Pouch",
+                "quantity": 30,
+                "materials": [
+                  {
+                    "name": "Copper Ore",
+                    "quantity": 3600
+                  }
+                ]
+              },
+              {
+                "name": "Small Mining Pouch",
+                "quantity": 18,
+                "materials": [
+                  {
+                    "name": "Iron Ore",
+                    "quantity": 12600
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "155": {
+  "163": {
     "name": "Dementia Dicer",
     "materials": [
-      {
-        "name": "Jungle Logs",
-        "quantity": 3000
-      },
-      {
-        "name": "Boring Brick",
-        "quantity": 1500
-      },
-      {
-        "name": "Golden Dubloon",
-        "quantity": 20
-      },
-      {
-        "name": "Crabby Cakey",
-        "quantity": 8000
-      },
-      {
-        "name": "Tropilogs",
-        "quantity": 13000
-      },
-      {
-        "name": "Chain Link",
-        "quantity": 10000
-      },
       {
         "name": "Tundra Logs",
         "quantity": 15000
@@ -3207,65 +4517,107 @@
       {
         "name": "Redox Salts",
         "quantity": 50
+      },
+      {
+        "name": "Plat Hatchet",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Tropilogs",
+            "quantity": 13000
+          },
+          {
+            "name": "Chain Link",
+            "quantity": 10000
+          },
+          {
+            "name": "Golden Axe",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Golden Dubloon",
+                "quantity": 20
+              },
+              {
+                "name": "Crabby Cakey",
+                "quantity": 8000
+              },
+              {
+                "name": "Iron Hatchet",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Jungle Logs",
+                    "quantity": 3000
+                  },
+                  {
+                    "name": "Boring Brick",
+                    "quantity": 1500
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "156": {
+  "164": {
     "name": "Big Choppin Pouch",
     "materials": [
       {
-        "name": "Oak Logs",
-        "quantity": 4500
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 900
-      },
-      {
-        "name": "Bleach Logs",
-        "quantity": 14400
-      },
-      {
-        "name": "Forest Fibres",
-        "quantity": 10800
-      },
-      {
-        "name": "Tropilogs",
-        "quantity": 13500
-      },
-      {
         "name": "Tundra Logs",
         "quantity": 20000
+      },
+      {
+        "name": "Sizable Choppin Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Tropilogs",
+            "quantity": 13500
+          },
+          {
+            "name": "Average Choppin Pouch",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Forest Fibres",
+                "quantity": 10800
+              },
+              {
+                "name": "Cramped Choppin Pouch",
+                "quantity": 30,
+                "materials": [
+                  {
+                    "name": "Oak Logs",
+                    "quantity": 4500
+                  },
+                  {
+                    "name": "Trusty Nails",
+                    "quantity": 900
+                  }
+                ]
+              },
+              {
+                "name": "Small Choppin Pouch",
+                "quantity": 18,
+                "materials": [
+                  {
+                    "name": "Bleach Logs",
+                    "quantity": 14400
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "157": {
+  "165": {
     "name": "Dementia Rod for Fishing",
     "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 3600
-      },
-      {
-        "name": "Hermit Can",
-        "quantity": 20200
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 36
-      },
-      {
-        "name": "Leather Hide",
-        "quantity": 4000
-      },
-      {
-        "name": "Bloach",
-        "quantity": 14000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 1600
-      },
       {
         "name": "Dementia Bar",
         "quantity": 300
@@ -3273,28 +4625,58 @@
       {
         "name": "Redox Salts",
         "quantity": 50
+      },
+      {
+        "name": "Plat Fishing Rod",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Bloach",
+            "quantity": 4000
+          },
+          {
+            "name": "Platinum Bar",
+            "quantity": 1600
+          },
+          {
+            "name": "Gold Fishing Rod",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Hermit Can",
+                "quantity": 10000
+              },
+              {
+                "name": "Leather Hide",
+                "quantity": 4000
+              },
+              {
+                "name": "Iron Fishing Rod",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Iron Bar",
+                    "quantity": 3600
+                  },
+                  {
+                    "name": "Hermit Can",
+                    "quantity": 10200
+                  },
+                  {
+                    "name": "Distilled Water",
+                    "quantity": 36
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "158": {
+  "166": {
     "name": "Big Fish Pouch",
     "materials": [
-      {
-        "name": "Goldfish",
-        "quantity": 5400
-      },
-      {
-        "name": "Hermit Can",
-        "quantity": 16650
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 36
-      },
-      {
-        "name": "Bloach",
-        "quantity": 13500
-      },
       {
         "name": "Crescent Scropie",
         "quantity": 4
@@ -3302,36 +4684,56 @@
       {
         "name": "Redox Salts",
         "quantity": 50
+      },
+      {
+        "name": "Sizable Fish Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Bloach",
+            "quantity": 5000
+          },
+          {
+            "name": "Average Fish Pouch",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Hermit Can",
+                "quantity": 9000
+              },
+              {
+                "name": "Cramped Fish Pouch",
+                "quantity": 30,
+                "materials": [
+                  {
+                    "name": "Goldfish",
+                    "quantity": 5400
+                  }
+                ]
+              },
+              {
+                "name": "Small Fish Pouch",
+                "quantity": 18,
+                "materials": [
+                  {
+                    "name": "Hermit Can",
+                    "quantity": 7650
+                  },
+                  {
+                    "name": "Distilled Water",
+                    "quantity": 36
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "159": {
+  "167": {
     "name": "Dementia Net",
     "materials": [
-      {
-        "name": "Forest Fibres",
-        "quantity": 9600
-      },
-      {
-        "name": "Butterfly",
-        "quantity": 20200
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 36
-      },
-      {
-        "name": "Golden Dubloon",
-        "quantity": 20
-      },
-      {
-        "name": "Fruitfly",
-        "quantity": 14000
-      },
-      {
-        "name": "Platinum Ore",
-        "quantity": 6000
-      },
       {
         "name": "Mosquisnow",
         "quantity": 15000
@@ -3339,202 +4741,322 @@
       {
         "name": "Redox Salts",
         "quantity": 50
+      },
+      {
+        "name": "Platinet",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Fruitfly",
+            "quantity": 14000
+          },
+          {
+            "name": "Platinum Ore",
+            "quantity": 6000
+          },
+          {
+            "name": "Gilded Net",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Golden Dubloon",
+                "quantity": 20
+              },
+              {
+                "name": "Butterfly",
+                "quantity": 10000
+              },
+              {
+                "name": "Reinforced Net",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Forest Fibres",
+                    "quantity": 9600
+                  },
+                  {
+                    "name": "Butterfly",
+                    "quantity": 10200
+                  },
+                  {
+                    "name": "Distilled Water",
+                    "quantity": 36
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "160": {
+  "168": {
     "name": "Big Bug Pouch",
     "materials": [
       {
-        "name": "Fly",
-        "quantity": 5400
-      },
-      {
-        "name": "Butterfly",
-        "quantity": 17250
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 36
-      },
-      {
-        "name": "Fruitfly",
-        "quantity": 13500
-      },
-      {
         "name": "Mosquisnow",
         "quantity": 10000
+      },
+      {
+        "name": "Sizable Bug Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Fruitfly",
+            "quantity": 13500
+          },
+          {
+            "name": "Average Bug Pouch",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Butterfly",
+                "quantity": 9600
+              },
+              {
+                "name": "Cramped Bug Pouch",
+                "quantity": 30,
+                "materials": [
+                  {
+                    "name": "Fly",
+                    "quantity": 5400
+                  }
+                ]
+              },
+              {
+                "name": "Small Bug Pouch",
+                "quantity": 18,
+                "materials": [
+                  {
+                    "name": "Butterfly",
+                    "quantity": 7650
+                  },
+                  {
+                    "name": "Distilled Water",
+                    "quantity": 36
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "161": {
+  "169": {
     "name": "Natural Traps",
     "materials": [
       {
-        "name": "Mutant Crabbo",
-        "quantity": 4
+        "name": "Nakeo Moleo",
+        "quantity": 5
       },
       {
         "name": "Redox Salts",
-        "quantity": 90
+        "quantity": 50
       },
       {
-        "name": "Nakeo Moleo",
-        "quantity": 5
+        "name": "Wooden Traps",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Mutant Crabbo",
+            "quantity": 4
+          },
+          {
+            "name": "Redox Salts",
+            "quantity": 40
+          }
+        ]
       }
     ]
   },
-  "162": {
+  "170": {
     "name": "Big Critter Pouch",
     "materials": [
       {
-        "name": "Crabbo",
-        "quantity": 2000
-      },
-      {
-        "name": "Redox Salts",
-        "quantity": 30
-      },
-      {
         "name": "Mousey",
         "quantity": 10000
+      },
+      {
+        "name": "Sizable Critter Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Crabbo",
+            "quantity": 2000
+          },
+          {
+            "name": "Redox Salts",
+            "quantity": 30
+          }
+        ]
       }
     ]
   },
-  "163": {
+  "171": {
     "name": "Prickle Skull",
     "materials": [
       {
-        "name": "Dune Soul",
-        "quantity": 2400
+        "name": "Rooted Soul",
+        "quantity": 12500
       },
       {
         "name": "Redox Salts",
-        "quantity": 100
+        "quantity": 50
       },
       {
-        "name": "Rooted Soul",
-        "quantity": 12500
+        "name": "Horned Skull",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Dune Soul",
+            "quantity": 2400
+          },
+          {
+            "name": "Redox Salts",
+            "quantity": 50
+          }
+        ]
       }
     ]
   },
-  "164": {
+  "172": {
     "name": "Big Soul Pouch",
     "materials": [
       {
-        "name": "Dune Soul",
-        "quantity": 3000
-      },
-      {
-        "name": "Redox Salts",
-        "quantity": 40
-      },
-      {
         "name": "Rooted Soul",
         "quantity": 8000
+      },
+      {
+        "name": "Sizable Soul Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Dune Soul",
+            "quantity": 3000
+          },
+          {
+            "name": "Redox Salts",
+            "quantity": 40
+          }
+        ]
       }
     ]
   },
-  "165": {
+  "173": {
     "name": "Big Food Pouch",
     "materials": [
       {
-        "name": "Hermit Can",
-        "quantity": 7500
-      },
-      {
-        "name": "Average Strength Potion",
-        "quantity": 3000
-      },
-      {
-        "name": "Butterfly",
-        "quantity": 7500
-      },
-      {
-        "name": "Kebab Sticks",
-        "quantity": 1500
-      },
-      {
-        "name": "Nomwich",
-        "quantity": 2100
-      },
-      {
-        "name": "Hot Dog",
-        "quantity": 700
-      },
-      {
-        "name": "Oak Logs",
-        "quantity": 1680
-      },
-      {
-        "name": "Copper Bar",
-        "quantity": 420
-      },
-      {
-        "name": "Iron Ore",
-        "quantity": 12000
-      },
-      {
-        "name": "Small Mana Potion",
-        "quantity": 4800
-      },
-      {
-        "name": "Jungle Logs",
-        "quantity": 14400
-      },
-      {
-        "name": "Small Life Potion",
-        "quantity": 7200
-      },
-      {
-        "name": "Meat Pie",
-        "quantity": 1000
-      },
-      {
-        "name": "Golden Meat Pie",
-        "quantity": 18
-      },
-      {
-        "name": "Nuget Cake",
-        "quantity": 12
-      },
-      {
         "name": "Yeti Ham",
         "quantity": 10000
+      },
+      {
+        "name": "Slurpin Herm",
+        "quantity": 1500,
+        "materials": [
+          {
+            "name": "Hermit Can",
+            "quantity": 7500
+          },
+          {
+            "name": "Average Strength Potion",
+            "quantity": 3000
+          }
+        ]
+      },
+      {
+        "name": "Buttered Toasted Butter",
+        "quantity": 1500,
+        "materials": [
+          {
+            "name": "Butterfly",
+            "quantity": 7500
+          },
+          {
+            "name": "Kebab Sticks",
+            "quantity": 1500
+          }
+        ]
+      },
+      {
+        "name": "Sizable Food Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Golden Meat Pie",
+            "quantity": 18
+          },
+          {
+            "name": "Nuget Cake",
+            "quantity": 12
+          },
+          {
+            "name": "Average Food Pouch",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Meat Pie",
+                "quantity": 1000
+              },
+              {
+                "name": "Cramped Food Pouch",
+                "quantity": 28,
+                "materials": [
+                  {
+                    "name": "Nomwich",
+                    "quantity": 2100
+                  },
+                  {
+                    "name": "Hot Dog",
+                    "quantity": 700
+                  },
+                  {
+                    "name": "Oak Logs",
+                    "quantity": 1680
+                  },
+                  {
+                    "name": "Copper Bar",
+                    "quantity": 420
+                  }
+                ]
+              },
+              {
+                "name": "Icing Ironbite",
+                "quantity": 2400,
+                "materials": [
+                  {
+                    "name": "Iron Ore",
+                    "quantity": 12000
+                  },
+                  {
+                    "name": "Small Mana Potion",
+                    "quantity": 4800
+                  }
+                ]
+              },
+              {
+                "name": "Saucy Logfries",
+                "quantity": 2400,
+                "materials": [
+                  {
+                    "name": "Jungle Logs",
+                    "quantity": 14400
+                  },
+                  {
+                    "name": "Small Life Potion",
+                    "quantity": 7200
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "166": {
+  "174": {
     "name": "Big Materials Pouch",
     "materials": [
-      {
-        "name": "Trusty Nails",
-        "quantity": 2240
-      },
-      {
-        "name": "Frog Leg",
-        "quantity": 1120
-      },
-      {
-        "name": "Bean Slices",
-        "quantity": 840
-      },
-      {
-        "name": "Glass Shard",
-        "quantity": 4
-      },
-      {
-        "name": "Chain Link",
-        "quantity": 5000
-      },
-      {
-        "name": "Golden Plop",
-        "quantity": 10
-      },
-      {
-        "name": "Woodular Circle",
-        "quantity": 10
-      },
       {
         "name": "Sticky Stick",
         "quantity": 15000
@@ -3542,36 +5064,58 @@
       {
         "name": "Ice Age 3",
         "quantity": 3
+      },
+      {
+        "name": "Sizable Materials Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Golden Plop",
+            "quantity": 10
+          },
+          {
+            "name": "Woodular Circle",
+            "quantity": 10
+          },
+          {
+            "name": "Average Material Pouch",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Glass Shard",
+                "quantity": 4
+              },
+              {
+                "name": "Chain Link",
+                "quantity": 5000
+              },
+              {
+                "name": "Cramped Material Pouch",
+                "quantity": 28,
+                "materials": [
+                  {
+                    "name": "Trusty Nails",
+                    "quantity": 2240
+                  },
+                  {
+                    "name": "Frog Leg",
+                    "quantity": 1120
+                  },
+                  {
+                    "name": "Bean Slices",
+                    "quantity": 840
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "167": {
+  "175": {
     "name": "Void Imperium Helmet",
     "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 2000
-      },
-      {
-        "name": "Goblin Ear",
-        "quantity": 4800
-      },
-      {
-        "name": "Jellyfish",
-        "quantity": 16000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 3000
-      },
-      {
-        "name": "Froge",
-        "quantity": 10000
-      },
-      {
-        "name": "Dementia Bar",
-        "quantity": 600
-      },
       {
         "name": "Spontaneity Salts",
         "quantity": 500
@@ -3579,36 +5123,58 @@
       {
         "name": "Void Bar",
         "quantity": 1000
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 5
+      },
+      {
+        "name": "Dementia Helmet",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Froge",
+            "quantity": 10000
+          },
+          {
+            "name": "Dementia Bar",
+            "quantity": 600
+          },
+          {
+            "name": "Platinum Helmet",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Jellyfish",
+                "quantity": 9000
+              },
+              {
+                "name": "Platinum Bar",
+                "quantity": 3000
+              },
+              {
+                "name": "Iron Helmet",
+                "quantity": 16,
+                "materials": [
+                  {
+                    "name": "Iron Bar",
+                    "quantity": 2000
+                  },
+                  {
+                    "name": "Goblin Ear",
+                    "quantity": 4800
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "168": {
+  "176": {
     "name": "Void Imperium Platebody",
     "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 3000
-      },
-      {
-        "name": "Jungle Logs",
-        "quantity": 12000
-      },
-      {
-        "name": "Potato Remains",
-        "quantity": 20000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 4000
-      },
-      {
-        "name": "Forest Soul",
-        "quantity": 2000
-      },
-      {
-        "name": "Dementia Bar",
-        "quantity": 700
-      },
       {
         "name": "Audio Cord",
         "quantity": 75000
@@ -3616,36 +5182,58 @@
       {
         "name": "Void Bar",
         "quantity": 500
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 4
+      },
+      {
+        "name": "Dementia Body",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Forest Soul",
+            "quantity": 2000
+          },
+          {
+            "name": "Dementia Bar",
+            "quantity": 700
+          },
+          {
+            "name": "Platinum Platbody",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Potato Remains",
+                "quantity": 20000
+              },
+              {
+                "name": "Platinum Bar",
+                "quantity": 4000
+              },
+              {
+                "name": "Iron Platebody",
+                "quantity": 20,
+                "materials": [
+                  {
+                    "name": "Iron Bar",
+                    "quantity": 3000
+                  },
+                  {
+                    "name": "Jungle Logs",
+                    "quantity": 12000
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "169": {
+  "177": {
     "name": "Void Imperium Shardshins",
     "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 4080
-      },
-      {
-        "name": "Boring Brick",
-        "quantity": 5400
-      },
-      {
-        "name": "Sentient Cereal",
-        "quantity": 2000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 5000
-      },
-      {
-        "name": "Floof Ploof",
-        "quantity": 16000
-      },
-      {
-        "name": "Dementia Bar",
-        "quantity": 800
-      },
       {
         "name": "Wispy Lumber",
         "quantity": 75000
@@ -3653,48 +5241,58 @@
       {
         "name": "Void Bar",
         "quantity": 650
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 4
+      },
+      {
+        "name": "Dementia Shins",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Floof Ploof",
+            "quantity": 16000
+          },
+          {
+            "name": "Dementia Bar",
+            "quantity": 800
+          },
+          {
+            "name": "Platinum Shins",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Sentient Cereal",
+                "quantity": 20000
+              },
+              {
+                "name": "Platinum Bar",
+                "quantity": 5000
+              },
+              {
+                "name": "Iron Platelegs",
+                "quantity": 24,
+                "materials": [
+                  {
+                    "name": "Iron Bar",
+                    "quantity": 4080
+                  },
+                  {
+                    "name": "Boring Brick",
+                    "quantity": 5400
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "170": {
+  "178": {
     "name": "Void Imperium Kicks",
     "materials": [
-      {
-        "name": "Copper Bar",
-        "quantity": 3000
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 6000
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 1500
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 3600
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 24
-      },
-      {
-        "name": "Tropilogs",
-        "quantity": 16000
-      },
-      {
-        "name": "Jellyfish",
-        "quantity": 16000
-      },
-      {
-        "name": "Poison Froge",
-        "quantity": 6
-      },
-      {
-        "name": "Dementia Bar",
-        "quantity": 1000
-      },
       {
         "name": "Flycicle",
         "quantity": 60000
@@ -3702,89 +5300,155 @@
       {
         "name": "Void Bar",
         "quantity": 725
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 4
+      },
+      {
+        "name": "Dementia Boots",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Poison Froge",
+            "quantity": 6
+          },
+          {
+            "name": "Dementia Bar",
+            "quantity": 1000
+          },
+          {
+            "name": "Platinum Boots",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Tropilogs",
+                "quantity": 14000
+              },
+              {
+                "name": "Jellyfish",
+                "quantity": 6000
+              },
+              {
+                "name": "Gold Boots",
+                "quantity": 6,
+                "materials": [
+                  {
+                    "name": "Gold Bar",
+                    "quantity": 3600
+                  },
+                  {
+                    "name": "Distilled Water",
+                    "quantity": 24
+                  },
+                  {
+                    "name": "Iron Boots",
+                    "quantity": 12,
+                    "materials": [
+                      {
+                        "name": "Trusty Nails",
+                        "quantity": 6000
+                      },
+                      {
+                        "name": "Iron Bar",
+                        "quantity": 1500
+                      },
+                      {
+                        "name": "Copper Boots",
+                        "quantity": 24,
+                        "materials": [
+                          {
+                            "name": "Copper Bar",
+                            "quantity": 3000
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "171": {
+  "179": {
     "name": "Deuscythe",
     "materials": [
-      {
-        "name": "Slime Sludge",
-        "quantity": 4500
-      },
-      {
-        "name": "Boring Brick",
-        "quantity": 4500
-      },
-      {
-        "name": "Forest Fibres",
-        "quantity": 15000
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 96
-      },
-      {
-        "name": "Nuget Cake",
-        "quantity": 18
-      },
-      {
-        "name": "Leather Hide",
-        "quantity": 2400
-      },
-      {
-        "name": "Melty Cube",
-        "quantity": 75000
-      },
-      {
-        "name": "Redox Salts",
-        "quantity": 450
-      },
       {
         "name": "Black Lense",
         "quantity": 4
       },
       {
         "name": "Eternal Lord of The Undying Ember",
-        "quantity": 5
+        "quantity": 10
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 7
+      },
+      {
+        "name": "The Ice Breaker",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Melty Cube",
+            "quantity": 75000
+          },
+          {
+            "name": "Redox Salts",
+            "quantity": 450
+          },
+          {
+            "name": "Enforced Slasher",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Nuget Cake",
+                "quantity": 18
+              },
+              {
+                "name": "Leather Hide",
+                "quantity": 15000
+              },
+              {
+                "name": "Royal Bayonet",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Forest Fibres",
+                    "quantity": 15000
+                  },
+                  {
+                    "name": "Distilled Water",
+                    "quantity": 96
+                  },
+                  {
+                    "name": "Steel Axe",
+                    "quantity": 36,
+                    "materials": [
+                      {
+                        "name": "Slime Sludge",
+                        "quantity": 4500
+                      },
+                      {
+                        "name": "Boring Brick",
+                        "quantity": 4500
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "172": {
+  "180": {
     "name": "Blackhole Bow",
     "materials": [
-      {
-        "name": "Slime Sludge",
-        "quantity": 4500
-      },
-      {
-        "name": "Bleach Logs",
-        "quantity": 9000
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 3000
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 96
-      },
-      {
-        "name": "Woodular Circle",
-        "quantity": 18
-      },
-      {
-        "name": "Bloach",
-        "quantity": 19200
-      },
-      {
-        "name": "Forest Soul",
-        "quantity": 21000
-      },
-      {
-        "name": "Redox Salts",
-        "quantity": 450
-      },
       {
         "name": "Black Lense",
         "quantity": 4
@@ -3792,233 +5456,405 @@
       {
         "name": "Spontaneity Salts",
         "quantity": 250
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 7
+      },
+      {
+        "name": "Blizzard Bow",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Forest Soul",
+            "quantity": 21000
+          },
+          {
+            "name": "Redox Salts",
+            "quantity": 450
+          },
+          {
+            "name": "Pharoah Bow",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Woodular Circle",
+                "quantity": 18
+              },
+              {
+                "name": "Bloach",
+                "quantity": 8400
+              },
+              {
+                "name": "Spiked Menace",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Gold Bar",
+                    "quantity": 3000
+                  },
+                  {
+                    "name": "Distilled Water",
+                    "quantity": 96
+                  },
+                  {
+                    "name": "Birch Longbow",
+                    "quantity": 36,
+                    "materials": [
+                      {
+                        "name": "Slime Sludge",
+                        "quantity": 4500
+                      },
+                      {
+                        "name": "Bleach Logs",
+                        "quantity": 9000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "173": {
+  "181": {
     "name": "Grey Gatsby",
     "materials": [
-      {
-        "name": "Slime Sludge",
-        "quantity": 4500
-      },
-      {
-        "name": "Copper Bar",
-        "quantity": 3600
-      },
-      {
-        "name": "Chain Link",
-        "quantity": 12000
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 96
-      },
-      {
-        "name": "Golden Plop",
-        "quantity": 18
-      },
-      {
-        "name": "Fruitfly",
-        "quantity": 24000
-      },
-      {
-        "name": "Tundra Logs",
-        "quantity": 30000
-      },
-      {
-        "name": "Redox Salts",
-        "quantity": 450
-      },
       {
         "name": "Black Lense",
         "quantity": 4
       },
       {
         "name": "Frigid Soul",
-        "quantity": 50000
-      }
-    ]
-  },
-  "174": {
-    "name": "Void Imperium Pik",
-    "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 2400
-      },
-      {
-        "name": "Carrot Cube",
-        "quantity": 4800
-      },
-      {
-        "name": "Megalodon Tooth",
-        "quantity": 20000
-      },
-      {
-        "name": "Gold Bar",
-        "quantity": 6400
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 3200
-      },
-      {
-        "name": "Pincer Arm",
-        "quantity": 42000
-      },
-      {
-        "name": "Dementia Bar",
-        "quantity": 550
-      },
-      {
-        "name": "Moustache Comb",
-        "quantity": 30000
-      },
-      {
-        "name": "Void Bar",
-        "quantity": 400
-      }
-    ]
-  },
-  "175": {
-    "name": "Large Mining Pouch",
-    "materials": [
-      {
-        "name": "Copper Ore",
-        "quantity": 7200
-      },
-      {
-        "name": "Iron Ore",
-        "quantity": 25200
-      },
-      {
-        "name": "Gold Ore",
-        "quantity": 16800
-      },
-      {
-        "name": "Platinum Ore",
-        "quantity": 27000
-      },
-      {
-        "name": "Dementia Ore",
-        "quantity": 35000
-      },
-      {
-        "name": "Void Ore",
-        "quantity": 25000
-      }
-    ]
-  },
-  "176": {
-    "name": "Void Imperium Axe",
-    "materials": [
-      {
-        "name": "Jungle Logs",
-        "quantity": 6000
-      },
-      {
-        "name": "Boring Brick",
-        "quantity": 3000
-      },
-      {
-        "name": "Golden Dubloon",
-        "quantity": 40
-      },
-      {
-        "name": "Crabby Cakey",
-        "quantity": 16000
-      },
-      {
-        "name": "Tropilogs",
-        "quantity": 26000
-      },
-      {
-        "name": "Chain Link",
-        "quantity": 20000
-      },
-      {
-        "name": "Tundra Logs",
-        "quantity": 30000
-      },
-      {
-        "name": "Redox Salts",
-        "quantity": 100
-      },
-      {
-        "name": "Wispy Lumber",
-        "quantity": 50000
-      }
-    ]
-  },
-  "177": {
-    "name": "Large Choppin Pouch",
-    "materials": [
-      {
-        "name": "Oak Logs",
-        "quantity": 9000
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 1800
-      },
-      {
-        "name": "Bleach Logs",
-        "quantity": 28800
-      },
-      {
-        "name": "Forest Fibres",
-        "quantity": 21600
-      },
-      {
-        "name": "Tropilogs",
-        "quantity": 27000
-      },
-      {
-        "name": "Tundra Logs",
-        "quantity": 40000
-      },
-      {
-        "name": "Wispy Lumber",
-        "quantity": 30000
-      }
-    ]
-  },
-  "178": {
-    "name": "Void Imperium Rod",
-    "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 7200
-      },
-      {
-        "name": "Hermit Can",
-        "quantity": 40400
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 72
-      },
-      {
-        "name": "Leather Hide",
         "quantity": 8000
       },
       {
-        "name": "Bloach",
-        "quantity": 28000
+        "name": "Dense Water",
+        "quantity": 7
       },
       {
-        "name": "Platinum Bar",
-        "quantity": 3200
+        "name": "Spriggly Storm",
+        "quantity": 3,
+        "materials": [
+          {
+            "name": "Tundra Logs",
+            "quantity": 30000
+          },
+          {
+            "name": "Redox Salts",
+            "quantity": 450
+          },
+          {
+            "name": "Crows Nest",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Golden Plop",
+                "quantity": 18
+              },
+              {
+                "name": "Fruitfly",
+                "quantity": 24000
+              },
+              {
+                "name": "Starlight",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Chain Link",
+                    "quantity": 12000
+                  },
+                  {
+                    "name": "Distilled Water",
+                    "quantity": 96
+                  },
+                  {
+                    "name": "Quarterstaff",
+                    "quantity": 36,
+                    "materials": [
+                      {
+                        "name": "Slime Sludge",
+                        "quantity": 4500
+                      },
+                      {
+                        "name": "Copper Bar",
+                        "quantity": 3600
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "182": {
+    "name": "Void Imperium Pik",
+    "materials": [
+      {
+        "name": "Void Bar",
+        "quantity": 400
       },
       {
-        "name": "Dementia Bar",
-        "quantity": 600
+        "name": "Dense Water",
+        "quantity": 5
       },
       {
-        "name": "Redox Salts",
-        "quantity": 100
+        "name": "Dementia Pickaxe",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Dementia Bar",
+            "quantity": 550
+          },
+          {
+            "name": "Moustache Comb",
+            "quantity": 30000
+          },
+          {
+            "name": "Platinum Pickaxe",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Platinum Bar",
+                "quantity": 3200
+              },
+              {
+                "name": "Pincer Arm",
+                "quantity": 42000
+              },
+              {
+                "name": "Gold Pickaxe",
+                "quantity": 8,
+                "materials": [
+                  {
+                    "name": "Megalodon Tooth",
+                    "quantity": 20000
+                  },
+                  {
+                    "name": "Gold Bar",
+                    "quantity": 6400
+                  },
+                  {
+                    "name": "Iron Pickaxe",
+                    "quantity": 24,
+                    "materials": [
+                      {
+                        "name": "Iron Bar",
+                        "quantity": 2400
+                      },
+                      {
+                        "name": "Carrot Cube",
+                        "quantity": 4800
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "183": {
+    "name": "Large Mining Pouch",
+    "materials": [
+      {
+        "name": "Void Ore",
+        "quantity": 25000
       },
+      {
+        "name": "Big Mining Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Dementia Ore",
+            "quantity": 35000
+          },
+          {
+            "name": "Sizable Mining Pouch",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Platinum Ore",
+                "quantity": 27000
+              },
+              {
+                "name": "Average Mining Pouch",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Gold Ore",
+                    "quantity": 16800
+                  },
+                  {
+                    "name": "Cramped Mining Pouch",
+                    "quantity": 60,
+                    "materials": [
+                      {
+                        "name": "Copper Ore",
+                        "quantity": 7200
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Small Mining Pouch",
+                    "quantity": 36,
+                    "materials": [
+                      {
+                        "name": "Iron Ore",
+                        "quantity": 25200
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "184": {
+    "name": "Void Imperium Axe",
+    "materials": [
+      {
+        "name": "Wispy Lumber",
+        "quantity": 50000
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 5
+      },
+      {
+        "name": "Dementia Dicer",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Tundra Logs",
+            "quantity": 30000
+          },
+          {
+            "name": "Redox Salts",
+            "quantity": 100
+          },
+          {
+            "name": "Plat Hatchet",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Tropilogs",
+                "quantity": 26000
+              },
+              {
+                "name": "Chain Link",
+                "quantity": 20000
+              },
+              {
+                "name": "Golden Axe",
+                "quantity": 8,
+                "materials": [
+                  {
+                    "name": "Golden Dubloon",
+                    "quantity": 40
+                  },
+                  {
+                    "name": "Crabby Cakey",
+                    "quantity": 16000
+                  },
+                  {
+                    "name": "Iron Hatchet",
+                    "quantity": 24,
+                    "materials": [
+                      {
+                        "name": "Jungle Logs",
+                        "quantity": 6000
+                      },
+                      {
+                        "name": "Boring Brick",
+                        "quantity": 3000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "185": {
+    "name": "Large Choppin Pouch",
+    "materials": [
+      {
+        "name": "Wispy Lumber",
+        "quantity": 30000
+      },
+      {
+        "name": "Big Choppin Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Tundra Logs",
+            "quantity": 40000
+          },
+          {
+            "name": "Sizable Choppin Pouch",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Tropilogs",
+                "quantity": 27000
+              },
+              {
+                "name": "Average Choppin Pouch",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Forest Fibres",
+                    "quantity": 21600
+                  },
+                  {
+                    "name": "Cramped Choppin Pouch",
+                    "quantity": 60,
+                    "materials": [
+                      {
+                        "name": "Oak Logs",
+                        "quantity": 9000
+                      },
+                      {
+                        "name": "Trusty Nails",
+                        "quantity": 1800
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Small Choppin Pouch",
+                    "quantity": 36,
+                    "materials": [
+                      {
+                        "name": "Bleach Logs",
+                        "quantity": 28800
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "186": {
+    "name": "Void Imperium Rod",
+    "materials": [
       {
         "name": "Spontaneity Salts",
         "quantity": 200
@@ -4026,316 +5862,576 @@
       {
         "name": "Minervowl",
         "quantity": 3
-      }
-    ]
-  },
-  "179": {
-    "name": "Large Fish Pouch",
-    "materials": [
-      {
-        "name": "Goldfish",
-        "quantity": 10800
       },
       {
-        "name": "Hermit Can",
-        "quantity": 33300
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 72
-      },
-      {
-        "name": "Bloach",
-        "quantity": 77000
-      },
-      {
-        "name": "Crescent Scropie",
-        "quantity": 8
-      },
-      {
-        "name": "Redox Salts",
-        "quantity": 100
-      }
-    ]
-  },
-  "180": {
-    "name": "Void Imperium Net",
-    "materials": [
-      {
-        "name": "Forest Fibres",
-        "quantity": 19200
-      },
-      {
-        "name": "Butterfly",
-        "quantity": 40400
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 72
-      },
-      {
-        "name": "Golden Dubloon",
-        "quantity": 40
-      },
-      {
-        "name": "Fruitfly",
-        "quantity": 28000
-      },
-      {
-        "name": "Platinum Ore",
-        "quantity": 12000
-      },
-      {
-        "name": "Mosquisnow",
-        "quantity": 30000
-      },
-      {
-        "name": "Redox Salts",
-        "quantity": 100
-      },
-      {
-        "name": "Flycicle",
-        "quantity": 50000
-      }
-    ]
-  },
-  "181": {
-    "name": "Large Bug Pouch",
-    "materials": [
-      {
-        "name": "Fly",
-        "quantity": 10800
-      },
-      {
-        "name": "Butterfly",
-        "quantity": 34500
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 72
-      },
-      {
-        "name": "Fruitfly",
-        "quantity": 27000
-      },
-      {
-        "name": "Mosquisnow",
-        "quantity": 20000
-      },
-      {
-        "name": "Flycicle",
-        "quantity": 35000
-      }
-    ]
-  },
-  "182": {
-    "name": "Steel Traps",
-    "materials": [
-      {
-        "name": "Mutant Crabbo",
-        "quantity": 4
-      },
-      {
-        "name": "Redox Salts",
-        "quantity": 90
-      },
-      {
-        "name": "Nakeo Moleo",
+        "name": "Dense Water",
         "quantity": 5
       },
       {
-        "name": "Eternal Lord of The Undying Ember",
-        "quantity": 6
-      }
-    ]
-  },
-  "183": {
-    "name": "Large Critter Pouch",
-    "materials": [
-      {
-        "name": "Crabbo",
-        "quantity": 4000
-      },
-      {
-        "name": "Redox Salts",
-        "quantity": 60
-      },
-      {
-        "name": "Mousey",
-        "quantity": 20000
-      },
-      {
-        "name": "Pingy",
-        "quantity": 30000
-      }
-    ]
-  },
-  "184": {
-    "name": "Manifested Skull",
-    "materials": [
-      {
-        "name": "Dune Soul",
-        "quantity": 4800
-      },
-      {
-        "name": "Redox Salts",
-        "quantity": 200
-      },
-      {
-        "name": "Rooted Soul",
-        "quantity": 25000
-      },
-      {
-        "name": "Frigid Soul",
-        "quantity": 50000
-      }
-    ]
-  },
-  "185": {
-    "name": "Large Soul Pouch",
-    "materials": [
-      {
-        "name": "Dune Soul",
-        "quantity": 6000
-      },
-      {
-        "name": "Redox Salts",
-        "quantity": 80
-      },
-      {
-        "name": "Rooted Soul",
-        "quantity": 16000
-      },
-      {
-        "name": "Frigid Soul",
-        "quantity": 30000
-      }
-    ]
-  },
-  "186": {
-    "name": "Large Food Pouch",
-    "materials": [
-      {
-        "name": "Crabbo",
-        "quantity": 3000
-      },
-      {
-        "name": "Distilled Water",
-        "quantity": 60
-      },
-      {
-        "name": "Dune Soul",
-        "quantity": 2100
-      },
-      {
-        "name": "Hermit Can",
-        "quantity": 7500
-      },
-      {
-        "name": "Average Strength Potion",
-        "quantity": 3000
-      },
-      {
-        "name": "Butterfly",
-        "quantity": 7500
-      },
-      {
-        "name": "Kebab Sticks",
-        "quantity": 1500
-      },
-      {
-        "name": "Nomwich",
-        "quantity": 2100
-      },
-      {
-        "name": "Hot Dog",
-        "quantity": 700
-      },
-      {
-        "name": "Oak Logs",
-        "quantity": 1680
-      },
-      {
-        "name": "Copper Bar",
-        "quantity": 420
-      },
-      {
-        "name": "Iron Ore",
-        "quantity": 12000
-      },
-      {
-        "name": "Small Mana Potion",
-        "quantity": 4800
-      },
-      {
-        "name": "Jungle Logs",
-        "quantity": 14400
-      },
-      {
-        "name": "Small Life Potion",
-        "quantity": 7200
-      },
-      {
-        "name": "Meat Pie",
-        "quantity": 1000
-      },
-      {
-        "name": "Golden Meat Pie",
-        "quantity": 18
-      },
-      {
-        "name": "Nuget Cake",
-        "quantity": 12
-      },
-      {
-        "name": "Yeti Ham",
-        "quantity": 10000
-      },
-      {
-        "name": "Golden Ham",
-        "quantity": 10
+        "name": "Dementia Rod for Fishing",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Dementia Bar",
+            "quantity": 600
+          },
+          {
+            "name": "Redox Salts",
+            "quantity": 100
+          },
+          {
+            "name": "Plat Fishing Rod",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Bloach",
+                "quantity": 8000
+              },
+              {
+                "name": "Platinum Bar",
+                "quantity": 3200
+              },
+              {
+                "name": "Gold Fishing Rod",
+                "quantity": 8,
+                "materials": [
+                  {
+                    "name": "Hermit Can",
+                    "quantity": 20000
+                  },
+                  {
+                    "name": "Leather Hide",
+                    "quantity": 8000
+                  },
+                  {
+                    "name": "Iron Fishing Rod",
+                    "quantity": 24,
+                    "materials": [
+                      {
+                        "name": "Iron Bar",
+                        "quantity": 7200
+                      },
+                      {
+                        "name": "Hermit Can",
+                        "quantity": 20400
+                      },
+                      {
+                        "name": "Distilled Water",
+                        "quantity": 72
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   "187": {
-    "name": "Large Materials Pouch",
+    "name": "Large Fish Pouch",
     "materials": [
       {
-        "name": "Trusty Nails",
-        "quantity": 4480
+        "name": "Bloach",
+        "quantity": 50000
       },
       {
-        "name": "Frog Leg",
-        "quantity": 2240
+        "name": "Big Fish Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Crescent Scropie",
+            "quantity": 8
+          },
+          {
+            "name": "Redox Salts",
+            "quantity": 100
+          },
+          {
+            "name": "Sizable Fish Pouch",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Bloach",
+                "quantity": 10000
+              },
+              {
+                "name": "Average Fish Pouch",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Hermit Can",
+                    "quantity": 18000
+                  },
+                  {
+                    "name": "Cramped Fish Pouch",
+                    "quantity": 60,
+                    "materials": [
+                      {
+                        "name": "Goldfish",
+                        "quantity": 10800
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Small Fish Pouch",
+                    "quantity": 36,
+                    "materials": [
+                      {
+                        "name": "Hermit Can",
+                        "quantity": 15300
+                      },
+                      {
+                        "name": "Distilled Water",
+                        "quantity": 72
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "188": {
+    "name": "Void Imperium Net",
+    "materials": [
+      {
+        "name": "Flycicle",
+        "quantity": 50000
       },
       {
-        "name": "Bean Slices",
-        "quantity": 1680
+        "name": "Dense Water",
+        "quantity": 5
       },
       {
-        "name": "Glass Shard",
-        "quantity": 8
+        "name": "Dementia Net",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Mosquisnow",
+            "quantity": 30000
+          },
+          {
+            "name": "Redox Salts",
+            "quantity": 100
+          },
+          {
+            "name": "Platinet",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Fruitfly",
+                "quantity": 28000
+              },
+              {
+                "name": "Platinum Ore",
+                "quantity": 12000
+              },
+              {
+                "name": "Gilded Net",
+                "quantity": 8,
+                "materials": [
+                  {
+                    "name": "Golden Dubloon",
+                    "quantity": 40
+                  },
+                  {
+                    "name": "Butterfly",
+                    "quantity": 20000
+                  },
+                  {
+                    "name": "Reinforced Net",
+                    "quantity": 24,
+                    "materials": [
+                      {
+                        "name": "Forest Fibres",
+                        "quantity": 19200
+                      },
+                      {
+                        "name": "Butterfly",
+                        "quantity": 20400
+                      },
+                      {
+                        "name": "Distilled Water",
+                        "quantity": 72
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "189": {
+    "name": "Large Bug Pouch",
+    "materials": [
+      {
+        "name": "Flycicle",
+        "quantity": 35000
       },
       {
-        "name": "Chain Link",
-        "quantity": 10000
+        "name": "Big Bug Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Mosquisnow",
+            "quantity": 20000
+          },
+          {
+            "name": "Sizable Bug Pouch",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Fruitfly",
+                "quantity": 27000
+              },
+              {
+                "name": "Average Bug Pouch",
+                "quantity": 12,
+                "materials": [
+                  {
+                    "name": "Butterfly",
+                    "quantity": 19200
+                  },
+                  {
+                    "name": "Cramped Bug Pouch",
+                    "quantity": 60,
+                    "materials": [
+                      {
+                        "name": "Fly",
+                        "quantity": 10800
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Small Bug Pouch",
+                    "quantity": 36,
+                    "materials": [
+                      {
+                        "name": "Butterfly",
+                        "quantity": 15300
+                      },
+                      {
+                        "name": "Distilled Water",
+                        "quantity": 72
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "190": {
+    "name": "Steel Traps",
+    "materials": [
+      {
+        "name": "Eternal Lord of The Undying Ember",
+        "quantity": 6
       },
       {
-        "name": "Golden Plop",
-        "quantity": 20
+        "name": "Dense Water",
+        "quantity": 5
       },
       {
-        "name": "Woodular Circle",
-        "quantity": 20
-      },
+        "name": "Natural Traps",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Nakeo Moleo",
+            "quantity": 5
+          },
+          {
+            "name": "Redox Salts",
+            "quantity": 50
+          },
+          {
+            "name": "Wooden Traps",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Mutant Crabbo",
+                "quantity": 4
+              },
+              {
+                "name": "Redox Salts",
+                "quantity": 40
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "191": {
+    "name": "Large Critter Pouch",
+    "materials": [
       {
-        "name": "Sticky Stick",
+        "name": "Pingy",
         "quantity": 30000
       },
       {
-        "name": "Ice Age 3",
-        "quantity": 6
+        "name": "Big Critter Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Mousey",
+            "quantity": 20000
+          },
+          {
+            "name": "Sizable Critter Pouch",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Crabbo",
+                "quantity": 4000
+              },
+              {
+                "name": "Redox Salts",
+                "quantity": 60
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "192": {
+    "name": "Manifested Skull",
+    "materials": [
+      {
+        "name": "Frigid Soul",
+        "quantity": 6000
       },
+      {
+        "name": "Dense Water",
+        "quantity": 5
+      },
+      {
+        "name": "Prickle Skull",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Rooted Soul",
+            "quantity": 25000
+          },
+          {
+            "name": "Redox Salts",
+            "quantity": 100
+          },
+          {
+            "name": "Horned Skull",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Dune Soul",
+                "quantity": 4800
+              },
+              {
+                "name": "Redox Salts",
+                "quantity": 100
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "193": {
+    "name": "Large Soul Pouch",
+    "materials": [
+      {
+        "name": "Rooted Soul",
+        "quantity": 30000
+      },
+      {
+        "name": "Big Soul Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Rooted Soul",
+            "quantity": 16000
+          },
+          {
+            "name": "Sizable Soul Pouch",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Dune Soul",
+                "quantity": 6000
+              },
+              {
+                "name": "Redox Salts",
+                "quantity": 80
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "194": {
+    "name": "Large Food Pouch",
+    "materials": [
+      {
+        "name": "Golden Ham",
+        "quantity": 10
+      },
+      {
+        "name": "Critter Numnums",
+        "quantity": 30,
+        "materials": [
+          {
+            "name": "Crabbo",
+            "quantity": 3000
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 30
+          }
+        ]
+      },
+      {
+        "name": "Soulble Gum",
+        "quantity": 30,
+        "materials": [
+          {
+            "name": "Dune Soul",
+            "quantity": 2100
+          },
+          {
+            "name": "Distilled Water",
+            "quantity": 30
+          }
+        ]
+      },
+      {
+        "name": "Big Food Pouch",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Yeti Ham",
+            "quantity": 10000
+          },
+          {
+            "name": "Slurpin Herm",
+            "quantity": 1500,
+            "materials": [
+              {
+                "name": "Hermit Can",
+                "quantity": 7500
+              },
+              {
+                "name": "Average Strength Potion",
+                "quantity": 3000
+              }
+            ]
+          },
+          {
+            "name": "Buttered Toasted Butter",
+            "quantity": 1500,
+            "materials": [
+              {
+                "name": "Butterfly",
+                "quantity": 7500
+              },
+              {
+                "name": "Kebab Sticks",
+                "quantity": 1500
+              }
+            ]
+          },
+          {
+            "name": "Sizable Food Pouch",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Golden Meat Pie",
+                "quantity": 18
+              },
+              {
+                "name": "Nuget Cake",
+                "quantity": 12
+              },
+              {
+                "name": "Average Food Pouch",
+                "quantity": 4,
+                "materials": [
+                  {
+                    "name": "Meat Pie",
+                    "quantity": 1000
+                  },
+                  {
+                    "name": "Cramped Food Pouch",
+                    "quantity": 28,
+                    "materials": [
+                      {
+                        "name": "Nomwich",
+                        "quantity": 2100
+                      },
+                      {
+                        "name": "Hot Dog",
+                        "quantity": 700
+                      },
+                      {
+                        "name": "Oak Logs",
+                        "quantity": 1680
+                      },
+                      {
+                        "name": "Copper Bar",
+                        "quantity": 420
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Icing Ironbite",
+                    "quantity": 2400,
+                    "materials": [
+                      {
+                        "name": "Iron Ore",
+                        "quantity": 12000
+                      },
+                      {
+                        "name": "Small Mana Potion",
+                        "quantity": 4800
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Saucy Logfries",
+                    "quantity": 2400,
+                    "materials": [
+                      {
+                        "name": "Jungle Logs",
+                        "quantity": 14400
+                      },
+                      {
+                        "name": "Small Life Potion",
+                        "quantity": 7200
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "195": {
+    "name": "Large Materials Pouch",
+    "materials": [
       {
         "name": "Audio Cord",
         "quantity": 70000
@@ -4343,10 +6439,70 @@
       {
         "name": "Black Lense",
         "quantity": 3
+      },
+      {
+        "name": "Big Materials Pouch",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Sticky Stick",
+            "quantity": 30000
+          },
+          {
+            "name": "Ice Age 3",
+            "quantity": 6
+          },
+          {
+            "name": "Sizable Materials Pouch",
+            "quantity": 4,
+            "materials": [
+              {
+                "name": "Golden Plop",
+                "quantity": 20
+              },
+              {
+                "name": "Woodular Circle",
+                "quantity": 20
+              },
+              {
+                "name": "Average Material Pouch",
+                "quantity": 8,
+                "materials": [
+                  {
+                    "name": "Glass Shard",
+                    "quantity": 8
+                  },
+                  {
+                    "name": "Chain Link",
+                    "quantity": 10000
+                  },
+                  {
+                    "name": "Cramped Material Pouch",
+                    "quantity": 56,
+                    "materials": [
+                      {
+                        "name": "Trusty Nails",
+                        "quantity": 4480
+                      },
+                      {
+                        "name": "Frog Leg",
+                        "quantity": 2240
+                      },
+                      {
+                        "name": "Bean Slices",
+                        "quantity": 1680
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "188": {
+  "196": {
     "name": "Anvil Tab 4",
     "materials": [
       {
@@ -4367,41 +6523,9 @@
       }
     ]
   },
-  "189": {
+  "197": {
     "name": "Mark of Member",
     "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 2000
-      },
-      {
-        "name": "Goblin Ear",
-        "quantity": 4800
-      },
-      {
-        "name": "Jellyfish",
-        "quantity": 16000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 3000
-      },
-      {
-        "name": "Froge",
-        "quantity": 10000
-      },
-      {
-        "name": "Dementia Bar",
-        "quantity": 600
-      },
-      {
-        "name": "Spontaneity Salts",
-        "quantity": 500
-      },
-      {
-        "name": "Void Bar",
-        "quantity": 1000
-      },
       {
         "name": "Grandma Disguise",
         "quantity": 1
@@ -4409,321 +6533,595 @@
       {
         "name": "Dioxide Synthesis",
         "quantity": 500
+      },
+      {
+        "name": "Void Imperium Helmet",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Spontaneity Salts",
+            "quantity": 500
+          },
+          {
+            "name": "Void Bar",
+            "quantity": 1000
+          },
+          {
+            "name": "Dense Water",
+            "quantity": 5
+          },
+          {
+            "name": "Dementia Helmet",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Froge",
+                "quantity": 10000
+              },
+              {
+                "name": "Dementia Bar",
+                "quantity": 600
+              },
+              {
+                "name": "Platinum Helmet",
+                "quantity": 4,
+                "materials": [
+                  {
+                    "name": "Jellyfish",
+                    "quantity": 9000
+                  },
+                  {
+                    "name": "Platinum Bar",
+                    "quantity": 3000
+                  },
+                  {
+                    "name": "Iron Helmet",
+                    "quantity": 16,
+                    "materials": [
+                      {
+                        "name": "Iron Bar",
+                        "quantity": 2000
+                      },
+                      {
+                        "name": "Goblin Ear",
+                        "quantity": 4800
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "190": {
+  "198": {
     "name": "Murmillo Helm",
     "materials": [
       {
-        "name": "Iron Bar",
-        "quantity": 2000
-      },
-      {
-        "name": "Goblin Ear",
-        "quantity": 4800
-      },
-      {
-        "name": "Jellyfish",
-        "quantity": 16000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 3000
-      },
-      {
-        "name": "Froge",
-        "quantity": 10000
-      },
-      {
-        "name": "Dementia Bar",
-        "quantity": 600
-      },
-      {
-        "name": "Spontaneity Salts",
-        "quantity": 500
-      },
-      {
-        "name": "Void Bar",
-        "quantity": 1000
-      },
-      {
         "name": "Dioxide Synthesis",
         "quantity": 500
+      },
+      {
+        "name": "Void Imperium Helmet",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Spontaneity Salts",
+            "quantity": 500
+          },
+          {
+            "name": "Void Bar",
+            "quantity": 1000
+          },
+          {
+            "name": "Dense Water",
+            "quantity": 5
+          },
+          {
+            "name": "Dementia Helmet",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Froge",
+                "quantity": 10000
+              },
+              {
+                "name": "Dementia Bar",
+                "quantity": 600
+              },
+              {
+                "name": "Platinum Helmet",
+                "quantity": 4,
+                "materials": [
+                  {
+                    "name": "Jellyfish",
+                    "quantity": 9000
+                  },
+                  {
+                    "name": "Platinum Bar",
+                    "quantity": 3000
+                  },
+                  {
+                    "name": "Iron Helmet",
+                    "quantity": 16,
+                    "materials": [
+                      {
+                        "name": "Iron Bar",
+                        "quantity": 2000
+                      },
+                      {
+                        "name": "Goblin Ear",
+                        "quantity": 4800
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "191": {
+  "199": {
     "name": "Conquistador Plume",
     "materials": [
       {
-        "name": "Iron Bar",
-        "quantity": 2000
-      },
-      {
-        "name": "Goblin Ear",
-        "quantity": 4800
-      },
-      {
-        "name": "Jellyfish",
-        "quantity": 16000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 3000
-      },
-      {
-        "name": "Froge",
-        "quantity": 10000
-      },
-      {
-        "name": "Dementia Bar",
-        "quantity": 600
-      },
-      {
-        "name": "Spontaneity Salts",
-        "quantity": 500
-      },
-      {
-        "name": "Void Bar",
-        "quantity": 1000
-      },
-      {
         "name": "Dioxide Synthesis",
         "quantity": 500
+      },
+      {
+        "name": "Void Imperium Helmet",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Spontaneity Salts",
+            "quantity": 500
+          },
+          {
+            "name": "Void Bar",
+            "quantity": 1000
+          },
+          {
+            "name": "Dense Water",
+            "quantity": 5
+          },
+          {
+            "name": "Dementia Helmet",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Froge",
+                "quantity": 10000
+              },
+              {
+                "name": "Dementia Bar",
+                "quantity": 600
+              },
+              {
+                "name": "Platinum Helmet",
+                "quantity": 4,
+                "materials": [
+                  {
+                    "name": "Jellyfish",
+                    "quantity": 9000
+                  },
+                  {
+                    "name": "Platinum Bar",
+                    "quantity": 3000
+                  },
+                  {
+                    "name": "Iron Helmet",
+                    "quantity": 16,
+                    "materials": [
+                      {
+                        "name": "Iron Bar",
+                        "quantity": 2000
+                      },
+                      {
+                        "name": "Goblin Ear",
+                        "quantity": 4800
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "192": {
+  "200": {
     "name": "Adornment of the High Priest",
     "materials": [
       {
-        "name": "Iron Bar",
-        "quantity": 2000
-      },
-      {
-        "name": "Goblin Ear",
-        "quantity": 4800
-      },
-      {
-        "name": "Jellyfish",
-        "quantity": 16000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 3000
-      },
-      {
-        "name": "Froge",
-        "quantity": 10000
-      },
-      {
-        "name": "Dementia Bar",
-        "quantity": 600
-      },
-      {
-        "name": "Spontaneity Salts",
-        "quantity": 500
-      },
-      {
-        "name": "Void Bar",
-        "quantity": 1000
-      },
-      {
         "name": "Dioxide Synthesis",
         "quantity": 500
+      },
+      {
+        "name": "Void Imperium Helmet",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Spontaneity Salts",
+            "quantity": 500
+          },
+          {
+            "name": "Void Bar",
+            "quantity": 1000
+          },
+          {
+            "name": "Dense Water",
+            "quantity": 5
+          },
+          {
+            "name": "Dementia Helmet",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Froge",
+                "quantity": 10000
+              },
+              {
+                "name": "Dementia Bar",
+                "quantity": 600
+              },
+              {
+                "name": "Platinum Helmet",
+                "quantity": 4,
+                "materials": [
+                  {
+                    "name": "Jellyfish",
+                    "quantity": 9000
+                  },
+                  {
+                    "name": "Platinum Bar",
+                    "quantity": 3000
+                  },
+                  {
+                    "name": "Iron Helmet",
+                    "quantity": 16,
+                    "materials": [
+                      {
+                        "name": "Iron Bar",
+                        "quantity": 2000
+                      },
+                      {
+                        "name": "Goblin Ear",
+                        "quantity": 4800
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "193": {
+  "201": {
     "name": "Member Hoodie",
     "materials": [
       {
-        "name": "Copper Bar",
-        "quantity": 600
-      },
-      {
-        "name": "Oak Logs",
-        "quantity": 2250
-      },
-      {
-        "name": "Trusty Nails",
-        "quantity": 600
-      },
-      {
-        "name": "Cue Tape",
-        "quantity": 30000
-      },
-      {
-        "name": "Potty Rolls",
-        "quantity": 12000
-      },
-      {
-        "name": "Melty Cube",
-        "quantity": 140000
-      },
-      {
-        "name": "Iron Bar",
-        "quantity": 3000
-      },
-      {
-        "name": "Jungle Logs",
-        "quantity": 12000
-      },
-      {
-        "name": "Potato Remains",
-        "quantity": 20000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 4000
-      },
-      {
-        "name": "Forest Soul",
-        "quantity": 2000
-      },
-      {
-        "name": "Dementia Bar",
-        "quantity": 700
-      },
-      {
-        "name": "Audio Cord",
-        "quantity": 75000
-      },
-      {
-        "name": "Void Bar",
-        "quantity": 500
-      },
-      {
         "name": "Dioxide Synthesis",
         "quantity": 500
+      },
+      {
+        "name": "Uninflated Glove",
+        "quantity": 2,
+        "materials": [
+          {
+            "name": "Melty Cube",
+            "quantity": 140000
+          },
+          {
+            "name": "Bandage Wraps",
+            "quantity": 6,
+            "materials": [
+              {
+                "name": "Cue Tape",
+                "quantity": 30000
+              },
+              {
+                "name": "Potty Rolls",
+                "quantity": 12000
+              },
+              {
+                "name": "The Stingers",
+                "quantity": 30,
+                "materials": [
+                  {
+                    "name": "Copper Bar",
+                    "quantity": 600
+                  },
+                  {
+                    "name": "Oak Logs",
+                    "quantity": 2250
+                  },
+                  {
+                    "name": "Trusty Nails",
+                    "quantity": 600
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Void Imperium Platebody",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Audio Cord",
+            "quantity": 75000
+          },
+          {
+            "name": "Void Bar",
+            "quantity": 500
+          },
+          {
+            "name": "Dense Water",
+            "quantity": 4
+          },
+          {
+            "name": "Dementia Body",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Forest Soul",
+                "quantity": 2000
+              },
+              {
+                "name": "Dementia Bar",
+                "quantity": 700
+              },
+              {
+                "name": "Platinum Platbody",
+                "quantity": 4,
+                "materials": [
+                  {
+                    "name": "Potato Remains",
+                    "quantity": 20000
+                  },
+                  {
+                    "name": "Platinum Bar",
+                    "quantity": 4000
+                  },
+                  {
+                    "name": "Iron Platebody",
+                    "quantity": 20,
+                    "materials": [
+                      {
+                        "name": "Iron Bar",
+                        "quantity": 3000
+                      },
+                      {
+                        "name": "Jungle Logs",
+                        "quantity": 12000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "194": {
+  "202": {
     "name": "Damascus Plates",
     "materials": [
       {
-        "name": "Iron Bar",
-        "quantity": 3000
-      },
-      {
-        "name": "Jungle Logs",
-        "quantity": 12000
-      },
-      {
-        "name": "Potato Remains",
-        "quantity": 20000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 4000
-      },
-      {
-        "name": "Forest Soul",
-        "quantity": 2000
-      },
-      {
-        "name": "Dementia Bar",
-        "quantity": 700
-      },
-      {
-        "name": "Audio Cord",
-        "quantity": 75000
-      },
-      {
-        "name": "Void Bar",
-        "quantity": 500
-      },
-      {
         "name": "Dioxide Synthesis",
         "quantity": 500
+      },
+      {
+        "name": "Void Imperium Platebody",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Audio Cord",
+            "quantity": 75000
+          },
+          {
+            "name": "Void Bar",
+            "quantity": 500
+          },
+          {
+            "name": "Dense Water",
+            "quantity": 4
+          },
+          {
+            "name": "Dementia Body",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Forest Soul",
+                "quantity": 2000
+              },
+              {
+                "name": "Dementia Bar",
+                "quantity": 700
+              },
+              {
+                "name": "Platinum Platbody",
+                "quantity": 4,
+                "materials": [
+                  {
+                    "name": "Potato Remains",
+                    "quantity": 20000
+                  },
+                  {
+                    "name": "Platinum Bar",
+                    "quantity": 4000
+                  },
+                  {
+                    "name": "Iron Platebody",
+                    "quantity": 20,
+                    "materials": [
+                      {
+                        "name": "Iron Bar",
+                        "quantity": 3000
+                      },
+                      {
+                        "name": "Jungle Logs",
+                        "quantity": 12000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "195": {
+  "203": {
     "name": "Evergreen Wraps",
     "materials": [
       {
-        "name": "Iron Bar",
-        "quantity": 3000
-      },
-      {
-        "name": "Jungle Logs",
-        "quantity": 12000
-      },
-      {
-        "name": "Potato Remains",
-        "quantity": 20000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 4000
-      },
-      {
-        "name": "Forest Soul",
-        "quantity": 2000
-      },
-      {
-        "name": "Dementia Bar",
-        "quantity": 700
-      },
-      {
-        "name": "Audio Cord",
-        "quantity": 75000
-      },
-      {
-        "name": "Void Bar",
-        "quantity": 500
-      },
-      {
         "name": "Dioxide Synthesis",
         "quantity": 500
+      },
+      {
+        "name": "Void Imperium Platebody",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Audio Cord",
+            "quantity": 75000
+          },
+          {
+            "name": "Void Bar",
+            "quantity": 500
+          },
+          {
+            "name": "Dense Water",
+            "quantity": 4
+          },
+          {
+            "name": "Dementia Body",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Forest Soul",
+                "quantity": 2000
+              },
+              {
+                "name": "Dementia Bar",
+                "quantity": 700
+              },
+              {
+                "name": "Platinum Platbody",
+                "quantity": 4,
+                "materials": [
+                  {
+                    "name": "Potato Remains",
+                    "quantity": 20000
+                  },
+                  {
+                    "name": "Platinum Bar",
+                    "quantity": 4000
+                  },
+                  {
+                    "name": "Iron Platebody",
+                    "quantity": 20,
+                    "materials": [
+                      {
+                        "name": "Iron Bar",
+                        "quantity": 3000
+                      },
+                      {
+                        "name": "Jungle Logs",
+                        "quantity": 12000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "196": {
+  "204": {
     "name": "Elegantine Robes",
     "materials": [
       {
-        "name": "Iron Bar",
-        "quantity": 3000
-      },
-      {
-        "name": "Jungle Logs",
-        "quantity": 12000
-      },
-      {
-        "name": "Potato Remains",
-        "quantity": 20000
-      },
-      {
-        "name": "Platinum Bar",
-        "quantity": 4000
-      },
-      {
-        "name": "Forest Soul",
-        "quantity": 2000
-      },
-      {
-        "name": "Dementia Bar",
-        "quantity": 700
-      },
-      {
-        "name": "Audio Cord",
-        "quantity": 75000
-      },
-      {
-        "name": "Void Bar",
-        "quantity": 500
-      },
-      {
         "name": "Dioxide Synthesis",
         "quantity": 500
+      },
+      {
+        "name": "Void Imperium Platebody",
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Audio Cord",
+            "quantity": 75000
+          },
+          {
+            "name": "Void Bar",
+            "quantity": 500
+          },
+          {
+            "name": "Dense Water",
+            "quantity": 4
+          },
+          {
+            "name": "Dementia Body",
+            "quantity": 2,
+            "materials": [
+              {
+                "name": "Forest Soul",
+                "quantity": 2000
+              },
+              {
+                "name": "Dementia Bar",
+                "quantity": 700
+              },
+              {
+                "name": "Platinum Platbody",
+                "quantity": 4,
+                "materials": [
+                  {
+                    "name": "Potato Remains",
+                    "quantity": 20000
+                  },
+                  {
+                    "name": "Platinum Bar",
+                    "quantity": 4000
+                  },
+                  {
+                    "name": "Iron Platebody",
+                    "quantity": 20,
+                    "materials": [
+                      {
+                        "name": "Iron Bar",
+                        "quantity": 3000
+                      },
+                      {
+                        "name": "Jungle Logs",
+                        "quantity": 12000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "197": {
+  "205": {
     "name": "Critter Numnums",
     "materials": [
       {
@@ -4736,7 +7134,7 @@
       }
     ]
   },
-  "198": {
+  "206": {
     "name": "Soulble Gum",
     "materials": [
       {
@@ -4749,7 +7147,7 @@
       }
     ]
   },
-  "199": {
+  "207": {
     "name": "Shivering Sack",
     "materials": [
       {
@@ -4757,8 +7155,12 @@
         "quantity": 1
       },
       {
-        "name": "Copper Ore",
-        "quantity": 22
+        "name": "Melty Cube",
+        "quantity": 2000
+      },
+      {
+        "name": "Yellow Snowflake",
+        "quantity": 3
       }
     ]
   }

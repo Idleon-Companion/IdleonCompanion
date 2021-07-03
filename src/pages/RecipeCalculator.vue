@@ -38,32 +38,30 @@
     <div class="col-auto text-light">
       <div id="version-group" class="p-2">
         <h3>Last Updated</h3>
-        <p>v1.20b</p>
-        <p>June 4, 2021</p>
+        <p>v1.22</p>
+        <p>June 28, 2021</p>
       </div>
     </div>
   </div>
   <!-- Display Materials -->
   <div v-if="recipe && quantity" class="text-light">
     <h4>Materials</h4>
-    <div
-      class="row"
-      v-for="(material, index) in materials.materials"
-      :key="`material-${index}`"
-    >
-      <div class="border-top border-bottom col-sm-2">
-        {{ material.quantity * parseInt(quantity) }}
-      </div>
-      <div class="border-top border-bottom col-sm-10">
-        {{ material.name }}
-      </div>
-    </div>
+    <recipe-tree
+      :label="materials.name"
+      :nodes="materials.materials"
+      :quantity="1"
+      :depth="0"
+      :toCraft="Number(quantity)"
+    />
   </div>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
 import calculatorData from "~/data/recipeCalculator.json";
+import GameAsset from "~/components/GameAsset.vue";
+import RecipeTree from "~/components/RecipeTree.vue";
+import { Assets } from "~/composables/Utilities";
 
 type MaterialObject = {
   name: string;
@@ -77,6 +75,10 @@ type RecipeObject = {
 
 export default defineComponent({
   name: "RecipeCalculator",
+  components: {
+    GameAsset,
+    RecipeTree
+  },
   setup() {
     const data: Record<string, RecipeObject> = calculatorData;
     const recipe = ref("");
@@ -89,7 +91,7 @@ export default defineComponent({
         return data[recipe.value];
       }
     );
-    return { data, recipe, quantity, materials };
+    return { Assets, data, recipe, quantity, materials };
   },
 });
 </script>
@@ -100,4 +102,9 @@ export default defineComponent({
 #version-group
   border: 2px solid $primary
   border-radius: 0.25rem
+.recipe-quantity
+  text-align: right
+	
+.padded-start
+  white-space: pre
 </style>
