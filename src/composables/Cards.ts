@@ -531,7 +531,7 @@ export const Cards: Card[] = [
     source: "1/20",
   },
   {
-    id: "BloodBone",
+    id: "Bloodbone",
     category: CardCategory.FrostbiteTundra,
     effect: Effects.TotalDamage,
     base: 3,
