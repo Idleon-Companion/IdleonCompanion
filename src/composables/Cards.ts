@@ -19,7 +19,7 @@ export type Card = {
   source?: string;
 };
 
-export const Cards: Card[] = [
+const BlunderHillCards: Card[] = [
   {
     id: "Green_Mushroom",
     category: CardCategory.BlunderHills,
@@ -132,6 +132,9 @@ export const Cards: Card[] = [
     base: 5,
     source: "Wood Mushroom (1/10,000)",
   },
+]
+
+const YumYumDesertCards: Card[] = [
   {
     id: "Sandy_Pot",
     category: CardCategory.YumYumDesert,
@@ -230,6 +233,9 @@ export const Cards: Card[] = [
     base: 1,
     source: "Survive Bandit Bob",
   },
+];
+
+const EasyResourcesCards: Card[] = [
   {
     id: "Copper_Ore",
     category: CardCategory.EasyResources,
@@ -321,6 +327,9 @@ export const Cards: Card[] = [
     base: 5,
     source: "Catching Butterflies",
   },
+];
+
+const MediumResourcesCards: Card[] = [
   {
     id: "Platinum_Ore",
     category: CardCategory.MediumResources,
@@ -426,6 +435,9 @@ export const Cards: Card[] = [
     base: 5,
     source: "Trapping Scorpies",
   },
+];
+
+const HardResourcesCards: Card[] = [
   {
     id: "Lustre_Ore",
     category: CardCategory.HardResources,
@@ -510,6 +522,9 @@ export const Cards: Card[] = [
     base: 2.5,
     source: "Catching Flycicle",
   },
+];
+
+const FrostbiteTundraCards: Card[] = [
   {
     id: "Sheepie",
     category: CardCategory.FrostbiteTundra,
@@ -622,6 +637,9 @@ export const Cards: Card[] = [
     base: 3,
     source: "",
   },
+];
+
+const BossesCards: Card[] = [
   {
     id: "Baba_Yaga",
     category: CardCategory.Bosses,
@@ -699,6 +717,9 @@ export const Cards: Card[] = [
     base: 5,
     source: "",
   },
+];
+
+const EventsCards: Card[] = [
   {
     id: "Ghost",
     category: CardCategory.Events,
@@ -769,4 +790,15 @@ export const Cards: Card[] = [
     base: 1,
     source: "Egg Capsule",
   },
+];
+
+export const Cards: Card[] = [
+  ...BlunderHillCards,
+  ...YumYumDesertCards,
+  ...EasyResourcesCards,
+  ...MediumResourcesCards,
+  ...HardResourcesCards,
+  ...FrostbiteTundraCards,
+  ...BossesCards,
+  ...EventsCards,
 ];

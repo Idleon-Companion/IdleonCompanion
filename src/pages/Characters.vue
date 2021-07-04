@@ -212,7 +212,7 @@ import {
 } from "~/composables/Characters";
 import { Statues } from "~/composables/Statues";
 import { Assets, Text } from "~/composables/Utilities";
-import checklistData from "~/data/checklist.json";
+import { checklistData } from "~/composables/Checklist";
 import StatuesSection from "~/pages/Statues.vue";
 import { useAuth } from "~/State";
 

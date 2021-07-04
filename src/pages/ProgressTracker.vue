@@ -70,7 +70,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-import checklistData from "~/data/checklist.json";
+import { checklistData } from "~/composables/Checklist";
 
 import GameAsset from "~/components/GameAsset.vue";
 import { Card, CardCategory, Cards } from "~/composables/Cards";

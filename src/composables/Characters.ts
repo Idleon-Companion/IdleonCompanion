@@ -1,6 +1,6 @@
 import { computed, ref } from "vue";
 import { useState } from "~/State";
-import checklistData from "~/data/checklist.json";
+import { checklistData } from "~/composables/Checklist";
 
 export enum Class {
   Beginner = "Beginner",
