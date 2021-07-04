@@ -94,12 +94,12 @@ const InventoryBags: StorageItem[] = [
   {
     name: "Capitalist Case",
     bagSlots: 1,
-    source: "Vendor (Encroaching Forest Villa)",
+    source: "Vendor (Encroaching Forest Villas)",
   },
   {
     name: "Wealthy Wallet",
     bagSlots: 1,
-    source: "Vendor (Yum Yum Grotto)",
+    source: "Vendor (YumYum Grotto)",
   },
   {
     name: "Prosperous Pouch",
@@ -346,54 +346,67 @@ const StorageChests: StorageItem[] = [
   {
     name: "Storage Chest 1",
     bagSlots: 3,
+    source: "Quest (Hamish)",
   },
   {
     name: "Storage Chest 2",
     bagSlots: 3,
+    source: "Vendor (Blunder Hills)",
   },
   {
     name: "Storage Chest 3",
     bagSlots: 3,
+    source: "Quest (Krunk)",
   },
   {
     name: "Storage Chest 4",
     bagSlots: 3,
+    source: "Quest (Cowbo Jones)",
   },
   {
     name: "Storage Chest 5",
     bagSlots: 3,
+    source: "Quest (Mutton)",
   },
   {
     name: "Storage Chest 6",
     bagSlots: 4,
+    source: "Vendor (Blunder Hills)",
   },
   {
     name: "Storage Chest 7",
     bagSlots: 4,
+    source: "Vendor (Blunder Hills)",
   },
   {
     name: "Storage Chest 8",
     bagSlots: 4,
+    source: "Vendor (Encroaching Forest Villas)",
   },
   {
     name: "Storage Chest 9",
     bagSlots: 4,
+    source: "Vendor (YumYum Grotto)",
   },
   {
     name: "Storage Chest 10",
     bagSlots: 5,
+    source: "Vendor (YumYum Grotto)",
   },
   {
     name: "Storage Chest 11",
     bagSlots: 5,
+    source: "Quest (Snake Jar)",
   },
   {
     name: "Storage Chest 12",
     bagSlots: 5,
+    source: "Vendor (Encroaching Forest Villas)",
   },
   {
     name: "Storage Chest 13",
     bagSlots: 5,
+    source: "Vendor (YumYum Grotto)",
   },
   {
     name: "Storage Chest 14",
@@ -402,82 +415,102 @@ const StorageChests: StorageItem[] = [
   {
     name: "Storage Chest 15",
     bagSlots: 6,
+    source: "Vendor (YumYum Grotto)",
   },
   {
     name: "Storage Chest 16",
     bagSlots: 6,
+    source: "Vendor (Frostbite Towndra)",
   },
   {
     name: "Storage Chest 17",
     bagSlots: 6,
+    source: "Vendor (Frostbite Towndra)",
   },
   {
     name: "Storage Chest 18",
     bagSlots: 6,
+    source: "Vendor (Frostbite Towndra)",
   },
   {
     name: "Storage Chest 19",
     bagSlots: 6,
+    source: "Vendor (Frostbite Towndra)",
   },
   {
     name: "Storage Chest 20",
     bagSlots: 7,
+    source: "Vendor (Frostbite Towndra)",
   },
   {
     name: "Storage Chest 21",
     bagSlots: 7,
+    source: "Vendor (Frostbite Towndra)",
   },
   {
     name: "Storage Chest 90",
     bagSlots: 6,
+    source: "Gem Shop",
   },
   {
     name: "Storage Chest 91",
     bagSlots: 6,
+    source: "Gem Shop",
   },
   {
     name: "Storage Chest 92",
     bagSlots: 6,
+    source: "Gem Shop",
   },
   {
     name: "Storage Chest 93",
     bagSlots: 6,
+    source: "Gem Shop",
   },
   {
     name: "Storage Chest 94",
     bagSlots: 6,
+    source: "Gem Shop",
   },
   {
     name: "Storage Chest 95",
     bagSlots: 6,
+    source: "Gem Shop",
   },
   {
     name: "Storage Chest 96",
     bagSlots: 6,
+    source: "Gem Shop",
   },
   {
     name: "Storage Chest 97",
     bagSlots: 6,
+    source: "Gem Shop",
   },
   {
     name: "Storage Chest 98",
     bagSlots: 6,
+    source: "Gem Shop",
   },
   {
     name: "Storage Chest 99",
     bagSlots: 6,
+    source: "Gem Shop",
   },
   {
     name: "Storage Chest 99B",
     bagSlots: 6,
+    source: "Gem Shop",
   },
   {
     name: "Storage Chest 99C",
     bagSlots: 6,
+    source: "Gem Shop",
   },
   {
     name: "Dank Paypay Chest",
     bagSlots: 6,
+    source: "Frog"
   },
 ]
 
