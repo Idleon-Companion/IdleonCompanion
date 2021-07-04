@@ -760,33 +760,41 @@ const SkillStamps: ChecklistItem[] = [
 const MiscStamps: ChecklistItem[] = [
   {
     name: "Questin Stamp",
+    source: "Quest (Tiki Chief)",
   },
   {
     name: "Mason Jar Stamp",
+    source: "Quest (XxX Cattleprod XxX)",
   },
   {
     name: "Crystallin Stamp",
+    source: "Drop (Crystal Monsters)",
   },
   {
     name: "Apple Stamp",
   },
   {
     name: "Potion Stamp",
+    source: "Quest (Papua Piggea)",
   },
   {
     name: "Golden Apple Stamp",
+    source: "Quest (Mutton)",
   },
   {
     name: "Card Stamp",
+    source: "Alchemy (Level Up Gift)",
   },
   {
     name: "Talent I Stamp",
   },
   {
     name: "Talent II Stamp",
+    source: "Quest (Wellington)",
   },
   {
     name: "Talent III Stamp",
+    source: "Quest (Snouts)",
   },
   {
     name: "Talent IV Stamp",
@@ -799,9 +807,11 @@ const MiscStamps: ChecklistItem[] = [
   },
   {
     name: "Multikill Stamp",
+    source: "DropTable15",
   },
   {
     name: "Biblio Stamp",
+    source: "Quest (Snouts)",
   },
 ]
 
