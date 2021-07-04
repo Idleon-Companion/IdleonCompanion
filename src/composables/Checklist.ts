@@ -516,88 +516,114 @@ const StorageChests: StorageItem[] = [
   {
     name: "Dank Paypay Chest",
     bagSlots: 6,
-    source: "Drop (Frog)"
+    source: "Drop (Frog)",
   },
 ]
 
 const CombatStamps: ChecklistItem[] = [
   {
     name: "Sword Stamp",
+    source: "Start",
   },
   {
     name: "Heart Stamp",
+    source: "Start",
   },
   {
     name: "Mana Stamp",
+    source: "Vendor (Blunder Hills)",
   },
   {
     name: "Tomahawk Stamp",
+    source: "Quest (Hamish)",
   },
   {
     name: "Target Stamp",
+    source: "Vendor (Blunder Hills)",
   },
   {
     name: "Shield Stamp",
+    source: "Vendor (Blunder Hills)",
   },
   {
     name: "Longsword Stamp",
+    source: "Drop (Baby Boa)",
   },
   {
     name: "Kapow Stamp",
+    source: "Drop (Gigafrog)",
   },
   {
     name: "Fist Stamp",
+    source: "Quest (Mutton)",
   },
   {
     name: "Battleaxe Stamp",
+    source: "Drop (Gigafrog)",
   },
   {
     name: "Agile Stamp",
+    source: "DropTable12",
   },
   {
     name: "Vitality Stamp",
+    source: "Vendor (Encroaching Forest Villas)"
   },
   {
     name: "Book Stamp",
+    source: "DropTable10",
   },
   {
     name: "Manamoar Stamp",
+    source: "Quest (Mutton)",
   },
   {
     name: "Clover Stamp",
+    source: "Vendor (Faraway Piers)",
   },
   {
     name: "Scimitar Stamp",
+    source: "Quest (Mutton)",
   },
   {
     name: "Bullseye Stamp",
+    source: "Quest (Mutton)",
   },
   {
     name: "Feather Stamp",
+    source: "Quest (Snouts)",
   },
   {
     name: "Polearm Stamp",
+    source: "Quest (Papua Piggea)",
   },
   {
     name: "Violence Stamp",
+    source: "DropTable15",
   },
   {
     name: "Buckler Stamp",
+    source: "Quest (Snouts)",
   },
   {
     name: "Sukka Foo Stamp",
+    source: "Alchemy (Level Up Gift)",
   },
   {
     name: "Arcane Stamp",
+    source: "Quest (Wellington)",
   },
   {
     name: "Steve Sword Stamp",
+    source: "Quest (Mutton)",
   },
   {
     name: "Blover Stamp",
+    source: "DropTable16",
   },
   {
     name: "Stat Graph Stamp",
+    source: "Quest (XxX Cattleprod XxX)",
   },
 ]
 
