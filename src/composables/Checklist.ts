@@ -1,17 +1,6 @@
-type ChecklistItem = {
-  name: string;
-  source?: string;
-}
+import { Item, ItemGroup } from "./Utilities";
 
-type StorageItem = ChecklistItem & {
-  bagSlots: number;
-}
-
-type CapacityPouchesItem = ChecklistItem & {
-  cycle: string;
-}
-
-const InventoryBags: StorageItem[] = [
+const InventoryBags: Item[] = [
   {
     name: "Inventory Bag A",
     bagSlots: 1,
@@ -112,7 +101,7 @@ const InventoryBags: StorageItem[] = [
   },
 ]
 
-const GemShopBags: StorageItem[] = [
+const GemShopBags: Item[] = [
   {
     name: "Inventory Bag U",
     bagSlots: 4,
@@ -145,7 +134,7 @@ const GemShopBags: StorageItem[] = [
   },
 ]
 
-const CapacityPouches: CapacityPouchesItem[] = [
+const CapacityPouches: Item[] = [
   {
     name: "Mini Materials Pouch",
     cycle: "Materials Pouch",
@@ -348,7 +337,7 @@ const CapacityPouches: CapacityPouchesItem[] = [
   },
 ]
 
-const StorageChests: StorageItem[] = [
+const StorageChests: Item[] = [
   {
     name: "Storage Chest 1",
     bagSlots: 3,
@@ -520,7 +509,7 @@ const StorageChests: StorageItem[] = [
   },
 ]
 
-const CombatStamps: ChecklistItem[] = [
+const CombatStamps: Item[] = [
   {
     name: "Sword Stamp",
     source: "Start",
@@ -627,7 +616,7 @@ const CombatStamps: ChecklistItem[] = [
   },
 ]
 
-const SkillStamps: ChecklistItem[] = [
+const SkillStamps: Item[] = [
   {
     name: "Pickaxe Stamp",
     source: "Start",
@@ -757,7 +746,7 @@ const SkillStamps: ChecklistItem[] = [
   },
 ]
 
-const MiscStamps: ChecklistItem[] = [
+const MiscStamps: Item[] = [
   {
     name: "Questin Stamp",
     source: "Quest (Tiki Chief)",
@@ -815,7 +804,7 @@ const MiscStamps: ChecklistItem[] = [
   },
 ]
 
-export const checklistData = {
+export const checklistData: Record<string, ItemGroup> = {
   "Inventory Bags": {
     global: false,
     assetDir: "checklist",

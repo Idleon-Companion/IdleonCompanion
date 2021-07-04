@@ -211,7 +211,7 @@ import {
   useCharacters,
 } from "~/composables/Characters";
 import { Statues } from "~/composables/Statues";
-import { Assets, Text } from "~/composables/Utilities";
+import { Assets, Text, ItemGroup } from "~/composables/Utilities";
 import { checklistData } from "~/composables/Checklist";
 import StatuesSection from "~/pages/Statues.vue";
 import { useAuth } from "~/State";
@@ -261,7 +261,7 @@ export default defineComponent({
       .reduce((obj, [key, value]) => {
         obj[key] = value;
         return obj;
-      }, {} as Record<string, any>);
+      }, {} as Record<string, ItemGroup>);
 
     type CycleData = Record<string, string[]>;
     var cycles: CycleData = {};

@@ -82,7 +82,7 @@ export class Character {
     for (const category of ["Inventory Bags"] as const) {
       for (const item of checklistData[category].items) {
         if (this.hasItem(item.name)) {
-          slots += item.bagSlots;
+          slots += item.bagSlots ?? 0;
         }
       }
     }
@@ -90,7 +90,7 @@ export class Character {
     for (const category of ["Gem Shop Bags"] as const) {
       for (const item of checklistData[category].items) {
         if (checklist[item.name] === true) {
-          slots += item.bagSlots;
+          slots += item.bagSlots ?? 0;
         }
       }
     }

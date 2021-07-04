@@ -87,6 +87,7 @@ export type Item = {
   name: string;
   bagSlots?: number;
   cycle?: string;
+  source?: string;
 };
 
 export type ItemGroup = {
