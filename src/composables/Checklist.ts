@@ -1,48 +1,56 @@
 type ChecklistItem = {
-  name: string
-  source?: string
+  name: string;
+  source?: string;
 }
 
 type StorageItem = ChecklistItem & {
-  bagSlots: number
+  bagSlots: number;
 }
 
 type CapacityPouchesItem = ChecklistItem & {
-  cycle: string
+  cycle: string;
 }
 
 const InventoryBags: StorageItem[] = [
   {
     name: "Inventory Bag A",
     bagSlots: 1,
+    source: "Quest (Scripticus)",
   },
   {
     name: "Inventory Bag B",
     bagSlots: 1,
+    source: "Quest (Scripticus)",
   },
   {
     name: "Inventory Bag C",
     bagSlots: 1,
+    source: "Quest (Scripticus)",
   },
   {
     name: "Inventory Bag D",
     bagSlots: 2,
+    source: "Quest (Promotheus)",
   },
   {
     name: "Inventory Bag E",
     bagSlots: 2,
+    source: "Quest (Cowbo Jones)",
   },
   {
     name: "Inventory Bag F",
     bagSlots: 2,
+    source: "Quest (Cowbo Jones)",
   },
   {
     name: "Inventory Bag G",
     bagSlots: 2,
+    source: "DropTable6",
   },
   {
     name: "Inventory Bag H",
     bagSlots: 2,
+    source: "Quest (Cowbo Jones)",
   },
   {
     name: "Inventory Bag I",
@@ -51,42 +59,52 @@ const InventoryBags: StorageItem[] = [
   {
     name: "Snakeskinventory Bag",
     bagSlots: 2,
+    source: "Baby Boa",
   },
   {
     name: "Totally Normal And Not Fake Bag",
     bagSlots: 2,
+    source: "Mimic",
   },
   {
     name: "Mamooth Hide Bag",
     bagSlots: 1,
+    source: "Mamooth",
   },
   {
     name: "Blunderbag",
     bagSlots: 4,
+    source: "Smithing",
   },
   {
     name: "Sandy Satchel",
     bagSlots: 4,
+    source: "Smithing",
   },
   {
     name: "Shivering Sack",
     bagSlots: 3,
+    source: "Smithing",
   },
   {
     name: "Bummo Bag",
     bagSlots: 1,
+    source: "Vendor (Blunder Hills)",
   },
   {
     name: "Capitalist Case",
     bagSlots: 1,
+    source: "Vendor (Encroaching Forest Villa)",
   },
   {
     name: "Wealthy Wallet",
     bagSlots: 1,
+    source: "Vendor (Yum Yum Grotto)",
   },
   {
     name: "Prosperous Pouch",
     bagSlots: 1,
+    source: "Vendor (Frostbite Towndra)",
   },
   {
     name: "Sack of Success",
@@ -321,7 +339,7 @@ const CapacityPouches: CapacityPouchesItem[] = [
   {
     name: "Large Soul Pouch",
     cycle: "Soul Pouch",
-  }
+  },
 ]
 
 const StorageChests: StorageItem[] = [
@@ -461,7 +479,7 @@ const StorageChests: StorageItem[] = [
     name: "Dank Paypay Chest",
     bagSlots: 6,
   },
-];
+]
 
 const CombatStamps: ChecklistItem[] = [
   {
@@ -542,7 +560,7 @@ const CombatStamps: ChecklistItem[] = [
   {
     name: "Stat Graph Stamp",
   },
-];
+]
 
 const SkillStamps: ChecklistItem[] = [
   {
@@ -641,7 +659,7 @@ const SkillStamps: ChecklistItem[] = [
   {
     name: "Banked Pts Stamp",
   },
-];
+]
 
 const MiscStamps: ChecklistItem[] = [
   {
@@ -689,7 +707,7 @@ const MiscStamps: ChecklistItem[] = [
   {
     name: "Biblio Stamp",
   },
-];
+]
 
 export const checklistData = {
   "Inventory Bags": {
