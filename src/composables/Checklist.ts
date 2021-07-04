@@ -134,63 +134,83 @@ const GemShopBags: Item[] = [
   },
 ]
 
-const CapacityPouches: Item[] = [
+const MaterialPouches: Item[] = [
   {
     name: "Mini Materials Pouch",
     cycle: "Materials Pouch",
+    source: "Quest (Scripticus)",
   },
   {
     name: "Cramped Materials Pouch",
     cycle: "Materials Pouch",
+    source: "Smithing",
   },
   {
     name: "Small Materials Pouch",
     cycle: "Materials Pouch",
+    source: "Quest (Scripticus)",
   },
   {
     name: "Average Materials Pouch",
     cycle: "Materials Pouch",
+    source: "Smithing",
   },
   {
     name: "Sizable Materials Pouch",
     cycle: "Materials Pouch",
+    source: "Smithing",
   },
   {
     name: "Big Materials Pouch",
     cycle: "Materials Pouch",
+    source: "Smithing",
   },
   {
     name: "Large Materials Pouch",
     cycle: "Materials Pouch",
+    source: "Smithing",
   },
+]
+
+const MiningPouches: Item[] = [
   {
     name: "Miniature Mining Pouch",
     cycle: "Mining Pouch",
+    source: "Quest (Glumlee)",
   },
   {
     name: "Cramped Mining Pouch",
     cycle: "Mining Pouch",
+    source: "Smithing",
   },
   {
     name: "Small Mining Pouch",
     cycle: "Mining Pouch",
+    source: "Smithing",
   },
   {
     name: "Average Mining Pouch",
     cycle: "Mining Pouch",
+    source: "Smithing",
   },
   {
     name: "Sizable Mining Pouch",
     cycle: "Mining Pouch",
+    source: "Smithing",
   },
   {
     name: "Big Mining Pouch",
     cycle: "Mining Pouch",
+    source: "Smithing",
   },
   {
     name: "Large Mining Pouch",
     cycle: "Mining Pouch",
+    source: "Smithing",
   },
+];
+
+const FishingPouches: Item[] = [
   {
     name: "Miniature Fish Pouch",
     cycle: "Fishing Pouch",
@@ -198,83 +218,112 @@ const CapacityPouches: Item[] = [
   {
     name: "Cramped Fish Pouch",
     cycle: "Fishing Pouch",
+    source: "Smithing",
   },
   {
     name: "Small Fish Pouch",
     cycle: "Fishing Pouch",
+    source: "Smithing",
   },
   {
     name: "Average Fish Pouch",
     cycle: "Fishing Pouch",
+    source: "Smithing",
   },
   {
     name: "Sizable Fish Pouch",
     cycle: "Fishing Pouch",
+    source: "Smithing",
   },
   {
     name: "Big Fish Pouch",
     cycle: "Fishing Pouch",
+    source: "Smithing",
   },
   {
     name: "Large Fish Pouch",
     cycle: "Fishing Pouch",
+    source: "Smithing",
   },
+]
+
+const FoodPouches: Item[] = [
   {
     name: "Miniscule Food Pouch",
     cycle: "Food Pouch",
+    source: "Quest (Picnic Stowaway",
   },
   {
     name: "Cramped Food Pouch",
     cycle: "Food Pouch",
+    source: "Smithing",
   },
   {
     name: "Small Food Pouch",
     cycle: "Food Pouch",
+    source: "Quest (Funguy)",
   },
   {
     name: "Average Food Pouch",
     cycle: "Food Pouch",
+    source: "Smithing",
   },
   {
     name: "Sizable Food Pouch",
     cycle: "Food Pouch",
+    source: "Smithing",
   },
   {
     name: "Big Food Pouch",
     cycle: "Food Pouch",
+    source: "Smithing",
   },
   {
     name: "Large Food Pouch",
     cycle: "Food Pouch",
+    source: "Smithing",
   },
+];
+
+const ChoppinPouches: Item[] = [
   {
     name: "Miniature Choppin Pouch",
     cycle: "Choppin Pouch",
+    source: "Quest (Woodsman)",
   },
   {
     name: "Cramped Choppin Pouch",
     cycle: "Choppin Pouch",
+    source: "Smithing",
   },
   {
     name: "Small Choppin Pouch",
     cycle: "Choppin Pouch",
+    source: "Smithing",
   },
   {
     name: "Average Choppin Pouch",
     cycle: "Choppin Pouch",
+    source: "Smithing",
   },
   {
     name: "Sizable Choppin Pouch",
     cycle: "Choppin Pouch",
+    source: "Smithing",
   },
   {
     name: "Big Choppin Pouch",
     cycle: "Choppin Pouch",
+    source: "Smithing",
   },
   {
     name: "Large Choppin Pouch",
     cycle: "Choppin Pouch",
+    source: "Smithing",
   },
+];
+
+const BugPouches: Item[] = [
   {
     name: "Miniature Bug Pouch",
     cycle: "Bug Pouch",
@@ -282,58 +331,78 @@ const CapacityPouches: Item[] = [
   {
     name: "Cramped Bug Pouch",
     cycle: "Bug Pouch",
+    source: "Smithing",
   },
   {
     name: "Small Bug Pouch",
     cycle: "Bug Pouch",
+    source: "Smithing",
   },
   {
     name: "Average Bug Pouch",
     cycle: "Bug Pouch",
+    source: "Smithing",
   },
   {
     name: "Sizable Bug Pouch",
     cycle: "Bug Pouch",
+    source: "Smithing",
   },
   {
     name: "Big Bug Pouch",
     cycle: "Bug Pouch",
+    source: "Smithing",
   },
   {
     name: "Large Bug Pouch",
     cycle: "Bug Pouch",
+    source: "Smithing",
   },
+];
+
+const CritterPouches: Item[] = [
   {
     name: "Small Critter Pouch",
     cycle: "Critter Pouch",
+    source: "Smithing",
   },
   {
     name: "Sizable Critter Pouch",
     cycle: "Critter Pouch",
+    source: "Smithing",
   },
   {
     name: "Big Critter Pouch",
     cycle: "Critter Pouch",
+    source: "Smithing",
   },
   {
     name: "Large Critter Pouch",
     cycle: "Critter Pouch",
+    source: "Smithing",
   },
+];
+
+const SoulPouches: Item[] = [
   {
     name: "Small Soul Pouch",
     cycle: "Soul Pouch",
+    source: "Smithing",
   },
   {
     name: "Sizable Soul Pouch",
     cycle: "Soul Pouch",
+    source: "Smithing",
   },
   {
     name: "Big Soul Pouch",
     cycle: "Soul Pouch",
+    source: "Smithing",
   },
   {
     name: "Large Soul Pouch",
     cycle: "Soul Pouch",
+    source: "Smithing",
   },
 ]
 
@@ -818,7 +887,16 @@ export const checklistData: Record<string, ItemGroup> = {
   "Capacity Pouches": {
     global: false,
     assetDir: "checklist",
-    items: CapacityPouches,
+    items: [
+      ...MaterialPouches,
+      ...MiningPouches,
+      ...FishingPouches,
+      ...FoodPouches,
+      ...ChoppinPouches,
+      ...BugPouches,
+      ...CritterPouches,
+      ...SoulPouches,
+    ],
   },
   "Storage Chests": {
     global: true,
