@@ -59,17 +59,17 @@ const InventoryBags: StorageItem[] = [
   {
     name: "Snakeskinventory Bag",
     bagSlots: 2,
-    source: "Baby Boa",
+    source: "Drop (Baby Boa)",
   },
   {
     name: "Totally Normal And Not Fake Bag",
     bagSlots: 2,
-    source: "Mimic",
+    source: "Drop (Mimic)",
   },
   {
     name: "Mamooth Hide Bag",
     bagSlots: 1,
-    source: "Mamooth",
+    source: "Drop (Mamooth)",
   },
   {
     name: "Blunderbag",
@@ -116,26 +116,32 @@ const GemShopBags: StorageItem[] = [
   {
     name: "Inventory Bag U",
     bagSlots: 4,
+    source: "Gem Shop",
   },
   {
     name: "Inventory Bag V",
     bagSlots: 4,
+    source: "Gem Shop",
   },
   {
     name: "Inventory Bag W",
     bagSlots: 4,
+    source: "Gem Shop",
   },
   {
     name: "Inventory Bag X",
     bagSlots: 4,
+    source: "Gem Shop",
   },
   {
     name: "Inventory Bag Y",
     bagSlots: 4,
+    source: "Gem Shop",
   },
   {
     name: "Inventory Bag Z",
     bagSlots: 4,
+    source: "Gem Shop",
   },
 ]
 
@@ -510,7 +516,7 @@ const StorageChests: StorageItem[] = [
   {
     name: "Dank Paypay Chest",
     bagSlots: 6,
-    source: "Frog"
+    source: "Drop (Frog)"
   },
 ]
 
