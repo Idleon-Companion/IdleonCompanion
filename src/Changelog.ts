@@ -117,4 +117,14 @@ export const Changelog: ChangelogEntry[] = [
     },
     date: "June 2021",
   },
+  {
+    version: "0.2.3",
+    changes: {
+      features: [],
+      changes: [
+        "UI: New Tree View for the recipe calculator",
+        "Tracking: Hard Resource Cards added to Progress Tracker"],
+    },
+    date: "June 2021",
+  },
 ];

@@ -343,13 +343,6 @@ export const Cards: Card[] = [
     source: "Mining Void",
   },
   {
-    id: "Lustre_Ore",
-    category: CardCategory.MediumResources,
-    effect: Effects.BaseLUK,
-    base: 4,
-    source: "Mining Lustre",
-  },
-  {
     id: "Cinder_Forge",
     category: CardCategory.MediumResources,
     effect: Effects.SmithingExp,
