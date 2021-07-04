@@ -183,7 +183,11 @@
                   :enabled="isEnabled(item.name)"
                   @click="handleProgressCheck(item.name, +1)"
                   @contextmenu.prevent="handleProgressCheck(item.name, -1)"
-                />
+                >
+                  <template #tooltip>
+                    <div class="text-center" v-html="Text.Item(item)"></div>
+                  </template>
+                </GameAsset>
               </div>
             </div>
           </div>

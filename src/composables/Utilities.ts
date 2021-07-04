@@ -102,6 +102,9 @@ export class Text {
     if (item.bagSlots !== undefined) {
       text += `<br>+${item.bagSlots} Inventory Slots`;
     }
+    if (item.source !== undefined) {
+      text += `<br><em>Source: ${item.source}</em>`;
+    }
     return text;
   }
 }
