@@ -630,99 +630,130 @@ const CombatStamps: ChecklistItem[] = [
 const SkillStamps: ChecklistItem[] = [
   {
     name: "Pickaxe Stamp",
+    source: "Start",
   },
   {
     name: "Hatchet Stamp",
+    source: "Start",
   },
   {
     name: "Anvil Zoomer Stamp",
+    source: "DropTable1",
   },
   {
     name: "Lil' Mining Baggy Stamp",
+    source: "Quest (XxX Cattleprod XxX)",
   },
   {
     name: "Twin Ores Stamp",
+    source: "Drop (Sheepie)"
   },
   {
     name: "Choppin' Bag Stamp",
+    source: "Quest (Hamish)",
   },
   {
     name: "Duplogs Stamp",
+    source: "Drop (Frost Flake)",
   },
   {
     name: "Matty Bag Stamp",
+    source: "Vendor (Faraway Piers)",
   },
   {
     name: "Smart Dirt Stamp",
+    source: "DropTable5"
   },
   {
     name: "Cool Diggy Tool Stamp",
+    source: "Drop (Snowman)",
   },
   {
     name: "High IQ Lumber Stamp",
+    source: "DropTable4",
   },
   {
     name: "Swag Swingy Tool Stamp",
+    source: "Drop (Thermister)",
   },
   {
     name: "Smartas Smithing Stamp",
   },
   {
     name: "Alch Go Brrr Stamp",
+    source: "DropTable11",
   },
   {
     name: "Brainstew Stamp",
+    source: "Quest (Wellington)",
   },
   {
     name: "Drippy Drop Stamp",
+    source: "DropTable6",
   },
   {
     name: "Droplots Stamp",
+    source: "DropTable7",
   },
   {
     name: "Fishing Rod Stamp",
+    source: "Quest (Fishpaste97)",
   },
   {
     name: "Fishhead Stamp",
+    source: "Quest (XxX Cattleprod XxX)",
   },
   {
     name: "Catch Net Stamp",
+    source: "Quest (XxX Cattleprod XxX)",
   },
   {
     name: "Fly Intel Stamp",
+    source: "Quest (Wellington)",
   },
   {
     name: "Bag o Heads Stamp",
+    source: "DropTable12",
   },
   {
     name: "Holy Mackerel Stamp",
+    source: "Quest (Wellington)",
   },
   {
     name: "Bugsack Stamp",
+    source: "DropTable9",
   },
   {
     name: "Buzz Buzz Stamp",
+    source: "DropTable8",
   },
   {
     name: "Hidey Box Stamp",
+    source: "DropTable17",
   },
   {
     name: "Purp Froge Stamp",
+    source: "Quest (Snouts)",
   },
   {
     name: "Spikemouth Stamp",
+    source: "DropTable18",
   },
   {
     name: "Sample Stamp",
+    source: "DropTable14",
   },
   {
     name: "Saw Stamp",
+    source: "SuperDropTable3",
   },
   {
     name: "Flowin Stamp",
+    source: "DropTable16",
   },
   {
     name: "Banked Pts Stamp",
+    source: "DropTable14",
   },
 ]
 
