@@ -1,4 +1,5 @@
 <template>
+  <!-- Description -->
   <div class="row">
     <div>
       <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
@@ -7,6 +8,7 @@
     </div>
   </div>
 
+  <!-- Cauldron selector -->
   <ul class="nav nav-pills nav-fill mt-3" role="tablist" :style="{background: colorTo(activeGroup, 'Hex')}">
     <li v-for="(tab, index) in colors" :key="tab" class="nav-item nav-item-alch">
       <button
@@ -27,7 +29,7 @@
   <div class="d-flex flex-column alchemy-wrapper mt-3">
     <!-- Discount table -->
     <table class="border-top border-bottom text-light">
-      <tr>
+      <tr class="border-bottom">
         <th class="centered"> Cost Reductions </th>
       </tr>
       <tr :style="{display: 'flex', justifyContent: 'space-between'}">
@@ -58,7 +60,20 @@
         </td>
       </tr>
     </table>
-    <AlchemyRow @custom-change="handleDiscountRecalc()" :group="activeGroup" :discount="discount" />
+    <!-- Data table -->
+    <table class="text-light">
+      <tr class="border-bottom">
+        <th class="centered columnSpan"
+          v-for="(item, index) in headers" :key="index">
+          {{item}}
+        </th>
+        <th>Materials</th>
+      </tr>
+      <tr class="alter-color"
+        v-for="n in 15" :key="n">
+        <AlchemyRow @customChange="handleDiscountRecalc()" :group="activeGroup" :idx="amountBubbles-n" :discount="discount" />
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -77,13 +92,16 @@
       setup() {
           const state = useState();
           const alchemy = computed({
-          get: () => state.value.alchemy,
-          set: (value) => (state.value.alchemy = value),
+            get: () => state.value.alchemy,
+            set: (value) => (state.value.alchemy = value),
           });
 
           const colors: Color[] = ["Orange", "Green", "Purple", "Yellow"];
           const colorScheme = ["#ff9420", "#47db5a", "#cb79e3", "#edc300"];
           const naming = ["Power", "Quicc", "High IQ", "Kazam"];
+
+          const headers = ["Icon", "Level", "Goal", "Effect"];
+          const amountBubbles = 15;
 
           const activeGroup = ref("Orange"); 
           const cauldRedux = ref(0);
@@ -94,14 +112,13 @@
           const handleDiscountRecalc = () => {
             let twelveBubbleLevel = alchemy.value.upgrades[activeGroup.value][14];
             let undevLevel = alchemy.value.upgrades["Yellow"][6];
-            let vialLevel = alchemy.value.vials["Barley Brew"];
-            let discountMulti = Alch['Discount'](
+            let vialLevel = alchemy.value.vials["Barley Brew"] ?? 0;
+            let discountMulti = Alch.discount(
                 Number(cauldRedux.value), 
-                undevLevel, 
-                5, // TODO: Missing vial info (Barley Brew)
+                undevLevel, vialLevel, 
                 twelveBubbleLevel, 
-                Number(bargainLvl.value)
-                ); 
+                Number(bargainLvl.value));
+
             Object.assign(discount.value, discountMulti);
           };
           
@@ -127,11 +144,16 @@
             activeGroup,
             cauldRedux,
             bargainLvl,
+            headers,
+            amountBubbles,
           };
       },
       methods: {
           setGroup(tab: string) {
-          this.activeGroup = tab;
+            this.activeGroup = tab;
+            this.cauldRedux = 0;
+            this.bargainLvl = 0;
+            this.handleDiscountRecalc();
           },
       },
   });

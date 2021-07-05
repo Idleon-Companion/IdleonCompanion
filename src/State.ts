@@ -105,7 +105,15 @@ export function versionControl() {
     }
   }
   if (state.value.version < "0.2.4") {
-    state.value.alchemy.goals = {"Orange": [], "Green": [], "Purple": [], "Yellow": []};
+    let colors = ["Orange", "Green", "Purple", "Yellow"];
+    for (const k of colors) {
+      let amount = 15;
+      for (let i = 0; i < amount; i++) {
+        state.value.alchemy.upgrades[k][i] = state.value.alchemy.upgrades[k][i] ?? 0; 
+        state.value.alchemy.goals[k][i] = state.value.alchemy.goals[k][i] ?? 0;       
+      }     
+    }
+
   }
 
   state.value.version = version;

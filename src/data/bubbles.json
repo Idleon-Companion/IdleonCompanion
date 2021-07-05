@@ -2,8 +2,8 @@
   "Orange": {
     "0": {
       "Name": "ROID_RAGIN",
-      "Effect X1": "1",
-      "Effect X2": "0",
+      "x1": "1",
+      "x2": "0",
       "Func": "add",
       "Materials": [
         {
@@ -20,8 +20,8 @@
     },
     "1": {
       "Name": "WARRIORS_RULE",
-      "Effect X1": "2",
-      "Effect X2": "50",
+      "x1": "2",
+      "x2": "50",
       "Func": "decayMulti",
       "Materials": [
         {
@@ -43,8 +43,8 @@
     },
     "2": {
       "Name": "HEARTY_DIGGY",
-      "Effect X1": "50",
-      "Effect X2": "100",
+      "x1": "50",
+      "x2": "100",
       "Func": "decay",
       "Materials": [
         {
@@ -66,8 +66,8 @@
     },
     "3": {
       "Name": "WYOMING_BLOOD",
-      "Effect X1": "23.5",
-      "Effect X2": "1.5",
+      "x1": "23.5",
+      "x2": "1.5",
       "Func": "bigBase",
       "Materials": [
         {
@@ -89,8 +89,8 @@
     },
     "4": {
       "Name": "REELY_SMART",
-      "Effect X1": "100",
-      "Effect X2": "80",
+      "x1": "100",
+      "x2": "80",
       "Func": "decay",
       "Materials": [
         {
@@ -112,8 +112,8 @@
     },
     "5": {
       "Name": "BIG_MEATY_CLAWS",
-      "Effect X1": "1",
-      "Effect X2": "0.02",
+      "x1": "1",
+      "x2": "0.02",
       "Func": "add",
       "Materials": [
         {
@@ -135,8 +135,8 @@
     },
     "6": {
       "Name": "SPLOOSH_SPLOOSH",
-      "Effect X1": "23.5",
-      "Effect X2": "1.5",
+      "x1": "23.5",
+      "x2": "1.5",
       "Func": "bigBase",
       "Materials": [
         {
@@ -153,8 +153,8 @@
     },
     "7": {
       "Name": "STRONK_TOOLS",
-      "Effect X1": "65",
-      "Effect X2": "70",
+      "x1": "65",
+      "x2": "70",
       "Func": "decay",
       "Materials": [
         {
@@ -176,8 +176,8 @@
     },
     "8": {
       "Name": "FMJ",
-      "Effect X1": "0.5",
-      "Effect X2": "0",
+      "x1": "0.5",
+      "x2": "0",
       "Func": "add",
       "Materials": [
         {
@@ -204,8 +204,8 @@
     },
     "9": {
       "Name": "BAPPITY_BOOPITY",
-      "Effect X1": "35",
-      "Effect X2": "100",
+      "x1": "35",
+      "x2": "100",
       "Func": "decay",
       "Materials": [
         {
@@ -232,8 +232,8 @@
     },
     "10": {
       "Name": "BRITTLEY_SPEARS",
-      "Effect X1": "40",
-      "Effect X2": "50",
+      "x1": "40",
+      "x2": "50",
       "Func": "decay",
       "Materials": [
         {
@@ -250,8 +250,8 @@
     },
     "11": {
       "Name": "CALL_ME_BOB",
-      "Effect X1": "25",
-      "Effect X2": "2.5",
+      "x1": "25",
+      "x2": "2.5",
       "Func": "bigBase",
       "Materials": [
         {
@@ -268,8 +268,8 @@
     },
     "12": {
       "Name": "CARPENTER",
-      "Effect X1": "2",
-      "Effect X2": "50",
+      "x1": "2",
+      "x2": "50",
       "Func": "decay",
       "Materials": [
         {
@@ -286,8 +286,8 @@
     },
     "13": {
       "Name": "BUFF_BOI_TALENT",
-      "Effect X1": "5",
-      "Effect X2": "1",
+      "x1": "5",
+      "x2": "1",
       "Func": "bigBase",
       "Materials": [
         {
@@ -296,16 +296,16 @@
           "isLiquid": 0
         },
         {
-          "Name": "Liquid Nitrogen",
-          "Amount": 4,
+          "Name": "Trench Seawater",
+          "Amount": 2,
           "isLiquid": 1
         }
       ]
     },
     "14": {
       "Name": "ORANGE_BARGAIN",
-      "Effect X1": "30",
-      "Effect X2": "60",
+      "x1": "40",
+      "x2": "12",
       "Func": "decay",
       "Materials": [
         {
@@ -314,8 +314,8 @@
           "isLiquid": 0
         },
         {
-          "Name": "Liquid Nitrogen",
-          "Amount": 5,
+          "Name": "Trench Seawater",
+          "Amount": 3,
           "isLiquid": 1
         }
       ]
@@ -324,8 +324,8 @@
   "Green": {
     "0": {
       "Name": "SWIFT_STEPPIN",
-      "Effect X1": "1",
-      "Effect X2": "0",
+      "x1": "1",
+      "x2": "0",
       "Func": "add",
       "Materials": [
         {
@@ -342,8 +342,8 @@
     },
     "1": {
       "Name": "ARCHER_OR_BUST",
-      "Effect X1": "2",
-      "Effect X2": "50",
+      "x1": "2",
+      "x2": "50",
       "Func": "decayMulti",
       "Materials": [
         {
@@ -365,8 +365,8 @@
     },
     "2": {
       "Name": "HAMMER_HAMMER",
-      "Effect X1": "23",
-      "Effect X2": "2",
+      "x1": "23",
+      "x2": "2",
       "Func": "bigBase",
       "Materials": [
         {
@@ -388,8 +388,8 @@
     },
     "3": {
       "Name": "LIL_BIG_DAMAGE",
-      "Effect X1": "20",
-      "Effect X2": "100",
+      "x1": "20",
+      "x2": "100",
       "Func": "decay",
       "Materials": [
         {
@@ -411,8 +411,8 @@
     },
     "4": {
       "Name": "ANVILNOMICS",
-      "Effect X1": "40",
-      "Effect X2": "100",
+      "x1": "40",
+      "x2": "100",
       "Func": "decay",
       "Materials": [
         {
@@ -434,8 +434,8 @@
     },
     "5": {
       "Name": "QUICK_SLAP",
-      "Effect X1": "1",
-      "Effect X2": "0.02",
+      "x1": "1",
+      "x2": "0.02",
       "Func": "add",
       "Materials": [
         {
@@ -457,8 +457,8 @@
     },
     "6": {
       "Name": "SANIC_TOOLS",
-      "Effect X1": "65",
-      "Effect X2": "70",
+      "x1": "65",
+      "x2": "70",
       "Func": "decay",
       "Materials": [
         {
@@ -480,8 +480,8 @@
     },
     "7": {
       "Name": "BUG]",
-      "Effect X1": "23.5",
-      "Effect X2": "1.5",
+      "x1": "23.5",
+      "x2": "1.5",
       "Func": "bigBase",
       "Materials": [
         {
@@ -498,8 +498,8 @@
     },
     "8": {
       "Name": "SHAQURACY",
-      "Effect X1": "1",
-      "Effect X2": "0",
+      "x1": "1",
+      "x2": "0",
       "Func": "add",
       "Materials": [
         {
@@ -526,8 +526,8 @@
     },
     "9": {
       "Name": "CHEAP_SHOT",
-      "Effect X1": "7",
-      "Effect X2": "100",
+      "x1": "7",
+      "x2": "100",
       "Func": "decay",
       "Materials": [
         {
@@ -554,8 +554,8 @@
     },
     "10": {
       "Name": "BOW_JACK",
-      "Effect X1": "40",
-      "Effect X2": "50",
+      "x1": "40",
+      "x2": "50",
       "Func": "decay",
       "Materials": [
         {
@@ -572,8 +572,8 @@
     },
     "11": {
       "Name": "CALL_ME_ASH",
-      "Effect X1": "25",
-      "Effect X2": "2",
+      "x1": "25",
+      "x2": "2",
       "Func": "bigBase",
       "Materials": [
         {
@@ -590,8 +590,8 @@
     },
     "12": {
       "Name": "CUZ_I_CATCH_EM_ALL",
-      "Effect X1": "3",
-      "Effect X2": "100",
+      "x1": "3",
+      "x2": "100",
       "Func": "decayMulti",
       "Materials": [
         {
@@ -608,8 +608,8 @@
     },
     "13": {
       "Name": "FAST_BOI_TALENT",
-      "Effect X1": "5",
-      "Effect X2": "1",
+      "x1": "5",
+      "x2": "1",
       "Func": "bigBase",
       "Materials": [
         {
@@ -618,16 +618,16 @@
           "isLiquid": 0
         },
         {
-          "Name": "Liquid Nitrogen",
-          "Amount": 4,
+          "Name": "Trench Seawater",
+          "Amount": 2,
           "isLiquid": 1
         }
       ]
     },
     "14": {
       "Name": "GREEN_BARGAIN",
-      "Effect X1": "30",
-      "Effect X2": "60",
+      "x1": "40",
+      "x2": "12",
       "Func": "decay",
       "Materials": [
         {
@@ -636,8 +636,8 @@
           "isLiquid": 0
         },
         {
-          "Name": "Liquid Nitrogen",
-          "Amount": 5,
+          "Name": "Trench Seawater",
+          "Amount": 3,
           "isLiquid": 1
         }
       ]
@@ -646,8 +646,8 @@
   "Purple": {
     "0": {
       "Name": "STABLE_JENIUS",
-      "Effect X1": "1",
-      "Effect X2": "0",
+      "x1": "1",
+      "x2": "0",
       "Func": "add",
       "Materials": [
         {
@@ -664,8 +664,8 @@
     },
     "1": {
       "Name": "MAGE_IS_BEST",
-      "Effect X1": "2",
-      "Effect X2": "50",
+      "x1": "2",
+      "x2": "50",
       "Func": "decayMulti",
       "Materials": [
         {
@@ -687,8 +687,8 @@
     },
     "2": {
       "Name": "HOCUS_CHOPPUS",
-      "Effect X1": "50",
-      "Effect X2": "100",
+      "x1": "50",
+      "x2": "100",
       "Func": "decay",
       "Materials": [
         {
@@ -710,8 +710,8 @@
     },
     "3": {
       "Name": "MOLTO_LOGGO",
-      "Effect X1": "23.5",
-      "Effect X2": "1.5",
+      "x1": "23.5",
+      "x2": "1.5",
       "Func": "bigBase",
       "Materials": [
         {
@@ -733,8 +733,8 @@
     },
     "4": {
       "Name": "NOODUBBLE",
-      "Effect X1": "100",
-      "Effect X2": "60",
+      "x1": "100",
+      "x2": "60",
       "Func": "decay",
       "Materials": [
         {
@@ -756,8 +756,8 @@
     },
     "5": {
       "Name": "NAME_I_GUESS",
-      "Effect X1": "1",
-      "Effect X2": "0.02",
+      "x1": "1",
+      "x2": "0.02",
       "Func": "add",
       "Materials": [
         {
@@ -779,8 +779,8 @@
     },
     "6": {
       "Name": "LE_BRAIN_TOOLS",
-      "Effect X1": "65",
-      "Effect X2": "70",
+      "x1": "65",
+      "x2": "70",
       "Func": "decay",
       "Materials": [
         {
@@ -802,8 +802,8 @@
     },
     "7": {
       "Name": "COOKIN_ROADKILL",
-      "Effect X1": "120",
-      "Effect X2": "70",
+      "x1": "120",
+      "x2": "70",
       "Func": "decay",
       "Materials": [
         {
@@ -820,8 +820,8 @@
     },
     "8": {
       "Name": "BREWSTACHIO",
-      "Effect X1": "50",
-      "Effect X2": "100",
+      "x1": "50",
+      "x2": "100",
       "Func": "decay",
       "Materials": [
         {
@@ -848,8 +848,8 @@
     },
     "9": {
       "Name": "ALL_FOR_KILL",
-      "Effect X1": "40",
-      "Effect X2": "100",
+      "x1": "40",
+      "x2": "100",
       "Func": "decay",
       "Materials": [
         {
@@ -876,8 +876,8 @@
     },
     "10": {
       "Name": "MATTY_STAFFORD",
-      "Effect X1": "40",
-      "Effect X2": "50",
+      "x1": "40",
+      "x2": "50",
       "Func": "decay",
       "Materials": [
         {
@@ -894,8 +894,8 @@
     },
     "11": {
       "Name": "CALL_ME_POPE",
-      "Effect X1": "2.4",
-      "Effect X2": "70",
+      "x1": "2.4",
+      "x2": "70",
       "Func": "decayMulti",
       "Materials": [
         {
@@ -912,8 +912,8 @@
     },
     "12": {
       "Name": "GOSPEL_LEADER",
-      "Effect X1": "80",
-      "Effect X2": "60",
+      "x1": "80",
+      "x2": "60",
       "Func": "decay",
       "Materials": [
         {
@@ -930,8 +930,8 @@
     },
     "13": {
       "Name": "SMART_BOI_TALENT",
-      "Effect X1": "5",
-      "Effect X2": "1",
+      "x1": "5",
+      "x2": "1",
       "Func": "bigBase",
       "Materials": [
         {
@@ -940,16 +940,16 @@
           "isLiquid": 0
         },
         {
-          "Name": "Liquid Nitrogen",
-          "Amount": 4,
+          "Name": "Trench Seawater",
+          "Amount": 2,
           "isLiquid": 1
         }
       ]
     },
     "14": {
       "Name": "PURPLE_BARGAIN",
-      "Effect X1": "30",
-      "Effect X2": "60",
+      "x1": "40",
+      "x2": "12",
       "Func": "decay",
       "Materials": [
         {
@@ -958,8 +958,8 @@
           "isLiquid": 0
         },
         {
-          "Name": "Liquid Nitrogen",
-          "Amount": 5,
+          "Name": "Trench Seawater",
+          "Amount": 3,
           "isLiquid": 1
         }
       ]
@@ -968,8 +968,8 @@
   "Yellow": {
     "0": {
       "Name": "LOTTO_SKILLS",
-      "Effect X1": "1",
-      "Effect X2": "0",
+      "x1": "1",
+      "x2": "0",
       "Func": "add",
       "Materials": [
         {
@@ -996,8 +996,8 @@
     },
     "1": {
       "Name": "DROPPIN_LOADS",
-      "Effect X1": "40",
-      "Effect X2": "70",
+      "x1": "40",
+      "x2": "70",
       "Func": "decay",
       "Materials": [
         {
@@ -1019,8 +1019,8 @@
     },
     "2": {
       "Name": "STARTUE_EXP",
-      "Effect X1": "25",
-      "Effect X2": "60",
+      "x1": "25",
+      "x2": "60",
       "Func": "decay",
       "Materials": [
         {
@@ -1042,8 +1042,8 @@
     },
     "3": {
       "Name": "LEVEL_UP_GIFT",
-      "Effect X1": "100",
-      "Effect X2": "30",
+      "x1": "100",
+      "x2": "30",
       "Func": "decay",
       "Materials": [
         {
@@ -1070,8 +1070,8 @@
     },
     "4": {
       "Name": "PROWESESSARY",
-      "Effect X1": "1.5",
-      "Effect X2": "60",
+      "x1": "1.5",
+      "x2": "60",
       "Func": "decayMulti",
       "Materials": [
         {
@@ -1093,8 +1093,8 @@
     },
     "5": {
       "Name": "STAMP_TRAMP",
-      "Effect X1": "1",
-      "Effect X2": "0",
+      "x1": "1",
+      "x2": "0",
       "Func": "add",
       "Materials": [
         {
@@ -1111,8 +1111,8 @@
     },
     "6": {
       "Name": "UNDEVELOPED_COSTS",
-      "Effect X1": "40",
-      "Effect X2": "70",
+      "x1": "40",
+      "x2": "70",
       "Func": "decay",
       "Materials": [
         {
@@ -1129,8 +1129,8 @@
     },
     "7": {
       "Name": "DA_DAILY_DRIP",
-      "Effect X1": "30",
-      "Effect X2": "100",
+      "x1": "30",
+      "x2": "100",
       "Func": "decay",
       "Materials": [
         {
@@ -1147,8 +1147,8 @@
     },
     "8": {
       "Name": "GRIND_TIME",
-      "Effect X1": "9.7",
-      "Effect X2": ".3",
+      "x1": "9.7",
+      "x2": ".3",
       "Func": "bigBase",
       "Materials": [
         {
@@ -1165,8 +1165,8 @@
     },
     "9": {
       "Name": "LAAARRRRYYYY",
-      "Effect X1": "120",
-      "Effect X2": "100",
+      "x1": "120",
+      "x2": "100",
       "Func": "decay",
       "Materials": [
         {
@@ -1188,8 +1188,8 @@
     },
     "10": {
       "Name": "COGS_FOR_HANDS",
-      "Effect X1": "4",
-      "Effect X2": "0",
+      "x1": "4",
+      "x2": "0",
       "Func": "add",
       "Materials": [
         {
@@ -1206,8 +1206,8 @@
     },
     "11": {
       "Name": "SAMPLE_IT",
-      "Effect X1": "12",
-      "Effect X2": "40",
+      "x1": "12",
+      "x2": "40",
       "Func": "decay",
       "Materials": [
         {
@@ -1224,8 +1224,8 @@
     },
     "12": {
       "Name": "BIG_GAME_HUNTER",
-      "Effect X1": "70",
-      "Effect X2": "50",
+      "x1": "70",
+      "x2": "50",
       "Func": "decay",
       "Materials": [
         {
@@ -1242,8 +1242,8 @@
     },
     "13": {
       "Name": "IGNORE_OVERDUES",
-      "Effect X1": "100",
-      "Effect X2": "60",
+      "x1": "100",
+      "x2": "60",
       "Func": "decay",
       "Materials": [
         {
@@ -1252,16 +1252,16 @@
           "isLiquid": 0
         },
         {
-          "Name": "Liquid Nitrogen",
-          "Amount": 4,
+          "Name": "Trench Seawater",
+          "Amount": 2,
           "isLiquid": 1
         }
       ]
     },
     "14": {
       "Name": "YELLOW_BARGAIN",
-      "Effect X1": "30",
-      "Effect X2": "60",
+      "x1": "40",
+      "x2": "12",
       "Func": "decay",
       "Materials": [
         {
@@ -1270,8 +1270,8 @@
           "isLiquid": 0
         },
         {
-          "Name": "Liquid Nitrogen",
-          "Amount": 5,
+          "Name": "Trench Seawater",
+          "Amount": 3,
           "isLiquid": 1
         }
       ]

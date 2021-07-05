@@ -51,8 +51,8 @@ export default defineComponent({
     const tabs = {
       Cauldrons: Cauldrons,
       Vials: Vials,
-      Liquid: Liquid,
-      Pay_2_Win: Pay2Win,
+      // Liquid: Liquid,
+      // Pay_2_Win: Pay2Win,
     };
     const defaultTab = "Cauldrons";
     return {

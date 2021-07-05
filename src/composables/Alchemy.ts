@@ -17,6 +17,20 @@ export type Vial = {
   effect: string;
 };
 
+export type Bubble = {
+  Name: string;
+  x1: string;
+  x2: string;
+  Func: string;
+  Materials: Material[];
+};
+
+export type Material = {
+  Name: string;
+  Amount: number;
+  isLiquid: number;
+};
+
 export const Vials: Vial[] = [
   {
     name: "Copper Corona",
@@ -322,16 +336,13 @@ export const VialCost = [
   1e9,
 ];
 
-
-export type AlchFunc = (a: number, b: number, c:number, d:number, e: number) => any;
-
-export const Alch: Record<string, AlchFunc> = {
-  Discount: (cauldCostReduxLvl, bubbleCostBubbleLvl, bubbleCostVialLvl, bubbleTwelveLvl, tagLvl) => {
+export class Alch {
+  static discount (cauldCostReduxLvl: number, bubbleCostBubbleLvl: number, bubbleCostVialLvl: number, bubbleTwelveLvl: number, tagLvl: number): any {
     const precision = 10000;
 
     const costReduxBoost = Math.round(10 * Growth["Decay"](cauldCostReduxLvl, 90, 100)) / 10;
     const oa          = Math.max(0.1, 1 - costReduxBoost / 100); // TODO: This one is off, but the total calculation is still correct
-    const newBubble   = Math.max(0.05, 1 - (Growth['Decay'](bubbleTwelveLvl, 30, 60)/100));
+    const newBubble   = Math.max(0.05, 1 - (Growth['Decay'](bubbleTwelveLvl, 40, 12)/100)); // Hardcoded values, better to retrieve from bubbles data maybe.
     const undevCost   = Growth["Decay"](bubbleCostBubbleLvl, 40, 70);
     const vial        = Growth["Add"](bubbleCostVialLvl, 1, 0);
     const undev_vial  = Math.max(0.05, 1 - (undevCost + vial) / 100);
@@ -339,16 +350,70 @@ export const Alch: Record<string, AlchFunc> = {
     var discount = oa * newBubble * undev_vial * bargain_tag;
     var result = [oa, bargain_tag, newBubble, undev_vial, discount];
     result = result.map((a) => {
-      return (precision - Math.round(a*precision))/100});
+        return (precision - Math.round(a*precision))/100}
+      );
 
-    console.log(`Alch[D] = [
-      Cauldron:     ${result[0].toFixed(2).padStart(5, " ")}, 
-      Bargain:      ${result[1].toFixed(2).padStart(5, " ")}, 
-      Bubble XII:   ${result[2].toFixed(2).padStart(5, " ")}, 
-      Undev + vial: ${result[3].toFixed(2).padStart(5, " ")}, 
+    console.log(`Alch.discount = [
+      Cauldron:     ${result[0].toFixed(2).padStart(5, " ")} 
+      Bargain:      ${result[1].toFixed(2).padStart(5, " ")} 
+      Bubble XII:   ${result[2].toFixed(2).padStart(5, " ")} 
+      Undev + vial: ${result[3].toFixed(2).padStart(5, " ")} 
       Total:        ${result[4].toFixed(2).padStart(5, " ")}
     ]`);
     return result;
   }
+  
+  static effect = (bubble: Bubble, level: number) => {
+    let funcStr = bubble.Func;
+    let funcStrCap = funcStr.charAt(0).toUpperCase() + funcStr.slice(1);
 
-};
+    let effect = (level === 0 ? 0 : Growth[funcStrCap](level, Number(bubble.x1), Number(bubble.x2)));
+    if (isNaN(effect)) {
+      effect = 0;
+    }
+    return Number(effect);
+  }
+
+  static effectChange = (bubble: Bubble, levelNow: number, levelGoal: number) => {
+    let effectNow = Alch.effect(bubble, levelNow) ?? 0;
+    let effectGoal = Alch.effect(bubble, levelGoal);
+    effectGoal = (effectGoal < effectNow ? effectNow : effectGoal);
+    let result = `${Number(effectNow).toFixed(2).padStart(6, ' ')} => ${Number(effectGoal).toFixed(2).padStart(6, ' ')}`;
+    return result;
+  };
+
+
+  static Pay2Win = (levelNow: any, levelWant: any, type: any) => {
+    let totalSum = 0;
+    let result = 0;
+    for (var j = levelNow; j < levelWant; j++) {
+      switch(type) { 
+        case 0: // Speed
+          result = Math.round(2500 * Math.pow(1.15 - (0.117 * j) / (100 + j),j));
+          break;
+        case 1: // New bubble
+          result = Math.round(3200 * Math.pow(1.18 - (0.145 * j) / (100 + j),j));
+          break;
+        case 2: // Boost Req
+          result = Math.round(3750 *Math.pow(1.2 - (0.14 * j) / (100 + j),j));
+          break;
+      }
+      totalSum += result;
+    }
+    let a = [
+      {Name: "speed", x1: "3", x2: "0.2", Func: "add", Materials: [{Name: "", Amount: 0, isLiquid: 0}]},
+      {Name: "New B", x1: "2.5", x2: "100", Func: "decayMulti", Materials: [{Name: "", Amount: 0, isLiquid: 0}]},
+      {Name: "Boost", x1: "70", x2: "10", Func: "decay", Materials: [{Name: "", Amount: 0, isLiquid: 0}]}
+    ]
+    a.forEach((b) => console.log(b));
+
+    // var a = {"name"}
+    var eff = Alch.effectChange(a[type], levelNow, levelWant);
+    console.log(`Result: ${eff} | ${totalSum}`);
+    // var d = eff.concat(goldToString(totalSum));
+    // superResult.push(d);
+    
+    // superResult.forEach((a) => console.log(a));
+    return [totalSum, eff];
+  };
+}
