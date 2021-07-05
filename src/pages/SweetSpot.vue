@@ -3,208 +3,241 @@
     <div>
       <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
 	A tool to give your top 3 <u>active</u> farming spots! The tool takes into account respawn time,
-	map complexity, and number of monsters on the map. <u>Active gains will not be the same as your AFK gains!</u>
+	map complexity, and number of monsters on the map. <u>Active gains will not be the same as your AFK gains!</u> <br>
+	<b> World 3 Not Yet Implemented </b>
       </p>
     </div>
   </div>
 <div class="text-light bg-primary rounded mt-2 p-4 w-100">
-<div>
-<label for="min-dmg" class="h5 m-2 ms-0">Damage</label>
-<input
-                    v-model.number="minDmg"
-                    type="number"
-                    min="1"
-                    id="min-dmg"
-		    placeholder="Minimum Damage"
-                  /> 
-<input
-                    v-model.number="maxDmg"
-                    type="number"
-                    min="1"
-                    id="max-dmg"
-		    placeholder="Maximum Damage"
-/>
+
+<a-divider>Character Input for Best Active Zone</a-divider>
+
+<div class="space-align-container">
+	<div class="space-align-block">
+		<table class="input-align-table">
+			<tr>	
+			<td><label for="monstSelector" class="h5 m-2 ms-0">Currently Farming</label></td>
+			<td>
+			<select v-model="curEXPMonst" class="" id="monstSelector">
+				  <option v-for="monster in monsters" :key="monster.name">
+				    {{ monster.name }}
+				  </option>
+			</select>
+			</td>
+			</tr>
+			<tr>	
+			<td><label for="expMonst" class="h5 m-2 ms-0">Ingame EXP</label></td>
+			<td>
+			<input
+					    v-model.number="ingameEXPMonst"
+					    type="number"
+					    min="1"
+					    id="expMonst"
+					    placeholder=""
+			/>
+			</td>
+			</tr>
+					</table>
+	</div>
+	<div class="space-align-block">
+
+		<table class="input-align-table">
+			<tr>
+			<td class="damage"><label class="h5 m-2 ms-0">Damage</label></td>
+			<td>
+			<table class="dmg-table">
+				<tr>
+				<td><label for="min-dmg" class="">Minimum</label></td>
+				<td><label for="min-dmg" class="">Maximum</label></td></tr>
+				<tr>
+				<td><input
+				    v-model.number="minDmg"
+				    type="number"
+				    min="1"
+				    id="min-dmg"
+				    placeholder="Minimum Damage"
+				/></td>
+				<td><input
+				    v-model.number="maxDmg"
+				    type="number"
+				    min="1"
+				    id="max-dmg"
+				    placeholder="Maximum Damage"
+				/></td></tr>
+			</table>
+			</td>
+			</tr>
+			<tr>
+			<td><label for="critC" class="h5 m-2 ms-0">Crit Chance</label></td>
+			<td>
+			<input
+			    v-model.number="critChance"
+			    type="float"
+			    min="0.00"
+			    id="critC"
+			    placeholder="Crit Chance Percent"
+			/>
+			</td>
+			</tr>
+			<tr>
+			<td><label for="critD" class="h5 m-2 ms-0">Crit Damage</label></td>
+			<td>
+			<input
+			    v-model.number="critDmg"
+			    type="float"
+			    min="1.00"
+			    id="critD"
+			    placeholder="Crit Damage Multiplier"
+			/>
+			</td>
+			</tr>
+		</table>
+	</div>
+	<div class="space-align-block">
+		<table class="input-align-table">
+			<tr>
+			<td><label for="acc" class="h5 m-2 ms-0">Accuracy</label></td>
+			<td><input
+			    v-model.number="accuracy"
+			    type="number"
+			    min="2"
+			    id="acc"
+			    placeholder=""
+			/></td>
+			</tr>
+			<tr>
+			<td><label for="charSelector" class="h5 m-2 ms-0">Class</label></td>
+			<td><select v-model="charClass" class="" id="charSelector">
+			  <option v-for="idleClass in idleClasses">
+			    {{ idleClass }}
+			  </option>
+			</select></td>
+			</tr>
+			<tr>
+			<td><label for="skill1" class="h5 m-2 ms-0">Skill 1</label></td>
+			<td><input
+			    v-model.number="charSkill1"
+			    type="number"
+			    min="0"
+			    id="skill1"
+			/></td>
+			</tr>
+			<tr>
+			<td><label for="skill1" class="h5 m-2 ms-0">Skill 2</label></td>
+			<td><input
+			    v-model.number="charSkill2"
+			    type="number"
+			    min="0"
+			    id="skill2"
+			/></td>
+			</tr>
+		</table>
+	</div>
 </div>
-
-<div>
-<label for="critC" class="h5 m-2 ms-0">Crit Chance</label>
-<input
-                    v-model.number="critChance"
-                    type="float"
-                    min="0.00"
-                    id="critC"
-		    placeholder="Crit Chance Percent"
-/>
-</div>
-
-<div>
-<label for="critD" class="h5 m-2 ms-0">Crit Damage</label>
-<input
-                    v-model.number="critDmg"
-                    type="float"
-                    min="1.00"
-                    id="critD"
-		    placeholder="Crit Damage Multiplier"
-/>
-</div>
-
-
-<div>
-<label for="acc" class="h5 m-2 ms-0">Accuracy</label>
-<input
-                    v-model.number="accuracy"
-                    type="number"
-                    min="2"
-                    id="acc"
-		    placeholder=""
-/>
-</div>
-
-
-
-<div class="input-group">
-<label for="charSelector" class="h5 m-2 ms-0">Subclass</label>
-        <select v-model="charClass" class="" id="charSelector">
-          <option v-for="idleClass in idleClasses">
-            {{ idleClass }}
-          </option>
-        </select>
-</div>
-
-<div>
-<label for="skill1" class="h5 m-2 ms-0">Skill 1</label>
-<input
-                    v-model.number="charSkill1"
-                    type="number"
-                    min="0"
-                    id="skill1"
-/>
-</div>
-
-<div>
-<label for="skill1" class="h5 m-2 ms-0">Skill 2</label>
-<input
-                    v-model.number="charSkill2"
-                    type="number"
-                    min="0"
-                    id="skill2"
-/>
-</div>
-
-
-<div class="input-group">
-<label for="monstSelector" class="h5 m-2 ms-0">Currently Farming</label>
-        <select v-model="curEXPMonst" class="" id="monstSelector">
-          <option v-for="monster in monsters" :key="monster.name">
-            {{ monster.name }}
-          </option>
-        </select>
-</div>
-
-
-<div>
-<label for="expMonst" class="h5 m-2 ms-0">Ingame EXP</label>
-<input
-                    v-model.number="ingameEXPMonst"
-                    type="number"
-                    min="1"
-                    id="expMonst"
-		    placeholder=""
-/>
-</div>
-
-<div>
-<label for="cLevel" class="h5 m-2 ms-0">Character Level</label>
-<input
-                    v-model.number="charLevel"
-                    type="number"
-                    min="1"
-                    id="cLevel"
-/> 
-</div>
-<div>
-    <label for="startTime" class="h5 m-2 ms-0">Starting Time</label>
-      <input
-        id="startTime"
-        v-model="startExpTime"
-        type="text"
-        placeholder="HH:mm"
-      />
-<label for="startExp" class="h5 m-2 ms-0">&nbsp; Start EXP%</label>
-<input
-                    v-model.number="startExp"
-                    type="float"
-                    min="0.00"
-                    id="startExp"
-/>
-</div>
-
-<div>
-    <label for="endTime" class="h5 m-2 ms-0">Ending Time</label>
-      <input
-        id="endTime"
-        v-model="endExpTime"
-        type="text"
-        placeholder="HH:mm"
-      />
-<label for="endExp" class="h5 m-2 ms-0">&nbsp; End EXP%</label>
-<input
-                    v-model.number="endExp"
-                    type="float"
-                    min="0.00"
-                    id="endExp"
-/>
-<br>
-Required EXP for Level Up: {{ expNextLevel(charLevel).toFixed(0) }}
-<br>Hours to next level: {{ timeToLevel()[0] }}
-<br>EXP per hour {{ timeToLevel()[1] }}
-</div>
-
 Your top three spots are<br>
 {{bestThreeMobs[0].value}}<br>
 {{bestThreeMobs[1].value}}<br>
 {{bestThreeMobs[2].value}}
 
+
+<a-divider>EXP Calculator</a-divider>
 <div>
-<table class="sweetspot_table">
-	<thead>
+	<table class="exp-table">
 	<tr>
-		<th scope="col">Name</th>
-	      <th scope="col">HP</th>
-	      <th scope="col">Acc to hit 5%</th>
-	      <th scope="col">Acc to hit 100%</th>
-	      <th scope="col">Chance to hit %</th>	
-	      <th scope="col">Min hit to kill</th>	
-	      <th scope="col">Max Hit to kill</th>	
-	      <th scope="col">Avg Swing to Kill</th>	
-	      <th scope="col">Monster EXP</th>	
-	      <th scope="col">Monster EXP with multiplier </th>	
-	      <th scope="col">EXP per Swing</th>	
-	      <th scope="col">Weight</th>	
-	      <th scope="col">Best Mob</th>	
+		<td><label for="cLevel" class="h5 m-2 ms-0">Character Level</label></td>
+		<td>	
+		<input
+				    v-model.number="charLevel"
+				    type="number"
+				    min="1"
+				    id="cLevel"
+		/> 
+		</td>
 	</tr>
-	</thead>
-	<tbody>
-	<tr
-		v-for="monster in monsters"
-		:key="monster.name"
-	>
-		<td>{{monster.name}}</td>
-		<td>{{monster.health}}</td>
-		<td>{{monster.accLow}}</td>
-		<td>{{monster.accHigh}}</td>
-		<td>{{chanceToHit(monster).toFixed(2)}}</td>
-		<td>{{minHitToKill(monster).toFixed(2)}}</td>
-		<td>{{maxHitToKill(monster).toFixed(2)}}</td>
-		<td>{{avgSwingToKill(monster).toFixed(2)}}</td>
-		<td>{{monster.exp}}</td>
-		<td>{{monsterExpMul(monster).toFixed(2)}}</td>
-		<td>{{expPerSwing(monster).toFixed(2)}}</td>
-		<td>{{monsterWeight[monster.name][charClass]}}</td>
-		<td>{{bestMob(monster).toFixed(4)}}</td>
-	</tr> 
-	</tbody>
-</table>
+	  <tr>
+	   <td><label for="startTime" class="h5 m-2 ms-0">Starting Time</label></td>
+	   <td><a-time-picker
+		id="startTime"
+		v-model:value="startExpTime"
+		format="HH:mm"
+	      /></td>
+	     <td><label for="startExp" class="h5 m-2 ms-0">&nbsp; Start EXP%</label></td>
+	<td>	<input
+		    v-model.number="startExp"
+		    type="float"
+		    min="0.00"
+		    id="startExp"
+		/></td>
+		</tr>
+		<tr>
+	      <td><label for="endTime" class="h5 m-2 ms-0">Ending Time</label></td>
+	      <td><a-time-picker
+		id="endTime"
+		v-model:value="endExpTime"
+		format="HH:mm"
+	      /></td>
+		<td><label for="endExp" class="h5 m-2 ms-0">&nbsp; End EXP%</label></td>
+		<td><input
+		    v-model.number="endExp"
+		    type="float"
+		    min="0.00"
+		    id="endExp"
+		/></td></tr>
+	</table>
+<br>
+Required EXP for Level Up: {{ expNextLevel(charLevel).toFixed(0) }}
+<br>Hours to next level: {{ timeToLevel()[0] }}
+<br>EXP per hour {{ timeToLevel()[1].toFixed(0) }}
+</div>
+
+<a-divider>Details</a-divider>
+
+<div>
+    <a-collapse v-model:activeKey="activeKey" accordion>
+      <a-collapse-panel key="1" header="Monster Table">
+	<div>
+	<table class="sweetspot_table">
+		<thead>
+		<tr>
+		      <th scope="col">Name</th>
+		      <th scope="col">HP</th>
+		      <th scope="col">Acc to hit 5%</th>
+		      <th scope="col">Acc to hit 100%</th>
+		      <th scope="col">Chance to hit %</th>	
+		      <th scope="col">Min hit to kill</th>	
+		      <th scope="col">Max Hit to kill</th>	
+		      <th scope="col">Avg Swing to Kill</th>	
+		      <th scope="col">Monster EXP</th>	
+		      <th scope="col">Monster EXP with multiplier </th>	
+		      <th scope="col">EXP per Swing</th>	
+		      <th scope="col">Weight</th>	
+		      <th scope="col">Best Mob</th>	
+		</tr>
+		</thead>
+		<tbody>
+		<tr
+			v-for="monster in monsters"
+			:key="monster.name"
+		>
+			<td>{{monster.name}}</td>
+			<td>{{monster.health}}</td>
+			<td>{{monster.accLow}}</td>
+			<td>{{monster.accHigh}}</td>
+			<td>{{chanceToHit(monster).toFixed(2)}}</td>
+			<td>{{minHitToKill(monster).toFixed(2)}}</td>
+			<td>{{maxHitToKill(monster).toFixed(2)}}</td>
+			<td>{{avgSwingToKill(monster).toFixed(2)}}</td>
+			<td>{{monster.exp}}</td>
+			<td>{{monsterExpMul(monster).toFixed(2)}}</td>
+			<td>{{expPerSwing(monster).toFixed(2)}}</td>
+			<td>{{monsterWeight[monster.name][charClass]}}</td>
+			<td>{{bestMob(monster).toFixed(4)}}</td>
+		</tr> 
+		</tbody>
+	</table>
+	</div>
+      </a-collapse-panel>
+    </a-collapse>
 </div>
 
 </div>
@@ -214,6 +247,12 @@ Your top three spots are<br>
 import { computed, defineComponent, ref } from "vue";
 import monsterData from "~/data/monsterData.json";
 import { monsterWeight } from "~/composables/SweetSpotWeight";
+import { Collapse }  from "ant-design-vue";
+import { Space }  from "ant-design-vue";
+import { Divider }  from "ant-design-vue";
+import { Cascader }  from "ant-design-vue";
+import { TimePicker }  from "ant-design-vue";
+import moment from 'moment';
 
 type Monster = {
 	name: string;
@@ -263,6 +302,8 @@ export default defineComponent({
 			return  ingameEXPMonst.value / monsters[monstName].exp;
 		})
 
+		const activeKey = ref([]);
+
 		const minDmg = ref("1");
 		const maxDmg = ref("2");
 		
@@ -278,11 +319,11 @@ export default defineComponent({
 		const ingameEXPMonst = ref("");
 	
 		/* For EXP Calculator */
-		const charLevel = ref("");
-		const startExpTime = ref("");
-		const startExp = ref("");
-		const endExpTime = ref("");
-		const endExp = ref("");
+		const charLevel = ref("1");
+		const startExpTime = ref(moment('12:00', 'HH:mm'));;
+		const startExp = ref("0");
+		const endExpTime = ref(moment('13:00', 'HH:mm'));
+		const endExp = ref("100");
 		
 
 		// For multi-hit talents
@@ -333,7 +374,7 @@ export default defineComponent({
 
 			return sortedDict;  
 		})	
-
+	
 		const expNextLevel = (level): number => {
 			// Calculation taken from the Idleon toolbox
 			let H = 15 + Math.pow(level, 1.9);	
@@ -344,11 +385,9 @@ export default defineComponent({
 		}
 	
 		const timeToLevel = (): number => {
-			var timeStart = new Date("01/01/2007 " + startExpTime.value);
-			var timeEnd = new Date("01/01/2007 " + endExpTime.value);
-			//console.log(timeStart);
-			//console.log(timeEnd);
-		
+			var timeStart = new Date("01/01/2007 " + startExpTime.value.format("HH:mm"));
+			var timeEnd = new Date("01/01/2007 " + endExpTime.value.format("HH:mm"));
+
 			var hourDiff = timeEnd - timeStart;
 			if(hourDiff < 0) hourDiff = 24 + hourDiff;
 
@@ -390,12 +429,12 @@ export default defineComponent({
 			let expHr = expFarmed / hourDiff;
 			let remainTime = (endExpReq - curEnd) / expHr;
 
-			//console.log("hourDiff " + hourDiff);
-			//console.log("curStart " + curStart);
-			//console.log("curEnd " + curEnd);
-			//console.log("ExpFarmed " + expFarmed);
-			//console.log("Remaing to farm" + (expReq - curEnd));
-			//console.log("exp/Hr " + expHr);
+			/*console.log("hourDiff " + hourDiff);
+			console.log("curStart " + curStart);
+			console.log("curEnd " + curEnd);
+			console.log("ExpFarmed " + expFarmed);
+			console.log("Remaing to farm" + (expReq - curEnd));
+			console.log("exp/Hr " + expHr);*/
 
 			return [remainTime,expHr];
 		}
@@ -477,6 +516,7 @@ export default defineComponent({
 
 
 		return {
+		activeKey,	
 		monsters, monsterWeight, minDmg, maxDmg, multiplier, monstEXPMul,
 		accuracy, critChance, critDmg, curEXPMonst, ingameEXPMonst, 
 		charClass, charSkill1, charSkill2, 
@@ -487,7 +527,71 @@ export default defineComponent({
 		chanceToHit, avgSwingToHit, minHitToKill, maxHitToKill, avgHitToKill,
 		avgSwingToKill, monsterExpMul, expPerSwing, bestMob,
 
-		bestMobArray, bestThreeMobs };
+		bestMobArray, bestThreeMobs};
 	}
 });
 </script>
+
+<style scoped>
+.space-align-container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.space-align-container .space-align-block {
+  margin: 8px 4px;
+  padding-right: 40px;
+  flex: none;
+}
+
+.space-align-block .mock-block {
+  display: inline-block;
+  padding: 32px 8px 16px;
+  background: rgba(150, 150, 150, 0.2);
+}
+
+.ant-divider-horizontal.ant-divider-with-text {
+	color: white;
+	border-top-color: white;
+}
+
+.input-align-table td{
+	text-align:left;
+}
+
+.input-align-table td:first-child{
+	text-align:right;
+}
+
+.input-align-table .dmg-table td{
+	text-align:center;
+	font-size:
+}
+
+.input-align-table .dmg-table td:first-child{
+	text-align:center;
+}
+
+.exp-table td {
+	text-align:left;
+}
+
+.exp-table td:first-child{
+	text-align:right;
+}
+
+.exp-table td:nth-child(3){
+	text-align:right;
+}
+
+.damage {
+	vertical-align: bottom;
+}
+
+input.ant-time-picker-input {
+	background-color: transparent;
+}
+
+</style>
+
