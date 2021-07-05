@@ -161,14 +161,22 @@ Required EXP for Level Up: {{ expNextLevel(charLevel).toFixed(0) }}
 </div>
 
 Your top three spots are<br>
+{{bestThreeMobs[0].value}}<br>
+{{bestThreeMobs[1].value}}<br>
+{{bestThreeMobs[2].value}}
+
 <div>
 <table class="sweetspot_table">
 	<thead>
 	<tr>
 		<th scope="col">Name</th>
 	      <th scope="col">HP</th>
+	      <th scope="col">Acc to hit 5%</th>
+	      <th scope="col">Acc to hit 100%</th>
 	      <th scope="col">Chance to hit %</th>	
-	      <th scope="col">Avg Swings to kill</th>	
+	      <th scope="col">Min hit to kill</th>	
+	      <th scope="col">Max Hit to kill</th>	
+	      <th scope="col">Avg Swing to Kill</th>	
 	      <th scope="col">Monster EXP</th>	
 	      <th scope="col">Monster EXP with multiplier </th>	
 	      <th scope="col">EXP per Swing</th>	
@@ -183,13 +191,17 @@ Your top three spots are<br>
 	>
 		<td>{{monster.name}}</td>
 		<td>{{monster.health}}</td>
+		<td>{{monster.accLow}}</td>
+		<td>{{monster.accHigh}}</td>
 		<td>{{chanceToHit(monster).toFixed(2)}}</td>
+		<td>{{minHitToKill(monster).toFixed(2)}}</td>
+		<td>{{maxHitToKill(monster).toFixed(2)}}</td>
 		<td>{{avgSwingToKill(monster).toFixed(2)}}</td>
 		<td>{{monster.exp}}</td>
 		<td>{{monsterExpMul(monster).toFixed(2)}}</td>
 		<td>{{expPerSwing(monster).toFixed(2)}}</td>
-		<!-- <td>{{monsterWeight[monster.name][charClass]}}</td>
-		<td>{{bestMobArray[monster.name]}}</td>  -->
+		<td>{{monsterWeight[monster.name][charClass]}}</td>
+		<td>{{bestMob(monster).toFixed(4)}}</td>
 	</tr> 
 	</tbody>
 </table>
@@ -219,10 +231,7 @@ export default defineComponent({
 	name: "SweetSpot",
 	setup() {
 		const monsters: Record<string, Monster> = monsterData;
-		const activeKey = ref("1");
-		const minDmg = ref("1");
-		const maxDmg = ref("2");
-		
+
 		// Code for double-hit skills
 		const multiplier = computed(() => {
 			switch(charClass.value) {
@@ -254,13 +263,15 @@ export default defineComponent({
 			return  ingameEXPMonst.value / monsters[monstName].exp;
 		})
 
-	
+		const minDmg = ref("1");
+		const maxDmg = ref("2");
+		
 		const accuracy = ref("2");
-		const critChance = ref("17");
-		const critDmg = ref("1");
+		const critChance = ref("0");
+		const critDmg = ref("0");
 
 		const charClass = ref("None");
-		const charSkill1 = ref("41");
+		const charSkill1 = ref("0");
 		const charSkill2 = ref("0");
 
 		const curEXPMonst = ref("None");
@@ -283,29 +294,45 @@ export default defineComponent({
 			"Journeyman"
 		];
 
-		/*const bestMobArray = computed(() => {
+		const bestMobArray = computed(() => {
 			let dict = {};
-			/*for(const [key, monster] of Object.entries(monsters)){
+			// Create a key/monster pair for the "Best Mob".
+			// This will later allow us to sort the keys, and obtain
+			// the corresponding monster.
+			for(const [key, monster] of Object.entries(monsters)){
 				let curMobCalc = bestMob(monster);		
-				dict[monster.name] = curMobCalc;
+				dict[curMobCalc] = monster.name;
 			}
 			return dict;
 		})
 	
 		const bestThreeMobs = computed(() => {
-			//let dict = bestMobArray;
-			//Get the number of keys - easy using the array 'length' property
-		 	var keys = Object.keys(dict);
+			let dict = bestMobArray.value;
+
+			// Obtain the keys (This is Best Mob)
+			var keys = Object.keys(dict);
+			
+			// Sort the keys to obtain our best mob
 			let i, len = keys.length; 
-			keys.sort();
-					var sortedDict = [];
+			keys.sort(function(a, b){return b-a});
+			var sortedDict = [];
+			
+			// If the first key is Infinity, remove it
+			if (keys[0] == "Infinity"){
+			    let removed = keys.splice(0,1);
+			}
+			
+			// Give us a sorted dir
 			for (i = 0; i < 3; i++){
 			    let k = keys[i];
 			    sortedDict.push({'key': k, 'value':dict[k]});
 			}
+			
+			// Check first key isn't Zero (No good mobs). If it is, change it to N/A
+			if (sortedDict[0].key == 0) sortedDict[0].value = "N/A";
+
 			return sortedDict;  
-			return 0;
-		})*/	
+		})	
 
 		const expNextLevel = (level): number => {
 			// Calculation taken from the Idleon toolbox
@@ -390,7 +417,10 @@ export default defineComponent({
 			return 1/hitChance;
 		}
 
-		/* The next two functions are not used in the calculations */
+		/* 
+		 * The next two functions are technically not the real min/max
+		 * They are used to calculate avgHitToKill.
+		 */
 		const minHitToKill = (monster: Monster): number => {
 			let hit = monster.health / (maxDmg.value*multiplier.value);
 			return Math.ceil(hit);	
@@ -400,46 +430,12 @@ export default defineComponent({
 			let hit = monster.health / (minDmg.value*multiplier.value);
 			return Math.ceil(hit);	
 		}
-		/***********************************************************/
 
 		const avgHitToKill = (monster: Monster): number => {
-			let sum = 0;
-
-			// Prevent high calculation loads.
-			// If the range is too high, this will become approximate guess
-			// of the avg number of hits needed to kill the mob
-			/*let offset = 1;
-			let maxNumCalc = 100000;
-			if(maxDmg.value - minDmg.value > maxNumCalc) {
-				offset = Math.round((maxDmg.value - minDmg.value)/maxNumCalc);
-			}
-
-			// Init variables
-			let critAvgDmg = 0;
-			let numElements = 0;
-			let curCritChance = critChance.value/100;
-			let curCritDmg = critDmg.value;
-
-			// Bound
-			if(curCritChance > 1) curCritChance = 1;
-			if(curCritChance < 0) curCritChance = 0;
-			if(curCritDmg < 1) curCritDmg = 1;
-			
-			// Calculate average hits
-			for (let i=minDmg.value; i <= maxDmg.value; i= i + offset) {
-				// Calculate average dmg including crits for this particular dmg number: i
-				critAvgDmg = (1 - curCritChance) * i + curCritChance * curCritDmg * i
-
-				// How many hits would it take to kill this monster at the current damage number
-				sum = sum + Math.ceil(monster.health/(critAvgDmg*multiplier.value));
-				numElements++;
-			}
-			return sum/numElements;
-			*/
 			let minHit = minHitToKill(monster);
 			let maxHit = maxHitToKill(monster);
 
-			return Math.ceil((minHit + maxHit)/2);
+			return ((minHit + maxHit)/2);
 		}
 
 		const avgSwingToKill = (monster: Monster): number => {
@@ -481,7 +477,6 @@ export default defineComponent({
 
 
 		return {
-		activeKey, 
 		monsters, monsterWeight, minDmg, maxDmg, multiplier, monstEXPMul,
 		accuracy, critChance, critDmg, curEXPMonst, ingameEXPMonst, 
 		charClass, charSkill1, charSkill2, 
@@ -490,7 +485,9 @@ export default defineComponent({
 		expNextLevel, timeToLevel,
 
 		chanceToHit, avgSwingToHit, minHitToKill, maxHitToKill, avgHitToKill,
-		avgSwingToKill, monsterExpMul, expPerSwing, bestMob };
+		avgSwingToKill, monsterExpMul, expPerSwing, bestMob,
+
+		bestMobArray, bestThreeMobs };
 	}
 });
 </script>
