@@ -39,20 +39,48 @@
       <div id="version-group" class="p-2">
         <h3>Last Updated</h3>
         <p>v1.22</p>
-        <p>June 28, 2021</p>
+        <p>July 6, 2021</p>
       </div>
     </div>
   </div>
   <!-- Display Materials -->
   <div v-if="recipe && quantity" class="text-light">
     <h4>Materials</h4>
-    <recipe-tree
-      :label="materials.name"
-      :nodes="materials.materials"
-      :quantity="1"
-      :depth="0"
-      :toCraft="Number(quantity)"
-    />
+    <!-- Select Display Type -->
+    <select v-model="display" class="" id="recipe-selector">
+      <option value="">Select a View Type</option>
+      <option value="list">List View</option>
+      <option value="tree">Tree View</option>
+    </select>
+    <div v-if="display">
+      <div v-if="display === 'list'">
+        <div
+          class="tree-menu border-top border-bottom"
+          v-for="(quantity, material) in listMaterials(materials)"
+          :key="`material-${material}`"
+        >
+          <GameAsset
+            :height="72"
+            :image="Assets.MaterialImage(material.replace(/ /g, '_'))"
+            :title="material"
+          >
+            <template #tooltip>
+              <div v-html="material"></div>
+            </template>
+          </GameAsset>
+          {{ quantity.toLocaleString() }} {{ material }}
+        </div>
+      </div>
+      <div v-else>
+        <recipe-tree
+          :label="materials.name"
+          :nodes="materials.materials"
+          :quantity="1"
+          :depth="0"
+          :toCraft="Number(quantity)"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -70,7 +98,8 @@ type MaterialObject = {
 
 type RecipeObject = {
   name: string;
-  materials: Array<MaterialObject>;
+  quantity: number;
+  materials: Array<RecipeObject>;
 };
 
 export default defineComponent({
@@ -79,10 +108,32 @@ export default defineComponent({
     GameAsset,
     RecipeTree
   },
+  methods: {
+    listMaterials(tree:RecipeObject) {
+      // Setup result
+      let result = {};
+      function flatten(current:RecipeObject) {
+        // console.log(current);
+        if(current.materials) {
+          current.materials.forEach(mat => {
+            flatten(mat);
+          })
+        } else {
+          let name = current.name;
+          let quantity = current.quantity;
+          if(result.hasOwnProperty(name)) { result[name] += quantity }
+          else { result[name] = quantity }
+        }
+      }
+      flatten(tree);
+      return result;
+    }
+  },
   setup() {
     const data: Record<string, RecipeObject> = calculatorData;
     const recipe = ref("");
     const quantity = ref("");
+    const display = ref("");
     const materials = computed(
       (): RecipeObject => {
         if (recipe.value === "") {
@@ -91,7 +142,7 @@ export default defineComponent({
         return data[recipe.value];
       }
     );
-    return { Assets, data, recipe, quantity, materials };
+    return { Assets, data, display, recipe, quantity, materials };
   },
 });
 </script>
