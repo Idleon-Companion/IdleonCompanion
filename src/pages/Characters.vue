@@ -68,7 +68,7 @@
               </div>
               <div class="d-flex flex-wrap modal-body">
                 <GameAsset
-                  v-for="(class_, i) in Class"
+                  v-for="(class_, i) in classes"
                   :key="i"
                   :image="Assets.ClassImage(class_)"
                   :height="72"
@@ -200,7 +200,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted } from "vue";
+import { computed, defineComponent } from "vue";
 import { useToast } from "vue-toastification";
 
 import CharacterCard from "~/components/CharacterCard.vue";
@@ -233,8 +233,15 @@ export default defineComponent({
     const { user } = useAuth();
     const { characters, charIndex, curCharacter, numCharacters } =
       useCharacters();
-
     const toast = useToast();
+    // Filter out class "All"
+    const classes = [];
+    for (const class_ in Class) {
+      if (class_ !== Class.All) {
+        classes.push(class_);
+      }
+    }
+
     const newCharacter = () => {
       let char = new Character();
       for (const skill of Skills) {
@@ -344,7 +351,7 @@ export default defineComponent({
       characters,
       charIndex,
       charChecklist,
-      Class,
+      classes,
       curCharacter,
       cycles,
       cycleIndex,
