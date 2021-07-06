@@ -23,12 +23,10 @@
       Pay2WinRow,
     },
     setup() {
-      let gold = Alch['Pay2Win'](50, 51, 0, 0, 0)[0];
-      gold = Util.goldToString(gold);
+      let gold = Util.goldToString(Alch.Pay2Win(50, 51, 0));
 
       return {   
-        gold,
-        
+        gold, 
       };
     },
   });

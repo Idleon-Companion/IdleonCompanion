@@ -37,7 +37,7 @@
 
 
 <script lang="ts">
-import { computed, defineComponent,} from "vue";
+import { computed, defineComponent, PropType,} from "vue";
 import { useState} from "~/State";
 import GameAsset from "~/components/GameAsset.vue";
 import { Assets, Growth } from "~/composables/Utilities";
@@ -54,19 +54,20 @@ export default defineComponent({
   props: {
     group: {
       required: true,
-      type: String,
+      type: String as PropType<Color>,
     },
     discount: {
       required: true,
-      type: Array,
+      type: Array as PropType<number[]>,
     },
     idx: {
       required: true, 
       type: Number,
     }
   },
+  emits: ["custom-change"],
   methods: {
-    customChange (event) {
+    customChange (event: { target: { value: string; id: number; }; }) {
       console.log("Handle leveling bubble input")
       console.log("Only emit when id == 14 or (id == 6 and group == yellow)")
       this.alchemy.upgrades[this.props.group][this.props.idx] = parseInt(event.target.value);
@@ -84,16 +85,6 @@ export default defineComponent({
       set: (value) => (state.value.alchemy = value),
     });
    
-    //  TODO: I think this should be done in State.ts
-    //    Possibly also needed for goals.
-    // if (alchemy.value.upgrades[props.group] !== undefined) {
-    //   let upgradeDiff = amountBubbles - alchemy.value.upgrades[props.group].length;
-    //   for (let i = 0; i < upgradeDiff; i += 1) {
-    //     console.log(`Adding values in ${props.group} ${upgradeDiff}`)
-    //     alchemy.value.upgrades[props.group].push(0);
-    //   }
-    // } 
-
     // TODO:  This could maybe move to the customChange method
     const handleAlchemyGoal = (ev: Event, color: Color, i: number) => {
       let target = <HTMLInputElement>ev.target;

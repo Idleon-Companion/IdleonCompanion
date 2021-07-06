@@ -4,7 +4,7 @@ import { Growth } from "./Utilities";
 export type AlchemyData = {
   vials: Record<string, number>;
   upgrades: Record<Color, number[]>;
-  goals: Record<Color, number>[];
+  goals: Record<Color, number[]>;
 };
 
 export type Color = "Orange" | "Green" | "Purple" | "Yellow";
@@ -408,12 +408,12 @@ export class Alch {
     a.forEach((b) => console.log(b));
 
     // var a = {"name"}
-    var eff = Alch.effectChange(a[type], levelNow, levelWant);
-    console.log(`Result: ${eff} | ${totalSum}`);
+    // var eff = Alch.effectChange(a[type], levelNow, levelWant);
+    // console.log(`Result: ${eff} | ${totalSum}`);
     // var d = eff.concat(goldToString(totalSum));
     // superResult.push(d);
     
     // superResult.forEach((a) => console.log(a));
-    return [totalSum, eff];
+    return totalSum;
   };
 }

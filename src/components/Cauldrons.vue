@@ -10,7 +10,7 @@
 
   <!-- Cauldron selector -->
   <ul class="nav nav-pills nav-fill mt-3" role="tablist" :style="{background: colorTo(activeGroup, 'Hex')}">
-    <li v-for="(tab, index) in colors" :key="tab" class="nav-item nav-item-alch">
+    <li v-for="tab in colors" :key="tab" class="nav-item nav-item-alch">
       <button
         class="nav-link text-dark"
         data-bs-toggle="tab"
@@ -18,7 +18,7 @@
         type="button"
         role="tab"
         aria-controls="profile"
-        :aria-selected="tab === Orange"
+        :aria-selected="tab === 'Orange'"
         :style="{background: colorTo(tab, 'Hex')}"
         v-on:click="setGroup(tab)"
       >
