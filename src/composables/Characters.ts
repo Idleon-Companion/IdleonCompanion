@@ -3,6 +3,7 @@ import { useState } from "~/State";
 import { checklistData } from "~/composables/Checklist";
 
 export enum Class {
+  All = "All", // Utility for any class
   Beginner = "Beginner",
   Warrior = "Warrior",
   Archer = "Archer",
