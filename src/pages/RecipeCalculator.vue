@@ -39,7 +39,7 @@
       <div id="version-group" class="p-2">
         <h3>Last Updated</h3>
         <p>v1.22</p>
-        <p>July 6, 2021</p>
+        <p>July 7, 2021</p>
       </div>
     </div>
   </div>

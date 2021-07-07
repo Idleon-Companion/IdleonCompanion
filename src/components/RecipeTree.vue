@@ -52,7 +52,7 @@
     },
     props: {
       label: { type: String, required: true },
-      nodes: { type: Object, required: true },
+      nodes: { type: Object, required: false },
       quantity: { type: Number, required: true },
       depth: { type: Number, required: true },
       toCraft: { type: Number, required: true }
