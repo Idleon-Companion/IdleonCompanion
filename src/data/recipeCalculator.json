@@ -1,6 +1,7 @@
 {
   "1": {
     "name": "Boxing Gloves",
+    "quantity": 1,
     "materials": [
       {
         "name": "Crimson String",
@@ -14,6 +15,7 @@
   },
   "2": {
     "name": "Wooden Spear",
+    "quantity": 1,
     "materials": [
       {
         "name": "Spore Cap",
@@ -27,6 +29,7 @@
   },
   "3": {
     "name": "Wooden Bow",
+    "quantity": 1,
     "materials": [
       {
         "name": "Spore Cap",
@@ -40,6 +43,7 @@
   },
   "4": {
     "name": "Gnarled Wand",
+    "quantity": 1,
     "materials": [
       {
         "name": "Spore Cap",
@@ -53,6 +57,7 @@
   },
   "5": {
     "name": "Farmer Brim",
+    "quantity": 1,
     "materials": [
       {
         "name": "Spore Cap",
@@ -66,6 +71,7 @@
   },
   "6": {
     "name": "Orange Tee",
+    "quantity": 1,
     "materials": [
       {
         "name": "Spore Cap",
@@ -79,6 +85,7 @@
   },
   "7": {
     "name": "Torn Jeans",
+    "quantity": 1,
     "materials": [
       {
         "name": "Frog Leg",
@@ -96,6 +103,7 @@
   },
   "8": {
     "name": "Flip Flops",
+    "quantity": 1,
     "materials": [
       {
         "name": "Bean Slices",
@@ -113,6 +121,7 @@
   },
   "9": {
     "name": "Copper Pickaxe",
+    "quantity": 1,
     "materials": [
       {
         "name": "Copper Bar",
@@ -126,6 +135,7 @@
   },
   "10": {
     "name": "Cramped Mining Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Copper Ore",
@@ -135,6 +145,7 @@
   },
   "11": {
     "name": "Copper Chopper",
+    "quantity": 1,
     "materials": [
       {
         "name": "Copper Bar",
@@ -152,6 +163,7 @@
   },
   "12": {
     "name": "Cramped Choppin Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Oak Logs",
@@ -165,6 +177,7 @@
   },
   "13": {
     "name": "Leather Cap",
+    "quantity": 1,
     "materials": [
       {
         "name": "Frog Leg",
@@ -182,6 +195,7 @@
   },
   "14": {
     "name": "The Stingers",
+    "quantity": 1,
     "materials": [
       {
         "name": "Copper Bar",
@@ -199,6 +213,7 @@
   },
   "15": {
     "name": "Cramped Food Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Nomwich",
@@ -220,6 +235,7 @@
   },
   "16": {
     "name": "Cramped Material Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Trusty Nails",
@@ -237,6 +253,7 @@
   },
   "17": {
     "name": "Copper Helmet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Copper Bar",
@@ -250,6 +267,7 @@
   },
   "18": {
     "name": "Copper Platebody",
+    "quantity": 1,
     "materials": [
       {
         "name": "Copper Bar",
@@ -263,6 +281,7 @@
   },
   "19": {
     "name": "Copper Platelegs",
+    "quantity": 1,
     "materials": [
       {
         "name": "Copper Bar",
@@ -276,6 +295,7 @@
   },
   "20": {
     "name": "Copper Boots",
+    "quantity": 1,
     "materials": [
       {
         "name": "Copper Bar",
@@ -285,6 +305,7 @@
   },
   "21": {
     "name": "Militia Helm",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Bar",
@@ -312,6 +333,7 @@
   },
   "22": {
     "name": "Thief Hood",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Bar",
@@ -339,6 +361,7 @@
   },
   "23": {
     "name": "Top Hat",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Bar",
@@ -366,6 +389,7 @@
   },
   "24": {
     "name": "Party Hat",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Bar",
@@ -389,6 +413,7 @@
   },
   "25": {
     "name": "Steel Axe",
+    "quantity": 1,
     "materials": [
       {
         "name": "Slime Sludge",
@@ -402,6 +427,7 @@
   },
   "26": {
     "name": "Birch Longbow",
+    "quantity": 1,
     "materials": [
       {
         "name": "Slime Sludge",
@@ -415,6 +441,7 @@
   },
   "27": {
     "name": "Quarterstaff",
+    "quantity": 1,
     "materials": [
       {
         "name": "Slime Sludge",
@@ -428,6 +455,7 @@
   },
   "28": {
     "name": "Copper Band",
+    "quantity": 1,
     "materials": [
       {
         "name": "Copper Bar",
@@ -437,6 +465,7 @@
   },
   "29": {
     "name": "Iron Pickaxe",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Bar",
@@ -450,6 +479,7 @@
   },
   "30": {
     "name": "Small Mining Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Ore",
@@ -459,6 +489,7 @@
   },
   "31": {
     "name": "Iron Hatchet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Jungle Logs",
@@ -472,6 +503,7 @@
   },
   "32": {
     "name": "Small Choppin Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Bleach Logs",
@@ -481,6 +513,7 @@
   },
   "33": {
     "name": "Iron Helmet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Bar",
@@ -494,6 +527,7 @@
   },
   "34": {
     "name": "Iron Platebody",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Bar",
@@ -507,6 +541,7 @@
   },
   "35": {
     "name": "Iron Platelegs",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Bar",
@@ -520,6 +555,7 @@
   },
   "36": {
     "name": "Anvil Tab 2",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Bar",
@@ -541,6 +577,7 @@
   },
   "37": {
     "name": "Blue Tee",
+    "quantity": 1,
     "materials": [
       {
         "name": "Spore Cap",
@@ -568,6 +605,7 @@
   },
   "38": {
     "name": "Sleek Shank",
+    "quantity": 1,
     "materials": [
       {
         "name": "Thread",
@@ -619,6 +657,7 @@
   },
   "39": {
     "name": "Iron Boots",
+    "quantity": 1,
     "materials": [
       {
         "name": "Trusty Nails",
@@ -642,6 +681,7 @@
   },
   "40": {
     "name": "Steel Band",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Bar",
@@ -651,6 +691,7 @@
   },
   "41": {
     "name": "Purple Tupacband",
+    "quantity": 1,
     "materials": [
       {
         "name": "Bleach Logs",
@@ -668,6 +709,7 @@
   },
   "42": {
     "name": "Icing Ironbite",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Ore",
@@ -681,6 +723,7 @@
   },
   "43": {
     "name": "Saucy Logfries",
+    "quantity": 1,
     "materials": [
       {
         "name": "Jungle Logs",
@@ -694,6 +737,7 @@
   },
   "44": {
     "name": "Goo Galoshes",
+    "quantity": 1,
     "materials": [
       {
         "name": "Slime Sludge",
@@ -717,6 +761,7 @@
   },
   "45": {
     "name": "Fur Shirt",
+    "quantity": 1,
     "materials": [
       {
         "name": "Goblin Ear",
@@ -730,6 +775,7 @@
   },
   "46": {
     "name": "Hide Shirt",
+    "quantity": 1,
     "materials": [
       {
         "name": "Bleach Logs",
@@ -767,6 +813,7 @@
   },
   "47": {
     "name": "Eco Friendly Oil",
+    "quantity": 1,
     "materials": [
       {
         "name": "Crude Oil",
@@ -780,6 +827,7 @@
   },
   "48": {
     "name": "Dooble Goopi",
+    "quantity": 1,
     "materials": [
       {
         "name": "Slime Sludge",
@@ -809,6 +857,7 @@
   },
   "49": {
     "name": "Bleached Designer Wode Patch Pants",
+    "quantity": 1,
     "materials": [
       {
         "name": "Plank",
@@ -840,6 +889,7 @@
   },
   "50": {
     "name": "Dirty Coal Miner Baggy Soot Pants",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Ore",
@@ -867,6 +917,7 @@
   },
   "51": {
     "name": "Peanut",
+    "quantity": 1,
     "materials": [
       {
         "name": "Hot Dog",
@@ -884,6 +935,7 @@
   },
   "52": {
     "name": "Golden Peanut",
+    "quantity": 1,
     "materials": [
       {
         "name": "Gold Bar",
@@ -911,6 +963,7 @@
   },
   "53": {
     "name": "Blunderbag",
+    "quantity": 1,
     "materials": [
       {
         "name": "Spore Tee",
@@ -928,6 +981,7 @@
   },
   "54": {
     "name": "Purple Tee",
+    "quantity": 1,
     "materials": [
       {
         "name": "Red Spore Cap",
@@ -955,6 +1009,7 @@
   },
   "55": {
     "name": "Green Tee",
+    "quantity": 1,
     "materials": [
       {
         "name": "Thread",
@@ -982,6 +1037,7 @@
   },
   "56": {
     "name": "Black Tee",
+    "quantity": 1,
     "materials": [
       {
         "name": "Orange Tee",
@@ -1085,6 +1141,7 @@
   },
   "57": {
     "name": "Blunderhills NPC Completion Token",
+    "quantity": 1,
     "materials": [
       {
         "name": "Easy Blunderhills NPC Token",
@@ -1156,6 +1213,7 @@
   },
   "58": {
     "name": "Blunder Skills Completion Token",
+    "quantity": 1,
     "materials": [
       {
         "name": "Platinum Bar",
@@ -1187,6 +1245,7 @@
   },
   "59": {
     "name": "Blunderhills Misc Completion Token",
+    "quantity": 1,
     "materials": [
       {
         "name": "Golden Plop",
@@ -1232,6 +1291,7 @@
   },
   "60": {
     "name": "Easy Blunderhills NPC Token",
+    "quantity": 1,
     "materials": [
       {
         "name": "Woodsman Token",
@@ -1253,6 +1313,7 @@
   },
   "61": {
     "name": "Med Blunderhills NPC Token",
+    "quantity": 1,
     "materials": [
       {
         "name": "Krunk Token",
@@ -1274,6 +1335,7 @@
   },
   "62": {
     "name": "Hard Blunderhills NPC Token",
+    "quantity": 1,
     "materials": [
       {
         "name": "Picnic Token",
@@ -1295,6 +1357,7 @@
   },
   "63": {
     "name": "Amarok Helmet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Amarok Slab",
@@ -1312,6 +1375,7 @@
   },
   "64": {
     "name": "Amarok Bodyplate",
+    "quantity": 1,
     "materials": [
       {
         "name": "Amarok Slab",
@@ -1329,6 +1393,7 @@
   },
   "65": {
     "name": "Amarok Hinds",
+    "quantity": 1,
     "materials": [
       {
         "name": "Amarok Slab",
@@ -1346,6 +1411,7 @@
   },
   "66": {
     "name": "Amarok Paws",
+    "quantity": 1,
     "materials": [
       {
         "name": "Amarok Slab",
@@ -1383,6 +1449,7 @@
   },
   "67": {
     "name": "Fishing Overalls",
+    "quantity": 1,
     "materials": [
       {
         "name": "Goldfish",
@@ -1424,6 +1491,7 @@
   },
   "68": {
     "name": "Bandito Pantaloon",
+    "quantity": 1,
     "materials": [
       {
         "name": "Fly",
@@ -1461,6 +1529,7 @@
   },
   "69": {
     "name": "Chaotic Amarok Pendant",
+    "quantity": 1,
     "materials": [
       {
         "name": "Chaotic Amarok Slab",
@@ -1478,6 +1547,7 @@
   },
   "70": {
     "name": "Copper Fish Rod",
+    "quantity": 1,
     "materials": [
       {
         "name": "Copper Bar",
@@ -1491,6 +1561,7 @@
   },
   "71": {
     "name": "Cramped Fish Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Goldfish",
@@ -1500,6 +1571,7 @@
   },
   "72": {
     "name": "Copper Netted Net",
+    "quantity": 1,
     "materials": [
       {
         "name": "Jungle Logs",
@@ -1513,6 +1585,7 @@
   },
   "73": {
     "name": "Cramped Bug Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Fly",
@@ -1522,6 +1595,7 @@
   },
   "74": {
     "name": "Iron Fishing Rod",
+    "quantity": 1,
     "materials": [
       {
         "name": "Iron Bar",
@@ -1539,6 +1613,7 @@
   },
   "75": {
     "name": "Small Fish Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Hermit Can",
@@ -1552,6 +1627,7 @@
   },
   "76": {
     "name": "Reinforced Net",
+    "quantity": 1,
     "materials": [
       {
         "name": "Forest Fibres",
@@ -1569,6 +1645,7 @@
   },
   "77": {
     "name": "Small Bug Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Butterfly",
@@ -1582,6 +1659,7 @@
   },
   "78": {
     "name": "Silkskin Traps",
+    "quantity": 1,
     "materials": [
       {
         "name": "Poison Froge",
@@ -1595,6 +1673,7 @@
   },
   "79": {
     "name": "Small Critter Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Froge",
@@ -1608,6 +1687,7 @@
   },
   "80": {
     "name": "Ceramic Skull",
+    "quantity": 1,
     "materials": [
       {
         "name": "Forest Soul",
@@ -1621,6 +1701,7 @@
   },
   "81": {
     "name": "Small Soul Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Forest Soul",
@@ -1634,6 +1715,7 @@
   },
   "82": {
     "name": "Gold Helmet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Fly",
@@ -1661,6 +1743,7 @@
   },
   "83": {
     "name": "Gold Platebody",
+    "quantity": 1,
     "materials": [
       {
         "name": "Pocket Sand",
@@ -1688,6 +1771,7 @@
   },
   "84": {
     "name": "Gold Platelegs",
+    "quantity": 1,
     "materials": [
       {
         "name": "Goldfish",
@@ -1715,6 +1799,7 @@
   },
   "85": {
     "name": "Gold Boots",
+    "quantity": 1,
     "materials": [
       {
         "name": "Gold Bar",
@@ -1752,6 +1837,7 @@
   },
   "86": {
     "name": "Bandage Wraps",
+    "quantity": 1,
     "materials": [
       {
         "name": "Cue Tape",
@@ -1783,6 +1869,7 @@
   },
   "87": {
     "name": "Royal Bayonet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Forest Fibres",
@@ -1810,6 +1897,7 @@
   },
   "88": {
     "name": "Spiked Menace",
+    "quantity": 1,
     "materials": [
       {
         "name": "Gold Bar",
@@ -1837,6 +1925,7 @@
   },
   "89": {
     "name": "Starlight",
+    "quantity": 1,
     "materials": [
       {
         "name": "Chain Link",
@@ -1864,6 +1953,7 @@
   },
   "90": {
     "name": "Gold Pickaxe",
+    "quantity": 1,
     "materials": [
       {
         "name": "Megalodon Tooth",
@@ -1891,6 +1981,7 @@
   },
   "91": {
     "name": "Average Mining Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Gold Ore",
@@ -1920,6 +2011,7 @@
   },
   "92": {
     "name": "Golden Axe",
+    "quantity": 1,
     "materials": [
       {
         "name": "Golden Dubloon",
@@ -1947,6 +2039,7 @@
   },
   "93": {
     "name": "Average Choppin Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Forest Fibres",
@@ -1980,6 +2073,7 @@
   },
   "94": {
     "name": "Gold Fishing Rod",
+    "quantity": 1,
     "materials": [
       {
         "name": "Hermit Can",
@@ -2011,6 +2105,7 @@
   },
   "95": {
     "name": "Average Fish Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Hermit Can",
@@ -2044,6 +2139,7 @@
   },
   "96": {
     "name": "Gilded Net",
+    "quantity": 1,
     "materials": [
       {
         "name": "Golden Dubloon",
@@ -2075,6 +2171,7 @@
   },
   "97": {
     "name": "Average Bug Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Butterfly",
@@ -2108,6 +2205,7 @@
   },
   "98": {
     "name": "Defenders Dignity",
+    "quantity": 1,
     "materials": [
       {
         "name": "Goldfish",
@@ -2125,6 +2223,7 @@
   },
   "99": {
     "name": "Strung Bludgeon",
+    "quantity": 1,
     "materials": [
       {
         "name": "Bullfrog Horn",
@@ -2142,6 +2241,7 @@
   },
   "100": {
     "name": "Average Food Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Meat Pie",
@@ -2201,6 +2301,7 @@
   },
   "101": {
     "name": "Average Material Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Glass Shard",
@@ -2232,6 +2333,7 @@
   },
   "102": {
     "name": "Platinum Helmet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Jellyfish",
@@ -2259,6 +2361,7 @@
   },
   "103": {
     "name": "Platinum Platbody",
+    "quantity": 1,
     "materials": [
       {
         "name": "Potato Remains",
@@ -2286,6 +2389,7 @@
   },
   "104": {
     "name": "Platinum Shins",
+    "quantity": 1,
     "materials": [
       {
         "name": "Sentient Cereal",
@@ -2313,6 +2417,7 @@
   },
   "105": {
     "name": "Platinum Boots",
+    "quantity": 1,
     "materials": [
       {
         "name": "Tropilogs",
@@ -2364,6 +2469,7 @@
   },
   "106": {
     "name": "Bullet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Forest Fibres",
@@ -2377,6 +2483,7 @@
   },
   "107": {
     "name": "Enforced Slasher",
+    "quantity": 1,
     "materials": [
       {
         "name": "Nuget Cake",
@@ -2418,6 +2525,7 @@
   },
   "108": {
     "name": "Pharoah Bow",
+    "quantity": 1,
     "materials": [
       {
         "name": "Woodular Circle",
@@ -2459,6 +2567,7 @@
   },
   "109": {
     "name": "Crows Nest",
+    "quantity": 1,
     "materials": [
       {
         "name": "Golden Plop",
@@ -2500,6 +2609,7 @@
   },
   "110": {
     "name": "Platinum Pickaxe",
+    "quantity": 1,
     "materials": [
       {
         "name": "Platinum Bar",
@@ -2541,6 +2651,7 @@
   },
   "111": {
     "name": "Sizable Mining Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Platinum Ore",
@@ -2580,6 +2691,7 @@
   },
   "112": {
     "name": "Plat Hatchet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Tropilogs",
@@ -2621,6 +2733,7 @@
   },
   "113": {
     "name": "Sizable Choppin Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Tropilogs",
@@ -2664,6 +2777,7 @@
   },
   "114": {
     "name": "Plat Fishing Rod",
+    "quantity": 1,
     "materials": [
       {
         "name": "Bloach",
@@ -2709,6 +2823,7 @@
   },
   "115": {
     "name": "Sizable Fish Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Bloach",
@@ -2752,6 +2867,7 @@
   },
   "116": {
     "name": "Platinet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Fruitfly",
@@ -2797,6 +2913,7 @@
   },
   "117": {
     "name": "Sizable Bug Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Fruitfly",
@@ -2840,6 +2957,7 @@
   },
   "118": {
     "name": "Sizable Food Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Golden Meat Pie",
@@ -2913,6 +3031,7 @@
   },
   "119": {
     "name": "Sizable Materials Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Golden Plop",
@@ -2958,6 +3077,7 @@
   },
   "120": {
     "name": "Anvil Tab 3",
+    "quantity": 1,
     "materials": [
       {
         "name": "Platinum Bar",
@@ -2979,6 +3099,7 @@
   },
   "121": {
     "name": "Empty Box",
+    "quantity": 1,
     "materials": [
       {
         "name": "Hermit Can",
@@ -2996,6 +3117,7 @@
   },
   "122": {
     "name": "Googley Eyes",
+    "quantity": 1,
     "materials": [
       {
         "name": "Woodular Circle",
@@ -3013,6 +3135,7 @@
   },
   "123": {
     "name": "FMJ Bullet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Gold Ore",
@@ -3036,6 +3159,7 @@
   },
   "124": {
     "name": "Viking Cap",
+    "quantity": 1,
     "materials": [
       {
         "name": "Gold Bar",
@@ -3077,6 +3201,7 @@
   },
   "125": {
     "name": "Sleek Coif",
+    "quantity": 1,
     "materials": [
       {
         "name": "Tropilogs",
@@ -3118,6 +3243,7 @@
   },
   "126": {
     "name": "Witch Hat",
+    "quantity": 1,
     "materials": [
       {
         "name": "Corn Kernels",
@@ -3159,6 +3285,7 @@
   },
   "127": {
     "name": "Studded Hide",
+    "quantity": 1,
     "materials": [
       {
         "name": "Megalodon Tooth",
@@ -3210,6 +3337,7 @@
   },
   "128": {
     "name": "Feral Leathering",
+    "quantity": 1,
     "materials": [
       {
         "name": "Stick",
@@ -3237,6 +3365,7 @@
   },
   "129": {
     "name": "Furled Robes",
+    "quantity": 1,
     "materials": [
       {
         "name": "Tattered Cloth",
@@ -3254,6 +3383,7 @@
   },
   "130": {
     "name": "Cavern Trekkers",
+    "quantity": 1,
     "materials": [
       {
         "name": "Distilled Water",
@@ -3309,6 +3439,7 @@
   },
   "131": {
     "name": "Angler Boots",
+    "quantity": 1,
     "materials": [
       {
         "name": "Distilled Water",
@@ -3364,6 +3495,7 @@
   },
   "132": {
     "name": "Logger Heels",
+    "quantity": 1,
     "materials": [
       {
         "name": "Distilled Water",
@@ -3419,6 +3551,7 @@
   },
   "133": {
     "name": "Bandito Boots",
+    "quantity": 1,
     "materials": [
       {
         "name": "Distilled Water",
@@ -3474,6 +3607,7 @@
   },
   "134": {
     "name": "Slurpin Herm",
+    "quantity": 1,
     "materials": [
       {
         "name": "Hermit Can",
@@ -3487,6 +3621,7 @@
   },
   "135": {
     "name": "Buttered Toasted Butter",
+    "quantity": 1,
     "materials": [
       {
         "name": "Butterfly",
@@ -3500,6 +3635,7 @@
   },
   "136": {
     "name": "Dootjat Eye",
+    "quantity": 1,
     "materials": [
       {
         "name": "Silver Antique",
@@ -3517,6 +3653,7 @@
   },
   "137": {
     "name": "Sandy Satchel",
+    "quantity": 1,
     "materials": [
       {
         "name": "Golden Plop",
@@ -3534,6 +3671,7 @@
   },
   "138": {
     "name": "Efaunt Helmet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Ripped Tunic",
@@ -3569,6 +3707,7 @@
   },
   "139": {
     "name": "Efaunt Ribcage",
+    "quantity": 1,
     "materials": [
       {
         "name": "Ripped Tunic",
@@ -3586,6 +3725,7 @@
   },
   "140": {
     "name": "Efaunt Hipilium",
+    "quantity": 1,
     "materials": [
       {
         "name": "Ripped Tunic",
@@ -3603,6 +3743,7 @@
   },
   "141": {
     "name": "Efaunts Broken Ankles",
+    "quantity": 1,
     "materials": [
       {
         "name": "Ripped Tunic",
@@ -3668,6 +3809,7 @@
   },
   "142": {
     "name": "Efaunt Trunculus",
+    "quantity": 1,
     "materials": [
       {
         "name": "Ribbed Tunic",
@@ -3755,6 +3897,7 @@
   },
   "143": {
     "name": "Wooden Traps",
+    "quantity": 1,
     "materials": [
       {
         "name": "Mutant Crabbo",
@@ -3768,6 +3911,7 @@
   },
   "144": {
     "name": "Sizable Critter Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Crabbo",
@@ -3781,6 +3925,7 @@
   },
   "145": {
     "name": "Horned Skull",
+    "quantity": 1,
     "materials": [
       {
         "name": "Dune Soul",
@@ -3794,6 +3939,7 @@
   },
   "146": {
     "name": "Sizable Soul Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Dune Soul",
@@ -3807,6 +3953,7 @@
   },
   "147": {
     "name": "Yumyum Desert NPC Completion Token",
+    "quantity": 1,
     "materials": [
       {
         "name": "Easy Yumyum Dez NPC Token",
@@ -3878,6 +4025,7 @@
   },
   "148": {
     "name": "Yumyum Skills Completion Token",
+    "quantity": 1,
     "materials": [
       {
         "name": "Bloach",
@@ -3895,6 +4043,7 @@
   },
   "149": {
     "name": "Yumyum Misc Completion Token",
+    "quantity": 1,
     "materials": [
       {
         "name": "Minuteglass",
@@ -3948,6 +4097,7 @@
   },
   "150": {
     "name": "Easy Yumyum Dez NPC Token",
+    "quantity": 1,
     "materials": [
       {
         "name": "Bandit Bob Token",
@@ -3969,6 +4119,7 @@
   },
   "151": {
     "name": "Med Yumyum Dez NPC Token",
+    "quantity": 1,
     "materials": [
       {
         "name": "Carpetiem Token",
@@ -3990,6 +4141,7 @@
   },
   "152": {
     "name": "Hard Yumyum Dez NPC Token",
+    "quantity": 1,
     "materials": [
       {
         "name": "Loominadi Token",
@@ -4011,6 +4163,7 @@
   },
   "153": {
     "name": "Dementia Helmet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Froge",
@@ -4052,6 +4205,7 @@
   },
   "154": {
     "name": "Dementia Body",
+    "quantity": 1,
     "materials": [
       {
         "name": "Forest Soul",
@@ -4093,6 +4247,7 @@
   },
   "155": {
     "name": "Dementia Shins",
+    "quantity": 1,
     "materials": [
       {
         "name": "Floof Ploof",
@@ -4134,6 +4289,7 @@
   },
   "156": {
     "name": "Dementia Boots",
+    "quantity": 1,
     "materials": [
       {
         "name": "Poison Froge",
@@ -4199,6 +4355,7 @@
   },
   "157": {
     "name": "Uninflated Glove",
+    "quantity": 1,
     "materials": [
       {
         "name": "Melty Cube",
@@ -4240,6 +4397,7 @@
   },
   "158": {
     "name": "The Ice Breaker",
+    "quantity": 1,
     "materials": [
       {
         "name": "Melty Cube",
@@ -4295,6 +4453,7 @@
   },
   "159": {
     "name": "Blizzard Bow",
+    "quantity": 1,
     "materials": [
       {
         "name": "Forest Soul",
@@ -4350,6 +4509,7 @@
   },
   "160": {
     "name": "Spriggly Storm",
+    "quantity": 1,
     "materials": [
       {
         "name": "Tundra Logs",
@@ -4405,6 +4565,7 @@
   },
   "161": {
     "name": "Dementia Pickaxe",
+    "quantity": 1,
     "materials": [
       {
         "name": "Dementia Bar",
@@ -4460,6 +4621,7 @@
   },
   "162": {
     "name": "Big Mining Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Dementia Ore",
@@ -4509,6 +4671,7 @@
   },
   "163": {
     "name": "Dementia Dicer",
+    "quantity": 1,
     "materials": [
       {
         "name": "Tundra Logs",
@@ -4564,6 +4727,7 @@
   },
   "164": {
     "name": "Big Choppin Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Tundra Logs",
@@ -4617,6 +4781,7 @@
   },
   "165": {
     "name": "Dementia Rod for Fishing",
+    "quantity": 1,
     "materials": [
       {
         "name": "Dementia Bar",
@@ -4676,6 +4841,7 @@
   },
   "166": {
     "name": "Big Fish Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Crescent Scropie",
@@ -4733,6 +4899,7 @@
   },
   "167": {
     "name": "Dementia Net",
+    "quantity": 1,
     "materials": [
       {
         "name": "Mosquisnow",
@@ -4792,6 +4959,7 @@
   },
   "168": {
     "name": "Big Bug Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Mosquisnow",
@@ -4845,6 +5013,7 @@
   },
   "169": {
     "name": "Natural Traps",
+    "quantity": 1,
     "materials": [
       {
         "name": "Nakeo Moleo",
@@ -4872,6 +5041,7 @@
   },
   "170": {
     "name": "Big Critter Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Mousey",
@@ -4895,6 +5065,7 @@
   },
   "171": {
     "name": "Prickle Skull",
+    "quantity": 1,
     "materials": [
       {
         "name": "Rooted Soul",
@@ -4922,6 +5093,7 @@
   },
   "172": {
     "name": "Big Soul Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Rooted Soul",
@@ -4945,6 +5117,7 @@
   },
   "173": {
     "name": "Big Food Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Yeti Ham",
@@ -5056,6 +5229,7 @@
   },
   "174": {
     "name": "Big Materials Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Sticky Stick",
@@ -5115,6 +5289,7 @@
   },
   "175": {
     "name": "Void Imperium Helmet",
+    "quantity": 1,
     "materials": [
       {
         "name": "Spontaneity Salts",
@@ -5174,6 +5349,7 @@
   },
   "176": {
     "name": "Void Imperium Platebody",
+    "quantity": 1,
     "materials": [
       {
         "name": "Audio Cord",
@@ -5233,6 +5409,7 @@
   },
   "177": {
     "name": "Void Imperium Shardshins",
+    "quantity": 1,
     "materials": [
       {
         "name": "Wispy Lumber",
@@ -5292,6 +5469,7 @@
   },
   "178": {
     "name": "Void Imperium Kicks",
+    "quantity": 1,
     "materials": [
       {
         "name": "Flycicle",
@@ -5375,6 +5553,7 @@
   },
   "179": {
     "name": "Deuscythe",
+    "quantity": 1,
     "materials": [
       {
         "name": "Black Lense",
@@ -5448,6 +5627,7 @@
   },
   "180": {
     "name": "Blackhole Bow",
+    "quantity": 1,
     "materials": [
       {
         "name": "Black Lense",
@@ -5521,6 +5701,7 @@
   },
   "181": {
     "name": "Grey Gatsby",
+    "quantity": 1,
     "materials": [
       {
         "name": "Black Lense",
@@ -5594,6 +5775,7 @@
   },
   "182": {
     "name": "Void Imperium Pik",
+    "quantity": 1,
     "materials": [
       {
         "name": "Void Bar",
@@ -5663,6 +5845,7 @@
   },
   "183": {
     "name": "Large Mining Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Void Ore",
@@ -5722,6 +5905,7 @@
   },
   "184": {
     "name": "Void Imperium Axe",
+    "quantity": 1,
     "materials": [
       {
         "name": "Wispy Lumber",
@@ -5791,6 +5975,7 @@
   },
   "185": {
     "name": "Large Choppin Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Wispy Lumber",
@@ -5854,6 +6039,7 @@
   },
   "186": {
     "name": "Void Imperium Rod",
+    "quantity": 1,
     "materials": [
       {
         "name": "Spontaneity Salts",
@@ -5931,6 +6117,7 @@
   },
   "187": {
     "name": "Large Fish Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Bloach",
@@ -5998,6 +6185,7 @@
   },
   "188": {
     "name": "Void Imperium Net",
+    "quantity": 1,
     "materials": [
       {
         "name": "Flycicle",
@@ -6071,6 +6259,7 @@
   },
   "189": {
     "name": "Large Bug Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Flycicle",
@@ -6134,6 +6323,7 @@
   },
   "190": {
     "name": "Steel Traps",
+    "quantity": 1,
     "materials": [
       {
         "name": "Eternal Lord of The Undying Ember",
@@ -6175,6 +6365,7 @@
   },
   "191": {
     "name": "Large Critter Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Pingy",
@@ -6208,6 +6399,7 @@
   },
   "192": {
     "name": "Manifested Skull",
+    "quantity": 1,
     "materials": [
       {
         "name": "Frigid Soul",
@@ -6249,6 +6441,7 @@
   },
   "193": {
     "name": "Large Soul Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Rooted Soul",
@@ -6282,6 +6475,7 @@
   },
   "194": {
     "name": "Large Food Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Golden Ham",
@@ -6431,6 +6625,7 @@
   },
   "195": {
     "name": "Large Materials Pouch",
+    "quantity": 1,
     "materials": [
       {
         "name": "Audio Cord",
@@ -6504,6 +6699,7 @@
   },
   "196": {
     "name": "Anvil Tab 4",
+    "quantity": 1,
     "materials": [
       {
         "name": "Not Yet",
@@ -6525,6 +6721,7 @@
   },
   "197": {
     "name": "Mark of Member",
+    "quantity": 1,
     "materials": [
       {
         "name": "Grandma Disguise",
@@ -6598,6 +6795,7 @@
   },
   "198": {
     "name": "Murmillo Helm",
+    "quantity": 1,
     "materials": [
       {
         "name": "Dioxide Synthesis",
@@ -6667,6 +6865,7 @@
   },
   "199": {
     "name": "Conquistador Plume",
+    "quantity": 1,
     "materials": [
       {
         "name": "Dioxide Synthesis",
@@ -6736,6 +6935,7 @@
   },
   "200": {
     "name": "Adornment of the High Priest",
+    "quantity": 1,
     "materials": [
       {
         "name": "Dioxide Synthesis",
@@ -6805,6 +7005,7 @@
   },
   "201": {
     "name": "Member Hoodie",
+    "quantity": 1,
     "materials": [
       {
         "name": "Dioxide Synthesis",
@@ -6916,6 +7117,7 @@
   },
   "202": {
     "name": "Damascus Plates",
+    "quantity": 1,
     "materials": [
       {
         "name": "Dioxide Synthesis",
@@ -6985,6 +7187,7 @@
   },
   "203": {
     "name": "Evergreen Wraps",
+    "quantity": 1,
     "materials": [
       {
         "name": "Dioxide Synthesis",
@@ -7054,6 +7257,7 @@
   },
   "204": {
     "name": "Elegantine Robes",
+    "quantity": 1,
     "materials": [
       {
         "name": "Dioxide Synthesis",
@@ -7123,6 +7327,7 @@
   },
   "205": {
     "name": "Critter Numnums",
+    "quantity": 1,
     "materials": [
       {
         "name": "Crabbo",
@@ -7136,6 +7341,7 @@
   },
   "206": {
     "name": "Soulble Gum",
+    "quantity": 1,
     "materials": [
       {
         "name": "Dune Soul",
@@ -7149,6 +7355,7 @@
   },
   "207": {
     "name": "Shivering Sack",
+    "quantity": 1,
     "materials": [
       {
         "name": "Mamooth Hide Bag",

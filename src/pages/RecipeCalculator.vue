@@ -56,7 +56,7 @@
       <div v-if="display === 'list'">
         <div
           class="tree-menu border-top border-bottom"
-          v-for="(quantity, material) in listMaterials(materials)"
+          v-for="(qnt, material) in listMaterials(materials)"
           :key="`material-${material}`"
         >
           <GameAsset
@@ -68,7 +68,7 @@
               <div v-html="material"></div>
             </template>
           </GameAsset>
-          {{ quantity.toLocaleString() }} {{ material }}
+          {{ (Number(quantity) * qnt).toLocaleString() }} {{ material }}
         </div>
       </div>
       <div v-else>
@@ -91,15 +91,11 @@ import GameAsset from "~/components/GameAsset.vue";
 import RecipeTree from "~/components/RecipeTree.vue";
 import { Assets } from "~/composables/Utilities";
 
-type MaterialObject = {
-  name: string;
-  quantity: number;
-};
 
 type RecipeObject = {
   name: string;
   quantity: number;
-  materials: Array<RecipeObject>;
+  materials?: Array<RecipeObject>;
 };
 
 export default defineComponent({
@@ -111,9 +107,8 @@ export default defineComponent({
   methods: {
     listMaterials(tree:RecipeObject) {
       // Setup result
-      let result = {};
+      let result: Record<string, number> = {};
       function flatten(current:RecipeObject) {
-        // console.log(current);
         if(current.materials) {
           current.materials.forEach(mat => {
             flatten(mat);
@@ -133,7 +128,7 @@ export default defineComponent({
     const data: Record<string, RecipeObject> = calculatorData;
     const recipe = ref("");
     const quantity = ref("");
-    const display = ref("");
+    const display = ref("list");
     const materials = computed(
       (): RecipeObject => {
         if (recipe.value === "") {
