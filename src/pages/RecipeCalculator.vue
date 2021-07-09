@@ -52,34 +52,32 @@
       <option value="list">List View</option>
       <option value="tree">Tree View</option>
     </select>
-    <div v-if="display">
-      <div v-if="display === 'list'">
-        <div
-          class="tree-menu border-top border-bottom"
-          v-for="(qnt, material) in listMaterials(materials)"
-          :key="`material-${material}`"
+    <div v-if="display === 'list'">
+      <div
+        class="tree-menu border-b"
+        v-for="(qnt, material) in listMaterials(materials)"
+        :key="`material-${material}`"
+      >
+        <GameAsset
+          :height="72"
+          :image="Assets.MaterialImage(material.replace(/ /g, '_'))"
+          :title="material"
         >
-          <GameAsset
-            :height="72"
-            :image="Assets.MaterialImage(material.replace(/ /g, '_'))"
-            :title="material"
-          >
-            <template #tooltip>
-              <div v-html="material"></div>
-            </template>
-          </GameAsset>
-          {{ (Number(quantity) * qnt).toLocaleString() }} {{ material }}
-        </div>
+          <template #tooltip>
+            <div v-html="material"></div>
+          </template>
+        </GameAsset>
+        {{ (Number(quantity) * qnt).toLocaleString() }} {{ material }}
       </div>
-      <div v-else>
-        <recipe-tree
-          :label="materials.name"
-          :nodes="materials.materials"
-          :quantity="1"
-          :depth="0"
-          :toCraft="Number(quantity)"
-        />
-      </div>
+    </div>
+    <div v-else>
+      <recipe-tree
+        :label="materials.name"
+        :nodes="materials.materials"
+        :quantity="1"
+        :depth="0"
+        :toCraft="Number(quantity)"
+      />
     </div>
   </div>
 </template>
@@ -128,7 +126,7 @@ export default defineComponent({
     const data: Record<string, RecipeObject> = calculatorData;
     const recipe = ref("");
     const quantity = ref("");
-    const display = ref("list");
+    const display = ref("");
     const materials = computed(
       (): RecipeObject => {
         if (recipe.value === "") {

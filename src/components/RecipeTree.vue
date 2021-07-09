@@ -1,5 +1,5 @@
 <template>
-  <div class="tree-menu border-top border-bottom">
+  <div class="tree-menu border-b">
     <div :style="indent">
       <div v-bind:style="{padding: '5px'}">
         <GameAsset
@@ -59,7 +59,7 @@
     },
     setup(props) {
       const indent = computed(() => {
-        return { transform: `translate(${props.depth * 40}px)`, display: 'flex' }
+        return { transform: `translate(${props.depth * 40}px)`, display: 'flex', 'align-items': 'center' }
       });
       const computedQuantity = computed(
         (): String => {
