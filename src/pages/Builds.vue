@@ -49,9 +49,9 @@
     </div>
   </div>
 
-  <div class="flex my-2">
+  <div class="flex w-full my-2">
     <button
-      class="bg-dark px-3 py-2 rounded"
+      class="bg-info px-3 py-2 rounded my-auto min-w-1/6"
       @click="
         createNewBuild(buildClass, buildSubclass);
         editingMode = true;
@@ -63,8 +63,33 @@
       v-if="currentBuild && editingMode"
       v-model="currentBuild.title"
       placeholder="Build Name"
-      class="mx-2"
+      class="mx-3 w-full"
     />
+    <div v-if="currentBuild" class="input-group">
+      <div class="input-group-text">Recommended Level</div>
+      <input
+        v-if="currentBuild"
+        :disabled="!editingMode"
+        v-model="currentBuild.level"
+        class="bg-primary"
+        placeholder="10"
+      />
+    </div>
+    <div v-if="currentBuild" class="input-group">
+      <div class="input-group-text">Game Version</div>
+      <select v-model="currentBuild.version" class="bg-primary">
+        <option v-for="(version, i) in versions" :key="i" :value="version">
+          {{ version }}
+        </option>
+      </select>
+    </div>
+    <button
+      v-if="currentBuild && editingMode"
+      class="bg-success ml-auto min-w-1/12"
+      @click="uploadBuild"
+    >
+      Post Build
+    </button>
   </div>
 
   <BuildSkills :editingMode="editingMode" />
@@ -89,6 +114,7 @@ import BuildSkills from "~/components/BuildSkills.vue";
 import GameAsset from "~/components/GameAsset.vue";
 import { useBuilds, Build } from "~/composables/Builds";
 import { Class, Subclass, useCharacters } from "~/composables/Characters";
+import { GameVersions } from "~/composables/Utilities";
 
 export default defineComponent({
   name: "Builds",
@@ -97,8 +123,13 @@ export default defineComponent({
     GameAsset,
   },
   setup() {
-    const { builds, createNewBuild, currentBuild, loadBuildFromShowcase } =
-      useBuilds();
+    const {
+      builds,
+      createNewBuild,
+      currentBuild,
+      loadBuildFromShowcase,
+      uploadBuild,
+    } = useBuilds();
     const { curCharacter } = useCharacters();
     // Refs
     const buildClass = ref<Class>(Class.All);
@@ -141,6 +172,8 @@ export default defineComponent({
       loadBuildFromShowcase,
       showcaseBuildIndex,
       subclasses: Subclass,
+      uploadBuild,
+      versions: GameVersions,
     };
   },
 });
@@ -148,4 +181,7 @@ export default defineComponent({
 
 <style lang="sass" scoped>
 @import '../styles/base.sass'
+.input-group
+  .input-group-text, select
+    border: none
 </style>
