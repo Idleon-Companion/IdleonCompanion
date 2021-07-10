@@ -34,7 +34,7 @@
           rounded-0
           border-top border-secondary
           rounded-bottom
-          card-text
+          h-[7.5rem]
         "
       >
             {{ currentBuild.tabs[tabIndex].comment }}>

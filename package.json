@@ -14,8 +14,10 @@
     "dayjs": "^1.10.4",
     "firebase": "^8.6.0",
     "firebaseui": "^4.8.0",
+    "md5-hex": "^4.0.0",
     "sass": "1.32",
     "vue": "^3.0.5",
+    "vue-router": "4",
     "vue-tippy": "^6.0.0-alpha.28",
     "vue-toastification": "^2.0.0-rc.1"
   },
