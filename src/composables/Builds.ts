@@ -1,3 +1,5 @@
+import dayjs from "dayjs";
+import md5Hex from "md5-hex";
 import { ref, Ref } from "vue";
 import { Class, Subclass } from "~/composables/Characters";
 import {
@@ -5,6 +7,7 @@ import {
   GameVersion,
   LatestGameVersion,
 } from "~/composables/Utilities";
+import { useDB } from "~/State";
 
 export type BuildTab = {
   skills: Record<number, string>; // Skill index -> points
@@ -86,14 +89,15 @@ const builds: Build[] = [
 ];
 
 const currentBuild: Ref<Build | null> = ref(null);
+const { db, DbRef } = useDB();
 export function useBuilds() {
   const createNewBuild = (class_: Class, subclass: Subclass | null) => {
-    const numTabs =
-      class_ !== Class.All && class_ !== Class.Beginner
-        ? subclass
-          ? 3
-          : 2
-        : 1;
+    let numTabs = 3;
+    if ((class_ === Class.Beginner && !subclass) || class_ === Class.All) {
+      numTabs = 1;
+    } else if (!subclass) {
+      numTabs = 2;
+    }
     const tabs = [];
     for (const _ of Array(numTabs)) {
       tabs.push({
@@ -128,11 +132,18 @@ export function useBuilds() {
     currentBuild.value = builds[index] ?? null;
   };
 
+  const uploadBuild = () => {
+    const buildEncoded = JSON.stringify(currentBuild.value);
+    const buildHash = md5Hex(dayjs().toString() + buildEncoded).slice(0, 12);
+    db.ref(DbRef.Builds + buildHash).set(buildEncoded);
+  };
+
   return {
     builds,
     createNewBuild,
     currentBuild,
     getTalentAsset,
     loadBuildFromShowcase,
+    uploadBuild,
   };
 }

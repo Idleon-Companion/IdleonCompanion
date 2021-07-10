@@ -146,11 +146,16 @@ const firebaseConfig = {
 type UserState = firebase.User | null;
 export const firebaseApp = firebase.initializeApp(firebaseConfig);
 const auth = firebaseApp.auth();
+const db = firebaseApp.database();
 const user = ref(null as UserState);
+
+export enum DbRef {
+  Builds = "/builds/",
+  Users = "/users/",
+}
 
 export const useAuth = () => {
   user.value = auth.currentUser;
-  const db = firebaseApp.database();
 
   const toast = useToast();
 
@@ -163,7 +168,7 @@ export const useAuth = () => {
       return null;
     }
     return db
-      .ref("/users/" + user.value.uid)
+      .ref(DbRef.Users + user.value.uid)
       .once("value")
       .then((snapshot) => {
         if (snapshot.exists()) {
@@ -186,8 +191,17 @@ export const useAuth = () => {
       return null;
     }
     toast.success("Data saved to the cloud.");
-    return db.ref("/users/" + user.value.uid).set(JSON.stringify(state.value));
+    return db
+      .ref(DbRef.Users + user.value.uid)
+      .set(JSON.stringify(state.value));
   };
 
   return { auth, loadCloud, saveCloud, user };
+};
+
+export const useDB = () => {
+  return {
+    db,
+    DbRef,
+  };
 };
