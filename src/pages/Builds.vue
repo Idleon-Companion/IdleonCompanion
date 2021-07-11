@@ -84,7 +84,7 @@
       </select>
     </div>
     <button
-      v-if="currentBuild && editingMode"
+      v-if="currentBuild && editingMode && user !== null"
       class="bg-success ml-auto min-w-1/12"
       @click="uploadBuild"
     >
@@ -94,43 +94,55 @@
 
   <BuildSkills :editingMode="editingMode" />
   <div
-    v-if="currentBuild || editingMode"
+    v-if="currentBuild"
     class="flex items-center bg-primary border border-secondary rounded mt-4"
   >
     <textarea
-      :value="currentBuild?.notes"
+      v-model="currentBuild.notes"
       :disabled="!editingMode"
       placeholder="Notes about your perfect build."
       class="text-light w-full resize border-0"
-      id="notes"
     ></textarea>
+  </div>
+  <div
+    v-if="currentBuild && currentBuildMeta.id"
+    class="flex items-center text-light bg-primary p-2 rounded"
+  >
+    <div>Likes: {{ currentBuildMeta.likes }}</div>
+    <div class="flex items-center ml-2" @click="copyBuildLink">
+      <div class="italic mr-1">Share Build</div>
+      <div class="iconify" data-icon="mdi:link"></div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, onBeforeMount, ref } from "vue";
+import { useToast } from "vue-toastification";
 
 import BuildSkills from "~/components/BuildSkills.vue";
-import GameAsset from "~/components/GameAsset.vue";
 import { useBuilds, Build } from "~/composables/Builds";
 import { Class, Subclass, useCharacters } from "~/composables/Characters";
 import { GameVersions } from "~/composables/Utilities";
+import { useAuth } from "~/State";
 
 export default defineComponent({
   name: "Builds",
   components: {
     BuildSkills,
-    GameAsset,
   },
   setup() {
+    const { user } = useAuth();
     const {
       builds,
       createNewBuild,
       currentBuild,
+      currentBuildMeta,
       loadBuildFromShowcase,
       uploadBuild,
     } = useBuilds();
     const { curCharacter } = useCharacters();
+    const toast = useToast();
     // Refs
     const buildClass = ref<Class>(Class.All);
     const buildSubclass = ref<Subclass | null>(null);
@@ -143,6 +155,18 @@ export default defineComponent({
         buildClass.value = curCharacter.value.class;
         buildSubclass.value = curCharacter.value.subclass;
       }
+    });
+
+    const copyBuildLink = () => {
+      navigator.clipboard.writeText(currentBuildLink.value).then((_) => {
+        toast.success("Build link copied to clipboard!");
+      });
+    };
+
+    const currentBuildLink = computed(() => {
+      return process.env.NODE_ENV === "production"
+        ? `https://idleoncompanion.com/build/${currentBuildMeta.value.id}`
+        : `http://localhost:3000/build/${currentBuildMeta.value.id}`;
     });
 
     const filteredBuilds = computed(() => {
@@ -164,8 +188,11 @@ export default defineComponent({
     return {
       buildClass,
       buildSubclass,
+      copyBuildLink,
       createNewBuild,
       currentBuild,
+      currentBuildLink,
+      currentBuildMeta,
       classes: Class,
       editingMode,
       filteredBuilds,
@@ -173,6 +200,7 @@ export default defineComponent({
       showcaseBuildIndex,
       subclasses: Subclass,
       uploadBuild,
+      user,
       versions: GameVersions,
     };
   },
