@@ -54,7 +54,7 @@
     </select>
     <div v-if="display === 'list'">
       <div
-        class="tree-menu border-b"
+        class="tree-menu border-bottom"
         v-for="(qnt, material) in listMaterials(materials)"
         :key="`material-${material}`"
       >
@@ -125,8 +125,8 @@ export default defineComponent({
   setup() {
     const data: Record<string, RecipeObject> = calculatorData;
     const recipe = ref("");
-    const quantity = ref("");
-    const display = ref("");
+    const quantity = ref(1);
+    const display = ref("list");
     const materials = computed(
       (): RecipeObject => {
         if (recipe.value === "") {
