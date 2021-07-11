@@ -262,7 +262,11 @@ export default defineComponent({
     const totalCharLevel = computed<number>(() => {
       let total = 0;
       for (const c of characters.value) {
-        total += c.level;
+        if (typeof c.level === "string") {
+          total += parseInt(c.level);
+        } else {
+          total += c.level;
+        }
       }
       return total;
     });
