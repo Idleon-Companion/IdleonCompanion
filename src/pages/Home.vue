@@ -1,5 +1,9 @@
 <template>
-  <div class="container pt-3">
+  <div>Welcome to Idleon Companion!</div>
+</template>
+
+<script lang="ts">
+/* <div class="container pt-3">
     <div class="row justify-content-between align-items-center mb-3">
       <div class="col-auto align-items-center d-flex">
         <img id="logo" src="/logo.png" />
@@ -45,10 +49,8 @@
       </div>
     </div>
   </div>
-  <div class="footer m-5"></div>
-</template>
+  <div class="footer m-5"></div> */
 
-<script lang="ts">
 import { defineComponent } from "vue";
 
 import CharacterSelector from "~/components/CharacterSelector.vue";
@@ -85,7 +87,7 @@ export default defineComponent({
       Calculators: Calculators,
       Credits: Credits,
     };
-    const defaultTab = 'Characters';
+    const defaultTab = "Characters";
     return {
       defaultTab,
       tabs,

@@ -8,13 +8,14 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@types/bootstrap": "^5.0.12",
+    "@quasar/app": "^3.0.2",
+    "@quasar/extras": "^1.10.8",
     "@vueuse/core": "^4.9.1",
-    "bootstrap": "^5.0.1",
     "dayjs": "^1.10.4",
     "firebase": "^8.6.0",
     "firebaseui": "^4.8.0",
     "md5-hex": "^4.0.0",
+    "quasar": "^2.0.2",
     "sass": "1.32",
     "vue": "^3.0.5",
     "vue-router": "4",

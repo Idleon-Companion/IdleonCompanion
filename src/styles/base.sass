@@ -1,19 +1,5 @@
 
 @import './variables.sass'
-@import '../../node_modules/bootstrap/scss/bootstrap.scss'
-
-body
-  background: rgb(31, 20, 21) url('../assets/bg/night_desert.png') no-repeat center center fixed
-  -webkit-background-size: cover
-  -moz-background-size: cover
-  background-size: cover
-  -o-background-size: cover
-
-[data-enabled]
-  transition: 0.3s
-[data-enabled='false']
-  opacity: 0.5
-  filter: grayscale(1)
 
 h1
   font-size: 2.5rem
@@ -28,63 +14,61 @@ h5
 h6
   font-size: 1rem
 
-th
-  > img
-    height: 50px
+.ic-table
+  height: 400px
+  td, th
+    text-align: left
+  ::-webkit-scrollbar
+    width: 12px
 
-  & > div.disabled
-    opacity: 70%
+  ::-webkit-scrollbar-thumb
+    width: 10px
+    background-color: $primary
+    border-radius: 10px
+    border: 4px solid rgba(0, 0, 0, 0)
+    background-clip: padding-box
+    transition: .3s ease-in-out
+  ::-webkit-scrollbar-thumb:hover
+    background: lighten($primary, 5%)
+    border-radius: 10px
+    border: 4px solid rgba(0, 0, 0, 0)
+    background-clip: padding-box
+    transition: .3s ease-in-out
 
-input, textarea, select
-  background: none
-  border: 1px solid darken(white, 25%)
-  border-radius: 0.25rem
-  color: white
-  outline: none
-  padding: 0.5rem
-input[type='range']
-  border: none
-select
-  background: darken($primary, 5%)
-  border: 1px solid $primary
-  cursor: pointer
-textarea
-  min-height: 2.5rem
-option
-  background: darken($primary, 5%)
-  color: darken(white, 25%)
-button
-  background: lighten($primary, 10%)
-  border: none
-  color: darken(white, 10%)
-  outline: none
-  transition: 0.3s
-  &:hover
-    background: lighten($primary, 15%)
-    color: darken(white, 10%)
+/** Themed Styles **/
+:root
+  --bg-primary: #3a3f44
 
-.input-group
-  .input-group-text
-    border: 1px solid $primary
-    background: $dark
-    color: white
-  input
-    border: 1px solid $primary
-    background: darken($primary, 5%)
-    color: white
-    &:focus
-      border: 1px solid $primary
-      background: lighten($primary, 5%)
-      color: white
+div.bg-primary
+  background: var(--bg-primary) !important
 
-#calc
-  background-color: rgba(28, 30, 34, 0.7)
-  border-radius: 5px
-
-.jumbotron
-  padding: 3rem
-  background-color: rgba(28, 30, 34, 0.8)
-  border-radius: 5px
-
-.nav-tabs .nav-link.active
-  background-color: rgb(28, 30, 34)
+/** Quasar Overrides **/
+aside.q-drawer--left
+  height: 100%
+// input, textarea, select
+//   background: none
+//   border: 1px solid darken(white, 25%)
+//   border-radius: 0.25rem
+//   color: white
+//   outline: none
+//   padding: 0.5rem
+// input[type='range']
+//   border: none
+// select
+//   background: darken($primary, 5%)
+//   border: 1px solid $primary
+//   cursor: pointer
+// textarea
+//   min-height: 2.5rem
+// option
+//   background: darken($primary, 5%)
+//   color: darken(white, 25%)
+// button
+//   background: lighten($primary, 10%)
+//   border: none
+//   color: darken(white, 10%)
+//   outline: none
+//   transition: 0.3s
+//   &:hover
+//     background: lighten($primary, 15%)
+//     color: darken(white, 10%)

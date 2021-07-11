@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
+import { useQuasar } from "quasar";
+import { computed } from "vue";
+>>>>>>> 24cf6b9... ui: fix light mode issues
 import { Character } from "./Characters";
 
 export type GrowthFunc = (a: number, b: number, c: number) => number;
@@ -228,3 +234,24 @@ export type EffectData = ValueOf<typeof Effects>;
 export const GameVersions = <const>["1.22", "1.21", "1.20"];
 export type GameVersion = typeof GameVersions[number];
 export const LatestGameVersion: GameVersion = GameVersions[0];
+
+// Layout Utilities
+export function useLayout() {
+  const breakpoints = useBreakpoints(breakpointsTailwind);
+
+  const $q = useQuasar();
+  const isDarkMode = computed(() => $q.dark.isActive);
+
+  const toggleDarkMode = () => {
+    $q.dark.set(!isDarkMode.value);
+    const bgPrimary = isDarkMode.value ? "#3a3f44" : "#ffffff";
+    document.documentElement.style.setProperty("--bg-primary", bgPrimary);
+  };
+  const isMobile = computed(() => breakpoints.smaller("md")).value;
+
+  return {
+    isDarkMode,
+    isMobile,
+    toggleDarkMode,
+  };
+}
