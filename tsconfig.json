@@ -1,20 +1,22 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "baseUrl": ".",
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "jsx": "preserve",
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
-    "types": ["node", "vite/client"],
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
     "paths": {
       "~/*": ["src/*"]
-    }
+    },
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "esnext",
+    "types": ["node", "vite/client", "quasar"]
   },
-  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue"]
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue"],
+  "exclude": ["/dist", "node_modules", ".quasar"]
 }

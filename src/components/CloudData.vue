@@ -1,21 +1,17 @@
 <template>
-  <div
-    id="firebase-auth"
-    :style="user === null ? '' : { display: 'none' }"
-  ></div>
-  <div v-if="user !== null" id="auth-info" class="px-1 py-2">
-    <div class="d-flex justify-content-between">
-      <div class="d-flex align-items-center">
-        <button @click="loadCloud">
-          <div class="iconify" data-icon="mdi:cloud-download"></div>
-          Load
-        </button>
-        <button @click="saveCloud">
-          <div class="iconify" data-icon="mdi:cloud-upload"></div>
-          Save
-        </button>
-      </div>
-      <button @click="signOut">Sign out</button>
+  <div v-if="user === null" id="firebase-auth"></div>
+  <div v-else id="auth-info" class="flex flex-col px-1 py-2 bg-primary">
+    <div class="flex items-center justify-center">
+      <q-btn
+        color="dark"
+        icon="cloud_download"
+        label="Load"
+        @click="loadCloud"
+      />
+      <q-btn color="dark" icon="cloud_upload" label="Save" @click="saveCloud" />
+    </div>
+    <div class="mt-2 mx-auto">
+      <q-btn flat color="negative" label="Sign Out" @click="signOut" />
     </div>
   </div>
 </template>
@@ -86,7 +82,6 @@ export default defineComponent({
 <style scoped lang="sass">
 @import '../styles/base.sass'
 #auth-info
-  background: $primary
   color: white
   cursor: pointer
   transition: 0.3s
