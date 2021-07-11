@@ -1,13 +1,14 @@
 import dayjs from "dayjs";
 import md5Hex from "md5-hex";
 import { ref, Ref } from "vue";
+import { useToast } from "vue-toastification";
 import { Class, Subclass } from "~/composables/Characters";
 import {
   Assets,
   GameVersion,
   LatestGameVersion,
 } from "~/composables/Utilities";
-import { useDB } from "~/State";
+import { useAuth, useDB } from "~/State";
 
 export type BuildTab = {
   skills: Record<number, string>; // Skill index -> points
@@ -21,6 +22,12 @@ export type Build = {
   subclass?: Subclass | null;
   tabs: BuildTab[];
   notes?: string;
+};
+type BuildMeta = {
+  author: string;
+  id: string;
+  likes: number;
+  likedByCurrentUser: boolean;
 };
 
 // This mapping is used to determine the filename for a certain talent
@@ -89,8 +96,17 @@ const builds: Build[] = [
 ];
 
 const currentBuild: Ref<Build | null> = ref(null);
+const currentBuildMeta: Ref<BuildMeta> = ref({
+  author: "",
+  id: "",
+  likes: 0,
+  likedByCurrentUser: false,
+});
 const { db, DbRef } = useDB();
 export function useBuilds() {
+  const { user } = useAuth();
+  const toast = useToast();
+
   const createNewBuild = (class_: Class, subclass: Subclass | null) => {
     let numTabs = 3;
     if ((class_ === Class.Beginner && !subclass) || class_ === Class.All) {
@@ -112,6 +128,12 @@ export function useBuilds() {
       tabs: tabs,
       subclass,
     };
+    currentBuildMeta.value = {
+      author: "",
+      id: "",
+      likes: 0,
+      likedByCurrentUser: false,
+    };
   };
 
   const getTalentAsset = (build: Build, tab: number, slot: number) => {
@@ -128,21 +150,72 @@ export function useBuilds() {
     return Assets.TalentImage(role, tab, slot);
   };
 
+  const loadBuildFromDatabase = async (id: string) => {
+    const buildSnapshot = await db
+      .ref(`${DbRef.Builds}/${id}/build`)
+      .once("value");
+    if (buildSnapshot.exists()) {
+      const buildData = buildSnapshot.val();
+      currentBuild.value = buildData.build;
+      currentBuildMeta.value = {
+        author: "1a2b3c",
+        id,
+        likes: 42,
+        likedByCurrentUser: true,
+      };
+      // Extract likes + likedByCurrentUser
+      // const likes = await db.ref(`${DbRef.Builds}/${id}/likes`).once('value');
+      // const likedByCurrentUser = await db.ref(`${DbRef.Builds}/${id}/likedBy/${user.id}`).once('value');
+      // currentBuildMeta.value = {likes, likedByCurrentUser}
+      toast.info(`Loaded build "${currentBuild.value?.title}"`);
+    }
+  };
+
   const loadBuildFromShowcase = (index: number) => {
     currentBuild.value = builds[index] ?? null;
   };
 
   const uploadBuild = () => {
+    if (!user.value) {
+      toast.error("You must be logged in to do that!");
+      return;
+    }
+    if (
+      !currentBuild.value ||
+      !currentBuild.value.title ||
+      !currentBuild.value.notes
+    ) {
+      toast.warning("Your build is missing a title/notes.");
+      return;
+    }
     const buildEncoded = JSON.stringify(currentBuild.value);
     const buildHash = md5Hex(dayjs().toString() + buildEncoded).slice(0, 12);
-    db.ref(DbRef.Builds + buildHash).set(buildEncoded);
+    const buildData = {
+      author: user.value.uid,
+      build: buildEncoded,
+      likes: 0,
+      likedBy: {},
+    };
+    db.ref(`${DbRef.Builds}/${buildHash}`)
+      .set(buildData)
+      .then((_) => {
+        toast.success("Your build was uploaded successfully!");
+        currentBuildMeta.value = {
+          author: buildData.author,
+          id: buildHash,
+          likes: 0,
+          likedByCurrentUser: false,
+        };
+      });
   };
 
   return {
     builds,
     createNewBuild,
     currentBuild,
+    currentBuildMeta,
     getTalentAsset,
+    loadBuildFromDatabase,
     loadBuildFromShowcase,
     uploadBuild,
   };

@@ -150,8 +150,8 @@ const db = firebaseApp.database();
 const user = ref(null as UserState);
 
 export enum DbRef {
-  Builds = "/builds/",
-  Users = "/users/",
+  Builds = "/builds",
+  Users = "/users",
 }
 
 export const useAuth = () => {
@@ -168,7 +168,7 @@ export const useAuth = () => {
       return null;
     }
     return db
-      .ref(DbRef.Users + user.value.uid)
+      .ref(`${DbRef.Users}/${user.value.uid}`)
       .once("value")
       .then((snapshot) => {
         if (snapshot.exists()) {
@@ -192,7 +192,7 @@ export const useAuth = () => {
     }
     toast.success("Data saved to the cloud.");
     return db
-      .ref(DbRef.Users + user.value.uid)
+      .ref(`${DbRef.Users}/${user.value.uid}`)
       .set(JSON.stringify(state.value));
   };
 
