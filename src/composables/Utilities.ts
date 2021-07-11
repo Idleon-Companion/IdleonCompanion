@@ -30,11 +30,11 @@ export const Growth: Record<string, GrowthFunc> = {
 
 export class Assets {
   static CardImage(c: string): string {
-    return `assets/cards/${c}_Card.png`;
+    return `/assets/cards/${c}_Card.png`;
   }
 
   static CardBorderImage(tier: number): string {
-    return `assets/cards/Tier${tier}_Border.png`;
+    return `/assets/cards/Tier${tier}_Border.png`;
   }
 
   static CharImage(char: Character): string {
@@ -46,32 +46,32 @@ export class Assets {
   }
 
   static ClassImage(c: string): string {
-    return `assets/classes/${c}.png`;
+    return `/assets/classes/${c}.png`;
   }
 
   static FromDir(item: string, dir: string): string {
     let cleaned = item.replace(/ /g, "_");
-    return `assets/${dir}/${cleaned}.png`;
+    return `/assets/${dir}/${cleaned}.png`;
   }
 
   static IconImage(icon: string): string {
-    return `assets/icons/${icon}_Icon.png`;
+    return `/assets/icons/${icon}_Icon.png`;
   }
 
   static MaterialImage(item: string): string {
-    return `assets/materials/${item}.png`;
+    return `/assets/materials/${item}.png`;
   }
 
   static MiscImage(item: string): string {
-    return `assets/misc/${item}.png`;
+    return `/assets/misc/${item}.png`;
   }
 
   static StampImage(item: string): string {
-    return `assets/stamps/${item}.png`;
+    return `/assets/stamps/${item}.png`;
   }
 
   static StatueImage(item: string): string {
-    return `assets/statues/${item}_Statue.png`;
+    return `/assets/statues/${item}_Statue.png`;
   }
 
   static TalentImage(role: string, tab: number, slot: number): string {
@@ -79,7 +79,7 @@ export class Assets {
     if (role === "") {
       image = "empty";
     }
-    return `assets/talents/${image}.png`;
+    return `/assets/talents/${image}.png`;
   }
 }
 

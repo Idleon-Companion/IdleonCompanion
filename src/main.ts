@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import VueTippy from "vue-tippy";
 import Toast, { PluginOptions } from "vue-toastification";
 import App from "~/App.vue";
+import { router } from "~/router";
 
 import "virtual:windi.css";
 import "tippy.js/dist/tippy.css";
@@ -32,4 +33,5 @@ createApp(App)
     },
   })
   .use(Toast, toastOptions)
+  .use(router)
   .mount("#app");
