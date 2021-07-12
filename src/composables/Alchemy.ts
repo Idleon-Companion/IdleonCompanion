@@ -28,7 +28,7 @@ export type Bubble = {
 export type Material = {
   Name: string;
   Amount: number;
-  isLiquid: number;
+  isLiquid: boolean;
 };
 
 export const Vials: Vial[] = [
@@ -352,14 +352,14 @@ export class Alch {
     result = result.map((a) => {
         return (precision - Math.round(a*precision))/100}
       );
-
-    console.log(`Alch.discount = [
-      Cauldron:     ${result[0].toFixed(2).padStart(5, " ")} 
-      Bargain:      ${result[1].toFixed(2).padStart(5, " ")} 
-      Bubble XII:   ${result[2].toFixed(2).padStart(5, " ")} 
-      Undev + vial: ${result[3].toFixed(2).padStart(5, " ")} 
-      Total:        ${result[4].toFixed(2).padStart(5, " ")}
-    ]`);
+   
+    // console.log(`Alch.discount = [
+    //   Cauldron:     ${result[0].toFixed(2).padStart(5, " ")} 
+    //   Bargain:      ${result[1].toFixed(2).padStart(5, " ")} 
+    //   Bubble XII:   ${result[2].toFixed(2).padStart(5, " ")} 
+    //   Undev + vial: ${result[3].toFixed(2).padStart(5, " ")} 
+    //   Total:        ${result[4].toFixed(2).padStart(5, " ")}
+    // ]`);
     return result;
   }
   
@@ -380,40 +380,5 @@ export class Alch {
     effectGoal = (effectGoal < effectNow ? effectNow : effectGoal);
     let result = `${Number(effectNow).toFixed(2).padStart(6, ' ')} => ${Number(effectGoal).toFixed(2).padStart(6, ' ')}`;
     return result;
-  };
-
-
-  static Pay2Win = (levelNow: any, levelWant: any, type: any) => {
-    let totalSum = 0;
-    let result = 0;
-    for (var j = levelNow; j < levelWant; j++) {
-      switch(type) { 
-        case 0: // Speed
-          result = Math.round(2500 * Math.pow(1.15 - (0.117 * j) / (100 + j),j));
-          break;
-        case 1: // New bubble
-          result = Math.round(3200 * Math.pow(1.18 - (0.145 * j) / (100 + j),j));
-          break;
-        case 2: // Boost Req
-          result = Math.round(3750 *Math.pow(1.2 - (0.14 * j) / (100 + j),j));
-          break;
-      }
-      totalSum += result;
-    }
-    let a = [
-      {Name: "speed", x1: "3", x2: "0.2", Func: "add", Materials: [{Name: "", Amount: 0, isLiquid: 0}]},
-      {Name: "New B", x1: "2.5", x2: "100", Func: "decayMulti", Materials: [{Name: "", Amount: 0, isLiquid: 0}]},
-      {Name: "Boost", x1: "70", x2: "10", Func: "decay", Materials: [{Name: "", Amount: 0, isLiquid: 0}]}
-    ]
-    a.forEach((b) => console.log(b));
-
-    // var a = {"name"}
-    // var eff = Alch.effectChange(a[type], levelNow, levelWant);
-    // console.log(`Result: ${eff} | ${totalSum}`);
-    // var d = eff.concat(goldToString(totalSum));
-    // superResult.push(d);
-    
-    // superResult.forEach((a) => console.log(a));
-    return totalSum;
   };
 }

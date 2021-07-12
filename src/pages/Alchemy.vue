@@ -34,25 +34,18 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Cauldrons from "~/components/Cauldrons.vue";
-import Vials from "~/components/Vials.vue";
-import Liquid from "~/components/Liquid.vue";
-import Pay2Win from "~/components/Pay2Win.vue";
-
+import Cauldrons from "~/components/alchemy/Cauldrons.vue";
+import Vials from "~/components/alchemy/Vials.vue";
 export default defineComponent({
   name: "Alchemy",
   components: {
     Cauldrons,
     Vials,
-    Liquid,
-    Pay2Win,
   },
   setup() {
     const tabs = {
       Cauldrons: Cauldrons,
       Vials: Vials,
-      // Liquid: Liquid,
-      // Pay_2_Win: Pay2Win,
     };
     const defaultTab = "Cauldrons";
     return {

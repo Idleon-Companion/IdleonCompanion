@@ -28,30 +28,6 @@ export const Growth: Record<string, GrowthFunc> = {
   },
 };
 
-export class Util {
-  static goldToString(gold: number): string {
-    if (isNaN(gold)) {
-      return ""
-    }
-    var coinsDesc = ["c", "s", "g", "p", "d"]
-    var count = 0
-    var string = ""
-    do {
-      if(count == coinsDesc.length-1) {
-        string = ` ${gold}${coinsDesc[count]}${string}`
-        break
-      }
-      var coins = gold%100
-      gold = Math.floor(gold/100)
-      string = ` ${coins}${coinsDesc[count]}${string}`
-      count++
-    } while (gold > 0)
-    return string.trim()
-  }
-}
-
-
-
 export class Assets {
   static CardImage(c: string): string {
     return `assets/cards/${c}_Card.png`;

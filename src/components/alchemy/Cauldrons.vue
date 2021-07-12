@@ -36,19 +36,19 @@
         <th class="quarter centered">
           Cauldron Level: <br>
           <input class="columnSpan"
-            v-model="cauldRedux"
+            v-model.number="cauldRedux"
             type="number" :min="0"
-            @change="handleDiscountRecalc()"/>
+            @change="handleDiscountRecalc"/>
         </th>
         <th class="quarter centered">
           Bargain tag Level: <br>
           <input class="columnSpan"
             v-model="bargainLvl"
             type="number" :min="0"
-            @change="handleDiscountRecalc()"/>
+            @change="handleDiscountRecalc"/>
         </th>
        <th class="quarter centered spaced"
-          v-for="d in ['XII Bubble', 'Undeveloped cost \nbubble and Iron bar vial', 'Total']"
+          v-for="d in costHeaders"
           :key="d">
           {{d}}
         </th>
@@ -80,7 +80,7 @@
 <script lang="ts">
   import { computed, defineComponent, ref } from "vue";
   import { useState} from "~/State";
-  import AlchemyRow from "~/components/AlchemyRow.vue";
+  import AlchemyRow from "~/components/alchemy/AlchemyRow.vue";
   import { Color, Alch } from "~/composables/Alchemy";
 
 
@@ -102,8 +102,9 @@
 
           const headers = ["Icon", "Level", "Goal", "Effect"];
           const amountBubbles = 15;
+          const costHeaders = ['XII Bubble', 'Undeveloped cost \nbubble and Iron bar vial', 'Total'];
 
-          const activeGroup = ref("Orange"); 
+          const activeGroup = ref(<Color>"Orange"); 
           const cauldRedux = ref(0);
           const bargainLvl = ref(0);
           let discount = ref([0,0,0,0,0]);
@@ -141,6 +142,7 @@
             discount,
             alchemy,
             colors,
+            costHeaders,
             activeGroup,
             cauldRedux,
             bargainLvl,
@@ -149,7 +151,7 @@
           };
       },
       methods: {
-          setGroup(tab: string) {
+          setGroup(tab: Color) {
             this.activeGroup = tab;
             this.cauldRedux = 0;
             this.bargainLvl = 0;
