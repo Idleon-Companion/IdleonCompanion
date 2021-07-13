@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header elevated>
-      <q-toolbar :class="toolbarClasses">
+    <q-header elevated class="">
+      <q-toolbar>
         <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
         <q-toolbar-title>
           <q-avatar>
@@ -9,17 +9,29 @@
           </q-avatar>
           Idleon Companion
         </q-toolbar-title>
-
-        <q-btn dense flat round icon="mdi-menu" @click="toggleRightDrawer" />
+        <q-btn
+          dense
+          flat
+          round
+          :icon="isDarkMode ? 'mdi-brightness-7' : 'mdi-brightness-3'"
+          @click="toggleDarkMode"
+        />
+        <q-btn
+          dense
+          flat
+          round
+          icon="mdi-account-details"
+          @click="toggleRightDrawer"
+        />
       </q-toolbar>
     </q-header>
 
     <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
-      <LeftDrawerNavigation />
+      <LeftDrawerContent />
     </q-drawer>
 
     <q-drawer show-if-above v-model="rightDrawerOpen" side="right" bordered>
-      <!-- TODO: Move to component -->
+      <RightDrawerContent />
     </q-drawer>
 
     <q-page-container>
@@ -52,10 +64,15 @@ export default defineComponent({
   name: "App",
   components: {
     Home,
-    LeftDrawerNavigation,
+    LeftDrawerContent,
+    RightDrawerContent,
   },
   setup() {
-    onBeforeMount(versionControl);
+    const $q = useQuasar();
+    onBeforeMount(() => {
+      versionControl();
+      $q.dark.set(true);
+    });
     // Ensure Firebase is persistent (prevents repeated sign in)
     firebaseApp.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
     // State for storage/persistence
@@ -67,6 +84,7 @@ export default defineComponent({
       state.value.chars = characters.value;
     });
 
+    // Side drawer interactions
     const leftDrawerOpen = ref(true);
     const rightDrawerOpen = ref(true);
     const toggleLeftDrawer = () => {

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
 import { useQuasar } from "quasar";
 import { computed } from "vue";
->>>>>>> 24cf6b9... ui: fix light mode issues
 import { Character } from "./Characters";
 
 export type GrowthFunc = (a: number, b: number, c: number) => number;
@@ -97,13 +94,12 @@ export type Item = {
 };
 
 export type ItemGroup = {
-  global: boolean;
   assetDir: string;
   items: Item[];
 };
 
 export class Text {
-  static Item(item: Item): string {
+  static ChecklistItem(item: Item): string {
     let text = item.name;
     if (item.bagSlots !== undefined) {
       text += `<br>+${item.bagSlots} Inventory Slots`;

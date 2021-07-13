@@ -12,7 +12,7 @@
     <input class="columnSpan"
       type="number" :min="0"
       :value="alchemy.upgrades[group][idx]"
-      @change='customChange(group, idx, alchemy.upgrades[group][idx])'/>
+      @change='customChange' />
   </td>
   <td class="columnSpan">
     <input class="columnSpan"
@@ -40,7 +40,7 @@
 import { computed, defineComponent, PropType,} from "vue";
 import { useState} from "~/State";
 import GameAsset from "~/components/GameAsset.vue";
-import { Alch, Color, BARGAIN_BUBBLE, UNDEV_COST_BUBBLE } from "~/composables/Alchemy";
+import { AlchemyColor, AlchemyConst, AlchemyUtil } from "~/composables/Alchemy";
 import { Assets } from "~/composables/Utilities";
 import bubblesData from "~/data/bubbles.json"
 
@@ -52,7 +52,7 @@ export default defineComponent({
   props: {
     group: {
       required: true,
-      type: String as PropType<Color>,
+      type: String as PropType<AlchemyColor>,
     },
     discount: {
       required: true,
@@ -68,13 +68,10 @@ export default defineComponent({
   },
 
   methods: {
-    customChange (group: Color, idx: number, level: number): void {
-      const bubbleIDX = this.props.idx;
-      const bubbleColor = this.props.group;
-
-      this.alchemy.upgrades[bubbleColor][bubbleIDX] = level+1;
-      if (level +1 > this.alchemy.goals[bubbleColor][bubbleIDX]) {
-        this.alchemy.goals[bubbleColor][bubbleIDX] = level + 1;
+    customChange (event: { target: { value: string; id: number; }; }) {
+      this.alchemy.upgrades[this.props.group][this.props.idx] = parseInt(event.target.value);
+      if (this.props.idx == AlchemyConst.BargainBubble || (this.props.group == AlchemyConst.UndevCostColor && this.props.idx == AlchemyConst.UndevCostBubble )) {
+        this.$emit("custom-change", event.target.value);
       }
 
       if (bubbleIDX == BARGAIN_BUBBLE || (bubbleColor == UNDEV_COST_BUBBLE.color && bubbleIDX == UNDEV_COST_BUBBLE.number )) {
@@ -94,7 +91,7 @@ export default defineComponent({
     });
    
     // Storing the changes made to the goals into local storages
-    const handleAlchemyGoal = (ev: Event, color: Color, i: number) => {
+    const handleAlchemyGoal = (ev: Event, color: AlchemyColor, i: number) => {
       let target = <HTMLInputElement>ev.target;
       let val = target ? target.value : "0";
       alchemy.value.goals[color][i] = parseInt(val);
@@ -135,11 +132,11 @@ export default defineComponent({
       let bubble = bubblesData[props.group][props.idx];
       let levelNow = alchemy.value.upgrades[props.group][props.idx];
       let levelGoal = alchemy.value.goals[props.group][props.idx] ?? 0;
-      return Alch.effectChange(bubble, levelNow, levelGoal);
+      return AlchemyUtil.effectChange(bubble, levelNow, levelGoal);
     };
 
     return {
-      Alch, 
+      AlchemyUtil, 
       Assets,
             
       computeMaterials,

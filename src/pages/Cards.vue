@@ -59,13 +59,13 @@
 import { defineComponent } from "vue";
 import cardData from "~/data/card-sets.json";
 
-import GameAsset from "~/components/GameAsset.vue";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import { Assets } from "~/composables/Utilities";
 
 export default defineComponent({
   name: "Cards",
   components: {
-    GameAsset,
+    ICAsset,
   },
   setup() {
     return {
