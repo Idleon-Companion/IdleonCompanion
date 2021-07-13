@@ -85,10 +85,9 @@
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
 import calculatorData from "~/data/recipeCalculator.json";
-import GameAsset from "~/components/GameAsset.vue";
 import RecipeTree from "~/components/RecipeTree.vue";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import { Assets } from "~/composables/Utilities";
-
 
 type RecipeObject = {
   name: string;
@@ -99,43 +98,44 @@ type RecipeObject = {
 export default defineComponent({
   name: "RecipeCalculator",
   components: {
-    GameAsset,
-    RecipeTree
+    ICAsset,
+    RecipeTree,
   },
   methods: {
-    listMaterials(tree:RecipeObject) {
+    listMaterials(tree: RecipeObject) {
       // Setup result
       let result: Record<string, number> = {};
-      function flatten(current:RecipeObject) {
-        if(current.materials) {
-          current.materials.forEach(mat => {
+      function flatten(current: RecipeObject) {
+        if (current.materials) {
+          current.materials.forEach((mat) => {
             flatten(mat);
-          })
+          });
         } else {
           let name = current.name;
           let quantity = current.quantity;
-          if(result.hasOwnProperty(name)) { result[name] += quantity }
-          else { result[name] = quantity }
+          if (result.hasOwnProperty(name)) {
+            result[name] += quantity;
+          } else {
+            result[name] = quantity;
+          }
         }
       }
       flatten(tree);
       return result;
-    }
+    },
   },
   setup() {
     const data: Record<string, RecipeObject> = calculatorData;
     const recipe = ref("");
     const quantity = ref(1);
     const display = ref("list");
-    const materials = computed(
-      (): RecipeObject => {
-        if (recipe.value === "") {
-          return {} as RecipeObject;
-        }
-        return data[recipe.value];
+    const materials = computed((): RecipeObject => {
+      if (!recipe.value) {
+        return {} as RecipeObject;
       }
-    );
-    return { Assets, data, display, recipe, quantity, materials };
+      return data[recipe.value];
+    });
+    return { Assets, data, display, materials, quantity, recipe };
   },
 });
 </script>
@@ -148,7 +148,7 @@ export default defineComponent({
   border-radius: 0.25rem
 .recipe-quantity
   text-align: right
-	
+
 .padded-start
   white-space: pre
 </style>

@@ -53,39 +53,39 @@
 
 import { defineComponent } from "vue";
 
-import CharacterSelector from "~/components/CharacterSelector.vue";
-import Alchemy from "~/pages/Alchemy.vue";
-import Builds from "~/pages/Builds.vue";
-import Cards from "~/pages/Cards.vue";
+// import CharacterSelector from "~/components/CharacterSelector.vue";
+// import Alchemy from "~/pages/Alchemy.vue";
+// import Builds from "~/pages/Builds.vue";
+// import Cards from "~/pages/Cards.vue";
 import Characters from "~/pages/Characters.vue";
-import Credits from "~/pages/Credits.vue";
-import ProgressTracker from "~/pages/ProgressTracker.vue";
+// import Credits from "~/pages/Credits.vue";
+// import ProgressTracker from "~/pages/ProgressTracker.vue";
 import Tasks from "~/pages/Tasks.vue";
-import Calculators from "~/pages/Calculators.vue";
+// import Calculators from "~/pages/Calculators.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
-    Alchemy,
-    Builds,
-    Cards,
+    // Alchemy,
+    // Builds,
+    // Cards,
     Characters,
-    CharacterSelector,
-    Credits,
-    ProgressTracker,
-    Tasks,
-    Calculators,
+    // CharacterSelector,
+    // Credits,
+    // ProgressTracker,
+    // Tasks,
+    // Calculators,
   },
   setup() {
     const tabs = {
       Characters: Characters,
       Tasks: Tasks,
-      Progress_Tracker: ProgressTracker,
-      Alchemy: Alchemy,
-      Builds: Builds,
-      Cards: Cards,
-      Calculators: Calculators,
-      Credits: Credits,
+      // Progress_Tracker: ProgressTracker,
+      // Alchemy: Alchemy,
+      // Builds: Builds,
+      // Cards: Cards,
+      // Calculators: Calculators,
+      // Credits: Credits,
     };
     const defaultTab = "Characters";
     return {

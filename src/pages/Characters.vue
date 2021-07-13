@@ -1,373 +1,77 @@
 <template>
-  <div class="row">
+  <q-banner inline-actions>
+    Create/edit your characters! Track your character skill progress, inventory
+    upgrades, star signs, and more.
+    <template v-slot:action>
+      <q-btn-dropdown outline label="Wiki">
+        <q-list separator>
+          <a v-for="[label, link] in wikiLinks" :key="label" :href="link">
+            <q-item clickable>
+              <q-item-section>{{ label }}</q-item-section>
+            </q-item>
+          </a>
+        </q-list>
+      </q-btn-dropdown>
+    </template>
+  </q-banner>
+  <q-card v-if="currentCharacter === null">
     <div>
-      <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
-        In this tab you can create, modify and manage all your characters and
-        load/save data from the cloud (for multi-device sync). Keep track of
-        individual stats like statues, pouches and inventory slots.
-        <br />Switch between all of your created characters using the "Switch
-        character" menu in the top-right of the page.
-      </p>
+      You have no characters. Create your first character or load your data from
+      the cloud!
     </div>
-  </div>
-  <div class="row justify-content-center" v-if="curCharacter === null">
-    <h4 class="text-light flex justify-center">
-      You have no characters. Add new ones below!
-    </h4>
-    <button
-      class="btn-lg btn-dark mt-2 w-1/4 flex items-center justify-center"
-      @click="newCharacter"
-    >
-      <div class="iconify" data-icon="mdi-plus"></div>
-      New Character
-    </button>
-  </div>
-  <div v-else>
-    <div class="char-editor bg-primary p-3 rounded">
-      <div class="d-flex justify-content-between">
-        <div class="text-light h3">
-          Editing {{ curCharacter.name || "No Name" }}
-        </div>
-        <div class="btn-group flex">
-          <button class="btn btn-dark flex items-center" @click="newCharacter">
-            <div class="iconify" data-icon="mdi-plus"></div>
-            New Character
-          </button>
-          <button class="btn char-delete-btn" @click="deleteCharacter">
-            Delete
-          </button>
-        </div>
-      </div>
-      <div class="flex flex-wrap">
-        <img
-          class="char-class-img border border-secondary me-3 mt-3"
-          :src="Assets.CharImage(curCharacter)"
-          data-bs-toggle="modal"
-          data-bs-target="#char-class-selector"
-        />
-        <div
-          id="char-class-selector"
-          class="modal fade"
-          tabindex="-1"
-          aria-hidden="true"
-        >
-          <div
-            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-          >
-            <div class="modal-content bg-primary">
-              <div class="modal-header">
-                <h5 class="modal-title text-light">
-                  Select Character Class/Subclass
-                </h5>
-                <button
-                  type="button"
-                  class="iconify char-class-close"
-                  data-icon="mdi-close"
-                  data-bs-dismiss="modal"
-                ></button>
-              </div>
-              <div class="d-flex flex-wrap modal-body">
-                <GameAsset
-                  v-for="(class_, i) in classes"
-                  :key="i"
-                  :image="Assets.ClassImage(class_)"
-                  :height="72"
-                  :width="72"
-                  :title="class_"
-                  class="char-class-img m-1"
-                  @click="
-                    curCharacter !== null && curCharacter.setClass(class_)
-                  "
-                />
-                <GameAsset
-                  v-for="(subclass, i) in Subclass"
-                  :key="i"
-                  :image="Assets.ClassImage(subclass)"
-                  :height="72"
-                  :width="72"
-                  :title="subclass"
-                  class="char-class-img m-1"
-                  @click="
-                    curCharacter !== null && curCharacter.setClass(subclass)
-                  "
-                />
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-dark"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                >
-                  Save
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <label for="char-name">Name</label>
-          <input
-            id="char-name"
-            class="char-input"
-            type="text"
-            spellcheck="false"
-            placeholder="Name"
-            :maxlength="16"
-            v-model="curCharacter.name"
-          />
-          <label for="char-level">Level</label>
-          <input
-            id="char-level"
-            class="char-input"
-            type="number"
-            :min="1"
-            v-model.number="curCharacter.level"
-          />
-          <div class="total-level">Total Level: {{ totalCharLevel }}</div>
-        </div>
-        <div class="w-1/4 ml-2">
-          <label class="pl-2">Skills</label>
-          <div class="flex flex-wrap">
-            <div
-              v-for="(level, skill) in curCharacter.skills"
-              :key="skill"
-              class="char-skill flex items-center mb-1"
-            >
-              <GameAsset
-                class="char-skill-img ml-2 mr-1"
-                :image="Assets.IconImage(skill)"
-                :title="skill"
-              />
-              <input
-                v-if="curCharacter !== null"
-                :id="'char-skill-' + skill"
-                class="char-input skill-input"
-                type="number"
-                :min="0"
-                v-model.number="curCharacter.skills[skill]"
-              />
-            </div>
-          </div>
-        </div>
-        <div v-if="user === null" class="ms-auto">
-          <CloudData />
-        </div>
-      </div>
-    </div>
-    <div class="char-progress">
-      <h4 class="text-light mt-4">Character Progress</h4>
-      <div class="row progress-tracker">
-        <div
-          v-for="(data, category) in charChecklist"
-          :key="category"
-          class="progress-group col-lg mb-4"
-          id="checklist"
-        >
-          <div class="progress-category text-light my-3">
-            {{ category }}
-          </div>
-          <div class="progress-items">
-            <div v-for="(item, i) in data.items" :key="i">
-              <div class="progress-item">
-                <GameAsset
-                  v-if="
-                    !item.cycle ||
-                    cycleIndex(item.cycle) ===
-                      cycles[item.cycle].indexOf(item.name)
-                  "
-                  class="m-1"
-                  :width="72"
-                  :title="item.name"
-                  :image="Assets.FromDir(item.name, data.assetDir)"
-                  :enabled="isEnabled(item.name)"
-                  @click="handleProgressCheck(item.name, +1)"
-                  @contextmenu.prevent="handleProgressCheck(item.name, -1)"
-                >
-                  <template #tooltip>
-                    <div class="text-center" v-html="Text.Item(item)"></div>
-                  </template>
-                </GameAsset>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <StatuesSection />
-      <Constellations />
-    </div>
-  </div>
+    <q-btn @click="onCreateNewCharacter">New Character</q-btn>
+  </q-card>
+  <CharacterEditor v-else />
+  <CharacterProgressTracker v-if="currentCharacter !== null" />
 </template>
+<!-- TODO
+  <StatuesSection />
+  <Constellations />
+-->
 
 <script lang="ts">
-import { computed, defineComponent } from "vue";
+import { defineComponent } from "vue";
 import { useToast } from "vue-toastification";
 
-import CharacterCard from "~/components/CharacterCard.vue";
+import CharacterEditor from "~/components/characters/CharacterEditor.vue";
+import CharacterProgressTracker from "~/components/characters/CharacterProgressTracker.vue";
 import CloudData from "~/components/CloudData.vue";
 import Constellations from "~/components/Constellations.vue";
-import GameAsset from "~/components/GameAsset.vue";
-import {
-  Character,
-  Class,
-  Skills,
-  Subclass,
-  useCharacters,
-} from "~/composables/Characters";
-import { Statues } from "~/composables/Statues";
-import { Assets, Text, ItemGroup } from "~/composables/Utilities";
-import { checklistData } from "~/composables/Checklist";
-import StatuesSection from "~/pages/Statues.vue";
+import { useCharacters } from "~/composables/Characters";
 import { useAuth } from "~/State";
+
+const WikiLinks = new Map([
+  ["Classes", "https://idleon.miraheze.org/wiki/Classes"],
+  ["Skills", "https://idleon.miraheze.org/wiki/Skills"],
+  ["Items", "https://idleon.miraheze.org/wiki/Items"],
+  ["Star Signs", "https://idleon.miraheze.org/wiki/Star_Signs"],
+]);
 
 export default defineComponent({
   name: "Characters",
   components: {
-    CharacterCard,
+    CharacterEditor,
+    CharacterProgressTracker,
     CloudData,
     Constellations,
-    GameAsset,
-    StatuesSection,
   },
   setup() {
     const { user } = useAuth();
-    const { characters, charIndex, curCharacter, numCharacters } =
+    const { characters, createNewCharacter, currentCharacter } =
       useCharacters();
     const toast = useToast();
-    // Filter out class "All"
-    const classes = [];
-    for (const class_ in Class) {
-      if (class_ !== Class.All) {
-        classes.push(class_);
-      }
-    }
 
-    const newCharacter = () => {
-      let char = new Character();
-      for (const skill of Skills) {
-        char.skills[skill] = 0;
-      }
-      for (const name of Object.keys(Statues)) {
-        char.statues[name] = 0;
-      }
-      characters.value.push(char);
-      charIndex.value = characters.value.length - 1;
+    const onCreateNewCharacter = () => {
+      createNewCharacter();
       toast.info("New character created.");
-    };
-    const deleteCharacter = () => {
-      characters.value.splice(charIndex.value, 1);
-      charIndex.value = 0;
-    };
-
-    const totalCharLevel = computed<number>(() => {
-      let total = 0;
-      for (const c of characters.value) {
-        if (typeof c.level === "string") {
-          total += parseInt(c.level);
-        } else {
-          total += c.level;
-        }
-      }
-      return total;
-    });
-
-    const charChecklist = Object.entries(checklistData)
-      .filter(([_, value]) => !value.global)
-      .reduce((obj, [key, value]) => {
-        obj[key] = value;
-        return obj;
-      }, {} as Record<string, ItemGroup>);
-
-    type CycleData = Record<string, string[]>;
-    var cycles: CycleData = {};
-    var itemCycle: Record<string, string> = {};
-    for (const data of Object.values(charChecklist)) {
-      for (const item of data.items) {
-        if (item.cycle !== undefined) {
-          itemCycle[item.name] = item.cycle;
-          if (item.cycle in cycles) {
-            cycles[item.cycle].push(item.name);
-          } else {
-            cycles[item.cycle] = [item.name];
-          }
-        }
-      }
-    }
-
-    const isEnabled = (name: string): boolean => {
-      // Item is selected
-      return (
-        curCharacter.value !== null && curCharacter.value.items[name] === true
-      );
-    };
-
-    const cycleIndex = (cycle: string): number => {
-      if (curCharacter.value === null) {
-        return 0;
-      }
-      for (const item of cycles[cycle]) {
-        if (curCharacter.value.items[item] === true) {
-          return cycles[cycle].indexOf(item);
-        }
-      }
-      return 0;
-    };
-
-    const handleProgressCheck = (item: string, cycle: number) => {
-      if (curCharacter.value !== null) {
-        // Cyclical items
-        if (itemCycle[item] !== undefined) {
-          let hasBag = curCharacter.value.items[item];
-          delete curCharacter.value.items[item];
-          let c = cycles[itemCycle[item]];
-          if (cycle === 1 && !hasBag) {
-            cycle = 0;
-          }
-          let i = c.indexOf(item) + cycle;
-          let state = true;
-          if (i >= c.length) {
-            i = 0;
-            state = false;
-          } else if (i < 0) {
-            if (hasBag) {
-              i = 0;
-              state = false;
-            } else {
-              i = c.length - 1;
-            }
-          }
-          if (state) {
-            curCharacter.value.items[c[i]] = true;
-          }
-        } else {
-          // Normal items
-          if (curCharacter.value.items[item] !== undefined) {
-            curCharacter.value.items[item] = !curCharacter.value.items[item];
-          } else {
-            curCharacter.value.items[item] = true;
-          }
-        }
-      }
     };
 
     return {
-      Assets,
       characters,
-      charIndex,
-      charChecklist,
-      classes,
-      curCharacter,
-      cycles,
-      cycleIndex,
-      deleteCharacter,
-      handleProgressCheck,
-      isEnabled,
-      newCharacter,
-      numCharacters,
-      Subclass,
-      Text,
-      totalCharLevel,
+      currentCharacter,
+      onCreateNewCharacter,
       user,
+      wikiLinks: WikiLinks,
     };
   },
 });

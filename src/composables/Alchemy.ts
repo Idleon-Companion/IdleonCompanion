@@ -1,15 +1,18 @@
-import { Growth  } from "./Utilities";
+import { Growth } from "./Utilities";
 
 export type AlchemyData = {
   vials: Record<string, number>;
-  upgrades: Record<Color, number[]>;
-  goals: Record<Color, number[]>;
+  upgrades: Record<AlchemyColor, number[]>;
+  goals: Record<AlchemyColor, number[]>;
 };
 
-export type Color = "Orange" | "Green" | "Purple" | "Yellow";
-export const BARGAIN_BUBBLE = 14;
-export const UNDEV_COST_BUBBLE = {color: <Color>"Yellow", number: 6};
-export const IRON_BAR_VIAL = "Barley Brew";
+export type AlchemyColor = "Orange" | "Green" | "Purple" | "Yellow";
+export const AlchemyConst = {
+  BargainBubble: 14,
+  IronBarVial: "Barley Brew",
+  UndevCostBubble: 6,
+  UndevCostColor: <AlchemyColor>"Yellow",
+};
 
 export type Vial = {
   name: string;
@@ -339,22 +342,32 @@ export const VialCost = [
   1e9,
 ];
 
-export class Alch {
-  static discount (cauldCostReduxLvl: number, bubbleCostBubbleLvl: number, bubbleCostVialLvl: number, bubbleTwelveLvl: number, tagLvl: number): any {
+export class AlchemyUtil {
+  static discount(
+    cauldCostReduxLvl: number,
+    bubbleCostBubbleLvl: number,
+    bubbleCostVialLvl: number,
+    bubbleTwelveLvl: number,
+    tagLvl: number
+  ): any {
     const precision = 10000;
 
-    const costReduxBoost = Math.round(10 * Growth.Decay(cauldCostReduxLvl, 90, 100)) / 10;
-    const oa          = Math.max(0.1, 1 - costReduxBoost / 100); // TODO: This one is off, but the total calculation is still correct
-    const newBubble   = Math.max(0.05, 1 - (Growth.Decay(bubbleTwelveLvl, 40, 12)/100)); // Hardcoded values, better to retrieve from bubbles data maybe.
-    const undevCost   = Growth.Decay(bubbleCostBubbleLvl, 40, 70);
-    const vial        = Growth.Add(bubbleCostVialLvl, 1, 0);
-    const undev_vial  = Math.max(0.05, 1 - (undevCost + vial) / 100);
+    const costReduxBoost =
+      Math.round(10 * Growth.Decay(cauldCostReduxLvl, 90, 100)) / 10;
+    const oa = Math.max(0.1, 1 - costReduxBoost / 100); // TODO: This one is off, but the total calculation is still correct
+    const newBubble = Math.max(
+      0.05,
+      1 - Growth.Decay(bubbleTwelveLvl, 40, 12) / 100
+    ); // Hardcoded values, better to retrieve from bubbles data maybe.
+    const undevCost = Growth.Decay(bubbleCostBubbleLvl, 40, 70);
+    const vial = Growth.Add(bubbleCostVialLvl, 1, 0);
+    const undev_vial = Math.max(0.05, 1 - (undevCost + vial) / 100);
     const bargain_tag = Math.max(Math.pow(0.75, tagLvl), 0.1);
     var discount = oa * newBubble * undev_vial * bargain_tag;
     var result = [oa, bargain_tag, newBubble, undev_vial, discount];
     result = result.map((a) => {
-        return (precision - Math.round(a*precision))/100}
-      );
+      return (precision - Math.round(a * precision)) / 100;
+    });
     if (process.env.NODE_ENV === "development") {
       console.log(`Alch.discount = [
         Cauldron:     ${result[0].toFixed(2).padStart(5, " ")} | Level : ${(""+cauldCostReduxLvl).padStart(4, " ")}
@@ -366,20 +379,22 @@ export class Alch {
     }
     return result;
   }
-  
-  static effect = (bubble: Bubble, level: number) => {
-    let effect = (level === 0 ? 0 : Growth[bubble.Func](level, Number(bubble.x1), Number(bubble.x2)));
-    if (isNaN(effect)) {
-      effect = 0;
-    }
-    return Number(effect);
-  }
 
-  static effectChange = (bubble: Bubble, levelNow: number, levelGoal: number) => {
+  static effect = (bubble: Bubble, level: number) => {
+    return level === 0 ? 0 : Growth[bubble.Func](level, bubble.x1, bubble.x2);
+  };
+
+  static effectChange = (
+    bubble: Bubble,
+    levelNow: number,
+    levelGoal: number
+  ) => {
     let effectNow = Alch.effect(bubble, levelNow) ?? 0;
     let effectGoal = Alch.effect(bubble, levelGoal);
-    effectGoal = (effectGoal < effectNow ? effectNow : effectGoal);
-    let result = `${Number(effectNow).toFixed(2).padStart(6, ' ')} => ${Number(effectGoal).toFixed(2).padStart(6, ' ')}`;
+    effectGoal = effectGoal < effectNow ? effectNow : effectGoal;
+    let result = `${effectNow.toFixed(2).padStart(6, " ")} => ${effectGoal
+      .toFixed(2)
+      .padStart(6, " ")}`;
     return result;
   };
 }

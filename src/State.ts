@@ -1,4 +1,3 @@
-import { checklistData } from "~/composables/Checklist";
 import { version } from "../package.json";
 import { createGlobalState, useStorage } from "@vueuse/core";
 import { ref } from "vue";
@@ -54,7 +53,7 @@ export function versionControl() {
       let chars = localStorage.getItem("chars");
       if (chars !== null) {
         for (const c of JSON.parse(chars)) {
-          for (const item of checklistData["Capacity Pouches"]["items"]) {
+          for (const item of GlobalChecklist["Capacity Pouches"].items) {
             delete c.items[item.name];
           }
         }
@@ -96,7 +95,7 @@ export function versionControl() {
   }
   // Add W3 skills and statues
   if (state.value.version < "0.2.3") {
-    let newSkills = ["Trapping", "Construction", "Worship"];
+    let newSkills = ["Trapping", "Construction", "Worship"] as const;
     let newStatues = ["Box", "EhExPee", "Seesaw", "Twosoul"];
 
     for (const key in state.value.chars) {
@@ -118,9 +117,10 @@ export function versionControl() {
         };
       }
       for (let i = 0; i < amount; i++) {
-        state.value.alchemy.upgrades[k][i] = state.value.alchemy.upgrades[k][i] ?? 0; 
-        state.value.alchemy.goals[k][i] = state.value.alchemy.goals[k][i] ?? 0;       
-      }     
+        state.value.alchemy.upgrades[k][i] =
+          state.value.alchemy.upgrades[k][i] ?? 0;
+        state.value.alchemy.goals[k][i] = state.value.alchemy.goals[k][i] ?? 0;
+      }
     }
   }
   state.value.version = version;
@@ -130,6 +130,7 @@ export function versionControl() {
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
+import { GlobalChecklist } from "./composables/Checklist";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDP9fu1062i82w64K9LgKHFFMDgPtUj6k4",

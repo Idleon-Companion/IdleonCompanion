@@ -42,7 +42,7 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 
-import GameAsset from "~/components/GameAsset.vue";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import { Assets } from "~/composables/Utilities";
 
 const picnicRequirements = [
@@ -103,7 +103,7 @@ const picnicRequirements = [
 export default defineComponent({
   name: "Picnic Quest",
   components: {
-    GameAsset,
+    ICAsset,
   },
   setup() {
     const repeat = ref(1);

@@ -46,14 +46,11 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import GameAsset from "~/components/GameAsset.vue";
 import { useBuilds } from "~/composables/Builds";
 
 export default defineComponent({
   name: "BuildSkills",
-  components: {
-    GameAsset,
-  },
+  components: {},
   props: {
     editingMode: {
       type: Boolean,

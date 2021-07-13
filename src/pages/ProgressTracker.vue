@@ -74,7 +74,7 @@
 import { computed, defineComponent, ref } from "vue";
 import { checklistData } from "~/composables/Checklist";
 
-import GameAsset from "~/components/GameAsset.vue";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import { Card, CardCategory, Cards } from "~/composables/Cards";
 import { Assets, ItemGroup, Text } from "~/composables/Utilities";
 import { useState } from "~/State";
@@ -82,7 +82,7 @@ import { useState } from "~/State";
 export default defineComponent({
   name: "ProgressTracker",
   components: {
-    GameAsset,
+    ICAsset,
   },
   setup() {
     const globalChecklist = computed(() => {

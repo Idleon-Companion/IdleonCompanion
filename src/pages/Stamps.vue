@@ -1,10 +1,12 @@
 <template>
-  <div class="row ">
+  <div class="row">
     <div>
-    <p class="h6 text-light bg-primary p-3 mb-4 rounded">
-      This page shows a list of all available stamps, and allows you to calculate how much money and materials are needed for each level. 
-      <br/>Due to some limitations in the formula, atm it doesn't take into account the cost-decreasing effect of bribes and other factors.
-    </p>
+      <p class="h6 text-light bg-primary p-3 mb-4 rounded">
+        This page shows a list of all available stamps, and allows you to
+        calculate how much money and materials are needed for each level.
+        <br />Due to some limitations in the formula, atm it doesn't take into
+        account the cost-decreasing effect of bribes and other factors.
+      </p>
     </div>
   </div>
   <div class="row justify-content-center">
@@ -85,7 +87,7 @@ import { Growth } from "~/composables/Utilities";
 import stampsData from "~/data/stampsData.json";
 
 import CoinDisplay from "~/components/CoinDisplay.vue";
-import GameAsset from "~/components/GameAsset.vue";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import { Assets } from "~/composables/Utilities";
 
 type Stamp = {
@@ -106,7 +108,7 @@ export default defineComponent({
   name: "Stamps",
   components: {
     CoinDisplay,
-    GameAsset,
+    ICAsset,
   },
   setup() {
     const stamps: Record<any, Stamp> = stampsData;
