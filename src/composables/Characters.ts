@@ -30,7 +30,7 @@ export const Skills = [
   "Trapping",
   "Construction",
   "Worship",
-];
+] as const;
 
 // Characters keep track of individual data
 export class Character {
@@ -39,7 +39,7 @@ export class Character {
   public level: number;
   public name: string;
   public items: Record<string, boolean>;
-  public skills: Record<string, number>;
+  public skills: Partial<Record<typeof Skills[number], number>>;
   public statues: Record<string, number>;
   public constellations: Record<string, boolean>;
   public starSigns: Record<string, boolean>;

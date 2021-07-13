@@ -1,3 +1,5 @@
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
+import { computed } from "vue";
 import { Character } from "./Characters";
 
 export type GrowthFunc = (a: number, b: number, c: number) => number;
@@ -228,3 +230,14 @@ export type EffectData = ValueOf<typeof Effects>;
 export const GameVersions = <const>["1.22", "1.21", "1.20"];
 export type GameVersion = typeof GameVersions[number];
 export const LatestGameVersion: GameVersion = GameVersions[0];
+
+// Layout Utilities
+export function useLayout() {
+  const breakpoints = useBreakpoints(breakpointsTailwind);
+
+  const isMobile = computed(() => breakpoints.smaller("md")).value;
+
+  return {
+    isMobile,
+  };
+}

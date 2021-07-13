@@ -1,15 +1,29 @@
 <template>
-  <div class="row">
+  <q-banner inline-actions>
+    Create/edit your characters! Track your character skill progress, inventory
+    upgrades, star signs, and more.
+    <template v-slot:action>
+      <q-btn-dropdown outline label="Wiki">
+        <q-list separator>
+          <a v-for="[label, link] in wikiLinks" :key="label" :href="link">
+            <q-item clickable>
+              <q-item-section>{{ label }}</q-item-section>
+            </q-item>
+          </a>
+        </q-list>
+      </q-btn-dropdown>
+    </template>
+  </q-banner>
+  <q-card v-if="curCharacter === null">
     <div>
-      <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
-        In this tab you can create, modify and manage all your characters and
-        load/save data from the cloud (for multi-device sync). Keep track of
-        individual stats like statues, pouches and inventory slots.
-        <br />Switch between all of your created characters using the "Switch
-        character" menu in the top-right of the page.
-      </p>
+      You have no characters. Create your first character or load your data from
+      the cloud!
     </div>
-  </div>
+    <q-btn>New Character</q-btn>
+  </q-card>
+  <CharacterEditor v-else />
+</template>
+<!-- <div class="row">
   <div class="row justify-content-center" v-if="curCharacter === null">
     <h4 class="text-light flex justify-center">
       You have no characters. Add new ones below!
@@ -196,14 +210,14 @@
       <StatuesSection />
       <Constellations />
     </div>
-  </div>
-</template>
+  </div> -->
 
 <script lang="ts">
 import { computed, defineComponent } from "vue";
 import { useToast } from "vue-toastification";
 
 import CharacterCard from "~/components/CharacterCard.vue";
+import CharacterEditor from "~/components/characters/CharacterEditor.vue";
 import CloudData from "~/components/CloudData.vue";
 import Constellations from "~/components/Constellations.vue";
 import GameAsset from "~/components/GameAsset.vue";
@@ -220,10 +234,18 @@ import { checklistData } from "~/composables/Checklist";
 import StatuesSection from "~/pages/Statues.vue";
 import { useAuth } from "~/State";
 
+const WikiLinks = new Map([
+  ["Classes", "https://idleon.miraheze.org/wiki/Classes"],
+  ["Skills", "https://idleon.miraheze.org/wiki/Skills"],
+  ["Items", "https://idleon.miraheze.org/wiki/Items"],
+  ["Star Signs", "https://idleon.miraheze.org/wiki/Star_Signs"],
+]);
+
 export default defineComponent({
   name: "Characters",
   components: {
     CharacterCard,
+    CharacterEditor,
     CloudData,
     Constellations,
     GameAsset,
@@ -368,6 +390,7 @@ export default defineComponent({
       Text,
       totalCharLevel,
       user,
+      wikiLinks: WikiLinks,
     };
   },
 });
