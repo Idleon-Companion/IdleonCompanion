@@ -2,321 +2,321 @@
   "Orange": [
     {
       "Name": "ROID_RAGIN",
-      "x1": "1",
-      "x2": "0",
-      "Func": "add",
+      "x1": 1,
+      "x2": 0,
+      "Func": "Add",
       "Materials": [
         {
           "Name": "Oak Logs",
           "Amount": 25,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "WARRIORS_RULE",
-      "x1": "2",
-      "x2": "50",
-      "Func": "decayMulti",
+      "x1": 2,
+      "x2": 50,
+      "Func": "DecayMulti",
       "Materials": [
         {
           "Name": "Spore Cap",
           "Amount": 20,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Thread",
           "Amount": 3,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "HEARTY_DIGGY",
-      "x1": "50",
-      "x2": "100",
-      "Func": "decay",
+      "x1": 50,
+      "x2": 100,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Jungle Logs",
           "Amount": 40,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Copper Bar",
           "Amount": 18,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "WYOMING_BLOOD",
-      "x1": "23.5",
-      "x2": "1.5",
-      "Func": "bigBase",
+      "x1": 23.5,
+      "x2": 1.5,
+      "Func": "BigBase",
       "Materials": [
         {
           "Name": "Fly",
           "Amount": 30,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Goblin Ear",
           "Amount": 50,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "REELY_SMART",
-      "x1": "100",
-      "x2": "80",
-      "Func": "decay",
+      "x1": 100,
+      "x2": 80,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Boring Brick",
           "Amount": 25,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Crabby Cakey",
           "Amount": 40,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "BIG_MEATY_CLAWS",
-      "x1": "1",
-      "x2": "0.02",
-      "Func": "add",
+      "x1": 1,
+      "x2": 0.02,
+      "Func": "Add",
       "Materials": [
         {
           "Name": "Bleach Logs",
           "Amount": 200,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Furled Flag",
           "Amount": 75,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "SPLOOSH_SPLOOSH",
-      "x1": "23.5",
-      "x2": "1.5",
-      "Func": "bigBase",
+      "x1": 23.5,
+      "x2": 1.5,
+      "Func": "BigBase",
       "Materials": [
         {
           "Name": "Hermit Can",
           "Amount": 100,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "STRONK_TOOLS",
-      "x1": "65",
-      "x2": "70",
-      "Func": "decay",
+      "x1": 65,
+      "x2": 70,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Platinum Ore",
           "Amount": 60,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Frog Leg",
           "Amount": 200,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "FMJ",
-      "x1": "0.5",
-      "x2": "0",
-      "Func": "add",
+      "x1": 0.5,
+      "x2": 0,
+      "Func": "Add",
       "Materials": [
         {
           "Name": "Fruitfly",
           "Amount": 50,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Wakka Cherry",
           "Amount": 140,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 5,
-          "isLiquid": 1
+          "isLiquid": true
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "BAPPITY_BOOPITY",
-      "x1": "35",
-      "x2": "100",
-      "Func": "decay",
+      "x1": 35,
+      "x2": 100,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Pinion Spur",
           "Amount": 100,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Jungle Logs",
           "Amount": 700,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 5,
-          "isLiquid": 1
+          "isLiquid": true
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "BRITTLEY_SPEARS",
-      "x1": "40",
-      "x2": "50",
-      "Func": "decay",
+      "x1": 40,
+      "x2": 50,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Froge",
           "Amount": 10,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "CALL_ME_BOB",
-      "x1": "25",
-      "x2": "2.5",
-      "Func": "bigBase",
+      "x1": 25,
+      "x2": 2.5,
+      "Func": "BigBase",
       "Materials": [
         {
           "Name": "Moustache Comb",
           "Amount": 120,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "CARPENTER",
-      "x1": "2",
-      "x2": "50",
-      "Func": "decay",
+      "x1": 2,
+      "x2": 50,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Explosive Salts",
           "Amount": 3,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "BUFF_BOI_TALENT",
-      "x1": "5",
-      "x2": "1",
-      "Func": "bigBase",
+      "x1": 5,
+      "x2": 1,
+      "Func": "BigBase",
       "Materials": [
         {
           "Name": "Mousey",
           "Amount": 50,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Trench Seawater",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "ORANGE_BARGAIN",
-      "x1": "40",
-      "x2": "12",
-      "Func": "decay",
+      "x1": 40,
+      "x2": 12,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Frigid Soul",
           "Amount": 30,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Trench Seawater",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     }
@@ -324,321 +324,321 @@
   "Green": [
     {
       "Name": "SWIFT_STEPPIN",
-      "x1": "1",
-      "x2": "0",
-      "Func": "add",
+      "x1": 1,
+      "x2": 0,
+      "Func": "Add",
       "Materials": [
         {
           "Name": "Copper Ore",
           "Amount": 15,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "ARCHER_OR_BUST",
-      "x1": "2",
-      "x2": "50",
-      "Func": "decayMulti",
+      "x1": 2,
+      "x2": 50,
+      "Func": "DecayMulti",
       "Materials": [
         {
           "Name": "Spore Cap",
           "Amount": 20,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Bleach Logs",
           "Amount": 30,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "HAMMER_HAMMER",
-      "x1": "23",
-      "x2": "2",
-      "Func": "bigBase",
+      "x1": 23,
+      "x2": 2,
+      "Func": "BigBase",
       "Materials": [
         {
           "Name": "Iron Ore",
           "Amount": 30,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Bean Slices",
           "Amount": 30,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "LIL_BIG_DAMAGE",
-      "x1": "20",
-      "x2": "100",
-      "Func": "decay",
+      "x1": 20,
+      "x2": 100,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Goldfish",
           "Amount": 25,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Carrot Cube",
           "Amount": 40,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "ANVILNOMICS",
-      "x1": "40",
-      "x2": "100",
-      "Func": "decay",
+      "x1": 40,
+      "x2": 100,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Forest Fibres",
           "Amount": 50,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Gold Ore",
           "Amount": 40,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "QUICK_SLAP",
-      "x1": "1",
-      "x2": "0.02",
-      "Func": "add",
+      "x1": 1,
+      "x2": 0.02,
+      "Func": "Add",
       "Materials": [
         {
           "Name": "Coconotnotto",
           "Amount": 90,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Boring Brick",
           "Amount": 200,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "SANIC_TOOLS",
-      "x1": "65",
-      "x2": "70",
-      "Func": "decay",
+      "x1": 65,
+      "x2": 70,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Slime Sludge",
           "Amount": 130,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Gold Bar",
           "Amount": 6,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "BUG]",
-      "x1": "23.5",
-      "x2": "1.5",
-      "Func": "bigBase",
+      "x1": 23.5,
+      "x2": 1.5,
+      "Func": "BigBase",
       "Materials": [
         {
           "Name": "Sentient Cereal",
           "Amount": 70,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "SHAQURACY",
-      "x1": "1",
-      "x2": "0",
-      "Func": "add",
+      "x1": 1,
+      "x2": 0,
+      "Func": "Add",
       "Materials": [
         {
           "Name": "Bloach",
           "Amount": 65,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Tropilogs",
           "Amount": 250,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 5,
-          "isLiquid": 1
+          "isLiquid": true
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "CHEAP_SHOT",
-      "x1": "7",
-      "x2": "100",
-      "Func": "decay",
+      "x1": 7,
+      "x2": 100,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Mosquisnow",
           "Amount": 35,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Singlecle",
           "Amount": 150,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 5,
-          "isLiquid": 1
+          "isLiquid": true
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "BOW_JACK",
-      "x1": "40",
-      "x2": "50",
-      "Func": "decay",
+      "x1": 40,
+      "x2": 50,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Forest Soul",
           "Amount": 5,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "CALL_ME_ASH",
-      "x1": "25",
-      "x2": "2",
-      "Func": "bigBase",
+      "x1": 25,
+      "x2": 2,
+      "Func": "BigBase",
       "Materials": [
         {
           "Name": "Tundra Logs",
           "Amount": 100,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "CUZ_I_CATCH_EM_ALL",
-      "x1": "3",
-      "x2": "100",
-      "Func": "decayMulti",
+      "x1": 3,
+      "x2": 100,
+      "Func": "DecayMulti",
       "Materials": [
         {
           "Name": "Rooted Soul",
           "Amount": 25,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "FAST_BOI_TALENT",
-      "x1": "5",
-      "x2": "1",
-      "Func": "bigBase",
+      "x1": 5,
+      "x2": 1,
+      "Func": "BigBase",
       "Materials": [
         {
           "Name": "Flycicle",
           "Amount": 120,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Trench Seawater",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "GREEN_BARGAIN",
-      "x1": "40",
-      "x2": "12",
-      "Func": "decay",
+      "x1": 40,
+      "x2": 12,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Owlio",
           "Amount": 200,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Trench Seawater",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     }
@@ -646,321 +646,321 @@
   "Purple": [
     {
       "Name": "STABLE_JENIUS",
-      "x1": "1",
-      "x2": "0",
-      "Func": "add",
+      "x1": 1,
+      "x2": 0,
+      "Func": "Add",
       "Materials": [
         {
           "Name": "Thread",
           "Amount": 10,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "MAGE_IS_BEST",
-      "x1": "2",
-      "x2": "50",
-      "Func": "decayMulti",
+      "x1": 2,
+      "x2": 50,
+      "Func": "DecayMulti",
       "Materials": [
         {
           "Name": "Spore Cap",
           "Amount": 25,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Copper Bar",
           "Amount": 13,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "HOCUS_CHOPPUS",
-      "x1": "50",
-      "x2": "100",
-      "Func": "decay",
+      "x1": 50,
+      "x2": 100,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Trusty Nails",
           "Amount": 22,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Forest Fibres",
           "Amount": 40,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "MOLTO_LOGGO",
-      "x1": "23.5",
-      "x2": "1.5",
-      "Func": "bigBase",
+      "x1": 23.5,
+      "x2": 1.5,
+      "Func": "BigBase",
       "Materials": [
         {
           "Name": "Iron Bar",
           "Amount": 21,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Megalodon Tooth",
           "Amount": 30,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "NOODUBBLE",
-      "x1": "100",
-      "x2": "60",
-      "Func": "decay",
+      "x1": 100,
+      "x2": 60,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Chain Link",
           "Amount": 20,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Hermit Can",
           "Amount": 30,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "NAME_I_GUESS",
-      "x1": "1",
-      "x2": "0.02",
-      "Func": "add",
+      "x1": 1,
+      "x2": 0.02,
+      "Func": "Add",
       "Materials": [
         {
           "Name": "Snake Skin",
           "Amount": 110,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Gold Ore",
           "Amount": 40,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "LE_BRAIN_TOOLS",
-      "x1": "65",
-      "x2": "70",
-      "Func": "decay",
+      "x1": 65,
+      "x2": 70,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Bleach Logs",
           "Amount": 250,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Sentient Cereal",
           "Amount": 55,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "COOKIN_ROADKILL",
-      "x1": "120",
-      "x2": "70",
-      "Func": "decay",
+      "x1": 120,
+      "x2": 70,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Potty Rolls",
           "Amount": 75,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "BREWSTACHIO",
-      "x1": "50",
-      "x2": "100",
-      "Func": "decay",
+      "x1": 50,
+      "x2": 100,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "High Steaks",
           "Amount": 150,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Bloach",
           "Amount": 50,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 5,
-          "isLiquid": 1
+          "isLiquid": true
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "ALL_FOR_KILL",
-      "x1": "40",
-      "x2": "100",
-      "Func": "decay",
+      "x1": 40,
+      "x2": 100,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Veiny Logs",
           "Amount": 100,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Platinum Bar",
           "Amount": 5,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 5,
-          "isLiquid": 1
+          "isLiquid": true
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "MATTY_STAFFORD",
-      "x1": "40",
-      "x2": "50",
-      "Func": "decay",
+      "x1": 40,
+      "x2": 50,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Redox Salts",
           "Amount": 3,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "CALL_ME_POPE",
-      "x1": "2.4",
-      "x2": "70",
-      "Func": "decayMulti",
+      "x1": 2.4,
+      "x2": 70,
+      "Func": "DecayMulti",
       "Materials": [
         {
           "Name": "Crabbo",
           "Amount": 25,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "GOSPEL_LEADER",
-      "x1": "80",
-      "x2": "60",
-      "Func": "decay",
+      "x1": 80,
+      "x2": 60,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Mosquisnow",
           "Amount": 150,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "SMART_BOI_TALENT",
-      "x1": "5",
-      "x2": "1",
-      "Func": "bigBase",
+      "x1": 5,
+      "x2": 1,
+      "Func": "BigBase",
       "Materials": [
         {
           "Name": "Sippy Straw",
           "Amount": 150,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Trench Seawater",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "PURPLE_BARGAIN",
-      "x1": "40",
-      "x2": "12",
-      "Func": "decay",
+      "x1": 40,
+      "x2": 12,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Forest Soul",
           "Amount": 800,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Trench Seawater",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     }
@@ -968,311 +968,311 @@
   "Yellow": [
     {
       "Name": "LOTTO_SKILLS",
-      "x1": "1",
-      "x2": "0",
-      "Func": "add",
+      "x1": 1,
+      "x2": 0,
+      "Func": "Add",
       "Materials": [
         {
           "Name": "Copper Ore",
           "Amount": 11,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Oak Logs",
           "Amount": 15,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Thread",
           "Amount": 8,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "DROPPIN_LOADS",
-      "x1": "40",
-      "x2": "70",
-      "Func": "decay",
+      "x1": 40,
+      "x2": 70,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Goldfish",
           "Amount": 20,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Fly",
           "Amount": 30,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "STARTUE_EXP",
-      "x1": "25",
-      "x2": "60",
-      "Func": "decay",
+      "x1": 25,
+      "x2": 60,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Pocket Sand",
           "Amount": 30,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Plank",
           "Amount": 40,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "LEVEL_UP_GIFT",
-      "x1": "100",
-      "x2": "30",
-      "Func": "decay",
+      "x1": 100,
+      "x2": 30,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Iron Ore",
           "Amount": 35,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Jungle Logs",
           "Amount": 70,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Trusty Nails",
           "Amount": 30,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "PROWESESSARY",
-      "x1": "1.5",
-      "x2": "60",
-      "Func": "decayMulti",
+      "x1": 1.5,
+      "x2": 60,
+      "Func": "DecayMulti",
       "Materials": [
         {
           "Name": "Gold Bar",
           "Amount": 25,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Potty Rolls",
           "Amount": 50,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "STAMP_TRAMP",
-      "x1": "1",
-      "x2": "0",
-      "Func": "add",
+      "x1": 1,
+      "x2": 0,
+      "Func": "Add",
       "Materials": [
         {
           "Name": "Butterfly",
           "Amount": 65,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "UNDEVELOPED_COSTS",
-      "x1": "40",
-      "x2": "70",
-      "Func": "decay",
+      "x1": 40,
+      "x2": 70,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Jellyfish",
           "Amount": 75,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 6,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "DA_DAILY_DRIP",
-      "x1": "30",
-      "x2": "100",
-      "Func": "decay",
+      "x1": 30,
+      "x2": 100,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Leather Hide",
           "Amount": 125,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Water Droplets",
           "Amount": 8,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "GRIND_TIME",
-      "x1": "9.7",
-      "x2": ".3",
-      "Func": "bigBase",
+      "x1": 9.7,
+      "x2": 0.3,
+      "Func": "BigBase",
       "Materials": [
         {
           "Name": "Water Droplets",
           "Amount": 50,
-          "isLiquid": 1
+          "isLiquid": true
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 25,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "LAAARRRRYYYY",
-      "x1": "120",
-      "x2": "100",
-      "Func": "decay",
+      "x1": 120,
+      "x2": 100,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Dementia Ore",
           "Amount": 50,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Shrapshell",
           "Amount": 130,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "COGS_FOR_HANDS",
-      "x1": "4",
-      "x2": "0",
-      "Func": "add",
+      "x1": 4,
+      "x2": 0,
+      "Func": "Add",
       "Materials": [
         {
           "Name": "Melty Cube",
           "Amount": 50,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "SAMPLE_IT",
-      "x1": "12",
-      "x2": "40",
-      "Func": "decay",
+      "x1": 12,
+      "x2": 40,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Dune Soul",
           "Amount": 15,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "BIG_GAME_HUNTER",
-      "x1": "70",
-      "x2": "50",
-      "Func": "decay",
+      "x1": 70,
+      "x2": 50,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Scorpie",
           "Amount": 40,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Liquid Nitrogen",
           "Amount": 4,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "IGNORE_OVERDUES",
-      "x1": "100",
-      "x2": "60",
-      "Func": "decay",
+      "x1": 100,
+      "x2": 60,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Wispy Lumber",
           "Amount": 120,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Trench Seawater",
           "Amount": 2,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     },
     {
       "Name": "YELLOW_BARGAIN",
-      "x1": "40",
-      "x2": "12",
-      "Func": "decay",
+      "x1": 40,
+      "x2": 12,
+      "Func": "Decay",
       "Materials": [
         {
           "Name": "Pingy",
           "Amount": 250,
-          "isLiquid": 0
+          "isLiquid": false
         },
         {
           "Name": "Trench Seawater",
           "Amount": 3,
-          "isLiquid": 1
+          "isLiquid": true
         }
       ]
     }
