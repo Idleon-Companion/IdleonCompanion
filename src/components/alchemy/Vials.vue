@@ -29,11 +29,11 @@
 
 <script lang="ts">
   import { defineComponent } from "vue";
+  import { useState } from "~/State";
 
   import GameAsset from "~/components/GameAsset.vue";
-  import { Assets } from "~/composables/Utilities";
   import { Vial, Vials, VialCost } from "~/composables/Alchemy";
-  import { useState } from "~/State";
+  import { Assets } from "~/composables/Utilities";
 
   export default defineComponent({
     name: "Vials",
@@ -79,6 +79,7 @@
         }
         let current = `${vial.base < 0 ? "" : "+"}${vial.base * level}`;
 
+        // Change the tooltip text according to the level of the vial
         if (level + 1 < this.upgradeCount) {
           costText = `${cost} ${vial.material.replace(/_/g, " ")} + ${3 * level} Water Droplets to next level`;
           next = ` → ${Math.abs(vial.base * (level + 1))}`;
@@ -86,15 +87,12 @@
           if (level === 0) {
             costText = `Drop at cauldron and roll ${vial.roll}+`;
           }
-         
         } else { // Max level
           costText = "";
           next = "";
           name = `${vial.name} (Max level)`;
         }
-
-        return `${name}<br>
-        <em>${current}${next}${effect} <br> ${costText}`;
+        return `${name}<br><em>${current}${next}${effect} <br> ${costText}`;
       },
     },
   });
@@ -116,4 +114,3 @@
     left: -14px
     position: absolute
 </style>
-

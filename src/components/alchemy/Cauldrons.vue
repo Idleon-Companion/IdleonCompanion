@@ -7,9 +7,8 @@
       </p>
     </div>
   </div>
-
   <!-- Cauldron selector -->
-  <ul class="nav nav-pills nav-fill mt-3" role="tablist" :style="{background: colorTo(activeGroup, 'Hex')}">
+  <ul class="nav nav-pills nav-fill mt-3" role="tablist" :style="{background: ColorData[activeGroup].hex}">
     <li v-for="tab in colors" :key="tab" class="nav-item nav-item-alch">
       <button
         class="nav-link text-dark"
@@ -19,10 +18,10 @@
         role="tab"
         aria-controls="profile"
         :aria-selected="tab === 'Orange'"
-        :style="{background: colorTo(tab, 'Hex')}"
-        v-on:click="setGroup(tab)"
+        :style="{background: ColorData[tab].hex}"
+        v-on:click="changeCauldron(tab)"
       >
-        {{colorTo(tab, "Name")}} Cauldron
+        {{ColorData[tab].name}} Cauldron
       </button>
     </li>
   </ul>
@@ -47,7 +46,7 @@
             type="number" :min="0"
             @change="handleDiscountRecalc"/>
         </th>
-       <th class="quarter centered spaced"
+       <th class="quarter centered whitespace-pre"
           v-for="d in costHeaders"
           :key="d">
           {{d}}
@@ -81,8 +80,26 @@
   import { computed, defineComponent, ref } from "vue";
   import { useState} from "~/State";
   import AlchemyRow from "~/components/alchemy/AlchemyRow.vue";
-  import { Color, Alch } from "~/composables/Alchemy";
+  import { Alch, Color, BARGAIN_BUBBLE, UNDEV_COST_BUBBLE, IRON_BAR_VIAL } from "~/composables/Alchemy";
 
+  const ColorData: Record<Color, Object> = {
+    "Orange": {
+      name: "Power",
+      hex: "#ff9420",
+    },
+    "Green": {
+      name: "Quicc",
+      hex: "#47db5a",
+    },
+    "Purple": {
+      name: "High IQ",
+      hex: "#cb79e3",
+    },
+    "Yellow": {
+      name: "Kazam",
+      hex: "#edc300",
+    },
+  };
 
   export default defineComponent({
       name: "Cauldrons",
@@ -96,49 +113,35 @@
             set: (value) => (state.value.alchemy = value),
           });
 
+          // Initialize some of the headers of the tables and other values needed for making the UI
           const colors: Color[] = ["Orange", "Green", "Purple", "Yellow"];
-          const colorScheme = ["#ff9420", "#47db5a", "#cb79e3", "#edc300"];
-          const naming = ["Power", "Quicc", "High IQ", "Kazam"];
-
           const headers = ["Icon", "Level", "Goal", "Effect"];
-          const amountBubbles = 15;
           const costHeaders = ['XII Bubble', 'Undeveloped cost \nbubble and Iron bar vial', 'Total'];
-
+          const amountBubbles = 15;
           const activeGroup = ref(<Color>"Orange"); 
+
+          // Initialize the variables used for the discount table
           const cauldRedux = ref(0);
           const bargainLvl = ref(0);
           let discount = ref([0,0,0,0,0]);
 
           // Handler for discount calculations
           const handleDiscountRecalc = () => {
-            let twelveBubbleLevel = alchemy.value.upgrades[activeGroup.value][14];
-            let undevLevel = alchemy.value.upgrades["Yellow"][6];
-            let vialLevel = alchemy.value.vials["Barley Brew"] ?? 0;
+            let twelveBubbleLevel = alchemy.value.upgrades[activeGroup.value][BARGAIN_BUBBLE];
+            let undevLevel = alchemy.value.upgrades[UNDEV_COST_BUBBLE.color][UNDEV_COST_BUBBLE.number];
+            let vialLevel = alchemy.value.vials[IRON_BAR_VIAL] ?? 0;
             let discountMulti = Alch.discount(
                 Number(cauldRedux.value), 
                 undevLevel, vialLevel, 
                 twelveBubbleLevel, 
                 Number(bargainLvl.value));
-
             Object.assign(discount.value, discountMulti);
           };
           
-          // TODO: I have the feeling this can be solved differently with some sort of enum system. Not sure
-          //        how those  work in JS/Vue though.
-          const colorTo = (color: Color, option: string) => {
-            let idx = colors.indexOf(color);
-            switch(option) {
-              case "Name":
-                return naming[idx];
-              case "Hex":
-                return colorScheme[idx];
-            }
-          };
-
 
           return {      
             handleDiscountRecalc,
-            colorTo,
+            ColorData,
             discount,
             alchemy,
             colors,
@@ -151,7 +154,7 @@
           };
       },
       methods: {
-          setGroup(tab: Color) {
+          changeCauldron(tab: Color) {
             this.activeGroup = tab;
             this.cauldRedux = 0;
             this.bargainLvl = 0;
@@ -167,12 +170,6 @@
 
   .alter-color:nth-child(even) 
     background-color: #d3d3d336
-
-  .filled
-    width: 100%
-
-  .spaced
-    white-space: pre
 
   .centered
     text-align: center

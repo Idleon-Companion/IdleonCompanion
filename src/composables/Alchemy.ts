@@ -1,5 +1,4 @@
-import { isNumber } from "windicss/utils";
-import { Growth, GrowthFunc } from "./Utilities";
+import { Growth  } from "./Utilities";
 
 export type AlchemyData = {
   vials: Record<string, number>;
@@ -8,6 +7,9 @@ export type AlchemyData = {
 };
 
 export type Color = "Orange" | "Green" | "Purple" | "Yellow";
+export const BARGAIN_BUBBLE = 14;
+export const UNDEV_COST_BUBBLE = {color: <Color>"Yellow", number: 6};
+export const IRON_BAR_VIAL = "Barley Brew";
 
 export type Vial = {
   name: string;

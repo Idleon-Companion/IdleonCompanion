@@ -33,7 +33,7 @@ export const useState = createGlobalState(() =>
       tasks: Array<Task>(),
       dailyReset: "12:00",
     },
-    version: "0.2.4",
+    version: "0.2.0",
   })
 );
 
@@ -130,7 +130,6 @@ export function versionControl() {
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
-import { stat } from "fs";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDP9fu1062i82w64K9LgKHFFMDgPtUj6k4",

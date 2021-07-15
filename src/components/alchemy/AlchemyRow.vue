@@ -36,7 +36,7 @@
 import { computed, defineComponent, PropType,} from "vue";
 import { useState} from "~/State";
 import GameAsset from "~/components/GameAsset.vue";
-import { Color , Alch } from "~/composables/Alchemy";
+import { Alch, Color, BARGAIN_BUBBLE, UNDEV_COST_BUBBLE } from "~/composables/Alchemy";
 import { Assets } from "~/composables/Utilities";
 import bubblesData from "~/data/bubbles.json"
 
@@ -63,19 +63,19 @@ export default defineComponent({
   methods: {
     customChange (event: { target: { value: string; id: number; }; }) {
       this.alchemy.upgrades[this.props.group][this.props.idx] = parseInt(event.target.value);
-      if (this.props.idx == 14 || (this.props.idx == 6 && this.props.group == "Yellow")) {
+      if (this.props.idx == BARGAIN_BUBBLE || (this.props.group == UNDEV_COST_BUBBLE.color && this.props.idx == UNDEV_COST_BUBBLE.number )) {
         this.$emit("custom-change", event.target.value);
       }
     }
   },
   setup(props) {
     const state = useState();
-
     const alchemy = computed({
       get: () => state.value.alchemy,
       set: (value) => (state.value.alchemy = value),
     });
    
+    // Storing the changes made to the goals into local storages
     const handleAlchemyGoal = (ev: Event, color: Color, i: number) => {
       let target = <HTMLInputElement>ev.target;
       let val = target ? target.value : "0";
@@ -111,13 +111,14 @@ export default defineComponent({
       });
     };
 
+    // Returns the effect changes as a string in the form:
+    // a => b, where a is the effect right now and b is the effect at the goal level.
     const effectChange = () => {
       let bubble = bubblesData[props.group][props.idx];
       let levelNow = alchemy.value.upgrades[props.group][props.idx];
       let levelGoal = alchemy.value.goals[props.group][props.idx] ?? 0;
       return Alch.effectChange(bubble, levelNow, levelGoal);
     };
-
 
     return {
       Alch, 
