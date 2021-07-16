@@ -93,13 +93,12 @@ export type Item = {
 };
 
 export type ItemGroup = {
-  global: boolean;
   assetDir: string;
   items: Item[];
 };
 
 export class Text {
-  static Item(item: Item): string {
+  static ChecklistItem(item: Item): string {
     let text = item.name;
     if (item.bagSlots !== undefined) {
       text += `<br>+${item.bagSlots} Inventory Slots`;

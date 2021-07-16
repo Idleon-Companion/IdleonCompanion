@@ -1,5 +1,5 @@
 <template>
-  <q-card v-if="curCharacter" class="m-4">
+  <q-card v-if="currentCharacter" class="m-4">
     <q-card-section :horizontal="!isMobile">
       <q-card-section class="flex flex-col w-full md:(items-start w-1/3)">
         <div class="text-2xl font-medium">Character Info</div>
@@ -9,14 +9,14 @@
           </q-avatar>
           <div class="flex flex-col ml-4">
             <q-input
-              v-model="curCharacter.name"
+              v-model="currentCharacter.name"
               filled
               label="Name"
               placeholder="EpicGamer73"
               input-class="text-2xl"
             />
             <q-input
-              v-model.number="curCharacter.level"
+              v-model.number="currentCharacter.level"
               filled
               type="number"
               label="Level"
@@ -32,7 +32,7 @@
           <q-input
             v-for="(skill, skillIndex) in allSkills"
             :key="skillIndex"
-            v-model.number="curCharacter.skills[skill]"
+            v-model.number="currentCharacter.skills[skill]"
             outlined
             type="number"
             class="mr-2 mb-2 w-1/2 md:w-1/3 lg:w-1/4"
@@ -63,12 +63,12 @@ import { Assets, useLayout } from "~/composables/Utilities";
 export default defineComponent({
   name: "CharacterEditor",
   setup() {
-    const { curCharacter } = useCharacters();
+    const { currentCharacter } = useCharacters();
     const { isMobile } = useLayout();
 
     return {
       allSkills,
-      curCharacter,
+      currentCharacter,
       isMobile,
       iconImage: Assets.IconImage,
     };

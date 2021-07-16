@@ -99,7 +99,7 @@ const InventoryBags: Item[] = [
     name: "Sack of Success",
     bagSlots: 2,
   },
-]
+];
 
 const GemShopBags: Item[] = [
   {
@@ -132,7 +132,7 @@ const GemShopBags: Item[] = [
     bagSlots: 4,
     source: "Gem Shop",
   },
-]
+];
 
 const MaterialPouches: Item[] = [
   {
@@ -170,7 +170,7 @@ const MaterialPouches: Item[] = [
     cycle: "Materials Pouch",
     source: "Smithing",
   },
-]
+];
 
 const MiningPouches: Item[] = [
   {
@@ -245,13 +245,13 @@ const FishingPouches: Item[] = [
     cycle: "Fishing Pouch",
     source: "Smithing",
   },
-]
+];
 
 const FoodPouches: Item[] = [
   {
     name: "Miniscule Food Pouch",
     cycle: "Food Pouch",
-    source: "Quest (Picnic Stowaway",
+    source: "Quest (Picnic Stowaway)",
   },
   {
     name: "Cramped Food Pouch",
@@ -404,7 +404,7 @@ const SoulPouches: Item[] = [
     cycle: "Soul Pouch",
     source: "Smithing",
   },
-]
+];
 
 const StorageChests: Item[] = [
   {
@@ -576,7 +576,7 @@ const StorageChests: Item[] = [
     bagSlots: 6,
     source: "Drop (Frog)",
   },
-]
+];
 
 const CombatStamps: Item[] = [
   {
@@ -625,7 +625,7 @@ const CombatStamps: Item[] = [
   },
   {
     name: "Vitality Stamp",
-    source: "Vendor (Encroaching Forest Villas)"
+    source: "Vendor (Encroaching Forest Villas)",
   },
   {
     name: "Book Stamp",
@@ -683,7 +683,7 @@ const CombatStamps: Item[] = [
     name: "Stat Graph Stamp",
     source: "Quest (XxX Cattleprod XxX)",
   },
-]
+];
 
 const SkillStamps: Item[] = [
   {
@@ -704,7 +704,7 @@ const SkillStamps: Item[] = [
   },
   {
     name: "Twin Ores Stamp",
-    source: "Drop (Sheepie)"
+    source: "Drop (Sheepie)",
   },
   {
     name: "Choppin' Bag Stamp",
@@ -720,7 +720,7 @@ const SkillStamps: Item[] = [
   },
   {
     name: "Smart Dirt Stamp",
-    source: "DropTable5"
+    source: "DropTable5",
   },
   {
     name: "Cool Diggy Tool Stamp",
@@ -813,7 +813,7 @@ const SkillStamps: Item[] = [
     name: "Banked Pts Stamp",
     source: "DropTable14",
   },
-]
+];
 
 const MiscStamps: Item[] = [
   {
@@ -871,21 +871,14 @@ const MiscStamps: Item[] = [
     name: "Biblio Stamp",
     source: "Quest (Snouts)",
   },
-]
+];
 
-export const checklistData: Record<string, ItemGroup> = {
+export const CharacterChecklist: Record<string, ItemGroup> = {
   "Inventory Bags": {
-    global: false,
     assetDir: "checklist",
     items: InventoryBags,
   },
-  "Gem Shop Bags": {
-    global: true,
-    assetDir: "checklist",
-    items: GemShopBags,
-  },
   "Capacity Pouches": {
-    global: false,
     assetDir: "checklist",
     items: [
       ...MaterialPouches,
@@ -898,24 +891,32 @@ export const checklistData: Record<string, ItemGroup> = {
       ...SoulPouches,
     ],
   },
+};
+
+export const GlobalChecklist: Record<string, ItemGroup> = {
+  "Gem Shop Bags": {
+    assetDir: "checklist",
+    items: GemShopBags,
+  },
   "Storage Chests": {
-    global: true,
     assetDir: "checklist",
     items: StorageChests,
   },
   "Combat Stamps": {
-    global: true,
     assetDir: "stamps",
     items: CombatStamps,
   },
   "Skill Stamps": {
-    global: true,
     assetDir: "stamps",
     items: SkillStamps,
   },
   "Misc Stamps": {
-    global: true,
     assetDir: "stamps",
     items: MiscStamps,
   },
-}
+};
+
+export const CompleteChecklist = {
+  ...CharacterChecklist,
+  ...GlobalChecklist,
+};

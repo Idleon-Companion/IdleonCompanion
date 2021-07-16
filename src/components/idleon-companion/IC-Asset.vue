@@ -16,6 +16,7 @@
   <q-img
     v-else
     class="asset"
+    draggable="false"
     loading="lazy"
     :data-enabled="enabled"
     :src="image"

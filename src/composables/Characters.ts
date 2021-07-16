@@ -1,6 +1,6 @@
 import { computed, ref } from "vue";
 import { useState } from "~/State";
-import { checklistData } from "~/composables/Checklist";
+import { CompleteChecklist } from "~/composables/Checklist";
 
 export enum Class {
   All = "All", // Utility for any class
@@ -79,9 +79,8 @@ export class Character {
   get bagSlots(): number {
     let slots = 16; // Base inventory slots
     const { checklist } = useState().value;
-    // Character items
     for (const category of ["Inventory Bags"] as const) {
-      for (const item of checklistData[category].items) {
+      for (const item of CompleteChecklist[category].items) {
         if (this.hasItem(item.name)) {
           slots += item.bagSlots ?? 0;
         }
@@ -89,7 +88,7 @@ export class Character {
     }
     // Global items
     for (const category of ["Gem Shop Bags"] as const) {
-      for (const item of checklistData[category].items) {
+      for (const item of CompleteChecklist[category].items) {
         if (checklist[item.name] === true) {
           slots += item.bagSlots ?? 0;
         }
@@ -116,7 +115,7 @@ export function useCharacters() {
     return characters.value.length;
   });
 
-  const curCharacter = computed<Character | null>(() => {
+  const currentCharacter = computed<Character | null>(() => {
     if (numCharacters.value > 0) {
       return characters.value[charIndex.value];
     }
@@ -151,7 +150,7 @@ export function useCharacters() {
     characters,
     charIndex,
     createCharactersFromData,
-    curCharacter,
+    currentCharacter,
     numCharacters,
     nextCharacter,
     prevCharacter,

@@ -14,7 +14,7 @@
       </q-btn-dropdown>
     </template>
   </q-banner>
-  <q-card v-if="curCharacter === null">
+  <q-card v-if="currentCharacter === null">
     <div>
       You have no characters. Create your first character or load your data from
       the cloud!
@@ -22,74 +22,12 @@
     <q-btn @click="newCharacter">New Character</q-btn>
   </q-card>
   <CharacterEditor v-else />
-  <div class="flex items-start justify-around">
-    <q-expansion-item
-      label="Inventory Bags"
-      class="bg-blue-400 mx-4 rounded w-1/3 font-medium"
-    >
-      <div class="flex flex-wrap">
-        <q-card>
-          <ICAsset
-            v-for="item in charChecklist['Inventory Bags'].items"
-            class="m-1"
-            :enabled="isEnabled(item.name)"
-            :image="Assets.FromDir(item.name, 'checklist')"
-            @click.stop="handleProgressCheck(item.name, +1)"
-          />
-        </q-card>
-      </div>
-    </q-expansion-item>
-    <q-expansion-item
-      label="Capacity Pouches"
-      class="bg-blue-400 mx-4 rounded w-1/3 font-medium"
-    >
-      <q-card>Hi</q-card>
-    </q-expansion-item>
-  </div>
+  <CharacterProgressTracker v-if="currentCharacter !== null" />
 </template>
-<!-- <div class="row">
-    <div class="char-progress">
-      <h4 class="text-light mt-4">Character Progress</h4>
-      <div class="row progress-tracker">
-        <div
-          v-for="(data, category) in charChecklist"
-          :key="category"
-          class="progress-group col-lg mb-4"
-          id="checklist"
-        >
-          <div class="progress-category text-light my-3">
-            {{ category }}
-          </div>
-          <div class="progress-items">
-            <div v-for="(item, i) in data.items" :key="i">
-              <div class="progress-item">
-                <GameAsset
-                  v-if="
-                    !item.cycle ||
-                    cycleIndex(item.cycle) ===
-                      cycles[item.cycle].indexOf(item.name)
-                  "
-                  class="m-1"
-                  :width="72"
-                  :title="item.name"
-                  :image="Assets.FromDir(item.name, data.assetDir)"
-                  :enabled="isEnabled(item.name)"
-                  @click="handleProgressCheck(item.name, +1)"
-                  @contextmenu.prevent="handleProgressCheck(item.name, -1)"
-                >
-                  <template #tooltip>
-                    <div class="text-center" v-html="Text.Item(item)"></div>
-                  </template>
-                </GameAsset>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <StatuesSection />
-      <Constellations />
-    </div>
-  </div> -->
+<!-- TODO
+  <StatuesSection />
+  <Constellations />
+-->
 
 <script lang="ts">
 import { computed, defineComponent } from "vue";
@@ -97,9 +35,9 @@ import { useToast } from "vue-toastification";
 
 import CharacterCard from "~/components/CharacterCard.vue";
 import CharacterEditor from "~/components/characters/CharacterEditor.vue";
+import CharacterProgressTracker from "~/components/characters/CharacterProgressTracker.vue";
 import CloudData from "~/components/CloudData.vue";
 import Constellations from "~/components/Constellations.vue";
-import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import {
   Character,
   Class,
@@ -108,8 +46,7 @@ import {
   useCharacters,
 } from "~/composables/Characters";
 import { Statues } from "~/composables/Statues";
-import { Assets, Text, ItemGroup } from "~/composables/Utilities";
-import { checklistData } from "~/composables/Checklist";
+import { Assets, Text } from "~/composables/Utilities";
 import StatuesSection from "~/pages/Statues.vue";
 import { useAuth } from "~/State";
 
@@ -125,14 +62,14 @@ export default defineComponent({
   components: {
     CharacterCard,
     CharacterEditor,
+    CharacterProgressTracker,
     CloudData,
     Constellations,
-    ICAsset,
     StatuesSection,
   },
   setup() {
     const { user } = useAuth();
-    const { characters, charIndex, curCharacter, numCharacters } =
+    const { characters, charIndex, currentCharacter, numCharacters } =
       useCharacters();
     const toast = useToast();
     // Filter out class "All"
@@ -172,97 +109,13 @@ export default defineComponent({
       return total;
     });
 
-    const charChecklist = Object.entries(checklistData)
-      .filter(([_, value]) => !value.global)
-      .reduce((obj, [key, value]) => {
-        obj[key] = value;
-        return obj;
-      }, {} as Record<string, ItemGroup>);
-
-    type CycleData = Record<string, string[]>;
-    var cycles: CycleData = {};
-    var itemCycle: Record<string, string> = {};
-    for (const data of Object.values(charChecklist)) {
-      for (const item of data.items) {
-        if (item.cycle !== undefined) {
-          itemCycle[item.name] = item.cycle;
-          if (item.cycle in cycles) {
-            cycles[item.cycle].push(item.name);
-          } else {
-            cycles[item.cycle] = [item.name];
-          }
-        }
-      }
-    }
-
-    const isEnabled = (name: string): boolean => {
-      // Item is selected
-      return (
-        curCharacter.value !== null && curCharacter.value.items[name] === true
-      );
-    };
-
-    const cycleIndex = (cycle: string): number => {
-      if (curCharacter.value === null) {
-        return 0;
-      }
-      for (const item of cycles[cycle]) {
-        if (curCharacter.value.items[item] === true) {
-          return cycles[cycle].indexOf(item);
-        }
-      }
-      return 0;
-    };
-
-    const handleProgressCheck = (item: string, cycle: number) => {
-      if (curCharacter.value !== null) {
-        // Cyclical items
-        if (itemCycle[item] !== undefined) {
-          let hasBag = curCharacter.value.items[item];
-          delete curCharacter.value.items[item];
-          let c = cycles[itemCycle[item]];
-          if (cycle === 1 && !hasBag) {
-            cycle = 0;
-          }
-          let i = c.indexOf(item) + cycle;
-          let state = true;
-          if (i >= c.length) {
-            i = 0;
-            state = false;
-          } else if (i < 0) {
-            if (hasBag) {
-              i = 0;
-              state = false;
-            } else {
-              i = c.length - 1;
-            }
-          }
-          if (state) {
-            curCharacter.value.items[c[i]] = true;
-          }
-        } else {
-          // Normal items
-          if (curCharacter.value.items[item] !== undefined) {
-            curCharacter.value.items[item] = !curCharacter.value.items[item];
-          } else {
-            curCharacter.value.items[item] = true;
-          }
-        }
-      }
-    };
-
     return {
       Assets,
       characters,
       charIndex,
-      charChecklist,
       classes,
-      curCharacter,
-      cycles,
-      cycleIndex,
+      currentCharacter,
       deleteCharacter,
-      handleProgressCheck,
-      isEnabled,
       newCharacter,
       numCharacters,
       Subclass,
