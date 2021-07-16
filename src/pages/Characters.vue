@@ -19,156 +19,35 @@
       You have no characters. Create your first character or load your data from
       the cloud!
     </div>
-    <q-btn>New Character</q-btn>
+    <q-btn @click="newCharacter">New Character</q-btn>
   </q-card>
   <CharacterEditor v-else />
+  <div class="flex items-start justify-around">
+    <q-expansion-item
+      label="Inventory Bags"
+      class="bg-blue-400 mx-4 rounded w-1/3 font-medium"
+    >
+      <div class="flex flex-wrap">
+        <q-card>
+          <ICAsset
+            v-for="item in charChecklist['Inventory Bags'].items"
+            class="m-1"
+            :enabled="isEnabled(item.name)"
+            :image="Assets.FromDir(item.name, 'checklist')"
+            @click.stop="handleProgressCheck(item.name, +1)"
+          />
+        </q-card>
+      </div>
+    </q-expansion-item>
+    <q-expansion-item
+      label="Capacity Pouches"
+      class="bg-blue-400 mx-4 rounded w-1/3 font-medium"
+    >
+      <q-card>Hi</q-card>
+    </q-expansion-item>
+  </div>
 </template>
 <!-- <div class="row">
-  <div class="row justify-content-center" v-if="curCharacter === null">
-    <h4 class="text-light flex justify-center">
-      You have no characters. Add new ones below!
-    </h4>
-    <button
-      class="btn-lg btn-dark mt-2 w-1/4 flex items-center justify-center"
-      @click="newCharacter"
-    >
-      <div class="iconify" data-icon="mdi-plus"></div>
-      New Character
-    </button>
-  </div>
-  <div v-else>
-    <div class="char-editor bg-primary p-3 rounded">
-      <div class="d-flex justify-content-between">
-        <div class="text-light h3">
-          Editing {{ curCharacter.name || "No Name" }}
-        </div>
-        <div class="btn-group flex">
-          <button class="btn btn-dark flex items-center" @click="newCharacter">
-            <div class="iconify" data-icon="mdi-plus"></div>
-            New Character
-          </button>
-          <button class="btn char-delete-btn" @click="deleteCharacter">
-            Delete
-          </button>
-        </div>
-      </div>
-      <div class="flex flex-wrap">
-        <img
-          class="char-class-img border border-secondary me-3 mt-3"
-          :src="Assets.CharImage(curCharacter)"
-          data-bs-toggle="modal"
-          data-bs-target="#char-class-selector"
-        />
-        <div
-          id="char-class-selector"
-          class="modal fade"
-          tabindex="-1"
-          aria-hidden="true"
-        >
-          <div
-            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-          >
-            <div class="modal-content bg-primary">
-              <div class="modal-header">
-                <h5 class="modal-title text-light">
-                  Select Character Class/Subclass
-                </h5>
-                <button
-                  type="button"
-                  class="iconify char-class-close"
-                  data-icon="mdi-close"
-                  data-bs-dismiss="modal"
-                ></button>
-              </div>
-              <div class="d-flex flex-wrap modal-body">
-                <GameAsset
-                  v-for="(class_, i) in classes"
-                  :key="i"
-                  :image="Assets.ClassImage(class_)"
-                  :height="72"
-                  :width="72"
-                  :title="class_"
-                  class="char-class-img m-1"
-                  @click="
-                    curCharacter !== null && curCharacter.setClass(class_)
-                  "
-                />
-                <GameAsset
-                  v-for="(subclass, i) in Subclass"
-                  :key="i"
-                  :image="Assets.ClassImage(subclass)"
-                  :height="72"
-                  :width="72"
-                  :title="subclass"
-                  class="char-class-img m-1"
-                  @click="
-                    curCharacter !== null && curCharacter.setClass(subclass)
-                  "
-                />
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-dark"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                >
-                  Save
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <label for="char-name">Name</label>
-          <input
-            id="char-name"
-            class="char-input"
-            type="text"
-            spellcheck="false"
-            placeholder="Name"
-            :maxlength="16"
-            v-model="curCharacter.name"
-          />
-          <label for="char-level">Level</label>
-          <input
-            id="char-level"
-            class="char-input"
-            type="number"
-            :min="1"
-            v-model.number="curCharacter.level"
-          />
-          <div class="total-level">Total Level: {{ totalCharLevel }}</div>
-        </div>
-        <div class="w-1/4 ml-2">
-          <label class="pl-2">Skills</label>
-          <div class="flex flex-wrap">
-            <div
-              v-for="(level, skill) in curCharacter.skills"
-              :key="skill"
-              class="char-skill flex items-center mb-1"
-            >
-              <GameAsset
-                class="char-skill-img ml-2 mr-1"
-                :image="Assets.IconImage(skill)"
-                :title="skill"
-              />
-              <input
-                v-if="curCharacter !== null"
-                :id="'char-skill-' + skill"
-                class="char-input skill-input"
-                type="number"
-                :min="0"
-                v-model.number="curCharacter.skills[skill]"
-              />
-            </div>
-          </div>
-        </div>
-        <div v-if="user === null" class="ms-auto">
-          <CloudData />
-        </div>
-      </div>
-    </div>
     <div class="char-progress">
       <h4 class="text-light mt-4">Character Progress</h4>
       <div class="row progress-tracker">
@@ -220,7 +99,7 @@ import CharacterCard from "~/components/CharacterCard.vue";
 import CharacterEditor from "~/components/characters/CharacterEditor.vue";
 import CloudData from "~/components/CloudData.vue";
 import Constellations from "~/components/Constellations.vue";
-import GameAsset from "~/components/GameAsset.vue";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import {
   Character,
   Class,
@@ -248,7 +127,7 @@ export default defineComponent({
     CharacterEditor,
     CloudData,
     Constellations,
-    GameAsset,
+    ICAsset,
     StatuesSection,
   },
   setup() {

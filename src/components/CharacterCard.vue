@@ -14,7 +14,7 @@
         <div class="ms-1 char-text-sm">{{ char.bagSlots }} Slots</div>
       </div>
       <div class="d-flex">
-        <GameAsset
+        <ICAsset
           v-for="(skill, i) in topSkills"
           :key="i"
           :height="24"
@@ -29,14 +29,14 @@
 <script lang="ts">
 import { computed, defineComponent, PropType } from "vue";
 
-import GameAsset from "~/components/GameAsset.vue";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import { Character, Skills, useCharacters } from "~/composables/Characters";
 import { Assets } from "~/composables/Utilities";
 
 export default defineComponent({
   name: "CharacterCard",
   components: {
-    GameAsset,
+    ICAsset,
   },
   props: {
     char: {
