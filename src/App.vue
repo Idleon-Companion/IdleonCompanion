@@ -27,11 +27,11 @@
     </q-header>
 
     <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
-      <LeftDrawerNavigation />
+      <LeftDrawerContent />
     </q-drawer>
 
     <q-drawer show-if-above v-model="rightDrawerOpen" side="right" bordered>
-      <!-- TODO: Create side drawer -->
+      <RightDrawerContent />
     </q-drawer>
 
     <q-page-container>
@@ -52,7 +52,8 @@ import {
   watchEffect,
 } from "vue";
 
-import LeftDrawerNavigation from "~/components/nav/LeftDrawerNavigation.vue";
+import LeftDrawerContent from "~/components/nav/LeftDrawerContent.vue";
+import RightDrawerContent from "~/components/nav/RightDrawerContent.vue";
 import { useCharacters } from "~/composables/Characters";
 import Home from "~/pages/Home.vue";
 import { firebaseApp, versionControl, useState } from "~/State";
@@ -63,7 +64,8 @@ export default defineComponent({
   name: "App",
   components: {
     Home,
-    LeftDrawerNavigation,
+    LeftDrawerContent,
+    RightDrawerContent,
   },
   setup() {
     const $q = useQuasar();
