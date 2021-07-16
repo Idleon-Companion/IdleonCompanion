@@ -3,7 +3,7 @@ import { version } from "../package.json";
 import { createGlobalState, useStorage } from "@vueuse/core";
 import { ref } from "vue";
 import { useToast } from "vue-toastification";
-import { AlchemyData } from "~/composables/Alchemy";
+import { AlchemyData, Color } from "~/composables/Alchemy";
 import { Task } from "~/composables/Progress";
 import { Character, useCharacters } from "~/composables/Characters";
 
@@ -12,6 +12,12 @@ export const useState = createGlobalState(() =>
   useStorage(StorageKey, {
     alchemy: {
       upgrades: {
+        Orange: [],
+        Green: [],
+        Purple: [],
+        Yellow: [],
+      },
+      goals: {
         Orange: [],
         Green: [],
         Purple: [],
@@ -96,6 +102,25 @@ export function versionControl() {
     for (const key in state.value.chars) {
       for (const s of newSkills) state.value.chars[key].skills[s] = 0;
       for (const t of newStatues) state.value.chars[key].statues[t] = 0;
+    }
+  }
+  // Add new bubble slots and a goals field for each bubble
+  if (state.value.version < "0.2.4") {
+    let colors: Color[] = ["Orange", "Green", "Purple", "Yellow"];
+    for (const k of colors) {
+      let amount = 15;
+      if (!state.value.alchemy.goals) {
+        state.value.alchemy.goals = {
+          Orange: [],
+          Green: [],
+          Purple: [],
+          Yellow: [],
+        };
+      }
+      for (let i = 0; i < amount; i++) {
+        state.value.alchemy.upgrades[k][i] = state.value.alchemy.upgrades[k][i] ?? 0; 
+        state.value.alchemy.goals[k][i] = state.value.alchemy.goals[k][i] ?? 0;       
+      }     
     }
   }
   state.value.version = version;
