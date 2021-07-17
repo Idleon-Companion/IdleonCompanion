@@ -16,18 +16,7 @@
     ],
     "caps": [
       {
-        "slots": 17,
-        "material": 15645,
-        "mining": 15645,
-        "fish": 15645,
-        "food": 15645,
-        "choppin": 15645,
-        "bug": 15645,
-        "critter": 15645,
-        "soul": 15645
-      },
-      {
-        "slots": 75,
+        "slots": 16,
         "material": 10,
         "mining": 10,
         "fish": 10,

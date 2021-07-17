@@ -44,8 +44,8 @@
       <!-- Game Version Note -->
       <div class="col-sm-2 pl-3 mb-2">
         <h3>Last Updated</h3>
-        <p>v1.22b</p>
-        <p>July 5, 2021</p>
+        <p>v1.22d</p>
+        <p>July 17, 2021</p>
       </div>
     </div>
   </div>
@@ -67,6 +67,7 @@
     </div>
     <div v-else>
       <div class="row">
+        <!-- Special Notes -->
         <div class="col-sm-4" id="notes">
           <!-- Crafting Notes -->
           <h4>Notes</h4>
@@ -88,7 +89,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-4" id="recipesMaterials">
+        <!-- Recipe List -->
+        <div class="col-sm-4" id="recipes">
           <h4>Recipe List</h4>
           <div
             class="container"
@@ -117,6 +119,7 @@
             </div>
           </div>
         </div>
+        <!-- Material List -->
         <div class="col-sm-4" id="materials">
           <h4>Material List</h4>
           <div
@@ -147,41 +150,86 @@
           </div>
         </div>
       </div>
-      
       <div class="row">
         <h4>Inventory Capacity Setups</h4>
         <div class="container" style="height: 475px; overflow: auto">
-          <div
-            class="row"
-            v-for="(inventory, index) in recommended.caps"
-            :key="`inventory-${index}`"
-          >
+          <!-- Current Character Setup -->
+          <div v-if="curCharacter !== null">
+            <h5>Using Character "{{ curCharacter.name }}"</h5>
+            <!-- Character doesn't have enough slots -->
+            <div v-if="defaultSlots === null">
+              Currently selected character is not capable of completing this tier of the task
+            </div>
+            <!-- Character has enough slots -->
+            <div v-else class="row">
+              <div class="border-top border-bottom col-sm">
+                <h5>Slots: {{ recommended.caps[defaultSlots].slots }}</h5>
+              </div>
+              <div class="border-top border-bottom col-sm">
+                Material:<br />{{ recommended.caps[defaultSlots].material }}
+              </div>
+              <div class="border-top border-bottom col-sm">
+                Mining:<br />{{ recommended.caps[defaultSlots].mining }}
+              </div>
+              <div class="border-top border-bottom col-sm">
+                Fish:<br />{{ recommended.caps[defaultSlots].fish }}
+              </div>
+              <div class="border-top border-bottom col-sm">
+                Food:<br />{{ recommended.caps[defaultSlots].food }}
+              </div>
+              <div class="border-top border-bottom col-sm">
+                Chopping:<br />{{ recommended.caps[defaultSlots].choppin }}
+              </div>
+              <div class="border-top border-bottom col-sm">
+                Bug:<br />{{ recommended.caps[defaultSlots].bug }}
+              </div>
+              <div class="border-top border-bottom col-sm">
+                Soul:<br />{{ recommended.caps[defaultSlots].soul }}
+              </div>
+              <div class="border-top border-bottom col-sm">
+                Critter:<br />{{ recommended.caps[defaultSlots].critter }}
+              </div>
+            </div>
+          </div>
+          <h5>All Inventory Setups</h5>
+          <!-- Inventory Selector -->
+          <select v-model="invSlots" id="slot-selector">
+            <option 
+              v-for="(inventory, index) in recommended.caps"
+              :key="index"
+              :value="index"
+            >
+              {{ inventory.slots }} Inventory Slots
+            </option>
+          </select>
+          <!-- Display Selected Inventory Setup -->
+          <div class="row">
             <div class="border-top border-bottom col-sm">
-              <h5>Slots: {{ inventory.slots }}</h5>
+              <h5>Slots: {{ recommended.caps[parseInt(invSlots)].slots }}</h5>
             </div>
             <div class="border-top border-bottom col-sm">
-              Material:<br />{{ inventory.material }}
+              Material:<br />{{ recommended.caps[parseInt(invSlots)].material }}
             </div>
             <div class="border-top border-bottom col-sm">
-              Mining:<br />{{ inventory.mining }}
+              Mining:<br />{{ recommended.caps[parseInt(invSlots)].mining }}
             </div>
             <div class="border-top border-bottom col-sm">
-              Fish:<br />{{ inventory.fish }}
+              Fish:<br />{{ recommended.caps[parseInt(invSlots)].fish }}
             </div>
             <div class="border-top border-bottom col-sm">
-              Food:<br />{{ inventory.food }}
+              Food:<br />{{ recommended.caps[parseInt(invSlots)].food }}
             </div>
             <div class="border-top border-bottom col-sm">
-              Chopping:<br />{{ inventory.choppin }}
+              Chopping:<br />{{ recommended.caps[parseInt(invSlots)].choppin }}
             </div>
             <div class="border-top border-bottom col-sm">
-              Bug:<br />{{ inventory.bug }}
+              Bug:<br />{{ recommended.caps[parseInt(invSlots)].bug }}
             </div>
             <div class="border-top border-bottom col-sm">
-              Soul:<br />{{ inventory.soul }}
+              Soul:<br />{{ recommended.caps[parseInt(invSlots)].soul }}
             </div>
             <div class="border-top border-bottom col-sm">
-              Critter:<br />{{ inventory.critter }}
+              Critter:<br />{{ recommended.caps[parseInt(invSlots)].critter }}
             </div>
           </div>
         </div>
@@ -194,6 +242,7 @@
 import { computed, defineComponent, ref } from "vue";
 import packMuleData from "~/data/packMule.json";
 import GameAsset from "~/components/GameAsset.vue";
+import { useCharacters } from "~/composables/Characters";
 import { Assets } from "~/composables/Utilities";
 
 type PackMuleObject = {
@@ -210,6 +259,7 @@ export default defineComponent({
     GameAsset
   },
   setup() {
+    const { characters, curCharacter } = useCharacters();
     const data: Record<string, PackMuleObject> = packMuleData;
     const anvilTab = ref("");
     const taskTier = ref("");
@@ -221,7 +271,29 @@ export default defineComponent({
         return data[`${anvilTab.value}${taskTier.value}`];
       }
     );
-    return { Assets, data, anvilTab, taskTier, recommended };
+    const defaultSlots = computed(
+      (): number|null => {
+        let i = null;
+        if(curCharacter) {
+          recommended.value.caps.forEach((inv:Record<string, number>, index:number) => {
+            if(curCharacter.value!.bagSlots >= inv.slots) { i = index }
+          });
+        }
+        return i;
+      }
+    );
+    const invSlots = ref("0");
+    return {
+      Assets,
+      anvilTab,
+      characters,
+      curCharacter,
+      data,
+      defaultSlots,
+      invSlots,
+      recommended,
+      taskTier
+    };
   },
 });
 </script>
