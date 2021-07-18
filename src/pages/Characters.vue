@@ -19,7 +19,7 @@
       You have no characters. Create your first character or load your data from
       the cloud!
     </div>
-    <q-btn @click="newCharacter">New Character</q-btn>
+    <q-btn @click="onCreateNewCharacter">New Character</q-btn>
   </q-card>
   <CharacterEditor v-else />
   <CharacterProgressTracker v-if="currentCharacter !== null" />
@@ -30,24 +30,14 @@
 -->
 
 <script lang="ts">
-import { computed, defineComponent } from "vue";
+import { defineComponent } from "vue";
 import { useToast } from "vue-toastification";
 
-import CharacterCard from "~/components/CharacterCard.vue";
 import CharacterEditor from "~/components/characters/CharacterEditor.vue";
 import CharacterProgressTracker from "~/components/characters/CharacterProgressTracker.vue";
 import CloudData from "~/components/CloudData.vue";
 import Constellations from "~/components/Constellations.vue";
-import {
-  Character,
-  Class,
-  Skills,
-  Subclass,
-  useCharacters,
-} from "~/composables/Characters";
-import { Statues } from "~/composables/Statues";
-import { Assets, Text } from "~/composables/Utilities";
-import StatuesSection from "~/pages/Statues.vue";
+import { useCharacters } from "~/composables/Characters";
 import { useAuth } from "~/State";
 
 const WikiLinks = new Map([
@@ -60,67 +50,26 @@ const WikiLinks = new Map([
 export default defineComponent({
   name: "Characters",
   components: {
-    CharacterCard,
     CharacterEditor,
     CharacterProgressTracker,
     CloudData,
     Constellations,
-    StatuesSection,
   },
   setup() {
     const { user } = useAuth();
-    const { characters, charIndex, currentCharacter, numCharacters } =
+    const { characters, createNewCharacter, currentCharacter } =
       useCharacters();
     const toast = useToast();
-    // Filter out class "All"
-    const classes = [];
-    for (const class_ in Class) {
-      if (class_ !== Class.All) {
-        classes.push(class_);
-      }
-    }
 
-    const newCharacter = () => {
-      let char = new Character();
-      for (const skill of Skills) {
-        char.skills[skill] = 0;
-      }
-      for (const name of Object.keys(Statues)) {
-        char.statues[name] = 0;
-      }
-      characters.value.push(char);
-      charIndex.value = characters.value.length - 1;
+    const onCreateNewCharacter = () => {
+      createNewCharacter();
       toast.info("New character created.");
     };
-    const deleteCharacter = () => {
-      characters.value.splice(charIndex.value, 1);
-      charIndex.value = 0;
-    };
-
-    const totalCharLevel = computed<number>(() => {
-      let total = 0;
-      for (const c of characters.value) {
-        if (typeof c.level === "string") {
-          total += parseInt(c.level);
-        } else {
-          total += c.level;
-        }
-      }
-      return total;
-    });
 
     return {
-      Assets,
       characters,
-      charIndex,
-      classes,
       currentCharacter,
-      deleteCharacter,
-      newCharacter,
-      numCharacters,
-      Subclass,
-      Text,
-      totalCharLevel,
+      onCreateNewCharacter,
       user,
       wikiLinks: WikiLinks,
     };

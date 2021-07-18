@@ -4,9 +4,25 @@
       <q-card-section class="flex flex-col w-full md:(items-start w-1/3)">
         <div class="text-2xl font-medium">Character Info</div>
         <div class="flex items-center mt-2">
-          <q-avatar>
-            <img src="logo.png" class="object-contain" />
-          </q-avatar>
+          <div class="rounded-full border border-gray-500 p-2 cursor-pointer">
+            <ICAsset
+              :image="getCharacterImage(currentCharacter)"
+              size="large"
+            />
+            <q-popup-proxy>
+              <q-card class="flex flex-wrap p-2 bg-primary">
+                <ICAsset
+                  v-for="(class_, i) in allClasses"
+                  :key="i"
+                  :image="getIconImage(class_)"
+                  :title="class_"
+                  size="small"
+                  class="character-class-img rounded-full cursor-pointer p-2"
+                  @click="currentCharacter?.setClass(class_)"
+                />
+              </q-card>
+            </q-popup-proxy>
+          </div>
           <div class="flex flex-col ml-4">
             <q-input
               v-model="currentCharacter.name"
@@ -42,7 +58,7 @@
                 <template #content>
                   {{ skill }}
                 </template>
-                <q-icon :name="'img:' + iconImage(skill)" />
+                <q-icon :name="'img:' + getIconImage(skill)" />
               </Tooltip>
             </template>
           </q-input>
@@ -50,30 +66,76 @@
       </q-card-section>
     </q-card-section>
     <q-card-actions align="right">
-      <q-btn color="negative">Delete</q-btn>
+      <q-btn color="info" @click="onCreateNewCharacter">New Character</q-btn>
+      <q-btn color="negative" @click="onDeleteCurrentCharacter">Delete</q-btn>
     </q-card-actions>
   </q-card>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { useCharacters, Skills as allSkills } from "~/composables/Characters";
+import { computed, defineComponent } from "vue";
+import {
+  useCharacters,
+  Skills as allSkills,
+  Class,
+  Subclass,
+} from "~/composables/Characters";
 import { Assets, useLayout } from "~/composables/Utilities";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
+import { useToast } from "vue-toastification";
 
 export default defineComponent({
   name: "CharacterEditor",
+  components: {
+    ICAsset,
+  },
   setup() {
-    const { currentCharacter } = useCharacters();
+    const { createNewCharacter, currentCharacter, deleteCurrentCharacter } =
+      useCharacters();
     const { isMobile } = useLayout();
+    const toast = useToast();
+
+    const allClasses = computed(() => {
+      let classes: (Class | Subclass)[] = [];
+      for (const class_ of Object.values(Class)) {
+        if (class_ !== Class.All) {
+          classes.push(class_);
+        }
+      }
+      for (const subclass of Object.values(Subclass)) {
+        classes.push(subclass);
+      }
+      return classes;
+    });
+
+    const onCreateNewCharacter = () => {
+      createNewCharacter();
+      toast.info("New character created.");
+    };
+
+    const onDeleteCurrentCharacter = () => {
+      deleteCurrentCharacter();
+      toast.info("Character deleted.");
+    };
 
     return {
+      allClasses,
       allSkills,
       currentCharacter,
+      getCharacterImage: Assets.CharImage,
+      getIconImage: Assets.IconImage,
       isMobile,
-      iconImage: Assets.IconImage,
+      onCreateNewCharacter,
+      onDeleteCurrentCharacter,
     };
   },
 });
 </script>
 
-<style scoped lang="sass"></style>
+<style scoped lang="sass">
+.character-class-img
+  transition: 0.3s
+  &:hover
+    transform: scale(1.05)
+    background: rgba(white, 0.05)
+</style>

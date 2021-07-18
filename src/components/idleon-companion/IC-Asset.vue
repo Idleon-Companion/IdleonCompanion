@@ -4,10 +4,12 @@
       class="asset"
       loading="lazy"
       :data-enabled="enabled"
+      :draggable="false"
       :src="image"
-      :style="computedStyle"
+      :height="computedStyle.height"
+      :width="computedStyle.width"
     />
-    <template #content class="abc">
+    <template #content>
       <slot name="tooltip">
         <div>{{ title }}</div>
       </slot>
@@ -16,18 +18,19 @@
   <q-img
     v-else
     class="asset"
-    draggable="false"
     loading="lazy"
     :data-enabled="enabled"
+    :draggable="false"
     :src="image"
-    :style="computedStyle"
+    :height="computedStyle.height"
+    :width="computedStyle.width"
   />
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, PropType } from "vue";
 
-type AssetSize = "small" | "medium" | "large";
+type AssetSize = "xs" | "small" | "medium" | "large" | "xl";
 
 export default defineComponent({
   name: "IC-Asset",
@@ -54,9 +57,11 @@ export default defineComponent({
   setup(props) {
     const computedStyle = computed(() => {
       const styleTable: Record<AssetSize, string> = {
+        xs: "24px",
         small: "32px",
         medium: "48px",
         large: "64px",
+        xl: "72px",
       };
       return {
         height: styleTable[props.size],
