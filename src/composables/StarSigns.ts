@@ -183,7 +183,7 @@ export const StarSigns: StarSign[] = [
   },
   {
     id: "3",
-    name: "Dwardo Beardus",
+    name: "Dwarfo Beardus",
     bonus: {
       [Effects.MiningEfficiency]: 5,
       [Effects.MiningMultiOre]: 20,

@@ -1,7 +1,7 @@
 <template>
   <q-card v-if="currentCharacter" class="m-4">
-    <q-card-section :horizontal="!isMobile">
-      <q-card-section class="flex flex-col w-full md:(items-start w-1/3)">
+    <q-card-section :horizontal="!isMobile" class="flex flex-col md:(flex-row)">
+      <q-card-section class="flex flex-col w-full">
         <div class="text-2xl font-medium">Character Info</div>
         <div class="flex items-center mt-2">
           <div class="rounded-full border border-gray-500 p-2 cursor-pointer">
@@ -30,6 +30,7 @@
               label="Name"
               placeholder="EpicGamer73"
               input-class="text-2xl"
+              class="flex-wrap"
             />
             <q-input
               v-model.number="currentCharacter.level"
@@ -38,11 +39,12 @@
               label="Level"
               class="mt-2 w-1/3"
               :min="1"
+              :max="9999"
             />
           </div>
         </div>
       </q-card-section>
-      <q-card-section class="flex flex-col w-2/3">
+      <q-card-section class="flex flex-col w-full">
         <div class="text-2xl font-semibold">Skills</div>
         <div class="flex flex-wrap">
           <q-input

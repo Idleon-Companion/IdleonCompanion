@@ -119,7 +119,6 @@ export const Changelog: ChangelogEntry[] = [
   {
     version: "0.2.3",
     changes: {
-      features: [],
       changes: [
         "UI: New Tree View for the recipe calculator",
         "Tracking: Hard Resource Cards added to Progress Tracker",

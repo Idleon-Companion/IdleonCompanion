@@ -26,7 +26,13 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
+    <q-drawer
+      show-if-above
+      v-model="leftDrawerOpen"
+      side="left"
+      bordered
+      class="h-full"
+    >
       <LeftDrawerContent />
     </q-drawer>
 
@@ -55,7 +61,6 @@ import {
 import LeftDrawerContent from "~/components/nav/LeftDrawerContent.vue";
 import RightDrawerContent from "~/components/nav/RightDrawerContent.vue";
 import { useCharacters } from "~/composables/Characters";
-import Home from "~/pages/Home.vue";
 import { firebaseApp, versionControl, useState } from "~/State";
 
 import "~/styles/base.sass";
@@ -63,7 +68,6 @@ import "~/styles/base.sass";
 export default defineComponent({
   name: "App",
   components: {
-    Home,
     LeftDrawerContent,
     RightDrawerContent,
   },
