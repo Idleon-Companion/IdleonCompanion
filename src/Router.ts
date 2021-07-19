@@ -1,13 +1,17 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import { useBuilds } from "~/composables/Builds";
 import Characters from "~/pages/Characters.vue";
-import Home from "~/pages/Home.vue";
 import Credits from "~/pages/Changelog.vue";
 import Tasks from "~/pages/Tasks.vue";
 
 const { loadBuildFromDatabase } = useBuilds();
 
 export const tabRoutes: RouteRecordRaw[] = [
+  {
+    name: "Home",
+    path: "/",
+    redirect: "/characters",
+  },
   {
     name: "Characters",
     path: "/characters",
@@ -26,11 +30,6 @@ export const tabRoutes: RouteRecordRaw[] = [
 ];
 
 const routes: RouteRecordRaw[] = [
-  {
-    name: "Home",
-    path: "/",
-    component: Home,
-  },
   {
     name: "Build",
     path: "/build/:buildId",
