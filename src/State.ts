@@ -2,7 +2,7 @@ import { version } from "../package.json";
 import { createGlobalState, useStorage } from "@vueuse/core";
 import { ref } from "vue";
 import { useToast } from "vue-toastification";
-import { AlchemyData, Color } from "~/composables/Alchemy";
+import { AlchemyData, AlchemyColor } from "~/composables/Alchemy";
 import { Task } from "~/composables/Progress";
 import { Character, useCharacters } from "~/composables/Characters";
 
@@ -100,12 +100,11 @@ export function versionControl() {
 
     for (const key in state.value.chars) {
       for (const s of newSkills) state.value.chars[key].skills[s] = 0;
-      for (const t of newStatues) state.value.chars[key].statues[t] = 0;
     }
   }
   // Add new bubble slots and a goals field for each bubble
   if (state.value.version < "0.2.4") {
-    let colors: Color[] = ["Orange", "Green", "Purple", "Yellow"];
+    let colors: AlchemyColor[] = ["Orange", "Green", "Purple", "Yellow"];
     for (const k of colors) {
       let amount = 15;
       if (!state.value.alchemy.goals) {
@@ -121,6 +120,13 @@ export function versionControl() {
           state.value.alchemy.upgrades[k][i] ?? 0;
         state.value.alchemy.goals[k][i] = state.value.alchemy.goals[k][i] ?? 0;
       }
+    }
+  }
+  // Move statues from character to global state
+  if (state.value.version < "0.3.0") {
+    // Remove statues from character state
+    for (const index in state.value.chars) {
+      delete (state.value.chars[index] as Character & { statues: any }).statues;
     }
   }
   state.value.version = version;
