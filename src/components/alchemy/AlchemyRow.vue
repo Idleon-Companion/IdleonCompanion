@@ -64,7 +64,10 @@ export default defineComponent({
       type: Number,
     }
   },
-  emits: ["custom-change"],
+  emits: {
+    customChange: null,
+  },
+
   methods: {
     customChange (group: Color, idx: number, level: number): void {
       const bubbleIDX = this.props.idx;
@@ -76,9 +79,8 @@ export default defineComponent({
         this.alchemy.goals[bubbleColor][bubbleIDX] = level + 1;
       }
 
-
       if (bubbleIDX == BARGAIN_BUBBLE || (bubbleColor == UNDEV_COST_BUBBLE.color && bubbleIDX == UNDEV_COST_BUBBLE.number )) {
-        this.$emit("custom-change");
+        this.$emit("customChange");
       }
     },
     bubbleDesc(): string {

@@ -71,7 +71,7 @@
       </tr>
       <tr class="alter-color"
         v-for="n in 15" :key="n">
-        <AlchemyRow @customChange="handleDiscountRecalc()" :group="activeGroup" :idx="amountBubbles-n" :discount="discount"/>
+        <AlchemyRow @customChange="handleDiscountRecalc" :group="activeGroup" :idx="amountBubbles-n" :discount="discount"/>
       </tr>
     </table>
   </div>
