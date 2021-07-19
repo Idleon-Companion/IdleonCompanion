@@ -357,10 +357,10 @@ export class Alch {
       );
     if (process.env.NODE_ENV === "development") {
       console.log(`Alch.discount = [
-        Cauldron:     ${result[0].toFixed(2).padStart(5, " ")} 
-        Bargain:      ${result[1].toFixed(2).padStart(5, " ")} 
-        Bubble XII:   ${result[2].toFixed(2).padStart(5, " ")} 
-        Undev + vial: ${result[3].toFixed(2).padStart(5, " ")} 
+        Cauldron:     ${result[0].toFixed(2).padStart(5, " ")} | Level : ${(""+cauldCostReduxLvl).padStart(4, " ")}
+        Bargain:      ${result[1].toFixed(2).padStart(5, " ")} | Level : ${(""+tagLvl).padStart(4, " ")}
+        Bubble XII:   ${result[2].toFixed(2).padStart(5, " ")} | Level : ${(""+bubbleTwelveLvl).padStart(4, " ")}
+        Undev + vial: ${result[3].toFixed(2).padStart(5, " ")} | Level : ${(""+bubbleCostBubbleLvl).padStart(4, " ")} Vial: ${(""+bubbleCostVialLvl).padStart(4, " ")}
         Total:        ${result[4].toFixed(2).padStart(5, " ")}
       ]`);
     }

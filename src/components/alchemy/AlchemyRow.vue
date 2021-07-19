@@ -13,7 +13,7 @@
     <input class="columnSpan"
       type="number" :min="0"
       :value="alchemy.upgrades[group][idx]"
-      @change='customChange'/>
+      @change='customChange(group, idx, alchemy.upgrades[group][idx])'/>
   </td>
   <td class="columnSpan">
     <input class="columnSpan"
@@ -66,10 +66,19 @@ export default defineComponent({
   },
   emits: ["custom-change"],
   methods: {
-    customChange (event: { target: { value: string; id: number; }; }) {
-      this.alchemy.upgrades[this.props.group][this.props.idx] = parseInt(event.target.value);
-      if (this.props.idx == BARGAIN_BUBBLE || (this.props.group == UNDEV_COST_BUBBLE.color && this.props.idx == UNDEV_COST_BUBBLE.number )) {
-        this.$emit("custom-change", event.target.value);
+    customChange (group: Color, idx: number, level: number): void {
+      const bubbleIDX = this.props.idx;
+      const bubbleColor = this.props.group;
+
+
+      this.alchemy.upgrades[bubbleColor][bubbleIDX] = level+1;
+      if (level +1 > this.alchemy.goals[bubbleColor][bubbleIDX]) {
+        this.alchemy.goals[bubbleColor][bubbleIDX] = level + 1;
+      }
+
+
+      if (bubbleIDX == BARGAIN_BUBBLE || (bubbleColor == UNDEV_COST_BUBBLE.color && bubbleIDX == UNDEV_COST_BUBBLE.number )) {
+        this.$emit("custom-change");
       }
     },
     bubbleDesc(): string {

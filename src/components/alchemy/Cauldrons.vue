@@ -83,7 +83,12 @@
   import AlchemyRow from "~/components/alchemy/AlchemyRow.vue";
   import { Alch, Color, BARGAIN_BUBBLE, UNDEV_COST_BUBBLE, IRON_BAR_VIAL } from "~/composables/Alchemy";
 
-  const ColorData: Record<Color, Object> = {
+  interface CauldronInfo {
+    name: string;
+    hex: string;
+  }
+
+  const ColorData: Record<Color, CauldronInfo> = {
     "Orange": {
       name: "Power",
       hex: "#ff9420",
