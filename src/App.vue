@@ -26,7 +26,13 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
+    <q-drawer
+      show-if-above
+      v-model="leftDrawerOpen"
+      side="left"
+      bordered
+      class="h-full"
+    >
       <LeftDrawerContent />
     </q-drawer>
 
@@ -63,7 +69,6 @@ import "~/styles/base.sass";
 export default defineComponent({
   name: "App",
   components: {
-    Home,
     LeftDrawerContent,
     RightDrawerContent,
   },
