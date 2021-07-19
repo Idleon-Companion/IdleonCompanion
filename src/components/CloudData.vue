@@ -35,6 +35,11 @@ export default defineComponent({
     const toast = useToast();
     // User authentication
     const { user, loadCloud, saveCloud } = useAuth();
+    // Setup automatic login persistence
+    firebase.auth().onAuthStateChanged((data) => {
+      user.value = data ?? null;
+    });
+
     // FirebaseUI config.
     const uiConfig = {
       callbacks: {
@@ -43,6 +48,7 @@ export default defineComponent({
           return false;
         },
       },
+      signInFlow: "popup",
       signInOptions: [
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
         firebase.auth.GithubAuthProvider.PROVIDER_ID,

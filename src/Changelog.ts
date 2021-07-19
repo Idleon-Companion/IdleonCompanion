@@ -112,8 +112,7 @@ export const Changelog: ChangelogEntry[] = [
         "Constellations: Track constellations unlocked on each character as well as equipped star signs",
         "W3 Data: Cards, Stamps, Skills, Materials, Recipes and Alchemy updated to Latest Version",
       ],
-      changes: [
-        "UI: improved design of the recipe calculator"],
+      changes: ["UI: improved design of the recipe calculator"],
     },
     date: "June 2021",
   },
@@ -123,8 +122,25 @@ export const Changelog: ChangelogEntry[] = [
       features: [],
       changes: [
         "UI: New Tree View for the recipe calculator",
-        "Tracking: Hard Resource Cards added to Progress Tracker"],
+        "Tracking: Hard Resource Cards added to Progress Tracker",
+      ],
     },
     date: "June 2021",
+  },
+  {
+    version: "0.3.0 (Site Redesign)",
+    changes: {
+      features: [
+        "Builds: Create and share builds directly through Idleon Companion! Yes, we are a social network now :)",
+      ],
+      changes: [
+        "UI: Complete rework to use Quasar design framework + better navigation control with Vue Router",
+      ],
+      fixes: [
+        "Account level total will display correctly",
+        "Sign in flow improved and will always keep you signed in on the same device!",
+      ],
+    },
+    date: "July 2021",
   },
 ];
