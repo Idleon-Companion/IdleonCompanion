@@ -1,4 +1,5 @@
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
+import { useQuasar } from "quasar";
 import { computed } from "vue";
 import { Character } from "./Characters";
 
@@ -234,9 +235,19 @@ export const LatestGameVersion: GameVersion = GameVersions[0];
 export function useLayout() {
   const breakpoints = useBreakpoints(breakpointsTailwind);
 
+  const $q = useQuasar();
+  const isDarkMode = computed(() => $q.dark.isActive);
+
+  const toggleDarkMode = () => {
+    $q.dark.set(!isDarkMode.value);
+    const bgPrimary = isDarkMode.value ? "#3a3f44" : "#ffffff";
+    document.documentElement.style.setProperty("--bg-primary", bgPrimary);
+  };
   const isMobile = computed(() => breakpoints.smaller("md")).value;
 
   return {
+    isDarkMode,
     isMobile,
+    toggleDarkMode,
   };
 }

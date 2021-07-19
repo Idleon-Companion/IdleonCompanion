@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header elevated class="">
-      <q-toolbar>
+    <q-header elevated>
+      <q-toolbar :class="toolbarClasses">
         <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
         <q-toolbar-title>
           <q-avatar>
@@ -57,10 +57,10 @@ import {
   ref,
   watchEffect,
 } from "vue";
-
 import LeftDrawerContent from "~/components/nav/LeftDrawerContent.vue";
 import RightDrawerContent from "~/components/nav/RightDrawerContent.vue";
 import { useCharacters } from "~/composables/Characters";
+import { useLayout } from "~/composables/Utilities";
 import { firebaseApp, versionControl, useState } from "~/State";
 
 import "~/styles/base.sass";
@@ -99,10 +99,10 @@ export default defineComponent({
     };
 
     // Dark mode toggle
-    const isDarkMode = computed(() => $q.dark.isActive);
-    const toggleDarkMode = () => {
-      $q.dark.set(!isDarkMode.value);
-    };
+    const { isDarkMode, toggleDarkMode } = useLayout();
+    const toolbarClasses = computed(() =>
+      isDarkMode.value ? "bg-primary text-light" : "bg-white text-dark"
+    );
 
     return {
       leftDrawerOpen,
@@ -111,7 +111,19 @@ export default defineComponent({
       toggleRightDrawer,
       isDarkMode,
       toggleDarkMode,
+      toolbarClasses,
     };
   },
 });
 </script>
+
+<style lang="sass">
+body
+  background: url('../assets/bg/Desert_Day.png')
+  background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  -webkit-background-size: cover
+body.body--dark
+  background: url('../assets/bg/Desert_Night.png') !important
+</style>

@@ -1,13 +1,6 @@
 
 @import './variables.sass'
 
-body,body.body--dark
-  background: url('../assets/bg/night_desert.png') !important
-  -webkit-background-size: cover
-  -moz-background-size: cover
-  background-size: cover
-  -o-background-size: cover
-
 h1
   font-size: 2.5rem
 h2
@@ -41,6 +34,13 @@ h6
     border: 4px solid rgba(0, 0, 0, 0)
     background-clip: padding-box
     transition: .3s ease-in-out
+
+/** Themed Styles **/
+:root
+  --bg-primary: #3a3f44
+
+div.bg-primary
+  background: var(--bg-primary) !important
 
 /** Quasar Overrides **/
 aside.q-drawer--left
