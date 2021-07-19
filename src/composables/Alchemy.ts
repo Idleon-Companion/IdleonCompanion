@@ -24,6 +24,7 @@ export type Bubble = {
   x1: number;
   x2: number;
   Func: string;
+  effectDesc: string;
   Materials: Material[];
 };
 

@@ -2,7 +2,12 @@
   <td class="columnSpan">
     <GameAsset class="m-auto"
       :image="Assets.FromDir(`${group}${idx+1}`, 'alchemy')"
-      :height="64"/>
+      :title="`${group}${idx+1}`" :height="64">
+      <template #tooltip>
+        <div class="text-center" v-html="bubbleDesc()"></div>
+      </template>
+    </GameAsset>
+    
   </td>
   <td class="columnSpan">
     <input class="columnSpan"
@@ -66,7 +71,11 @@ export default defineComponent({
       if (this.props.idx == BARGAIN_BUBBLE || (this.props.group == UNDEV_COST_BUBBLE.color && this.props.idx == UNDEV_COST_BUBBLE.number )) {
         this.$emit("custom-change", event.target.value);
       }
-    }
+    },
+    bubbleDesc(): string {
+      let bubble = bubblesData[this.props.group][this.props.idx];
+      return `${bubble.effectDesc}`;
+    },
   },
   setup(props) {
     const state = useState();
