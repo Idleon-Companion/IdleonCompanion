@@ -920,3 +920,20 @@ export const CompleteChecklist = {
   ...CharacterChecklist,
   ...GlobalChecklist,
 };
+
+export function useChecklist() {
+  const getChecklistItemText = (item: Item): string => {
+    let text = item.name;
+    if (item.bagSlots !== undefined) {
+      text += `<br>+${item.bagSlots} Inventory Slots`;
+    }
+    if (item.source !== undefined) {
+      text += `<br><em>Source: ${item.source}</em>`;
+    }
+    return text;
+  };
+
+  return {
+    getChecklistItemText,
+  };
+}
