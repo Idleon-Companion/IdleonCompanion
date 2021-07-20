@@ -4,14 +4,17 @@
       <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
         Track your account progress! Here you can check all of the global
         collectibles in game. Click on a cards to cycle through rarity levels.
-        <br>
-        For details on drops, please refer to the <a target="_blank" href="https://idleon.info/wiki/Category:Droptables">wiki page about drop tables</a>
+        <br />
+        For details on drops, please refer to the
+        <a target="_blank" href="https://idleon.info/wiki/Category:Droptables"
+          >wiki page about drop tables</a
+        >
       </p>
     </div>
   </div>
   <div class="col progress-tracker">
     <div
-      v-for="(data, category) in globalChecklist"
+      v-for="(data, category) in allItems"
       :key="category"
       class="progress-group"
     >
@@ -30,7 +33,10 @@
               @click="handleProgressCheck(item.name)"
             >
               <template #tooltip>
-                <div class="text-center" v-html="Text.Item(item)"></div>
+                <div
+                  class="text-center"
+                  v-html="getChecklistItemText(item)"
+                ></div>
               </template>
             </GameAsset>
           </div>
@@ -72,11 +78,11 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-import { checklistData } from "~/composables/Checklist";
+import { GlobalChecklist, useChecklist } from "~/composables/Checklist";
 
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import { Card, CardCategory, Cards } from "~/composables/Cards";
-import { Assets, ItemGroup, Text } from "~/composables/Utilities";
+import { Assets, Item } from "~/composables/Utilities";
 import { useState } from "~/State";
 
 export default defineComponent({
@@ -85,22 +91,14 @@ export default defineComponent({
     ICAsset,
   },
   setup() {
-    const globalChecklist = computed(() => {
-      // Non-global items are managed on the characters page
-      return Object.entries(checklistData)
-        .filter(([_, value]) => value.global)
-        .reduce((obj, [key, value]) => {
-          obj[key] = value;
-          return obj;
-        }, {} as Record<string, ItemGroup>);
-    });
-
     const state = useState();
+    const { getChecklistItemText } = useChecklist();
     const checklist = computed({
       get: () => state.value.checklist,
       set: (value) => (state.value.checklist = value),
     });
-    for (const data of Object.values(globalChecklist.value)) {
+    // Initialize local state
+    for (const data of Object.values(GlobalChecklist)) {
       for (const item of data.items) {
         if (checklist.value[item.name]) {
           checklist.value[item.name] = true;
@@ -142,12 +140,13 @@ export default defineComponent({
     };
 
     return {
+      allItems: GlobalChecklist,
       Assets,
       CardCategory,
       cardData,
       cards,
       checklist,
-      globalChecklist,
+      getChecklistItemText,
       handleCardClick,
       handleProgressCheck,
       Text,

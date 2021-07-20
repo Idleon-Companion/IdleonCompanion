@@ -2,6 +2,8 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import { useBuilds } from "~/composables/Builds";
 import Characters from "~/pages/Characters.vue";
 import Credits from "~/pages/Changelog.vue";
+import ProgressTracker from "~/pages/ProgressTracker.vue";
+import SweetSpot from "~/pages/SweetSpot.vue";
 import Tasks from "~/pages/Tasks.vue";
 
 const { loadBuildFromDatabase } = useBuilds();
@@ -16,6 +18,16 @@ export const tabRoutes: RouteRecordRaw[] = [
     name: "Characters",
     path: "/characters",
     component: Characters,
+  },
+  {
+    name: "Progress Tracker",
+    path: "/progress-tracker",
+    component: ProgressTracker,
+  },
+  {
+    name: "Sweet Spot",
+    path: "/sweet-spot",
+    component: SweetSpot,
   },
   {
     name: "Tasks",
