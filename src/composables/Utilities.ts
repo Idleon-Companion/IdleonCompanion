@@ -98,19 +98,6 @@ export type ItemGroup = {
   items: Item[];
 };
 
-export class Text {
-  static ChecklistItem(item: Item): string {
-    let text = item.name;
-    if (item.bagSlots !== undefined) {
-      text += `<br>+${item.bagSlots} Inventory Slots`;
-    }
-    if (item.source !== undefined) {
-      text += `<br><em>Source: ${item.source}</em>`;
-    }
-    return text;
-  }
-}
-
 enum BaseEffects {
   BaseAllStats = "All Stats",
   BaseDamage = "Base Damage",
