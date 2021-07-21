@@ -74,7 +74,7 @@ export class Assets {
   }
 
   static StatueImage(item: string): string {
-    return `/assets/statues/${item}_Statue.png`;
+    return `/assets/statues/${item.replace(/ /g, "_")}_Statue.png`;
   }
 
   static TalentImage(role: string, tab: number, slot: number): string {

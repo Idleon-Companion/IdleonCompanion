@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import { useBuilds } from "~/composables/Builds";
+import Alchemy from "~/pages/Alchemy.vue";
 import Characters from "~/pages/Characters.vue";
 import Credits from "~/pages/Changelog.vue";
-import ProgressTracker from "~/pages/ProgressTracker.vue";
+import ProgressTracker from "~/components/tracker/ProgressTracker.vue";
+import Statues from "~/components/tracker/Statues.vue";
 import SweetSpot from "~/pages/SweetSpot.vue";
 import Tasks from "~/pages/Tasks.vue";
 
@@ -20,10 +22,20 @@ export const tabRoutes: RouteRecordRaw[] = [
     component: Characters,
   },
   {
-    name: "Progress Tracker",
-    path: "/progress-tracker",
+    name: "Collection Progress",
+    path: "/tracker/progress",
     component: ProgressTracker,
   },
+  {
+    name: "Statues",
+    path: "/tracker/statues",
+    component: Statues,
+  },
+  // {
+  //   name: "Alchemy",
+  //   path: "/tracker/alchemy",
+  //   component: Alchemy,
+  // },
   {
     name: "Sweet Spot",
     path: "/sweet-spot",
