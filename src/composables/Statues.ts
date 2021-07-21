@@ -27,6 +27,13 @@ export type StatueName =
   | "Seesaw"
   | "Twosoul";
 
+// Metadata to keep track of for statues
+export type StatueInfo = {
+  level: number;
+  progress: number; // Number of statues to next level
+  golden: boolean; // Whether the statue has been upgraded to gold
+};
+
 export const Statues: Record<StatueName, Statue> = {
   Power: {
     base: 3,
@@ -103,5 +110,5 @@ export const Statues: Record<StatueName, Statue> = {
   Twosoul: {
     base: 0.3,
     effect: Effects.WorshipBase,
-  }
+  },
 };
