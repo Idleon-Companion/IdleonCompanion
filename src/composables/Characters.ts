@@ -87,7 +87,7 @@ export class Character {
     let slots = 16; // Base inventory slots
     const { checklist } = useState().value;
     for (const category of ["Inventory Bags"] as const) {
-      for (const item of CompleteChecklist[category].items) {
+      for (const item of CompleteChecklist[category][0].items) {
         if (this.hasItem(item.name)) {
           slots += item.bagSlots ?? 0;
         }
@@ -95,7 +95,7 @@ export class Character {
     }
     // Global items
     for (const category of ["Gem Shop Bags"] as const) {
-      for (const item of CompleteChecklist[category].items) {
+      for (const item of CompleteChecklist[category][0].items) {
         if (checklist[item.name] === true) {
           slots += item.bagSlots ?? 0;
         }
