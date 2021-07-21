@@ -1,5 +1,5 @@
 <template>
-<div class="tabbable">
+  <div class="tabbable">
     <ul class="nav nav-pills nav-fill mt-3" role="tablist">
       <li v-for="tab in Object.keys(tabs)" :key="tab" class="nav-item">
         <button
@@ -32,7 +32,7 @@
         <component :is="tab.replace(/_/g, '')"></component>
       </div>
     </div>
-    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -41,7 +41,7 @@ import { defineComponent } from "vue";
 import PackMuleCrafter from "~/pages/PackMuleCrafter.vue";
 import PicnicQuest from "~/pages/PicnicQuest.vue";
 import RecipeCalculator from "~/pages/RecipeCalculator.vue";
-import Stamps from "~/pages/Stamps.vue";
+import Stamps from "~/components/tracker/StampTracker.vue";
 
 export default defineComponent({
   name: "Calculators",

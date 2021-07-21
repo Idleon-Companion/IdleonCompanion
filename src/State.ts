@@ -1,3 +1,6 @@
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/database";
 import { version } from "../package.json";
 import { createGlobalState, useStorage } from "@vueuse/core";
 import { ref } from "vue";
@@ -5,6 +8,7 @@ import { useToast } from "vue-toastification";
 import { AlchemyData, AlchemyColor } from "~/composables/Alchemy";
 import { Task } from "~/composables/Progress";
 import { Character, useCharacters } from "~/composables/Characters";
+import { StatueName, StatueInfo, Statues } from "./composables/Statues";
 
 const StorageKey = "idleon-companion";
 export const useState = createGlobalState(() =>
@@ -28,6 +32,7 @@ export const useState = createGlobalState(() =>
     chars: [] as Character[],
     checklist: {} as Record<string, boolean>,
     starSigns: {} as Record<string, boolean>,
+    statues: {} as Record<StatueName, StatueInfo>,
     tasks: {
       tasks: Array<Task>(),
       dailyReset: "12:00",
@@ -47,17 +52,6 @@ export function versionControl() {
     if (savedVersion < "0.1.1") {
       // Task reworked to allow custom tasks
       localStorage.removeItem("tasks");
-    }
-    if (savedVersion < "0.1.2") {
-      // Add cycle items (Capacity Pouches)
-      let chars = localStorage.getItem("chars");
-      if (chars !== null) {
-        for (const c of JSON.parse(chars)) {
-          for (const item of GlobalChecklist["Capacity Pouches"].items) {
-            delete c.items[item.name];
-          }
-        }
-      }
     }
     if (savedVersion < "0.2.0") {
       for (const k of [
@@ -96,7 +90,6 @@ export function versionControl() {
   // Add W3 skills and statues
   if (state.value.version < "0.2.3") {
     let newSkills = ["Trapping", "Construction", "Worship"] as const;
-    let newStatues = ["Box", "EhExPee", "Seesaw", "Twosoul"];
 
     for (const key in state.value.chars) {
       for (const s of newSkills) state.value.chars[key].skills[s] = 0;
@@ -122,22 +115,29 @@ export function versionControl() {
       }
     }
   }
-  // Move statues from character to global state
+  // Move statues from character to global state, add stamp tracking
   if (state.value.version < "0.3.0") {
+    if (!state.value.statues) {
+      state.value.statues = {} as Record<StatueName, StatueInfo>;
+    }
+    for (const statue of Object.keys(Statues) as Array<StatueName>) {
+      state.value.statues[statue] = {
+        level: 0,
+        progress: 0,
+        golden: false,
+      };
+    }
     // Remove statues from character state
     for (const index in state.value.chars) {
       delete (state.value.chars[index] as Character & { statues: any }).statues;
     }
+    // Add stamp tracking data
+    // todo
   }
   state.value.version = version;
 }
 
 // Firebase Initialization
-import firebase from "firebase/app";
-import "firebase/auth";
-import "firebase/database";
-import { GlobalChecklist } from "./composables/Checklist";
-
 const firebaseConfig = {
   apiKey: "AIzaSyDP9fu1062i82w64K9LgKHFFMDgPtUj6k4",
   authDomain: "idleon-companion.firebaseapp.com",
