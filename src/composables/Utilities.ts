@@ -89,13 +89,13 @@ export class Assets {
 export type Item = {
   name: string;
   bagSlots?: number;
-  cycle?: string;
   source?: string;
 };
 
 export type ItemGroup = {
   assetDir: string;
   items: Item[];
+  cycle: boolean;
 };
 
 enum BaseEffects {

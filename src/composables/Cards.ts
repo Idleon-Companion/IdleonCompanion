@@ -132,7 +132,7 @@ const BlunderHillCards: Card[] = [
     base: 5,
     source: "Wood Mushroom (1/10,000)",
   },
-]
+];
 
 const YumYumDesertCards: Card[] = [
   {
@@ -820,13 +820,29 @@ const EventsCards: Card[] = [
   },
 ];
 
-export const Cards: Card[] = [
-  ...BlunderHillCards,
-  ...YumYumDesertCards,
-  ...EasyResourcesCards,
-  ...MediumResourcesCards,
-  ...HardResourcesCards,
-  ...FrostbiteTundraCards,
-  ...BossesCards,
-  ...EventsCards,
-];
+export const Cards: Record<CardCategory, Card[]> = {
+  [CardCategory.BlunderHills]: BlunderHillCards,
+  [CardCategory.YumYumDesert]: YumYumDesertCards,
+  [CardCategory.FrostbiteTundra]: EasyResourcesCards,
+  [CardCategory.EasyResources]: MediumResourcesCards,
+  [CardCategory.MediumResources]: HardResourcesCards,
+  [CardCategory.HardResources]: FrostbiteTundraCards,
+  [CardCategory.Bosses]: BossesCards,
+  [CardCategory.Events]: EventsCards,
+};
+
+export function useCards() {
+  const getCardText = (card: Card, tier: number): string => {
+    let name = card.id.replace(/_/g, " ");
+    let bonus = tier * card.base;
+    let text = `${name}<br>+${bonus} ${card.effect}`;
+    if (card.source) {
+      text += `<br><em>Source: ${card.source}</em>`;
+    }
+    return text;
+  };
+
+  return {
+    getCardText,
+  };
+}
