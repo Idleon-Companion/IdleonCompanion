@@ -5,16 +5,13 @@
         <div class="text-2xl font-medium">Character Info</div>
         <div class="flex items-center mt-2">
           <div class="rounded-full border border-gray-500 p-2 cursor-pointer">
-            <ICAsset
-              :image="getCharacterImage(currentCharacter)"
-              size="large"
-            />
+            <ICAsset :image="Assets.CharImage(currentCharacter)" size="large" />
             <q-popup-proxy>
               <q-card class="flex flex-wrap p-2 bg-primary">
                 <ICAsset
                   v-for="(class_, i) in allClasses"
                   :key="i"
-                  :image="getIconImage(class_)"
+                  :image="Assets.IconImage(class_)"
                   :title="class_"
                   size="small"
                   class="character-class-img rounded-full cursor-pointer p-2"
@@ -60,7 +57,7 @@
                 <template #content>
                   {{ skill }}
                 </template>
-                <q-icon :name="'img:' + getIconImage(skill)" />
+                <q-icon :name="'img:' + Assets.IconImage(skill)" />
               </Tooltip>
             </template>
           </q-input>
@@ -123,9 +120,8 @@ export default defineComponent({
     return {
       allClasses,
       allSkills,
+      Assets,
       currentCharacter,
-      getCharacterImage: Assets.CharImage,
-      getIconImage: Assets.IconImage,
       isMobile,
       onCreateNewCharacter,
       onDeleteCurrentCharacter,

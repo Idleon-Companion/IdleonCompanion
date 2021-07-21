@@ -137,37 +137,30 @@ const GemShopBags: Item[] = [
 const MaterialPouches: Item[] = [
   {
     name: "Mini Materials Pouch",
-    cycle: "Materials Pouch",
     source: "Quest (Scripticus)",
   },
   {
     name: "Cramped Materials Pouch",
-    cycle: "Materials Pouch",
     source: "Smithing",
   },
   {
     name: "Small Materials Pouch",
-    cycle: "Materials Pouch",
     source: "Quest (Scripticus)",
   },
   {
     name: "Average Materials Pouch",
-    cycle: "Materials Pouch",
     source: "Smithing",
   },
   {
     name: "Sizable Materials Pouch",
-    cycle: "Materials Pouch",
     source: "Smithing",
   },
   {
     name: "Big Materials Pouch",
-    cycle: "Materials Pouch",
     source: "Smithing",
   },
   {
     name: "Large Materials Pouch",
-    cycle: "Materials Pouch",
     source: "Smithing",
   },
 ];
@@ -175,37 +168,30 @@ const MaterialPouches: Item[] = [
 const MiningPouches: Item[] = [
   {
     name: "Miniature Mining Pouch",
-    cycle: "Mining Pouch",
     source: "Quest (Glumlee)",
   },
   {
     name: "Cramped Mining Pouch",
-    cycle: "Mining Pouch",
     source: "Smithing",
   },
   {
     name: "Small Mining Pouch",
-    cycle: "Mining Pouch",
     source: "Smithing",
   },
   {
     name: "Average Mining Pouch",
-    cycle: "Mining Pouch",
     source: "Smithing",
   },
   {
     name: "Sizable Mining Pouch",
-    cycle: "Mining Pouch",
     source: "Smithing",
   },
   {
     name: "Big Mining Pouch",
-    cycle: "Mining Pouch",
     source: "Smithing",
   },
   {
     name: "Large Mining Pouch",
-    cycle: "Mining Pouch",
     source: "Smithing",
   },
 ];
@@ -213,36 +199,29 @@ const MiningPouches: Item[] = [
 const FishingPouches: Item[] = [
   {
     name: "Miniature Fish Pouch",
-    cycle: "Fishing Pouch",
   },
   {
     name: "Cramped Fish Pouch",
-    cycle: "Fishing Pouch",
     source: "Smithing",
   },
   {
     name: "Small Fish Pouch",
-    cycle: "Fishing Pouch",
     source: "Smithing",
   },
   {
     name: "Average Fish Pouch",
-    cycle: "Fishing Pouch",
     source: "Smithing",
   },
   {
     name: "Sizable Fish Pouch",
-    cycle: "Fishing Pouch",
     source: "Smithing",
   },
   {
     name: "Big Fish Pouch",
-    cycle: "Fishing Pouch",
     source: "Smithing",
   },
   {
     name: "Large Fish Pouch",
-    cycle: "Fishing Pouch",
     source: "Smithing",
   },
 ];
@@ -250,37 +229,30 @@ const FishingPouches: Item[] = [
 const FoodPouches: Item[] = [
   {
     name: "Miniscule Food Pouch",
-    cycle: "Food Pouch",
     source: "Quest (Picnic Stowaway)",
   },
   {
     name: "Cramped Food Pouch",
-    cycle: "Food Pouch",
     source: "Smithing",
   },
   {
     name: "Small Food Pouch",
-    cycle: "Food Pouch",
     source: "Quest (Funguy)",
   },
   {
     name: "Average Food Pouch",
-    cycle: "Food Pouch",
     source: "Smithing",
   },
   {
     name: "Sizable Food Pouch",
-    cycle: "Food Pouch",
     source: "Smithing",
   },
   {
     name: "Big Food Pouch",
-    cycle: "Food Pouch",
     source: "Smithing",
   },
   {
     name: "Large Food Pouch",
-    cycle: "Food Pouch",
     source: "Smithing",
   },
 ];
@@ -288,37 +260,30 @@ const FoodPouches: Item[] = [
 const ChoppinPouches: Item[] = [
   {
     name: "Miniature Choppin Pouch",
-    cycle: "Choppin Pouch",
     source: "Quest (Woodsman)",
   },
   {
     name: "Cramped Choppin Pouch",
-    cycle: "Choppin Pouch",
     source: "Smithing",
   },
   {
     name: "Small Choppin Pouch",
-    cycle: "Choppin Pouch",
     source: "Smithing",
   },
   {
     name: "Average Choppin Pouch",
-    cycle: "Choppin Pouch",
     source: "Smithing",
   },
   {
     name: "Sizable Choppin Pouch",
-    cycle: "Choppin Pouch",
     source: "Smithing",
   },
   {
     name: "Big Choppin Pouch",
-    cycle: "Choppin Pouch",
     source: "Smithing",
   },
   {
     name: "Large Choppin Pouch",
-    cycle: "Choppin Pouch",
     source: "Smithing",
   },
 ];
@@ -326,36 +291,29 @@ const ChoppinPouches: Item[] = [
 const BugPouches: Item[] = [
   {
     name: "Miniature Bug Pouch",
-    cycle: "Bug Pouch",
   },
   {
     name: "Cramped Bug Pouch",
-    cycle: "Bug Pouch",
     source: "Smithing",
   },
   {
     name: "Small Bug Pouch",
-    cycle: "Bug Pouch",
     source: "Smithing",
   },
   {
     name: "Average Bug Pouch",
-    cycle: "Bug Pouch",
     source: "Smithing",
   },
   {
     name: "Sizable Bug Pouch",
-    cycle: "Bug Pouch",
     source: "Smithing",
   },
   {
     name: "Big Bug Pouch",
-    cycle: "Bug Pouch",
     source: "Smithing",
   },
   {
     name: "Large Bug Pouch",
-    cycle: "Bug Pouch",
     source: "Smithing",
   },
 ];
@@ -363,22 +321,18 @@ const BugPouches: Item[] = [
 const CritterPouches: Item[] = [
   {
     name: "Small Critter Pouch",
-    cycle: "Critter Pouch",
     source: "Smithing",
   },
   {
     name: "Sizable Critter Pouch",
-    cycle: "Critter Pouch",
     source: "Smithing",
   },
   {
     name: "Big Critter Pouch",
-    cycle: "Critter Pouch",
     source: "Smithing",
   },
   {
     name: "Large Critter Pouch",
-    cycle: "Critter Pouch",
     source: "Smithing",
   },
 ];
@@ -386,22 +340,18 @@ const CritterPouches: Item[] = [
 const SoulPouches: Item[] = [
   {
     name: "Small Soul Pouch",
-    cycle: "Soul Pouch",
     source: "Smithing",
   },
   {
     name: "Sizable Soul Pouch",
-    cycle: "Soul Pouch",
     source: "Smithing",
   },
   {
     name: "Big Soul Pouch",
-    cycle: "Soul Pouch",
     source: "Smithing",
   },
   {
     name: "Large Soul Pouch",
-    cycle: "Soul Pouch",
     source: "Smithing",
   },
 ];
@@ -873,47 +823,94 @@ const MiscStamps: Item[] = [
   },
 ];
 
-export const CharacterChecklist: Record<string, ItemGroup> = {
-  "Inventory Bags": {
-    assetDir: "checklist",
-    items: InventoryBags,
-  },
-  "Capacity Pouches": {
-    assetDir: "checklist",
-    items: [
-      ...MaterialPouches,
-      ...MiningPouches,
-      ...FishingPouches,
-      ...FoodPouches,
-      ...ChoppinPouches,
-      ...BugPouches,
-      ...CritterPouches,
-      ...SoulPouches,
-    ],
-  },
+export const CharacterChecklist: Record<string, ItemGroup[]> = {
+  "Inventory Bags": [
+    {
+      assetDir: "checklist",
+      items: InventoryBags,
+      cycle: false,
+    },
+  ],
+  "Capacity Pouches": [
+    {
+      assetDir: "checklist",
+      items: MaterialPouches,
+      cycle: true,
+    },
+    {
+      assetDir: "checklist",
+      items: MiningPouches,
+      cycle: true,
+    },
+    {
+      assetDir: "checklist",
+      items: FishingPouches,
+      cycle: true,
+    },
+    {
+      assetDir: "checklist",
+      items: FoodPouches,
+      cycle: true,
+    },
+    {
+      assetDir: "checklist",
+      items: ChoppinPouches,
+      cycle: true,
+    },
+    {
+      assetDir: "checklist",
+      items: BugPouches,
+      cycle: true,
+    },
+    {
+      assetDir: "checklist",
+      items: CritterPouches,
+      cycle: true,
+    },
+    {
+      assetDir: "checklist",
+      items: SoulPouches,
+      cycle: true,
+    },
+  ],
 };
 
-export const GlobalChecklist: Record<string, ItemGroup> = {
-  "Gem Shop Bags": {
-    assetDir: "checklist",
-    items: GemShopBags,
-  },
-  "Storage Chests": {
-    assetDir: "checklist",
-    items: StorageChests,
-  },
-  "Combat Stamps": {
-    assetDir: "stamps",
-    items: CombatStamps,
-  },
-  "Skill Stamps": {
-    assetDir: "stamps",
-    items: SkillStamps,
-  },
-  "Misc Stamps": {
-    assetDir: "stamps",
-    items: MiscStamps,
-  },
+export const GlobalChecklist: Record<string, ItemGroup[]> = {
+  "Gem Shop Bags": [
+    {
+      assetDir: "checklist",
+      items: GemShopBags,
+      cycle: false,
+    },
+  ],
+  "Storage Chests": [
+    {
+      assetDir: "checklist",
+      items: StorageChests,
+      cycle: false,
+    },
+  ],
+  "Combat Stamps": [
+    {
+      assetDir: "stamps",
+      items: CombatStamps,
+      cycle: false,
+    },
+  ],
+  "Skill Stamps": [
+    {
+      assetDir: "stamps",
+      items: SkillStamps,
+      cycle: false,
+    },
+  ],
+  "Misc Stamps": [
+    {
+      assetDir: "stamps",
+      items: MiscStamps,
+      cycle: false,
+    },
+  ],
 };
 
 export const CompleteChecklist = {
@@ -921,6 +918,8 @@ export const CompleteChecklist = {
   ...GlobalChecklist,
 };
 
+type HasItemFunc = (item: string) => boolean;
+type SetItemFunc = (item: string, state: boolean) => void;
 export function useChecklist() {
   const getChecklistItemText = (item: Item): string => {
     let text = item.name;
@@ -933,7 +932,68 @@ export function useChecklist() {
     return text;
   };
 
+  const getItemGroupCompletion = (
+    groups: ItemGroup[],
+    hasItem: HasItemFunc
+  ) => {
+    // Returns a percentage completion of an item group
+    let totalComplete = 0;
+    let totalItems = 0;
+    for (const group of groups) {
+      totalComplete += group.items.filter((item) => hasItem(item.name)).length;
+      totalItems += group.items.length;
+    }
+    return (totalComplete / totalItems) * 100;
+  };
+
+  const handleChecklistItemClick = (
+    clicked: Item,
+    group: ItemGroup,
+    hasItem: HasItemFunc,
+    setItem: SetItemFunc,
+    direction?: number
+  ) => {
+    // Handler for clicking a checklist item
+    // Handle cycling for items with a cycle (e.g. capacity pouches)
+    if (group.cycle) {
+      let cycleIndex = group.items.indexOf(clicked);
+      let goalIndex = cycleIndex + (direction ?? 0);
+      if (goalIndex === -1 && !hasItem(clicked.name)) {
+        goalIndex = group.items.length - 1;
+      } else if (goalIndex === 1 && !hasItem(clicked.name)) {
+        goalIndex = 0;
+      } else if (goalIndex === group.items.length) {
+        goalIndex = -1;
+      }
+      // Enable all items up to and including the goal index
+      for (const [index, item] of group.items.entries()) {
+        setItem(item.name, index <= goalIndex);
+      }
+    } else {
+      // Normal items only toggle between enabled/disabled
+      setItem(clicked.name, !hasItem(clicked.name));
+    }
+  };
+
+  const highestUnlockedItemFromCycle = (
+    group: ItemGroup,
+    hasItem: HasItemFunc
+  ): Item => {
+    // Returns the highest item from a cyclical item group, or the first item
+    // For example, this will return the highest unlocked mining pouch from that group
+    for (const item of group.items.slice().reverse()) {
+      if (hasItem(item.name)) {
+        return item;
+      }
+    }
+    // No items unlocked from cycle
+    return group.items[0];
+  };
+
   return {
     getChecklistItemText,
+    getItemGroupCompletion,
+    handleChecklistItemClick,
+    highestUnlockedItemFromCycle,
   };
 }

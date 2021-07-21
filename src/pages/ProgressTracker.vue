@@ -1,188 +1,130 @@
 <template>
-  <div class="row">
-    <div>
-      <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
-        Track your account progress! Here you can check all of the global
-        collectibles in game. Click on a cards to cycle through rarity levels.
-        <br />
-        For details on drops, please refer to the
-        <a target="_blank" href="https://idleon.info/wiki/Category:Droptables"
-          >wiki page about drop tables</a
-        >
-      </p>
+  <q-banner inline-actions>
+    Track your account collection progress! Use this page to keep track of all
+    global collectibles such as chests, stamps, cards, and more. See the Wiki
+    link for drop table info.
+    <template v-slot:action>
+      <q-btn-dropdown outline label="Wiki">
+        <q-list separator>
+          <a v-for="[label, link] in wikiLinks" :key="label" :href="link">
+            <q-item clickable>
+              <q-item-section>{{ label }}</q-item-section>
+            </q-item>
+          </a>
+        </q-list>
+      </q-btn-dropdown>
+    </template>
+  </q-banner>
+  <q-card class="m-4 p-4">
+    <div class="text-2xl">Unique Collectibles</div>
+    <div class="flex items-start justify-center">
+      <q-expansion-item
+        v-for="(groups, category) in allItems"
+        class="bg-blue-400 m-4 rounded w-full md:w-1/4 font-medium"
+      >
+        <template #header>
+          <q-knob
+            show-value
+            track-color="grey-3"
+            color="positive"
+            :modelValue="getItemGroupCompletion(groups, hasItem)"
+            >{{ getItemGroupCompletion(groups, hasItem).toFixed(0) }}%</q-knob
+          >
+          <q-item-section class="font-medium ml-2">{{
+            category
+          }}</q-item-section>
+        </template>
+        <q-card class="flex flex-wrap justify-center p-2">
+          <template v-for="group in groups">
+            <div v-for="item in group.items">
+              <ICAsset
+                v-if="
+                  group.cycle
+                    ? item.name ===
+                      highestUnlockedItemFromCycle(group, hasItem).name
+                    : true
+                "
+                class="m-1 cursor-pointer"
+                size="large"
+                :enabled="hasItem(item.name)"
+                :image="Assets.FromDir(item.name, group.assetDir)"
+                :title="item.name"
+                @click.stop="onChecklistItemClick(item, group, +1)"
+                @contextmenu.stop.prevent="
+                  onChecklistItemClick(item, group, -1)
+                "
+              >
+                <template #tooltip>
+                  <div
+                    class="text-center"
+                    v-html="getChecklistItemText(item)"
+                  ></div>
+                </template>
+              </ICAsset>
+            </div>
+          </template>
+        </q-card>
+      </q-expansion-item>
     </div>
-  </div>
-  <div class="col progress-tracker">
-    <div
-      v-for="(data, category) in allItems"
-      :key="category"
-      class="progress-group"
-    >
-      <div class="progress-category text-light col-12 col-md-6 my-1">
-        {{ category }}
-      </div>
-      <div class="progress-items">
-        <div v-for="(item, i) in data.items" :key="i">
-          <div class="progress-item">
-            <GameAsset
-              class="mx-1"
-              :height="64"
-              :title="item.name"
-              :image="Assets.FromDir(item.name, data.assetDir)"
-              :enabled="checklist[item.name]"
-              @click="handleProgressCheck(item.name)"
-            >
-              <template #tooltip>
-                <div
-                  class="text-center"
-                  v-html="getChecklistItemText(item)"
-                ></div>
-              </template>
-            </GameAsset>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div v-for="(category, j) in CardCategory" :key="j" class="progress-group">
-      <div class="progress-category text-light col-md-6 my-3">
-        {{ category }} Cards
-      </div>
-      <div class="progress-items">
-        <div v-for="(card, i) in cardData[category]" :key="i">
-          <div class="progress-item card-wrapper m-1">
-            <GameAsset
-              class="card-image"
-              :height="72"
-              :title="cardText(card)"
-              :image="Assets.CardImage(card.id)"
-              :enabled="cards[card.id] !== 0"
-              @click="handleCardClick(card.id, +1)"
-              @contextmenu.prevent="handleCardClick(card.id, -1)"
-            >
-              <template #tooltip>
-                <div class="text-center" v-html="cardText(card)"></div>
-              </template>
-            </GameAsset>
-            <GameAsset
-              v-if="cards[card.id] > 1"
-              class="card-border"
-              :height="100"
-              :image="Assets.CardBorderImage(cards[card.id] - 1)"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </q-card>
+  <CardTracker />
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
 import { GlobalChecklist, useChecklist } from "~/composables/Checklist";
-
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
-import { Card, CardCategory, Cards } from "~/composables/Cards";
-import { Assets, Item } from "~/composables/Utilities";
+import CardTracker from "~/components/tracker/CardTracker.vue";
+import { Assets, Item, ItemGroup } from "~/composables/Utilities";
 import { useState } from "~/State";
+
+const WikiLinks = new Map([
+  ["Drop Tables", "https://idleon.info/wiki/Category:Droptables"],
+]);
 
 export default defineComponent({
   name: "ProgressTracker",
   components: {
+    CardTracker,
     ICAsset,
   },
   setup() {
     const state = useState();
-    const { getChecklistItemText } = useChecklist();
+
+    const {
+      getChecklistItemText,
+      getItemGroupCompletion,
+      handleChecklistItemClick,
+      highestUnlockedItemFromCycle,
+    } = useChecklist();
     const checklist = computed({
       get: () => state.value.checklist,
       set: (value) => (state.value.checklist = value),
     });
-    // Initialize local state
-    for (const data of Object.values(GlobalChecklist)) {
-      for (const item of data.items) {
-        if (checklist.value[item.name]) {
-          checklist.value[item.name] = true;
-        } else {
-          checklist.value[item.name] = false;
-        }
-      }
-    }
 
-    const cards = computed({
-      get: () => state.value.cards,
-      set: (value) => (state.value.cards = value),
-    });
-    const cardData = ref({} as Record<string, Card[]>);
-    for (const card of Cards) {
-      // Group by category for template
-      if (card.category in cardData.value) {
-        cardData.value[card.category].push(card);
-      } else {
-        cardData.value[card.category] = [card];
-      }
-      // Load from local state
-      if (!(card.id in state.value.cards)) {
-        state.value.cards[card.id] = 0;
-      }
-    }
-
-    // Input handlers
-    const CARD_TIERS = 5;
-    const handleCardClick = (id: string, amount: number) => {
-      let cardTier = (state.value.cards[id] + amount) % CARD_TIERS;
-      if (cardTier < 0) {
-        cardTier = CARD_TIERS - 1;
-      }
-      state.value.cards[id] = cardTier;
-    };
-    const handleProgressCheck = (item: string) => {
-      checklist.value[item] = !checklist.value[item];
-    };
+    // Utility functions
+    const hasItem = (item: string) => checklist.value[item];
+    const setItem = (item: string, state: boolean) =>
+      (checklist.value[item] = state);
 
     return {
       allItems: GlobalChecklist,
       Assets,
-      CardCategory,
-      cardData,
-      cards,
-      checklist,
       getChecklistItemText,
-      handleCardClick,
-      handleProgressCheck,
-      Text,
+      getItemGroupCompletion,
+      hasItem,
+      highestUnlockedItemFromCycle,
+      onChecklistItemClick: (
+        item: Item,
+        group: ItemGroup,
+        direction?: 1 | -1
+      ) => {
+        handleChecklistItemClick(item, group, hasItem, setItem, direction);
+      },
+      wikiLinks: WikiLinks,
     };
-  },
-  methods: {
-    cardText(card: Card): string {
-      let name = card.id.replace(/_/g, " ");
-      let bonus = this.cards[card.id] * card.base;
-      let text = `${name}<br>+${bonus} ${card.effect}`;
-      if (card.source) {
-        text += `<br><em>Source: ${card.source}</em>`;
-      }
-      return text;
-    },
   },
 });
 </script>
 
-<style lang="sass" scoped>
-@import '../styles/base.sass'
-a
-  color: lighten($info, 10%)
-  font-weight: bold
-  transition: 0.3s
-  &:hover
-    color: darken($info, 10%)
-.card-wrapper
-  position: relative
-  width: 62px
-  .card-image
-    display: block
-    margin-left: 3px
-    height: auto
-  .card-border
-    bottom: -24px
-    position: absolute
-    pointer-events: none
-</style>
+<style lang="sass" scoped></style>

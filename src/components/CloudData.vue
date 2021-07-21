@@ -1,6 +1,13 @@
 <template>
-  <div v-if="user === null" id="firebase-auth"></div>
-  <div v-else id="auth-info" class="flex flex-col px-1 py-2 bg-primary">
+  <div
+    id="firebase-auth"
+    :style="user === null ? '' : { display: 'none' }"
+  ></div>
+  <div
+    v-if="user !== null"
+    id="auth-info"
+    class="flex flex-col px-1 py-2 bg-primary"
+  >
     <div class="flex items-center justify-center">
       <q-btn
         color="dark"
