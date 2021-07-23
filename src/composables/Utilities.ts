@@ -58,7 +58,7 @@ export class Assets {
   }
 
   static IconImage(icon: string): string {
-    return `/assets/icons/${icon}_Icon.png`;
+    return `/assets/icons/${icon.replace(/ /g, "_")}_Icon.png`;
   }
 
   static MaterialImage(item: string): string {

@@ -60,7 +60,7 @@ export default defineComponent({
         return {};
       }
       const styleTable: Record<AssetSize, string> = {
-        xxs: "12px",
+        xxs: "16px",
         xs: "24px",
         small: "32px",
         medium: "48px",

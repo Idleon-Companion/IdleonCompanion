@@ -1,9 +1,9 @@
 <template>
   <div class="flex">
     <template v-for="(value, i) in splitCoinsFromValue(value)">
-      <div v-if="value">
+      <div v-if="value" class="flex items-center">
         <ICAsset size="xxs" :image="Assets.MiscImage(keys[i] + '_coin')" />
-        {{ value }}
+        <div class="mx-1">{{ value }}</div>
       </div>
     </template>
   </div>
