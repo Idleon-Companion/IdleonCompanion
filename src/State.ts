@@ -9,6 +9,7 @@ import { AlchemyData, AlchemyColor } from "~/composables/Alchemy";
 import { Task } from "~/composables/Progress";
 import { Character, useCharacters } from "~/composables/Characters";
 import { StatueName, StatueInfo, Statues } from "./composables/Statues";
+import { Stamps } from "./composables/Stamps";
 
 const StorageKey = "idleon-companion";
 export const useState = createGlobalState(() =>
@@ -31,6 +32,7 @@ export const useState = createGlobalState(() =>
     cards: {} as Record<string, number>,
     chars: [] as Character[],
     checklist: {} as Record<string, boolean>,
+    stamps: {} as Record<string, number>,
     starSigns: {} as Record<string, boolean>,
     statues: {} as Record<StatueName, StatueInfo>,
     tasks: {
@@ -132,7 +134,10 @@ export function versionControl() {
       delete (state.value.chars[index] as Character & { statues: any }).statues;
     }
     // Add stamp tracking data
-    // todo
+    state.value.stamps = {};
+    for (const stamp of Object.values(Stamps)) {
+      state.value.stamps[stamp.name] = 0;
+    }
   }
   state.value.version = version;
 }
