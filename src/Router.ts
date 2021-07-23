@@ -4,11 +4,35 @@ import Alchemy from "~/pages/Alchemy.vue";
 import Characters from "~/pages/Characters.vue";
 import Credits from "~/pages/Changelog.vue";
 import ProgressTracker from "~/components/tracker/ProgressTracker.vue";
-import Statues from "~/components/tracker/Statues.vue";
+import StatueTracker from "~/components/tracker/StatueTracker.vue";
+import StampTracker from "~/components/tracker/StampTracker.vue";
 import SweetSpot from "~/pages/SweetSpot.vue";
 import Tasks from "~/pages/Tasks.vue";
 
 const { loadBuildFromDatabase } = useBuilds();
+
+export const trackerRoutes: RouteRecordRaw[] = [
+  {
+    name: "Collection Progress",
+    path: "/tracker/progress",
+    component: ProgressTracker,
+  },
+  {
+    name: "Statues",
+    path: "/tracker/statues",
+    component: StatueTracker,
+  },
+  {
+    name: "Stamps",
+    path: "/tracker/stamps",
+    component: StampTracker,
+  },
+  {
+    name: "Alchemy",
+    path: "/tracker/alchemy",
+    component: Alchemy,
+  },
+];
 
 export const tabRoutes: RouteRecordRaw[] = [
   {
@@ -21,21 +45,6 @@ export const tabRoutes: RouteRecordRaw[] = [
     path: "/characters",
     component: Characters,
   },
-  {
-    name: "Collection Progress",
-    path: "/tracker/progress",
-    component: ProgressTracker,
-  },
-  {
-    name: "Statues",
-    path: "/tracker/statues",
-    component: Statues,
-  },
-  // {
-  //   name: "Alchemy",
-  //   path: "/tracker/alchemy",
-  //   component: Alchemy,
-  // },
   {
     name: "Sweet Spot",
     path: "/sweet-spot",
@@ -64,6 +73,7 @@ const routes: RouteRecordRaw[] = [
     },
   },
   ...tabRoutes,
+  ...trackerRoutes,
 ];
 
 const router = createRouter({
