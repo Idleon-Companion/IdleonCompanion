@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import { useBuilds } from "~/composables/Builds";
 import Alchemy from "~/pages/Alchemy.vue";
+import Cards from "~/pages/Cards.vue";
 import Characters from "~/pages/Characters.vue";
 import Credits from "~/pages/Changelog.vue";
 import ProgressTracker from "~/components/tracker/ProgressTracker.vue";
@@ -54,6 +55,11 @@ export const tabRoutes: RouteRecordRaw[] = [
     name: "Tasks",
     path: "/tasks",
     component: Tasks,
+  },
+  {
+    name: "Cards",
+    path: "/cards",
+    component: Cards,
   },
   {
     name: "Changelog",

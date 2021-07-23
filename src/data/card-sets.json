@@ -24,72 +24,72 @@
     }
   },
   "card_set_2": {
-  "title": "Mining",
-  "core": {
-    "1": "Platinum_Ore",
-    "2": "Normal_Amarok",
-    "3": "Dementia_Ore",
-    "4": "Iron_Ore"
-  },
-  "useful": {
-    "1": "Bunny",
-    "2": "Gold_Ore",
-    "3": "Chaotic_Efaunt",
-    "4": "Choco_Box",
-    "5": "Loveulyte",
-    "6": "Biggie_Hours"
-  },
-  "minimal": {
-    "1": "Mamooth",
-    "2": "Glublin",
-    "3": "Frost_Flake",
-    "4": "Tyson",
-    "5": "Wode_Board"
-  } 
+    "title": "Mining",
+    "core": {
+      "1": "Platinum_Ore",
+      "2": "Normal_Amarok",
+      "3": "Dementia_Ore",
+      "4": "Iron_Ore"
+    },
+    "useful": {
+      "1": "Bunny",
+      "2": "Gold_Ore",
+      "3": "Chaotic_Efaunt",
+      "4": "Choco_Box",
+      "5": "Loveulyte",
+      "6": "Biggie_Hours"
+    },
+    "minimal": {
+      "1": "Mamooth",
+      "2": "Glublin",
+      "3": "Frost_Flake",
+      "4": "Tyson",
+      "5": "Wode_Board"
+    }
   },
   "card_set_3": {
-  "title": "Fishing",
-  "core": {
-    "1": "Bloach",
-    "2": "Normal_Amarok",
-    "3": "Hermit_Can",
-    "4": "Jellyfish"
-  },
-  "useful": {
-    "1": "Bunny",
-    "2": "Coastiolyte",
-    "3": "Chaotic_Efaunt",
-    "4": "Choco_Box",
-    "5": "Biggie_Hours"
-  },
-  "minimal": {
-    "1": "Frost_Flake",
-    "2": "Tyson",
-    "3": "Wode_Board"
-  }
+    "title": "Fishing",
+    "core": {
+      "1": "Bloach",
+      "2": "Normal_Amarok",
+      "3": "Hermit_Can",
+      "4": "Jellyfish"
+    },
+    "useful": {
+      "1": "Bunny",
+      "2": "Coastiolyte",
+      "3": "Chaotic_Efaunt",
+      "4": "Choco_Box",
+      "5": "Biggie_Hours"
+    },
+    "minimal": {
+      "1": "Frost_Flake",
+      "2": "Tyson",
+      "3": "Wode_Board"
+    }
   },
   "card_set_4": {
-  "title": "Catching",
-  "core": {
-    "1": "Flycicle",
-    "2": "Mosquisnow",
-    "3": "Fruitfly",
-    "4": "Butterfly",
-    "5": "Normal_Amarok"
-  },
-  "useful": {
-    "1": "Bunny",
-    "2": "Sentient_Cereal",
-    "3": "Summer_Spirit",
-    "4": "Chaotic_Efaunt",
-    "5": "Choco_Box",
-    "6": "Biggie_Hours"
-  },
-  "minimal": {
-    "1": "Bloque",
-    "2": "Mafioso",
-    "3": "Carrotman"
-  }
+    "title": "Catching",
+    "core": {
+      "1": "Flycicle",
+      "2": "Mosquisnow",
+      "3": "Fruitfly",
+      "4": "Butterfly",
+      "5": "Normal_Amarok"
+    },
+    "useful": {
+      "1": "Bunny",
+      "2": "Sentient_Cereal",
+      "3": "Summer_Spirit",
+      "4": "Chaotic_Efaunt",
+      "5": "Choco_Box",
+      "6": "Biggie_Hours"
+    },
+    "minimal": {
+      "1": "Bloque",
+      "2": "Mafioso",
+      "3": "Carrotman"
+    }
   },
   "card_set_5": {
     "title": "Active_Farming",
@@ -104,30 +104,26 @@
       "2": "Crystal_Cattle",
       "3": "Owlio"
     },
-    "minimal": {
-      "1": "Best_Damage",
-      "2": "Best_Accuracy",
-      "3": "Best_Drop_Rate"
-    }
+    "minimal": {}
   },
   "card_set_6": {
-  "title": "AFK_Farming",
-  "core": {
-    "1": "Chaotic_Amarok",
-    "2": "Boop",
-    "3": "Normal_Efaunt",
-    "4": "Crystal_Cattle"
-  },
-  "useful": {
-    "1": "Crystal_Crabal",
-    "2": "Owlio"
-  },
-  "minimal": {
-    "1": "Baby_Boa",
-    "2": "Best_Damage",
-    "3": "Best_Accuracy",
-    "4": "Best_Drop_Rate"
-  }
+    "title": "AFK_Farming",
+    "core": {
+      "1": "Chaotic_Amarok",
+      "2": "Boop",
+      "3": "Normal_Efaunt",
+      "4": "Crystal_Cattle"
+    },
+    "useful": {
+      "1": "Crystal_Crabal",
+      "2": "Owlio"
+    },
+    "minimal": {
+      "1": "Baby_Boa",
+      "2": "Best_Damage",
+      "3": "Best_Accuracy",
+      "4": "Best_Drop_Rate"
+    }
   },
   "card_set_7": {
     "title": "Accuracy",
@@ -137,9 +133,7 @@
       "3": "Sand_Castle",
       "4": "Veiny_Logs"
     },
-    "useful": {
-      "1": "Best_Secondary_Accuracy"
-    },
+    "useful": {},
     "minimal": {}
   },
   "card_set_8": {
@@ -150,7 +144,7 @@
       "3": "Bloodbone",
       "4": "Dedotated_Ram",
       "5": "Pincermin"
-         },
+    },
     "useful": {
       "1": "Sand_Giant",
       "2": "Bored_Bean"
@@ -199,8 +193,6 @@
       "1": "Oak_Logs",
       "2": "Plasti_Doug"
     },
-    "minimal": {
-    }
+    "minimal": {}
   }
-
 }
