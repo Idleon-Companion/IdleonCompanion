@@ -1,4 +1,4 @@
-import { Growth } from "./Utilities";
+import { Growth } from "~/composables/Utilities";
 
 export type AlchemyData = {
   vials: Record<string, number>;
@@ -384,17 +384,17 @@ export class AlchemyUtil {
     return level === 0 ? 0 : Growth[bubble.Func](level, bubble.x1, bubble.x2);
   };
 
-  static effectChange = (
-    bubble: Bubble,
-    levelNow: number,
-    levelGoal: number
-  ) => {
-    let effectNow = Alch.effect(bubble, levelNow) ?? 0;
-    let effectGoal = Alch.effect(bubble, levelGoal);
-    effectGoal = effectGoal < effectNow ? effectNow : effectGoal;
-    let result = `${effectNow.toFixed(2).padStart(6, " ")} => ${effectGoal
-      .toFixed(2)
-      .padStart(6, " ")}`;
-    return result;
-  };
+  // static effectChange = (
+  //   bubble: Bubble,
+  //   levelNow: number,
+  //   levelGoal: number
+  // ) => {
+  //   let effectNow = Alch.effect(bubble, levelNow) ?? 0;
+  //   let effectGoal = Alch.effect(bubble, levelGoal);
+  //   effectGoal = effectGoal < effectNow ? effectNow : effectGoal;
+  //   let result = `${effectNow.toFixed(2).padStart(6, " ")} => ${effectGoal
+  //     .toFixed(2)
+  //     .padStart(6, " ")}`;
+  //   return result;
+  // };
 }

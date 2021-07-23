@@ -1,32 +1,32 @@
 <template>
-  <span class="d-flex">
-    <template v-for="(value, key) in splitValues(Number(value))" :key="key">
-      <template v-if="value">
-        <img
-          :src="Assets.MiscImage(key + '_coin')"
-          class="img-fuid h-100 align-self-center mx-1"
-        />
-        {{ value }}
-      </template>
+  <div class="flex">
+    <template v-for="(value, i) in splitCoinsFromValue(value)">
+      <div v-if="value" class="flex items-center">
+        <ICAsset size="xxs" :image="Assets.MiscImage(keys[i] + '_coin')" />
+        <div class="mx-1">{{ value }}</div>
+      </div>
     </template>
-  </span>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { Assets, useMoney } from "~/composables/Utilities";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 
-import { Assets } from "~/composables/Utilities";
-
-type Coin = {
-  bronze: number;
-  silver: number;
-  gold: number;
-  plat: number;
-  dem: number;
-};
+enum CoinKeys {
+  dem,
+  plat,
+  gold,
+  silver,
+  bronze,
+}
 
 export default defineComponent({
   name: "CoinDisplay",
+  components: {
+    ICAsset,
+  },
   props: {
     value: {
       required: true,
@@ -34,29 +34,12 @@ export default defineComponent({
     },
   },
   setup() {
+    const { splitCoinsFromValue } = useMoney();
     return {
       Assets,
+      keys: CoinKeys,
+      splitCoinsFromValue,
     };
-  },
-  methods: {
-    splitValues(value: number): Coin {
-      let v = value;
-      let a = [];
-      let n = 5; // number of distinct coin types
-      while (n--) {
-        let c = Math.pow(100, n);
-        a.push(Math.floor(v / c));
-        v %= c;
-      }
-
-      return {
-        dem: a[0],
-        plat: a[1],
-        gold: a[2],
-        silver: a[3],
-        bronze: a[4],
-      };
-    },
   },
 });
 </script>
