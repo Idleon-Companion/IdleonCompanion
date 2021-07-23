@@ -72,7 +72,8 @@
 			<td>
 			<input
 			    v-model.number="critChance"
-			    type="float"
+			    type="number"
+			    step="0.01"
 			    min="0.00"
 			    id="critC"
 			    placeholder="Crit Chance Percent"
@@ -113,8 +114,16 @@
 			  </option>
 			</select></td>
 			</tr>
+			<template v-if="skill1_IMG != ''">
 			<tr>
-			<td><label for="skill1" class="h5 m-2 ms-0">Skill 1</label></td>
+			<td></td>
+			<td style="display: flex;">
+			<GameAsset
+				  :height="40"
+				  :image="skill1_IMG"
+			/>
+			<label for="skill1" class="h5 m-2 ms-0"> {{skill1_name}}</label> 
+			</td>
 			<td><input
 			    v-model.number="charSkill1"
 			    type="number"
@@ -122,8 +131,17 @@
 			    id="skill1"
 			/></td>
 			</tr>
+			</template>
+			<template v-if="skill2_IMG != ''">
 			<tr>
-			<td><label for="skill1" class="h5 m-2 ms-0">Skill 2</label></td>
+			<td></td>
+			<td style="display:flex;">
+			<GameAsset
+				  :height="40"
+				  :image="skill2_IMG"
+			/>
+			<label for="skill1" class="h5 m-2 ms-0">{{skill2_name}}</label>
+			</td>
 			<td><input
 			    v-model.number="charSkill2"
 			    type="number"
@@ -131,13 +149,14 @@
 			    id="skill2"
 			/></td>
 			</tr>
+			</template>
 		</table>
 	</div>
 </div>
 Your top three spots are<br>
-{{bestThreeMobs[0].value}}<br>
-{{bestThreeMobs[1].value}}<br>
-{{bestThreeMobs[2].value}}
+<div v-for="monster in bestThreeMobs">
+{{monster.value}}<br>
+</div>
 
 
 <a-divider>EXP Calculator</a-divider>
@@ -247,6 +266,10 @@ Required EXP for Level Up: {{ expNextLevel(charLevel).toFixed(0) }}
 import { computed, defineComponent, ref } from "vue";
 import monsterData from "~/data/monsterData.json";
 import { monsterWeight } from "~/composables/SweetSpotWeight";
+
+import GameAsset from "~/components/GameAsset.vue";
+import { Assets } from "~/composables/Utilities";
+
 import { Collapse }  from "ant-design-vue";
 import { Space }  from "ant-design-vue";
 import { Divider }  from "ant-design-vue";
@@ -268,6 +291,9 @@ type Monster = {
 
 export default defineComponent({
 	name: "SweetSpot",
+	components: {
+		GameAsset,
+	},
 	setup() {
 		const monsters: Record<string, Monster> = monsterData;
 
@@ -289,6 +315,68 @@ export default defineComponent({
 					return 1;
 			}
 		})
+			
+		// Code for skills
+		const skill1_IMG = computed(() => {
+			let imgString = ""
+			switch(charClass.value) {
+				case "Warrior":
+					imgString = "war-2-4";
+					break;
+				case "Archer":
+				case "Hunter":
+					imgString = "arc-2-5";
+					break;
+				case "Journeyman":
+					imgString = "jma-2-4";
+					break;
+				default:
+					return "";
+			}
+			if(imgString != "")
+				return Assets.FromDir(imgString,'talents');
+			else return "";
+		})
+		const skill1_name = computed(() => {
+			switch(charClass.value) {
+				case "Warrior":
+					return "Double Strike"
+				case "Archer":
+				case "Hunter":
+					return "Have Another!"
+				case "Journeyman":
+					return "Two Punch Man"
+				default:
+					return "N/A";
+			}
+		})
+		const skill2_IMG = computed(() => {
+			let imgString = "";
+			switch(charClass.value) {
+				case "Hunter":
+					imgString = "hun-3-5";
+					break;
+				case "Maestro":
+					imgString = "";
+					break;
+				default:
+					imgString = "";
+			}
+			if(imgString != "")
+				return Assets.FromDir(imgString,'talents');
+			else return "";
+		})
+		const skill2_name = computed(() => {
+			switch(charClass.value) {
+				case "Hunter":
+					return "Have Another... Again!"
+				case "Maestro":
+					return "Triple Jab"
+				default:
+					return "N/A";
+			}
+		})
+		
 
 		const monstEXPMul = computed(() => {
 			// Make sure the user selected something
@@ -302,28 +390,29 @@ export default defineComponent({
 			return  ingameEXPMonst.value / monsters[monstName].exp;
 		})
 
+
 		const activeKey = ref([]);
 
-		const minDmg = ref("1");
-		const maxDmg = ref("2");
+		const minDmg = ref(1);
+		const maxDmg = ref(2);
 		
-		const accuracy = ref("2");
-		const critChance = ref("0");
-		const critDmg = ref("0");
+		const accuracy = ref(2);
+		const critChance = ref(0);
+		const critDmg = ref(0);
 
 		const charClass = ref("None");
-		const charSkill1 = ref("0");
-		const charSkill2 = ref("0");
+		const charSkill1 = ref(0);
+		const charSkill2 = ref(0);
 
 		const curEXPMonst = ref("None");
 		const ingameEXPMonst = ref("");
 	
 		/* For EXP Calculator */
-		const charLevel = ref("1");
+		const charLevel = ref(1);
 		const startExpTime = ref(moment('12:00', 'HH:mm'));;
-		const startExp = ref("0");
+		const startExp = ref(0);
 		const endExpTime = ref(moment('13:00', 'HH:mm'));
-		const endExp = ref("100");
+		const endExp = ref(100);
 		
 
 		// For multi-hit talents
@@ -367,10 +456,9 @@ export default defineComponent({
 			for (i = 0; i < 3; i++){
 			    let k = keys[i];
 			    sortedDict.push({'key': k, 'value':dict[k]});
+			    // Check that it isn't Zero (No good mobs).
+			    if (sortedDict[i].key == 0) sortedDict[i].value = "N/A";
 			}
-			
-			// Check first key isn't Zero (No good mobs). If it is, change it to N/A
-			if (sortedDict[0].key == 0) sortedDict[0].value = "N/A";
 
 			return sortedDict;  
 		})	
@@ -484,8 +572,6 @@ export default defineComponent({
 		}
 
 		const monsterExpMul = (monster: Monster): number => {
-			//console.log(ingameEXPMonst.value);
-			//console.log(monstEXPMul.value);
 			return monster.exp*monstEXPMul.value;
 		}
 
@@ -497,7 +583,7 @@ export default defineComponent({
 		
 		const bestMob = (monster: Monster): number => {
 			// World 3 not ready
-			if(monster.numMobs == 1) return 0;
+			if(monster.numMobs === 1) return 0;
 
 			if ( avgSwingToKill <= 0 ) return 0;
 
@@ -516,10 +602,12 @@ export default defineComponent({
 
 
 		return {
+		Assets,
 		activeKey,	
 		monsters, monsterWeight, minDmg, maxDmg, multiplier, monstEXPMul,
 		accuracy, critChance, critDmg, curEXPMonst, ingameEXPMonst, 
-		charClass, charSkill1, charSkill2, 
+		charClass, charSkill1, charSkill2, skill1_IMG, skill1_name, 
+		skill2_IMG, skill2_name, 
 
 		startExpTime, startExp, endExpTime, endExp, charLevel, idleClasses,
 		expNextLevel, timeToLevel,
