@@ -30,7 +30,7 @@
 <script lang="ts">
 import { computed, defineComponent, PropType } from "vue";
 
-type AssetSize = "xs" | "small" | "medium" | "large" | "xl" | "none";
+type AssetSize = "xxs" | "xs" | "small" | "medium" | "large" | "xl" | "none";
 
 export default defineComponent({
   name: "IC-Asset",
@@ -60,6 +60,7 @@ export default defineComponent({
         return {};
       }
       const styleTable: Record<AssetSize, string> = {
+        xxs: "12px",
         xs: "24px",
         small: "32px",
         medium: "48px",

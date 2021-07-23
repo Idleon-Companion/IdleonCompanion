@@ -70,7 +70,7 @@ export class Assets {
   }
 
   static StampImage(item: string): string {
-    return `/assets/stamps/${item}.png`;
+    return `/assets/stamps/${item.replace(/ /g, "_")}.png`;
   }
 
   static StatueImage(item: string): string {
@@ -214,6 +214,7 @@ export const Effects = {
 type ValueOf<T> = T[keyof T];
 export type EffectData = ValueOf<typeof Effects>;
 
+// Game Versions
 export const GameVersions = <const>["1.22", "1.21", "1.20"];
 export type GameVersion = typeof GameVersions[number];
 export const LatestGameVersion: GameVersion = GameVersions[0];
@@ -236,5 +237,33 @@ export function useLayout() {
     isDarkMode,
     isMobile,
     toggleDarkMode,
+  };
+}
+
+// Coins
+export enum Coin {
+  Bronze,
+  Silver,
+  Gold,
+  Platinum,
+  Dementia,
+}
+export const CoinTiers = 5;
+export function useMoney() {
+  const splitCoinsFromValue = (value: number) => {
+    let coins = [];
+    let v = value;
+    let n = CoinTiers; // number of distinct coin types
+    while (n--) {
+      let c = Math.pow(100, n);
+      coins.push(Math.floor(v / c));
+      v %= c;
+    }
+    // Return lowest value at the start
+    return coins;
+  };
+
+  return {
+    splitCoinsFromValue,
   };
 }
