@@ -7,7 +7,6 @@
         <div class="text-center" v-html="bubbleDesc()"></div>
       </template>
     </GameAsset>
-    
   </td>
   <td class="columnSpan">
     <input class="columnSpan"
@@ -72,7 +71,6 @@ export default defineComponent({
     customChange (group: Color, idx: number, level: number): void {
       const bubbleIDX = this.props.idx;
       const bubbleColor = this.props.group;
-
 
       this.alchemy.upgrades[bubbleColor][bubbleIDX] = level+1;
       if (level +1 > this.alchemy.goals[bubbleColor][bubbleIDX]) {

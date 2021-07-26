@@ -87,6 +87,7 @@ export type Item = {
   name: string;
   bagSlots?: number;
   cycle?: string;
+  source?: string;
 };
 
 export type ItemGroup = {
@@ -100,6 +101,9 @@ export class Text {
     let text = item.name;
     if (item.bagSlots !== undefined) {
       text += `<br>+${item.bagSlots} Inventory Slots`;
+    }
+    if (item.source !== undefined) {
+      text += `<br><em>Source: ${item.source}</em>`;
     }
     return text;
   }
@@ -178,7 +182,9 @@ enum SkillEffects {
   FishingMultiFish = "% Multi-Fish Chance",
   FishingPower = "% Fishing Power",
   WorshipCharge = "% Max Charge",
-  WoorshipBase = "Base Worship Power",
+  WorshipChargeRate = "% Charge Rate",
+  WorshipBase = "Base Worship Power",
+  WorshipPoints = "Starting Points in Worship",
   TrappingShiny = "% Shiny Critter Chance",
   TrappingEfficiency = "% Trapping Efficiency",
   TrappingExp = "% Trapping EXP",

@@ -1,4 +1,4 @@
-import checklistData from "./data/checklist.json";
+import { checklistData } from "~/composables/Checklist";
 import { version } from "../package.json";
 import { createGlobalState, useStorage } from "@vueuse/core";
 import { ref } from "vue";

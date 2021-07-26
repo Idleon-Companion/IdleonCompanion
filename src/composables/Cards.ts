@@ -5,6 +5,7 @@ export enum CardCategory {
   YumYumDesert = "Yum Yum Desert",
   EasyResources = "Easy Resources",
   MediumResources = "Medium Resources",
+  HardResources = "Hard Resources",
   FrostbiteTundra = "Frostbite Tundra",
   Bosses = "Bosses",
   Events = "Events",
@@ -18,7 +19,7 @@ export type Card = {
   source?: string;
 };
 
-export const Cards: Card[] = [
+const BlunderHillCards: Card[] = [
   {
     id: "Green_Mushroom",
     category: CardCategory.BlunderHills,
@@ -131,6 +132,9 @@ export const Cards: Card[] = [
     base: 5,
     source: "Wood Mushroom (1/10,000)",
   },
+]
+
+const YumYumDesertCards: Card[] = [
   {
     id: "Sandy_Pot",
     category: CardCategory.YumYumDesert,
@@ -229,6 +233,9 @@ export const Cards: Card[] = [
     base: 1,
     source: "Survive Bandit Bob",
   },
+];
+
+const EasyResourcesCards: Card[] = [
   {
     id: "Copper_Ore",
     category: CardCategory.EasyResources,
@@ -320,6 +327,9 @@ export const Cards: Card[] = [
     base: 5,
     source: "Catching Butterflies",
   },
+];
+
+const MediumResourcesCards: Card[] = [
   {
     id: "Platinum_Ore",
     category: CardCategory.MediumResources,
@@ -340,13 +350,6 @@ export const Cards: Card[] = [
     effect: Effects.CardChance,
     base: 6,
     source: "Mining Void",
-  },
-  {
-    id: "Lustre_Ore",
-    category: CardCategory.MediumResources,
-    effect: Effects.BaseLUK,
-    base: 4,
-    source: "Mining Lustre",
   },
   {
     id: "Cinder_Forge",
@@ -432,6 +435,96 @@ export const Cards: Card[] = [
     base: 5,
     source: "Trapping Scorpies",
   },
+];
+
+const HardResourcesCards: Card[] = [
+  {
+    id: "Lustre_Ore",
+    category: CardCategory.HardResources,
+    effect: Effects.BaseLUK,
+    base: 4,
+    source: "Mining Lustre",
+  },
+  {
+    id: "Rooted_Soul",
+    category: CardCategory.HardResources,
+    effect: Effects.WorshipPoints,
+    base: 6,
+    source: "Acorn Assault (Worship)",
+  },
+  {
+    id: "Frigid_Soul",
+    category: CardCategory.HardResources,
+    effect: Effects.WorshipCharge,
+    base: 2.5,
+    source: "Frosty Firefight (Worship)",
+  },
+  {
+    id: "Squiddy_Soul",
+    category: CardCategory.HardResources,
+    effect: Effects.WorshipChargeRate,
+    base: 2.5,
+    source: "Unobtainable",
+  },
+  {
+    id: "Mousey",
+    category: CardCategory.HardResources,
+    effect: Effects.TrappingShiny,
+    base: 2.5,
+    source: "Rats Nest (Trapping)",
+  },
+  {
+    id: "Owlio",
+    category: CardCategory.HardResources,
+    effect: Effects.MonsterExp,
+    base: 1.25,
+    source: "Hollowed Trunk (Trapping)",
+  },
+  {
+    id: "Pingy",
+    category: CardCategory.HardResources,
+    effect: Effects.SkillAfk,
+    base: 6,
+    source: "The Stache Split (Trapping)",
+  },
+  {
+    id: "Bunny",
+    category: CardCategory.HardResources,
+    effect: Effects.TrappingShiny,
+    base: 1,
+    source: "Thermonuclear Climb (Trapping)",
+  },
+  {
+    id: "Tundra_Logs",
+    category: CardCategory.HardResources,
+    effect: Effects.ChoppinAfk,
+    base: 2.5,
+    source: "Chopping Saharan Foal",
+  },
+  {
+    id: "Wispy_Lumber",
+    category: CardCategory.HardResources,
+    effect: Effects.ChoppinSpeed,
+    base: 6,
+    source: "Chopping Wispy Tree",
+  },
+  {
+    id: "Mosquisnow",
+    category: CardCategory.HardResources,
+    effect: Effects.CatchingEfficiency,
+    base: 7,
+    source: "Catching Mosquisnow",
+  },
+  {
+    id: "Flycicle",
+    category: CardCategory.HardResources,
+    effect: Effects.CatchingAfk,
+    base: 2.5,
+    source: "Catching Flycicle",
+  },
+];
+
+const FrostbiteTundraCards: Card[] = [
   {
     id: "Sheepie",
     category: CardCategory.FrostbiteTundra,
@@ -531,7 +624,7 @@ export const Cards: Card[] = [
     source: "1/20",
   },
   {
-    id: "BloodBone",
+    id: "Bloodbone",
     category: CardCategory.FrostbiteTundra,
     effect: Effects.TotalDamage,
     base: 3,
@@ -544,6 +637,9 @@ export const Cards: Card[] = [
     base: 3,
     source: "",
   },
+];
+
+const BossesCards: Card[] = [
   {
     id: "Baba_Yaga",
     category: CardCategory.Bosses,
@@ -621,6 +717,9 @@ export const Cards: Card[] = [
     base: 5,
     source: "",
   },
+];
+
+const EventsCards: Card[] = [
   {
     id: "Ghost",
     category: CardCategory.Events,
@@ -691,4 +790,15 @@ export const Cards: Card[] = [
     base: 1,
     source: "Egg Capsule",
   },
+];
+
+export const Cards: Card[] = [
+  ...BlunderHillCards,
+  ...YumYumDesertCards,
+  ...EasyResourcesCards,
+  ...MediumResourcesCards,
+  ...HardResourcesCards,
+  ...FrostbiteTundraCards,
+  ...BossesCards,
+  ...EventsCards,
 ];

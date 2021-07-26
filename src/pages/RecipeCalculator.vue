@@ -38,25 +38,46 @@
     <div class="col-auto text-light">
       <div id="version-group" class="p-2">
         <h3>Last Updated</h3>
-        <p>v1.20b</p>
-        <p>June 4, 2021</p>
+        <p>v1.22</p>
+        <p>July 7, 2021</p>
       </div>
     </div>
   </div>
   <!-- Display Materials -->
   <div v-if="recipe && quantity" class="text-light">
     <h4>Materials</h4>
-    <div
-      class="row"
-      v-for="(material, index) in materials.materials"
-      :key="`material-${index}`"
-    >
-      <div class="border-top border-bottom col-sm-2">
-        {{ material.quantity * parseInt(quantity) }}
+    <!-- Select Display Type -->
+    <select v-model="display" class="" id="recipe-selector">
+      <option value="">Select a View Type</option>
+      <option value="list">List View</option>
+      <option value="tree">Tree View</option>
+    </select>
+    <div v-if="display === 'list'">
+      <div
+        class="tree-menu border-bottom"
+        v-for="(qnt, material) in listMaterials(materials)"
+        :key="`material-${material}`"
+      >
+        <GameAsset
+          :height="72"
+          :image="Assets.MaterialImage(material.replace(/ /g, '_'))"
+          :title="material"
+        >
+          <template #tooltip>
+            <div v-html="material"></div>
+          </template>
+        </GameAsset>
+        {{ (Number(quantity) * qnt).toLocaleString() }} {{ material }}
       </div>
-      <div class="border-top border-bottom col-sm-10">
-        {{ material.name }}
-      </div>
+    </div>
+    <div v-else>
+      <recipe-tree
+        :label="materials.name"
+        :nodes="materials.materials"
+        :quantity="1"
+        :depth="0"
+        :toCraft="Number(quantity)"
+      />
     </div>
   </div>
 </template>
@@ -64,23 +85,48 @@
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
 import calculatorData from "~/data/recipeCalculator.json";
+import GameAsset from "~/components/GameAsset.vue";
+import RecipeTree from "~/components/RecipeTree.vue";
+import { Assets } from "~/composables/Utilities";
 
-type MaterialObject = {
-  name: string;
-  quantity: number;
-};
 
 type RecipeObject = {
   name: string;
-  materials: Array<MaterialObject>;
+  quantity: number;
+  materials?: Array<RecipeObject>;
 };
 
 export default defineComponent({
   name: "RecipeCalculator",
+  components: {
+    GameAsset,
+    RecipeTree
+  },
+  methods: {
+    listMaterials(tree:RecipeObject) {
+      // Setup result
+      let result: Record<string, number> = {};
+      function flatten(current:RecipeObject) {
+        if(current.materials) {
+          current.materials.forEach(mat => {
+            flatten(mat);
+          })
+        } else {
+          let name = current.name;
+          let quantity = current.quantity;
+          if(result.hasOwnProperty(name)) { result[name] += quantity }
+          else { result[name] = quantity }
+        }
+      }
+      flatten(tree);
+      return result;
+    }
+  },
   setup() {
     const data: Record<string, RecipeObject> = calculatorData;
     const recipe = ref("");
-    const quantity = ref("");
+    const quantity = ref(1);
+    const display = ref("list");
     const materials = computed(
       (): RecipeObject => {
         if (recipe.value === "") {
@@ -89,7 +135,7 @@ export default defineComponent({
         return data[recipe.value];
       }
     );
-    return { data, recipe, quantity, materials };
+    return { Assets, data, display, recipe, quantity, materials };
   },
 });
 </script>
@@ -100,4 +146,9 @@ export default defineComponent({
 #version-group
   border: 2px solid $primary
   border-radius: 0.25rem
+.recipe-quantity
+  text-align: right
+	
+.padded-start
+  white-space: pre
 </style>
