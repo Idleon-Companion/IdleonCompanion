@@ -40,7 +40,7 @@ createApp(App)
     component: "Tooltip",
     defaultProps: {
       placement: "bottom",
-      offset: [0, 30],
+      duration: 200,
     },
   })
   .use(Toast, toastOptions)
