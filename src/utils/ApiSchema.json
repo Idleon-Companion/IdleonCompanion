@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Idleon Companion Schema",
+  "properties": {
+    "alchemy": {
+      "type": "object",
+      "properties": {
+        "upgrades": {
+          "description": "Tracks the level of each alchemy bubble for each color cauldron.",
+          "type": "object",
+          "properties": {
+            "Orange": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "minItems": 15
+            },
+            "Green": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "minItems": 15
+            },
+            "Purple": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "minItems": 15
+            },
+            "Yellow": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "minItems": 15
+            }
+          },
+          "required": ["Orange", "Green", "Purple", "Yellow"]
+        },
+        "vials": {
+          "description": "Tracks the level of the vial (0 being not unlocked).",
+          "type": "object",
+          "patternProperties": {
+            "": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      },
+      "required": ["upgrades", "vials"]
+    },
+    "cards": {
+      "description": "Cards tracks the tier of each card (0: unobtained, 1: bronze, 2: silver, 3: gold).",
+      "type": "object",
+      "patternProperties": {
+        "": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        }
+      }
+    },
+    "chars": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "class": {
+            "description": "The class of the character.",
+            "enum": ["Beginner", "Warrior", "Mage", "Archer"]
+          },
+          "subclass": {
+            "description": "The subclass of the character, or null for no subclass.",
+            "enum": [
+              null,
+              "Barbarian",
+              "Squire",
+              "Bowman",
+              "Hunter",
+              "Shaman",
+              "Wizard",
+              "Journeyman"
+            ]
+          },
+          "name": {
+            "description": "The name of the character.",
+            "type": "string"
+          },
+          "level": {
+            "description": "The level of the character.",
+            "type": "integer",
+            "minimum": 1
+          },
+          "items": {
+            "description": "The items that the character owns, including bags, pouches, etc.",
+            "type": "object",
+            "patternProperties": {
+              "": {
+                "type": "boolean"
+              }
+            }
+          },
+          "skills": {
+            "description": "The skill levels of the character.",
+            "type": "object",
+            "patternProperties": {
+              "": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "constellations": {
+            "description": "The constellations that the character has completed.",
+            "type": "object",
+            "patternProperties": {
+              "": {
+                "type": "boolean"
+              }
+            }
+          },
+          "starSigns": {
+            "description": "The star signs that the character has equipped.",
+            "type": "object",
+            "patternProperties": {
+              "": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "required": [
+          "class",
+          "subclass",
+          "name",
+          "level",
+          "items",
+          "skills",
+          "constellations",
+          "starSigns"
+        ]
+      },
+      "maxItems": 9
+    },
+    "checklist": {
+      "description": "Items collected for the progress tracker, such as chests, inventory bags, or stamps.",
+      "type": "object",
+      "patternProperties": {
+        "": {
+          "type": "boolean"
+        }
+      }
+    },
+    "stamps": {
+      "description": "Levels for each stamp that the player has unlocked.",
+      "type": "object",
+      "patternProperties": {
+        "": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "starSigns": {
+      "description": "The star signs that have been unlocked by spending Star Chart Points.",
+      "type": "object",
+      "patternProperties": {
+        "": {
+          "type": "boolean"
+        }
+      }
+    },
+    "statues": {
+      "description": "Tracking information for statues, including level, progress, and golden status.",
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "progress": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "golden": {
+          "type": "boolean"
+        }
+      },
+      "required": ["level", "progress", "golden"]
+    },
+    "version": {
+      "description": "Only accepts the latest game version supported on Idleon Companion.",
+      "type": "string",
+      "pattern": "^1\\.22(.+)?"
+    }
+  },
+  "required": ["version"],
+  "additionalProperties": false
+}
