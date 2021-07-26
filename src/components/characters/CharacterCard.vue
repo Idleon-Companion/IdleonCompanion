@@ -1,0 +1,92 @@
+<template>
+  <q-card flat square>
+    <div class="px-2 py-4 flex bg-primary">
+      <ICAsset :image="Assets.CharImage(character)" />
+      <div class="flex flex-col ml-2">
+        <div class="flex items-center">
+          <div class="text-xl">{{ character.name || "No Name" }}</div>
+        </div>
+        <div class="flex items-center">
+          <div class="bg-purple-400 px-1 font-bold rounded-sm">
+            Lv. {{ character.level }}
+          </div>
+          <div class="flex items-center text-xl mx-1">
+            <q-icon :name="'img:' + Assets.IconImage(character.actualClass)" />
+          </div>
+          <div class="text-xs font-medium uppercase opacity-90">
+            {{ character.actualClass }}
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center items-end ml-auto">
+        <div class="flex items-center">
+          <q-icon name="mdi-sack" />
+          <div class="ml-1">
+            {{ character.bagSlots }}
+          </div>
+        </div>
+        <div class="flex">
+          <ICAsset
+            v-for="(skill, i) in topSkills"
+            :key="i"
+            :title="skill"
+            :image="Assets.IconImage(skill)"
+            size="xs"
+          />
+        </div>
+      </div>
+    </div>
+  </q-card>
+</template>
+
+<script lang="ts">
+import { computed, defineComponent, PropType } from "vue";
+import { Character, Skills, useCharacters } from "~/composables/Characters";
+import { Assets } from "~/composables/Utilities";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
+
+export default defineComponent({
+  name: "CharacterCard",
+  components: {
+    ICAsset,
+  },
+  props: {
+    character: {
+      required: true,
+      type: Object as PropType<Character>,
+    },
+    detailed: {
+      required: false,
+      default: false,
+      type: Boolean,
+    },
+  },
+  setup(props) {
+    const { characters } = useCharacters();
+
+    const topSkills = computed(() => {
+      let top = [];
+      for (const skill of Skills) {
+        let best = props.character.skills[skill] > 0;
+        for (const c of characters.value) {
+          if (c.skills[skill] > props.character.skills[skill]) {
+            best = false;
+            break;
+          }
+        }
+        if (best) {
+          top.push(skill);
+        }
+      }
+      return top.slice(0, 3);
+    });
+
+    return {
+      Assets,
+      topSkills,
+    };
+  },
+});
+</script>
+
+<style scoped lang="sass"></style>
