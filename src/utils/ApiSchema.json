@@ -182,20 +182,25 @@
     "statues": {
       "description": "Tracking information for statues, including level, progress, and golden status.",
       "type": "object",
-      "properties": {
-        "level": {
-          "type": "integer",
-          "minimum": 0
-        },
-        "progress": {
-          "type": "integer",
-          "minimum": 0
-        },
-        "golden": {
-          "type": "boolean"
+      "patternProperties": {
+        "": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "progress": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "golden": {
+              "type": "boolean"
+            }
+          },
+          "required": ["level", "progress", "golden"]
         }
-      },
-      "required": ["level", "progress", "golden"]
+      }
     },
     "version": {
       "description": "Only accepts the latest game version supported on Idleon Companion.",
