@@ -1,9 +1,8 @@
-import checklistData from "./data/checklist.json";
 import { version } from "../package.json";
 import { createGlobalState, useStorage } from "@vueuse/core";
 import { ref } from "vue";
 import { useToast } from "vue-toastification";
-import { AlchemyData } from "~/composables/Alchemy";
+import { AlchemyData, AlchemyColor } from "~/composables/Alchemy";
 import { Task } from "~/composables/Progress";
 import { Character, useCharacters } from "~/composables/Characters";
 
@@ -17,12 +16,19 @@ export const useState = createGlobalState(() =>
         Purple: [],
         Yellow: [],
       },
+      goals: {
+        Orange: [],
+        Green: [],
+        Purple: [],
+        Yellow: [],
+      },
       vials: {},
     } as AlchemyData,
     cards: {} as Record<string, number>,
     chars: [] as Character[],
     checklist: {} as Record<string, boolean>,
     starSigns: {} as Record<string, boolean>,
+    statues: {} as Record<StatueName, number>,
     tasks: {
       tasks: Array<Task>(),
       dailyReset: "12:00",
@@ -42,17 +48,6 @@ export function versionControl() {
     if (savedVersion < "0.1.1") {
       // Task reworked to allow custom tasks
       localStorage.removeItem("tasks");
-    }
-    if (savedVersion < "0.1.2") {
-      // Add cycle items (Capacity Pouches)
-      let chars = localStorage.getItem("chars");
-      if (chars !== null) {
-        for (const c of JSON.parse(chars)) {
-          for (const item of checklistData["Capacity Pouches"]["items"]) {
-            delete c.items[item.name];
-          }
-        }
-      }
     }
     if (savedVersion < "0.2.0") {
       for (const k of [
@@ -90,12 +85,43 @@ export function versionControl() {
   }
   // Add W3 skills and statues
   if (state.value.version < "0.2.3") {
-    let newSkills = ["Trapping", "Construction", "Worship"];
-    let newStatues = ["Box", "EhExPee", "Seesaw", "Twosoul"];
+    let newSkills = ["Trapping", "Construction", "Worship"] as const;
 
     for (const key in state.value.chars) {
       for (const s of newSkills) state.value.chars[key].skills[s] = 0;
-      for (const t of newStatues) state.value.chars[key].statues[t] = 0;
+    }
+  }
+  // Add new bubble slots and a goals field for each bubble
+  if (state.value.version < "0.2.4") {
+    let colors: AlchemyColor[] = ["Orange", "Green", "Purple", "Yellow"];
+    for (const k of colors) {
+      let amount = 15;
+      if (!state.value.alchemy.goals) {
+        state.value.alchemy.goals = {
+          Orange: [],
+          Green: [],
+          Purple: [],
+          Yellow: [],
+        };
+      }
+      for (let i = 0; i < amount; i++) {
+        state.value.alchemy.upgrades[k][i] =
+          state.value.alchemy.upgrades[k][i] ?? 0;
+        state.value.alchemy.goals[k][i] = state.value.alchemy.goals[k][i] ?? 0;
+      }
+    }
+  }
+  // Move statues from character to global state
+  if (state.value.version < "0.3.0") {
+    if (!state.value.statues) {
+      state.value.statues = {} as Record<StatueName, number>;
+    }
+    for (const statue of Object.keys(Statues)) {
+      state.value.statues[statue as StatueName] = 0;
+    }
+    // Remove statues from character state
+    for (const index in state.value.chars) {
+      delete (state.value.chars[index] as Character & { statues: any }).statues;
     }
   }
   state.value.version = version;
@@ -105,6 +131,8 @@ export function versionControl() {
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
+import { GlobalChecklist } from "./composables/Checklist";
+import { StatueName, Statues } from "./composables/Statues";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDP9fu1062i82w64K9LgKHFFMDgPtUj6k4",
@@ -121,11 +149,16 @@ const firebaseConfig = {
 type UserState = firebase.User | null;
 export const firebaseApp = firebase.initializeApp(firebaseConfig);
 const auth = firebaseApp.auth();
+const db = firebaseApp.database();
 const user = ref(null as UserState);
+
+export enum DbRef {
+  Builds = "/builds",
+  Users = "/users",
+}
 
 export const useAuth = () => {
   user.value = auth.currentUser;
-  const db = firebaseApp.database();
 
   const toast = useToast();
 
@@ -138,7 +171,7 @@ export const useAuth = () => {
       return null;
     }
     return db
-      .ref("/users/" + user.value.uid)
+      .ref(`${DbRef.Users}/${user.value.uid}`)
       .once("value")
       .then((snapshot) => {
         if (snapshot.exists()) {
@@ -161,8 +194,17 @@ export const useAuth = () => {
       return null;
     }
     toast.success("Data saved to the cloud.");
-    return db.ref("/users/" + user.value.uid).set(JSON.stringify(state.value));
+    return db
+      .ref(`${DbRef.Users}/${user.value.uid}`)
+      .set(JSON.stringify(state.value));
   };
 
   return { auth, loadCloud, saveCloud, user };
+};
+
+export const useDB = () => {
+  return {
+    db,
+    DbRef,
+  };
 };

@@ -103,5 +103,5 @@ export const Statues: Record<StatueName, Statue> = {
   Twosoul: {
     base: 0.3,
     effect: Effects.WorshipBase,
-  }
+  },
 };

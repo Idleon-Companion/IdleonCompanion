@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <!-- <div class="row">
     <div>
       <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
         Use this page to keep track of your to-do list. You can use the default
@@ -121,7 +121,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script lang="ts">
@@ -143,8 +143,6 @@ const DAY = dayjs.duration({ hours: 24 }).asMilliseconds();
 export default defineComponent({
   name: "Tasks",
   setup() {
-    onMounted(() => updateTasks());
-
     const state = useState();
     const tasks = computed({
       get: () => state.value.tasks.tasks,
@@ -219,11 +217,6 @@ export default defineComponent({
     });
 
     const progressBar = ref();
-    const updateTasks = () => {
-      progressBar.value.style.width = `${
-        (tasksCompleted.value / tasks.value.length) * 100
-      }%`;
-    };
 
     const handleTaskCheck = (task: Task) => {
       if (isTaskComplete(task)) {
@@ -231,7 +224,6 @@ export default defineComponent({
       } else {
         task.lastCompleted = dayjs().valueOf();
       }
-      updateTasks();
     };
 
     // Add/remove tasks
@@ -255,12 +247,10 @@ export default defineComponent({
       tasks.value.push(t);
       newTask.text = "";
       newTask.categories = "";
-      updateTasks();
     };
 
     const removeTask = (i: number) => {
       tasks.value.splice(i, 1);
-      updateTasks();
     };
 
     return {
@@ -274,7 +264,6 @@ export default defineComponent({
       removeTask,
       tasks,
       timeUntilReset,
-      updateTasks,
     };
   },
   methods: {

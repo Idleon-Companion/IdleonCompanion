@@ -1,9 +1,18 @@
+import { Growth } from "./Utilities";
+
 export type AlchemyData = {
   vials: Record<string, number>;
-  upgrades: Record<Color, number[]>;
+  upgrades: Record<AlchemyColor, number[]>;
+  goals: Record<AlchemyColor, number[]>;
 };
 
-export type Color = "Orange" | "Green" | "Purple" | "Yellow";
+export type AlchemyColor = "Orange" | "Green" | "Purple" | "Yellow";
+export const AlchemyConst = {
+  BargainBubble: 14,
+  IronBarVial: "Barley Brew",
+  UndevCostBubble: 6,
+  UndevCostColor: <AlchemyColor>"Yellow",
+};
 
 export type Vial = {
   name: string;
@@ -11,6 +20,20 @@ export type Vial = {
   material: string;
   base: number;
   effect: string;
+};
+
+export type Bubble = {
+  Name: string;
+  x1: number;
+  x2: number;
+  Func: string;
+  Materials: Material[];
+};
+
+export type Material = {
+  Name: string;
+  Amount: number;
+  isLiquid: boolean;
 };
 
 export const Vials: Vial[] = [
@@ -181,126 +204,126 @@ export const Vials: Vial[] = [
     material: "Crabbo",
     base: 4,
     effect: "Starting Points in Tower Defence",
-  },  
+  },
   {
     name: "Void Vial",
     roll: 80,
     material: "Void Ore",
     base: 1,
     effect: "% Mining Efficiency",
-  },  
+  },
   {
     name: "Red Malt",
     roll: 85,
     material: "Redox Salts",
     base: 1,
     effect: "% Refinery Cycle Speed",
-  },  
+  },
   {
     name: "Ew Gross Gross",
     roll: 86,
     material: "Mosquisnow",
     base: 1,
     effect: "% Catching Efficiency",
-  },  
+  },
   {
     name: "The Spanish Sahara",
     roll: 87,
     material: "Tundra Logs",
     base: 1,
     effect: "% Chopping Efficiency",
-  },  
+  },
   {
     name: "Poison Tincture",
     roll: 95,
     material: "Poison Froge",
     base: 1,
     effect: "% Eagle Trap-O-Vision more critters",
-  },  
+  },
   {
     name: "Etruscan Lager",
     roll: 88,
     material: "Mamooth Tusk",
     base: 1,
     effect: "% Fishing Efficiency",
-  },  
+  },
   {
     name: "Chonker Chug",
     roll: 90,
     material: "Dune Soul",
     base: 1,
     effect: "% Talent Library Checkout Speed",
-  },  
+  },
   {
     name: "Bubonic Burp",
     roll: 91,
     material: "Mousey",
     base: 1,
     effect: " Cog Inventory Spaces",
-  },  
+  },
   {
     name: "Visible Ink",
     roll: 93,
     material: "Pen",
     base: 1,
     effect: "% Construction Exp Gain",
-  },  
+  },
   {
     name: "Orange Malt",
     roll: 95,
     material: "Explosive Salts",
     base: 1,
     effect: "% Higher Shiny Critter Chance",
-  },  
+  },
   {
     name: "Snow Slurry",
     roll: 96,
     material: "Snow Ball",
     base: 0.5,
     effect: "% Printer Sample Size",
-  },  
+  },
   {
     name: "Slowergy Drink",
     roll: 97,
     material: "Frigid Soul",
     base: 0,
     effect: "% Base Multikill per Mk tier",
-  },  
+  },
   {
     name: "Sippy Cup",
     roll: 97,
     material: "Sippy Straw",
     base: 1,
     effect: "% Cogs Production Speed",
-  },  
+  },
   {
     name: "Bunny Brew",
     roll: 98,
     material: "Bunny",
     base: 1,
     effect: "Talent Point for Tab 3",
-  },  
+  },
   {
     name: "40 40 Purity",
     roll: 98,
     material: "Contact Lense",
     base: 3,
     effect: "Liquid Mercury Droplet max capacity",
-  },  
+  },
   {
     name: "Spook Pint",
     roll: 99,
     material: "Cryo Soul",
     base: 0,
     effect: "% base Giant Monsters Spawn",
-  },  
+  },
   {
     name: "Goosey Glug",
     roll: 99,
     material: "Honker",
     base: 0,
     effect: "None",
-  },  
+  },
 ];
 export const VialCost = [
   0,
@@ -317,3 +340,60 @@ export const VialCost = [
   100e6,
   1e9,
 ];
+
+export class AlchemyUtil {
+  static discount(
+    cauldCostReduxLvl: number,
+    bubbleCostBubbleLvl: number,
+    bubbleCostVialLvl: number,
+    bubbleTwelveLvl: number,
+    tagLvl: number
+  ): any {
+    const precision = 10000;
+
+    const costReduxBoost =
+      Math.round(10 * Growth.Decay(cauldCostReduxLvl, 90, 100)) / 10;
+    const oa = Math.max(0.1, 1 - costReduxBoost / 100); // TODO: This one is off, but the total calculation is still correct
+    const newBubble = Math.max(
+      0.05,
+      1 - Growth.Decay(bubbleTwelveLvl, 40, 12) / 100
+    ); // Hardcoded values, better to retrieve from bubbles data maybe.
+    const undevCost = Growth.Decay(bubbleCostBubbleLvl, 40, 70);
+    const vial = Growth.Add(bubbleCostVialLvl, 1, 0);
+    const undev_vial = Math.max(0.05, 1 - (undevCost + vial) / 100);
+    const bargain_tag = Math.max(Math.pow(0.75, tagLvl), 0.1);
+    var discount = oa * newBubble * undev_vial * bargain_tag;
+    var result = [oa, bargain_tag, newBubble, undev_vial, discount];
+    result = result.map((a) => {
+      return (precision - Math.round(a * precision)) / 100;
+    });
+    if (process.env.NODE_ENV === "development") {
+      console.log(`Alch.discount = [
+        Cauldron:     ${result[0].toFixed(2).padStart(5, " ")} 
+        Bargain:      ${result[1].toFixed(2).padStart(5, " ")} 
+        Bubble XII:   ${result[2].toFixed(2).padStart(5, " ")} 
+        Undev + vial: ${result[3].toFixed(2).padStart(5, " ")} 
+        Total:        ${result[4].toFixed(2).padStart(5, " ")}
+      ]`);
+    }
+    return result;
+  }
+
+  static effect = (bubble: Bubble, level: number) => {
+    return level === 0 ? 0 : Growth[bubble.Func](level, bubble.x1, bubble.x2);
+  };
+
+  static effectChange = (
+    bubble: Bubble,
+    levelNow: number,
+    levelGoal: number
+  ) => {
+    let effectNow = Alch.effect(bubble, levelNow) ?? 0;
+    let effectGoal = Alch.effect(bubble, levelGoal);
+    effectGoal = effectGoal < effectNow ? effectNow : effectGoal;
+    let result = `${effectNow.toFixed(2).padStart(6, " ")} => ${effectGoal
+      .toFixed(2)
+      .padStart(6, " ")}`;
+    return result;
+  };
+}

@@ -59,8 +59,8 @@
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
 import calculatorData from "~/data/recipeCalculator.json";
-import GameAsset from "~/components/GameAsset.vue";
 import RecipeTree from "~/components/RecipeTree.vue";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import { Assets } from "~/composables/Utilities";
 
 type MaterialObject = {
@@ -76,21 +76,19 @@ type RecipeObject = {
 export default defineComponent({
   name: "RecipeCalculator",
   components: {
-    GameAsset,
-    RecipeTree
+    ICAsset,
+    RecipeTree,
   },
   setup() {
     const data: Record<string, RecipeObject> = calculatorData;
     const recipe = ref("");
     const quantity = ref("");
-    const materials = computed(
-      (): RecipeObject => {
-        if (recipe.value === "") {
-          return {} as RecipeObject;
-        }
-        return data[recipe.value];
+    const materials = computed((): RecipeObject => {
+      if (recipe.value === "") {
+        return {} as RecipeObject;
       }
-    );
+      return data[recipe.value];
+    });
     return { Assets, data, recipe, quantity, materials };
   },
 });
@@ -104,7 +102,7 @@ export default defineComponent({
   border-radius: 0.25rem
 .recipe-quantity
   text-align: right
-	
+
 .padded-start
   white-space: pre
 </style>

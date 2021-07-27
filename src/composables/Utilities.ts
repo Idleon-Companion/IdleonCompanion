@@ -1,3 +1,6 @@
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
+import { useQuasar } from "quasar";
+import { computed } from "vue";
 import { Character } from "./Characters";
 
 export type GrowthFunc = (a: number, b: number, c: number) => number;
@@ -30,11 +33,11 @@ export const Growth: Record<string, GrowthFunc> = {
 
 export class Assets {
   static CardImage(c: string): string {
-    return `assets/cards/${c}_Card.png`;
+    return `/assets/cards/${c}_Card.png`;
   }
 
   static CardBorderImage(tier: number): string {
-    return `assets/cards/Tier${tier}_Border.png`;
+    return `/assets/cards/Tier${tier}_Border.png`;
   }
 
   static CharImage(char: Character): string {
@@ -46,32 +49,32 @@ export class Assets {
   }
 
   static ClassImage(c: string): string {
-    return `assets/classes/${c}.png`;
+    return `/assets/classes/${c}.png`;
   }
 
   static FromDir(item: string, dir: string): string {
     let cleaned = item.replace(/ /g, "_");
-    return `assets/${dir}/${cleaned}.png`;
+    return `/assets/${dir}/${cleaned}.png`;
   }
 
   static IconImage(icon: string): string {
-    return `assets/icons/${icon}_Icon.png`;
+    return `/assets/icons/${icon}_Icon.png`;
   }
 
   static MaterialImage(item: string): string {
-    return `assets/materials/${item}.png`;
+    return `/assets/materials/${item}.png`;
   }
 
   static MiscImage(item: string): string {
-    return `assets/misc/${item}.png`;
+    return `/assets/misc/${item}.png`;
   }
 
   static StampImage(item: string): string {
-    return `assets/stamps/${item}.png`;
+    return `/assets/stamps/${item}.png`;
   }
 
   static StatueImage(item: string): string {
-    return `assets/statues/${item}_Statue.png`;
+    return `/assets/statues/${item.replace(/ /g, "_")}_Statue.png`;
   }
 
   static TalentImage(role: string, tab: number, slot: number): string {
@@ -79,31 +82,21 @@ export class Assets {
     if (role === "") {
       image = "empty";
     }
-    return `assets/talents/${image}.png`;
+    return `/assets/talents/${image}.png`;
   }
 }
 
 export type Item = {
   name: string;
   bagSlots?: number;
-  cycle?: string;
+  source?: string;
 };
 
 export type ItemGroup = {
-  global: boolean;
   assetDir: string;
   items: Item[];
+  cycle: boolean;
 };
-
-export class Text {
-  static Item(item: Item): string {
-    let text = item.name;
-    if (item.bagSlots !== undefined) {
-      text += `<br>+${item.bagSlots} Inventory Slots`;
-    }
-    return text;
-  }
-}
 
 enum BaseEffects {
   BaseAllStats = "All Stats",
@@ -220,3 +213,28 @@ export const Effects = {
 
 type ValueOf<T> = T[keyof T];
 export type EffectData = ValueOf<typeof Effects>;
+
+export const GameVersions = <const>["1.22", "1.21", "1.20"];
+export type GameVersion = typeof GameVersions[number];
+export const LatestGameVersion: GameVersion = GameVersions[0];
+
+// Layout Utilities
+export function useLayout() {
+  const breakpoints = useBreakpoints(breakpointsTailwind);
+
+  const $q = useQuasar();
+  const isDarkMode = computed(() => $q.dark.isActive);
+
+  const toggleDarkMode = () => {
+    $q.dark.set(!isDarkMode.value);
+    const bgPrimary = isDarkMode.value ? "#3a3f44" : "#ffffff";
+    document.documentElement.style.setProperty("--bg-primary", bgPrimary);
+  };
+  const isMobile = computed(() => breakpoints.smaller("md")).value;
+
+  return {
+    isDarkMode,
+    isMobile,
+    toggleDarkMode,
+  };
+}

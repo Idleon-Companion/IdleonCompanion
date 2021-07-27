@@ -7,244 +7,209 @@
       </p>
     </div>
   </div>
-  <div class="row px-3 my-3">
-    <div class="col-md input-group build-selector p-0">
-      <span class="input-group-text">Class</span>
-      <select v-model="buildClass" class="bg-primary" id="buildClass">
-        <option value="all" selected>All</option>
-        <option v-for="(c, v) in classes" :key="c" :value="c">{{ v }}</option>
-      </select>
+  <div class="flex justify-between my-3 w-full">
+    <div class="flex w-full">
+      <div class="input-group">
+        <span class="input-group-text">Class</span>
+        <select v-model="buildClass" class="bg-primary" id="buildClass">
+          <option v-for="(c, v) in classes" :key="c" :value="c">
+            {{ v }}
+          </option>
+        </select>
+      </div>
+      <div class="input-group">
+        <span class="input-group-text">Subclass</span>
+        <select v-model="buildSubclass" class="bg-primary" id="buildClass">
+          <option value=""></option>
+          <option v-for="(c, v) in subclasses" :key="c" :value="c">
+            {{ v }}
+          </option>
+        </select>
+      </div>
     </div>
-    <div class="col-md input-group build-selector p-0">
+    <div class="input-group">
       <span class="input-group-text bg-dark text-light">Build</span>
-      <select v-model="build" class="bg-primary" id="buildSelector">
-        <option value="" selected>Select Your Build</option>
+      <select
+        v-model="showcaseBuildIndex"
+        @change="
+          loadBuildFromShowcase(showcaseBuildIndex);
+          editingMode = false;
+        "
+        class="bg-primary w-2/3"
+        id="buildSelector"
+      >
         <option
-          v-for="(build, buildID) in filteredBuilds"
-          :key="buildID"
-          :value="buildID"
+          v-for="(build, i) in filteredBuilds"
+          :key="build.title"
+          :value="i"
         >
           {{ build.title }}
         </option>
       </select>
     </div>
   </div>
-  <!-- TALENTS -->
-  <div v-if="activeBuild" class="row justify-content-center" id="buildContent">
-    <div class="col-xl-4" style="max-width: 400px">
-      <div class="card border-primary mb-2">
-        <div class="card-header">Tab 1</div>
-        <div class="card-body talent-container p-3" id="skill_tab_one">
-          <div
-            v-for="i in 10"
-            :key="i"
-            :data-enabled="getTalent('tab_one', i) != '0'"
-          >
-            <GameAsset
-              :image="Assets.TalentImage('all', 1, i)"
-              :thumbnail="true"
-            />
-            <div class="border rounded-bottom skill mb-1">
-              {{ getTalent("tab_one", i) }}
-            </div>
-          </div>
-          <div
-            v-for="i in 5"
-            :key="i"
-            :data-enabled="getTalent('tab_one', i + 10) != '0'"
-          >
-            <img
-              :src="Assets.TalentImage(activeBuild.class, 1, i)"
-              class="img-fluid img-thumbnail"
-            />
-            <div class="border rounded-bottom skill mb-1">
-              {{ getTalent("tab_one", i + 10) }}
-            </div>
-          </div>
-        </div>
-        <div class="card-body border border-secondary rounded-bottom">
-          <div class="card-text">
-            <p v-for="(line, n) in commentToLines(activeBuild.comment_one)" :key='n'>
-              {{ line }}
-            </p>
-          </div>
-        </div>
-      </div>
+
+  <div class="flex w-full my-2">
+    <button
+      class="bg-info px-3 py-2 rounded my-auto min-w-1/6"
+      @click="
+        createNewBuild(buildClass, buildSubclass);
+        editingMode = true;
+      "
+    >
+      Create New Build
+    </button>
+    <input
+      v-if="currentBuild && editingMode"
+      v-model="currentBuild.title"
+      placeholder="Build Name"
+      class="mx-3 w-full"
+    />
+    <div v-if="currentBuild" class="input-group">
+      <div class="input-group-text">Recommended Level</div>
+      <input
+        v-if="currentBuild"
+        :disabled="!editingMode"
+        v-model="currentBuild.level"
+        class="bg-primary"
+        placeholder="10"
+      />
     </div>
-    <div v-if="activeBuild.class" class="col-xl-4" style="max-width: 400px">
-      <div class="card border-primary mb-2">
-        <div class="card-header">Tab 2</div>
-        <div class="card-body talent-container p-3" id="skill_tab_two">
-          <div
-            v-for="i in 15"
-            :key="i"
-            :data-enabled="getTalent('tab_two', i) != '0'"
-          >
-            <img
-              :src="Assets.TalentImage(activeBuild.class, 2, i)"
-              class="img-fluid img-thumbnail"
-            />
-            <div class="border rounded-bottom skill mb-1">
-              {{ getTalent("tab_two", i) }}
-            </div>
-          </div>
-        </div>
-        <div class="card-body border border-secondary rounded-bottom">
-          <div class="card-text">
-            <p v-for="(line, n) in commentToLines(activeBuild.comment_two)" :key='n'>
-              {{ line }}
-            </p>
-          </div>
-        </div>
-      </div>
+    <div v-if="currentBuild" class="input-group">
+      <div class="input-group-text">Game Version</div>
+      <select v-model="currentBuild.version" class="bg-primary">
+        <option v-for="(version, i) in versions" :key="i" :value="version">
+          {{ version }}
+        </option>
+      </select>
     </div>
-    <div v-if="activeBuild.subclass" class="col-xl-4" style="max-width: 400px">
-      <div class="card border-primary mb-2">
-        <div class="card-header">Tab 3</div>
-        <div class="card-body talent-container p-3" id="skill_tab_three">
-          <div
-            v-for="i in 15"
-            :key="i"
-            :data-enabled="getTalent('tab_three', i) != '0'"
-          >
-            <img
-              :src="Assets.TalentImage(activeBuild.subclass, 3, i)"
-              class="img-fuid img-thumbnail"
-            />
-            <div class="border rounded-bottom skill mb-1">
-              {{ getTalent("tab_three", i) }}
-            </div>
-          </div>
-        </div>
-        <div class="card-body border border-secondary rounded-bottom">
-          <div class="card-text">
-            <p v-for="(line, n) in commentToLines(activeBuild.comment_three)" :key='n'>
-              {{ line }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <button
+      v-if="currentBuild && editingMode && user !== null"
+      class="bg-success ml-auto min-w-1/12"
+      @click="uploadBuild"
+    >
+      Post Build
+    </button>
   </div>
-  <!-- NOTES -->
-  <div v-if="activeBuild" class="row">
-    <div class="col-xl-12 mt-4">
-      <div class="card border-light">
-        <div class="card-body">
-          <p class="card-text" id="notes">{{ activeBuild.notes }}</p>
-        </div>
-      </div>
+
+  <BuildSkills :editingMode="editingMode" />
+  <div
+    v-if="currentBuild"
+    class="flex items-center bg-primary border border-secondary rounded mt-4"
+  >
+    <textarea
+      v-model="currentBuild.notes"
+      :disabled="!editingMode"
+      placeholder="Notes about your perfect build."
+      class="text-light w-full resize border-0"
+    ></textarea>
+  </div>
+  <div
+    v-if="currentBuild && currentBuildMeta.id"
+    class="flex items-center text-light bg-primary p-2 rounded"
+  >
+    <div>Likes: {{ currentBuildMeta.likes }}</div>
+    <div class="flex items-center ml-2" @click="copyBuildLink">
+      <div class="italic mr-1">Share Build</div>
+      <div class="iconify" data-icon="mdi:link"></div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from "vue";
-import buildData from "~/data/builds.json";
+import { computed, defineComponent, onBeforeMount, ref } from "vue";
+import { useToast } from "vue-toastification";
 
-import GameAsset from "~/components/GameAsset.vue";
-import { Assets } from "~/composables/Utilities";
-
-type Build = {
-  title: string;
-  class: string;
-  subclass: string;
-  comment_one: string;
-  comment_two: string;
-  comment_three: string;
-  notes: string;
-  tab_one?: Record<string, string>;
-  tab_two?: Record<string, string>;
-  tab_three?: Record<string, string>;
-};
+import BuildSkills from "~/components/BuildSkills.vue";
+import { useBuilds, Build } from "~/composables/Builds";
+import { Class, Subclass, useCharacters } from "~/composables/Characters";
+import { GameVersions } from "~/composables/Utilities";
+import { useAuth } from "~/State";
 
 export default defineComponent({
   name: "Builds",
   components: {
-    GameAsset,
+    BuildSkills,
   },
   setup() {
-    const builds: Record<string, Build> = buildData;
-    const build = ref("");
-    const activeBuild = computed(() => build.value === '' ? null : builds[build.value]);
+    const { user } = useAuth();
+    const {
+      builds,
+      createNewBuild,
+      currentBuild,
+      currentBuildMeta,
+      loadBuildFromShowcase,
+      uploadBuild,
+    } = useBuilds();
+    const { curCharacter } = useCharacters();
+    const toast = useToast();
+    // Refs
+    const buildClass = ref<Class>(Class.All);
+    const buildSubclass = ref<Subclass | null>(null);
+    const editingMode = ref(false);
+    const showcaseBuildIndex = ref(-1);
 
-    const classes: Record<string, string> = {
-      Beginner: "",
-      Journeyman: "jma",
-      Warrior: "war",
-      Archer: "arc",
-      Mage: "mag",
+    // Hooks
+    onBeforeMount(() => {
+      if (curCharacter.value) {
+        buildClass.value = curCharacter.value.class;
+        buildSubclass.value = curCharacter.value.subclass;
+      }
+    });
+
+    const copyBuildLink = () => {
+      navigator.clipboard.writeText(currentBuildLink.value).then((_) => {
+        toast.success("Build link copied to clipboard!");
+      });
     };
 
-    const buildClass = ref("all");
+    const currentBuildLink = computed(() => {
+      return process.env.NODE_ENV === "production"
+        ? `https://idleoncompanion.com/build/${currentBuildMeta.value.id}`
+        : `http://localhost:3000/build/${currentBuildMeta.value.id}`;
+    });
+
     const filteredBuilds = computed(() => {
-      let filtered: Record<string, Build> = {};
-      if (buildClass.value === 'all') {
-        return builds
+      let filtered: Build[] = [];
+      if (buildClass.value === Class.All) {
+        return builds;
       }
-      for (const [name, build] of Object.entries(builds)) {
-        if (buildClass.value === build.class) {
-          filtered[name] = build
+      for (const build of builds) {
+        if (build.class === buildClass.value) {
+          if (buildSubclass.value && buildSubclass.value !== build.subclass) {
+            continue;
+          }
+          filtered.push(build);
         }
       }
-      return filtered
+      return filtered;
     });
 
     return {
-      activeBuild,
-      Assets,
-      build,
       buildClass,
-      classes,
+      buildSubclass,
+      copyBuildLink,
+      createNewBuild,
+      currentBuild,
+      currentBuildLink,
+      currentBuildMeta,
+      classes: Class,
+      editingMode,
       filteredBuilds,
-      commentToLines: (comment: string) => comment.split('\n')
+      loadBuildFromShowcase,
+      showcaseBuildIndex,
+      subclasses: Subclass,
+      uploadBuild,
+      user,
+      versions: GameVersions,
     };
-  },
-  methods: {
-    getTalent(tab: "tab_one" | "tab_two" | "tab_three", slot: number): string {
-      if (this.activeBuild !== null) {
-        return this.activeBuild[tab]?.[slot] || "0";
-      }
-      return "0";
-    },
   },
 });
 </script>
 
 <style lang="sass" scoped>
 @import '../styles/base.sass'
-
-.card
-  background: $primary
-  color: #aaaaaa
-
-.card-header
-  background: $secondary
-  color: darken(white, 10%)
-  font-weight: bold
-
-.build-selector
-  display: flex
-  height: 3rem
-  align-self: flex-end
-  select
-    width: 80%
-
-.talent-container
-  display: grid
-  grid-template-columns: repeat(5, 1fr)
-  grid-template-rows: repeat(3, 1fr)
-  gap: 3px 3px
-  grid-template-areas: "....." "....." "....."
-
-  img
-    background: none
-    border-bottom: 0
-    border-bottom-left-radius: 0
-    border-bottom-right-radius: 0
-
-.skill
-  background: $secondary
-  color: $light
-  text-align: center
+.input-group
+  .input-group-text, select
+    border: none
 </style>
