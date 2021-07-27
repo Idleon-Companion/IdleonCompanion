@@ -71,14 +71,15 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from "vue";
-import { GlobalChecklist, useChecklist } from "~/composables/Checklist";
-import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
-import CardTracker from "~/components/tracker/CardTracker.vue";
-import { Assets, Item, ItemGroup } from "~/composables/Utilities";
-import { useState } from "~/State";
+import { computed, defineComponent } from "vue";
 
-const WikiLinks = new Map([
+import { Assets, Item, ItemGroup } from "~/composables/Utilities";
+import { GlobalChecklist, useChecklist } from "~/composables/Checklist";
+import { useState } from "~/State";
+import CardTracker from "~/components/tracker/CardTracker.vue";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
+
+const wikiLinks = new Map([
   ["Drop Tables", "https://idleon.info/wiki/Category:Droptables"],
 ]);
 
@@ -121,7 +122,7 @@ export default defineComponent({
       ) => {
         handleChecklistItemClick(item, group, hasItem, setItem, direction);
       },
-      wikiLinks: WikiLinks,
+      wikiLinks,
     };
   },
 });

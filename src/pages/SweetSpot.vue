@@ -21,13 +21,13 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-const WikiLinks = new Map([["Example", "https://idleoncompanion.com"]]);
+const wikiLinks = new Map([["Example", "https://idleoncompanion.com"]]);
 
 export default defineComponent({
   name: "SweetSpot",
   setup() {
     return {
-      wikiLinks: WikiLinks,
+      wikiLinks,
     };
   },
 });

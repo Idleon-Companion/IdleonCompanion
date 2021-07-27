@@ -102,7 +102,7 @@ const picnicRequirements = [
   },
 ];
 
-const WikiLinks = new Map([
+const wikiLinks = new Map([
   ["Picnic Stowaway", "https://idleon.miraheze.org/wiki/Picnic_Stowaway"],
 ]);
 
@@ -117,7 +117,7 @@ export default defineComponent({
       Assets,
       picnicRequirements,
       repeat,
-      wikiLinks: WikiLinks,
+      wikiLinks,
     };
   },
 });

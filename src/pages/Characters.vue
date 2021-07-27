@@ -37,7 +37,7 @@ import CharacterProgressTracker from "~/components/characters/CharacterProgressT
 import CloudData from "~/components/CloudData.vue";
 import Constellations from "~/components/characters/Constellations.vue";
 
-const WikiLinks = new Map([
+const wikiLinks = new Map([
   ["Classes", "https://idleon.miraheze.org/wiki/Classes"],
   ["Skills", "https://idleon.miraheze.org/wiki/Skills"],
   ["Items", "https://idleon.miraheze.org/wiki/Items"],
@@ -68,7 +68,7 @@ export default defineComponent({
       currentCharacter,
       onCreateNewCharacter,
       user,
-      wikiLinks: WikiLinks,
+      wikiLinks,
     };
   },
 });

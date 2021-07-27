@@ -102,7 +102,7 @@ import { useState } from "~/State";
 import CoinDisplay from "~/components/CoinDisplay.vue";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 
-const WikiLinks = new Map([["Stamps", "https://idleon.info/wiki/Stamps"]]);
+const wikiLinks = new Map([["Stamps", "https://idleon.info/wiki/Stamps"]]);
 
 export default defineComponent({
   components: {
@@ -130,7 +130,7 @@ export default defineComponent({
       calculateStampCoinCost,
       calculateStampMaterialsCost,
       stamps,
-      wikiLinks: WikiLinks,
+      wikiLinks,
     };
   },
 });
