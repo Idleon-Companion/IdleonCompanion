@@ -1,14 +1,14 @@
-import dayjs from "dayjs";
-import md5Hex from "md5-hex";
-import { ref, Ref } from "vue";
-import { useToast } from "vue-toastification";
-import { Class, Subclass } from "~/composables/Characters";
 import {
   Assets,
   GameVersion,
   LatestGameVersion,
 } from "~/composables/Utilities";
+import { Class, Subclass } from "~/composables/Characters";
+import { Ref, ref } from "vue";
 import { useAuth, useDB } from "~/State";
+import { useToast } from "vue-toastification";
+import dayjs from "dayjs";
+import md5Hex from "md5-hex";
 
 export type BuildTab = {
   skills: Record<number, string>; // Skill index -> points
@@ -74,14 +74,14 @@ const builds: Build[] = [
         skills: {
           8: "100",
         },
-        comment: `Max "Book of the Wise"`,
+        comment: 'Max "Book of the Wise"',
       },
       {
         skills: {
           7: "100",
           10: "100",
         },
-        comment: `Max "Individual Insight" and "Untwisted Robes"`,
+        comment: 'Max "Individual Insight" and "Untwisted Robes"',
       },
       {
         skills: {
@@ -89,7 +89,8 @@ const builds: Build[] = [
           13: "*100",
           14: "*100",
         },
-        comment: `"Cranium Cooking" has too long cooldown to be considered effective right now. Pick the alchemy talents as needed for your current goal. Most likely, you will do brew speed and sharing talent first.`,
+        comment:
+          '"Cranium Cooking" has too long cooldown to be considered effective right now. Pick the alchemy talents as needed for your current goal. Most likely, you will do brew speed and sharing talent first.',
       },
     ],
   },

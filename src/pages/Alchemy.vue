@@ -1,5 +1,5 @@
 <template>
-  <ul class="nav nav-pills nav-fill mt-3" role="tablist">
+  <!-- <ul class="nav nav-pills nav-fill mt-3" role="tablist">
     <li v-for="tab in Object.keys(tabs)" :key="tab" class="nav-item">
       <button
         class="nav-link text-light"
@@ -29,24 +29,25 @@
     >
       <component :is="tab.replace(/_/g, '')"></component>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Cauldrons from "~/components/alchemy/Cauldrons.vue";
-import Vials from "~/components/alchemy/Vials.vue";
+
+// import Cauldrons from "~/components/alchemy/Cauldrons.vue";
+// import Vials from "~/components/alchemy/Vials.vue";
 
 export default defineComponent({
   name: "Alchemy",
   components: {
-    Cauldrons,
-    Vials,
+    // Cauldrons,
+    // Vials,
   },
   setup() {
     const tabs = {
-      Cauldrons: Cauldrons,
-      Vials: Vials,
+      // Cauldrons: Cauldrons,
+      // Vials: Vials,
     };
     const defaultTab = "Cauldrons";
     return {

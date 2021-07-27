@@ -1,4 +1,4 @@
-import { Growth } from "./Utilities";
+import { Growth } from "~/composables/Utilities";
 
 export type AlchemyData = {
   vials: Record<string, number>;
@@ -362,8 +362,8 @@ export class AlchemyUtil {
     const vial = Growth.Add(bubbleCostVialLvl, 1, 0);
     const undev_vial = Math.max(0.05, 1 - (undevCost + vial) / 100);
     const bargain_tag = Math.max(Math.pow(0.75, tagLvl), 0.1);
-    var discount = oa * newBubble * undev_vial * bargain_tag;
-    var result = [oa, bargain_tag, newBubble, undev_vial, discount];
+    const discount = oa * newBubble * undev_vial * bargain_tag;
+    let result = [oa, bargain_tag, newBubble, undev_vial, discount];
     result = result.map((a) => {
       return (precision - Math.round(a * precision)) / 100;
     });
@@ -383,17 +383,17 @@ export class AlchemyUtil {
     return level === 0 ? 0 : Growth[bubble.Func](level, bubble.x1, bubble.x2);
   };
 
-  static effectChange = (
-    bubble: Bubble,
-    levelNow: number,
-    levelGoal: number
-  ) => {
-    let effectNow = Alch.effect(bubble, levelNow) ?? 0;
-    let effectGoal = Alch.effect(bubble, levelGoal);
-    effectGoal = effectGoal < effectNow ? effectNow : effectGoal;
-    let result = `${effectNow.toFixed(2).padStart(6, " ")} => ${effectGoal
-      .toFixed(2)
-      .padStart(6, " ")}`;
-    return result;
-  };
+  // static effectChange = (
+  //   bubble: Bubble,
+  //   levelNow: number,
+  //   levelGoal: number
+  // ) => {
+  //   let effectNow = Alch.effect(bubble, levelNow) ?? 0;
+  //   let effectGoal = Alch.effect(bubble, levelGoal);
+  //   effectGoal = effectGoal < effectNow ? effectNow : effectGoal;
+  //   let result = `${effectNow.toFixed(2).padStart(6, " ")} => ${effectGoal
+  //     .toFixed(2)
+  //     .padStart(6, " ")}`;
+  //   return result;
+  // };
 }

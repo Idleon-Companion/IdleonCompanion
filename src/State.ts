@@ -1,22 +1,27 @@
-import { version } from "../package.json";
+import "firebase/auth";
+import "firebase/database";
+import { AlchemyColor, AlchemyData } from "~/composables/Alchemy";
+import { Character, useCharacters } from "~/composables/Characters";
+import { Stamps } from "./composables/Stamps";
+import { StatueInfo, StatueName, Statues } from "./composables/Statues";
+import { Task } from "~/composables/Progress";
 import { createGlobalState, useStorage } from "@vueuse/core";
 import { ref } from "vue";
 import { useToast } from "vue-toastification";
-import { AlchemyData, AlchemyColor } from "~/composables/Alchemy";
-import { Task } from "~/composables/Progress";
-import { Character, useCharacters } from "~/composables/Characters";
+import { version } from "../package.json";
+import firebase from "firebase/app";
 
 const StorageKey = "idleon-companion";
 export const useState = createGlobalState(() =>
   useStorage(StorageKey, {
     alchemy: {
-      upgrades: {
+      goals: {
         Orange: [],
         Green: [],
         Purple: [],
         Yellow: [],
       },
-      goals: {
+      upgrades: {
         Orange: [],
         Green: [],
         Purple: [],
@@ -27,11 +32,12 @@ export const useState = createGlobalState(() =>
     cards: {} as Record<string, number>,
     chars: [] as Character[],
     checklist: {} as Record<string, boolean>,
+    stamps: {} as Record<string, number>,
     starSigns: {} as Record<string, boolean>,
-    statues: {} as Record<StatueName, number>,
+    statues: {} as Record<StatueName, StatueInfo>,
     tasks: {
-      tasks: Array<Task>(),
       dailyReset: "12:00",
+      tasks: Array<Task>(),
     },
     version: "0.2.0",
   })
@@ -41,7 +47,7 @@ export function versionControl() {
   // Perform version controlling here whenever there is new data that is persisted
   // Make sure to update the version number in package.json!
   const state = useState();
-  let savedVersion = localStorage.getItem("version");
+  const savedVersion = localStorage.getItem("version");
   // Legacy support for localStorage
   if (savedVersion !== null) {
     // Consider all previous stored data invalid
@@ -57,7 +63,7 @@ export function versionControl() {
         "checklist",
         "tasks",
       ] as const) {
-        let value = localStorage.getItem(k);
+        const value = localStorage.getItem(k);
         if (value !== null) {
           state.value[k] = JSON.parse(value);
         }
@@ -85,7 +91,7 @@ export function versionControl() {
   }
   // Add W3 skills and statues
   if (state.value.version < "0.2.3") {
-    let newSkills = ["Trapping", "Construction", "Worship"] as const;
+    const newSkills = ["Trapping", "Construction", "Worship"] as const;
 
     for (const key in state.value.chars) {
       for (const s of newSkills) state.value.chars[key].skills[s] = 0;
@@ -93,13 +99,13 @@ export function versionControl() {
   }
   // Add new bubble slots and a goals field for each bubble
   if (state.value.version < "0.2.4") {
-    let colors: AlchemyColor[] = ["Orange", "Green", "Purple", "Yellow"];
+    const colors: AlchemyColor[] = ["Orange", "Green", "Purple", "Yellow"];
     for (const k of colors) {
-      let amount = 15;
+      const amount = 15;
       if (!state.value.alchemy.goals) {
         state.value.alchemy.goals = {
-          Orange: [],
           Green: [],
+          Orange: [],
           Purple: [],
           Yellow: [],
         };
@@ -111,38 +117,41 @@ export function versionControl() {
       }
     }
   }
-  // Move statues from character to global state
+  // Move statues from character to global state, add stamp tracking
   if (state.value.version < "0.3.0") {
     if (!state.value.statues) {
-      state.value.statues = {} as Record<StatueName, number>;
+      state.value.statues = {} as Record<StatueName, StatueInfo>;
     }
-    for (const statue of Object.keys(Statues)) {
-      state.value.statues[statue as StatueName] = 0;
+    for (const statue of Object.keys(Statues) as Array<StatueName>) {
+      state.value.statues[statue] = {
+        golden: false,
+        level: 0,
+        progress: 0,
+      };
     }
     // Remove statues from character state
     for (const index in state.value.chars) {
       delete (state.value.chars[index] as Character & { statues: any }).statues;
+    }
+    // Add stamp tracking data
+    state.value.stamps = {};
+    for (const stamp of Object.values(Stamps)) {
+      state.value.stamps[stamp.name] = 0;
     }
   }
   state.value.version = version;
 }
 
 // Firebase Initialization
-import firebase from "firebase/app";
-import "firebase/auth";
-import "firebase/database";
-import { GlobalChecklist } from "./composables/Checklist";
-import { StatueName, Statues } from "./composables/Statues";
-
 const firebaseConfig = {
   apiKey: "AIzaSyDP9fu1062i82w64K9LgKHFFMDgPtUj6k4",
+  appId: "1:693976777179:web:cc00d02a3bd8752ec327fe",
   authDomain: "idleon-companion.firebaseapp.com",
   databaseURL: "https://idleon-companion-default-rtdb.firebaseio.com",
+  measurementId: "G-3W9H9KERK0",
+  messagingSenderId: "693976777179",
   projectId: "idleon-companion",
   storageBucket: "idleon-companion.appspot.com",
-  messagingSenderId: "693976777179",
-  appId: "1:693976777179:web:cc00d02a3bd8752ec327fe",
-  measurementId: "G-3W9H9KERK0",
 };
 
 // Initialize Firebase

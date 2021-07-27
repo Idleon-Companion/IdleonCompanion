@@ -120,11 +120,11 @@
 import { computed, defineComponent, onBeforeMount, ref } from "vue";
 import { useToast } from "vue-toastification";
 
-import BuildSkills from "~/components/BuildSkills.vue";
-import { useBuilds, Build } from "~/composables/Builds";
+import { Build, useBuilds } from "~/composables/Builds";
 import { Class, Subclass, useCharacters } from "~/composables/Characters";
 import { GameVersions } from "~/composables/Utilities";
 import { useAuth } from "~/State";
+import BuildSkills from "~/components/BuildSkills.vue";
 
 export default defineComponent({
   name: "Builds",
@@ -141,7 +141,7 @@ export default defineComponent({
       loadBuildFromShowcase,
       uploadBuild,
     } = useBuilds();
-    const { curCharacter } = useCharacters();
+    const { currentCharacter } = useCharacters();
     const toast = useToast();
     // Refs
     const buildClass = ref<Class>(Class.All);
@@ -151,9 +151,9 @@ export default defineComponent({
 
     // Hooks
     onBeforeMount(() => {
-      if (curCharacter.value) {
-        buildClass.value = curCharacter.value.class;
-        buildSubclass.value = curCharacter.value.subclass;
+      if (currentCharacter.value) {
+        buildClass.value = currentCharacter.value.class;
+        buildSubclass.value = currentCharacter.value.subclass;
       }
     });
 
