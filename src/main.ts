@@ -1,13 +1,11 @@
 import { createApp } from "vue";
 import VueTippy from "vue-tippy";
 import Toast, { PluginOptions } from "vue-toastification";
-import Antd  from "ant-design-vue";
 import App from "~/App.vue";
 
 import "virtual:windi.css";
 import "tippy.js/dist/tippy.css";
 import "vue-toastification/dist/index.css";
-import "ant-design-vue/dist/antd.css";
 
 const toastOptions: PluginOptions = {
   pauseOnFocusLoss: false,
@@ -35,5 +33,4 @@ createApp(App)
     },
   })
   .use(Toast, toastOptions)
-  .use(Antd)
   .mount("#app");

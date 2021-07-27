@@ -270,11 +270,6 @@ import { monsterWeight } from "~/composables/SweetSpotWeight";
 import GameAsset from "~/components/GameAsset.vue";
 import { Assets } from "~/composables/Utilities";
 
-import { Collapse }  from "ant-design-vue";
-import { Space }  from "ant-design-vue";
-import { Divider }  from "ant-design-vue";
-import { Cascader }  from "ant-design-vue";
-import { TimePicker }  from "ant-design-vue";
 import moment from 'moment';
 
 type Monster = {
@@ -639,11 +634,6 @@ export default defineComponent({
   background: rgba(150, 150, 150, 0.2);
 }
 
-.ant-divider-horizontal.ant-divider-with-text {
-	color: white;
-	border-top-color: white;
-}
-
 .input-align-table td{
 	text-align:left;
 }
@@ -675,10 +665,6 @@ export default defineComponent({
 
 .damage {
 	vertical-align: bottom;
-}
-
-input.ant-time-picker-input {
-	background-color: transparent;
 }
 
 </style>
