@@ -1,0 +1,5238 @@
+[
+  {
+    "name": "Weapon_empty",
+    "type": "Weapon",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Helmet_empty",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Shirt_empty",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Pants_empty",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Shoes_empty",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Pendant_empty",
+    "type": "Pendant",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Ring_empty",
+    "type": "Ring",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Axe_empty",
+    "type": "Axe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Pickaxe_empty",
+    "type": "Pickaxe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "FishingRod_empty",
+    "type": "FishingRod",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "CatchingNet_empty",
+    "type": "CatchingNet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "TrapBox_empty",
+    "type": "TrapBox",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "WorshipSkull_empty",
+    "type": "WorshipSkull",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "PremiumHelmet_empty",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "PremiumRing_empty",
+    "type": "PremiumRing",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Trophy_empty",
+    "type": "Trophy",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "FishingLine_empty",
+    "type": "FishingLine",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "FishingWeight_empty",
+    "type": "FishingWeight",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "weaponPower": 0,
+    "speed": 0,
+    "defense": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "reach": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Farmer Brim",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 0,
+    "defense": 2,
+    "miscellaneous": []
+  },
+  {
+    "name": "Mark of Member",
+    "type": "Helmet",
+    "class": [
+      "Beginner"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 20,
+    "defense": 50,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 15
+      }
+    ]
+  },
+  {
+    "name": "Leather Cap",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 2,
+    "agility": 2,
+    "wisdom": 2,
+    "luck": 0,
+    "defense": 4,
+    "miscellaneous": []
+  },
+  {
+    "name": "White Headband",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Green Headband",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 2,
+    "agility": 4,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Red Headband",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 2,
+    "agility": 1,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Purple Tupacband",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 2,
+    "wisdom": 5,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Yellow Headband",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 2,
+    "wisdom": 3,
+    "luck": 8,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Traffic Cone",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Propeller Cap",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 1,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Baseball Hat",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Stump Prop",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 5,
+    "strength": 0,
+    "agility": 3,
+    "wisdom": 0,
+    "luck": 4,
+    "defense": 2,
+    "miscellaneous": [
+      {
+        "line": "% Total Choppin Efficiency",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Copper Helmet",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 3,
+    "agility": 3,
+    "wisdom": 3,
+    "luck": 0,
+    "defense": 5,
+    "miscellaneous": []
+  },
+  {
+    "name": "Iron Helmet",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 5,
+    "agility": 5,
+    "wisdom": 5,
+    "luck": 0,
+    "defense": 9,
+    "miscellaneous": []
+  },
+  {
+    "name": "Gold Helmet",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 7,
+    "agility": 7,
+    "wisdom": 7,
+    "luck": 0,
+    "defense": 15,
+    "miscellaneous": [
+      {
+        "line": "% Defense",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "name": "Amarok Helmet",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 4,
+    "agility": 4,
+    "wisdom": 4,
+    "luck": 4,
+    "defense": 20,
+    "miscellaneous": []
+  },
+  {
+    "name": "Platinum Helmet",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 9,
+    "agility": 9,
+    "wisdom": 9,
+    "luck": 0,
+    "defense": 25,
+    "miscellaneous": [
+      {
+        "line": "% Defense",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Dementia Helmet",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 12,
+    "agility": 12,
+    "wisdom": 12,
+    "luck": 12,
+    "defense": 34,
+    "miscellaneous": [
+      {
+        "line": "% Defense",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "name": "Efaunt Helmet",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 8,
+    "agility": 8,
+    "wisdom": 8,
+    "luck": 8,
+    "defense": 38,
+    "miscellaneous": [
+      {
+        "line": "% Total Drop Rate",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Void Imperium Helmet",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 15,
+    "agility": 15,
+    "wisdom": 15,
+    "luck": 15,
+    "defense": 46,
+    "miscellaneous": [
+      {
+        "line": "% Defense",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "name": "Party Hat",
+    "type": "Helmet",
+    "class": [
+      "Beginner"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 5,
+    "defense": 10,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Bored Beanie",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 7,
+    "wisdom": 0,
+    "luck": 3,
+    "defense": 5,
+    "miscellaneous": []
+  },
+  {
+    "name": "Royal Turban",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 15,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 7,
+    "miscellaneous": [
+      {
+        "line": "% Gold Food Effect",
+        "value": 15
+      }
+    ]
+  },
+  {
+    "name": "Alien Headband",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 3,
+    "wisdom": 11,
+    "luck": 0,
+    "defense": 4,
+    "miscellaneous": [
+      {
+        "line": "% MP Regen Rate",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "name": "Cowbo Galloneer",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 2,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 3,
+    "miscellaneous": [
+      {
+        "line": "Base Damage",
+        "value": 25
+      }
+    ]
+  },
+  {
+    "name": "Grandma Disguise",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 15,
+    "luck": 0,
+    "defense": 5,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 7
+      }
+    ]
+  },
+  {
+    "name": "Santa Hat",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Jar",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 25,
+    "miscellaneous": []
+  },
+  {
+    "name": "Big Pretty Bow",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Steam Cap",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "name": "Bunny Ears",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 4,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "name": "Summer Shell",
+    "type": "Helmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 4,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "name": "Militia Helm",
+    "type": "Helmet",
+    "class": [
+      "Warrior"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 7,
+    "agility": 2,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 11,
+    "miscellaneous": []
+  },
+  {
+    "name": "Viking Cap",
+    "type": "Helmet",
+    "class": [
+      "Warrior"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 13,
+    "agility": 0,
+    "wisdom": 3,
+    "luck": 0,
+    "defense": 21,
+    "miscellaneous": [
+      {
+        "line": "% Total Mining Efficiency",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "name": "Murmillo Helm",
+    "type": "Helmet",
+    "class": [
+      "Warrior"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 20,
+    "agility": 0,
+    "wisdom": 10,
+    "luck": 0,
+    "defense": 55,
+    "miscellaneous": [
+      {
+        "line": "% Defense",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "name": "Thief Hood",
+    "type": "Helmet",
+    "class": [
+      "Archer"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 3,
+    "agility": 6,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 9,
+    "miscellaneous": []
+  },
+  {
+    "name": "Sleek Coif",
+    "type": "Helmet",
+    "class": [
+      "Archer"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 4,
+    "agility": 12,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 18,
+    "miscellaneous": []
+  },
+  {
+    "name": "Conquistador Plume",
+    "type": "Helmet",
+    "class": [
+      "Archer"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 7,
+    "agility": 23,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 47,
+    "miscellaneous": [
+      {
+        "line": "% Movement Speed",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "name": "Top Hat",
+    "type": "Helmet",
+    "class": [
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 8,
+    "luck": 1,
+    "defense": 7,
+    "miscellaneous": []
+  },
+  {
+    "name": "Witch Hat",
+    "type": "Helmet",
+    "class": [
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 1,
+    "wisdom": 16,
+    "luck": 0,
+    "defense": 15,
+    "miscellaneous": [
+      {
+        "line": "% Total Choppin Efficiency",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "name": "Adornment of the High Priest",
+    "type": "Helmet",
+    "class": [
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 0,
+    "agility": 5,
+    "wisdom": 25,
+    "luck": 0,
+    "defense": 40,
+    "miscellaneous": [
+      {
+        "line": "% Crit Damage",
+        "value": 30
+      }
+    ]
+  },
+  {
+    "name": "Boxing Gloves",
+    "type": "Weapon",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 55,
+    "weaponPower": 4,
+    "strength": 2,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 2,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "The Stingers",
+    "type": "Weapon",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 60,
+    "weaponPower": 11,
+    "strength": 5,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 5,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Bandage Wraps",
+    "type": "Weapon",
+    "class": [
+      "Beginner"
+    ],
+    "speed": 7,
+    "reach": 65,
+    "weaponPower": 20,
+    "strength": 6,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 10,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Uninflated Glove",
+    "type": "Weapon",
+    "class": [
+      "Beginner"
+    ],
+    "speed": 8,
+    "reach": 65,
+    "weaponPower": 27,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 13,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Eclectic Ordeal",
+    "type": "Weapon",
+    "class": [
+      "Beginner"
+    ],
+    "speed": 9,
+    "reach": 85,
+    "weaponPower": 32,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 17,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Crit Chance",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Wooden Spear",
+    "type": "Weapon",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 70,
+    "weaponPower": 7,
+    "strength": 3,
+    "agility": 0,
+    "wisdom": 1,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Steel Axe",
+    "type": "Weapon",
+    "class": [
+      "Warrior"
+    ],
+    "speed": 5,
+    "reach": 62,
+    "weaponPower": 14,
+    "strength": 7,
+    "agility": 0,
+    "wisdom": 3,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Royal Bayonet",
+    "type": "Weapon",
+    "class": [
+      "Warrior"
+    ],
+    "speed": 5,
+    "reach": 95,
+    "weaponPower": 20,
+    "strength": 10,
+    "agility": 0,
+    "wisdom": 2,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Enforced Slasher",
+    "type": "Weapon",
+    "class": [
+      "Warrior"
+    ],
+    "speed": 5,
+    "reach": 80,
+    "weaponPower": 26,
+    "strength": 11,
+    "agility": 0,
+    "wisdom": 4,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "The Ice Breaker",
+    "type": "Weapon",
+    "class": [
+      "Warrior"
+    ],
+    "speed": 5,
+    "reach": 76,
+    "weaponPower": 33,
+    "strength": 13,
+    "agility": 0,
+    "wisdom": 6,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Crit Damage",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Deuscythe",
+    "type": "Weapon",
+    "class": [
+      "Warrior"
+    ],
+    "speed": 6,
+    "reach": 88,
+    "weaponPower": 40,
+    "strength": 20,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Crit Damage",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Wooden Bow",
+    "type": "Weapon",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 150,
+    "weaponPower": 7,
+    "strength": 2,
+    "agility": 3,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Birch Longbow",
+    "type": "Weapon",
+    "class": [
+      "Archer"
+    ],
+    "speed": 6,
+    "reach": 170,
+    "weaponPower": 12,
+    "strength": 4,
+    "agility": 5,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Carrot Launcher",
+    "type": "Weapon",
+    "class": [
+      "Archer"
+    ],
+    "speed": 2,
+    "reach": 225,
+    "weaponPower": 22,
+    "strength": 0,
+    "agility": 8,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Spiked Menace",
+    "type": "Weapon",
+    "class": [
+      "Archer"
+    ],
+    "speed": 6,
+    "reach": 175,
+    "weaponPower": 17,
+    "strength": 5,
+    "agility": 8,
+    "wisdom": 0,
+    "luck": 3,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Pharoah Bow",
+    "type": "Weapon",
+    "class": [
+      "Archer"
+    ],
+    "speed": 6,
+    "reach": 200,
+    "weaponPower": 23,
+    "strength": 1,
+    "agility": 13,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Blizzard Bow",
+    "type": "Weapon",
+    "class": [
+      "Archer"
+    ],
+    "speed": 6,
+    "reach": 205,
+    "weaponPower": 30,
+    "strength": 0,
+    "agility": 15,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Crit Damage",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Blackhole Bow",
+    "type": "Weapon",
+    "class": [
+      "Archer"
+    ],
+    "speed": 7,
+    "reach": 230,
+    "weaponPower": 36,
+    "strength": 10,
+    "agility": 13,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Crit Damage",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Gnarled Wand",
+    "type": "Weapon",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 115,
+    "weaponPower": 7,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 4,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Quarterstaff",
+    "type": "Weapon",
+    "class": [
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 120,
+    "weaponPower": 16,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 9,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Starlight",
+    "type": "Weapon",
+    "class": [
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 145,
+    "weaponPower": 23,
+    "strength": 0,
+    "agility": 1,
+    "wisdom": 11,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Crows Nest",
+    "type": "Weapon",
+    "class": [
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 160,
+    "weaponPower": 30,
+    "strength": 0,
+    "agility": 5,
+    "wisdom": 9,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Movement Speed",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Spriggly Storm",
+    "type": "Weapon",
+    "class": [
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 155,
+    "weaponPower": 36,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 15,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Crit Damage",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Grey Gatsby",
+    "type": "Weapon",
+    "class": [
+      "Mage"
+    ],
+    "speed": 6,
+    "reach": 170,
+    "weaponPower": 43,
+    "strength": 0,
+    "agility": 10,
+    "wisdom": 13,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Crit Damage",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Orange Tee",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 2,
+    "agility": 1,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 3,
+    "miscellaneous": []
+  },
+  {
+    "name": "Blue Tee",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 1,
+    "wisdom": 2,
+    "luck": 0,
+    "defense": 3,
+    "miscellaneous": []
+  },
+  {
+    "name": "Black Tee",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 5,
+    "miscellaneous": []
+  },
+  {
+    "name": "Tattered Cloth",
+    "type": "Shirt",
+    "class": [
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 8,
+    "luck": 3,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Fur Shirt",
+    "type": "Shirt",
+    "class": [
+      "Archer"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 5,
+    "agility": 9,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 13,
+    "miscellaneous": []
+  },
+  {
+    "name": "Copper Platebody",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 2,
+    "agility": 2,
+    "wisdom": 2,
+    "luck": 0,
+    "defense": 7,
+    "miscellaneous": []
+  },
+  {
+    "name": "Iron Platebody",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 3,
+    "agility": 3,
+    "wisdom": 3,
+    "luck": 0,
+    "defense": 12,
+    "miscellaneous": []
+  },
+  {
+    "name": "Gold Platebody",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 5,
+    "agility": 5,
+    "wisdom": 5,
+    "luck": 0,
+    "defense": 18,
+    "miscellaneous": []
+  },
+  {
+    "name": "Amarok Bodyplate",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 3,
+    "agility": 3,
+    "wisdom": 3,
+    "luck": 0,
+    "defense": 22,
+    "miscellaneous": []
+  },
+  {
+    "name": "Platinum Platbody",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 8,
+    "agility": 8,
+    "wisdom": 8,
+    "luck": 0,
+    "defense": 25,
+    "miscellaneous": []
+  },
+  {
+    "name": "Dementia Body",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 10,
+    "agility": 10,
+    "wisdom": 10,
+    "luck": 0,
+    "defense": 35,
+    "miscellaneous": []
+  },
+  {
+    "name": "Efaunt Ribcage",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 5,
+    "agility": 5,
+    "wisdom": 5,
+    "luck": 0,
+    "defense": 30,
+    "miscellaneous": [
+      {
+        "line": "% Mastery",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "name": "Void Imperium Platebody",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 13,
+    "agility": 13,
+    "wisdom": 13,
+    "luck": 0,
+    "defense": 45,
+    "miscellaneous": []
+  },
+  {
+    "name": "MCR Tshirt",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 2,
+    "strength": 0,
+    "agility": 8,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 1,
+    "miscellaneous": []
+  },
+  {
+    "name": "Planktop",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 6,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 4,
+    "miscellaneous": []
+  },
+  {
+    "name": "Hide Shirt",
+    "type": "Shirt",
+    "class": [
+      "Warrior"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 6,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 4,
+    "miscellaneous": []
+  },
+  {
+    "name": "Green Tee",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 3,
+    "defense": 4,
+    "miscellaneous": []
+  },
+  {
+    "name": "Purple Tee",
+    "type": "Shirt",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 3,
+    "luck": 0,
+    "defense": 3,
+    "miscellaneous": []
+  },
+  {
+    "name": "Member Hoodie",
+    "type": "Shirt",
+    "class": [
+      "Beginner"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 25,
+    "defense": 40,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 15
+      }
+    ]
+  },
+  {
+    "name": "Studded Hide",
+    "type": "Shirt",
+    "class": [
+      "Warrior"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 10,
+    "agility": 0,
+    "wisdom": 4,
+    "luck": 0,
+    "defense": 22,
+    "miscellaneous": [
+      {
+        "line": "% Total Fishing Efficiency",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "name": "Feral Leathering",
+    "type": "Shirt",
+    "class": [
+      "Archer"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 2,
+    "agility": 12,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 18,
+    "miscellaneous": [
+      {
+        "line": "% Total Catching Efficiency",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "name": "Furled Robes",
+    "type": "Shirt",
+    "class": [
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 1,
+    "wisdom": 13,
+    "luck": 0,
+    "defense": 14,
+    "miscellaneous": []
+  },
+  {
+    "name": "Damascus Plates",
+    "type": "Shirt",
+    "class": [
+      "Warrior"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 17,
+    "agility": 0,
+    "wisdom": 5,
+    "luck": 0,
+    "defense": 52,
+    "miscellaneous": []
+  },
+  {
+    "name": "Evergreen Wraps",
+    "type": "Shirt",
+    "class": [
+      "Archer"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 4,
+    "agility": 19,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 49,
+    "miscellaneous": []
+  },
+  {
+    "name": "Elegantine Robes",
+    "type": "Shirt",
+    "class": [
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 1,
+    "wisdom": 23,
+    "luck": 0,
+    "defense": 47,
+    "miscellaneous": []
+  },
+  {
+    "name": "Torn Jeans",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 2,
+    "wisdom": 1,
+    "luck": 0,
+    "defense": 4,
+    "miscellaneous": []
+  },
+  {
+    "name": "Copper Platelegs",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 2,
+    "agility": 2,
+    "wisdom": 2,
+    "luck": 0,
+    "defense": 6,
+    "miscellaneous": []
+  },
+  {
+    "name": "Iron Platelegs",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 3,
+    "agility": 3,
+    "wisdom": 3,
+    "luck": 0,
+    "defense": 11,
+    "miscellaneous": []
+  },
+  {
+    "name": "Gold Platelegs",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 4,
+    "agility": 4,
+    "wisdom": 4,
+    "luck": 0,
+    "defense": 16,
+    "miscellaneous": []
+  },
+  {
+    "name": "Amarok Hinds",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 2,
+    "agility": 2,
+    "wisdom": 2,
+    "luck": 0,
+    "defense": 18,
+    "miscellaneous": []
+  },
+  {
+    "name": "Platinum Shins",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 6,
+    "agility": 6,
+    "wisdom": 6,
+    "luck": 0,
+    "defense": 23,
+    "miscellaneous": []
+  },
+  {
+    "name": "Dementia Shins",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 7,
+    "agility": 7,
+    "wisdom": 7,
+    "luck": 0,
+    "defense": 28,
+    "miscellaneous": [
+      {
+        "line": "% Defense",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "name": "Efaunt Hipilium",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 4,
+    "agility": 4,
+    "wisdom": 4,
+    "luck": 0,
+    "defense": 32,
+    "miscellaneous": [
+      {
+        "line": "% Defense",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Void Imperium Shardshins",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 9,
+    "agility": 9,
+    "wisdom": 9,
+    "luck": 0,
+    "defense": 38,
+    "miscellaneous": [
+      {
+        "line": "% Defense",
+        "value": 7
+      }
+    ]
+  },
+  {
+    "name": "Give Up On Life Pants",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 6,
+    "luck": 0,
+    "defense": 3,
+    "miscellaneous": []
+  },
+  {
+    "name": "Bleached Designer Wode Patch Pants",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 3,
+    "wisdom": 7,
+    "luck": 0,
+    "defense": 11,
+    "miscellaneous": [
+      {
+        "line": "% Total Choppin Efficiency",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Adam's Leaf",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 4,
+    "agility": 0,
+    "wisdom": 13,
+    "luck": 0,
+    "defense": 2,
+    "miscellaneous": []
+  },
+  {
+    "name": "Dirty Coal Miner Baggy Soot Pants",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 7,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 12,
+    "miscellaneous": [
+      {
+        "line": "% Total Mining Efficiency",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Trimmed Rune Platelegs",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 4,
+    "agility": 2,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 20,
+    "miscellaneous": [
+      {
+        "line": "% Defense",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "name": "Fishing Overalls",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 8,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 15,
+    "miscellaneous": [
+      {
+        "line": "% Total Fishing Efficiency",
+        "value": 12
+      }
+    ]
+  },
+  {
+    "name": "Bandito Pantaloon",
+    "type": "Pants",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 9,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 14,
+    "miscellaneous": [
+      {
+        "line": "% Total Catching Efficiency",
+        "value": 12
+      }
+    ]
+  },
+  {
+    "name": "Copper Boots",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 2,
+    "defense": 2,
+    "miscellaneous": []
+  },
+  {
+    "name": "Iron Boots",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 2,
+    "agility": 2,
+    "wisdom": 2,
+    "luck": 0,
+    "defense": 4,
+    "miscellaneous": []
+  },
+  {
+    "name": "Gold Boots",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 3,
+    "agility": 3,
+    "wisdom": 3,
+    "luck": 3,
+    "defense": 8,
+    "miscellaneous": []
+  },
+  {
+    "name": "Amarok Paws",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 0,
+    "defense": 10,
+    "miscellaneous": [
+      {
+        "line": "% Defense",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "name": "Platinum Boots",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 5,
+    "agility": 5,
+    "wisdom": 5,
+    "luck": 5,
+    "defense": 15,
+    "miscellaneous": [
+      {
+        "line": "% Defense",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Dementia Boots",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 7,
+    "agility": 7,
+    "wisdom": 7,
+    "luck": 7,
+    "defense": 22,
+    "miscellaneous": [
+      {
+        "line": "% Defense",
+        "value": 7
+      }
+    ]
+  },
+  {
+    "name": "Efaunts Broken Ankles",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 2,
+    "agility": 2,
+    "wisdom": 2,
+    "luck": 0,
+    "defense": 18,
+    "miscellaneous": [
+      {
+        "line": "% Movement Speed",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "name": "Void Imperium Kicks",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 9,
+    "agility": 9,
+    "wisdom": 9,
+    "luck": 9,
+    "defense": 30,
+    "miscellaneous": [
+      {
+        "line": "% Defense",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "name": "Goo Galoshes",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 2,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Money from Monsters",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Flip Flops",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 3,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Movement Speed",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "name": "Cavern Trekkers",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 5,
+    "agility": 0,
+    "wisdom": 1,
+    "luck": 0,
+    "defense": 10,
+    "miscellaneous": [
+      {
+        "line": "% Total Mining Efficiency",
+        "value": 20
+      }
+    ]
+  },
+  {
+    "name": "Logger Heels",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 7,
+    "luck": 0,
+    "defense": 6,
+    "miscellaneous": [
+      {
+        "line": "% Total Choppin Efficiency",
+        "value": 20
+      }
+    ]
+  },
+  {
+    "name": "Angler Boots",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 6,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 8,
+    "miscellaneous": [
+      {
+        "line": "% Total Fishing Efficiency",
+        "value": 20
+      }
+    ]
+  },
+  {
+    "name": "Bandito Boots",
+    "type": "Shoes",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 6,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 8,
+    "miscellaneous": [
+      {
+        "line": "% Total Catching Efficiency",
+        "value": 20
+      }
+    ]
+  },
+  {
+    "name": "Little Wooden Katana",
+    "type": "Pendant",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 2,
+    "agility": 1,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Sleek Shank",
+    "type": "Pendant",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 4,
+    "miscellaneous": []
+  },
+  {
+    "name": "Carrot Horror",
+    "type": "Pendant",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 2,
+    "wisdom": 5,
+    "luck": 2,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Tarantulight",
+    "type": "Pendant",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 2,
+    "agility": 2,
+    "wisdom": 2,
+    "luck": 5,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Fuscismatia",
+    "type": "Pendant",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 10,
+    "luck": 0,
+    "defense": 5,
+    "miscellaneous": [
+      {
+        "line": "Fishing Purple Depth",
+        "value": 30
+      }
+    ]
+  },
+  {
+    "name": "Strung Bludgeon",
+    "type": "Pendant",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 4,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Chaotic Amarok Pendant",
+    "type": "Pendant",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 2,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 12,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Copper Band",
+    "type": "Ring",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 3,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Steel Band",
+    "type": "Ring",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 4,
+    "defense": 1,
+    "miscellaneous": []
+  },
+  {
+    "name": "Death Wish",
+    "type": "Ring",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 4,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 6,
+    "miscellaneous": [
+      {
+        "line": "% Boss Damage",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Pugilist Demise",
+    "type": "Ring",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 3,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Boss Damage",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "name": "Defenders Dignity",
+    "type": "Ring",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 15,
+    "miscellaneous": []
+  },
+  {
+    "name": "Frisbee Ring",
+    "type": "Ring",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 12,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "Accuracy",
+        "value": 20
+      }
+    ]
+  },
+  {
+    "name": "Silver Stopwatch",
+    "type": "Ring",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Fighting AFK Gain Rate",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "name": "Dooble Goopi",
+    "type": "Ring",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 1,
+    "defense": 2,
+    "miscellaneous": [
+      {
+        "line": "% Money from Monsters",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Sanic Ring",
+    "type": "Ring",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 8,
+    "wisdom": 0,
+    "luck": 4,
+    "defense": 5,
+    "miscellaneous": [
+      {
+        "line": "% Movement Speed",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "name": "Efaunt Trunculus",
+    "type": "Ring",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 3,
+    "strength": 0,
+    "agility": 10,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 8,
+    "miscellaneous": [
+      {
+        "line": "% Crit Chance",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "name": "Love Ring",
+    "type": "PremiumRing",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Love",
+        "value": 69
+      }
+    ]
+  },
+  {
+    "name": "Leafy Ring",
+    "type": "PremiumRing",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% All Natural",
+        "value": 100
+      }
+    ]
+  },
+  {
+    "name": "Wealth Ring",
+    "type": "PremiumRing",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 3,
+    "agility": 3,
+    "wisdom": 3,
+    "luck": 3,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Coolness",
+        "value": 777
+      }
+    ]
+  },
+  {
+    "name": "Bob Ring",
+    "type": "PremiumRing",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Bob",
+        "value": 808
+      }
+    ]
+  },
+  {
+    "name": "Bubble Ring",
+    "type": "PremiumRing",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Pop Chance",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "name": "Cthulu's Ring",
+    "type": "PremiumRing",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Pure Evil",
+        "value": 666
+      }
+    ]
+  },
+  {
+    "name": "Lava Sez Buy More Gems",
+    "type": "PremiumRing",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Self Esteem",
+        "value": "-1"
+      }
+    ]
+  },
+  {
+    "name": "HONK Ring",
+    "type": "PremiumRing",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% HONK",
+        "value": 100
+      }
+    ]
+  },
+  {
+    "name": "Junk Pickaxe",
+    "type": "Pickaxe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 3,
+    "reach": 0,
+    "weaponPower": 2,
+    "strength": 1,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Copper Pickaxe",
+    "type": "Pickaxe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 3,
+    "reach": 0,
+    "weaponPower": 6,
+    "strength": 3,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Iron Pickaxe",
+    "type": "Pickaxe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 10,
+    "strength": 5,
+    "agility": 2,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Gold Pickaxe",
+    "type": "Pickaxe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 13,
+    "strength": 8,
+    "agility": 3,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Platinum Pickaxe",
+    "type": "Pickaxe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 16,
+    "strength": 11,
+    "agility": 4,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Total Mining Efficiency",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "name": "Dementia Pickaxe",
+    "type": "Pickaxe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 19,
+    "strength": 15,
+    "agility": 5,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Total Mining Efficiency",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "name": "Void Imperium Pik",
+    "type": "Pickaxe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 0,
+    "weaponPower": 24,
+    "strength": 18,
+    "agility": 6,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Total Mining Efficiency",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "name": "Poopy Pickaxe",
+    "type": "Pickaxe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 2,
+    "reach": 0,
+    "weaponPower": 18,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 3,
+    "miscellaneous": [
+      {
+        "line": "% Total Mining Efficiency",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "name": "Old Hatchet",
+    "type": "Axe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 3,
+    "reach": 0,
+    "weaponPower": 3,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 1,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Copper Chopper",
+    "type": "Axe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 3,
+    "reach": 0,
+    "weaponPower": 7,
+    "strength": 0,
+    "agility": 1,
+    "wisdom": 3,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Iron Hatchet",
+    "type": "Axe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 3,
+    "reach": 0,
+    "weaponPower": 10,
+    "strength": 2,
+    "agility": 0,
+    "wisdom": 5,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Stinky Axe",
+    "type": "Axe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 2,
+    "reach": 0,
+    "weaponPower": 19,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 8,
+    "luck": 4,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Golden Axe",
+    "type": "Axe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 14,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 8,
+    "luck": 4,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Plat Hatchet",
+    "type": "Axe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 18,
+    "strength": 0,
+    "agility": 5,
+    "wisdom": 14,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Dementia Dicer",
+    "type": "Axe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 23,
+    "strength": 0,
+    "agility": 6,
+    "wisdom": 17,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Void Imperium Axe",
+    "type": "Axe",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 0,
+    "weaponPower": 26,
+    "strength": 7,
+    "agility": 0,
+    "wisdom": 20,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Copper Fish Rod",
+    "type": "FishingRod",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 3,
+    "reach": 0,
+    "weaponPower": 8,
+    "strength": 2,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Iron Fishing Rod",
+    "type": "FishingRod",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 3,
+    "reach": 0,
+    "weaponPower": 13,
+    "strength": 4,
+    "agility": 0,
+    "wisdom": 1,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Gold Fishing Rod",
+    "type": "FishingRod",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 19,
+    "strength": 6,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 4,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Plat Fishing Rod",
+    "type": "FishingRod",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 25,
+    "strength": 9,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Dementia Rod for Fishing",
+    "type": "FishingRod",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 30,
+    "strength": 12,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Void Imperium Rod",
+    "type": "FishingRod",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 36,
+    "strength": 15,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Copper Netted Net",
+    "type": "CatchingNet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 9,
+    "strength": 1,
+    "agility": 3,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Reinforced Net",
+    "type": "CatchingNet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 14,
+    "strength": 2,
+    "agility": 4,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Gilded Net",
+    "type": "CatchingNet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 0,
+    "weaponPower": 20,
+    "strength": 2,
+    "agility": 6,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Platinet",
+    "type": "CatchingNet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 0,
+    "weaponPower": 26,
+    "strength": 3,
+    "agility": 7,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Dementia Net",
+    "type": "CatchingNet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 0,
+    "weaponPower": 31,
+    "strength": 4,
+    "agility": 9,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Void Imperium Net",
+    "type": "CatchingNet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 0,
+    "weaponPower": 37,
+    "strength": 6,
+    "agility": 12,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Cardboard Traps",
+    "type": "TrapBox",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 4,
+    "strength": 0,
+    "agility": 2,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Silkskin Traps",
+    "type": "TrapBox",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 8,
+    "strength": 0,
+    "agility": 4,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Wooden Traps",
+    "type": "TrapBox",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 13,
+    "strength": 0,
+    "agility": 7,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Natural Traps",
+    "type": "TrapBox",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 20,
+    "strength": 0,
+    "agility": 10,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Wax Skull",
+    "type": "WorshipSkull",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 4,
+    "reach": 0,
+    "weaponPower": 4,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 2,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Ceramic Skull",
+    "type": "WorshipSkull",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 0,
+    "weaponPower": 8,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 4,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Horned Skull",
+    "type": "WorshipSkull",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 5,
+    "reach": 0,
+    "weaponPower": 13,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 7,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Prickle Skull",
+    "type": "WorshipSkull",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 6,
+    "reach": 0,
+    "weaponPower": 20,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 10,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Manifested Skull",
+    "type": "WorshipSkull",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 7,
+    "reach": 0,
+    "weaponPower": 26,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 12,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "King of Food",
+    "type": "Trophy",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 3,
+    "strength": 10,
+    "agility": 10,
+    "wisdom": 10,
+    "luck": 10,
+    "defense": 25,
+    "miscellaneous": [
+      {
+        "line": "% Food Effect",
+        "value": 20
+      }
+    ]
+  },
+  {
+    "name": "Lucky Lad",
+    "type": "Trophy",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 7,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Total Drop Rate",
+        "value": 7
+      }
+    ]
+  },
+  {
+    "name": "Club Member",
+    "type": "Trophy",
+    "class": [
+      "Beginner"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 5,
+    "defense": 5,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "name": "Dice Dynamo",
+    "type": "Trophy",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 5,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Luck",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "name": "Blunder Hero",
+    "type": "Trophy",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 2,
+    "strength": 5,
+    "agility": 5,
+    "wisdom": 5,
+    "luck": 5,
+    "defense": 15,
+    "miscellaneous": [
+      {
+        "line": "% Skill AFK Gain Rate",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "name": "Trailblazer",
+    "type": "Trophy",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 4,
+    "strength": 3,
+    "agility": 3,
+    "wisdom": 3,
+    "luck": 3,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 20
+      }
+    ]
+  },
+  {
+    "name": "Ultra Unboxer",
+    "type": "Trophy",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 3,
+    "agility": 3,
+    "wisdom": 3,
+    "luck": 3,
+    "defense": 3,
+    "miscellaneous": [
+      {
+        "line": "% Total Drop Rate",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "name": "Critter Baron",
+    "type": "Trophy",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 10,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Agility",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "name": "YumYum Sheriff",
+    "type": "Trophy",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 2,
+    "strength": 8,
+    "agility": 8,
+    "wisdom": 8,
+    "luck": 8,
+    "defense": 25,
+    "miscellaneous": [
+      {
+        "line": "% Boss Damage",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "name": "Megalodon",
+    "type": "Trophy",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 5,
+    "strength": 15,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defense": 30,
+    "miscellaneous": [
+      {
+        "line": "% Crit Chance",
+        "value": 9
+      }
+    ]
+  },
+  {
+    "name": "Club Maestro",
+    "type": "Trophy",
+    "class": [
+      "Beginner"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 1,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 20,
+    "defense": 20,
+    "miscellaneous": [
+      {
+        "line": "% Skill EXP",
+        "value": 35
+      }
+    ]
+  },
+  {
+    "name": "Beach Bro",
+    "type": "Trophy",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 2,
+    "strength": 5,
+    "agility": 5,
+    "wisdom": 5,
+    "luck": 5,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Money from Monsters",
+        "value": 50
+      }
+    ]
+  },
+  {
+    "name": "Smitty's Bubble Blowing Hat",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Bandit Bob Mask",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Paper Bag",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Parasite",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Diamon Horns",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Halloween Pumpkin",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Pardoned Turkey",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Hotdog Hero",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Invisible Hat",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Strawbiggy",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Pop Cat",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Dairy Dunk",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "The Classic",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Green Beanie",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Snowman",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": []
+  },
+  {
+    "name": "Giftmas Tree",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "name": "Big Bunny",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 11
+      }
+    ]
+  },
+  {
+    "name": "Fluffy Ramsy",
+    "type": "PremiumHelmet",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 1,
+    "agility": 1,
+    "wisdom": 1,
+    "luck": 1,
+    "defense": 0,
+    "miscellaneous": [
+      {
+        "line": "% Monster EXP",
+        "value": 11
+      }
+    ]
+  },
+  {
+    "name": "Fly",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingWeight",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Green Depth",
+        "value": 2
+      },
+      {
+        "line": "Fishing Yellow Depth",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "name": "Wormie",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingWeight",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Yellow Depth",
+        "value": 15
+      },
+      {
+        "line": "% Fishing EXP",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Iron Hook",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingWeight",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Green Depth",
+        "value": 3
+      },
+      {
+        "line": "Fishing Yellow Depth",
+        "value": 2
+      },
+      {
+        "line": "% Fishing Speed",
+        "value": 3
+      },
+      {
+        "line": "% Fishing Power",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "name": "Basic Bobber",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingWeight",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Yellow Depth",
+        "value": 3
+      },
+      {
+        "line": "Fishing Red Depth",
+        "value": 3
+      },
+      {
+        "line": "% Fishing EXP",
+        "value": 4
+      },
+      {
+        "line": "% Fishing Speed",
+        "value": 4
+      },
+      {
+        "line": "% Fishing Power",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "name": "Pound of Steel",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingWeight",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Purple Depth",
+        "value": 30
+      },
+      {
+        "line": "% Fishing EXP",
+        "value": 2
+      },
+      {
+        "line": "% Fishing Speed",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "name": "Pound of Feathers",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingWeight",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Red Depth",
+        "value": 35
+      },
+      {
+        "line": "Fishing Purple Depth",
+        "value": 10
+      },
+      {
+        "line": "% Fishing Speed",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Literal Elephant",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingWeight",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Red Depth",
+        "value": 20
+      },
+      {
+        "line": "Fishing Purple Depth",
+        "value": 60
+      },
+      {
+        "line": "% Fishing Power",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "name": "Dynamite",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingWeight",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Red Depth",
+        "value": 10
+      },
+      {
+        "line": "Fishing Purple Depth",
+        "value": 20
+      },
+      {
+        "line": "% Fishing Power",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "name": "Not Dynamite",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingWeight",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Green Depth",
+        "value": 12
+      },
+      {
+        "line": "Fishing Yellow Depth",
+        "value": 12
+      },
+      {
+        "line": "% Fishing Power",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "name": "Triple Threat",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingWeight",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "% Fishing EXP",
+        "value": 6
+      },
+      {
+        "line": "% Fishing Speed",
+        "value": 6
+      },
+      {
+        "line": "% Fishing Power",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "name": "Copper Twine",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingLine",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Yellow Depth",
+        "value": 3
+      },
+      {
+        "line": "Fishing Red Depth",
+        "value": 5
+      },
+      {
+        "line": "% Fishing Speed",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "name": "Silver Twine",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingLine",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Red Depth",
+        "value": 20
+      },
+      {
+        "line": "% Fishing EXP",
+        "value": 15
+      }
+    ]
+  },
+  {
+    "name": "Leafy Vines",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingLine",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Red Depth",
+        "value": 10
+      },
+      {
+        "line": "% Fishing Power",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "name": "Fun Flags",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingLine",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Red Depth",
+        "value": 8
+      },
+      {
+        "line": "Fishing Purple Depth",
+        "value": 8
+      },
+      {
+        "line": "% Fishing Speed",
+        "value": 1
+      },
+      {
+        "line": "% Fishing Power",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "name": "Electrical Wire",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingLine",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Red Depth",
+        "value": 5
+      },
+      {
+        "line": "Fishing Purple Depth",
+        "value": 20
+      },
+      {
+        "line": "% Fishing Speed",
+        "value": 2
+      },
+      {
+        "line": "% Fishing Power",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Needledrop",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingLine",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Red Depth",
+        "value": 5
+      },
+      {
+        "line": "Fishing Purple Depth",
+        "value": 10
+      },
+      {
+        "line": "% Fishing EXP",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "name": "Spoons Lol",
+    "class": [
+      "Beginner",
+      "Warrior",
+      "Archer",
+      "Mage"
+    ],
+    "type": "FishingLine",
+    "speed": 0,
+    "reach": 0,
+    "weaponPower": 0,
+    "strength": 0,
+    "agility": 0,
+    "wisdom": 0,
+    "luck": 0,
+    "defence": 0,
+    "miscellaneous": [
+      {
+        "line": "Fishing Purple Depth",
+        "value": 15
+      },
+      {
+        "line": "% Fishing EXP",
+        "value": 9
+      },
+      {
+        "line": "% Fishing Speed",
+        "value": 2
+      },
+      {
+        "line": "% Fishing Power",
+        "value": 1
+      }
+    ]
+  }
+]

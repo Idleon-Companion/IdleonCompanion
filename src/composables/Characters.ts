@@ -1,6 +1,7 @@
 import { computed, ref } from "vue";
 import { useState } from "~/State";
 import { checklistData } from "~/composables/Checklist";
+import { Equipment } from "./Equipments";
 
 export enum Class {
   Beginner = "Beginner",
@@ -42,6 +43,7 @@ export class Character {
   public statues: Record<string, number>;
   public constellations: Record<string, boolean>;
   public starSigns: Record<string, boolean>;
+  public equipment: Record<string, Equipment>;
 
   constructor() {
     this.class = Class.Beginner;
@@ -53,6 +55,7 @@ export class Character {
     this.statues = {};
     this.constellations = {};
     this.starSigns = {};
+    this.equipment = {};
   }
 
   setClass(c: Class | Subclass) {

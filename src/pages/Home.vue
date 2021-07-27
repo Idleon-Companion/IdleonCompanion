@@ -60,6 +60,7 @@ import Credits from "~/pages/Credits.vue";
 import ProgressTracker from "~/pages/ProgressTracker.vue";
 import Tasks from "~/pages/Tasks.vue";
 import Calculators from "~/pages/Calculators.vue";
+import Equipment from "~/pages/Equipments.vue"
 
 export default defineComponent({
   name: "Home",
@@ -73,6 +74,7 @@ export default defineComponent({
     ProgressTracker,
     Tasks,
     Calculators,
+    Equipment,
   },
   setup() {
     const tabs = {
@@ -84,8 +86,9 @@ export default defineComponent({
       Cards: Cards,
       Calculators: Calculators,
       Credits: Credits,
+      Equipment: Equipment,
     };
-    const defaultTab = 'Characters';
+    const defaultTab = 'Equipment';
     return {
       defaultTab,
       tabs,

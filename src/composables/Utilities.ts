@@ -1,4 +1,5 @@
 import { Character } from "./Characters";
+import { EquipmentType } from "./Equipments";
 
 export type GrowthFunc = (a: number, b: number, c: number) => number;
 
@@ -81,6 +82,42 @@ export class Assets {
     }
     return `assets/talents/${image}.png`;
   }
+
+  static EquipmentImage(item: string | undefined, equipmentType: EquipmentType) {
+    const basePath = 'assets/equipments/';
+    const cleaned = item ? item.replace(/ /g, "_") : `${equipmentType}_empty`;
+
+    switch (equipmentType) {
+      case EquipmentType.Weapon:
+        return `${basePath}weapons/${cleaned}.png`;
+      case EquipmentType.Helmet: 
+      case EquipmentType.Shirt: 
+      case EquipmentType.Pants: 
+      case EquipmentType.Shoes: 
+        return `${basePath}armor/${equipmentType}/${cleaned}.png`;
+      case EquipmentType.Pendant: 
+      case EquipmentType.Ring: 
+        return `${basePath}armor/Accessories/${cleaned}.png`;
+      case EquipmentType.Axe:
+      case EquipmentType.Pickaxe:
+      case EquipmentType.FishingRod:
+      case EquipmentType.CatchingNet:
+      case EquipmentType.TrapBox:
+      case EquipmentType.WorshipSkull:
+        return `${basePath}tools/${cleaned}.png`;
+      case EquipmentType.Food:
+        return `${basePath}food/${cleaned}.png`;
+      case EquipmentType.PremiumHelmet:
+      case EquipmentType.PremiumRing:
+      case EquipmentType.Trophy:
+        return `${basePath}premium/${equipmentType}/${cleaned}.png`
+      case EquipmentType.FishingLine:
+      case EquipmentType.FishingWeight:
+          return `${basePath}fishing_accessories/${cleaned}.png`
+      case EquipmentType.Nothing:
+          return `${basePath}${cleaned}.png`
+    }
+  }
 }
 
 export type Item = {
@@ -95,6 +132,7 @@ export type ItemGroup = {
   assetDir: string;
   items: Item[];
 };
+
 
 export class Text {
   static Item(item: Item): string {
@@ -123,6 +161,7 @@ enum BaseEffects {
   MoveSpeed = "Move Speed",
   WeaponPower = "Weapon Power",
   MinimumDamage = "Minimum Damage",
+  Accuracy = "Accuracy"
 }
 
 enum MultiplierEffects {
@@ -142,7 +181,13 @@ enum MultiplierEffects {
   FoodEffect = "% Food Effect",
   BoostFoodEffect = "% Boost Food Effect",
   NoFoodConsume = "% To not consume Food",
+  GoldFoodEffect = "% Gold Food Effect",
   DropRate = "% Total Drop Rate",
+  PercentAgility = "% Agility",
+  PercentStrength = "% Strength",
+  PercentWisdom = "% Wisdom",
+  PercentLuck = "% Luck",
+  PercentMoveSpeed = "% Movement Speed"
 }
 
 enum ClassAndMonsterEffects {
@@ -153,6 +198,7 @@ enum ClassAndMonsterEffects {
   MonsterMoney = "% Money from Monsters",
   BossDamage = "% Boss Damage",
   MobRespawn = "% Mob Respawn Rate",
+  Mastery = "% Mastery"
 }
 
 enum SkillEffects {
@@ -161,6 +207,7 @@ enum SkillEffects {
   SkillProwess = "% Skill Prowess",
   SmithingEfficiency = "% Total Smithing Efficiency",
   SmithingExp = "% Smithing EXP",
+  AlchemyBrewSpeed = "% Alchemy Brew Speed",
   MiningAfk = "% Mining Away Gains",
   MiningBase = "Base Mining Power",
   MiningEfficiency = "% Total Mining Efficiency",
@@ -181,6 +228,11 @@ enum SkillEffects {
   FishingExp = "% Fishing EXP",
   FishingMultiFish = "% Multi-Fish Chance",
   FishingPower = "% Fishing Power",
+  FishingSpeed = "% Fishing Speed",
+  FishingPurpleDepth = "Fishing Purple Depth",
+  FishingRedDepth = "Fishing Red Depth",
+  FishingYellowDepth = "Fishing Yellow Depth",
+  FishingGreenDepth = "Fishing Green Depth",
   WorshipCharge = "% Max Charge",
   WorshipChargeRate = "% Charge Rate",
   WorshipBase = "Base Worship Power",
@@ -211,6 +263,20 @@ enum BonusEffects {
   CarryCapacity = "% Carry Capacity",
   ExtraTalentPoints = "Talent Points",
   MinigameReward = "% Minigame Reward",
+  
+}
+
+enum JokeEffects {
+  PlayerHeight = "% Player Height",
+  Honk = "% HONK",
+  SelfEsteem = "% Self Esteem",
+  PureEvil = "% Pure Evil",
+  PopChance = "% Pop Chance",
+  Bob = "% Bob",
+  Coolness = "% Coolness",
+  AllNatural = "% All Natural",
+  Love = "% Love",
+  Novelty = "%_NOVELTY",
 }
 
 export const Effects = {
@@ -220,6 +286,7 @@ export const Effects = {
   ...SkillEffects,
   ...PassiveEffects,
   ...BonusEffects,
+  ...JokeEffects
 };
 
 type ValueOf<T> = T[keyof T];
