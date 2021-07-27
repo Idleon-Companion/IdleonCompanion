@@ -38,9 +38,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import PackMuleCrafter from "~/pages/PackMuleCrafter.vue";
-import PicnicQuest from "~/pages/PicnicQuest.vue";
-import RecipeCalculator from "~/pages/RecipeCalculator.vue";
+import PackMuleCrafter from "~/pages/tools/PackMuleCrafter.vue";
+import PicnicQuest from "~/pages/calculators/PicnicQuest.vue";
+import RecipeCalculator from "~/pages/tools/RecipeCalculator.vue";
 import Stamps from "~/components/tracker/StampTracker.vue";
 
 export default defineComponent({

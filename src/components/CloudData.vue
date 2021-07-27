@@ -24,11 +24,11 @@
 </template>
 
 <script lang="ts">
-import firebase from "firebase/app";
-import * as firebaseui from "firebaseui";
 import "firebaseui/dist/firebaseui.css";
+import * as firebaseui from "firebaseui";
 import { defineComponent, onMounted } from "vue";
 import { useToast } from "vue-toastification";
+import firebase from "firebase/app";
 
 import { useAuth } from "~/State";
 

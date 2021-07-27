@@ -81,10 +81,10 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import cardData from "~/data/card-sets.json";
 
-import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import { Assets } from "~/composables/Utilities";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
+import cardData from "~/data/card-sets.json";
 
 const WikiLinks = new Map([["Cards", "https://idleon.info/wiki/Cards"]]);
 

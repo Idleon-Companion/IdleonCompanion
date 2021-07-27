@@ -74,18 +74,19 @@
           <p>Please keep the following in mind while crafting:</p>
           <ul>
             <li>
-              Recipes need to be crafted in the order they are listed, as that's how
-              they were successfully tested
+              Recipes need to be crafted in the order they are listed, as that's
+              how they were successfully tested
             </li>
             <li>
-              Remember to combine "not full" stacks of materials when possible, as
-              that was taken into account during testing
+              Remember to combine "not full" stacks of materials when possible,
+              as that was taken into account during testing
             </li>
             <li>
-              The list of Inventory Capacity Setups are not a perfect calculation
-              and there can be variation between setups for a given number of slots
-              and list of materials. These lists are always looking to be improved
-              and should always be considered a possibility, not "the best"
+              The list of Inventory Capacity Setups are not a perfect
+              calculation and there can be variation between setups for a given
+              number of slots and list of materials. These lists are always
+              looking to be improved and should always be considered a
+              possibility, not "the best"
             </li>
           </ul>
         </div>
@@ -105,7 +106,11 @@
               <div class="border-top border-bottom col-sm-3">
                 <GameAsset
                   :height="72"
-                  :image="Assets.MaterialImage(recipe.replace(/[0-9]+ /g, '').replace(/ /g, '_'))"
+                  :image="
+                    Assets.MaterialImage(
+                      recipe.replace(/[0-9]+ /g, '').replace(/ /g, '_')
+                    )
+                  "
                   :title="recipe.replace(/[0-9]+ /g, '')"
                 >
                   <template #tooltip>
@@ -135,7 +140,11 @@
               <div class="border-top border-bottom col-sm-3">
                 <GameAsset
                   :height="72"
-                  :image="Assets.MaterialImage(material.replace(/[0-9]+ /g, '').replace(/ /g, '_'))"
+                  :image="
+                    Assets.MaterialImage(
+                      material.replace(/[0-9]+ /g, '').replace(/ /g, '_')
+                    )
+                  "
                   :title="material.replace(/[0-9]+ /g, '')"
                 >
                   <template #tooltip>
@@ -158,7 +167,8 @@
             <h5>Using Character "{{ curCharacter.name }}"</h5>
             <!-- Character doesn't have enough slots -->
             <div v-if="defaultSlots === null">
-              Currently selected character is not capable of completing this tier of the task
+              Currently selected character is not capable of completing this
+              tier of the task
             </div>
             <!-- Character has enough slots -->
             <div v-else class="row">
@@ -194,7 +204,7 @@
           <h5>All Inventory Setups</h5>
           <!-- Inventory Selector -->
           <select v-model="invSlots" id="slot-selector">
-            <option 
+            <option
               v-for="(inventory, index) in recommended.caps"
               :key="index"
               :value="index"
@@ -239,11 +249,11 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from "vue";
-import packMuleData from "~/data/packMule.json";
-import GameAsset from "~/components/GameAsset.vue";
-import { useCharacters } from "~/composables/Characters";
 import { Assets } from "~/composables/Utilities";
+import { computed, defineComponent, ref } from "vue";
+import { useCharacters } from "~/composables/Characters";
+import GameAsset from "~/components/GameAsset.vue";
+import packMuleData from "~/data/packMule.json";
 
 type PackMuleObject = {
   tier: number;
@@ -256,48 +266,45 @@ type PackMuleObject = {
 export default defineComponent({
   name: "PackMuleCrafter",
   components: {
-    GameAsset
+    GameAsset,
   },
   setup() {
-    const { characters, curCharacter } = useCharacters();
+    const { characters, currentCharacter } = useCharacters();
     const data: Record<string, PackMuleObject> = packMuleData;
     const anvilTab = ref("");
     const taskTier = ref("");
-    const recommended = computed(
-      (): PackMuleObject => {
-        if (anvilTab.value === "" || taskTier.value === "") {
-          return {} as PackMuleObject;
-        }
-        return data[`${anvilTab.value}${taskTier.value}`];
+    const recommended = computed((): PackMuleObject => {
+      if (!anvilTab.value || !taskTier.value) {
+        return {} as PackMuleObject;
       }
-    );
-    const defaultSlots = computed(
-      (): number|null => {
-        let i = null;
-        if(curCharacter) {
-          recommended.value.caps.forEach((inv:Record<string, number>, index:number) => {
-            if(curCharacter.value!.bagSlots >= inv.slots) { i = index }
-          });
+      return data[`${anvilTab.value}${taskTier.value}`];
+    });
+
+    const defaultSlots = computed((): number | null => {
+      let i = null;
+      recommended.value.caps.forEach(
+        (inv: Record<string, number>, index: number) => {
+          if (currentCharacter.value?.bagSlots ?? 0 >= inv.slots) {
+            i = index;
+          }
         }
-        return i;
-      }
-    );
-    const invSlots = ref("0");
+      );
+      return i;
+    });
+    const invSlots = ref(0);
     return {
       Assets,
       anvilTab,
       characters,
-      curCharacter,
+      currentCharacter,
       data,
       defaultSlots,
       invSlots,
       recommended,
-      taskTier
+      taskTier,
     };
   },
 });
 </script>
 
-<style lang="sass" scoped>
-@import '../styles/base.sass'
-</style>
+<style lang="sass" scoped></style>

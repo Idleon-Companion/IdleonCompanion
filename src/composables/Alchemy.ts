@@ -363,8 +363,8 @@ export class AlchemyUtil {
     const vial = Growth.Add(bubbleCostVialLvl, 1, 0);
     const undev_vial = Math.max(0.05, 1 - (undevCost + vial) / 100);
     const bargain_tag = Math.max(Math.pow(0.75, tagLvl), 0.1);
-    var discount = oa * newBubble * undev_vial * bargain_tag;
-    var result = [oa, bargain_tag, newBubble, undev_vial, discount];
+    const discount = oa * newBubble * undev_vial * bargain_tag;
+    let result = [oa, bargain_tag, newBubble, undev_vial, discount];
     result = result.map((a) => {
       return (precision - Math.round(a * precision)) / 100;
     });

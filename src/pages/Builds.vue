@@ -120,11 +120,11 @@
 import { computed, defineComponent, onBeforeMount, ref } from "vue";
 import { useToast } from "vue-toastification";
 
-import BuildSkills from "~/components/BuildSkills.vue";
-import { useBuilds, Build } from "~/composables/Builds";
+import { Build, useBuilds } from "~/composables/Builds";
 import { Class, Subclass, useCharacters } from "~/composables/Characters";
 import { GameVersions } from "~/composables/Utilities";
 import { useAuth } from "~/State";
+import BuildSkills from "~/components/BuildSkills.vue";
 
 export default defineComponent({
   name: "Builds",

@@ -95,22 +95,21 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from "vue";
-
-import CoinDisplay from "~/components/CoinDisplay.vue";
-import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import { Assets } from "~/composables/Utilities";
 import { Stamps, useStamps } from "~/composables/Stamps";
+import { computed, defineComponent } from "vue";
 import { useState } from "~/State";
+import CoinDisplay from "~/components/CoinDisplay.vue";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 
 const WikiLinks = new Map([["Stamps", "https://idleon.info/wiki/Stamps"]]);
 
 export default defineComponent({
-  name: "Stamps",
   components: {
     CoinDisplay,
     ICAsset,
   },
+  name: "Stamps",
   setup() {
     const state = useState();
     const {
@@ -127,9 +126,9 @@ export default defineComponent({
     return {
       Assets,
       allStamps: Stamps,
+      calculateStampBonus,
       calculateStampCoinCost,
       calculateStampMaterialsCost,
-      calculateStampBonus,
       stamps,
       wikiLinks: WikiLinks,
     };
