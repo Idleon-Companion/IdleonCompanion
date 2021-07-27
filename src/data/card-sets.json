@@ -90,11 +90,7 @@
       "1": "Fly",
       "2": "Poop"
     },
-    "minimal": {
-      "1": "Best_Damage",
-      "2": "Best_Accuracy",
-      "3": "Best_Drop_Rate"
-    }
+    "minimal": {}
   },
   "card_set_6": {
     "title": "AFK Farming",
@@ -122,9 +118,7 @@
       "2": "Sand_Castle",
       "3": "Wood_Mushroom"
     },
-    "useful": {
-      "1": "Best_Secondary_Accuracy"
-    },
+    "useful": {},
     "minimal": {}
   },
   "card_set_8": {
@@ -135,12 +129,8 @@
       "3": "Mashed_Potato",
       "4": "Pincermin"
     },
-    "useful": {
-      "1": "Best_Damage"
-    },
-    "minimal": {
-      "1": "Best_Accuracy"
-    }
+    "useful": {},
+    "minimal": {}
   },
   "card_set_9": {
     "title": "Drop Rate",
