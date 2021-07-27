@@ -86,7 +86,7 @@ import { Assets } from "~/composables/Utilities";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import cardData from "~/data/card-sets.json";
 
-const WikiLinks = new Map([["Cards", "https://idleon.info/wiki/Cards"]]);
+const wikiLinks = new Map([["Cards", "https://idleon.info/wiki/Cards"]]);
 
 export default defineComponent({
   name: "Cards",
@@ -97,7 +97,7 @@ export default defineComponent({
     return {
       Assets,
       cardData,
-      wikiLinks: WikiLinks,
+      wikiLinks,
     };
   },
 });

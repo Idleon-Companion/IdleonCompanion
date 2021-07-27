@@ -79,13 +79,14 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from "vue";
-import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
-import { StatueName, Statues } from "~/composables/Statues";
-import { Assets } from "~/composables/Utilities";
-import { useState } from "~/State";
+import { computed, defineComponent } from "vue";
 
-const WikiLinks = new Map([
+import { Assets } from "~/composables/Utilities";
+import { StatueName, Statues } from "~/composables/Statues";
+import { useState } from "~/State";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
+
+const wikiLinks = new Map([
   ["Statues", "https://idleon.miraheze.org/wiki/Statues"],
 ]);
 
@@ -123,7 +124,7 @@ export default defineComponent({
       bonusText,
       costToNextLevel,
       statues,
-      wikiLinks: WikiLinks,
+      wikiLinks,
     };
   },
 });
