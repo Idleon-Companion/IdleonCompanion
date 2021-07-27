@@ -1,59 +1,75 @@
 <template>
-  <!-- Info -->
-  <div class="row">
-    <div>
-      <p class="h6 text-light bg-primary p-3 mb-4 rounded">
-        Use this page to calculate the materials needed for a recipe. Select
-        your recipe, and the quantity to craft.
-      </p>
-    </div>
-  </div>
-  <!-- Recipe + Quantity selectors -->
-  <div class="row d-flex justify-content-between flex-wrap" id="selectors">
-    <!-- Recipe Selector -->
-    <div class="col d-flex flex-wrap mb-3">
-      <div class="col-auto mb-3 me-3">
-        <select v-model="recipe" class="" id="recipe-selector">
-          <option value="" selected>Select Your Recipe</option>
-          <option v-for="(recipe, id) in data" :key="id" :value="id">
-            {{ recipe.name }}
-          </option>
-        </select>
+  <q-banner inline-actions>
+    Use this page to calculate the materials needed for a recipe. Select your
+    recipe, and the quantity to craft.
+    <template v-slot:action>
+      <q-btn-dropdown outline label="Wiki">
+        <q-list separator>
+          <a v-for="[label, link] in wikiLinks" :key="label" :href="link">
+            <q-item clickable>
+              <q-item-section>{{ label }}</q-item-section>
+            </q-item>
+          </a>
+        </q-list>
+      </q-btn-dropdown>
+    </template>
+  </q-banner>
+  <q-card class="m-4">
+    <q-card-section>
+      <div class="flex justify-between items-center">
+        <div class="text-2xl">Recipe Calculator</div>
+        <div class="text-sm">Last Updated: {{ lastUpdated }}</div>
       </div>
-      <!-- Quantity Input -->
-      <div class="col-auto">
-        <div class="input-group">
-          <span class="input-group-text">Quantity</span>
-          <input
-            v-model.number="quantity"
-            type="number"
-            min="1"
-            id="recipe-quantity"
-            class="form-control"
-          />
-        </div>
+      <div class="flex">
+        <q-select
+          v-model="recipe"
+          :options="filteredRecipes"
+          outlined
+          use-input
+          :input-debounce="0"
+          label="Select Recipe"
+          class="w-full md:w-1/3 mt-2 mr-2"
+          @filter="onFilterRecipes"
+        />
+        <q-input
+          v-model.number="quantity"
+          type="number"
+          :min="1"
+          filled
+          label="Quantity"
+          class="mt-2"
+        />
       </div>
-      <!-- Game Version Note -->
-    </div>
-    <div class="col-auto text-light">
-      <div id="version-group" class="p-2">
-        <h3>Last Updated</h3>
-        <p>v1.22</p>
-        <p>June 28, 2021</p>
+    </q-card-section>
+    <q-card-section>
+      <div v-if="recipe && quantity">
+        <div class="text-xl">Materials</div>
+        <q-tree
+          :nodes="nodes"
+          node-key="name"
+          label-key="name"
+          children-key="materials"
+        >
+          <template #default-header="props">
+            <div class="flex items-center">
+              <ICAsset
+                size="small"
+                :image="
+                  Assets.MaterialImage(props.node.name.replace(/ /g, '_'))
+                "
+                :title="props.node.name"
+              >
+                <template #tooltip>
+                  <div v-html="props.node.name"></div>
+                </template>
+              </ICAsset>
+              {{ props.node.quantity }} {{ props.node.name }}
+            </div>
+          </template>
+        </q-tree>
       </div>
-    </div>
-  </div>
-  <!-- Display Materials -->
-  <div v-if="recipe && quantity" class="text-light">
-    <h4>Materials</h4>
-    <recipe-tree
-      :label="materials.name"
-      :nodes="materials.materials"
-      :quantity="1"
-      :depth="0"
-      :toCraft="Number(quantity)"
-    />
-  </div>
+    </q-card-section>
+  </q-card>
 </template>
 
 <script lang="ts">
@@ -61,7 +77,6 @@ import { computed, defineComponent, ref } from "vue";
 
 import { Assets } from "~/composables/Utilities";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
-import RecipeTree from "~/components/RecipeTree.vue";
 import calculatorData from "~/data/recipeCalculator.json";
 
 type MaterialObject = {
@@ -74,23 +89,58 @@ type RecipeObject = {
   materials: Array<MaterialObject>;
 };
 
+const wikiLinks = new Map([["Smithing", "https://idleon.info/wiki/Smithing"]]);
+
 export default defineComponent({
   name: "RecipeCalculator",
   components: {
     ICAsset,
-    RecipeTree,
   },
   setup() {
-    const data: Record<string, RecipeObject> = calculatorData;
-    const recipe = ref("");
-    const quantity = ref("");
-    const materials = computed((): RecipeObject => {
-      if (recipe.value === "") {
-        return {} as RecipeObject;
+    const recipes: Record<string, RecipeObject> = calculatorData;
+    const recipe = ref(null as { label: string; value: string } | null);
+    const quantity = ref(1);
+    const lastUpdated = "June 28, 2021 (v1.22)";
+
+    const nodes = computed((): RecipeObject[] => {
+      if (!recipe.value) {
+        return [];
       }
-      return data[recipe.value];
+      return [recipes[recipe.value.value]];
     });
-    return { Assets, data, recipe, quantity, materials };
+
+    const allRecipes = Object.entries(recipes).map(([id, recipe]) => {
+      return {
+        label: recipe.name,
+        value: id,
+      };
+    });
+
+    const filteredRecipes = ref(allRecipes);
+
+    const onFilterRecipes = (name: string, update: (cb: any) => void) => {
+      update(() => {
+        if (name === "") {
+          filteredRecipes.value = allRecipes;
+        } else {
+          filteredRecipes.value = allRecipes.filter((r) =>
+            r.label.toLowerCase().includes(name.toLowerCase())
+          );
+        }
+      });
+    };
+
+    return {
+      Assets,
+      filteredRecipes,
+      lastUpdated,
+      nodes,
+      onFilterRecipes,
+      quantity,
+      recipe,
+      recipes,
+      wikiLinks,
+    };
   },
 });
 </script>
