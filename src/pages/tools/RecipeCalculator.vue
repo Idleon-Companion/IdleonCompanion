@@ -58,10 +58,11 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-import calculatorData from "~/data/recipeCalculator.json";
-import RecipeTree from "~/components/RecipeTree.vue";
-import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
+
 import { Assets } from "~/composables/Utilities";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
+import RecipeTree from "~/components/RecipeTree.vue";
+import calculatorData from "~/data/recipeCalculator.json";
 
 type MaterialObject = {
   name: string;
@@ -95,7 +96,7 @@ export default defineComponent({
 </script>
 
 <style lang="sass" scoped>
-@import '../styles/base.sass'
+@import '../../styles/base.sass'
 
 #version-group
   border: 2px solid $primary

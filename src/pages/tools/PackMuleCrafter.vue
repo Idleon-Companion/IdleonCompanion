@@ -177,19 +177,15 @@ export default defineComponent({
     const data: Record<string, PackMuleObject> = packMuleData;
     const anvilTab = ref("");
     const taskTier = ref("");
-    const recommended = computed(
-      (): PackMuleObject => {
-        if (anvilTab.value === "" || taskTier.value === "") {
-          return {} as PackMuleObject;
-        }
-        return data[`${anvilTab.value}${taskTier.value}`];
+    const recommended = computed((): PackMuleObject => {
+      if (anvilTab.value === "" || taskTier.value === "") {
+        return {} as PackMuleObject;
       }
-    );
+      return data[`${anvilTab.value}${taskTier.value}`];
+    });
     return { data, anvilTab, taskTier, recommended };
   },
 });
 </script>
 
-<style lang="sass" scoped>
-@import '../styles/base.sass'
-</style>
+<style lang="sass" scoped></style>

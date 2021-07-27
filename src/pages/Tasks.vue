@@ -126,13 +126,14 @@
 
 <script lang="ts">
 import { computed, defineComponent, onMounted, reactive, ref } from "vue";
-import { useState } from "~/State";
-import { Task } from "~/composables/Progress";
-import taskData from "~/data/defaultTasks.json";
-
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import relativeTime from "dayjs/plugin/relativeTime";
+
+import { Task } from "~/composables/Progress";
+import { useState } from "~/State";
+import taskData from "~/data/defaultTasks.json";
+
 dayjs.locale;
 dayjs.extend(duration);
 dayjs.extend(relativeTime);

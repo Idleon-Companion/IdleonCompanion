@@ -14,9 +14,9 @@
 <script lang="ts">
 import { computed, defineComponent } from "vue";
 
+import { useCharacters } from "~/composables/Characters";
 import CharacterCard from "~/components/characters/CharacterCard.vue";
 import CharacterSelector from "~/components/characters/CharacterSelector.vue";
-import { useCharacters } from "~/composables/Characters";
 import CloudData from "~/components/CloudData.vue";
 
 export default defineComponent({

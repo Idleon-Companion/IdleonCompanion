@@ -33,12 +33,13 @@
 
 <script lang="ts">
 import { computed, defineComponent } from "vue";
-import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
+
 import { Assets } from "~/composables/Utilities";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 
 type Indent = {
-  transform: String;
-  display: String;
+  transform: string;
+  display: string;
 };
 
 export default defineComponent({
@@ -57,7 +58,7 @@ export default defineComponent({
     const indent = computed(() => {
       return { transform: `translate(${props.depth * 40}px)`, display: "flex" };
     });
-    const computedQuantity = computed((): String => {
+    const computedQuantity = computed((): string => {
       return (props.quantity * props.toCraft).toLocaleString();
     });
     return { Assets, computedQuantity, indent };

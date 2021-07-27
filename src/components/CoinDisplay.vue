@@ -11,6 +11,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
 import { Assets, useMoney } from "~/composables/Utilities";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 
