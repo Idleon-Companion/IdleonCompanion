@@ -1,60 +1,46 @@
 <template>
-  <!-- Dropdown Selectors -->
-  <div class="row">
-    <div>
-      <p class="h6 text-light bg-primary p-3 mb-4 rounded">
-        Use this page to help plan the Pack Mule Crafter W1 Task. Select your
-        highest unlocked Anvil Tab, and what task tier you need to complete.
-      </p>
-    </div>
-  </div>
-  <div class="container text-light" id="selectors">
-    <div class="row">
-      <!-- Anvil Tab Selector -->
-      <div class="col-sm-5 pl-3 mb-2">
-        <div class="form-group">
-          <h3>Anvil Tab Unlocked</h3>
-          <select v-model="anvilTab">
-            <option value="" selected>Select Anvil Tab</option>
-            <option value="anvil1">Anvil Tab 1</option>
-            <option value="anvil2">Anvil Tab 2</option>
-            <option value="anvil3">Anvil Tab 3</option>
-          </select>
-        </div>
+  <q-banner inline-actions>
+    Use this page to help plan the Pack Mule Crafter W1 Task. Select your
+    highest unlocked Anvil Tab, and what task tier you need to complete.
+    <template v-slot:action>
+      <q-btn-dropdown outline label="Wiki">
+        <q-list separator>
+          <a v-for="[label, link] in wikiLinks" :key="label" :href="link">
+            <q-item clickable>
+              <q-item-section>{{ label }}</q-item-section>
+            </q-item>
+          </a>
+        </q-list>
+      </q-btn-dropdown>
+    </template>
+  </q-banner>
+  <q-card class="m-4 p-2">
+    <q-card-section>
+      <div class="flex justify-between items-center">
+        <div class="text-2xl">Pack Mule Crafter</div>
+        <div class="text-sm">Last Updated: {{ lastUpdated }}</div>
       </div>
-      <!-- Task Tier Selector -->
-      <div class="col-sm-5 pl-3 mb-2">
-        <div class="form-group">
-          <h3>Task Tier</h3>
-          <select v-model="taskTier">
-            <option value="" selected>Select Task Tier</option>
-            <option value="tier1">Tier 1 (3 Items)</option>
-            <option value="tier2">Tier 2 (8 Items)</option>
-            <option value="tier3">Tier 3 (14 Items)</option>
-            <option value="tier4">Tier 4 (24 Items)</option>
-            <option value="tier5">Tier 5 (34 Items)</option>
-            <option value="tier6">Tier 6 (45 Items)</option>
-            <option value="tier7">Tier 7 (55 Items)</option>
-            <option value="tier8">Tier 8 (70 Items)</option>
-            <option value="tier9">Tier 9 (90 Items)</option>
-            <option value="tier10">Tier 10 (110 Items)</option>
-          </select>
-        </div>
+      <div class="flex">
+        <q-select
+          v-model="anvilTab"
+          label="Anvil Tab"
+          outlined
+          :options="anvilTabs"
+          class="w-full md:(w-1/4 mr-2) mt-2"
+        />
+        <q-select
+          v-model="taskTier"
+          label="Task Tier"
+          outlined
+          :options="taskTiers"
+          class="w-full md:w-1/4 mt-2"
+        />
       </div>
-      <!-- Game Version Note -->
-      <div class="col-sm-2 pl-3 mb-2">
-        <h3>Last Updated</h3>
-        <p>v1.23</p>
-        <p>July 31, 2021</p>
-      </div>
-    </div>
-  </div>
-  <!-- Display Recommended -->
-  <div v-if="anvilTab && taskTier" class="container text-light">
-    <div v-if="recommended.recipes.length === 0" id="noRecommendations">
-      <h4>No Recipe Suggestions</h4>
-      <p>This is probably due to one of the following reasons:</p>
-      <ul>
+    </q-card-section>
+    <q-card-section v-if="anvilTab && taskTier">
+      <div v-if="!recommended.recipes.length">
+        <div class="text-xl mb-2">No Recipe Suggestions</div>
+        <div>This is probably due to the following:</div>
         <li>
           This Anvil Tab selection doesn't have enough items for this tier of
           the task
@@ -63,189 +49,84 @@
           There aren't enough inventory slots available to craft all the items
           for this tier of the task
         </li>
-      </ul>
-    </div>
-    <div v-else>
-      <div class="row">
-        <!-- Special Notes -->
-        <div class="col-sm-4" id="notes">
-          <!-- Crafting Notes -->
-          <h4>Notes</h4>
-          <p>Please keep the following in mind while crafting:</p>
-          <ul>
-            <li>
-              Recipes need to be crafted in the order they are listed, as that's
-              how they were successfully tested
-            </li>
-            <li>
-              Remember to combine "not full" stacks of materials when possible,
-              as that was taken into account during testing
-            </li>
-            <li>
-              The list of Inventory Capacity Setups are not a perfect
-              calculation and there can be variation between setups for a given
-              number of slots and list of materials. These lists are always
-              looking to be improved and should always be considered a
-              possibility, not "the best"
-            </li>
-          </ul>
-        </div>
-        <!-- Recipe List -->
-        <div class="col-sm-4" id="recipes">
-          <h4>Recipe List</h4>
-          <div
-            class="container"
-            id="recipeList"
-            style="height: 300px; overflow: auto"
-          >
-            <div
-              class="row"
-              v-for="(recipe, index) in recommended.recipes"
-              :key="`recipe-${index}`"
-            >
-              <div class="border-top border-bottom col-sm-3">
-                <GameAsset
-                  :height="72"
-                  :image="
-                    Assets.MaterialImage(
-                      recipe.replace(/[0-9]+ /g, '').replace(/ /g, '_')
-                    )
-                  "
-                  :title="recipe.replace(/[0-9]+ /g, '')"
-                >
-                  <template #tooltip>
-                    <div v-html="recipe.replace(/[0-9]+ /g, '')"></div>
-                  </template>
-                </GameAsset>
-              </div>
-              <div class="border-top border-bottom col-sm-9">
-                {{ recipe }}
-              </div>
-            </div>
+      </div>
+      <div v-else>
+        <div class="text-xl">Notes</div>
+        <ul class="list-disc ml-4">
+          <li>
+            Recipes need to be crafted in the order they are listed, as that's
+            how they were successfully tested
+          </li>
+          <li>
+            Remember to combine "not full" stacks of materials when possible, as
+            that was taken into account during testing
+          </li>
+          <li>
+            The list of Inventory Capacity Setups are not a perfect calculation
+            and there can be variation between setups for a given number of
+            slots and list of materials. These lists are always looking to be
+            improved and should always be considered a possibility, not "the
+            best"
+          </li>
+        </ul>
+        <div class="flex justify-around">
+          <div class="flex flex-col justify-center w-full md:w-1/3">
+            <q-card bordered class="m-2 p-2">
+              <q-scroll-area class="h-80">
+                <div class="text-lg">Recipe List</div>
+                <div v-for="(recipe, index) in recommended.recipes">
+                  <div class="p-2 opacity-86">
+                    {{ index + 1 }}: {{ recipe }}
+                  </div>
+                  <q-separator v-if="index < recommended.recipes.length - 1" />
+                </div>
+              </q-scroll-area>
+            </q-card>
+            <q-card bordered class="m-2 p-2">
+              <q-scroll-area class="h-80">
+                <div class="text-lg">Materials Needed</div>
+                <div v-for="(material, index) in recommended.materials">
+                  <div class="p-2 opacity-86">{{ material }}</div>
+                  <q-separator
+                    v-if="index < recommended.materials.length - 1"
+                  />
+                </div>
+              </q-scroll-area>
+            </q-card>
           </div>
-        </div>
-        <!-- Material List -->
-        <div class="col-sm-4" id="materials">
-          <h4>Material List</h4>
-          <div
-            class="container"
-            id="materialList"
-            style="height: 300px; overflow: auto"
-          >
-            <div
-              class="row"
-              v-for="(material, index) in recommended.materials"
-              :key="`material-${index}`"
-            >
-              <div class="border-top border-bottom col-sm-3">
-                <GameAsset
-                  :height="72"
-                  :image="
-                    Assets.MaterialImage(
-                      material.replace(/[0-9]+ /g, '').replace(/ /g, '_')
-                    )
-                  "
-                  :title="material.replace(/[0-9]+ /g, '')"
-                >
-                  <template #tooltip>
-                    <div v-html="material.replace(/[0-9]+ /g, '')"></div>
-                  </template>
-                </GameAsset>
-              </div>
-              <div class="border-top border-bottom col-sm-9">
-                {{ material }}
-              </div>
-            </div>
-          </div>
+          <q-card bordered class="w-full md:w-1/2 m-2 p-2">
+            <q-scroll-area class="h-160">
+              <div class="text-lg">Inventory Requirements</div>
+              <q-markup-table class="text-center">
+                <thead>
+                  <tr>
+                    <th>Bag Slots</th>
+                    <th>Material</th>
+                    <th>Mining</th>
+                    <th>Fish</th>
+                    <th>Food</th>
+                    <th>Choppin</th>
+                    <th>Bugs</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="inventory in recommended.caps">
+                    <td>{{ inventory.slots }}</td>
+                    <td>{{ inventory.material }}</td>
+                    <td>{{ inventory.mining }}</td>
+                    <td>{{ inventory.fish }}</td>
+                    <td>{{ inventory.food }}</td>
+                    <td>{{ inventory.choppin }}</td>
+                    <td>{{ inventory.bug }}</td>
+                  </tr>
+                </tbody>
+              </q-markup-table>
+            </q-scroll-area>
+          </q-card>
         </div>
       </div>
-      <div class="row">
-        <h4>Inventory Capacity Setups</h4>
-        <div class="container" style="height: 475px; overflow: auto">
-          <!-- Current Character Setup -->
-          <div v-if="curCharacter !== null">
-            <h5>Using Character "{{ curCharacter.name }}"</h5>
-            <!-- Character doesn't have enough slots -->
-            <div v-if="defaultSlots === null">
-              Currently selected character is not capable of completing this
-              tier of the task
-            </div>
-            <!-- Character has enough slots -->
-            <div v-else class="row">
-              <div class="border-top border-bottom col-sm">
-                <h5>Slots: {{ recommended.caps[defaultSlots].slots }}</h5>
-              </div>
-              <div class="border-top border-bottom col-sm">
-                Material:<br />{{ recommended.caps[defaultSlots].material }}
-              </div>
-              <div class="border-top border-bottom col-sm">
-                Mining:<br />{{ recommended.caps[defaultSlots].mining }}
-              </div>
-              <div class="border-top border-bottom col-sm">
-                Fish:<br />{{ recommended.caps[defaultSlots].fish }}
-              </div>
-              <div class="border-top border-bottom col-sm">
-                Food:<br />{{ recommended.caps[defaultSlots].food }}
-              </div>
-              <div class="border-top border-bottom col-sm">
-                Chopping:<br />{{ recommended.caps[defaultSlots].choppin }}
-              </div>
-              <div class="border-top border-bottom col-sm">
-                Bug:<br />{{ recommended.caps[defaultSlots].bug }}
-              </div>
-              <div class="border-top border-bottom col-sm">
-                Soul:<br />{{ recommended.caps[defaultSlots].soul }}
-              </div>
-              <div class="border-top border-bottom col-sm">
-                Critter:<br />{{ recommended.caps[defaultSlots].critter }}
-              </div>
-            </div>
-          </div>
-          <h5>All Inventory Setups</h5>
-          <!-- Inventory Selector -->
-          <select v-model="invSlots" id="slot-selector">
-            <option
-              v-for="(inventory, index) in recommended.caps"
-              :key="index"
-              :value="index"
-            >
-              {{ inventory.slots }} Inventory Slots
-            </option>
-          </select>
-          <!-- Display Selected Inventory Setup -->
-          <div class="row">
-            <div class="border-top border-bottom col-sm">
-              <h5>Slots: {{ recommended.caps[parseInt(invSlots)].slots }}</h5>
-            </div>
-            <div class="border-top border-bottom col-sm">
-              Material:<br />{{ recommended.caps[parseInt(invSlots)].material }}
-            </div>
-            <div class="border-top border-bottom col-sm">
-              Mining:<br />{{ recommended.caps[parseInt(invSlots)].mining }}
-            </div>
-            <div class="border-top border-bottom col-sm">
-              Fish:<br />{{ recommended.caps[parseInt(invSlots)].fish }}
-            </div>
-            <div class="border-top border-bottom col-sm">
-              Food:<br />{{ recommended.caps[parseInt(invSlots)].food }}
-            </div>
-            <div class="border-top border-bottom col-sm">
-              Chopping:<br />{{ recommended.caps[parseInt(invSlots)].choppin }}
-            </div>
-            <div class="border-top border-bottom col-sm">
-              Bug:<br />{{ recommended.caps[parseInt(invSlots)].bug }}
-            </div>
-            <div class="border-top border-bottom col-sm">
-              Soul:<br />{{ recommended.caps[parseInt(invSlots)].soul }}
-            </div>
-            <div class="border-top border-bottom col-sm">
-              Critter:<br />{{ recommended.caps[parseInt(invSlots)].critter }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </q-card-section>
+  </q-card>
 </template>
 
 <script lang="ts">
@@ -262,6 +143,17 @@ type PackMuleObject = {
   materials: Array<string>;
   caps: Array<Record<string, number>>;
 };
+type SelectOption = {
+  label: string;
+  value: string;
+};
+
+const wikiLinks = new Map([
+  [
+    "Pack Mule Crafter Task",
+    "https://idleon.miraheze.org/wiki/Tasks/Blunder_Hills#Pack_Mule_Crafter",
+  ],
+]);
 
 export default defineComponent({
   name: "PackMuleCrafter",
@@ -271,13 +163,32 @@ export default defineComponent({
   setup() {
     const { characters, currentCharacter } = useCharacters();
     const data: Record<string, PackMuleObject> = packMuleData;
-    const anvilTab = ref("");
-    const taskTier = ref("");
+    const anvilTab = ref(null as SelectOption | null);
+    const taskTier = ref(null as SelectOption | null);
+
+    const anvilTabs = [
+      { label: "Anvil Tab 1", value: "anvil1" },
+      { label: "Anvil Tab 1-2", value: "anvil2" },
+    ];
+    const taskTiers = [
+      { label: "Tier 1 (3 Items)", value: "tier1" },
+      { label: "Tier 2 (8 Items)", value: "tier2" },
+      { label: "Tier 3 (14 Items)", value: "tier3" },
+      { label: "Tier 4 (24 Items)", value: "tier4" },
+      { label: "Tier 5 (34 Items)", value: "tier5" },
+      { label: "Tier 6 (45 Items)", value: "tier6" },
+      { label: "Tier 7 (55 Items)", value: "tier7" },
+      { label: "Tier 8 (70 Items)", value: "tier8" },
+      { label: "Tier 9 (90 Items)", value: "tier9" },
+      { label: "Tier 10 (110 Items)", value: "tier10" },
+    ];
+    const lastUpdated = "April 11, 2021 (v1.14)";
+
     const recommended = computed((): PackMuleObject => {
       if (!anvilTab.value || !taskTier.value) {
         return {} as PackMuleObject;
       }
-      return data[`${anvilTab.value}${taskTier.value}`];
+      return data[`${anvilTab.value.value}${taskTier.value.value}`];
     });
 
     const defaultSlots = computed((): number | null => {
@@ -295,13 +206,17 @@ export default defineComponent({
     return {
       Assets,
       anvilTab,
+      anvilTabs,
       characters,
       currentCharacter,
       data,
       defaultSlots,
       invSlots,
+      lastUpdated,
       recommended,
       taskTier,
+      taskTiers,
+      wikiLinks,
     };
   },
 });

@@ -44,30 +44,8 @@ div.bg-primary
 /** Quasar Overrides **/
 aside.q-drawer--left
   height: 100%
-// input, textarea, select
-//   background: none
-//   border: 1px solid darken(white, 25%)
-//   border-radius: 0.25rem
-//   color: white
-//   outline: none
-//   padding: 0.5rem
-// input[type='range']
-//   border: none
-// select
-//   background: darken($primary, 5%)
-//   border: 1px solid $primary
-//   cursor: pointer
-// textarea
-//   min-height: 2.5rem
-// option
-//   background: darken($primary, 5%)
-//   color: darken(white, 25%)
-// button
-//   background: lighten($primary, 10%)
-//   border: none
-//   color: darken(white, 10%)
-//   outline: none
-//   transition: 0.3s
-//   &:hover
-//     background: lighten($primary, 15%)
-//     color: darken(white, 10%)
+
+// Make input labels visible in dark mode
+.q-field--dark
+  .q-field__label
+    color: #ffffffb3 !important
