@@ -5,6 +5,7 @@
       "x1": 1,
       "x2": 0,
       "Func": "Add",
+      "effectDesc": " Total STR. 'Total' here means that, for example, a 10% STR bonus from something else wouldn't affect this bonus.",
       "Materials": [
         {
           "Name": "Oak Logs",
@@ -23,6 +24,7 @@
       "x1": 2,
       "x2": 50,
       "Func": "DecayMulti",
+      "effectDesc": "All Orange Passive Bubbles, which are the smaller sized ones, give a x higher bonus to your warrior-based classes.",
       "Materials": [
         {
           "Name": "Spore Cap",
@@ -46,6 +48,7 @@
       "x1": 50,
       "x2": 100,
       "Func": "Decay",
+      "effectDesc": "% mining efficiency per power of 10 max HP that your character has. The perfect bonus for miners with infinite HP!",
       "Materials": [
         {
           "Name": "Jungle Logs",
@@ -69,6 +72,7 @@
       "x1": 23.5,
       "x2": 1.5,
       "Func": "BigBase",
+      "effectDesc": "Multi-Ore mining chance is increased by %, and your max Multi-Ore chance is 300% instead of 100%.",
       "Materials": [
         {
           "Name": "Fly",
@@ -92,6 +96,7 @@
       "x1": 100,
       "x2": 80,
       "Func": "Decay",
+      "effectDesc": "% Mining and Fishing EXP gain. Y'know what, I'll even DOUBLE that bonus for whichever skill has the lower level!",
       "Materials": [
         {
           "Name": "Boring Brick",
@@ -115,6 +120,7 @@
       "x1": 1,
       "x2": 0.02,
       "Func": "Add",
+      "effectDesc": "Increases base damage by $. This bonus increases based on how much Max HP you have above 250.",
       "Materials": [
         {
           "Name": "Bleach Logs",
@@ -138,6 +144,7 @@
       "x1": 23.5,
       "x2": 1.5,
       "Func": "BigBase",
+      "effectDesc": "Multi-Fish fishing chance is increased by %, and your max Multi-Fish chance is 300% instead of 100%.",
       "Materials": [
         {
           "Name": "Hermit Can",
@@ -156,6 +163,7 @@
       "x1": 65,
       "x2": 70,
       "Func": "Decay",
+      "effectDesc": "The following tools give % more skilling Power than normal: $",
       "Materials": [
         {
           "Name": "Platinum Ore",
@@ -179,6 +187,7 @@
       "x1": 0.5,
       "x2": 0,
       "Func": "Add",
+      "effectDesc": "% more defence from Equipment. Also, 1 base Def per Class LV, up to .",
       "Materials": [
         {
           "Name": "Fruitfly",
@@ -207,6 +216,7 @@
       "x1": 35,
       "x2": 100,
       "Func": "Decay",
+      "effectDesc": "% critical Damage. Badabing, badaboom! Or in Italian, Babadabinga, babadaboomahh!",
       "Materials": [
         {
           "Name": "Pinion Spur",
@@ -235,6 +245,7 @@
       "x1": 40,
       "x2": 50,
       "Func": "Decay",
+      "effectDesc": "% Total damage. This multiplies with other damage bonuses, but adds with the other '% Total Damage' bubbles.",
       "Materials": [
         {
           "Name": "Froge",
@@ -253,6 +264,7 @@
       "x1": 25,
       "x2": 2.5,
       "Func": "BigBase",
+      "effectDesc": "% Construction EXP Gain. Also gives 50% Bug-Fixing speed if your username is LavaFlame2. Actually, better make that 500%...",
       "Materials": [
         {
           "Name": "Moustache Comb",
@@ -271,6 +283,7 @@
       "x1": 2,
       "x2": 50,
       "Func": "Decay",
+      "effectDesc": "% Build Speed per Construction Level.",
       "Materials": [
         {
           "Name": "Explosive Salts",
@@ -289,6 +302,7 @@
       "x1": 5,
       "x2": 1,
       "Func": "BigBase",
+      "effectDesc": " Talent Points for EACH tab! Yea, it's amazing right? But it's just for warriors, don't tell the other classes!!",
       "Materials": [
         {
           "Name": "Mousey",
@@ -307,6 +321,7 @@
       "x1": 40,
       "x2": 12,
       "Func": "Decay",
+      "effectDesc": "The material costs of ALL orange bubbles are % lower",
       "Materials": [
         {
           "Name": "Frigid Soul",
@@ -327,6 +342,7 @@
       "x1": 1,
       "x2": 0,
       "Func": "Add",
+      "effectDesc": " Total AGI. Probably the lamest of the five stats... err, I mean four, hehe.",
       "Materials": [
         {
           "Name": "Copper Ore",
@@ -345,6 +361,7 @@
       "x1": 2,
       "x2": 50,
       "Func": "DecayMulti",
+      "effectDesc": "All Green Passive Bonuses, which are the smaller sized ones, give x more bonuses to your archer-based characters.",
       "Materials": [
         {
           "Name": "Spore Cap",
@@ -368,6 +385,7 @@
       "x1": 23,
       "x2": 2,
       "Func": "BigBase",
+      "effectDesc": "You can now produce 1 more items at once in the anvil, and your production speed is increased by %.",
       "Materials": [
         {
           "Name": "Iron Ore",
@@ -391,6 +409,7 @@
       "x1": 20,
       "x2": 100,
       "Func": "Decay",
+      "effectDesc": "% Mastery. Mastery is your stat that boosts minimum damage. Just like in Maplest... err, just like how I thought it up myself!",
       "Materials": [
         {
           "Name": "Goldfish",
@@ -414,6 +433,7 @@
       "x1": 40,
       "x2": 100,
       "Func": "Decay",
+      "effectDesc": "Costs for buying Anvil Production Points is reduced by %. This is just like a tax cut, so remember me as a hero!",
       "Materials": [
         {
           "Name": "Forest Fibres",
@@ -437,6 +457,7 @@
       "x1": 1,
       "x2": 0.02,
       "Func": "Add",
+      "effectDesc": "Increases base damage by $. This bonus increases based on how much Movement Speed you have above 110%.",
       "Materials": [
         {
           "Name": "Coconotnotto",
@@ -460,6 +481,7 @@
       "x1": 65,
       "x2": 70,
       "Func": "Decay",
+      "effectDesc": "The following tools give % more skilling Power than normal: $",
       "Materials": [
         {
           "Name": "Slime Sludge",
@@ -483,6 +505,7 @@
       "x1": 23.5,
       "x2": 1.5,
       "Func": "BigBase",
+      "effectDesc": "Multi-Bug catching chance is increased by %, and your max Multi-Bug chance is 300% instead of 100%.",
       "Materials": [
         {
           "Name": "Sentient Cereal",
@@ -501,6 +524,7 @@
       "x1": 1,
       "x2": 0,
       "Func": "Add",
+      "effectDesc": "Your secondary stat (WIS for warrior, STR for archer, AGI for mage) gives % more Accuracy than normal.",
       "Materials": [
         {
           "Name": "Bloach",
@@ -529,6 +553,7 @@
       "x1": 7,
       "x2": 100,
       "Func": "Decay",
+      "effectDesc": "% critical Chance, as it increases the chance for your attack to hit the monster's privates, and for the monster to be male.",
       "Materials": [
         {
           "Name": "Mosquisnow",
@@ -557,6 +582,7 @@
       "x1": 40,
       "x2": 50,
       "Func": "Decay",
+      "effectDesc": "% Total damage. This multiplies with other damage bonuses, but adds with the other '% Total Damage' bubbles.",
       "Materials": [
         {
           "Name": "Forest Soul",
@@ -575,6 +601,7 @@
       "x1": 25,
       "x2": 2,
       "Func": "BigBase",
+      "effectDesc": "1 Placeable Trap, and % Trapping Efficiency.",
       "Materials": [
         {
           "Name": "Tundra Logs",
@@ -593,6 +620,7 @@
       "x1": 3,
       "x2": 100,
       "Func": "DecayMulti",
+      "effectDesc": "x more likely to catch shiny critters when opening a trap.",
       "Materials": [
         {
           "Name": "Rooted Soul",
@@ -610,7 +638,8 @@
       "Name": "FAST_BOI_TALENT",
       "x1": 5,
       "x2": 1,
-      "Func": "BigBase",
+      "Func": "BigBase"
+      "effectDesc": " Talent Points for EACH tab, but just for Archers! Well, and 'that' class, you know who you are!"
       "Materials": [
         {
           "Name": "Flycicle",
@@ -629,6 +658,7 @@
       "x1": 40,
       "x2": 12,
       "Func": "Decay",
+      "effectDesc": "The material costs of ALL green bubbles are % lower",
       "Materials": [
         {
           "Name": "Owlio",
@@ -649,6 +679,7 @@
       "x1": 1,
       "x2": 0,
       "Func": "Add",
+      "effectDesc": " Total WIS. Honesty the greatest bonus in any Idle Game, believe me. Absolutely incredible, everyone says so!",
       "Materials": [
         {
           "Name": "Thread",
@@ -667,6 +698,7 @@
       "x1": 2,
       "x2": 50,
       "Func": "DecayMulti",
+      "effectDesc": "All Purple Passive Bonuses, which are the smaller sized ones, give x more bonuses to your mage-based characters.",
       "Materials": [
         {
           "Name": "Spore Cap",
@@ -690,6 +722,7 @@
       "x1": 50,
       "x2": 100,
       "Func": "Decay",
+      "effectDesc": "% choppin efficiency per power of 10 max MP that your character has. Super diaper! Err, duper.",
       "Materials": [
         {
           "Name": "Trusty Nails",
@@ -713,6 +746,7 @@
       "x1": 23.5,
       "x2": 1.5,
       "Func": "BigBase",
+      "effectDesc": "Multi-Log chop chance is increased by %, and your max Multi-Log chance is now 300% instead of 100%.",
       "Materials": [
         {
           "Name": "Iron Bar",
@@ -736,6 +770,7 @@
       "x1": 100,
       "x2": 60,
       "Func": "Decay",
+      "effectDesc": "% Choppin' and Alchemy EXP gain. Y'know what, I'll even... actually, never mind.",
       "Materials": [
         {
           "Name": "Chain Link",
@@ -759,6 +794,7 @@
       "x1": 1,
       "x2": 0.02,
       "Func": "Add",
+      "effectDesc": "Increases base damage by $. This bonus increases based on how much Max MP you have above 150.",
       "Materials": [
         {
           "Name": "Snake Skin",
@@ -782,6 +818,7 @@
       "x1": 65,
       "x2": 70,
       "Func": "Decay",
+      "effectDesc": "The following tools give % more skilling Power than normal: $",
       "Materials": [
         {
           "Name": "Bleach Logs",
@@ -805,6 +842,7 @@
       "x1": 120,
       "x2": 70,
       "Func": "Decay",
+      "effectDesc": "Cranium Cooking lasts % longer, gives % more progress per kill, and has a % lower cooldown. Also % Alchemy EXP!",
       "Materials": [
         {
           "Name": "Potty Rolls",
@@ -823,6 +861,7 @@
       "x1": 50,
       "x2": 100,
       "Func": "Decay",
+      "effectDesc": "% Brew Speed. This a multiplicative bonus, which means its ultra powerful, all the time! Even on Mondays, the worst day!",
       "Materials": [
         {
           "Name": "High Steaks",
@@ -851,6 +890,7 @@
       "x1": 40,
       "x2": 100,
       "Func": "Decay",
+      "effectDesc": "Attack Talents give % higher bonuses to Offline Gains than they normally do. So you might as well just AFK forever, bye!",
       "Materials": [
         {
           "Name": "Veiny Logs",
@@ -879,6 +919,7 @@
       "x1": 40,
       "x2": 50,
       "Func": "Decay",
+      "effectDesc": "% Total damage. This multiplies with other damage bonuses, but adds with the other '% Total Damage' bubbles.",
       "Materials": [
         {
           "Name": "Redox Salts",
@@ -897,6 +938,7 @@
       "x1": 2.4,
       "x2": 70,
       "Func": "DecayMulti",
+      "effectDesc": "x Worship Charge rate per hour. Also, x Max Worship Charge! You bouta go super with all that charge... just sayin'",
       "Materials": [
         {
           "Name": "Crabbo",
@@ -915,6 +957,7 @@
       "x1": 80,
       "x2": 60,
       "Func": "Decay",
+      "effectDesc": "% Max Charge per 10 Worship levels. I guess you could say this upgrade doesn't come Free of Charge!",
       "Materials": [
         {
           "Name": "Mosquisnow",
@@ -933,6 +976,7 @@
       "x1": 5,
       "x2": 1,
       "Func": "BigBase",
+      "effectDesc": "Sorry, mages don't get anything because you're lame.... Ok fine, you can have  Talent Points for each tab, but I'm not happy about it.",
       "Materials": [
         {
           "Name": "Sippy Straw",
@@ -951,6 +995,7 @@
       "x1": 40,
       "x2": 12,
       "Func": "Decay",
+      "effectDesc": "The material costs of ALL purple bubbles are % lower",
       "Materials": [
         {
           "Name": "Forest Soul",
@@ -971,6 +1016,7 @@
       "x1": 1,
       "x2": 0,
       "Func": "Add",
+      "effectDesc": " LUK. Also, this will increase your chances of winning the lottery in real life from 0.0% to 0.000%! I'm not even joking, it's true!!",
       "Materials": [
         {
           "Name": "Copper Ore",
@@ -999,6 +1045,7 @@
       "x1": 40,
       "x2": 70,
       "Func": "Decay",
+      "effectDesc": "% Drop Rate. Thanks to this upgrade, you can get even MORE angry when you keep not getting that rare pet drop from the boss!",
       "Materials": [
         {
           "Name": "Goldfish",
@@ -1022,6 +1069,7 @@
       "x1": 25,
       "x2": 60,
       "Func": "Decay",
+      "effectDesc": "Leveling up a statue resets it's exp bar down to %, instead of 0%. Staturrific! Yea... the jokes are only gonna go downhill from here lol",
       "Materials": [
         {
           "Name": "Pocket Sand",
@@ -1045,6 +1093,7 @@
       "x1": 100,
       "x2": 30,
       "Func": "Decay",
+      "effectDesc": "Whenever you level up anything, % chance to drop a gift! It could be an EXP balloon, a Gem for the gem shop, or something crazy weird!",
       "Materials": [
         {
           "Name": "Iron Ore",
@@ -1073,6 +1122,7 @@
       "x1": 1.5,
       "x2": 60,
       "Func": "DecayMulti",
+      "effectDesc": "The Prowess Bonus for every skill is multiplied by . Prowess lowers the Efficiency needed to get multiple QTY per drop from resources.",
       "Materials": [
         {
           "Name": "Gold Bar",
@@ -1096,6 +1146,7 @@
       "x1": 1,
       "x2": 0,
       "Func": "Add",
+      "effectDesc": "Increases the Max Lv of the 'Toilet Paper Postage' Talent to . You can unlock this talent by typing 'More like Poopy Pete' near Pete.",
       "Materials": [
         {
           "Name": "Butterfly",
@@ -1114,6 +1165,7 @@
       "x1": 40,
       "x2": 70,
       "Func": "Decay",
+      "effectDesc": "Reduces the material costs of all Alchemy Bubbles by %. They are just bubbles though, how much could they even cost? 10 dollars?",
       "Materials": [
         {
           "Name": "Jellyfish",
@@ -1132,6 +1184,7 @@
       "x1": 30,
       "x2": 100,
       "Func": "Decay",
+      "effectDesc": "Increases the Max Cap for every liquid by $. This bonus increases based on the combined Alchemy LV of all your characters!",
       "Materials": [
         {
           "Name": "Leather Hide",
@@ -1150,6 +1203,7 @@
       "x1": 9.7,
       "x2": 0.3,
       "Func": "BigBase",
+      "effectDesc": "% Class EXP. The go-to active bubble for anyone who wants to reach max level faster and finally start playing the game!",
       "Materials": [
         {
           "Name": "Water Droplets",
@@ -1168,6 +1222,7 @@
       "x1": 120,
       "x2": 100,
       "Func": "Decay",
+      "effectDesc": "Every time you upgrade an Alchemy bubble, there's a % chance it'll upgrade 2 times, for no extra cost! Two fer one, getter dun!",
       "Materials": [
         {
           "Name": "Dementia Ore",
@@ -1191,6 +1246,7 @@
       "x1": 4,
       "x2": 0,
       "Func": "Add",
+      "effectDesc": "% Cog Production speed. Cogs are great. I really really like cogs. I guess you could say I think they're pretty Coggers...",
       "Materials": [
         {
           "Name": "Melty Cube",
@@ -1209,6 +1265,7 @@
       "x1": 12,
       "x2": 40,
       "Func": "Decay",
+      "effectDesc": "% Sample Size when taking samples for the 3d printer. Finally, your statisitcal analysis will be accurate!",
       "Materials": [
         {
           "Name": "Dune Soul",
@@ -1227,6 +1284,7 @@
       "x1": 70,
       "x2": 50,
       "Func": "Decay",
+      "effectDesc": "Each time a Giant Monster spawns, the chance for another Giant Monster in that same week goes down by % less than normal.",
       "Materials": [
         {
           "Name": "Scorpie",
@@ -1245,6 +1303,7 @@
       "x1": 100,
       "x2": 60,
       "Func": "Decay",
+      "effectDesc": "% Book Checkout speed, thanks to this one little bubble that librarians do NOT want you to know about!",
       "Materials": [
         {
           "Name": "Wispy Lumber",
@@ -1263,6 +1322,7 @@
       "x1": 40,
       "x2": 12,
       "Func": "Decay",
+      "effectDesc": "The material costs of ALL yellow bubbles are % lower.",
       "Materials": [
         {
           "Name": "Pingy",

@@ -3,7 +3,8 @@
   <div class="row">
     <div>
       <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
-        Track your alchemy progress of bubbles and see the costs/bonuses of those upgrades.
+        Track your alchemy progress of bubbles and see the costs/bonuses of those upgrades. <br>
+        Hover over the bubble icons to get a tooltip showing the effect of each bubble.
       </p>
     </div>
   </div>
@@ -70,7 +71,7 @@
       </tr>
       <tr class="alter-color"
         v-for="n in 15" :key="n">
-        <AlchemyRow @customChange="handleDiscountRecalc()" :group="activeGroup" :idx="amountBubbles-n" :discount="discount" />
+        <AlchemyRow @customChange="handleDiscountRecalc" :group="activeGroup" :idx="amountBubbles-n" :discount="discount"/>
       </tr>
     </table>
   </div>
@@ -82,7 +83,12 @@
   import AlchemyRow from "~/components/alchemy/AlchemyRow.vue";
   import { Alch, Color, BARGAIN_BUBBLE, UNDEV_COST_BUBBLE, IRON_BAR_VIAL } from "~/composables/Alchemy";
 
-  const ColorData: Record<Color, Object> = {
+  interface CauldronInfo {
+    name: string;
+    hex: string;
+  }
+
+  const ColorData: Record<Color, CauldronInfo> = {
     "Orange": {
       name: "Power",
       hex: "#ff9420",
