@@ -114,7 +114,7 @@ import { computed, defineComponent } from "vue";
 import { Changelog } from "~/Changelog";
 
 export default defineComponent({
-  name: "Credits",
+  name: "Changelog",
   setup() {
     const entries = computed(() => {
       return Changelog.reverse();

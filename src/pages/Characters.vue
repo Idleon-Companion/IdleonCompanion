@@ -28,14 +28,14 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useToast } from "vue-toastification";
 
+import { useAuth } from "~/State";
+import { useCharacters } from "~/composables/Characters";
+import { useToast } from "vue-toastification";
 import CharacterEditor from "~/components/characters/CharacterEditor.vue";
 import CharacterProgressTracker from "~/components/characters/CharacterProgressTracker.vue";
 import CloudData from "~/components/CloudData.vue";
 import Constellations from "~/components/characters/Constellations.vue";
-import { useCharacters } from "~/composables/Characters";
-import { useAuth } from "~/State";
 
 const WikiLinks = new Map([
   ["Classes", "https://idleon.miraheze.org/wiki/Classes"],
