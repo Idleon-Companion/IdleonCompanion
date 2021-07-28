@@ -37,17 +37,18 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType } from "vue";
-import { useState } from "~/State";
-import GameAsset from "~/components/GameAsset.vue";
+import { PropType, computed, defineComponent } from "vue";
+
 import { AlchemyColor, AlchemyConst, AlchemyUtil } from "~/composables/Alchemy";
 import { Assets } from "~/composables/Utilities";
+import { useState } from "~/State";
+import ICAsset from "~/components/ICAsset.vue";
 import bubblesData from "~/data/bubbles.json";
 
 export default defineComponent({
   name: "AlchemyRow",
   components: {
-    GameAsset,
+    ICAsset,
   },
   props: {
     group: {
@@ -63,10 +64,6 @@ export default defineComponent({
       type: Number,
     },
   },
-  emits: {
-    customChange: null,
-  },
-
   methods: {
     customChange(event: { target: { value: string; id: number } }) {
       this.alchemy.upgrades[this.props.group][this.props.idx] = parseInt(
@@ -77,7 +74,7 @@ export default defineComponent({
         (this.props.group == AlchemyConst.UndevCostColor &&
           this.props.idx == AlchemyConst.UndevCostBubble)
       ) {
-        this.$emit("custom-change", event.target.value);
+        // this.$emit("custom-change", event.target.value);
       }
     },
   },

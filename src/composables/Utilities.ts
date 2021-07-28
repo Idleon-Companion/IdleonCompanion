@@ -1,7 +1,7 @@
-import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
-import { useQuasar } from "quasar";
-import { computed } from "vue";
 import { Character } from "./Characters";
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
+import { computed } from "vue";
+import { useQuasar } from "quasar";
 
 export type GrowthFunc = (a: number, b: number, c: number) => number;
 
@@ -53,7 +53,7 @@ export class Assets {
   }
 
   static FromDir(item: string, dir: string): string {
-    let cleaned = item.replace(/ /g, "_");
+    const cleaned = item.replace(/ /g, "_");
     return `/assets/${dir}/${cleaned}.png`;
   }
 
@@ -62,7 +62,7 @@ export class Assets {
   }
 
   static MaterialImage(item: string): string {
-    return `/assets/materials/${item}.png`;
+    return `/assets/materials/${item.replace(/ /g, "_")}.png`;
   }
 
   static MiscImage(item: string): string {
@@ -251,11 +251,11 @@ export enum Coin {
 export const CoinTiers = 5;
 export function useMoney() {
   const splitCoinsFromValue = (value: number) => {
-    let coins = [];
+    const coins = [];
     let v = value;
     let n = CoinTiers; // number of distinct coin types
     while (n--) {
-      let c = Math.pow(100, n);
+      const c = Math.pow(100, n);
       coins.push(Math.floor(v / c));
       v %= c;
     }

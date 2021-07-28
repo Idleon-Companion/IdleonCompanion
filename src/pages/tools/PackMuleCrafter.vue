@@ -76,7 +76,13 @@
                 <div class="text-lg">Recipe List</div>
                 <div v-for="(recipe, index) in recommended.recipes">
                   <div class="p-2 opacity-86">
-                    {{ index + 1 }}: {{ recipe }}
+                    <ICAsset
+                      :image="
+                        Assets.MaterialImage(recipe.replace(/[0-9]+ /g, ''))
+                      "
+                      size="small"
+                    />
+                    {{ recipe }}
                   </div>
                   <q-separator v-if="index < recommended.recipes.length - 1" />
                 </div>
@@ -86,7 +92,15 @@
               <q-scroll-area class="h-80">
                 <div class="text-lg">Materials Needed</div>
                 <div v-for="(material, index) in recommended.materials">
-                  <div class="p-2 opacity-86">{{ material }}</div>
+                  <div class="p-2 opacity-86">
+                    <ICAsset
+                      :image="
+                        Assets.MaterialImage(material.replace(/[0-9]+ /g, ''))
+                      "
+                      size="small"
+                    />
+                    {{ material }}
+                  </div>
                   <q-separator
                     v-if="index < recommended.materials.length - 1"
                   />
@@ -94,10 +108,23 @@
               </q-scroll-area>
             </q-card>
           </div>
-          <q-card bordered class="w-full md:w-1/2 m-2 p-2">
+          <q-card bordered class="w-full md:w-1/2 m-2 p-4">
             <q-scroll-area class="h-160">
-              <div class="text-lg">Inventory Requirements</div>
-              <q-markup-table class="text-center">
+              <div class="flex justify-between mb-2">
+                <div>
+                  <div class="text-lg">Inventory Requirements</div>
+                  <div class="text-sm">
+                    By default, the highest requirements your character meets
+                    are shown.
+                  </div>
+                </div>
+                <q-toggle v-model="showAllRequirements" label="Show All" />
+              </div>
+              <q-markup-table
+                v-if="inventoryRequirements.length > 0"
+                bordered
+                class="text-center"
+              >
                 <thead>
                   <tr>
                     <th>Bag Slots</th>
@@ -110,7 +137,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="inventory in recommended.caps">
+                  <tr v-for="inventory in inventoryRequirements">
                     <td>{{ inventory.slots }}</td>
                     <td>{{ inventory.material }}</td>
                     <td>{{ inventory.mining }}</td>
@@ -121,6 +148,10 @@
                   </tr>
                 </tbody>
               </q-markup-table>
+              <q-card v-else flat bordered class="p-2">
+                Your character needs more inventory slots to be able to complete
+                this task!
+              </q-card>
             </q-scroll-area>
           </q-card>
         </div>
@@ -130,10 +161,11 @@
 </template>
 
 <script lang="ts">
-import { Assets } from "~/composables/Utilities";
 import { computed, defineComponent, ref } from "vue";
+
+import { Assets } from "~/composables/Utilities";
 import { useCharacters } from "~/composables/Characters";
-import GameAsset from "~/components/GameAsset.vue";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import packMuleData from "~/data/packMule.json";
 
 type PackMuleObject = {
@@ -148,6 +180,24 @@ type SelectOption = {
   value: string;
 };
 
+const anvilTabs = [
+  { label: "Anvil Tab 1", value: "anvil1" },
+  { label: "Anvil Tab 2", value: "anvil2" },
+  { label: "Anvil Tab 3", value: "anvil3" },
+];
+const taskTiers = [
+  { label: "Tier 1 (3 Items)", value: "tier1" },
+  { label: "Tier 2 (8 Items)", value: "tier2" },
+  { label: "Tier 3 (14 Items)", value: "tier3" },
+  { label: "Tier 4 (24 Items)", value: "tier4" },
+  { label: "Tier 5 (34 Items)", value: "tier5" },
+  { label: "Tier 6 (45 Items)", value: "tier6" },
+  { label: "Tier 7 (55 Items)", value: "tier7" },
+  { label: "Tier 8 (70 Items)", value: "tier8" },
+  { label: "Tier 9 (90 Items)", value: "tier9" },
+  { label: "Tier 10 (110 Items)", value: "tier10" },
+];
+const lastUpdated = "July 17, 2021 (v1.22d)";
 const wikiLinks = new Map([
   [
     "Pack Mule Crafter Task",
@@ -158,31 +208,14 @@ const wikiLinks = new Map([
 export default defineComponent({
   name: "PackMuleCrafter",
   components: {
-    GameAsset,
+    ICAsset,
   },
   setup() {
-    const { characters, currentCharacter } = useCharacters();
+    const { currentCharacter } = useCharacters();
     const data: Record<string, PackMuleObject> = packMuleData;
     const anvilTab = ref(null as SelectOption | null);
     const taskTier = ref(null as SelectOption | null);
-
-    const anvilTabs = [
-      { label: "Anvil Tab 1", value: "anvil1" },
-      { label: "Anvil Tab 1-2", value: "anvil2" },
-    ];
-    const taskTiers = [
-      { label: "Tier 1 (3 Items)", value: "tier1" },
-      { label: "Tier 2 (8 Items)", value: "tier2" },
-      { label: "Tier 3 (14 Items)", value: "tier3" },
-      { label: "Tier 4 (24 Items)", value: "tier4" },
-      { label: "Tier 5 (34 Items)", value: "tier5" },
-      { label: "Tier 6 (45 Items)", value: "tier6" },
-      { label: "Tier 7 (55 Items)", value: "tier7" },
-      { label: "Tier 8 (70 Items)", value: "tier8" },
-      { label: "Tier 9 (90 Items)", value: "tier9" },
-      { label: "Tier 10 (110 Items)", value: "tier10" },
-    ];
-    const lastUpdated = "April 11, 2021 (v1.14)";
+    const showAllRequirements = ref(false);
 
     const recommended = computed((): PackMuleObject => {
       if (!anvilTab.value || !taskTier.value) {
@@ -191,29 +224,26 @@ export default defineComponent({
       return data[`${anvilTab.value.value}${taskTier.value.value}`];
     });
 
-    const defaultSlots = computed((): number | null => {
-      let i = null;
-      recommended.value.caps.forEach(
-        (inv: Record<string, number>, index: number) => {
-          if (currentCharacter.value?.bagSlots ?? 0 >= inv.slots) {
-            i = index;
-          }
-        }
-      );
-      return i;
+    const inventoryRequirements = computed(() => {
+      // Filters the list of recommended inventory caps by current character slot
+      let filtered = recommended.value.caps;
+      if (!showAllRequirements.value) {
+        filtered = recommended.value.caps.filter(
+          (x) => x.slots <= (currentCharacter.value?.bagSlots ?? 0)
+        );
+      }
+      return filtered.slice().reverse();
     });
-    const invSlots = ref(0);
+
     return {
       Assets,
       anvilTab,
       anvilTabs,
-      characters,
       currentCharacter,
-      data,
-      defaultSlots,
-      invSlots,
+      inventoryRequirements,
       lastUpdated,
       recommended,
+      showAllRequirements,
       taskTier,
       taskTiers,
       wikiLinks,
