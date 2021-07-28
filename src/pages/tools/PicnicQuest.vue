@@ -15,6 +15,7 @@
     </template>
   </q-banner>
   <q-card class="m-4 p-2">
+    <div class="text-xl pl-2 pt-2">Picnic Stowaway Quest</div>
     <q-card-section>
       <q-slider
         v-model="repeat"

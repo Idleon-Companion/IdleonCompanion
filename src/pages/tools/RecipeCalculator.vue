@@ -21,37 +21,52 @@
         <div class="text-sm">Last Updated: {{ lastUpdated }}</div>
       </div>
       <div class="flex">
-        <q-select
-          v-model="recipe"
-          :options="filteredRecipes"
-          outlined
-          use-input
-          :input-debounce="0"
-          label="Select Recipe"
-          class="w-full md:w-1/3 mt-2 mr-2"
-          @filter="onFilterRecipes"
-        />
-        <q-input
-          v-model.number="quantity"
-          type="number"
-          :min="1"
-          filled
-          label="Quantity"
-          class="mt-2"
-        />
+        <div class="w-full md:w-1/3">
+          <q-select
+            v-model="recipe"
+            :options="filteredRecipes"
+            filled
+            use-input
+            :input-debounce="0"
+            label="Recipe"
+            class="p-2"
+            @filter="onFilterRecipes"
+          />
+        </div>
+        <div class="w-1/2 md:w-1/6">
+          <q-input
+            v-model.number="quantity"
+            type="number"
+            :min="1"
+            filled
+            label="Quantity"
+            class="p-2"
+          />
+        </div>
+        <div class="w-1/2 md:w-1/6">
+          <q-select
+            v-model="displayType"
+            :options="displayTypeOptions"
+            filled
+            label="View"
+            class="p-2"
+          />
+        </div>
       </div>
     </q-card-section>
     <q-card-section>
       <div v-if="recipe && quantity">
         <div class="text-xl">Materials</div>
         <q-tree
+          v-if="displayType === 'Tree'"
           :nodes="nodes"
           node-key="name"
           label-key="name"
           children-key="materials"
+          default-expand-all
         >
           <template #default-header="props">
-            <div class="flex items-center">
+            <div class="flex items-center bg-primary p-2 rounded">
               <ICAsset
                 size="small"
                 :image="
@@ -67,6 +82,27 @@
             </div>
           </template>
         </q-tree>
+        <q-list
+          bordered
+          separator
+          v-else-if="displayType === 'List'"
+          class="rounded"
+        >
+          <q-item clickable v-for="(quantity, node) in flattenedRecipe">
+            <q-item-section avatar>
+              <ICAsset
+                size="small"
+                :image="Assets.MaterialImage(node)"
+                :title="node"
+              >
+                <template #tooltip>
+                  <div v-html="node"></div>
+                </template>
+              </ICAsset>
+            </q-item-section>
+            <q-item-section> {{ quantity }} {{ node }} </q-item-section>
+          </q-item>
+        </q-list>
       </div>
     </q-card-section>
   </q-card>
@@ -84,6 +120,7 @@ type RecipeNode = {
   quantity: number;
   materials?: Array<RecipeNode>;
 };
+type RecipeDisplay = "List" | "Tree";
 
 const wikiLinks = new Map([["Smithing", "https://idleon.info/wiki/Smithing"]]);
 
@@ -96,8 +133,10 @@ export default defineComponent({
     const recipes: Record<string, RecipeNode> = calculatorData;
     const recipe = ref(null as { label: string; value: string } | null);
     const quantity = ref(1);
-    const displayType = ref("list");
     const lastUpdated = "June 28, 2021 (v1.22)";
+
+    const displayType = ref<RecipeDisplay>("Tree");
+    const displayTypeOptions = ["List", "Tree"];
 
     const nodes = computed((): RecipeNode[] => {
       if (!recipe.value) {
@@ -106,29 +145,24 @@ export default defineComponent({
       return [recipes[recipe.value.value]];
     });
 
-    // const flattenedRecipe = (node: RecipeNode) => {
-    //   let result: Record<string, number> = {};
-
-    //   // Helper function to flatten a recipe
-    //   function flatten(current: RecipeNode) {
-    //     if (current.materials) {
-    //       current.materials.forEach((mat) => {
-    //         flatten(mat);
-    //       });
-    //     } else {
-    //       let name = current.name;
-    //       let quantity = current.quantity;
-    //       if (result.hasOwnProperty(name)) {
-    //         result[name] += quantity;
-    //       } else {
-    //         result[name] = quantity;
-    //       }
-    //     }
-    //   }
-    //   flatten(tree);
-    //   return result;
-    // },
-    // })
+    const flattenedRecipe = computed(() => {
+      if (nodes.value.length === 0) {
+        return {};
+      }
+      const result: Record<string, number> = {};
+      const flatten = (current: RecipeNode, result: Record<string, number>) => {
+        if (current.materials) {
+          current.materials.forEach((material) => flatten(material, result));
+        } else {
+          if (!(current.name in result)) {
+            result[current.name] = 0;
+          }
+          result[current.name] += current.quantity;
+        }
+      };
+      flatten(nodes.value[0], result);
+      return result;
+    });
 
     const allRecipes = Object.entries(recipes).map(([id, recipe]) => {
       return {
@@ -154,7 +188,9 @@ export default defineComponent({
     return {
       Assets,
       displayType,
+      displayTypeOptions,
       filteredRecipes,
+      flattenedRecipe,
       lastUpdated,
       nodes,
       onFilterRecipes,
