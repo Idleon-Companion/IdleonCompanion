@@ -1,12 +1,14 @@
 <template>
   <q-card flat square>
-    <div class="px-2 py-4 flex bg-primary">
+    <div class="px-2 py-4 flex items-center bg-primary">
       <ICAsset :image="Assets.CharImage(character)" />
       <div class="flex flex-col ml-2">
         <div class="flex items-center">
-          <div class="text-xl">{{ character.name || "No Name" }}</div>
+          <div class="text-lg overflow-ellipsis w-50 overflow-hidden">
+            {{ character.name || "No Name" }}
+          </div>
         </div>
-        <div class="flex items-center">
+        <div class="flex items-center my-1">
           <div class="bg-purple-400 px-1 font-bold rounded-sm">
             Lv. {{ character.level }}
           </div>
@@ -17,22 +19,22 @@
             {{ character.actualClass }}
           </div>
         </div>
-      </div>
-      <div class="flex flex-col justify-center items-end ml-auto">
-        <div class="flex items-center">
-          <q-icon name="mdi-sack" />
-          <div class="ml-1">
-            {{ character.bagSlots }}
-          </div>
-        </div>
         <div class="flex">
-          <ICAsset
-            v-for="(skill, i) in topSkills"
-            :key="i"
-            :title="skill"
-            :image="Assets.IconImage(skill)"
-            size="xs"
-          />
+          <div class="flex items-center">
+            <q-icon name="mdi-sack" />
+            <div class="ml-1">
+              {{ character.bagSlots }}
+            </div>
+          </div>
+          <div class="flex">
+            <ICAsset
+              v-for="(skill, i) in topSkills"
+              :key="i"
+              :title="skill"
+              :image="Assets.IconImage(skill)"
+              size="xs"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -40,9 +42,9 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType } from "vue";
-import { Character, Skills, useCharacters } from "~/composables/Characters";
 import { Assets } from "~/composables/Utilities";
+import { Character, Skills, useCharacters } from "~/composables/Characters";
+import { PropType, computed, defineComponent } from "vue";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 
 export default defineComponent({
