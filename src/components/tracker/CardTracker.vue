@@ -47,11 +47,12 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from "vue";
-import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
-import { Card, CardCategory, Cards, useCards } from "~/composables/Cards";
+import { computed, defineComponent } from "vue";
+
 import { Assets } from "~/composables/Utilities";
+import { Card, Cards, useCards } from "~/composables/Cards";
 import { useState } from "~/State";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 
 export default defineComponent({
   name: "CardTracker",

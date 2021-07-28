@@ -1,4 +1,5 @@
 import { Growth } from "~/composables/Utilities";
+import bubbleData from "~/data/bubbles.json";
 
 export type AlchemyData = {
   vials: Record<string, number>;
@@ -8,10 +9,10 @@ export type AlchemyData = {
 
 export type AlchemyColor = "Orange" | "Green" | "Purple" | "Yellow";
 export const AlchemyConst = {
-  BargainBubble: 14,
-  IronBarVial: "Barley Brew",
-  UndevCostBubble: 6,
-  UndevCostColor: <AlchemyColor>"Yellow",
+  OrangeBargain: 14,
+  BubbleCount: 15,
+  BarleyBrew: "Barley Brew",
+  UnderdevelopedCosts: 6,
 };
 
 export type Vial = {
@@ -327,74 +328,58 @@ export const Vials: Vial[] = [
   },
 ];
 export const VialCost = [
-  0,
-  100,
-  1e3,
-  2.5e3,
-  10e3,
-  50e3,
-  100e3,
-  500e3,
-  1e6 + 1,
-  5e6,
-  25e6,
-  100e6,
-  1e9,
+  0, 100, 1e3, 2.5e3, 10e3, 50e3, 100e3, 500e3, 1e6, 5e6, 25e6, 100e6, 1e9,
 ];
 
-export class AlchemyUtil {
-  static discount(
-    cauldCostReduxLvl: number,
-    bubbleCostBubbleLvl: number,
-    bubbleCostVialLvl: number,
-    bubbleTwelveLvl: number,
-    tagLvl: number
-  ): any {
-    const precision = 10000;
+export function useAlchemy() {
+  const calculateBubbleDiscount = (
+    cauldronLevel: number,
+    bargainTagLevel: number,
+    orangeBargain: number,
+    undevCosts: number,
+    barleyBrew: number
+  ) => {
+    const precision = Math.pow(10, 4);
 
     const costReduxBoost =
-      Math.round(10 * Growth.Decay(cauldCostReduxLvl, 90, 100)) / 10;
+      Math.round(10 * Growth.Decay(cauldronLevel, 90, 100)) / 10;
     const oa = Math.max(0.1, 1 - costReduxBoost / 100); // TODO: This one is off, but the total calculation is still correct
     const newBubble = Math.max(
       0.05,
-      1 - Growth.Decay(bubbleTwelveLvl, 40, 12) / 100
+      1 - Growth.Decay(orangeBargain, 40, 12) / 100
     ); // Hardcoded values, better to retrieve from bubbles data maybe.
-    const undevCost = Growth.Decay(bubbleCostBubbleLvl, 40, 70);
-    const vial = Growth.Add(bubbleCostVialLvl, 1, 0);
+    const undevCost = Growth.Decay(undevCosts, 40, 70);
+    const vial = Growth.Add(barleyBrew, 1, 0);
     const undev_vial = Math.max(0.05, 1 - (undevCost + vial) / 100);
-    const bargain_tag = Math.max(Math.pow(0.75, tagLvl), 0.1);
+    const bargain_tag = Math.max(Math.pow(0.75, bargainTagLevel), 0.1);
     const discount = oa * newBubble * undev_vial * bargain_tag;
-    let result = [oa, bargain_tag, newBubble, undev_vial, discount];
-    result = result.map((a) => {
-      return (precision - Math.round(a * precision)) / 100;
-    });
-    if (process.env.NODE_ENV === "development") {
-      console.log(`Alch.discount = [
-        Cauldron:     ${result[0].toFixed(2).padStart(5, " ")} | Level : ${(""+cauldCostReduxLvl).padStart(4, " ")}
-        Bargain:      ${result[1].toFixed(2).padStart(5, " ")} | Level : ${(""+tagLvl).padStart(4, " ")}
-        Bubble XII:   ${result[2].toFixed(2).padStart(5, " ")} | Level : ${(""+bubbleTwelveLvl).padStart(4, " ")}
-        Undev + vial: ${result[3].toFixed(2).padStart(5, " ")} | Level : ${(""+bubbleCostBubbleLvl).padStart(4, " ")} Vial: ${(""+bubbleCostVialLvl).padStart(4, " ")}
-        Total:        ${result[4].toFixed(2).padStart(5, " ")}
-      ]`);
-    }
-    return result;
-  }
+    const roundToPrecision = (n: number): number =>
+      (precision - Math.round(n * precision)) / 100;
+    return {
+      Cauldron: roundToPrecision(oa),
+      "Bargain Tag": roundToPrecision(bargain_tag),
+      "Orange Bargain": roundToPrecision(newBubble),
+      "Underdeveloped Costs/Barley Brew": roundToPrecision(undev_vial),
+      Total: roundToPrecision(discount),
+    };
+  };
 
-  static effect = (bubble: Bubble, level: number) => {
+  const calculateBubbleEffect = (
+    color: AlchemyColor,
+    index: number,
+    level: number
+  ) => {
+    const bubble = getBubbleInfo(color, index);
     return level === 0 ? 0 : Growth[bubble.Func](level, bubble.x1, bubble.x2);
   };
 
-  // static effectChange = (
-  //   bubble: Bubble,
-  //   levelNow: number,
-  //   levelGoal: number
-  // ) => {
-  //   let effectNow = Alch.effect(bubble, levelNow) ?? 0;
-  //   let effectGoal = Alch.effect(bubble, levelGoal);
-  //   effectGoal = effectGoal < effectNow ? effectNow : effectGoal;
-  //   let result = `${effectNow.toFixed(2).padStart(6, " ")} => ${effectGoal
-  //     .toFixed(2)
-  //     .padStart(6, " ")}`;
-  //   return result;
-  // };
+  const getBubbleInfo = (color: AlchemyColor, index: number) => {
+    return bubbleData[color][index];
+  };
+
+  return {
+    calculateBubbleDiscount,
+    calculateBubbleEffect,
+    getBubbleInfo,
+  };
 }
