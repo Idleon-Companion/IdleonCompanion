@@ -2,7 +2,7 @@
 
 A companion website for the game [Legends of Idleon](https://www.legendsofidleon.com).
 
-Test website updated with this repo can be found [here](https://Musimaniac.github.io/IdleonCompanion)
+Test website updated with this repo can be found [here](https://idleon-companion.github.io/IdleonCompanion/).
 
 ## Features
 
