@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType } from "vue";
+import { PropType, computed, defineComponent } from "vue";
 
 type AssetSize = "xxs" | "xs" | "small" | "medium" | "large" | "xl" | "none";
 

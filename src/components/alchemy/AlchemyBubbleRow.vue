@@ -21,15 +21,13 @@
     <td>
       {{ calculateBubbleEffect(color, index, alchemyUpgrade).toFixed(2)
       }}{{
-        alchemyGoal > alchemyUpgrade
-          ? ` 🡒 ${calculateBubbleEffect(color, index, alchemyGoal).toFixed(2)}`
-          : ""
+        ` 🡒 ${calculateBubbleEffect(color, index, alchemyGoal).toFixed(2)}`
       }}
     </td>
     <td>
       <div class="flex">
         <div
-          v-for="material in bubbleInfo.Materials"
+          v-for="material in upgradeMaterialCost"
           class="flex flex-col items-center mr-1"
         >
           <ICAsset
@@ -42,7 +40,7 @@
             :title="material.Name"
             size="small"
           ></ICAsset>
-          <div>{{ material.Amount }}</div>
+          <div>{{ Math.round(material.Amount) }}</div>
         </div>
       </div>
     </td>
@@ -51,14 +49,9 @@
 
 <script lang="ts">
 import { PropType, computed, defineComponent } from "vue";
-import { startCase } from "lodash";
+import { cloneDeep, startCase } from "lodash";
 
-import {
-  AlchemyColor,
-  AlchemyConst,
-  AlchemyUtil,
-  useAlchemy,
-} from "~/composables/Alchemy";
+import { AlchemyColor, useAlchemy } from "~/composables/Alchemy";
 import { Assets } from "~/composables/Utilities";
 import { useState } from "~/State";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
@@ -72,6 +65,10 @@ export default defineComponent({
     color: {
       required: true,
       type: String as PropType<AlchemyColor>,
+    },
+    discount: {
+      required: true,
+      type: Number,
     },
     index: {
       required: true,
@@ -96,47 +93,37 @@ export default defineComponent({
         (alchemy.value.upgrades[props.color][props.index] = value),
     });
 
+    const bubbleInfo = computed(() => getBubbleInfo(props.color, props.index));
+
     const { calculateBubbleEffect, getBubbleInfo } = useAlchemy();
 
-    // Compute all materials needed for the wanted upgrades
-    // const computeMaterials = () => {
-    //   // Discounts are stored as e.g. 70 (%), however calculation need the form of 0.3
-    //   let discountCalc = props.discount.map((a) => {
-    //     return (100 - a) / 100;
-    //   });
-    //   let levelNow = alchemy.value.upgrades[props.group][props.idx] ?? 0;
-    //   let levelGoal = alchemy.value.goals[props.group][props.idx] ?? 0;
-    //   let materialHistogram = [0, 0, 0, 0];
-    //   let bubble = bubblesData[props.group][props.idx];
-
-    //   // Sum all materials of the different levels together into the histogram
-    //   for (var i = levelNow; i < levelGoal; i++) {
-    //     let levelMulti = Math.pow(1.35 - (0.3 * i) / (50 + i), i);
-    //     bubble.Materials.forEach((m, y) => {
-    //       if (m.isLiquid) {
-    //         materialHistogram[y] += m.Amount + Math.floor(i / 20);
-    //       } else {
-    //         materialHistogram[y] += Math.round(
-    //           m.Amount * levelMulti * discountCalc[discountCalc.length - 1]
-    //         );
-    //       }
-    //     });
-    //   }
-    //   // Return the histogram combined with the material name and leave empty when no material name in that slot
-    //   return materialHistogram.map(function (e, x) {
-    //     if (x < bubble.Materials.length) {
-    //       return [bubble.Materials[x].Name, e.toLocaleString()];
-    //     }
-    //     return "";
-    //   });
+    const upgradeMaterialCost = computed(() => {
+      // Discounts are stored as e.g. 70 (%), however calculation need the form of 0.3
+      let discountBy = (100 - props.discount) / 100;
+      let materialCosts = cloneDeep(bubbleInfo.value.Materials);
+      // Sum all materials of the different levels together into the histogram
+      for (let i = alchemyUpgrade.value; i < alchemyGoal.value - 1; i += 1) {
+        let levelMulti = Math.pow(1.35 - (0.3 * i) / (50 + i), i);
+        bubbleInfo.value.Materials.forEach((material, index) => {
+          if (material.isLiquid) {
+            materialCosts[index].Amount += material.Amount + Math.floor(i / 20);
+          } else {
+            materialCosts[index].Amount +=
+              material.Amount * levelMulti * discountBy;
+          }
+        });
+      }
+      return materialCosts;
+    });
 
     return {
       alchemyGoal,
       alchemyUpgrade,
       Assets,
-      bubbleInfo: computed(() => getBubbleInfo(props.color, props.index)),
+      bubbleInfo,
       calculateBubbleEffect,
       startCase,
+      upgradeMaterialCost,
     };
   },
 });

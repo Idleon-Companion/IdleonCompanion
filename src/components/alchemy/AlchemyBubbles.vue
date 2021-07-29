@@ -71,6 +71,7 @@
       <AlchemyBubbleRow
         v-for="(_, index) in bubbleCount"
         :color="currentCauldron"
+        :discount="discount['Total']"
         :index="index"
       />
     </tbody>

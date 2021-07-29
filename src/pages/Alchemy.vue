@@ -22,7 +22,9 @@
       <q-tab-panel name="Bubbles">
         <AlchemyBubbles />
       </q-tab-panel>
-      <q-tab-panel name="Vials"> Vials </q-tab-panel>
+      <q-tab-panel name="Vials">
+        <AlchemyVials />
+      </q-tab-panel>
     </q-tab-panels>
   </q-card>
 </template>
@@ -31,7 +33,7 @@
 import { defineComponent, ref } from "vue";
 
 import AlchemyBubbles from "~/components/alchemy/AlchemyBubbles.vue";
-// import Vials from "~/components/alchemy/Vials.vue";
+import AlchemyVials from "~/components/alchemy/AlchemyVials.vue";
 
 const wikiLinks = new Map([
   ["Alchemy", "https://idleon.miraheze.org/wiki/Alchemy"],
@@ -41,7 +43,7 @@ export default defineComponent({
   name: "Alchemy",
   components: {
     AlchemyBubbles,
-    // Vials,
+    AlchemyVials,
   },
   setup() {
     const tab = ref("Bubbles");

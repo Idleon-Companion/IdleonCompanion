@@ -1,20 +1,6 @@
 import { Growth } from "~/composables/Utilities";
 import bubbleData from "~/data/bubbles.json";
 
-export type AlchemyData = {
-  vials: Record<string, number>;
-  upgrades: Record<AlchemyColor, number[]>;
-  goals: Record<AlchemyColor, number[]>;
-};
-
-export type AlchemyColor = "Orange" | "Green" | "Purple" | "Yellow";
-export const AlchemyConst = {
-  OrangeBargain: 14,
-  BubbleCount: 15,
-  BarleyBrew: "Barley Brew",
-  UnderdevelopedCosts: 6,
-};
-
 export type Vial = {
   name: string;
   roll: number;
@@ -328,8 +314,23 @@ export const Vials: Vial[] = [
   },
 ];
 export const VialCost = [
-  0, 100, 1e3, 2.5e3, 10e3, 50e3, 100e3, 500e3, 1e6, 5e6, 25e6, 100e6, 1e9,
+  0, 100, 1e3, 2.5e3, 10e3, 50e3, 100e3, 500e3, 1e6, 5e6,
 ];
+
+export type AlchemyData = {
+  vials: Record<string, number>;
+  upgrades: Record<AlchemyColor, number[]>;
+  goals: Record<AlchemyColor, number[]>;
+};
+
+export type AlchemyColor = "Orange" | "Green" | "Purple" | "Yellow";
+export const AlchemyConst = {
+  OrangeBargain: 14,
+  BubbleCount: 15,
+  BarleyBrew: "Barley Brew",
+  UnderdevelopedCosts: 6,
+  VialTiers: VialCost.length,
+};
 
 export function useAlchemy() {
   const calculateBubbleDiscount = (
