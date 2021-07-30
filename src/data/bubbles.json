@@ -638,8 +638,8 @@
       "Name": "FAST_BOI_TALENT",
       "x1": 5,
       "x2": 1,
-      "Func": "BigBase"
-      "effectDesc": " Talent Points for EACH tab, but just for Archers! Well, and 'that' class, you know who you are!"
+      "Func": "BigBase",
+      "effectDesc": " Talent Points for EACH tab, but just for Archers! Well, and 'that' class, you know who you are!",
       "Materials": [
         {
           "Name": "Flycicle",
