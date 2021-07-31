@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Catching 100+",
   "notes": "",
@@ -64,6 +66,6 @@ export const build = {
       "comment": "Max Sunset On The Hives, Briar Patch Runner, Teleki'net'ic Logs, Swifty Statues, AGI Again and Shoeful Of Obol.\nExtra points can go into Previous Points."
     }
   ],
-  "class": "Archer",
-  "subclass": "Bowman"
+  "class": Class.Archer,
+  "subclass": Subclass.Bowman
 };

@@ -1,3 +1,5 @@
+import { Class } from "~/composables/Characters";
+
 export const build = {
   "title": "Journeyman AFK (~70)",
   "notes": "This build is for leveling, and ignores all of the utility talents that provide help with drops and cash.",
@@ -64,5 +66,5 @@ export const build = {
       "comment": ""
     }
   ],
-  "class": "Journeyman"
+  "class": Class.Journeyman
 };

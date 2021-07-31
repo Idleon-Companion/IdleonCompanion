@@ -1,3 +1,5 @@
+import { Class } from "~/composables/Characters";
+
 export const build = {
   "title": "Mage / Active (~35)",
   "notes": "That's how your build should roughly look when pushing for subclass.",
@@ -64,5 +66,5 @@ export const build = {
       "comment": ""
     }
   ],
-  "class": "Mage"
+  "class": Class.Mage
 };

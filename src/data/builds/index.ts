@@ -1,3 +1,4 @@
+import { Class, Subclass } from "~/composables/Characters"
 import { build as build_1001_my_first_char } from "./1001_my_first_char"
 import { build as build_2001_1_wood_act } from "./2001_1_wood_act"
 import { build as build_2001_2_Alchemy_Choppin_hybrid } from "./2001_2_Alchemy_Choppin_hybrid"
@@ -44,8 +45,21 @@ import { build as build_6202_wiz_afk_70 } from "./6202_wiz_afk_70"
 import { build as build_6202_wiz_afk_90 } from "./6202_wiz_afk_90"
 import { build as build_Rams_hunter_active_150 } from "./Rams_hunter_active_150"
 
+export type BuildTab = {
+    skills: Record<number, string>; // Skill index -> points
+    comment: string;
+};
+export type Build = {
+    title: string; // Build name
+    version: string; // Version of Idleon for the build
+    class: Class;
+    subclass?: Subclass;
+    tabs: BuildTab[];
+    notes: string;
+};
 
-export const builds: (typeof build_1001_my_first_char)[] = [];
+
+export const builds: Build[] = [];
 builds.push(build_1001_my_first_char);
 builds.push(build_2001_1_wood_act);
 builds.push(build_2001_2_Alchemy_Choppin_hybrid);

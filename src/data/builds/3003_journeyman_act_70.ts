@@ -1,3 +1,5 @@
+import { Class } from "~/composables/Characters";
+
 export const build = {
   "title": "Journeyman Active (~70)",
   "notes": "Active journeyman will be difficult to level. You want to try to get as much damage as you can while slowly getting whip to level 100.",
@@ -64,5 +66,5 @@ export const build = {
       "comment": ""
     }
   ],
-  "class": "Journeyman"
+  "class": Class.Journeyman
 };

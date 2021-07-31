@@ -1,3 +1,5 @@
+import { Class } from "~/composables/Characters";
+
 export const build = {
   "title": "My First Character / Level 1-10",
   "notes": "Welcome to the game! It will be a great journey, hope we'll see you again! ",
@@ -24,5 +26,5 @@ export const build = {
       "comment": "For your very first character in Legends of Idleon, you would put at least 10 points into 'Sharpened Axe', which gives you a flat damage bonus"
     }
   ],
-  "class": "All"
+  "class": Class.All
 };

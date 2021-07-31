@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Bowman Boss Killer",
   "notes": "This build works best with 4 movement speed food, Boost food effect: cards/Yum Yum Desert set/PO box and King of Food trophy. If you have only 3 ms food I'd use boss card set.  ",
@@ -64,6 +66,6 @@ export const build = {
       "comment": "Library order: SpeeDNA>Homing arrows>Agi again>Schwifty statues>Shoeful of obols"
     }
   ],
-  "class": "Archer",
-  "subclass": "Bowman"
+  "class": Class.Archer,
+  "subclass": Subclass.Bowman
 };

@@ -3,14 +3,16 @@ import { useState } from "~/State";
 import { checklistData } from "~/composables/Checklist";
 
 export enum Class {
+  All = "All",
   Beginner = "Beginner",
   Warrior = "Warrior",
   Archer = "Archer",
   Mage = "Mage",
+  Journeyman = "Journeyman",
 }
 
 export enum Subclass {
-  Journeyman = "Journeyman",
+  Maestro = "Maestro",
   Barbarian = "Barbarian",
   Squire = "Squire",
   Bowman = "Bowman",

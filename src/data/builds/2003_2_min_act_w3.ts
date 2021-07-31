@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Mining Active / AFK (Warrior) 100+",
   "notes": "",
@@ -64,6 +66,6 @@ export const build = {
       "comment": "Max Back to Basics, Strongest Statues and STR Summore in that order. If you are using Obols with STR and have left over points, level Fistful of Obol as well."
     }
   ],
-  "class": "Warrior",
-  "subclass": "Barbarian"
+  "class": Class.Warrior,
+  "subclass": Subclass.Barbarian
 };

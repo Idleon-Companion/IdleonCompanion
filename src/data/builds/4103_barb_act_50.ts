@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Barbarian / Active (~50)",
   "notes": "",
@@ -64,6 +66,6 @@ export const build = {
       "comment": "Put 1 point in every active skill, then 100 into \"Back To Basics\".\n*1 = Excess points can be used to level active skills."
     }
   ],
-  "class": "Warrior",
-  "subclass": "Barbarian"
+  "class": Class.Warrior,
+  "subclass": Subclass.Barbarian
 };

@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Barbarian / Active (~70)",
   "notes": "",
@@ -64,6 +66,6 @@ export const build = {
       "comment": "Put 1 point in every active skill, then 100 into \"Back To Basics\".\n*1 = Excess points can be used to level active skills.\n*2 = If you have reached World 3 and unlocked the Death Note, start preparing for \"Apocalypse Zow\". Have 5 mobs at 100k kills by level 85-90. Once that's done, place excess points into ZOW instead of active skills. If you are ready to start progress on ZOW, you will need to respec into a ZOW build. There is an example of a LVL 85 Barbarian ZOW build in the builds list."
     }
   ],
-  "class": "Warrior",
-  "subclass": "Barbarian"
+  "class": Class.Warrior,
+  "subclass": Subclass.Barbarian
 };

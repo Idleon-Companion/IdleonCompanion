@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Squire / Active (~50)",
   "notes": "",
@@ -64,6 +66,6 @@ export const build = {
       "comment": "Put 1 point in every active skill and \"Bricky Skin\" to block 20% of all damage, then 100 into \"Back To Basics\".\n*1 = Excess points can be placed here for better mob clear."
     }
   ],
-  "class": "Warrior",
-  "subclass": "Squire"
+  "class": Class.Warrior,
+  "subclass": Subclass.Squire
 };

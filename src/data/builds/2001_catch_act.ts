@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Catching Active / AFK (Bowman)",
   "notes": "With around 100k oak logs + ~400 agi you'll be able to catch fruitflies, but at very slow rate.",
@@ -64,6 +66,6 @@ export const build = {
       "comment": "You have ability to invest into 3 efficiency skills overall, \"Briar patch runner\" and \"Teleki'Net'ic\" are both great sources of that.\nConsider maxing out \"Sunset on Hives\" for more afk  gains, \"Bug enthusiast\" is for speeding up xp gain."
     }
   ],
-  "class": "Archer",
-  "subclass": "Bowman"
+  "class": Class.Archer,
+  "subclass": Subclass.Bowman
 };

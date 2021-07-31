@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Worship / Choppin Hybrid (Wizard) 100+",
   "notes": "skipping xp talents cause you usually dont have any need for xp when you decide to make hybrid build",
@@ -64,6 +66,6 @@ export const build = {
       "comment": "11>12>14>9>8"
     }
   ],
-  "class": "Mage",
-  "subclass": "Wizard"
+  "class": Class.Mage,
+  "subclass": Subclass.Wizard
 };

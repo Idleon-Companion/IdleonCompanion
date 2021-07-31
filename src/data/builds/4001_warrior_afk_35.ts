@@ -1,3 +1,5 @@
+import { Class } from "~/composables/Characters";
+
 export const build = {
   "title": "Warrior / AFK (~35)",
   "notes": "That's how your build should roughly look when pushing for subclass.",
@@ -64,5 +66,5 @@ export const build = {
       "comment": ""
     }
   ],
-  "class": "Warrior"
+  "class": Class.Warrior
 };

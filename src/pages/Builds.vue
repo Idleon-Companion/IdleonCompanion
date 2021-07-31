@@ -140,10 +140,11 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-import buildData from "~/data/builds.json";
+import { builds as buildData } from "~/data/builds/";
 
 import GameAsset from "~/components/GameAsset.vue";
 import { Assets } from "~/composables/Utilities";
+import { Class, Subclass } from "~/composables/Characters";
 
 type Build = {
   title: string;
@@ -158,13 +159,66 @@ type Build = {
   tab_three?: Record<string, string>;
 };
 
+type NewBuild = typeof buildData[1];
+
+const classAlias: Record<Class | Subclass, string> = {
+  [Class.All]: "all",
+  [Class.Beginner]: "all",
+  [Class.Warrior]: "war",
+  [Class.Archer]: "arc",
+  [Class.Mage]: "mag",
+  [Class.Journeyman]: "jma",
+  [Subclass.Barbarian]: "bar",
+  [Subclass.Bowman]: "bow",
+  [Subclass.Hunter]: "hun",
+  [Subclass.Maestro]: "mae",
+  [Subclass.Shaman]: "sha",
+  [Subclass.Squire]: "sqr",
+  [Subclass.Wizard]: "wiz",
+};
+
+const newToOldBuildData = (newBuild: NewBuild): Build => {
+  const oldFormat: Build = {
+    title: newBuild.title,
+    notes: newBuild.notes,
+    class: classAlias[newBuild.class] ?? "all",
+    subclass: newBuild.subclass ? classAlias[newBuild.subclass] ?? "" : "",
+    comment_one: "",
+    comment_two: "",
+    comment_three: "",
+  }
+
+  const tabOne = newBuild.tabs[0]
+  if (tabOne) {
+    oldFormat.comment_one = tabOne.comment;
+    oldFormat.tab_one = tabOne.skills;
+  }
+
+  const tabTwo = newBuild.tabs[1]
+  if (tabTwo) {
+    oldFormat.comment_two = tabTwo.comment;
+    oldFormat.tab_two = tabTwo.skills;
+  }
+
+  const tabThree = newBuild.tabs[2]
+  if (tabThree) {
+    oldFormat.comment_three = tabThree.comment;
+    oldFormat.tab_three = tabThree.skills;
+  }
+
+  return oldFormat
+}
+
 export default defineComponent({
   name: "Builds",
   components: {
     GameAsset,
   },
   setup() {
-    const builds: Record<string, Build> = buildData;
+    const builds: Record<string, Build> = buildData.reduce((acc, cur) => {
+      acc[cur.title] = newToOldBuildData(cur);
+      return acc;
+    }, {} as Record<string, Build>);
     const build = ref("");
     const activeBuild = computed(() => build.value === '' ? null : builds[build.value]);
 

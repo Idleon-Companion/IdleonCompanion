@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Alchemy / Choppin Hybrid (Shaman) 100+",
   "notes": "",
@@ -64,6 +66,6 @@ export const build = {
       "comment": "12>13(only if you still need alchemy xp on shaman)>14>8>9"
     }
   ],
-  "class": "Mage",
-  "subclass": "Shaman"
+  "class": Class.Mage,
+  "subclass": Subclass.Shaman
 };

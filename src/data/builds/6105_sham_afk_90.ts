@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Shaman / AFK (~90)",
   "notes": "100+ = Checkout books for these talents from the library.",
@@ -64,6 +66,6 @@ export const build = {
       "comment": "Level the damage skills evenly.\n*1 If you need damage, place points into \"Virile Vials\".\n*2 = You can put some points into \"Earlier Education\" if you're lacking points on Tab 2.\n *3 = If you have capped your damage, excess points can go into alchemy talents. This build does not prominently focus on alchemy, and so you are likely to only have enough talent points to level \"Bubble Breakthrough\".  "
     }
   ],
-  "class": "Mage",
-  "subclass": "Shaman"
+  "class": Class.Mage,
+  "subclass": Subclass.Shaman
 };

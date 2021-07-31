@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Fishing Active / AFK (Barb) 100+",
   "notes": "",
@@ -64,6 +66,6 @@ export const build = {
       "comment": "Max Worming Undercover, Bobbin' Bobbers, STR Summore, Strongest Statues, All Fish Diet and Catching Some ZZZ's.\nPut Points into Back To Basics and Fistful of Obol if you have extra points."
     }
   ],
-  "class": "Warrior",
-  "subclass": "Barbarian"
+  "class": Class.Warrior,
+  "subclass": Subclass.Barbarian
 };

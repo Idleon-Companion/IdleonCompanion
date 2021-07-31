@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Hunter AFK (50)",
   "notes": "Damaging Skills directly increase AFK damage (multiplicative). The damage cap for a zone is the Monsterâ€™s HP. AFK damage increases above this cap will not increase your gains. AFK Damage = Minimum damage * Active Skill AFK multiplier",
@@ -64,6 +66,6 @@ export const build = {
       "comment": "Level the 2 damaging skills evenly.\n*10 = Use these to bring your damage up as needed to hit damage cap"
     }
   ],
-  "class": "Archer",
-  "subclass": "Hunter"
+  "class": Class.Archer,
+  "subclass": Subclass.Hunter
 };

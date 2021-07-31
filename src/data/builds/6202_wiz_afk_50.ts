@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Wizard / AFK (~50)",
   "notes": "Active Skills directly increase AFK kills/hr.",
@@ -64,6 +66,6 @@ export const build = {
       "comment": "Level the damage skills evenly. Be sure to place points into \"Paperwork Great...\" for a nice damage boost.\n*1 = You can put some points into \"Earlier Education\" if you're lacking points on Tab 2."
     }
   ],
-  "class": "Mage",
-  "subclass": "Wizard"
+  "class": Class.Mage,
+  "subclass": Subclass.Wizard
 };

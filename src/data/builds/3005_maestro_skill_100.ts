@@ -1,3 +1,5 @@
+import { Class, Subclass } from "~/composables/Characters";
+
 export const build = {
   "title": "Maestro Skill (~100)",
   "notes": "The goal of this build is to allow your other characters to get level 20+ on their non-specialized skills.",
@@ -64,5 +66,6 @@ export const build = {
       "comment": "Place as many points as possible into \"Bliss n Chips\". Then into \"Left Hand of Learning\". Afterwards, place 50+ into \"Right Hand of Action\". You can split the excess between the Right Hand or \"Skilliest Statue\""
     }
   ],
-  "class": "Journeyman"
+  "class": Class.Journeyman,
+  "subclass": Subclass.Maestro
 };
