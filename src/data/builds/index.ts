@@ -30,20 +30,14 @@ import { build as build_4202_squ_afk_50 } from "./4202_squ_afk_50"
 import { build as build_4202_squ_afk_70 } from "./4202_squ_afk_70"
 import { build as build_5001_arc_act_35 } from "./5001_arc_act_35"
 import { build as build_5002_arc_afk_35 } from "./5002_arc_afk_35"
-import { build as build_5101_bow_act_50 } from "./5101_bow_act_50"
 import { build as build_5101_bow_afk_50 } from "./5101_bow_afk_50"
 import { build as build_5101_bow_boss_100 } from "./5101_bow_boss_100"
 import { build as build_5102_bow_act_50 } from "./5102_bow_act_50"
-import { build as build_5102_bow_afk_50 } from "./5102_bow_afk_50"
-import { build as build_5102_bow_afk_70 } from "./5102_bow_afk_70"
 import { build as build_5103_bow_afk_70 } from "./5103_bow_afk_70"
-import { build as build_5103_bow_afk_90 } from "./5103_bow_afk_90"
 import { build as build_5104_bow_act_70 } from "./5104_bow_act_70"
 import { build as build_5105_bow_afk_90 } from "./5105_bow_afk_90"
-import { build as build_5105_bow_boss_100 } from "./5105_bow_boss_100"
 import { build as build_5106_bow_act_90 } from "./5106_bow_act_90"
 import { build as build_5201_hun_afk_50 } from "./5201_hun_afk_50"
-import { build as build_5201_hunt_afk_50 } from "./5201_hunt_afk_50"
 import { build as build_5202_hun_act_50 } from "./5202_hun_act_50"
 import { build as build_5203_hun_afk_70 } from "./5203_hun_afk_70"
 import { build as build_5204_hun_act_70 } from "./5204_hun_act_70"
@@ -111,20 +105,14 @@ builds.push(build_4202_squ_afk_50);
 builds.push(build_4202_squ_afk_70);
 builds.push(build_5001_arc_act_35);
 builds.push(build_5002_arc_afk_35);
-builds.push(build_5101_bow_act_50);
 builds.push(build_5101_bow_afk_50);
 builds.push(build_5101_bow_boss_100);
 builds.push(build_5102_bow_act_50);
-builds.push(build_5102_bow_afk_50);
-builds.push(build_5102_bow_afk_70);
 builds.push(build_5103_bow_afk_70);
-builds.push(build_5103_bow_afk_90);
 builds.push(build_5104_bow_act_70);
 builds.push(build_5105_bow_afk_90);
-builds.push(build_5105_bow_boss_100);
 builds.push(build_5106_bow_act_90);
 builds.push(build_5201_hun_afk_50);
-builds.push(build_5201_hunt_afk_50);
 builds.push(build_5202_hun_act_50);
 builds.push(build_5203_hun_afk_70);
 builds.push(build_5204_hun_act_70);
