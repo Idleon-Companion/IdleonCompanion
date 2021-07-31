@@ -44,8 +44,8 @@
       <!-- Game Version Note -->
       <div class="col-sm-2 pl-3 mb-2">
         <h3>Last Updated</h3>
-        <p>v1.22d</p>
-        <p>July 17, 2021</p>
+        <p>v1.23</p>
+        <p>July 31, 2021</p>
       </div>
     </div>
   </div>
