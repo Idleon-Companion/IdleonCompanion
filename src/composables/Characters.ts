@@ -72,7 +72,7 @@ export class Character {
       [Subclass.Hunter]: Class.Archer,
       [Subclass.Shaman]: Class.Mage,
       [Subclass.Wizard]: Class.Mage,
-      [Subclass.Journeyman]: Class.Beginner,
+      [Subclass.Maestro]: Class.Journeyman,
     }[c as Subclass];
     this.subclass = c as Subclass;
   }

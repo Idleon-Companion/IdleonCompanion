@@ -1,6 +1,7 @@
 import { Class } from "~/composables/Characters";
 
-export const build = {
+
+ export const build = {
   "title": "Archer / AFK (~35)",
   "notes": "That's how your build should roughly look when pushing for subclass.",
   "version": "1.21",
@@ -12,7 +13,7 @@ export const build = {
         "3": "0",
         "4": "0",
         "5": "50",
-        "6": "1*",
+        "6": "*1",
         "7": "0",
         "8": "0",
         "9": "0",
@@ -23,7 +24,7 @@ export const build = {
         "14": "0",
         "15": "0"
       },
-      "comment": "*1 = As much as you need to reach the farthest monster zone. Your goal is to reach Crabcakes to choose your subclass. For gaining levels, Sticks is a great farming zone.\nAfter improving Accuracy prioritise \"Sharpened axe\" > \"Gilded Sword\", keep them within 10 levels of each other"
+      "comment": "*1 = As much as you need to reach the farthest monster zone. Your goal is to reach Crabcakes to choose your subclass. For gaining levels, Sticks is a great farming zone.\nAfter improving Accuracy prioritise \"Sharpened axe\" > \"Gilded Sword\", keep them within 10 levels of each other."
     },
     {
       "skills": {
@@ -43,8 +44,8 @@ export const build = {
         "14": "0",
         "15": "0"
       },
-      "comment": "Level \"Polymer Limbs\" to 50, then your active damage skills to 20. Afterwards, level up \"Have Another\" to 10, and then 1 value point into \"Strafe\". Excess points can be used to level \"Polymer Limbs\" past 50"
+      "comment": "Level \"Polymer Limbs\" to 50, active damage skills to 20, and then 1 value point into \"Strafe\". Activate it before going offline. Afterwards, level up \"Have Another\" to 10. Excess points can be used to level \"Polymer Limbs\" past 50."
     }
   ],
   "class": Class.Archer
-};
+}

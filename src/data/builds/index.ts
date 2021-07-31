@@ -1,4 +1,4 @@
-import { Class, Subclass } from "~/composables/Characters"
+import { Class, Subclass } from "~/composables/Characters";
 import { build as build_1001_my_first_char } from "./1001_my_first_char"
 import { build as build_2001_1_wood_act } from "./2001_1_wood_act"
 import { build as build_2001_2_Alchemy_Choppin_hybrid } from "./2001_2_Alchemy_Choppin_hybrid"
@@ -28,12 +28,27 @@ import { build as build_4201_sqr_act_50 } from "./4201_sqr_act_50"
 import { build as build_4201_sqr_act_70 } from "./4201_sqr_act_70"
 import { build as build_4202_squ_afk_50 } from "./4202_squ_afk_50"
 import { build as build_4202_squ_afk_70 } from "./4202_squ_afk_70"
-import { build as build_5001_arc_afk_35 } from "./5001_arc_afk_35"
+import { build as build_5001_arc_act_35 } from "./5001_arc_act_35"
+import { build as build_5002_arc_afk_35 } from "./5002_arc_afk_35"
+import { build as build_5101_bow_act_50 } from "./5101_bow_act_50"
 import { build as build_5101_bow_afk_50 } from "./5101_bow_afk_50"
+import { build as build_5101_bow_boss_100 } from "./5101_bow_boss_100"
+import { build as build_5102_bow_act_50 } from "./5102_bow_act_50"
+import { build as build_5102_bow_afk_50 } from "./5102_bow_afk_50"
 import { build as build_5102_bow_afk_70 } from "./5102_bow_afk_70"
+import { build as build_5103_bow_afk_70 } from "./5103_bow_afk_70"
 import { build as build_5103_bow_afk_90 } from "./5103_bow_afk_90"
+import { build as build_5104_bow_act_70 } from "./5104_bow_act_70"
+import { build as build_5105_bow_afk_90 } from "./5105_bow_afk_90"
 import { build as build_5105_bow_boss_100 } from "./5105_bow_boss_100"
+import { build as build_5106_bow_act_90 } from "./5106_bow_act_90"
+import { build as build_5201_hun_afk_50 } from "./5201_hun_afk_50"
 import { build as build_5201_hunt_afk_50 } from "./5201_hunt_afk_50"
+import { build as build_5202_hun_act_50 } from "./5202_hun_act_50"
+import { build as build_5203_hun_afk_70 } from "./5203_hun_afk_70"
+import { build as build_5204_hun_act_70 } from "./5204_hun_act_70"
+import { build as build_5205_hun_afk_90 } from "./5205_hun_afk_90"
+import { build as build_5206_hun_act_90 } from "./5206_hun_act_90"
 import { build as build_6001_mage_act_35 } from "./6001_mage_act_35"
 import { build as build_6001_mage_afk_35 } from "./6001_mage_afk_35"
 import { build as build_6103_sha_act_50 } from "./6103_sha_act_50"
@@ -49,6 +64,8 @@ import { build as build_6202_wiz_afk_70 } from "./6202_wiz_afk_70"
 import { build as build_6202_wiz_afk_90 } from "./6202_wiz_afk_90"
 import { build as build_Rams_hunter_active_150 } from "./Rams_hunter_active_150"
 
+
+
 export type BuildTab = {
     skills: Record<number, string>; // Skill index -> points
     comment: string;
@@ -61,7 +78,6 @@ export type Build = {
     tabs: BuildTab[];
     notes: string;
 };
-
 
 export const builds: Build[] = [];
 builds.push(build_1001_my_first_char);
@@ -93,12 +109,27 @@ builds.push(build_4201_sqr_act_50);
 builds.push(build_4201_sqr_act_70);
 builds.push(build_4202_squ_afk_50);
 builds.push(build_4202_squ_afk_70);
-builds.push(build_5001_arc_afk_35);
+builds.push(build_5001_arc_act_35);
+builds.push(build_5002_arc_afk_35);
+builds.push(build_5101_bow_act_50);
 builds.push(build_5101_bow_afk_50);
+builds.push(build_5101_bow_boss_100);
+builds.push(build_5102_bow_act_50);
+builds.push(build_5102_bow_afk_50);
 builds.push(build_5102_bow_afk_70);
+builds.push(build_5103_bow_afk_70);
 builds.push(build_5103_bow_afk_90);
+builds.push(build_5104_bow_act_70);
+builds.push(build_5105_bow_afk_90);
 builds.push(build_5105_bow_boss_100);
+builds.push(build_5106_bow_act_90);
+builds.push(build_5201_hun_afk_50);
 builds.push(build_5201_hunt_afk_50);
+builds.push(build_5202_hun_act_50);
+builds.push(build_5203_hun_afk_70);
+builds.push(build_5204_hun_act_70);
+builds.push(build_5205_hun_afk_90);
+builds.push(build_5206_hun_act_90);
 builds.push(build_6001_mage_act_35);
 builds.push(build_6001_mage_afk_35);
 builds.push(build_6103_sha_act_50);
