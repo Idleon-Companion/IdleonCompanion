@@ -38,8 +38,8 @@
     <div class="col-auto text-light">
       <div id="version-group" class="p-2">
         <h3>Last Updated</h3>
-        <p>v1.22</p>
-        <p>July 7, 2021</p>
+        <p>v1.23</p>
+        <p>July 31, 2021</p>
       </div>
     </div>
   </div>
