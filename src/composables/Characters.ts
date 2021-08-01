@@ -1,6 +1,6 @@
+import { CompleteChecklist } from "~/composables/Checklist";
 import { computed, ref } from "vue";
 import { useState } from "~/State";
-import { CompleteChecklist } from "~/composables/Checklist";
 
 export enum Class {
   All = "All", // Utility for any class
@@ -132,7 +132,7 @@ export function useCharacters() {
   const createCharactersFromData = (data: Character[]) => {
     characters.value = [];
     for (const c of data) {
-      let newChar = new Character();
+      const newChar = new Character();
       Object.assign(newChar, c);
       characters.value.push(newChar);
     }

@@ -4,7 +4,7 @@ import { AlchemyColor, AlchemyData } from "~/composables/Alchemy";
 import { Character, useCharacters } from "~/composables/Characters";
 import { Stamps } from "./composables/Stamps";
 import { StatueInfo, StatueName, Statues } from "./composables/Statues";
-import { Task } from "~/composables/Progress";
+import { Task, Timer } from "~/composables/Tasks";
 import { createGlobalState, useStorage } from "@vueuse/core";
 import { ref } from "vue";
 import { useToast } from "vue-toastification";
@@ -38,6 +38,7 @@ export const useState = createGlobalState(() =>
     tasks: {
       dailyReset: "12:00",
       tasks: Array<Task>(),
+      timers: Array<Timer>(),
     },
     version: "0.2.0",
   })
@@ -117,7 +118,7 @@ export function versionControl() {
       }
     }
   }
-  // Move statues from character to global state, add stamp tracking
+  // Move statues from character to global state, add stamp tracking, new tasks/timers
   if (state.value.version < "0.3.0") {
     if (!state.value.statues) {
       state.value.statues = {} as Record<StatueName, StatueInfo>;
@@ -138,6 +139,12 @@ export function versionControl() {
     for (const stamp of Object.values(Stamps)) {
       state.value.stamps[stamp.name] = 0;
     }
+    // Reset tasks/daily reset timer
+    state.value.tasks = {
+      dailyReset: "00hr 00min 00sec",
+      tasks: [],
+      timers: [],
+    };
   }
   state.value.version = version;
 }

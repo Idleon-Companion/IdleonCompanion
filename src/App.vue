@@ -47,9 +47,7 @@
 </template>
 
 <script lang="ts">
-import firebase from "firebase/app";
 import "firebase/auth";
-import { useQuasar } from "quasar";
 import {
   computed,
   defineComponent,
@@ -57,12 +55,14 @@ import {
   ref,
   watchEffect,
 } from "vue";
+import { useQuasar } from "quasar";
+import firebase from "firebase/app";
 
-import LeftDrawerContent from "~/components/nav/LeftDrawerContent.vue";
-import RightDrawerContent from "~/components/nav/RightDrawerContent.vue";
+import { firebaseApp, useState, versionControl } from "~/State";
 import { useCharacters } from "~/composables/Characters";
 import { useLayout } from "~/composables/Utilities";
-import { firebaseApp, versionControl, useState } from "~/State";
+import LeftDrawerContent from "~/components/nav/LeftDrawerContent.vue";
+import RightDrawerContent from "~/components/nav/RightDrawerContent.vue";
 
 import "~/styles/base.sass";
 

@@ -1,6 +1,6 @@
 <template>
   <q-card flat square>
-    <div class="px-2 py-4 flex items-center bg-primary">
+    <div class="p-2 flex items-center bg-primary">
       <ICAsset :image="Assets.CharImage(character)" />
       <div class="flex flex-col ml-2">
         <div class="flex items-center">

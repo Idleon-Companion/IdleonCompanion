@@ -46,11 +46,7 @@
     </div>
   </div>
   <q-btn-toggle unelevated v-model="currentCauldron" :options="cauldrons">
-    <template
-      v-for="cauldron in cauldrons"
-      :key="cauldron.value"
-      v-slot:[cauldron.slot]
-    >
+    <template v-for="cauldron in cauldrons" v-slot:[cauldron.slot]>
       <div :style="{ color: cauldron.meta.hex }">
         {{ cauldron.meta.name }} Cauldron
       </div>

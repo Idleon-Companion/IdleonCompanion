@@ -956,7 +956,7 @@ export function useChecklist() {
     // Handler for clicking a checklist item
     // Handle cycling for items with a cycle (e.g. capacity pouches)
     if (group.cycle) {
-      let cycleIndex = group.items.indexOf(clicked);
+      const cycleIndex = group.items.indexOf(clicked);
       let goalIndex = cycleIndex + (direction ?? 0);
       if (goalIndex === -1 && !hasItem(clicked.name)) {
         goalIndex = group.items.length - 1;
