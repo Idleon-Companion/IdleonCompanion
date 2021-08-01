@@ -1,4 +1,4 @@
-import { Effects, EffectData } from "./Utilities";
+import { EffectData, Effects } from "./Utilities";
 
 export enum CardCategory {
   BlunderHills = "Blunder Hills",
@@ -833,8 +833,8 @@ export const Cards: Record<CardCategory, Card[]> = {
 
 export function useCards() {
   const getCardText = (card: Card, tier: number): string => {
-    let name = card.id.replace(/_/g, " ");
-    let bonus = tier * card.base;
+    const name = card.id.replace(/_/g, " ");
+    const bonus = tier * card.base;
     let text = `${name}<br>+${bonus} ${card.effect}`;
     if (card.source) {
       text += `<br><em>Source: ${card.source}</em>`;

@@ -2,7 +2,7 @@
   <div class="m-4 p-2">
     <div class="flex justify-center">
       <q-table
-        class="ic-table"
+        class="ic-table fixed"
         :columns="constellationTableColumns"
         :rows="constellations"
         :rows-per-page-options="[0]"
@@ -70,7 +70,7 @@
         </template>
       </q-table>
       <q-table
-        class="ic-table ml-8"
+        class="ic-table fixed ml-8"
         :columns="starSignTableColumns"
         :rows="allStarSigns"
         :rows-per-page-options="[0]"
@@ -130,13 +130,14 @@
 
 <script lang="ts">
 import { computed, defineComponent } from "vue";
-import { useCharacters } from "~/composables/Characters";
+
 import {
   Constellation,
   Constellations,
   StarSign,
   StarSigns,
 } from "~/composables/StarSigns";
+import { useCharacters } from "~/composables/Characters";
 import { useState } from "~/State";
 
 export default defineComponent({
