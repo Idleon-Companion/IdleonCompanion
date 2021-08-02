@@ -45,13 +45,14 @@
       </div>
     </div>
   </div>
-  <q-btn-toggle unelevated v-model="currentCauldron" :options="cauldrons">
-    <template v-for="cauldron in cauldrons" v-slot:[cauldron.slot]>
-      <div :style="{ color: cauldron.meta.hex }">
-        {{ cauldron.meta.name }} Cauldron
-      </div>
-    </template>
-  </q-btn-toggle>
+  <q-btn
+    v-for="(cauldron, color) in cauldrons"
+    unelevated
+    @click="onChangeCauldron(color)"
+    :class="{ 'bg-primary': currentCauldron === color }"
+  >
+    <div :style="{ color: cauldron.hex }">{{ cauldron.name }} Cauldron</div>
+  </q-btn>
   <q-markup-table bordered>
     <thead>
       <tr class="text-left">
@@ -121,17 +122,6 @@ export default defineComponent({
     const { calculateBubbleDiscount } = useAlchemy();
 
     const currentCauldron = ref<AlchemyColor>("Orange");
-    const cauldrons = computed(() => {
-      const options = [];
-      for (const [cauldron, data] of Object.entries(CauldronData)) {
-        options.push({
-          meta: data,
-          value: cauldron,
-          slot: cauldron,
-        });
-      }
-      return options;
-    });
 
     const cauldronLevel = ref(0);
     const bargainTagLevel = ref(0);
@@ -163,8 +153,11 @@ export default defineComponent({
         )
       ),
       cauldronLevel,
-      cauldrons,
+      cauldrons: CauldronData,
       currentCauldron,
+      onChangeCauldron: (color: string) => {
+        currentCauldron.value = color as AlchemyColor;
+      },
     };
   },
 });

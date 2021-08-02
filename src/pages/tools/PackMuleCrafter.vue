@@ -197,7 +197,7 @@ const taskTiers = [
   { label: "Tier 9 (90 Items)", value: "tier9" },
   { label: "Tier 10 (110 Items)", value: "tier10" },
 ];
-const lastUpdated = "July 17, 2021 (v1.22d)";
+const lastUpdated = "July 31, 2021 (v1.23)";
 const wikiLinks = new Map([
   [
     "Pack Mule Crafter Task",
