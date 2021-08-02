@@ -7,8 +7,9 @@ export type Task = {
 };
 
 export type Timer = {
-  startedAt: number; // Timestamp when the timer started
+  end: number; // Timestamp when the timer will end
   description: string;
+  start: number; // Timestamp when the timer was created
 };
 
 export const DefaultTasks: Task[] = [
