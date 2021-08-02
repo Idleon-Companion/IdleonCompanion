@@ -1,6 +1,6 @@
-import { computed, ref, watch } from "vue";
+import { computed, ref } from "vue";
 import { useState } from "~/State";
-import checklistData from "~/data/checklist.json";
+import { checklistData } from "~/composables/Checklist";
 
 export enum Class {
   Beginner = "Beginner",
@@ -26,6 +26,9 @@ export const Skills = [
   "Fishing",
   "Alchemy",
   "Catching",
+  "Trapping",
+  "Construction",
+  "Worship",
 ];
 
 // Characters keep track of individual data
@@ -37,6 +40,8 @@ export class Character {
   public items: Record<string, boolean>;
   public skills: Record<string, number>;
   public statues: Record<string, number>;
+  public constellations: Record<string, boolean>;
+  public starSigns: Record<string, boolean>;
 
   constructor() {
     this.class = Class.Beginner;
@@ -46,6 +51,8 @@ export class Character {
     this.items = {};
     this.skills = {};
     this.statues = {};
+    this.constellations = {};
+    this.starSigns = {};
   }
 
   setClass(c: Class | Subclass) {
@@ -75,7 +82,7 @@ export class Character {
     for (const category of ["Inventory Bags"] as const) {
       for (const item of checklistData[category].items) {
         if (this.hasItem(item.name)) {
-          slots += item.bagSlots;
+          slots += item.bagSlots ?? 0;
         }
       }
     }
@@ -83,7 +90,7 @@ export class Character {
     for (const category of ["Gem Shop Bags"] as const) {
       for (const item of checklistData[category].items) {
         if (checklist[item.name] === true) {
-          slots += item.bagSlots;
+          slots += item.bagSlots ?? 0;
         }
       }
     }
@@ -96,9 +103,14 @@ export class Character {
 }
 
 const charIndex = ref(0);
-const characters = ref(Array<Character>());
 
 export function useCharacters() {
+  const state = useState();
+  const characters = computed({
+    get: () => state.value.chars,
+    set: (value) => (state.value.chars = value),
+  });
+
   const numCharacters = computed(() => {
     return characters.value.length;
   });

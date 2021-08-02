@@ -4,6 +4,8 @@
       <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
         Track your account progress! Here you can check all of the global
         collectibles in game. Click on a cards to cycle through rarity levels.
+        <br>
+        For details on drops, please refer to the <a target="_blank" href="https://idleon.info/wiki/Category:Droptables">wiki page about drop tables</a>
       </p>
     </div>
   </div>
@@ -13,18 +15,18 @@
       :key="category"
       class="progress-group"
     >
-      <div class="progress-category text-light col-12 col-md-6 my-3">
+      <div class="progress-category text-light col-12 col-md-6 my-1">
         {{ category }}
       </div>
       <div class="progress-items">
         <div v-for="(item, i) in data.items" :key="i">
           <div class="progress-item">
             <GameAsset
-              class="m-1"
+              class="mx-1"
               :height="64"
               :title="item.name"
               :image="Assets.FromDir(item.name, data.assetDir)"
-              :data-enabled="checklist[item.name]"
+              :enabled="checklist[item.name]"
               @click="handleProgressCheck(item.name)"
             >
               <template #tooltip>
@@ -47,7 +49,7 @@
               :height="72"
               :title="cardText(card)"
               :image="Assets.CardImage(card.id)"
-              :data-enabled="cards[card.id] !== 0"
+              :enabled="cards[card.id] !== 0"
               @click="handleCardClick(card.id, +1)"
               @contextmenu.prevent="handleCardClick(card.id, -1)"
             >
@@ -70,7 +72,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-import checklistData from "~/data/checklist.json";
+import { checklistData } from "~/composables/Checklist";
 
 import GameAsset from "~/components/GameAsset.vue";
 import { Card, CardCategory, Cards } from "~/composables/Cards";
@@ -94,18 +96,24 @@ export default defineComponent({
     });
 
     const state = useState();
-    const checklist = state.value.checklist;
+    const checklist = computed({
+      get: () => state.value.checklist,
+      set: (value) => (state.value.checklist = value),
+    });
     for (const data of Object.values(globalChecklist.value)) {
       for (const item of data.items) {
-        if (checklist[item.name]) {
-          checklist[item.name] = true;
+        if (checklist.value[item.name]) {
+          checklist.value[item.name] = true;
         } else {
-          checklist[item.name] = false;
+          checklist.value[item.name] = false;
         }
       }
     }
 
-    const cards = state.value.cards;
+    const cards = computed({
+      get: () => state.value.cards,
+      set: (value) => (state.value.cards = value),
+    });
     const cardData = ref({} as Record<string, Card[]>);
     for (const card of Cards) {
       // Group by category for template
@@ -115,18 +123,22 @@ export default defineComponent({
         cardData.value[card.category] = [card];
       }
       // Load from local state
-      if (!(card.id in cards)) {
-        cards[card.id] = 0;
+      if (!(card.id in state.value.cards)) {
+        state.value.cards[card.id] = 0;
       }
     }
 
     // Input handlers
     const CARD_TIERS = 5;
     const handleCardClick = (id: string, amount: number) => {
-      cards[id] = (cards[id] + amount) % CARD_TIERS;
+      let cardTier = (state.value.cards[id] + amount) % CARD_TIERS;
+      if (cardTier < 0) {
+        cardTier = CARD_TIERS - 1;
+      }
+      state.value.cards[id] = cardTier;
     };
     const handleProgressCheck = (item: string) => {
-      checklist[item] = !checklist[item];
+      checklist.value[item] = !checklist.value[item];
     };
 
     return {
@@ -156,6 +168,13 @@ export default defineComponent({
 </script>
 
 <style lang="sass" scoped>
+@import '../styles/base.sass'
+a
+  color: lighten($info, 10%)
+  font-weight: bold
+  transition: 0.3s
+  &:hover
+    color: darken($info, 10%)
 .card-wrapper
   position: relative
   width: 62px

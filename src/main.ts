@@ -3,6 +3,7 @@ import VueTippy from "vue-tippy";
 import Toast, { PluginOptions } from "vue-toastification";
 import App from "~/App.vue";
 
+import "virtual:windi.css";
 import "tippy.js/dist/tippy.css";
 import "vue-toastification/dist/index.css";
 

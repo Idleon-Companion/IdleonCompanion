@@ -1,9 +1,10 @@
 <template>
-  <div class="row ">
+  <div class="row">
     <div>
-    <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
-      This list shows possible cards sets grouped by usage. Cards are listed from the most to the least useful, left to right.
-    </p>
+      <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
+        This list shows possible cards sets grouped by usage. Cards are listed
+        from the most to the least useful, left to right.
+      </p>
     </div>
   </div>
   <div class="p-3" id="card-wrapper">
@@ -11,7 +12,7 @@
       <div class="h1 text-light">{{ cardset.title }}</div>
       <div class="row justify-content-start">
         <div
-          class="col-4 border border-secondary rounded p-2 w-auto"
+          class="col-4 border border-secondary rounded p-2 w-auto flex"
           style="min-width: 150px"
         >
           <span class="badge bg-secondary card-title">Core Cards</span>
@@ -24,7 +25,7 @@
           />
         </div>
         <div
-          class="col-4 border border-secondary rounded p-2 w-auto"
+          class="col-4 border border-secondary rounded p-2 w-auto flex"
           style="min-width: 150px"
         >
           <span class="badge bg-secondary card-title">Useful Cards</span>
@@ -37,7 +38,7 @@
           />
         </div>
         <div
-          class="col-4 border border-secondary rounded p-2 w-auto"
+          class="col-4 border border-secondary rounded p-2 w-auto flex"
           style="min-width: 150px"
         >
           <span class="badge bg-secondary card-title">Minimal Benefits</span>

@@ -105,4 +105,26 @@ export const Changelog: ChangelogEntry[] = [
     },
     date: "May 31, 2021",
   },
+  {
+    version: "0.2.2 (Calculators / Star Signs)",
+    changes: {
+      features: [
+        "Constellations: Track constellations unlocked on each character as well as equipped star signs",
+        "W3 Data: Cards, Stamps, Skills, Materials, Recipes and Alchemy updated to Latest Version",
+      ],
+      changes: [
+        "UI: improved design of the recipe calculator"],
+    },
+    date: "June 2021",
+  },
+  {
+    version: "0.2.3",
+    changes: {
+      features: [],
+      changes: [
+        "UI: New Tree View for the recipe calculator",
+        "Tracking: Hard Resource Cards added to Progress Tracker"],
+    },
+    date: "June 2021",
+  },
 ];

@@ -1,9 +1,9 @@
-import { Effects } from "./Utilities";
+import { EffectData, Effects } from "./Utilities";
 
 // All statues in the game
 type Statue = {
   base: number;
-  effect: Effects;
+  effect: EffectData;
 };
 
 export type StatueName =
@@ -21,7 +21,11 @@ export type StatueName =
   | "Anvil"
   | "Cauldron"
   | "Beholder"
-  | "Bullseye";
+  | "Bullseye"
+  | "Box"
+  | "EhExPee"
+  | "Seesaw"
+  | "Twosoul";
 
 export const Statues: Record<StatueName, Statue> = {
   Power: {
@@ -84,4 +88,20 @@ export const Statues: Record<StatueName, Statue> = {
     base: 0.8,
     effect: Effects.TotalAccuracy,
   },
+  Box: {
+    base: 0.3,
+    effect: Effects.TrappingBase,
+  },
+  EhExPee: {
+    base: 0.1,
+    effect: Effects.SkillExp,
+  },
+  Seesaw: {
+    base: 0.5,
+    effect: Effects.ConstructionExp,
+  },
+  Twosoul: {
+    base: 0.3,
+    effect: Effects.WorshipBase,
+  }
 };

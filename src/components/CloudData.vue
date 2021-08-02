@@ -3,7 +3,7 @@
     id="firebase-auth"
     :style="user === null ? '' : { display: 'none' }"
   ></div>
-  <div v-if="user !== null" id="auth-info" class="p-1">
+  <div v-if="user !== null" id="auth-info" class="px-1 py-2">
     <div class="d-flex justify-content-between">
       <div class="d-flex align-items-center">
         <button @click="loadCloud">
@@ -91,6 +91,6 @@ export default defineComponent({
   cursor: pointer
   transition: 0.3s
   button
-    border-radius: 2px
+    border-radius: 3px
     margin: 0 0.25rem
 </style>

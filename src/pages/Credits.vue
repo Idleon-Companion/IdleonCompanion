@@ -10,7 +10,7 @@
       ></iframe>
       <div class="col">
         <h2 class="display-4 text-left">Credits</h2>
-        <hr />
+        <hr class="my-2" />
         <p>
           Idleon Companion is open-source and you can find the code
           <a href="https://github.com/Musimaniac/IdleonCompanion">here</a>.
@@ -49,7 +49,7 @@
             >Go play Legends of Idleon</a
           >
         </p>
-        <hr />
+        <hr class="my-2" />
         <p class="text-info">
           For info or suggestions, write at
           <a href="mailto: webmaster@idleoncompanion.com"
@@ -63,7 +63,7 @@
         <h2 class="display-5">Changelog</h2>
         <div id="changelog">
           <div v-for="(entry, i) in entries" :key="i">
-            <hr />
+            <hr class="my-2" />
             <h4 class="text-light">{{ entry.version }} | {{ entry.date }}</h4>
             <div v-if="entry.changes.features">
               <div class="changelog-header text-success">Features</div>

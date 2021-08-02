@@ -34,19 +34,27 @@ export default defineComponent({
       type: Boolean,
     },
     height: {
+      default: 0,
       type: Number,
+      required: false,
     },
     image: {
       required: true,
       type: String,
     },
-    title: String,
+    title: {
+      default: "",
+      type: String,
+      required: false,
+    },
     thumbnail: {
       default: false,
       type: Boolean,
     },
     width: {
+      default: 0,
       type: Number,
+      required: false,
     },
   },
   setup(props) {

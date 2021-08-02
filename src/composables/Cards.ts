@@ -1,10 +1,11 @@
-import { Effects } from "./Utilities";
+import { Effects, EffectData } from "./Utilities";
 
 export enum CardCategory {
   BlunderHills = "Blunder Hills",
   YumYumDesert = "Yum Yum Desert",
   EasyResources = "Easy Resources",
   MediumResources = "Medium Resources",
+  HardResources = "Hard Resources",
   FrostbiteTundra = "Frostbite Tundra",
   Bosses = "Bosses",
   Events = "Events",
@@ -13,12 +14,12 @@ export enum CardCategory {
 export type Card = {
   id: string;
   category: CardCategory;
-  effect: Effects;
+  effect: EffectData;
   base: number;
   source?: string;
 };
 
-export const Cards: Card[] = [
+const BlunderHillCards: Card[] = [
   {
     id: "Green_Mushroom",
     category: CardCategory.BlunderHills,
@@ -131,6 +132,9 @@ export const Cards: Card[] = [
     base: 5,
     source: "Wood Mushroom (1/10,000)",
   },
+]
+
+const YumYumDesertCards: Card[] = [
   {
     id: "Sandy_Pot",
     category: CardCategory.YumYumDesert,
@@ -229,6 +233,9 @@ export const Cards: Card[] = [
     base: 1,
     source: "Survive Bandit Bob",
   },
+];
+
+const EasyResourcesCards: Card[] = [
   {
     id: "Copper_Ore",
     category: CardCategory.EasyResources,
@@ -320,6 +327,9 @@ export const Cards: Card[] = [
     base: 5,
     source: "Catching Butterflies",
   },
+];
+
+const MediumResourcesCards: Card[] = [
   {
     id: "Platinum_Ore",
     category: CardCategory.MediumResources,
@@ -340,13 +350,6 @@ export const Cards: Card[] = [
     effect: Effects.CardChance,
     base: 6,
     source: "Mining Void",
-  },
-  {
-    id: "Lustre_Ore",
-    category: CardCategory.MediumResources,
-    effect: Effects.BaseLUK,
-    base: 4,
-    source: "Mining Lustre",
   },
   {
     id: "Cinder_Forge",
@@ -397,6 +400,246 @@ export const Cards: Card[] = [
     base: 2,
     source: "Catching Fruitflies",
   },
+  {
+    id: "Forest_Soul",
+    category: CardCategory.MediumResources,
+    effect: Effects.EquipmentDefense,
+    base: 3,
+    source: "Glublin Totem",
+  },
+  {
+    id: "Dune_Soul",
+    category: CardCategory.MediumResources,
+    effect: Effects.WorshipCharge,
+    base: 3,
+    source: "",
+  },
+  {
+    id: "Froge",
+    category: CardCategory.MediumResources,
+    effect: Effects.TrappingShiny,
+    base: 3,
+    source: "Trapping Froges",
+  },
+  {
+    id: "Crabbo",
+    category: CardCategory.MediumResources,
+    effect: Effects.TrappingEfficiency,
+    base: 5,
+    source: "Trapping Crabbos",
+  },
+  {
+    id: "Scorpie",
+    category: CardCategory.MediumResources,
+    effect: Effects.TrappingExp,
+    base: 5,
+    source: "Trapping Scorpies",
+  },
+];
+
+const HardResourcesCards: Card[] = [
+  {
+    id: "Lustre_Ore",
+    category: CardCategory.HardResources,
+    effect: Effects.BaseLUK,
+    base: 4,
+    source: "Mining Lustre",
+  },
+  {
+    id: "Rooted_Soul",
+    category: CardCategory.HardResources,
+    effect: Effects.WorshipPoints,
+    base: 6,
+    source: "Acorn Assault (Worship)",
+  },
+  {
+    id: "Frigid_Soul",
+    category: CardCategory.HardResources,
+    effect: Effects.WorshipCharge,
+    base: 2.5,
+    source: "Frosty Firefight (Worship)",
+  },
+  {
+    id: "Squiddy_Soul",
+    category: CardCategory.HardResources,
+    effect: Effects.WorshipChargeRate,
+    base: 2.5,
+    source: "Unobtainable",
+  },
+  {
+    id: "Mousey",
+    category: CardCategory.HardResources,
+    effect: Effects.TrappingShiny,
+    base: 2.5,
+    source: "Rats Nest (Trapping)",
+  },
+  {
+    id: "Owlio",
+    category: CardCategory.HardResources,
+    effect: Effects.MonsterExp,
+    base: 1.25,
+    source: "Hollowed Trunk (Trapping)",
+  },
+  {
+    id: "Pingy",
+    category: CardCategory.HardResources,
+    effect: Effects.SkillAfk,
+    base: 6,
+    source: "The Stache Split (Trapping)",
+  },
+  {
+    id: "Bunny",
+    category: CardCategory.HardResources,
+    effect: Effects.TrappingShiny,
+    base: 1,
+    source: "Thermonuclear Climb (Trapping)",
+  },
+  {
+    id: "Tundra_Logs",
+    category: CardCategory.HardResources,
+    effect: Effects.ChoppinAfk,
+    base: 2.5,
+    source: "Chopping Saharan Foal",
+  },
+  {
+    id: "Wispy_Lumber",
+    category: CardCategory.HardResources,
+    effect: Effects.ChoppinSpeed,
+    base: 6,
+    source: "Chopping Wispy Tree",
+  },
+  {
+    id: "Mosquisnow",
+    category: CardCategory.HardResources,
+    effect: Effects.CatchingEfficiency,
+    base: 7,
+    source: "Catching Mosquisnow",
+  },
+  {
+    id: "Flycicle",
+    category: CardCategory.HardResources,
+    effect: Effects.CatchingAfk,
+    base: 2.5,
+    source: "Catching Flycicle",
+  },
+];
+
+const FrostbiteTundraCards: Card[] = [
+  {
+    id: "Sheepie",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.EquipmentDefense,
+    base: 3,
+    source: "1/10000",
+  },
+  {
+    id: "Frost_Flake",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.BaseSTR,
+    base: 7,
+    source: "1/10000",
+  },
+  {
+    id: "Sir_Stache",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.CardChance,
+    base: 8,
+    source: "1/10000",
+  },
+  {
+    id: "Bloque",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.BaseAGI,
+    base: 7,
+    source: "1/10000",
+  },
+  {
+    id: "Mamooth",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.TotalHP,
+    base: 3.5,
+    source: "1/10000",
+  },
+  {
+    id: "Snowman",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.TotalDamage,
+    base: 3,
+    source: "1/10000",
+  },
+  {
+    id: "Penguin",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.BaseWIS,
+    base: 7,
+    source: "1/10000",
+  },
+  {
+    id: "Thermister",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.CritDamage,
+    base: 4,
+    source: "1/10000",
+  },
+  {
+    id: "Quenchie",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.BaseLUK,
+    base: 7,
+    source: "1/10000",
+  },
+  {
+    id: "Cryosnake",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.MPRegen,
+    base: 5,
+    source: "1/10000",
+  },
+  {
+    id: "Bop_Box",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.DropRate,
+    base: 3,
+    source: "1/10000",
+  },
+  {
+    id: "Neyeptune",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.TotalAccuracy,
+    base: 5,
+    source: "1/10000",
+  },
+  {
+    id: "Dedotated_Ram",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.WeaponPower,
+    base: 2,
+    source: "1/10000",
+  },
+  {
+    id: "Xylobone",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.CritChance,
+    base: 1,
+    source: "1/20",
+  },
+  {
+    id: "Bloodbone",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.TotalDamage,
+    base: 3,
+    source: "1/10000",
+  },
+  {
+    id: "Crystal_Cattle",
+    category: CardCategory.FrostbiteTundra,
+    effect: Effects.MonsterExp,
+    base: 3,
+    source: "",
+  },
+];
+
+const BossesCards: Card[] = [
   {
     id: "Baba_Yaga",
     category: CardCategory.Bosses,
@@ -460,6 +703,23 @@ export const Cards: Card[] = [
     base: 3.75,
     source: "Chaotic Efaunt (1/50)",
   },
+  {
+    id: "Chizoar",
+    category: CardCategory.Bosses,
+    effect: Effects.CogSpeed,
+    base: 10,
+    source: "",
+  },
+  {
+    id: "Chaotic_Chizoar",
+    category: CardCategory.Bosses,
+    effect: Effects.ShrineEffect,
+    base: 5,
+    source: "",
+  },
+];
+
+const EventsCards: Card[] = [
   {
     id: "Ghost",
     category: CardCategory.Events,
@@ -530,4 +790,15 @@ export const Cards: Card[] = [
     base: 1,
     source: "Egg Capsule",
   },
+];
+
+export const Cards: Card[] = [
+  ...BlunderHillCards,
+  ...YumYumDesertCards,
+  ...EasyResourcesCards,
+  ...MediumResourcesCards,
+  ...HardResourcesCards,
+  ...FrostbiteTundraCards,
+  ...BossesCards,
+  ...EventsCards,
 ];

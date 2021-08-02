@@ -1,9 +1,9 @@
-import checklistData from "./data/checklist.json";
+import { checklistData } from "~/composables/Checklist";
 import { version } from "../package.json";
 import { createGlobalState, useStorage } from "@vueuse/core";
 import { ref } from "vue";
 import { useToast } from "vue-toastification";
-import { AlchemyData } from "~/composables/Alchemy";
+import { AlchemyData, Color } from "~/composables/Alchemy";
 import { Task } from "~/composables/Progress";
 import { Character, useCharacters } from "~/composables/Characters";
 
@@ -17,23 +17,32 @@ export const useState = createGlobalState(() =>
         Purple: [],
         Yellow: [],
       },
+      goals: {
+        Orange: [],
+        Green: [],
+        Purple: [],
+        Yellow: [],
+      },
       vials: {},
     } as AlchemyData,
     cards: {} as Record<string, number>,
     chars: [] as Character[],
     checklist: {} as Record<string, boolean>,
+    starSigns: {} as Record<string, boolean>,
     tasks: {
       tasks: Array<Task>(),
       dailyReset: "12:00",
     },
-    version: "0.2.1",
+    version: "0.2.0",
   })
 );
 
 export function versionControl() {
-  let savedVersion = localStorage.getItem("version");
+  // Perform version controlling here whenever there is new data that is persisted
+  // Make sure to update the version number in package.json!
   const state = useState();
-  // Perform version controlling here
+  let savedVersion = localStorage.getItem("version");
+  // Legacy support for localStorage
   if (savedVersion !== null) {
     // Consider all previous stored data invalid
     if (savedVersion < "0.1.1") {
@@ -51,24 +60,67 @@ export function versionControl() {
         }
       }
     }
-  }
-  if (state.value.version < "0.2.0") {
-    for (const k of [
-      "alchemy",
-      "cards",
-      "chars",
-      "checklist",
-      "tasks",
-    ] as const) {
-      let value = localStorage.getItem(k);
-      if (value !== null) {
-        state.value[k] = JSON.parse(value);
+    if (savedVersion < "0.2.0") {
+      for (const k of [
+        "alchemy",
+        "cards",
+        "chars",
+        "checklist",
+        "tasks",
+      ] as const) {
+        let value = localStorage.getItem(k);
+        if (value !== null) {
+          state.value[k] = JSON.parse(value);
+        }
+      }
+      for (const k of Object.keys(localStorage)) {
+        if (![StorageKey, "iconify"].includes(k)) {
+          localStorage.removeItem(k);
+        }
       }
     }
-    for (const k of Object.keys(localStorage)) {
-      if (![StorageKey, "iconify"].includes(k)) {
-        localStorage.removeItem(k);
+  }
+  // Add star signs and constellations
+  if (state.value.version < "0.2.2") {
+    for (const key in state.value.chars) {
+      if (!state.value.chars[key].constellations) {
+        state.value.chars[key].constellations = {};
       }
+      if (!state.value.chars[key].starSigns) {
+        state.value.chars[key].starSigns = {};
+      }
+    }
+    if (!state.value.starSigns) {
+      state.value.starSigns = {};
+    }
+  }
+  // Add W3 skills and statues
+  if (state.value.version < "0.2.3") {
+    let newSkills = ["Trapping", "Construction", "Worship"];
+    let newStatues = ["Box", "EhExPee", "Seesaw", "Twosoul"];
+
+    for (const key in state.value.chars) {
+      for (const s of newSkills) state.value.chars[key].skills[s] = 0;
+      for (const t of newStatues) state.value.chars[key].statues[t] = 0;
+    }
+  }
+  // Add new bubble slots and a goals field for each bubble
+  if (state.value.version < "0.2.4") {
+    let colors: Color[] = ["Orange", "Green", "Purple", "Yellow"];
+    for (const k of colors) {
+      let amount = 15;
+      if (!state.value.alchemy.goals) {
+        state.value.alchemy.goals = {
+          Orange: [],
+          Green: [],
+          Purple: [],
+          Yellow: [],
+        };
+      }
+      for (let i = 0; i < amount; i++) {
+        state.value.alchemy.upgrades[k][i] = state.value.alchemy.upgrades[k][i] ?? 0; 
+        state.value.alchemy.goals[k][i] = state.value.alchemy.goals[k][i] ?? 0;       
+      }     
     }
   }
   state.value.version = version;
@@ -76,6 +128,7 @@ export function versionControl() {
 
 // Firebase Initialization
 import firebase from "firebase/app";
+import "firebase/auth";
 import "firebase/database";
 
 const firebaseConfig = {
@@ -91,12 +144,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 type UserState = firebase.User | null;
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+export const firebaseApp = firebase.initializeApp(firebaseConfig);
+const auth = firebaseApp.auth();
 const user = ref(null as UserState);
 
 export const useAuth = () => {
-  const auth = firebaseApp.auth();
-  auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
   user.value = auth.currentUser;
   const db = firebaseApp.database();
 

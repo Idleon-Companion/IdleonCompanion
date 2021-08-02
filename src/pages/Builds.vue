@@ -10,14 +10,14 @@
   <div class="row px-3 my-3">
     <div class="col-md input-group build-selector p-0">
       <span class="input-group-text">Class</span>
-      <select v-model="buildClass" id="buildClass">
+      <select v-model="buildClass" class="bg-primary" id="buildClass">
         <option value="all" selected>All</option>
         <option v-for="(c, v) in classes" :key="c" :value="c">{{ v }}</option>
       </select>
     </div>
     <div class="col-md input-group build-selector p-0">
       <span class="input-group-text bg-dark text-light">Build</span>
-      <select v-model="build" id="buildSelector">
+      <select v-model="build" class="bg-primary" id="buildSelector">
         <option value="" selected>Select Your Build</option>
         <option
           v-for="(build, buildID) in filteredBuilds"
