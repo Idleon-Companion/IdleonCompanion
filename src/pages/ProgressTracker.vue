@@ -4,6 +4,8 @@
       <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
         Track your account progress! Here you can check all of the global
         collectibles in game. Click on a cards to cycle through rarity levels.
+        <br>
+        For details on drops, please refer to the <a target="_blank" href="https://idleon.info/wiki/Category:Droptables">wiki page about drop tables</a>
       </p>
     </div>
   </div>
@@ -70,7 +72,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-import checklistData from "~/data/checklist.json";
+import { checklistData } from "~/composables/Checklist";
 
 import GameAsset from "~/components/GameAsset.vue";
 import { Card, CardCategory, Cards } from "~/composables/Cards";
@@ -166,6 +168,13 @@ export default defineComponent({
 </script>
 
 <style lang="sass" scoped>
+@import '../styles/base.sass'
+a
+  color: lighten($info, 10%)
+  font-weight: bold
+  transition: 0.3s
+  &:hover
+    color: darken($info, 10%)
 .card-wrapper
   position: relative
   width: 62px

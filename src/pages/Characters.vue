@@ -183,7 +183,11 @@
                   :enabled="isEnabled(item.name)"
                   @click="handleProgressCheck(item.name, +1)"
                   @contextmenu.prevent="handleProgressCheck(item.name, -1)"
-                />
+                >
+                  <template #tooltip>
+                    <div class="text-center" v-html="Text.Item(item)"></div>
+                  </template>
+                </GameAsset>
               </div>
             </div>
           </div>
@@ -211,8 +215,8 @@ import {
   useCharacters,
 } from "~/composables/Characters";
 import { Statues } from "~/composables/Statues";
-import { Assets, Text } from "~/composables/Utilities";
-import checklistData from "~/data/checklist.json";
+import { Assets, Text, ItemGroup } from "~/composables/Utilities";
+import { checklistData } from "~/composables/Checklist";
 import StatuesSection from "~/pages/Statues.vue";
 import { useAuth } from "~/State";
 
@@ -261,7 +265,7 @@ export default defineComponent({
       .reduce((obj, [key, value]) => {
         obj[key] = value;
         return obj;
-      }, {} as Record<string, any>);
+      }, {} as Record<string, ItemGroup>);
 
     type CycleData = Record<string, string[]>;
     var cycles: CycleData = {};

@@ -1,9 +1,15 @@
+import { Growth  } from "./Utilities";
+
 export type AlchemyData = {
   vials: Record<string, number>;
   upgrades: Record<Color, number[]>;
+  goals: Record<Color, number[]>;
 };
 
 export type Color = "Orange" | "Green" | "Purple" | "Yellow";
+export const BARGAIN_BUBBLE = 14;
+export const UNDEV_COST_BUBBLE = {color: <Color>"Yellow", number: 6};
+export const IRON_BAR_VIAL = "Barley Brew";
 
 export type Vial = {
   name: string;
@@ -11,6 +17,21 @@ export type Vial = {
   material: string;
   base: number;
   effect: string;
+};
+
+export type Bubble = {
+  Name: string;
+  x1: number;
+  x2: number;
+  Func: string;
+  effectDesc: string;
+  Materials: Material[];
+};
+
+export type Material = {
+  Name: string;
+  Amount: number;
+  isLiquid: boolean;
 };
 
 export const Vials: Vial[] = [
@@ -317,3 +338,48 @@ export const VialCost = [
   100e6,
   1e9,
 ];
+
+export class Alch {
+  static discount (cauldCostReduxLvl: number, bubbleCostBubbleLvl: number, bubbleCostVialLvl: number, bubbleTwelveLvl: number, tagLvl: number): any {
+    const precision = 10000;
+
+    const costReduxBoost = Math.round(10 * Growth.Decay(cauldCostReduxLvl, 90, 100)) / 10;
+    const oa          = Math.max(0.1, 1 - costReduxBoost / 100); // TODO: This one is off, but the total calculation is still correct
+    const newBubble   = Math.max(0.05, 1 - (Growth.Decay(bubbleTwelveLvl, 40, 12)/100)); // Hardcoded values, better to retrieve from bubbles data maybe.
+    const undevCost   = Growth.Decay(bubbleCostBubbleLvl, 40, 70);
+    const vial        = Growth.Add(bubbleCostVialLvl, 1, 0);
+    const undev_vial  = Math.max(0.05, 1 - (undevCost + vial) / 100);
+    const bargain_tag = Math.max(Math.pow(0.75, tagLvl), 0.1);
+    var discount = oa * newBubble * undev_vial * bargain_tag;
+    var result = [oa, bargain_tag, newBubble, undev_vial, discount];
+    result = result.map((a) => {
+        return (precision - Math.round(a*precision))/100}
+      );
+    if (process.env.NODE_ENV === "development") {
+      console.log(`Alch.discount = [
+        Cauldron:     ${result[0].toFixed(2).padStart(5, " ")} | Level : ${(""+cauldCostReduxLvl).padStart(4, " ")}
+        Bargain:      ${result[1].toFixed(2).padStart(5, " ")} | Level : ${(""+tagLvl).padStart(4, " ")}
+        Bubble XII:   ${result[2].toFixed(2).padStart(5, " ")} | Level : ${(""+bubbleTwelveLvl).padStart(4, " ")}
+        Undev + vial: ${result[3].toFixed(2).padStart(5, " ")} | Level : ${(""+bubbleCostBubbleLvl).padStart(4, " ")} Vial: ${(""+bubbleCostVialLvl).padStart(4, " ")}
+        Total:        ${result[4].toFixed(2).padStart(5, " ")}
+      ]`);
+    }
+    return result;
+  }
+  
+  static effect = (bubble: Bubble, level: number) => {
+    let effect = (level === 0 ? 0 : Growth[bubble.Func](level, Number(bubble.x1), Number(bubble.x2)));
+    if (isNaN(effect)) {
+      effect = 0;
+    }
+    return Number(effect);
+  }
+
+  static effectChange = (bubble: Bubble, levelNow: number, levelGoal: number) => {
+    let effectNow = Alch.effect(bubble, levelNow) ?? 0;
+    let effectGoal = Alch.effect(bubble, levelGoal);
+    effectGoal = (effectGoal < effectNow ? effectNow : effectGoal);
+    let result = `${Number(effectNow).toFixed(2).padStart(6, ' ')} => ${Number(effectGoal).toFixed(2).padStart(6, ' ')}`;
+    return result;
+  };
+}
