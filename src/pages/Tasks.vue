@@ -18,7 +18,36 @@
   </q-banner>
   <q-card class="m-4">
     <q-card-section>
-      <div class="text-lg">Create New Task</div>
+      <div class="text-lg pb-2">Create New Task</div>
+      <q-input
+        v-model="newTask.description"
+        autogrow
+        filled
+        placeholder="Fight all minibosses in World 2"
+        label="Task"
+      />
+      <div class="flex justify-between items-center py-2">
+        <div class="flex">
+          <q-input
+            v-model="newTask.tags"
+            filled
+            placeholder="skills, guild, W3"
+            label="Tags"
+            hint="Separate tags with commas"
+          />
+          <div class="pl-2">
+            <q-input
+              v-model.number="newTask.steps"
+              filled
+              type="number"
+              :min="1"
+              label="Steps"
+              hint="Number of goals for this task"
+            />
+          </div>
+        </div>
+        <q-btn color="info" label="Add Task" @click="addTask" />
+      </div>
     </q-card-section>
     <q-separator />
     <q-card-section>
@@ -34,7 +63,7 @@
               dense
               mask="##hr ##min ##sec"
               label="Reset Timer"
-              fill-mask="0"
+              fill-mask="_"
               @update:model-value="onUpdateDailyResetTime"
             />
             <div class="text-xs text-secondary m-1">
@@ -63,14 +92,17 @@
         <template #top>
           <div class="flex flex-col w-full">
             <q-linear-progress
-              size="1rem"
+              stripe
+              size="1.5rem"
               color="positive"
               :value="taskProgress"
             >
-              <div
-                class="absolute flex justify-center w-full text-black text-xs"
-              >
-                {{ `${(taskProgress * 100).toFixed(0)}% Complete` }}
+              <div class="absolute-full flex flex-center">
+                <q-badge
+                  color="primary"
+                  text-color="white"
+                  :label="`${(taskProgress * 100).toFixed(0)}% Complete`"
+                />
               </div>
             </q-linear-progress>
           </div>
@@ -113,15 +145,30 @@
           </q-td>
         </template>
         <template #body-cell-tags="props">
-          <td class="md:w-1/6">
+          <td>
             <div class="flex">
               <div
                 v-for="tag in props.row.tags"
-                class="bg-primary px-2 py-1 rounded"
+                class="bg-primary px-2 py-1 rounded uppercase font-medium"
               >
                 {{ tag }}
               </div>
             </div>
+          </td>
+        </template>
+        <template #body-cell-edit="props">
+          <td>
+            <Tooltip>
+              <q-btn
+                dense
+                flat
+                round
+                color="negative"
+                icon="mdi-delete"
+                @click="removeTask(props.rowIndex)"
+              ></q-btn>
+              <template #content>Delete</template>
+            </Tooltip>
           </td>
         </template>
         <template v-slot:body-cell="props">
@@ -134,6 +181,75 @@
           >
         </template>
       </q-table>
+    </q-card-section>
+  </q-card>
+  <q-card class="mx-4">
+    <q-card-section>
+      <div class="text-lg">Timers</div>
+      <div class="flex justify-between items-center">
+        <div class="flex w-1/2">
+          <q-input
+            v-model="newTimer.description"
+            filled
+            label="Name"
+            placeholder="Collect Traps"
+            class="w-1/2"
+          />
+          <div class="pl-4">
+            <q-input
+              v-model.number="newTimer.end"
+              filled
+              type="number"
+              label="Duration (Hours)"
+            />
+          </div>
+        </div>
+        <q-btn color="info" @click="addTimer" label="Start Timer" />
+      </div>
+    </q-card-section>
+    <q-card-section>
+      <q-list bordered separator class="rounded">
+        <q-item v-for="(timer, index) in timers">
+          <q-item-section class="flex justify-between">
+            <div
+              class="text-xl mb-1"
+              :class="{ 'text-positive': currentTime > timer.end }"
+            >
+              {{ timer.description }}
+            </div>
+            <q-linear-progress
+              stripe
+              color="positive"
+              size="1.5rem"
+              :value="(currentTime - timer.start) / (timer.end - timer.start)"
+            >
+              <div class="absolute-full flex flex-center">
+                <q-badge
+                  color="primary"
+                  text-color="white"
+                  :label="getTimerText(timer)"
+                />
+              </div>
+            </q-linear-progress>
+          </q-item-section>
+          <q-item-section side
+            ><Tooltip>
+              <q-btn
+                dense
+                flat
+                round
+                color="negative"
+                icon="mdi-delete"
+                @click="removeTimer(index)"
+              ></q-btn>
+              <template #content>Delete</template>
+            </Tooltip></q-item-section
+          >
+        </q-item>
+        <q-item v-if="timers.length === 0">
+          <q-item-section>No timers created.</q-item-section>
+        </q-item>
+      </q-list>
     </q-card-section>
   </q-card>
 </template>
@@ -170,30 +286,33 @@ export default defineComponent({
       get: () => state.value.tasks.dailyReset,
       set: (value) => (state.value.tasks.dailyReset = value),
     });
+    const timers = computed({
+      get: () => state.value.tasks.timers,
+      set: (value) => (state.value.tasks.timers = value),
+    });
 
+    // Tasks
     const newTask = reactive({
       description: "",
-      categories: "",
+      tags: "",
       steps: 0,
     });
 
     const addTask = () => {
       tasks.value.push({
         description: newTask.description,
-        tags: newTask.categories
-          ? newTask.categories.split(",").map((x) => x.trim())
-          : [],
+        tags: newTask.tags ? newTask.tags.split(",").map((x) => x.trim()) : [],
         steps: newTask.steps,
         completed: 0,
         lastCompletion: 0,
       });
       newTask.description = "";
-      newTask.categories = "";
+      newTask.tags = "";
       newTask.steps = 0;
     };
 
-    const removeTask = (i: number) => {
-      tasks.value.splice(i, 1);
+    const removeTask = (index: number) => {
+      tasks.value.splice(index, 1);
     };
 
     const loadDefaultTasks = () => {
@@ -238,7 +357,7 @@ export default defineComponent({
       },
       {
         name: "tags",
-        label: "Categories",
+        label: "Tags",
         field: (t: Task) => t.tags,
       },
       {
@@ -275,6 +394,41 @@ export default defineComponent({
       }
     };
 
+    // Timers
+    const newTimer = reactive({
+      description: "",
+      end: 0,
+    });
+
+    const addTimer = () => {
+      const resetTime = dayjs()
+        .add(
+          dayjs.duration({
+            hours: newTimer.end,
+          })
+        )
+        .valueOf();
+      timers.value.push({
+        description: newTimer.description,
+        end: resetTime,
+        start: currentTime.value,
+      });
+      newTimer.description = "";
+      newTimer.end = 0;
+    };
+
+    const getTimerText = (timer: Timer): string => {
+      const remainingTime = timer.end - currentTime.value;
+      if (remainingTime <= 0) {
+        return `Ready (${dayjs.duration(remainingTime).humanize(true)})`;
+      }
+      return `Ready ${dayjs.duration(remainingTime).humanize(true)}`;
+    };
+
+    const removeTimer = (index: number) => {
+      timers.value.splice(index, 1);
+    };
+
     // Computed
     const dailyResetTimeText = computed((): string => {
       return dayjs
@@ -303,17 +457,23 @@ export default defineComponent({
 
     return {
       addTask,
+      addTimer,
+      currentTime,
       dailyReset,
       dailyResetTimeText,
+      getTimerText,
       loadDefaultTasks,
       newTask,
+      newTimer,
       onLoadDefaultTasks: loadDefaultTasks,
       onUpdateDailyResetTime,
       onUpdateTask,
       removeTask,
+      removeTimer,
       taskProgress,
       tasks,
       taskTableColumns,
+      timers,
       wikiLinks,
     };
   },
