@@ -21,13 +21,13 @@
           <li><a href="https://github.com/adapap">adapap#1045</a></li>
           <li><a href="https://github.com/pabhd3">pabhd3#0802</a></li>
           <li><a href="https://github.com/njubainville">Nymiir#5439</a></li>
+          <li><a href="https://github.com/100mars">100mar#2993</a></li>
         </ul>
         <p>
-          Thanks to everyone else involved on the Idleon Companion Development
+          Thanks to everyone involved on the Idleon Companion Development
           team:
         </p>
         <ul>
-          <li>100mar#2993, for feedback, complex game calculations, and helping to update cards/builds to W3</li>
           <li>Itsui#0043, for work on Idleon Interactive + feedback</li>
           <li>Mark#4874, for working on a comprehensive Idleon guide</li>
           <li>
