@@ -1,4 +1,4 @@
-# [Idleon Companion](https://idleoncompanion.com)
+# [Idleon Companion](https://idleoncompanion.com) [![Build](https://github.com/Idleon-Companion/IdleonCompanion/actions/workflows/Build.yml/badge.svg)](https://github.com/Idleon-Companion/IdleonCompanion/actions/workflows/Build.yml)
 
 A companion website for the game [Legends of Idleon](https://www.legendsofidleon.com).
 
