@@ -6,8 +6,12 @@ name: Build
 on:
   push:
     branches-ignore:
-      - 'master'
-
+    - 'master'
+  pull_request:
+    branches-ignore:
+    - 'master'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   build:
