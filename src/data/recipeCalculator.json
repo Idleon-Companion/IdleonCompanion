@@ -1793,7 +1793,7 @@
       },
       {
         "name": "Goldfish",
-        "quantity": 400
+        "quantity": 180
       }
     ]
   },
@@ -2463,7 +2463,7 @@
                   },
                   {
                     "name": "Hermit Can",
-                    "quantity": 10200
+                    "quantity": 7800
                   },
                   {
                     "name": "Distilled Water",
@@ -3453,7 +3453,7 @@
           },
           {
             "name": "Hermit Can",
-            "quantity": 2550
+            "quantity": 1950
           },
           {
             "name": "Distilled Water",
@@ -3919,7 +3919,7 @@
       },
       {
         "name": "Hermit Can",
-        "quantity": 850
+        "quantity": 650
       },
       {
         "name": "Distilled Water",
@@ -5149,7 +5149,7 @@
               },
               {
                 "name": "Hermit Can",
-                "quantity": 5100
+                "quantity": 3900
               },
               {
                 "name": "Distilled Water",
@@ -7117,7 +7117,7 @@
                       },
                       {
                         "name": "Hermit Can",
-                        "quantity": 20400
+                        "quantity": 15600
                       },
                       {
                         "name": "Distilled Water",
@@ -7363,7 +7363,7 @@
       },
       {
         "name": "Fuscismatia",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Efaunt Helmet",

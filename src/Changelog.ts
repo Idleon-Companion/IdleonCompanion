@@ -127,4 +127,14 @@ export const Changelog: ChangelogEntry[] = [
     },
     date: "June 2021",
   },
+  {
+    version: "0.2.4",
+    changes: {
+      features: [],
+      changes: [
+        "Builds: All builds has been reworked for W3."],
+    },
+    date: "August 2021",
+  },
+
 ];

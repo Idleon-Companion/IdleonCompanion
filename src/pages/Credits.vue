@@ -21,13 +21,13 @@
           <li><a href="https://github.com/adapap">adapap#1045</a></li>
           <li><a href="https://github.com/pabhd3">pabhd3#0802</a></li>
           <li><a href="https://github.com/njubainville">Nymiir#5439</a></li>
+          <li><a href="https://github.com/100mars">100mar#2993</a></li>
         </ul>
         <p>
-          Thanks to everyone else involved on the Idleon Companion Development
+          Thanks to everyone involved on the Idleon Companion Development
           team:
         </p>
         <ul>
-          <li>100mar#2993, for feedback and complex game calculations</li>
           <li>Itsui#0043, for work on Idleon Interactive + feedback</li>
           <li>Mark#4874, for working on a comprehensive Idleon guide</li>
           <li>
@@ -36,6 +36,7 @@
           <li>Hateling#7191, for the original Idleon Toolbox</li>
           <li>abgreyd#0283, for his original 101 builds</li>
           <li>Sillebuc#0036 + Keloku#0956, for their work on the builds</li>
+          <li>harold#7682 + wekhter#6624 + ItsPandatory#7070, for helping create cardsets/builds for W3</li>
         </ul>
 
         <p>
