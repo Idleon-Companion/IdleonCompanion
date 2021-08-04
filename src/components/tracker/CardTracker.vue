@@ -18,7 +18,7 @@
         <q-card class="flex flex-wrap py-2">
           <div v-for="card in cards" class="relative m-1">
             <ICAsset
-              class="card-image"
+              class="card-image cursor-pointer"
               size="none"
               :enabled="getCardTier(card) !== 0"
               :image="Assets.CardImage(card.id)"
