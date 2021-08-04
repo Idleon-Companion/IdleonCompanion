@@ -3,7 +3,6 @@ import { computed, ref } from "vue";
 import { useState } from "~/State";
 
 export enum Class {
-  All = "All", // Utility for any class
   Beginner = "Beginner",
   Warrior = "Warrior",
   Archer = "Archer",
@@ -19,6 +18,16 @@ export enum Subclass {
   Wizard = "Wizard",
   Shaman = "Shaman",
 }
+
+export const SubclassTree: Record<Subclass, Class> = {
+  [Subclass.Journeyman]: Class.Beginner,
+  [Subclass.Barbarian]: Class.Warrior,
+  [Subclass.Squire]: Class.Warrior,
+  [Subclass.Bowman]: Class.Archer,
+  [Subclass.Hunter]: Class.Archer,
+  [Subclass.Wizard]: Class.Mage,
+  [Subclass.Shaman]: Class.Mage,
+};
 
 export const Skills = [
   "Mining",

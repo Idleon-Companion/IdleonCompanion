@@ -1,6 +1,7 @@
 import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
 import { useBuilds } from "~/composables/Builds";
 import Alchemy from "~/pages/Alchemy.vue";
+import Builds from "~/pages/Builds.vue";
 import Cards from "~/pages/Cards.vue";
 import Characters from "~/pages/Characters.vue";
 import Credits from "~/pages/Changelog.vue";
@@ -73,6 +74,11 @@ export const tabRoutes: RouteRecordRaw[] = [
     path: "/sweet-spot",
   },
   {
+    component: Builds,
+    name: "Builds",
+    path: "/builds",
+  },
+  {
     component: Tasks,
     name: "Tasks",
     path: "/tasks",
@@ -96,7 +102,7 @@ const routes: RouteRecordRaw[] = [
     redirect: (to) => {
       const buildId = to.params.buildId.toString();
       loadBuildFromDatabase(buildId);
-      return "/";
+      return "/builds";
     },
   },
   ...tabRoutes,

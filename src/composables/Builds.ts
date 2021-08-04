@@ -32,7 +32,6 @@ type BuildMeta = {
 
 // This mapping is used to determine the filename for a certain talent
 const classAlias: Record<Class | Subclass, string> = {
-  [Class.All]: "all",
   [Class.Beginner]: "all",
   [Class.Warrior]: "war",
   [Class.Archer]: "arc",
@@ -51,7 +50,7 @@ const builds: Build[] = [
     title: "My First Character / Level 1-10",
     version: "1.22",
     level: 1,
-    class: Class.All,
+    class: Class.Beginner,
     tabs: [
       {
         skills: {
@@ -110,9 +109,9 @@ export function useBuilds() {
 
   const createNewBuild = (class_: Class, subclass: Subclass | null) => {
     let numTabs = 3;
-    if ((class_ === Class.Beginner && !subclass) || class_ === Class.All) {
+    if (class_ === Class.Beginner && !subclass) {
       numTabs = 1;
-    } else if (!subclass) {
+    } else if (!subclass || subclass === Subclass.Journeyman) {
       numTabs = 2;
     }
     const tabs = [];
@@ -140,9 +139,14 @@ export function useBuilds() {
   const getTalentAsset = (build: Build, tab: number, slot: number) => {
     let role = "";
     if (tab === 1 && slot <= 10) {
-      role = classAlias[Class.All];
+      role = classAlias[Class.Beginner];
     } else if ((tab === 1 && slot > 10) || tab === 2) {
-      if (build.class !== Class.All && build.class !== Class.Beginner) {
+      if (
+        build.class === Class.Beginner &&
+        build.subclass === Subclass.Journeyman
+      ) {
+        role = classAlias[build.subclass];
+      } else if (build.class !== Class.Beginner) {
         role = classAlias[build.class];
       }
     } else if (tab === 3) {
@@ -152,28 +156,72 @@ export function useBuilds() {
   };
 
   const loadBuildFromDatabase = async (id: string) => {
-    const buildSnapshot = await db
-      .ref(`${DbRef.Builds}/${id}/build`)
-      .once("value");
-    if (buildSnapshot.exists()) {
+    if (!id) {
+      toast.warning("Invalid build ID.");
+      return;
+    }
+    const buildSnapshot = await db.ref(`${DbRef.Builds}/${id}`).once("value");
+    if (buildSnapshot.exists() && buildSnapshot.val()) {
       const buildData = buildSnapshot.val();
-      currentBuild.value = buildData.build;
+      console.log("Build data:", buildData, typeof buildData);
+      currentBuild.value = JSON.parse(buildData.build) as Build;
       currentBuildMeta.value = {
-        author: "1a2b3c",
+        author: buildData.author,
         id,
-        likes: 42,
-        likedByCurrentUser: true,
+        likes: buildData.likes,
+        likedByCurrentUser: false,
       };
-      // Extract likes + likedByCurrentUser
-      // const likes = await db.ref(`${DbRef.Builds}/${id}/likes`).once('value');
-      // const likedByCurrentUser = await db.ref(`${DbRef.Builds}/${id}/likedBy/${user.id}`).once('value');
-      // currentBuildMeta.value = {likes, likedByCurrentUser}
-      toast.info(`Loaded build "${currentBuild.value?.title}"`);
+      if (user.value) {
+        // Only extract liked by data if user is logged in
+        const likedByCurrentUser = await db
+          .ref(`${DbRef.Builds}/${id}/likedBy/${user.value.uid}`)
+          .once("value");
+        console.log("Liked by:", likedByCurrentUser.val());
+        currentBuildMeta.value.likedByCurrentUser = likedByCurrentUser.val();
+      }
+      toast.info(`Loaded build "${currentBuild.value.title}"`);
+    } else {
+      toast.error("Failed to load build. It may have been deleted.");
     }
   };
 
-  const loadBuildFromShowcase = (index: number) => {
-    currentBuild.value = builds[index] ?? null;
+  const likeBuild = async (buildId: string) => {
+    if (!user.value) {
+      toast.error("You must be logged in to do that!");
+      return;
+    }
+    console.log(user.value.uid, buildId);
+    db.ref(`${DbRef.Builds}/${buildId}/likedBy/${user.value.uid}`)
+      .set(true)
+      .then(() => {
+        db.ref(`${DbRef.Builds}/${buildId}/likes`)
+          .transaction((data) => {
+            if (data !== null) {
+              data += 1;
+            }
+            return data;
+          })
+          .then(() => {
+            toast.success("Thanks for liking this build!");
+          });
+      });
+  };
+
+  const unlikeBuild = async (buildId: string) => {
+    if (!user.value) {
+      toast.error("You must be logged in to do that!");
+      return;
+    }
+    db.ref(`${DbRef.Builds}/${buildId}/likedBy/${user.value.uid}`)
+      .remove()
+      .then(() => {
+        db.ref(`${DbRef.Builds}/${buildId}/likes`).transaction((data) => {
+          if (data !== null) {
+            data -= 1;
+          }
+          return data;
+        });
+      });
   };
 
   const uploadBuild = () => {
@@ -216,8 +264,9 @@ export function useBuilds() {
     currentBuild,
     currentBuildMeta,
     getTalentAsset,
+    likeBuild,
     loadBuildFromDatabase,
-    loadBuildFromShowcase,
+    unlikeBuild,
     uploadBuild,
   };
 }

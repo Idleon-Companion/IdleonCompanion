@@ -72,16 +72,16 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from "vue";
+import { Assets, useLayout } from "~/composables/Utilities";
 import {
-  useCharacters,
-  Skills as allSkills,
   Class,
   Subclass,
+  Skills as allSkills,
+  useCharacters,
 } from "~/composables/Characters";
-import { Assets, useLayout } from "~/composables/Utilities";
-import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
+import { computed, defineComponent } from "vue";
 import { useToast } from "vue-toastification";
+import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 
 export default defineComponent({
   name: "CharacterEditor",
@@ -95,15 +95,10 @@ export default defineComponent({
     const toast = useToast();
 
     const allClasses = computed(() => {
-      let classes: (Class | Subclass)[] = [];
-      for (const class_ of Object.values(Class)) {
-        if (class_ !== Class.All) {
-          classes.push(class_);
-        }
-      }
-      for (const subclass of Object.values(Subclass)) {
-        classes.push(subclass);
-      }
+      let classes: (Class | Subclass)[] = [
+        ...Object.values(Class),
+        ...Object.values(Subclass),
+      ];
       return classes;
     });
 
