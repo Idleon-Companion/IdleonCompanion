@@ -47,5 +47,5 @@ import { Class } from "~/composables/Characters";
       "comment": "Two Punch Man and Combat Skills effect AFK gain."
     }
   ],
-  "class": Class.All
+  "class": Class.Journeyman
 }

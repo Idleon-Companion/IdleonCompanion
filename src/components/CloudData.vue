@@ -3,29 +3,32 @@
     id="firebase-auth"
     :style="user === null ? '' : { display: 'none' }"
   ></div>
-  <div v-if="user !== null" id="auth-info" class="px-1 py-2">
-    <div class="d-flex justify-content-between">
-      <div class="d-flex align-items-center">
-        <button @click="loadCloud">
-          <div class="iconify" data-icon="mdi:cloud-download"></div>
-          Load
-        </button>
-        <button @click="saveCloud">
-          <div class="iconify" data-icon="mdi:cloud-upload"></div>
-          Save
-        </button>
-      </div>
-      <button @click="signOut">Sign out</button>
+  <div
+    v-if="user !== null"
+    id="auth-info"
+    class="flex flex-col px-1 py-2 bg-primary"
+  >
+    <div class="flex items-center justify-center">
+      <q-btn
+        color="dark"
+        icon="cloud_download"
+        label="Load"
+        @click="loadCloud"
+      />
+      <q-btn color="dark" icon="cloud_upload" label="Save" @click="saveCloud" />
+    </div>
+    <div class="mt-2 mx-auto">
+      <q-btn flat color="negative" label="Sign Out" @click="signOut" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import firebase from "firebase/app";
-import * as firebaseui from "firebaseui";
 import "firebaseui/dist/firebaseui.css";
+import * as firebaseui from "firebaseui";
 import { defineComponent, onMounted } from "vue";
 import { useToast } from "vue-toastification";
+import firebase from "firebase/app";
 
 import { useAuth } from "~/State";
 
@@ -35,6 +38,11 @@ export default defineComponent({
     const toast = useToast();
     // User authentication
     const { user, loadCloud, saveCloud } = useAuth();
+    // Setup automatic login persistence
+    firebase.auth().onAuthStateChanged((data) => {
+      user.value = data ?? null;
+    });
+
     // FirebaseUI config.
     const uiConfig = {
       callbacks: {
@@ -43,11 +51,11 @@ export default defineComponent({
           return false;
         },
       },
+      signInFlow: "popup",
       signInOptions: [
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
         firebase.auth.GithubAuthProvider.PROVIDER_ID,
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
-        firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID,
       ],
     };
 
@@ -86,7 +94,6 @@ export default defineComponent({
 <style scoped lang="sass">
 @import '../styles/base.sass'
 #auth-info
-  background: $primary
   color: white
   cursor: pointer
   transition: 0.3s

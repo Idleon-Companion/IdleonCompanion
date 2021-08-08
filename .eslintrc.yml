@@ -1,0 +1,38 @@
+env:
+  browser: true
+  es2021: true
+extends:
+  - "eslint:recommended"
+  - "plugin:@typescript-eslint/recommended"
+  - "plugin:vue/base"
+parserOptions:
+  ecmaVersion: 12
+  parser: "@typescript-eslint/parser"
+  sourceType: module
+plugins:
+  - sort-imports-es6-autofix
+  - "@typescript-eslint"
+rules:
+  indent:
+    - off
+  "@typescript-eslint/indent":
+    - error
+    - 2
+  linebreak-style:
+    - error
+    - unix
+  semi:
+    - error
+    - always
+  sort-imports-es6-autofix/sort-imports-es6:
+    - error
+    - ignoreMemberSort: false
+      memberSyntaxSortOrder:
+        - none
+        - all
+        - multiple
+        - single
+  "@typescript-eslint/no-explicit-any":
+    - off
+  "@typescript-eslint/explicit-module-boundary-types":
+    - off

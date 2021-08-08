@@ -1,9 +1,8 @@
+import { CompleteChecklist } from "~/composables/Checklist";
 import { computed, ref } from "vue";
 import { useState } from "~/State";
-import { checklistData } from "~/composables/Checklist";
 
 export enum Class {
-  All = "All",
   Beginner = "Beginner",
   Warrior = "Warrior",
   Archer = "Archer",
@@ -21,6 +20,16 @@ export enum Subclass {
   Shaman = "Shaman",
 }
 
+export const SubclassTree: Record<Subclass, Class> = {
+  [Subclass.Maestro]: Class.Beginner,
+  [Subclass.Barbarian]: Class.Warrior,
+  [Subclass.Squire]: Class.Warrior,
+  [Subclass.Bowman]: Class.Archer,
+  [Subclass.Hunter]: Class.Archer,
+  [Subclass.Wizard]: Class.Mage,
+  [Subclass.Shaman]: Class.Mage,
+};
+
 export const Skills = [
   "Mining",
   "Smithing",
@@ -31,7 +40,8 @@ export const Skills = [
   "Trapping",
   "Construction",
   "Worship",
-];
+] as const;
+export type Skill = typeof Skills[number];
 
 // Characters keep track of individual data
 export class Character {
@@ -40,8 +50,7 @@ export class Character {
   public level: number;
   public name: string;
   public items: Record<string, boolean>;
-  public skills: Record<string, number>;
-  public statues: Record<string, number>;
+  public skills: Record<Skill, number>;
   public constellations: Record<string, boolean>;
   public starSigns: Record<string, boolean>;
 
@@ -51,8 +60,9 @@ export class Character {
     this.level = 1;
     this.name = "";
     this.items = {};
-    this.skills = {};
-    this.statues = {};
+    this.skills = <Record<Skill, number>>(
+      Object.fromEntries(Skills.map((x) => [x, 0]))
+    );
     this.constellations = {};
     this.starSigns = {};
   }
@@ -77,12 +87,17 @@ export class Character {
     this.subclass = c as Subclass;
   }
 
+  get actualClass(): Class | Subclass {
+    // Retrieves the class of the character based on subclass progression
+    return this.subclass || this.class;
+  }
+
   get bagSlots(): number {
+    // The number of inventory slots in the character's item bag
     let slots = 16; // Base inventory slots
     const { checklist } = useState().value;
-    // Character items
     for (const category of ["Inventory Bags"] as const) {
-      for (const item of checklistData[category].items) {
+      for (const item of CompleteChecklist[category][0].items) {
         if (this.hasItem(item.name)) {
           slots += item.bagSlots ?? 0;
         }
@@ -90,7 +105,7 @@ export class Character {
     }
     // Global items
     for (const category of ["Gem Shop Bags"] as const) {
-      for (const item of checklistData[category].items) {
+      for (const item of CompleteChecklist[category][0].items) {
         if (checklist[item.name] === true) {
           slots += item.bagSlots ?? 0;
         }
@@ -105,7 +120,6 @@ export class Character {
 }
 
 const charIndex = ref(0);
-
 export function useCharacters() {
   const state = useState();
   const characters = computed({
@@ -117,7 +131,7 @@ export function useCharacters() {
     return characters.value.length;
   });
 
-  const curCharacter = computed<Character | null>(() => {
+  const currentCharacter = computed<Character | null>(() => {
     if (numCharacters.value > 0) {
       return characters.value[charIndex.value];
     }
@@ -128,33 +142,55 @@ export function useCharacters() {
   const createCharactersFromData = (data: Character[]) => {
     characters.value = [];
     for (const c of data) {
-      let newChar = new Character();
+      const newChar = new Character();
       Object.assign(newChar, c);
       characters.value.push(newChar);
     }
   };
 
-  // Cycle to next character
+  const createNewCharacter = () => {
+    // Creates a new character
+    characters.value.push(new Character());
+    charIndex.value = characters.value.length - 1;
+  };
+
+  const deleteCurrentCharacter = () => {
+    // Deletes the currently selected character
+    characters.value.splice(charIndex.value, 1);
+    charIndex.value = 0;
+  };
+
   const nextCharacter = () => {
+    // Cycles to the next character
     if (numCharacters.value > 0) {
       charIndex.value = (charIndex.value + 1) % numCharacters.value;
     }
   };
 
-  // Cycle to previous character
   const prevCharacter = () => {
+    // Cyclec to the previous character
     if (numCharacters.value > 0) {
       charIndex.value = (charIndex.value - 1) % numCharacters.value;
     }
   };
 
+  const switchToCharacter = (i: number) => {
+    // Switches to the character at that index
+    if (i < 0 || i > characters.value.length) {
+      return;
+    }
+    charIndex.value = i;
+  };
+
   return {
     characters,
-    charIndex,
     createCharactersFromData,
-    curCharacter,
+    createNewCharacter,
+    currentCharacter,
+    deleteCurrentCharacter,
     numCharacters,
     nextCharacter,
     prevCharacter,
+    switchToCharacter,
   };
 }

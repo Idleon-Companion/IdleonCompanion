@@ -1,13 +1,13 @@
 import { Class } from "~/composables/Characters";
 
-
- export const build = {
-  "title": "Journeyman AFK 40",
-  "notes": "This build is for leveling, and ignores all of the utility talents that provide help with drops and cash",
-  "version": "1.21",
-  "tabs": [
+export const build = {
+  title: "Journeyman AFK 40",
+  notes:
+    "This build is for leveling, and ignores all of the utility talents that provide help with drops and cash",
+  version: "1.21",
+  tabs: [
     {
-      "skills": {
+      skills: {
         "1": "0",
         "2": "0",
         "3": "0",
@@ -22,12 +22,12 @@ import { Class } from "~/composables/Characters";
         "12": "0",
         "13": "0",
         "14": "0",
-        "15": "50"
+        "15": "50",
       },
-      "comment": "*1 = As much as needed for the zone you want to afk in."
+      comment: "*1 = As much as needed for the zone you want to afk in.",
     },
     {
-      "skills": {
+      skills: {
         "1": "50",
         "2": "0",
         "3": "0",
@@ -42,13 +42,10 @@ import { Class } from "~/composables/Characters";
         "12": "0",
         "13": "0",
         "14": "0",
-        "15": "0"
+        "15": "0",
       },
-      "comment": "Two Punch Man and Combat Skills effect AFK gain."
+      comment: "Two Punch Man and Combat Skills effect AFK gain.",
     },
-    {
-      "comment": "This is comment 3"
-    }
   ],
-  "class": Class.All
-}
+  class: Class.Journeyman,
+};

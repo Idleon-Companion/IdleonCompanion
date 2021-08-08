@@ -47,5 +47,5 @@ import { Class } from "~/composables/Characters";
       "comment": "Two Punch Man and Combat Skills effect AFK gain.\n*1 - At this point, you can start putting some points into non-combat bonuses, depending on what you are looking for"
     }
   ],
-  "class": Class.All
+  "class": Class.Journeyman
 }

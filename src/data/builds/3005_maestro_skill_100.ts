@@ -67,6 +67,6 @@ import { Class, Subclass } from "~/composables/Characters";
       "comment": "Place as many points as possible into Bliss n Chips. Then into Left Hand of Learning. Afterwards, place 50+ into Right Hand of Action. You can split the excess between the Right Hand or Skilliest Statue \n1* Extra points can go into here to increase EhExPee Statue (+% Skill Exp)"
     }
   ],
-  "class": Class.All,
+  "class": Class.Journeyman,
   "subclass": Subclass.Maestro
 }

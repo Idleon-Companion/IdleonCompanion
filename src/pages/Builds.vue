@@ -1,304 +1,297 @@
 <template>
-  <div class="row">
-    <div>
-      <p class="h6 text-light bg-primary p-3 mt-3 mb-1 rounded">
-        Browse through our list of suggested builds, filtered by character
-        class.
-      </p>
-    </div>
-  </div>
-  <div class="row px-3 my-3">
-    <div class="col-md input-group build-selector p-0">
-      <span class="input-group-text">Class</span>
-      <select v-model="buildClass" class="bg-primary" id="buildClass">
-        <option value="all" selected>All</option>
-        <option v-for="(c, v) in classes" :key="c" :value="c">{{ v }}</option>
-      </select>
-    </div>
-    <div class="col-md input-group build-selector p-0">
-      <span class="input-group-text bg-dark text-light">Build</span>
-      <select v-model="build" class="bg-primary" id="buildSelector">
-        <option value="" selected>Select Your Build</option>
-        <option
-          v-for="(build, buildID) in filteredBuilds"
-          :key="buildID"
-          :value="buildID"
-        >
-          {{ build.title }}
-        </option>
-      </select>
-    </div>
-  </div>
-  <!-- TALENTS -->
-  <div v-if="activeBuild" class="row justify-content-center" id="buildContent">
-    <div class="col-xl-4" style="max-width: 400px">
-      <div class="card border-primary mb-2">
-        <div class="card-header">Tab 1</div>
-        <div class="card-body talent-container p-3" id="skill_tab_one">
-          <div
-            v-for="i in 10"
-            :key="i"
-            :data-enabled="getTalent('tab_one', i) != '0'"
-          >
-            <GameAsset
-              :image="Assets.TalentImage('all', 1, i)"
-              :thumbnail="true"
+  <q-banner inline-actions>
+    Browse through our list of curated character builds, filtered by class and
+    level. You can also create your own builds and share them through a custom
+    link!
+    <template v-slot:action>
+      <q-btn-dropdown outline label="Wiki">
+        <q-list separator>
+          <a v-for="[label, link] in wikiLinks" :key="label" :href="link">
+            <q-item clickable>
+              <q-item-section>{{ label }}</q-item-section>
+            </q-item>
+          </a>
+        </q-list>
+      </q-btn-dropdown>
+    </template>
+  </q-banner>
+
+  <q-card class="m-4">
+    <q-card-section>
+      <div class="text-xl">Recommended Builds</div>
+      <div class="text-secondary">
+        By default, your current character's class/subclass will be selected.
+      </div>
+      <div class="flex justify-between mt-2">
+        <div class="flex md:w-1/2">
+          <div class="md:w-1/3 mr-2">
+            <q-select
+              outlined
+              v-model="buildClass"
+              label="Class"
+              :options="classes"
             />
-            <div class="border rounded-bottom skill mb-1">
-              {{ getTalent("tab_one", i) }}
-            </div>
           </div>
-          <div
-            v-for="i in 5"
-            :key="i"
-            :data-enabled="getTalent('tab_one', i + 10) != '0'"
-          >
-            <img
-              :src="Assets.TalentImage(activeBuild.class, 1, i)"
-              class="img-fluid img-thumbnail"
+          <div class="md:w-1/3 mr-2">
+            <q-select
+              outlined
+              v-model="buildSubclass"
+              label="Subclass"
+              :options="subclasses"
             />
-            <div class="border rounded-bottom skill mb-1">
-              {{ getTalent("tab_one", i + 10) }}
-            </div>
           </div>
         </div>
-        <div class="card-body border border-secondary rounded-bottom">
-          <div class="card-text">
-            <p v-for="(line, n) in commentToLines(activeBuild.comment_one)" :key='n'>
-              {{ line }}
-            </p>
-          </div>
+        <div class="md:w-1/2">
+          <q-select
+            outlined
+            :model-value="currentBuild?.title"
+            @update:model-value="onSelectRecommendedBuild"
+            label="Build"
+            :options="filteredBuilds"
+          >
+            <template v-slot:no-option>
+              <q-item>
+                <q-item-section class="text-grey">
+                  No builds found!
+                </q-item-section>
+              </q-item>
+            </template>
+          </q-select>
         </div>
       </div>
-    </div>
-    <div v-if="activeBuild.class" class="col-xl-4" style="max-width: 400px">
-      <div class="card border-primary mb-2">
-        <div class="card-header">Tab 2</div>
-        <div class="card-body talent-container p-3" id="skill_tab_two">
-          <div
-            v-for="i in 15"
-            :key="i"
-            :data-enabled="getTalent('tab_two', i) != '0'"
-          >
-            <img
-              :src="Assets.TalentImage(activeBuild.class, 2, i)"
-              class="img-fluid img-thumbnail"
-            />
-            <div class="border rounded-bottom skill mb-1">
-              {{ getTalent("tab_two", i) }}
-            </div>
-          </div>
+      <div class="flex pt-1 -ml-1" v-if="currentBuild">
+        <q-chip color="primary">
+          Level: {{ currentBuild.level ?? "?" }}
+        </q-chip>
+        <q-chip color="primary">
+          Game Version: {{ currentBuild.version ?? "?" }}
+        </q-chip>
+      </div>
+    </q-card-section>
+    <q-card-section v-if="currentBuild">
+      <BuildSkills :editingMode="editingMode" />
+      <q-input
+        v-model="currentBuild.notes"
+        autogrow
+        filled
+        type="textarea"
+        class="mt-4"
+        placeholder="Notes about your perfect build. Explain the order of upgrades, tradeoffs, or other important notes."
+      ></q-input>
+    </q-card-section>
+    <q-card-section v-if="currentBuild && currentBuildMeta.id">
+      <q-btn
+        text-color="red"
+        round
+        :icon="
+          currentBuildMeta.likedByCurrentUser ? 'favorite' : 'favorite_border'
+        "
+        @click="onToggleBuildLike"
+      >
+        <q-badge floating>{{ currentBuildMeta.likes }}</q-badge>
+      </q-btn>
+      <q-btn
+        color="primary"
+        icon="share"
+        label="Share"
+        class="ml-4"
+        @click="onCopyBuildLink"
+      />
+    </q-card-section>
+    <q-separator />
+    <q-card-section>
+      <div class="text-xl">Create/Share Builds</div>
+      <div class="text-secondary">
+        Edit build class, talents, and talent comments above.
+      </div>
+      <div v-if="currentBuild && editingMode" class="flex w-full pt-2">
+        <div class="md:(w-1/3 pr-2)">
+          <q-input
+            v-model="currentBuild.title"
+            placeholder="Warrior AFK"
+            label="Build Name"
+            filled
+          />
         </div>
-        <div class="card-body border border-secondary rounded-bottom">
-          <div class="card-text">
-            <p v-for="(line, n) in commentToLines(activeBuild.comment_two)" :key='n'>
-              {{ line }}
-            </p>
-          </div>
+        <div class="md:(w-1/6 pr-2)">
+          <q-input
+            v-model.number="currentBuild.level"
+            type="number"
+            :min="1"
+            label="Level"
+            filled
+          />
+        </div>
+        <div class="md:w-1/6">
+          <q-select
+            v-model="currentBuild.version"
+            label="Game Version"
+            :options="versions"
+          />
         </div>
       </div>
-    </div>
-    <div v-if="activeBuild.subclass" class="col-xl-4" style="max-width: 400px">
-      <div class="card border-primary mb-2">
-        <div class="card-header">Tab 3</div>
-        <div class="card-body talent-container p-3" id="skill_tab_three">
-          <div
-            v-for="i in 15"
-            :key="i"
-            :data-enabled="getTalent('tab_three', i) != '0'"
-          >
-            <img
-              :src="Assets.TalentImage(activeBuild.subclass, 3, i)"
-              class="img-fuid img-thumbnail"
-            />
-            <div class="border rounded-bottom skill mb-1">
-              {{ getTalent("tab_three", i) }}
-            </div>
-          </div>
-        </div>
-        <div class="card-body border border-secondary rounded-bottom">
-          <div class="card-text">
-            <p v-for="(line, n) in commentToLines(activeBuild.comment_three)" :key='n'>
-              {{ line }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- NOTES -->
-  <div v-if="activeBuild" class="row">
-    <div class="col-xl-12 mt-4">
-      <div class="card border-light">
-        <div class="card-body">
-          <p class="card-text" id="notes">{{ activeBuild.notes }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    </q-card-section>
+    <q-card-actions>
+      <q-btn color="info" label="New Build" @click="onCreateNewBuild" />
+      <q-btn
+        v-if="editingMode"
+        color="positive"
+        label="Upload Build"
+        @click="onUploadBuild"
+      />
+    </q-card-actions>
+  </q-card>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from "vue";
-import { builds as buildData } from "~/data/builds/";
+import { computed, defineComponent, onBeforeMount, ref } from "vue";
+import { useToast } from "vue-toastification";
 
-import GameAsset from "~/components/GameAsset.vue";
-import { Assets } from "~/composables/Utilities";
-import { Class, Subclass } from "~/composables/Characters";
+import { Build, useBuilds } from "~/composables/Builds";
+import {
+  Class,
+  Subclass,
+  SubclassTree,
+  useCharacters,
+} from "~/composables/Characters";
+import { GameVersions } from "~/composables/Utilities";
+import { useAuth } from "~/State";
+import BuildSkills from "~/components/BuildSkills.vue";
 
-type Build = {
-  title: string;
-  class: string;
-  subclass: string;
-  comment_one: string;
-  comment_two: string;
-  comment_three: string;
-  notes: string;
-  tab_one?: Record<string, string>;
-  tab_two?: Record<string, string>;
-  tab_three?: Record<string, string>;
-};
-
-type NewBuild = typeof buildData[1];
-
-const classAlias: Record<Class | Subclass, string> = {
-  [Class.All]: "all",
-  [Class.Beginner]: "all",
-  [Class.Warrior]: "war",
-  [Class.Archer]: "arc",
-  [Class.Mage]: "mag",
-  [Class.Journeyman]: "jma",
-  [Subclass.Barbarian]: "bar",
-  [Subclass.Bowman]: "bow",
-  [Subclass.Hunter]: "hun",
-  [Subclass.Maestro]: "mae",
-  [Subclass.Shaman]: "sha",
-  [Subclass.Squire]: "sqr",
-  [Subclass.Wizard]: "wiz",
-};
-
-const newToOldBuildData = (newBuild: NewBuild): Build => {
-  const oldFormat: Build = {
-    title: newBuild.title,
-    notes: newBuild.notes,
-    class: classAlias[newBuild.class] ?? "all",
-    subclass: newBuild.subclass ? classAlias[newBuild.subclass] ?? "" : "",
-    comment_one: "",
-    comment_two: "",
-    comment_three: "",
-  }
-
-  const tabOne = newBuild.tabs[0]
-  if (tabOne) {
-    oldFormat.comment_one = tabOne.comment;
-    oldFormat.tab_one = tabOne.skills;
-  }
-
-  const tabTwo = newBuild.tabs[1]
-  if (tabTwo) {
-    oldFormat.comment_two = tabTwo.comment;
-    oldFormat.tab_two = tabTwo.skills;
-  }
-
-  const tabThree = newBuild.tabs[2]
-  if (tabThree) {
-    oldFormat.comment_three = tabThree.comment;
-    oldFormat.tab_three = tabThree.skills;
-  }
-
-  return oldFormat
-}
+const wikiLinks = new Map([
+  ["Classes", "https://idleon.info/wiki/Classes"],
+  ["Special Talents", "https://idleon.info/wiki/Special_Talents"],
+]);
 
 export default defineComponent({
   name: "Builds",
   components: {
-    GameAsset,
+    BuildSkills,
   },
   setup() {
-    const builds: Record<string, Build> = buildData.reduce((acc, cur) => {
-      acc[cur.title] = newToOldBuildData(cur);
-      return acc;
-    }, {} as Record<string, Build>);
-    const build = ref("");
-    const activeBuild = computed(() => build.value === '' ? null : builds[build.value]);
+    const { user } = useAuth();
+    const {
+      builds,
+      createNewBuild,
+      currentBuild,
+      currentBuildMeta,
+      likeBuild,
+      unlikeBuild,
+      uploadBuild,
+    } = useBuilds();
+    const { currentCharacter } = useCharacters();
+    const toast = useToast();
+    // Refs
+    const buildClass = ref<Class>(Class.Beginner);
+    const buildSubclass = ref<Subclass | null>(null);
+    const editingMode = ref(false);
 
-    const classes: Record<string, string> = {
-      Beginner: "",
-      Journeyman: "jma",
-      Warrior: "war",
-      Archer: "arc",
-      Mage: "mag",
+    // Hooks
+    onBeforeMount(() => {
+      if (currentCharacter.value) {
+        buildClass.value = currentCharacter.value.class;
+        buildSubclass.value = currentCharacter.value.subclass;
+      }
+    });
+
+    const onCopyBuildLink = () => {
+      navigator.clipboard.writeText(currentBuildLink.value).then((_) => {
+        toast.success("Build link copied to clipboard!");
+      });
     };
 
-    const buildClass = ref("all");
-    const filteredBuilds = computed(() => {
-      let filtered: Record<string, Build> = {};
-      if (buildClass.value === 'all') {
-        return builds
+    const onCreateNewBuild = () => {
+      createNewBuild(buildClass.value, buildSubclass.value);
+      editingMode.value = true;
+    };
+
+    const onToggleBuildLike = async () => {
+      if (!currentBuild.value || !currentBuildMeta.value || !user.value) {
+        return;
       }
-      for (const [name, build] of Object.entries(builds)) {
-        if (buildClass.value === build.class) {
-          filtered[name] = build
+      if (currentBuildMeta.value.likedByCurrentUser) {
+        unlikeBuild(currentBuildMeta.value.id);
+        currentBuildMeta.value.likes -= 1;
+        currentBuildMeta.value.likedByCurrentUser = false;
+      } else {
+        likeBuild(currentBuildMeta.value.id);
+        currentBuildMeta.value.likes += 1;
+        currentBuildMeta.value.likedByCurrentUser = true;
+      }
+    };
+
+    const onSelectRecommendedBuild = (selection: {
+      label: string;
+      value: Build;
+    }) => {
+      currentBuild.value = selection.value;
+      editingMode.value = false;
+    };
+
+    const filteredSubclasses = computed(() => {
+      return [
+        null,
+        ...Object.values(Subclass).filter(
+          (x) => SubclassTree[x] === buildClass.value
+        ),
+      ];
+    });
+
+    const currentBuildLink = computed(() => {
+      return import.meta.env.PROD
+        ? `https://idleoncompanion.com/build/${currentBuildMeta.value.id}`
+        : `http://localhost:3000/build/${currentBuildMeta.value.id}`;
+    });
+
+    const filteredBuilds = computed(() => {
+      let filtered: Build[] = [];
+      if (buildClass.value === Class.Beginner) {
+        filtered = builds;
+      } else {
+        for (const build of builds) {
+          if (build.class === buildClass.value) {
+            if (buildSubclass.value && buildSubclass.value !== build.subclass) {
+              continue;
+            }
+            filtered.push(build);
+          }
         }
       }
-      return filtered
+      return filtered.map((build) => {
+        return {
+          label: build.title,
+          value: build,
+        };
+      });
     });
 
     return {
-      activeBuild,
-      Assets,
-      build,
       buildClass,
-      classes,
+      buildSubclass,
+      currentBuild,
+      currentBuildLink,
+      currentBuildMeta,
+      classes: computed(() => Object.values(Class)),
+      editingMode,
       filteredBuilds,
-      commentToLines: (comment: string) => comment.split('\n')
+      onCopyBuildLink,
+      onCreateNewBuild,
+      onSelectRecommendedBuild,
+      onToggleBuildLike,
+      onUploadBuild: uploadBuild,
+      recommendedBuilds: builds,
+      subclasses: filteredSubclasses,
+      user,
+      versions: GameVersions,
+      wikiLinks,
     };
-  },
-  methods: {
-    getTalent(tab: "tab_one" | "tab_two" | "tab_three", slot: number): string {
-      if (this.activeBuild !== null) {
-        return this.activeBuild[tab]?.[slot] || "0";
-      }
-      return "0";
-    },
   },
 });
 </script>
 
 <style lang="sass" scoped>
 @import '../styles/base.sass'
-
-.card
-  background: $primary
-  color: #aaaaaa
-
-.card-header
-  background: $secondary
-  color: darken(white, 10%)
-  font-weight: bold
-
-.build-selector
-  display: flex
-  height: 3rem
-  align-self: flex-end
-  select
-    width: 80%
-
-.talent-container
-  display: grid
-  grid-template-columns: repeat(5, 1fr)
-  grid-template-rows: repeat(3, 1fr)
-  gap: 3px 3px
-  grid-template-areas: "....." "....." "....."
-
-  img
-    background: none
-    border-bottom: 0
-    border-bottom-left-radius: 0
-    border-bottom-right-radius: 0
-
-.skill
-  background: $secondary
-  color: $light
-  text-align: center
+.input-group
+  .input-group-text, select
+    border: none
 </style>
