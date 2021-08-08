@@ -63,7 +63,7 @@
               dense
               mask="##hr ##min ##sec"
               label="Reset Timer"
-              fill-mask="_"
+              placeholder="12hr 30min 42sec"
               @update:model-value="onUpdateDailyResetTime"
             />
             <div class="text-xs text-secondary m-1">

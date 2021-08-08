@@ -27,7 +27,6 @@
           Thanks to everyone involved on the Idleon Companion Development team:
         </div>
         <ul class="text-sm ml-2 mb-2">
-          <li>100mar#2993, for feedback and complex game calculations</li>
           <li>Itsui#0043, for work on Idleon Interactive + feedback</li>
           <li>Mark#4874, for working on a comprehensive Idleon guide</li>
           <li>

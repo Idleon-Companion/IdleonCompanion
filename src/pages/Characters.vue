@@ -14,12 +14,14 @@
       </q-btn-dropdown>
     </template>
   </q-banner>
-  <q-card v-if="currentCharacter === null">
-    <div>
+  <q-card v-if="currentCharacter === null" class="m-4">
+    <q-card-section>
       You have no characters. Create your first character or load your data from
       the cloud!
-    </div>
-    <q-btn @click="onCreateNewCharacter">New Character</q-btn>
+    </q-card-section>
+    <q-card-actions>
+      <q-btn color="info" @click="onCreateNewCharacter">New Character</q-btn>
+    </q-card-actions>
   </q-card>
   <CharacterEditor v-else />
   <CharacterProgressTracker v-if="currentCharacter !== null" />

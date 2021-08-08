@@ -69,7 +69,7 @@
         v-for="(_, index) in bubbleCount"
         :color="currentCauldron"
         :discount="discount['Total']"
-        :index="index"
+        :index="bubbleCount - index - 1"
       />
     </tbody>
   </q-markup-table>
