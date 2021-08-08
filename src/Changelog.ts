@@ -139,6 +139,7 @@ export const Changelog: ChangelogEntry[] = [
       features: [
         "Builds: Create and share builds directly through Idleon Companion! Yes, we are a social network now :)",
         "Tasks: Now supporting multi-step tasks and custom timers (for traps and more!)",
+        "Sweet Spot: Find your best EXP farming spots! Your favorite feature from the Idleon Toolbox, now on Idleon Companion!",
       ],
       changes: [
         "UI: Complete rework to use Quasar design framework + better navigation control with Vue Router",

@@ -261,13 +261,12 @@ import duration from "dayjs/plugin/duration";
 import relativeTime from "dayjs/plugin/relativeTime";
 
 import { DefaultTasks, Task, Timer } from "~/composables/Tasks";
+import { Time } from "~/composables/Utilities";
 import { useState } from "~/State";
 
 dayjs.locale;
 dayjs.extend(duration);
 dayjs.extend(relativeTime);
-
-const DAY = dayjs.duration({ hours: 24 }).asMilliseconds();
 
 const wikiLinks = new Map([
   ["Tasks", "https://idleon.info/wiki/Tasks"],
@@ -383,11 +382,11 @@ export default defineComponent({
         .valueOf();
       // If overflows into negative value, reset time is tomorrow;
       if (resetTime.value < currentTime.value) {
-        resetTime.value += DAY;
+        resetTime.value += Time.Day;
       }
       // Reset tasks that are completed
       for (const task of tasks.value) {
-        if (resetTime.value - task.lastCompletion > DAY) {
+        if (resetTime.value - task.lastCompletion > Time.Day) {
           task.lastCompletion = 0;
           task.completed = 0;
         }

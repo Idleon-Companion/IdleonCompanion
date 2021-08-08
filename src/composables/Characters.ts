@@ -124,6 +124,13 @@ export class Character {
     return slots;
   }
 
+  /* TODO: Stats
+  - Characters should have basic stats stored on them (move speed, HP, drop chance, etc.)
+  - Other stats have computed getters that are based on these stats
+    - Attack Speed (TODO)
+    - Damage/HR -> Kills/HR (Nice to have in Sweet Spot/future features)
+  */
+
   hasItem(item: string): boolean {
     return this.items[item] === true;
   }
@@ -202,5 +209,50 @@ export function useCharacters() {
     nextCharacter,
     prevCharacter,
     switchToCharacter,
+  };
+}
+
+export enum WeaponType {
+  Fisticuff,
+  Spear,
+  Bow,
+  Wand,
+}
+
+export function useCombat() {
+  // TODO: These should probably all be a part of the character class as getters
+  const attackSpeed = (weaponSpeed: number, weaponType: WeaponType) => {
+    // Attack speed is measured in milliseconds
+    const weaponStats: Record<
+      WeaponType,
+      { base: number; cap: number; delay: number }
+    > = {
+      [WeaponType.Fisticuff]: {
+        base: 650,
+        cap: 300,
+        delay: 13,
+      },
+      [WeaponType.Spear]: {
+        base: 650,
+        cap: 300,
+        delay: 13,
+      },
+      [WeaponType.Bow]: {
+        base: 850,
+        cap: 750,
+        delay: 13.5,
+      },
+      [WeaponType.Wand]: {
+        base: 760,
+        cap: 600,
+        delay: 16,
+      },
+    };
+    const stats = weaponStats[weaponType];
+    return Math.max(stats.base + (stats.delay - weaponSpeed) / 5, stats.cap);
+  };
+
+  return {
+    attackSpeed,
   };
 }
