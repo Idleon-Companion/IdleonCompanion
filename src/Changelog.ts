@@ -142,11 +142,13 @@ export const Changelog: ChangelogEntry[] = [
       ],
       changes: [
         "UI: Complete rework to use Quasar design framework + better navigation control with Vue Router",
+        "UI: All pages have a brief explanation of the feature + links to Wiki pages if applicable",
         "Dev: A number of internal changes to make features easier to contribute to (such as builds/card sets)",
       ],
       fixes: [
         "Account level total will display correctly",
         "Sign in flow improved and will always keep you signed in on the same device!",
+        "Alchemy: tracking + material calculation fixed",
       ],
     },
     date: "August 2021",
