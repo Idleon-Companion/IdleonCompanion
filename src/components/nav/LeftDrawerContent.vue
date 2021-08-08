@@ -64,10 +64,10 @@ const tabs: NavigationTab[] = [
     name: "Tasks",
     path: "/tasks",
   },
-  // {
-  //   name: "Sweet Spot",
-  //   path: "/sweet-spot",
-  // },
+  {
+    name: "Sweet Spot",
+    path: "/sweet-spot",
+  },
   {
     name: "Builds",
     path: "/builds",

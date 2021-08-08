@@ -1623,6 +1623,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.17.3.tgz#6d327abaa4be34a74e421ed6409a0ae2f47f4c3d"
   integrity sha512-e6ZowgGJmTuXa3GyaPbTGxX17tnThl2aSSizrFthQ7m9uLGZBXiGhgE55cjRZTF5kjZvYn9EOPOMljdjwbflxw==
 
+"@types/numeral@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@types/numeral/-/numeral-2.0.1.tgz#f7270a16c643d5796199b2a03d1f28595d38f687"
+  integrity sha512-f0LSiBOMnSGILpylIZzYXtnHbhosjPI916W9AkB171MnY+7IVuXHfb7Ohv3AkaDeOieiq74f6vy9ROMxRhfZ1Q==
+
 "@types/parse-json@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
@@ -5345,6 +5350,11 @@ null-loader@4.0.1:
   dependencies:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
+
+numeral@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/numeral/-/numeral-2.0.6.tgz#4ad080936d443c2561aed9f2197efffe25f4e506"
+  integrity sha1-StCAk21EPCVhrtnyGX7//iX05QY=
 
 object-is@^1.0.1:
   version "1.1.5"

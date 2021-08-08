@@ -1,14 +1,14 @@
 import { Quasar, QuasarPluginOptions } from "quasar";
 import { createApp } from "vue";
-import VueTippy from "vue-tippy";
-import Toast, { PluginOptions } from "vue-toastification";
-import App from "~/App.vue";
 import { router } from "~/Router";
+import App from "~/App.vue";
+import Toast, { PluginOptions } from "vue-toastification";
+import VueTippy from "vue-tippy";
 
-import "virtual:windi.css";
-import "tippy.js/dist/tippy.css";
-import "vue-toastification/dist/index.css";
 import "quasar/dist/quasar.prod.css";
+import "tippy.js/dist/tippy.css";
+import "virtual:windi.css";
+import "vue-toastification/dist/index.css";
 import mdiIconSet from "quasar/icon-set/svg-mdi-v5";
 
 const toastOptions: PluginOptions = {

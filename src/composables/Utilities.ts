@@ -1,7 +1,9 @@
-import { Character } from "./Characters";
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
 import { computed } from "vue";
 import { useQuasar } from "quasar";
+import numeral from "numeral";
+
+import { Character } from "~/composables/Characters";
 
 export type GrowthFunc = (a: number, b: number, c: number) => number;
 
@@ -263,4 +265,16 @@ export function useMoney() {
   return {
     splitCoinsFromValue,
   };
+}
+
+export const useNumberAbbr = (n: number) => numeral(n).format("0a.[000]");
+
+// Common durations in milliseconds
+export enum Time {
+  Millisecond = 1,
+  Second = Time.Millisecond * 1000,
+  Minute = Time.Second * 60,
+  Hour = Time.Minute * 60,
+  Day = Time.Hour * 24,
+  Week = Time.Day * 7,
 }
