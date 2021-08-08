@@ -41,11 +41,7 @@ export class Assets {
   }
 
   static CharImage(char: Character): string {
-    let image = char.class as string;
-    if (char.subclass) {
-      image = char.subclass as string;
-    }
-    return Assets.ClassImage(image);
+    return Assets.ClassImage(char.class);
   }
 
   static ClassImage(c: string): string {
