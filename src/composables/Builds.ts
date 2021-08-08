@@ -3,7 +3,7 @@ import {
   GameVersion,
   LatestGameVersion,
 } from "~/composables/Utilities";
-import { Class, Subclass } from "~/composables/Characters";
+import { Class, getClassTree } from "~/composables/Characters";
 import { Ref, ref } from "vue";
 import { useAuth, useDB } from "~/State";
 import { useToast } from "vue-toastification";
@@ -18,8 +18,7 @@ export type Build = {
   title: string; // Build name
   version: GameVersion; // Version of Idleon for the build
   level?: number; // Recommended character level
-  class: Class;
-  subclass?: Subclass | null;
+  class: Class; // The (highest) class this build is for (e.g. Squire > Warrior)
   tabs: BuildTab[];
   notes?: string;
 };
@@ -31,18 +30,19 @@ type BuildMeta = {
 };
 
 // This mapping is used to determine the filename for a certain talent
-const classAlias: Record<Class | Subclass, string> = {
+const classAlias: Record<Class, string> = {
   [Class.Beginner]: "all",
+  [Class.Journeyman]: "jma",
+  [Class.Maestro]: "mae",
   [Class.Warrior]: "war",
+  [Class.Barbarian]: "bar",
+  [Class.Squire]: "sqr",
   [Class.Archer]: "arc",
+  [Class.Bowman]: "bow",
+  [Class.Hunter]: "hun",
   [Class.Mage]: "mag",
-  [Subclass.Barbarian]: "bar",
-  [Subclass.Bowman]: "bow",
-  [Subclass.Hunter]: "hun",
-  [Subclass.Journeyman]: "jma",
-  [Subclass.Shaman]: "sha",
-  [Subclass.Squire]: "sqr",
-  [Subclass.Wizard]: "wiz",
+  [Class.Shaman]: "sha",
+  [Class.Wizard]: "wiz",
 };
 
 const builds: Build[] = [
@@ -66,8 +66,7 @@ const builds: Build[] = [
   {
     title: "Alchemy / AFK Shaman",
     version: "1.22",
-    class: Class.Mage,
-    subclass: Subclass.Shaman,
+    class: Class.Shaman,
     tabs: [
       {
         skills: {
@@ -107,13 +106,8 @@ export function useBuilds() {
   const { user } = useAuth();
   const toast = useToast();
 
-  const createNewBuild = (class_: Class, subclass: Subclass | null) => {
-    let numTabs = 3;
-    if (class_ === Class.Beginner && !subclass) {
-      numTabs = 1;
-    } else if (!subclass || subclass === Subclass.Journeyman) {
-      numTabs = 2;
-    }
+  const createNewBuild = (class_: Class) => {
+    const numTabs = getClassTree(class_).length;
     const tabs = [];
     for (const _ of Array(numTabs)) {
       tabs.push({
@@ -126,7 +120,6 @@ export function useBuilds() {
       version: LatestGameVersion,
       class: class_,
       tabs: tabs,
-      subclass,
     };
     currentBuildMeta.value = {
       author: "",
@@ -138,19 +131,15 @@ export function useBuilds() {
 
   const getTalentAsset = (build: Build, tab: number, slot: number) => {
     let role = "";
+    const classTree = getClassTree(build.class);
     if (tab === 1 && slot <= 10) {
-      role = classAlias[Class.Beginner];
+      role = classAlias[classTree.slice(-1)[0]];
     } else if ((tab === 1 && slot > 10) || tab === 2) {
-      if (
-        build.class === Class.Beginner &&
-        build.subclass === Subclass.Journeyman
-      ) {
-        role = classAlias[build.subclass];
-      } else if (build.class !== Class.Beginner) {
-        role = classAlias[build.class];
+      if (build.class !== Class.Beginner) {
+        role = classAlias[classTree.slice(-2)[0]];
       }
     } else if (tab === 3) {
-      role = build.subclass ? classAlias[build.subclass] : "";
+      role = classAlias[classTree.slice(-3)[0]];
     }
     return Assets.TalentImage(role, tab, slot);
   };
@@ -163,7 +152,6 @@ export function useBuilds() {
     const buildSnapshot = await db.ref(`${DbRef.Builds}/${id}`).once("value");
     if (buildSnapshot.exists() && buildSnapshot.val()) {
       const buildData = buildSnapshot.val();
-      console.log("Build data:", buildData, typeof buildData);
       currentBuild.value = JSON.parse(buildData.build) as Build;
       currentBuildMeta.value = {
         author: buildData.author,
@@ -176,7 +164,6 @@ export function useBuilds() {
         const likedByCurrentUser = await db
           .ref(`${DbRef.Builds}/${id}/likedBy/${user.value.uid}`)
           .once("value");
-        console.log("Liked by:", likedByCurrentUser.val());
         currentBuildMeta.value.likedByCurrentUser = likedByCurrentUser.val();
       }
       toast.info(`Loaded build "${currentBuild.value.title}"`);

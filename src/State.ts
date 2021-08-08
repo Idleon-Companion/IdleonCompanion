@@ -146,6 +146,18 @@ export function versionControl() {
       timers: [],
     };
   }
+  // Remove subclass from characters
+  if (state.value.version < "0.3.1") {
+    for (const key in state.value.chars) {
+      if ("subclass" in state.value.chars[key]) {
+        state.value.chars[key].class =
+          (state.value.chars[key] as Character & { subclass: any }).subclass ??
+          state.value.chars[key].class;
+        delete (state.value.chars[key] as Character & { subclass: any })
+          .subclass;
+      }
+    }
+  }
   state.value.version = version;
 }
 

@@ -4,29 +4,67 @@ import { useState } from "~/State";
 
 export enum Class {
   Beginner = "Beginner",
-  Warrior = "Warrior",
-  Archer = "Archer",
-  Mage = "Mage",
-}
-
-export enum Subclass {
   Journeyman = "Journeyman",
+  Maestro = "Maestro",
+
+  Warrior = "Warrior",
   Barbarian = "Barbarian",
   Squire = "Squire",
+
+  Archer = "Archer",
   Bowman = "Bowman",
   Hunter = "Hunter",
+
+  Mage = "Mage",
   Wizard = "Wizard",
   Shaman = "Shaman",
 }
 
-export const SubclassTree: Record<Subclass, Class> = {
-  [Subclass.Journeyman]: Class.Beginner,
-  [Subclass.Barbarian]: Class.Warrior,
-  [Subclass.Squire]: Class.Warrior,
-  [Subclass.Bowman]: Class.Archer,
-  [Subclass.Hunter]: Class.Archer,
-  [Subclass.Wizard]: Class.Mage,
-  [Subclass.Shaman]: Class.Mage,
+export const BaseClass = [
+  Class.Beginner,
+  Class.Warrior,
+  Class.Archer,
+  Class.Mage,
+];
+
+export const Subclass: Record<Class, Class[]> = {
+  [Class.Beginner]: [Class.Journeyman],
+  [Class.Journeyman]: [Class.Maestro],
+  [Class.Maestro]: [],
+  [Class.Warrior]: [Class.Barbarian, Class.Squire],
+  [Class.Barbarian]: [],
+  [Class.Squire]: [],
+  [Class.Archer]: [Class.Bowman, Class.Hunter],
+  [Class.Bowman]: [],
+  [Class.Hunter]: [],
+  [Class.Mage]: [Class.Wizard, Class.Shaman],
+  [Class.Wizard]: [],
+  [Class.Shaman]: [],
+};
+
+export const Superclass: Partial<Record<Class, Class>> = {
+  [Class.Journeyman]: Class.Beginner,
+  [Class.Maestro]: Class.Journeyman,
+  [Class.Warrior]: Class.Beginner,
+  [Class.Barbarian]: Class.Warrior,
+  [Class.Squire]: Class.Warrior,
+  [Class.Archer]: Class.Beginner,
+  [Class.Bowman]: Class.Archer,
+  [Class.Hunter]: Class.Archer,
+  [Class.Mage]: Class.Beginner,
+  [Class.Wizard]: Class.Mage,
+  [Class.Shaman]: Class.Mage,
+};
+
+export const getClassTree = (class_: Class): Class[] => {
+  // Retuns the parent class tree given a leaf class node (Maestro -> [Maestro, Journeyman, Beginner])
+  const classes: Class[] = [];
+  let current: Class | undefined = class_;
+  while (current) {
+    classes.push(current);
+    current = Superclass[current];
+  }
+  return classes;
 };
 
 export const Skills = [
@@ -45,7 +83,6 @@ export type Skill = typeof Skills[number];
 // Characters keep track of individual data
 export class Character {
   public class: Class;
-  public subclass: Subclass | null;
   public level: number;
   public name: string;
   public items: Record<string, boolean>;
@@ -55,7 +92,6 @@ export class Character {
 
   constructor() {
     this.class = Class.Beginner;
-    this.subclass = null;
     this.level = 1;
     this.name = "";
     this.items = {};
@@ -64,31 +100,6 @@ export class Character {
     );
     this.constellations = {};
     this.starSigns = {};
-  }
-
-  setClass(c: Class | Subclass) {
-    for (const x in Class) {
-      if (x === c) {
-        this.class = c as Class;
-        this.subclass = null;
-        return;
-      }
-    }
-    this.class = {
-      [Subclass.Barbarian]: Class.Warrior,
-      [Subclass.Squire]: Class.Warrior,
-      [Subclass.Bowman]: Class.Archer,
-      [Subclass.Hunter]: Class.Archer,
-      [Subclass.Shaman]: Class.Mage,
-      [Subclass.Wizard]: Class.Mage,
-      [Subclass.Journeyman]: Class.Beginner,
-    }[c as Subclass];
-    this.subclass = c as Subclass;
-  }
-
-  get actualClass(): Class | Subclass {
-    // Retrieves the class of the character based on subclass progression
-    return this.subclass || this.class;
   }
 
   get bagSlots(): number {
