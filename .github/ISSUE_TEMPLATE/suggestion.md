@@ -1,10 +1,9 @@
 ---
 name: Suggestion
 about: An improvement or change to the website.
-title: ''
+title: ""
 labels: rework
-assignees: ''
-
+assignees: ""
 ---
 
 # Suggestion

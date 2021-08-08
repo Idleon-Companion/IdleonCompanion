@@ -9,20 +9,52 @@
           </q-avatar>
           Idleon Companion
         </q-toolbar-title>
-        <q-btn
-          dense
-          flat
-          round
-          :icon="isDarkMode ? 'mdi-brightness-7' : 'mdi-brightness-3'"
-          @click="toggleDarkMode"
-        />
-        <q-btn
-          dense
-          flat
-          round
-          icon="mdi-account-details"
-          @click="toggleRightDrawer"
-        />
+        <Tooltip>
+          <q-btn
+            class="discord-btn"
+            dense
+            flat
+            round
+            icon="discord"
+            type="a"
+            target="_blank"
+            href="https://discord.com/invite/sCVVN7G3hK"
+          />
+          <template #content>Join Discord</template>
+        </Tooltip>
+        <Tooltip>
+          <q-btn
+            color="negative"
+            dense
+            flat
+            round
+            icon="mdi-alert-octagon"
+            type="a"
+            target="_blank"
+            href="https://github.com/Idleon-Companion/IdleonCompanion/issues/new?assignees=&labels=bug&template=bug-report.md&title="
+          />
+          <template #content>Submit Bug Report</template>
+        </Tooltip>
+        <Tooltip>
+          <q-btn
+            dense
+            flat
+            round
+            :icon="isDarkMode ? 'mdi-brightness-7' : 'mdi-brightness-3'"
+            @click="toggleDarkMode"
+          />
+          <template #content>Light/Dark Mode</template>
+        </Tooltip>
+        <Tooltip>
+          <q-btn
+            dense
+            flat
+            round
+            icon="mdi-account-details"
+            @click="toggleRightDrawer"
+          />
+          <template #content>Show/Hide Sidebar</template>
+        </Tooltip>
       </q-toolbar>
     </q-header>
 
@@ -127,4 +159,7 @@ body
   -webkit-background-size: cover
 body.body--dark
   background: url('../assets/bg/Desert_Night.png') !important
+.discord-btn *
+  border-radius: 100%
+  background: #7289DA
 </style>
