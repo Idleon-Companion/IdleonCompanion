@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Maestro Skill (~100)",
   notes:
     "The goal of this build is to allow your other characters to get level 20+ on their non-specialized skills.",
@@ -39,6 +41,5 @@ export const build = {
         "Place as many points as possible into Bliss n Chips. Then into Left Hand of Learning. Afterwards, place 50+ into Right Hand of Action. You can split the excess between the Right Hand or Skilliest Statue \n1* Extra points can go into here to increase EhExPee Statue (+% Skill Exp)",
     },
   ],
-  class: Class.Journeyman,
-  subclass: Subclass.Maestro,
+  class: Class.Maestro,
 };

@@ -3,7 +3,7 @@ import {
   GameVersion,
   LatestGameVersion,
 } from "~/composables/Utilities";
-import { Class, Subclass } from "~/composables/Characters";
+import { Class, getClassTree } from "~/composables/Characters";
 import { Ref, ref } from "vue";
 import { builds } from "~/data/builds";
 import { useAuth, useDB } from "~/State";
@@ -19,8 +19,7 @@ export type Build = {
   title: string; // Build name
   version: GameVersion; // Version of Idleon for the build
   level?: number; // Recommended character level
-  class: Class;
-  subclass?: Subclass | null;
+  class: Class; // The (highest) class this build is for (e.g. Squire > Warrior)
   tabs: BuildTab[];
   notes?: string;
 };
@@ -32,19 +31,19 @@ type BuildMeta = {
 };
 
 // This mapping is used to determine the filename for a certain talent
-const classAlias: Record<Class | Subclass, string> = {
+const classAlias: Record<Class, string> = {
   [Class.Beginner]: "all",
-  [Class.Warrior]: "war",
-  [Class.Archer]: "arc",
-  [Class.Mage]: "mag",
   [Class.Journeyman]: "jma",
-  [Subclass.Barbarian]: "bar",
-  [Subclass.Bowman]: "bow",
-  [Subclass.Hunter]: "hun",
-  [Subclass.Shaman]: "sha",
-  [Subclass.Squire]: "sqr",
-  [Subclass.Wizard]: "wiz",
-  [Subclass.Maestro]: "mae",
+  [Class.Maestro]: "mae",
+  [Class.Warrior]: "war",
+  [Class.Barbarian]: "bar",
+  [Class.Squire]: "sqr",
+  [Class.Archer]: "arc",
+  [Class.Bowman]: "bow",
+  [Class.Hunter]: "hun",
+  [Class.Mage]: "mag",
+  [Class.Shaman]: "sha",
+  [Class.Wizard]: "wiz",
 };
 
 const currentBuild: Ref<Build | null> = ref(null);
@@ -59,13 +58,8 @@ export function useBuilds() {
   const { user } = useAuth();
   const toast = useToast();
 
-  const createNewBuild = (class_: Class, subclass: Subclass | null) => {
-    let numTabs = 3;
-    if (class_ === Class.Beginner && !subclass) {
-      numTabs = 1;
-    } else if (!subclass) {
-      numTabs = 2;
-    }
+  const createNewBuild = (class_: Class) => {
+    const numTabs = getClassTree(class_).length;
     const tabs = [];
     for (const _ of Array(numTabs)) {
       tabs.push({
@@ -78,7 +72,6 @@ export function useBuilds() {
       version: LatestGameVersion,
       class: class_,
       tabs: tabs,
-      subclass,
     };
     currentBuildMeta.value = {
       author: "",
@@ -90,16 +83,15 @@ export function useBuilds() {
 
   const getTalentAsset = (build: Build, tab: number, slot: number) => {
     let role = "";
+    const classTree = getClassTree(build.class);
     if (tab === 1 && slot <= 10) {
-      role = classAlias[Class.Beginner];
+      role = classAlias[classTree.slice(-1)[0]];
     } else if ((tab === 1 && slot > 10) || tab === 2) {
-      if (build.subclass) {
-        role = classAlias[build.subclass];
-      } else {
-        role = classAlias[build.class];
+      if (build.class !== Class.Beginner) {
+        role = classAlias[classTree.slice(-2)[0]];
       }
     } else if (tab === 3) {
-      role = build.subclass ? classAlias[build.subclass] : "";
+      role = classAlias[classTree.slice(-3)[0]];
     }
     return Assets.TalentImage(role, tab, slot);
   };
@@ -112,7 +104,6 @@ export function useBuilds() {
     const buildSnapshot = await db.ref(`${DbRef.Builds}/${id}`).once("value");
     if (buildSnapshot.exists() && buildSnapshot.val()) {
       const buildData = buildSnapshot.val();
-      console.log("Build data:", buildData, typeof buildData);
       currentBuild.value = JSON.parse(buildData.build) as Build;
       currentBuildMeta.value = {
         author: buildData.author,
@@ -125,7 +116,6 @@ export function useBuilds() {
         const likedByCurrentUser = await db
           .ref(`${DbRef.Builds}/${id}/likedBy/${user.value.uid}`)
           .once("value");
-        console.log("Liked by:", likedByCurrentUser.val());
         currentBuildMeta.value.likedByCurrentUser = likedByCurrentUser.val();
       }
       toast.info(`Loaded build "${currentBuild.value.title}"`);

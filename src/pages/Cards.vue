@@ -30,7 +30,12 @@
       </thead>
       <tbody>
         <tr v-for="cardset in cardData" class="text-right">
-          <td>{{ cardset.title }}</td>
+          <td>
+            <div class="text-lg font-medium">
+              {{ cardset.title.replace(/_/g, " ") }}
+            </div>
+          </td>
+
           <td>
             <ICAsset
               v-for="(card, index) in cardset.core"
@@ -66,7 +71,10 @@
               :key="index"
               :image="Assets.CardImage(card)"
               :title="card.replace(/_/g, ' ')"
-              class="card-image"
+              :class="{
+                'card-image': true,
+                'card-best-image': card.startsWith('Best'),
+              }"
             >
               <template #tooltip>
                 {{ card.replace(/_/g, " ") }}
@@ -108,4 +116,6 @@ export default defineComponent({
   display: inline-block
   height: 64px
   width: 48px
+  &.card-best-image
+    width: 96px
 </style>

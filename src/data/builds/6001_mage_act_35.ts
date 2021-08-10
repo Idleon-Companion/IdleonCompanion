@@ -1,6 +1,8 @@
 import { Class } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Mage / Active (~35)",
   notes: "That's how your build should roughly look when pushing for subclass.",
   version: "1.21",

@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Hunter / AFK (~50)",
   notes:
     "Leveling up active skills directly increase AFK kills/hr, so we level them past 1.",
@@ -39,6 +41,5 @@ export const build = {
         'Level up "360 Noscope" and "Bear Trap" to 30. \n Then raise "Have another... Again" and "Looty Mcshooty" to 20.',
     },
   ],
-  class: Class.Archer,
-  subclass: Subclass.Hunter,
+  class: Class.Hunter,
 };

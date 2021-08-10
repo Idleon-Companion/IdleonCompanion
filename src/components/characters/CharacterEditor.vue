@@ -15,7 +15,7 @@
                   :title="class_"
                   size="small"
                   class="character-class-img rounded-full cursor-pointer p-2"
-                  @click="currentCharacter?.setClass(class_)"
+                  @click="onSetClass(class_)"
                 />
               </q-card>
             </q-popup-proxy>
@@ -75,7 +75,6 @@
 import { Assets, useLayout } from "~/composables/Utilities";
 import {
   Class,
-  Subclass,
   Skills as allSkills,
   useCharacters,
 } from "~/composables/Characters";
@@ -94,14 +93,6 @@ export default defineComponent({
     const { isMobile } = useLayout();
     const toast = useToast();
 
-    const allClasses = computed(() => {
-      let classes: (Class | Subclass)[] = [
-        ...Object.values(Class),
-        ...Object.values(Subclass),
-      ];
-      return classes;
-    });
-
     const onCreateNewCharacter = () => {
       createNewCharacter();
       toast.info("New character created.");
@@ -112,14 +103,21 @@ export default defineComponent({
       toast.info("Character deleted.");
     };
 
+    const onSetClass = (class_: Class) => {
+      if (currentCharacter.value) {
+        currentCharacter.value.class = class_;
+      }
+    };
+
     return {
-      allClasses,
+      allClasses: computed(() => Object.values(Class)),
       allSkills,
       Assets,
       currentCharacter,
       isMobile,
       onCreateNewCharacter,
       onDeleteCurrentCharacter,
+      onSetClass,
     };
   },
 });

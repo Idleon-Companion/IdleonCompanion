@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Hunter / Active (~70)",
   notes:
     "**430 mana is required to sustain Piercing Arrow, Traps, and UWU Rawr, your main damaging talents.",
@@ -43,6 +45,5 @@ export const build = {
         'Put 1 point into active skills, 40 into "Have Another... Again", then get "Looty McShooty" maxed. \n With 430 mana, uwu rawr can be sustained and points should be put in to better match mob\'s respawn timer. \n *1 = Points can be taken away from "Looty Mcshooty" or "Have another... Again" to make room for "Eagle Eye".',
     },
   ],
-  class: Class.Archer,
-  subclass: Subclass.Hunter,
+  class: Class.Hunter,
 };

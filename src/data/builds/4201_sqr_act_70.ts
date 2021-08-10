@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Squire / Active (~70)",
   notes: "",
   version: "1.21",
@@ -40,6 +42,5 @@ export const build = {
         'Put 1 point in every active skill, then 100 into "Back To Basics".\n*1 = Excess points can be used to level "Precision Power". If you level this talent, be sure to have 1.5x the 100% hit chance requirement when killing the monster you\'re farming. This skill will do nothing under the 1.5x requirement. You may need to put more points into "Book of the Wise" on Tab 1.\n*2 = Extra points can be placed here for better mob clear.',
     },
   ],
-  class: Class.Warrior,
-  subclass: Subclass.Squire,
+  class: Class.Squire,
 };

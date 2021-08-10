@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Bowman / Active (~50)",
   notes: "",
   version: "1.21",
@@ -39,6 +41,5 @@ export const build = {
         'Put 1 point into active skills, then get speedNA up to 70-90. \n *1 = Points can be invested back into tab 2 if necessary. Eventually you want to aim for 145% MS. 50 points into Strafe would add another 15% MS for another "SpeedNA" bonus.',
     },
   ],
-  class: Class.Archer,
-  subclass: Subclass.Bowman,
+  class: Class.Bowman,
 };

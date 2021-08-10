@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Shaman / AFK (~50)",
   notes: "Active Skills directly increase AFK kills/hr.",
   version: "1.21",
@@ -37,6 +39,5 @@ export const build = {
         'Level the damage skills evenly.\n*1 = If you have many Green Vials, you can place 20-30 points into "Virile Vials" for more damage.\n*2 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2.',
     },
   ],
-  class: Class.Mage,
-  subclass: Subclass.Shaman,
+  class: Class.Shaman,
 };

@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Mining Active / AFK (Warrior) 30+",
   notes: "",
   version: "1.21",
@@ -38,6 +40,5 @@ export const build = {
         'Get "Strongest Statues" and "Back to Basics" to 100.\nExcess points can go towards "Str Summore"',
     },
   ],
-  class: Class.Warrior,
-  subclass: Subclass.Barbarian,
+  class: Class.Barbarian,
 };

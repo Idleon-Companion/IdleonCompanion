@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Fishing Active / AFK (Barb) 30+",
   notes:
     "Due to prowess effect not working active, AFK fishing will always be better if you have at least 2x prowess.",
@@ -36,6 +38,5 @@ export const build = {
         'Max "Worming Undercover" and "Catching some ZZZ\'s", boost "All fish diet" if you\'re going for xp\n*1 = Boost it to around your minigame score.\n*2 = Excess points here.',
     },
   ],
-  class: Class.Warrior,
-  subclass: Subclass.Barbarian,
+  class: Class.Barbarian,
 };

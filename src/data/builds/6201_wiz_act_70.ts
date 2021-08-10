@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Wizard / Active (~70)",
   notes: "",
   version: "1.21",
@@ -40,6 +42,5 @@ export const build = {
         'Put 1 point in every active skill, then 100 into "Earlier Education". Be sure to place points into "Paperwork Great..." for a nice damage boost.\n*1 = Excess points can be used to level active skills.',
     },
   ],
-  class: Class.Mage,
-  subclass: Subclass.Wizard,
+  class: Class.Wizard,
 };

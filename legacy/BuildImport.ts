@@ -1,25 +1,8 @@
 // Generates the build data
-import { readdirSync, readFileSync, writeFileSync } from "fs";
-import { join, resolve } from "path";
-import { Build } from "../src/data/builds";
+import { Build } from "../src/composables/Builds";
+import { Class } from "../src/composables/Characters";
+import { readFileSync, readdirSync, writeFileSync } from "fs";
 
-export enum Class {
-  Beginner = "Beginner",
-  Warrior = "Warrior",
-  Archer = "Archer",
-  Mage = "Mage",
-  Journeyman = "Journeyman",
-}
-
-export enum Subclass {
-  Maestro = "Maestro",
-  Barbarian = "Barbarian",
-  Squire = "Squire",
-  Bowman = "Bowman",
-  Hunter = "Hunter",
-  Wizard = "Wizard",
-  Shaman = "Shaman",
-}
 
 function mapStringToClass(className: string): Class {
   switch (className) {
@@ -35,44 +18,31 @@ function mapStringToClass(className: string): Class {
   return Class.Beginner;
 }
 
-function mapStringToSubclass(className: string): Subclass | undefined {
+function mapStringToSubclass(className: string): Class | undefined {
   switch (className) {
     case "bar":
-      return Subclass.Barbarian;
+      return Class.Barbarian;
     case "bow":
-      return Subclass.Bowman;
+      return Class.Bowman;
     case "hun":
-      return Subclass.Hunter;
+      return Class.Hunter;
     case "mae":
-      return Subclass.Maestro;
+      return Class.Maestro;
     case "sha":
-      return Subclass.Shaman;
+      return Class.Shaman;
     case "sqr":
-      return Subclass.Squire;
+      return Class.Squire;
     case "wiz":
-      return Subclass.Wizard;
+      return Class.Wizard;
   }
 }
 
 const baseClassImport = `import { Class } from "~/composables/Characters";\n`;
-const subClassImport = `import { Class, Subclass } from "~/composables/Characters";\n`;
-const types = `
-export type BuildTab = {
-    skills: Record<number, string>; // Skill index -> points
-    comment: string;
-};
-export type Build = {
-    title: string; // Build name
-    version: string; // Version of Idleon for the build
-    class: Class;
-    subclass?: Subclass;
-    tabs: BuildTab[];
-    notes: string;
-};`;
 
 export function portOldBuilts() {
   const basePath = "./src";
-  let imports = `import { Class, Subclass } from "~/composables/Characters";\n`;
+  let imports = `import { Class } from "~/composables/Characters";\n`;
+  imports += `import { Build } from "~/composables/Builds";\n`
   let buildCodes = "export const builds: Build[] = [];\n";
 
   const builds: Record<string, any> = {};
@@ -93,8 +63,7 @@ export function portOldBuilts() {
     };
     let buildFile = "";
     if (oldBuild.subclass) {
-      buildFile += subClassImport;
-      newBuild.subclass = mapStringToSubclass(oldBuild.subclass);
+      newBuild.class = mapStringToSubclass(oldBuild.subclass) ?? newBuild.class;
     } else {
       delete oldBuild.subclass;
       buildFile += baseClassImport;
@@ -122,7 +91,7 @@ export function portOldBuilts() {
     }
 
     buildFile +=
-      `\n\n export const build = ` + JSON.stringify(newBuild, null, 2);
+      `\n\n export const build: Build = ` + JSON.stringify(newBuild, null, 2);
 
     buildFile = buildFile.replace(/"class": "(\w*)"/gi, '"class": Class.$1');
     buildFile = buildFile.replace(
@@ -143,7 +112,7 @@ export function portOldBuilts() {
 
   writeFileSync(
     `${basePath}/data/builds/index.ts`,
-    imports + "\n\n" + types + "\n\n" + buildCodes
+    imports + "\n\n" + buildCodes
   );
 }
 

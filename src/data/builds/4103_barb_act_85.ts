@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Barbarian / Active (~85)",
   notes: "100+ = Checkout books for these talents from the library.",
   version: "1.21",
@@ -43,6 +45,5 @@ export const build = {
         'Put 1 point in every active skill. Max "Apocalypse Zow" (To either 99 or 132, level in-between are useless), then 100 into "Back To Basics".\n*1 = Excess points can be split between the two active skills.',
     },
   ],
-  class: Class.Warrior,
-  subclass: Subclass.Barbarian,
+  class: Class.Barbarian,
 };

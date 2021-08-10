@@ -1,6 +1,7 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Build } from "~/composables/Builds";
+import { Class } from "~/composables/Characters";
 
-export const build = {
+export const build: Build = {
   title: "Woodcutter Active / AFK (Mage) 30+",
   notes: "",
   version: "1.21",
@@ -39,6 +40,5 @@ export const build = {
         "Max Earlier Education, Stupendous Statues,and WIS Mumbo in that order./nIf you are using WIS obols put excess points into Occult Obols",
     },
   ],
-  class: Class.Mage,
-  subclass: Subclass.Shaman,
+  class: Class.Shaman,
 };

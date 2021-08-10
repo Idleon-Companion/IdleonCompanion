@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Barbarian / AFK (~50)",
   notes: "Active Skills directly increase AFK kills/hr.",
   version: "1.21",
@@ -38,6 +40,5 @@ export const build = {
         'Level "Bear Strike" and "Axe hurl" to around 30.\n*1 = You can put some points into "Back to Basics" if you\'re lacking points on Tab 2.\n "Mocking Shout" does not improve AFK gains, but is useful at times you want to be active. ',
     },
   ],
-  class: Class.Warrior,
-  subclass: Subclass.Barbarian,
+  class: Class.Barbarian,
 };

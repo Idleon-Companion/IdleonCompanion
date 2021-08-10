@@ -13,10 +13,10 @@
             Lv. {{ character.level }}
           </div>
           <div class="flex items-center text-xl mx-1">
-            <q-icon :name="'img:' + Assets.IconImage(character.actualClass)" />
+            <q-icon :name="'img:' + Assets.IconImage(character.class)" />
           </div>
           <div class="text-xs font-medium uppercase opacity-90">
-            {{ character.actualClass }}
+            {{ character.class }}
           </div>
         </div>
         <div class="flex">

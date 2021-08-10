@@ -20,26 +20,16 @@
     <q-card-section>
       <div class="text-xl">Recommended Builds</div>
       <div class="text-secondary">
-        By default, your current character's class/subclass will be selected.
+        By default, your current character's class will be selected.
       </div>
-      <div class="flex justify-between mt-2">
-        <div class="flex md:w-1/2">
-          <div class="md:w-1/3 mr-2">
-            <q-select
-              outlined
-              v-model="buildClass"
-              label="Class"
-              :options="classes"
-            />
-          </div>
-          <div class="md:w-1/3 mr-2">
-            <q-select
-              outlined
-              v-model="buildSubclass"
-              label="Subclass"
-              :options="subclasses"
-            />
-          </div>
+      <div class="flex mt-2">
+        <div class="mr-2">
+          <q-select
+            outlined
+            v-model="buildClass"
+            label="Class"
+            :options="classes"
+          />
         </div>
         <div class="md:w-1/2">
           <q-select
@@ -148,12 +138,7 @@ import { computed, defineComponent, onBeforeMount, ref } from "vue";
 import { useToast } from "vue-toastification";
 
 import { Build, useBuilds } from "~/composables/Builds";
-import {
-  Class,
-  Subclass,
-  SubclassTree,
-  useCharacters,
-} from "~/composables/Characters";
+import { Class, useCharacters } from "~/composables/Characters";
 import { GameVersions } from "~/composables/Utilities";
 import { useAuth } from "~/State";
 import BuildSkills from "~/components/BuildSkills.vue";
@@ -183,14 +168,12 @@ export default defineComponent({
     const toast = useToast();
     // Refs
     const buildClass = ref<Class>(Class.Beginner);
-    const buildSubclass = ref<Subclass | null>(null);
     const editingMode = ref(false);
 
     // Hooks
     onBeforeMount(() => {
       if (currentCharacter.value) {
         buildClass.value = currentCharacter.value.class;
-        buildSubclass.value = currentCharacter.value.subclass;
       }
     });
 
@@ -201,7 +184,7 @@ export default defineComponent({
     };
 
     const onCreateNewBuild = () => {
-      createNewBuild(buildClass.value, buildSubclass.value);
+      createNewBuild(buildClass.value);
       editingMode.value = true;
     };
 
@@ -228,15 +211,6 @@ export default defineComponent({
       editingMode.value = false;
     };
 
-    const filteredSubclasses = computed(() => {
-      return [
-        null,
-        ...Object.values(Subclass).filter(
-          (x) => SubclassTree[x] === buildClass.value
-        ),
-      ];
-    });
-
     const currentBuildLink = computed(() => {
       return import.meta.env.PROD
         ? `https://idleoncompanion.com/build/${currentBuildMeta.value.id}`
@@ -244,18 +218,9 @@ export default defineComponent({
     });
 
     const filteredBuilds = computed(() => {
-      let filtered: Build[] = [];
-      if (buildClass.value === Class.Beginner) {
-        filtered = builds;
-      } else {
-        for (const build of builds) {
-          if (build.class === buildClass.value) {
-            if (buildSubclass.value && buildSubclass.value !== build.subclass) {
-              continue;
-            }
-            filtered.push(build);
-          }
-        }
+      let filtered = builds;
+      if (buildClass.value !== Class.Beginner) {
+        filtered = builds.filter((build) => buildClass.value === build.class);
       }
       return filtered.map((build) => {
         return {
@@ -267,7 +232,6 @@ export default defineComponent({
 
     return {
       buildClass,
-      buildSubclass,
       currentBuild,
       currentBuildLink,
       currentBuildMeta,
@@ -280,7 +244,6 @@ export default defineComponent({
       onToggleBuildLike,
       onUploadBuild: uploadBuild,
       recommendedBuilds: builds,
-      subclasses: filteredSubclasses,
       user,
       versions: GameVersions,
       wikiLinks,

@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Shaman / Active (~50)",
   notes: "",
   version: "1.21",
@@ -38,6 +40,5 @@ export const build = {
         'Put 1 point in every active skill, then 100 into "Earlier Education".\nIf you are having trouble with mana, un-equip "Sizzling Skull" due to its low cooldown and high mana cost. Also "Crazy Concoctions" only works if you\'re actively clicking on the screen to aim it.\n*1 = Excess points can be used to level active skills.\n*2 = If you have many Green Vials, you can place 20-30 points into "Virile Vials".',
     },
   ],
-  class: Class.Mage,
-  subclass: Subclass.Shaman,
+  class: Class.Shaman,
 };

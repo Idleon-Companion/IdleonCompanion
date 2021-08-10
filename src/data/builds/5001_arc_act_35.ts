@@ -1,6 +1,8 @@
 import { Class } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Archer / Active (~35)",
   notes: "",
   version: "1.21",

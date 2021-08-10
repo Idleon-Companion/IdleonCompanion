@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Rams active hunter 150+",
   notes:
     "1* - boosted only if there's problems with survi. 2*- you need ~540 mana to sustain your skills. 3*-puttin 20 into 2nd/3rd arrow each would be good enough 4*-you can decide if you want more ms/crit for active or away gains talent to not loose as much when youre not actively farming",
@@ -48,6 +50,5 @@ export const build = {
       comment: "6>2>3>1>9>11>5>7",
     },
   ],
-  class: Class.Archer,
-  subclass: Subclass.Hunter,
+  class: Class.Hunter,
 };

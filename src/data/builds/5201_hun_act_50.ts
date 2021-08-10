@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Hunter / Active (~50)",
   notes: "",
   version: "1.21",
@@ -37,6 +39,5 @@ export const build = {
         'Put 1 point into active skills, 30 into "Have Another... Again", then put remaining points into "Looty McShooty". \n *1 = Unequip 360NoScope and/or "Bear Trap" due to mana issues. \n Excess points can be put into "Have Another... Again"',
     },
   ],
-  class: Class.Archer,
-  subclass: Subclass.Hunter,
+  class: Class.Hunter,
 };

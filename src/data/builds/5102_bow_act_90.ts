@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Bowman / Active (~90)",
   notes: "",
   version: "1.21",
@@ -47,6 +49,5 @@ export const build = {
         'Put 1 point into active skills, then get speedNA maxed. \n Points will be invested back into tab 2 for "Strafe" to aim for 145% MS. Excess points may be used for "Homing Arrow" for bossing, or "Extendo Range" to reach required accuracy.',
     },
   ],
-  class: Class.Archer,
-  subclass: Subclass.Bowman,
+  class: Class.Bowman,
 };

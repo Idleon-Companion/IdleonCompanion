@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Barbarian / Active ZOW Farming (~85)",
   notes: "The goal of this build is to get as many Zow stacks as fast you can.",
   version: "1.21",
@@ -45,6 +47,5 @@ export const build = {
         'Max "Monster Decimator" and "Back to Basics", then put points into active skills.\n*1 = Max it around 5 "Apocalypse zow" procs\n*20 = Max this after maxing Zow',
     },
   ],
-  class: Class.Warrior,
-  subclass: Subclass.Barbarian,
+  class: Class.Barbarian,
 };

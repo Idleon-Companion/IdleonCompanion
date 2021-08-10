@@ -1,4 +1,4 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Build } from "~/composables/Builds";
 import { build as build_2001_1_wood_act } from "./2001_1_wood_act";
 import { build as build_2001_2_Alchemy_Choppin_hybrid } from "./2001_2_Alchemy_Choppin_hybrid";
 import { build as build_2001_3_Worship_Choppin_hybrid } from "./2001_3_Worship_Choppin_hybrid";
@@ -64,19 +64,6 @@ import { build as build_6202_wiz_afk_90 } from "./6202_wiz_afk_90";
 import { build as build_Alchemy_Choppin_hybrid } from "./Alchemy_Choppin_hybrid";
 import { build as build_Rams_hunter_active_150 } from "./Rams_hunter_active_150";
 import { build as build_Worship_Choppin_hybrid } from "./Worship_Choppin_hybrid";
-
-export type BuildTab = {
-  skills: Record<number, string>; // Skill index -> points
-  comment: string;
-};
-export type Build = {
-  title: string; // Build name
-  version: string; // Version of Idleon for the build
-  class: Class;
-  subclass?: Subclass;
-  tabs: BuildTab[];
-  notes: string;
-};
 
 export const builds: Build[] = [];
 builds.push(build_2001_1_wood_act);

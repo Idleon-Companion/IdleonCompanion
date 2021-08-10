@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Wizard / AFK (~90)",
   notes: "100+ = Checkout books for these talents from the library.",
   version: "1.21",
@@ -41,6 +43,5 @@ export const build = {
         'Level the damage skills evenly. Be sure to place 50 points into "Paperwork Great..." for a nice damage boost.\n*1 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2.\n *2 = If you have capped your damage, excess points can go into worship talents. This build does not prominently focus on worship, and so you are likely to only have enough talent points to level "Charge Syphon". It may be a good idea to add 1 point into "Charge Syphon" to make gathering souls easier. ',
     },
   ],
-  class: Class.Mage,
-  subclass: Subclass.Wizard,
+  class: Class.Wizard,
 };

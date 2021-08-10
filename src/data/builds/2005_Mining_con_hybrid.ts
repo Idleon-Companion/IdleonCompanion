@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Mining / Construction Hybrid (Squire) 100+",
   notes: "",
   version: "1.21",
@@ -40,6 +42,5 @@ export const build = {
       comment: "11>12>13>8>9",
     },
   ],
-  class: Class.Warrior,
-  subclass: Subclass.Squire,
+  class: Class.Squire,
 };

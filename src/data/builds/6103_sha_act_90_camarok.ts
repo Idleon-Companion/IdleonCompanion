@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Shaman / Active C.Amarok Killer (~90)",
   notes:
     "FMJ Bullet, Midnight Cookie, Golden Kebabs, and Golden Nomwich if you are not afraid to step away and swap to healing food as needed. A single properly used crazy concoctions can one shot Chaotic Amarok in combination with your auto attack. Perfect vial usage is 350 ms (.35 seconds) then release for damage vial, if fast enough you can throw 4 vials making this fight very easy.\n100+ = Checkout books for these talents from the library.",
@@ -43,6 +45,5 @@ export const build = {
         'Put 1 point in every active skill. Max "Virile Vials", this will be a huge source of damage. For burst damage, max "Crazy Concoctions".\n*1 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2.\n*2 = Excess points can be used to improve skills. Note that "Auspicious Aura" increases in size every 35 points.',
     },
   ],
-  class: Class.Mage,
-  subclass: Subclass.Shaman,
+  class: Class.Shaman,
 };

@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Squire / AFK (~50)",
   notes: "Active Skills directly increase AFK kills/hr.",
   version: "1.21",
@@ -37,6 +39,5 @@ export const build = {
         'Level "Shockwave Slash" and "Daggerang" to around 30.\n*1 = You can put some points into "Back to Basics" if you\'re lacking points on Tab 2.',
     },
   ],
-  class: Class.Warrior,
-  subclass: Subclass.Squire,
+  class: Class.Squire,
 };

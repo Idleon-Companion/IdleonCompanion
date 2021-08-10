@@ -104,7 +104,7 @@ export default defineComponent({
     });
 
     // Utility functions
-    const hasItem = (item: string) => checklist.value[item];
+    const hasItem = (item: string) => Boolean(checklist.value[item]);
     const setItem = (item: string, state: boolean) =>
       (checklist.value[item] = state);
 

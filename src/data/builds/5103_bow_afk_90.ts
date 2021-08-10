@@ -1,6 +1,8 @@
 import { Class, Subclass } from "~/composables/Characters";
 
-export const build = {
+import { Build } from "~/composables/Builds";
+
+export const build: Build = {
   title: "Bowman / AFK (~90)",
   notes:
     "Leveling up active skills directly increase AFK kills/hr, so we level them past 1.",
@@ -43,6 +45,5 @@ export const build = {
         'Level up "Homing Arrow" and "Magic Shortbow" to 50. Value point into "Extendo Rangeo" for that sweet 8 accuracy. Activate before AFK. \n Then raise "SpeedNA" to 85. \n Points will be invested back into tab 2 for "Strafe" to reach "SpeedNA" bonus at 145%.',
     },
   ],
-  class: Class.Archer,
-  subclass: Subclass.Bowman,
+  class: Class.Bowman,
 };
