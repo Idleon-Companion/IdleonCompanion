@@ -21,7 +21,7 @@ export enum Subclass {
 }
 
 export const SubclassTree: Record<Subclass, Class> = {
-  [Subclass.Maestro]: Class.Beginner,
+  [Subclass.Maestro]: Class.Journeyman,
   [Subclass.Barbarian]: Class.Warrior,
   [Subclass.Squire]: Class.Warrior,
   [Subclass.Bowman]: Class.Archer,
