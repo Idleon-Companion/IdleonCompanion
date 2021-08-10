@@ -1,11 +1,12 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Mining Active / AFK (Warrior) 30+",
   notes: "",
-  version: "1.21",
+  version: "1.23",
+  level: 30,
   tabs: [
     {
       skills: {

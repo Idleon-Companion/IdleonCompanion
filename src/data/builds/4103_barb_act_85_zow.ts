@@ -1,11 +1,12 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Barbarian / Active ZOW Farming (~85)",
   notes: "The goal of this build is to get as many Zow stacks as fast you can.",
-  version: "1.21",
+  version: "1.23",
+  level: 85,
   tabs: [
     {
       skills: {

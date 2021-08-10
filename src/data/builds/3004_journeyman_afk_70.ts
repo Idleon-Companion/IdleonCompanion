@@ -6,7 +6,8 @@ export const build: Build = {
   title: "Journeyman AFK (~70)",
   notes:
     "This build is for leveling, and ignores all of the utility talents that provide help with drops and cash.",
-  version: "1.21",
+  version: "1.23",
+  level: 70,
   tabs: [
     {
       skills: {

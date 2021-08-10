@@ -1,11 +1,12 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Squire / AFK (~50)",
   notes: "Active Skills directly increase AFK kills/hr.",
-  version: "1.21",
+  version: "1.23",
+  level: 50,
   tabs: [
     {
       skills: {

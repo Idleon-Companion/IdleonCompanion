@@ -5,7 +5,8 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Mage / Active (~35)",
   notes: "That's how your build should roughly look when pushing for subclass.",
-  version: "1.21",
+  version: "1.23",
+  level: 35,
   tabs: [
     {
       skills: {

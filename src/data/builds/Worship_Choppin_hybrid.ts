@@ -1,4 +1,4 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
@@ -6,7 +6,7 @@ export const build: Build = {
   title: "Worship/Choppin hybrid",
   notes:
     "skipping xp talents cause you usually dont have any need for xp when you decide to make hybrid build",
-  version: "1.21",
+  version: "1.23",
   tabs: [
     {
       skills: {

@@ -1,4 +1,4 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
@@ -6,7 +6,8 @@ export const build: Build = {
   title: "Fishing Active / AFK (Barb) 30+",
   notes:
     "Due to prowess effect not working active, AFK fishing will always be better if you have at least 2x prowess.",
-  version: "1.21",
+  version: "1.23",
+  level: 30,
   tabs: [
     {
       skills: {

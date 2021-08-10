@@ -1,4 +1,4 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
@@ -6,7 +6,8 @@ export const build: Build = {
   title: "Shaman AFK (70)",
   notes:
     "Active Skills directly increase AFK damage (multiplicative). The damage cap for a zone is the Monster’s HP. AFK damage increases above this cap will not increase your gains. AFK Damage = Minimum damage * Active Skill AFK multiplier",
-  version: "1.21",
+  version: "1.23",
+  level: 70,
   tabs: [
     {
       skills: {

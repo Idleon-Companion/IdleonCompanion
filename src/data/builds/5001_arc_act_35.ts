@@ -5,7 +5,8 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Archer / Active (~35)",
   notes: "",
-  version: "1.21",
+  version: "1.23",
+  level: 35,
   tabs: [
     {
       skills: {

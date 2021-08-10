@@ -1,4 +1,4 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
@@ -6,7 +6,8 @@ export const build: Build = {
   title: "Hunter / Active (~70)",
   notes:
     "**430 mana is required to sustain Piercing Arrow, Traps, and UWU Rawr, your main damaging talents.",
-  version: "1.21",
+  version: "1.23",
+  level: 70,
   tabs: [
     {
       skills: {

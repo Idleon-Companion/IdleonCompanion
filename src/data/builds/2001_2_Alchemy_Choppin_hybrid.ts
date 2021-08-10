@@ -1,11 +1,12 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Alchemy / Choppin Hybrid (Shaman) 100+",
   notes: "",
-  version: "1.21",
+  version: "1.23",
+  level: 100,
   tabs: [
     {
       skills: {

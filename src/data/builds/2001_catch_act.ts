@@ -1,4 +1,4 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
@@ -6,7 +6,7 @@ export const build: Build = {
   title: "Catching Active / AFK (Bowman)",
   notes:
     "With around 100k oak logs + ~400 agi you'll be able to catch fruitflies, but at very slow rate.",
-  version: "1.21",
+  version: "1.23",
   tabs: [
     {
       skills: {

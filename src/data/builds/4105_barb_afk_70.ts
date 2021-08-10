@@ -1,11 +1,12 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Barbarian / AFK (~70)",
   notes: "Active Skills directly increase AFK kills/hr.",
-  version: "1.21",
+  version: "1.23",
+  level: 70,
   tabs: [
     {
       skills: {

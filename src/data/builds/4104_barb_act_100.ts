@@ -1,11 +1,12 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Barbarian / Active (~100)",
   notes: "100+ = Checkout books for these talents from the library.",
-  version: "1.21",
+  version: "1.23",
+  level: 100,
   tabs: [
     {
       skills: {

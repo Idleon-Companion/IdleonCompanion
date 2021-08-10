@@ -1,11 +1,11 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Woodcutter Active / AFK (Mage)",
   notes: "",
-  version: "1.21",
+  version: "1.23",
   tabs: [
     {
       skills: {

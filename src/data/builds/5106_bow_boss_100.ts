@@ -1,4 +1,4 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
@@ -6,7 +6,8 @@ export const build: Build = {
   title: "Bowman Boss Killer",
   notes:
     "This build works best with 4 movement speed food, Boost food effect: cards/Yum Yum Desert set/PO box and King of Food trophy. If you have only 3 ms food I'd use boss card set.  ",
-  version: "1.21",
+  version: "1.23",
+  level: 100,
   tabs: [
     {
       skills: {

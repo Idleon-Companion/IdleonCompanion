@@ -1,4 +1,4 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
@@ -6,7 +6,8 @@ export const build: Build = {
   title: "Maestro Skill (~100)",
   notes:
     "The goal of this build is to allow your other characters to get level 20+ on their non-specialized skills.",
-  version: "1.21",
+  version: "1.23",
+  level: 100,
   tabs: [
     {
       skills: {

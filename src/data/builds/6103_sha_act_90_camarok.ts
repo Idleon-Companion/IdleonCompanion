@@ -1,4 +1,4 @@
-import { Class, Subclass } from "~/composables/Characters";
+import { Class } from "~/composables/Characters";
 
 import { Build } from "~/composables/Builds";
 
@@ -6,7 +6,8 @@ export const build: Build = {
   title: "Shaman / Active C.Amarok Killer (~90)",
   notes:
     "FMJ Bullet, Midnight Cookie, Golden Kebabs, and Golden Nomwich if you are not afraid to step away and swap to healing food as needed. A single properly used crazy concoctions can one shot Chaotic Amarok in combination with your auto attack. Perfect vial usage is 350 ms (.35 seconds) then release for damage vial, if fast enough you can throw 4 vials making this fight very easy.\n100+ = Checkout books for these talents from the library.",
-  version: "1.21",
+  version: "1.23",
+  level: 90,
   tabs: [
     {
       skills: {
