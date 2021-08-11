@@ -36,17 +36,15 @@
         </thead>
         <tbody>
           <tr v-for="(stamp, id) in allStamps" class="text-center">
-            <td>
+            <td class="w-20">
               <Tooltip>
-                <div class="mx-[30%]">
-                  <q-img width="48px" :src="Assets.StampImage(stamp.name)" />
-                </div>
+                <q-img width="48px" :src="Assets.StampImage(stamp.name)" />
                 <template #content>
                   {{ stamp.name }}
                 </template>
               </Tooltip>
             </td>
-            <td>
+            <td class="w-20">
               <q-input
                 v-model.number="stamps[stamp.name]"
                 type="number"
@@ -54,7 +52,7 @@
                 filled
               />
             </td>
-            <td>
+            <td class="w-40">
               <div class="flex flex-col items-center justify-center">
                 <CoinDisplay
                   :value="calculateStampCoinCost(stamp, stamps[stamp.name])"
@@ -83,7 +81,7 @@
                 </div>
               </div>
             </td>
-            <td>
+            <td class="w-40">
               +{{ calculateStampBonus(stamp, stamps[stamp.name]).toFixed(2) }}
               {{ stamp.bonus }}
             </td>

@@ -1,14 +1,12 @@
 <template>
   <q-expansion-item label="Switch Characters" class="bg-primary" dense>
     <q-separator />
-    <q-scroll-area class="cursor-pointer h-80">
-      <CharacterCard
-        v-for="(character, index) in characters"
-        :character="character"
-        class="character-card-select"
-        @click="switchToCharacter(index)"
-      />
-    </q-scroll-area>
+    <CharacterCard
+      v-for="(character, index) in characters"
+      :character="character"
+      class="character-card-select"
+      @click="switchToCharacter(index)"
+    />
   </q-expansion-item>
 </template>
 

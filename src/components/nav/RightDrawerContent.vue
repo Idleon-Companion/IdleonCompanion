@@ -1,14 +1,16 @@
 <template>
-  <CloudData />
-  <q-separator />
-  <div class="flex justify-between items-center p-2 bg-primary">
-    <div class="font-medium">Selected Character</div>
-    <div class="text-xs font-medium">Account Level: {{ accountLevel }}</div>
+  <div class="overflow-none">
+    <CloudData />
+    <q-separator />
+    <div class="flex justify-between items-center p-2 bg-primary">
+      <div class="font-medium">Selected Character</div>
+      <div class="text-xs font-medium">Account Level: {{ accountLevel }}</div>
+    </div>
+    <q-separator />
+    <CharacterCard v-if="currentCharacter" :character="currentCharacter" />
+    <CharacterSelector />
+    <q-separator />
   </div>
-  <q-separator />
-  <CharacterCard v-if="currentCharacter" :character="currentCharacter" />
-  <CharacterSelector />
-  <q-separator />
 </template>
 
 <script lang="ts">

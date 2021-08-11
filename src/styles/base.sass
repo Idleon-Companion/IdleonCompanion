@@ -14,9 +14,8 @@ h5
 h6
   font-size: 1rem
 
-.ic-table,.ic-table-fixed
-  td, th
-    text-align: left
+// Custom Scrollbar
+body *
   ::-webkit-scrollbar
     width: 12px
   ::-webkit-scrollbar-thumb
@@ -32,6 +31,10 @@ h6
     border: 4px solid rgba(0, 0, 0, 0)
     background-clip: padding-box
     transition: .3s ease-in-out
+
+.ic-table,.ic-table-fixed
+  td, th
+    text-align: left
 .ic-table-fixed
   max-height: 600px
 
