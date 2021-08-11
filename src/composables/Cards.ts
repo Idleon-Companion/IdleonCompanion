@@ -410,7 +410,7 @@ const MediumResourcesCards: Card[] = [
   {
     id: "Dune_Soul",
     category: CardCategory.MediumResources,
-    effect: Effects.WorshipCharge,
+    effect: Effects.WorshipPoints,
     base: 3,
     source: "",
   },
@@ -483,14 +483,14 @@ const HardResourcesCards: Card[] = [
   {
     id: "Pingy",
     category: CardCategory.HardResources,
-    effect: Effects.SkillAfk,
+    effect: Effects.TrappingShiny,
     base: 6,
     source: "The Stache Split (Trapping)",
   },
   {
     id: "Bunny",
     category: CardCategory.HardResources,
-    effect: Effects.TrappingShiny,
+    effect: Effects.SkillAfk,
     base: 1,
     source: "Thermonuclear Climb (Trapping)",
   },
@@ -823,10 +823,10 @@ const EventsCards: Card[] = [
 export const Cards: Record<CardCategory, Card[]> = {
   [CardCategory.BlunderHills]: BlunderHillCards,
   [CardCategory.YumYumDesert]: YumYumDesertCards,
-  [CardCategory.FrostbiteTundra]: EasyResourcesCards,
-  [CardCategory.EasyResources]: MediumResourcesCards,
-  [CardCategory.MediumResources]: HardResourcesCards,
-  [CardCategory.HardResources]: FrostbiteTundraCards,
+  [CardCategory.FrostbiteTundra]: FrostbiteTundraCards,
+  [CardCategory.EasyResources]: EasyResourcesCards,
+  [CardCategory.MediumResources]: MediumResourcesCards,
+  [CardCategory.HardResources]: HardResourcesCards,
   [CardCategory.Bosses]: BossesCards,
   [CardCategory.Events]: EventsCards,
 };
