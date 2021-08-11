@@ -1,16 +1,17 @@
 <template>
   <tr>
-    <td>
+    <td class="w-10">
       <ICAsset
+        size="medium"
         :image="Assets.FromDir(`${color}${index + 1}`, 'alchemy')"
         :title="bubbleInfo.effectDesc"
       ></ICAsset>
     </td>
-    <td>{{ startCase(bubbleInfo.Name) }}</td>
-    <td class="md:w-1/12">
+    <td class="w-50">{{ startCase(bubbleInfo.Name) }}</td>
+    <td class="w-30">
       <q-input v-model.number="alchemyUpgrade" filled type="number" :min="0" />
     </td>
-    <td class="md:w-1/12">
+    <td class="w-30">
       <q-input
         type="number"
         v-model.number="alchemyGoal"
@@ -18,13 +19,13 @@
         :min="alchemyUpgrade"
       />
     </td>
-    <td>
+    <td class="w-40">
       {{ calculateBubbleEffect(color, index, alchemyUpgrade).toFixed(2)
       }}{{
         ` 🡒 ${calculateBubbleEffect(color, index, alchemyGoal).toFixed(2)}`
       }}
     </td>
-    <td>
+    <td class="w-80">
       <div class="flex">
         <div
           v-for="material in upgradeMaterialCost"
