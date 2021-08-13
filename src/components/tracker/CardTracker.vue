@@ -23,8 +23,8 @@
               :enabled="getCardTier(card) !== 0"
               :image="Assets.CardImage(card.id)"
               :title="getCardText(card, getCardTier(card))"
-              @click="handleCardClick(card.id, +1)"
-              @contextmenu.prevent="handleCardClick(card.id, -1)"
+              @click="handleCardClick(card, +1)"
+              @contextmenu.prevent="handleCardClick(card, -1)"
             >
               <template #tooltip>
                 <div
@@ -85,12 +85,12 @@ export default defineComponent({
     };
 
     // Input handlers
-    const handleCardClick = (id: string, amount: number) => {
-      let cardTier = (state.value.cards[id] + amount) % CARD_TIERS;
+    const handleCardClick = (card: Card, amount: number) => {
+      let cardTier = (getCardTier(card) + amount) % CARD_TIERS;
       if (cardTier < 0) {
         cardTier = CARD_TIERS - 1;
       }
-      state.value.cards[id] = cardTier;
+      state.value.cards[card.id] = cardTier;
     };
 
     return {

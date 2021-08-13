@@ -33,11 +33,11 @@ export const Growth: Record<string, GrowthFunc> = {
 
 export class Assets {
   static CardImage(c: string): string {
-    return `/assets/cards/${c}_Card.png`;
+    return Assets.FromDir(`${c}_Card`, "cards");
   }
 
   static CardBorderImage(tier: number): string {
-    return `/assets/cards/Tier${tier}_Border.png`;
+    return Assets.FromDir(`Tier${tier}_Border`, "cards");
   }
 
   static CharImage(char: Character): string {
@@ -45,32 +45,33 @@ export class Assets {
   }
 
   static ClassImage(c: string): string {
-    return `/assets/classes/${c}.png`;
+    return Assets.FromDir(c, "classes");
   }
 
   static FromDir(item: string, dir: string): string {
     const cleaned = item.replace(/ /g, "_");
-    return `/assets/${dir}/${cleaned}.png`;
+    // Use base URL here for GH pages support
+    return import.meta.env.BASE_URL + `assets/${dir}/${cleaned}.png`;
   }
 
   static IconImage(icon: string): string {
-    return `/assets/icons/${icon.replace(/ /g, "_")}_Icon.png`;
+    return Assets.FromDir(`${icon}_Icon`, "icons");
   }
 
   static MaterialImage(item: string): string {
-    return `/assets/materials/${item.replace(/ /g, "_")}.png`;
+    return Assets.FromDir(item, "materials");
   }
 
   static MiscImage(item: string): string {
-    return `/assets/misc/${item}.png`;
+    return Assets.FromDir(item, "misc");
   }
 
   static StampImage(item: string): string {
-    return `/assets/stamps/${item.replace(/ /g, "_")}.png`;
+    return Assets.FromDir(item, "stamps");
   }
 
   static StatueImage(item: string): string {
-    return `/assets/statues/${item.replace(/ /g, "_")}_Statue.png`;
+    return Assets.FromDir(`${item}_Statue`, "statues");
   }
 
   static TalentImage(role: string, tab: number, slot: number): string {
@@ -78,7 +79,7 @@ export class Assets {
     if (role === "") {
       image = "empty";
     }
-    return `/assets/talents/${image}.png`;
+    return Assets.FromDir(image, "talents");
   }
 }
 
