@@ -96,6 +96,9 @@ export const tabRoutes: RouteRecordRaw[] = [
 ];
 
 const routes: RouteRecordRaw[] = [
+  ...tabRoutes,
+  ...toolRoutes,
+  ...trackerRoutes,
   {
     name: "Build",
     path: "/build/:buildId",
@@ -105,9 +108,6 @@ const routes: RouteRecordRaw[] = [
       return "/builds";
     },
   },
-  ...tabRoutes,
-  ...toolRoutes,
-  ...trackerRoutes,
 ];
 
 const router = createRouter({
