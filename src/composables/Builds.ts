@@ -5,6 +5,7 @@ import {
 } from "~/composables/Utilities";
 import { Class, getClassTree } from "~/composables/Characters";
 import { Ref, ref } from "vue";
+import { builds } from "~/data/builds";
 import { useAuth, useDB } from "~/State";
 import { useToast } from "vue-toastification";
 import dayjs from "dayjs";
@@ -44,55 +45,6 @@ const classAlias: Record<Class, string> = {
   [Class.Shaman]: "sha",
   [Class.Wizard]: "wiz",
 };
-
-const builds: Build[] = [
-  {
-    title: "My First Character / Level 1-10",
-    version: "1.22",
-    level: 1,
-    class: Class.Beginner,
-    tabs: [
-      {
-        skills: {
-          5: ">10",
-        },
-        comment:
-          "For your very first character in Legends of Idleon, you would put at least 10 points into 'Sharpened Axe', which gives you a flat damage bonus",
-      },
-    ],
-    notes:
-      "Welcome to the game! It will be a great journey, hope we'll see you again!",
-  },
-  {
-    title: "Alchemy / AFK Shaman",
-    version: "1.22",
-    class: Class.Shaman,
-    tabs: [
-      {
-        skills: {
-          8: "100",
-        },
-        comment: 'Max "Book of the Wise"',
-      },
-      {
-        skills: {
-          7: "100",
-          10: "100",
-        },
-        comment: 'Max "Individual Insight" and "Untwisted Robes"',
-      },
-      {
-        skills: {
-          12: "*100",
-          13: "*100",
-          14: "*100",
-        },
-        comment:
-          '"Cranium Cooking" has too long cooldown to be considered effective right now. Pick the alchemy talents as needed for your current goal. Most likely, you will do brew speed and sharing talent first.',
-      },
-    ],
-  },
-];
 
 const currentBuild: Ref<Build | null> = ref(null);
 const currentBuildMeta: Ref<BuildMeta> = ref({

@@ -1,11 +1,12 @@
 <template>
   <div v-if="currentBuild" class="flex justify-evenly">
-    <q-card flat bordered v-for="(tab, tabIndex) in currentBuild.tabs">
+    <q-card flat bordered v-for="(tab, tabIndex) in currentBuild.tabs" v-bind:key="tab + ':' + tabIndex">
       <div class="bg-purple-400 text-lg p-2">Tab {{ tabIndex + 1 }}</div>
       <q-card-section class="grid grid-cols-5 gap-2">
         <div
           v-for="slot in 15"
           class="flex flex-col bg-primary border border-gray-500 rounded-sm"
+          v-bind:key="slot"
         >
           <div class="p-1">
             <ICAsset
