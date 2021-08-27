@@ -138,11 +138,42 @@ export default defineComponent({
     const displayType = ref<RecipeDisplay>("Tree");
     const displayTypeOptions = ["List", "Tree"];
 
+    const addChildrenNodes = (current: RecipeNode): RecipeNode => {
+      // Clone object to keep the original recipes with original materials.
+      const result: RecipeNode = {
+        name: current.name,
+        quantity: current.quantity,
+      };
+
+      if (current.materials) {
+        result.materials = [];
+        current.materials.forEach((material) => {
+          // Clone object to keep the original recipes with original quantities.
+          const materialRecipe: RecipeNode = {
+            name: material.name,
+            quantity: material.quantity * current.quantity,
+          };
+          if (recipes[material.name]) {
+            materialRecipe.materials = recipes[material.name].materials;
+          }
+          result.materials?.push(
+            addChildrenNodes({
+              name: materialRecipe.name,
+              quantity: materialRecipe.quantity,
+              materials: materialRecipe.materials,
+            })
+          );
+        });
+      }
+
+      return result;
+    };
+
     const nodes = computed((): RecipeNode[] => {
       if (!recipe.value) {
         return [];
       }
-      return [recipes[recipe.value.value]];
+      return [addChildrenNodes(recipes[recipe.value.value])];
     });
 
     const flattenedRecipe = computed(() => {
@@ -153,19 +184,18 @@ export default defineComponent({
       const flatten = (current: RecipeNode, result: Record<string, number>) => {
         if (current.materials) {
           current.materials.forEach(({ name, quantity }) => {
+            const newQuantity = quantity * current.quantity;
             if (recipes[name]) {
-              flatten(
-                {
-                  ...recipes[name],
-                  quantity: quantity * current.quantity,
-                },
-                result
-              );
+              const newRecipe = {
+                ...recipes[name],
+                quantity: newQuantity,
+              };
+              flatten(newRecipe, result);
             } else {
               if (!(name in result)) {
                 result[name] = 0;
               }
-              result[name] += quantity * current.quantity;
+              result[name] += newQuantity;
             }
           });
         }
