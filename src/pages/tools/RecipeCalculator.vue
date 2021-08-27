@@ -152,12 +152,22 @@ export default defineComponent({
       const result: Record<string, number> = {};
       const flatten = (current: RecipeNode, result: Record<string, number>) => {
         if (current.materials) {
-          current.materials.forEach((material) => flatten(material, result));
-        } else {
-          if (!(current.name in result)) {
-            result[current.name] = 0;
-          }
-          result[current.name] += current.quantity;
+          current.materials.forEach(({ name, quantity }) => {
+            if (recipes[name]) {
+              flatten(
+                {
+                  ...recipes[name],
+                  quantity: quantity * current.quantity,
+                },
+                result
+              );
+            } else {
+              if (!(name in result)) {
+                result[name] = 0;
+              }
+              result[name] += quantity * current.quantity;
+            }
+          });
         }
       };
       flatten(nodes.value[0], result);
