@@ -1,6 +1,11 @@
 <template>
   <div v-if="currentBuild" class="flex justify-evenly">
-    <q-card flat bordered v-for="(tab, tabIndex) in currentBuild.tabs" v-bind:key="tab + ':' + tabIndex">
+    <q-card
+      flat
+      bordered
+      v-for="(tab, tabIndex) in currentBuild.tabs"
+      v-bind:key="tab + ':' + tabIndex"
+    >
       <div class="bg-purple-400 text-lg p-2">Tab {{ tabIndex + 1 }}</div>
       <q-card-section class="grid grid-cols-5 gap-2">
         <div
@@ -27,10 +32,13 @@
           />
         </div>
       </q-card-section>
+
       <q-input
         v-model="tab.comment"
-        type="textarea"
+        type="input"
+        autogrow
         filled
+        class="m-4 mt-0"
         :placeholder="`Comments for Tab ${tabIndex + 1}`"
       />
     </q-card>
