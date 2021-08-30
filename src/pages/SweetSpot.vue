@@ -21,7 +21,8 @@
       <div class="text-xl">Sweet Spot</div>
       <div>
         Select a monster and enter your in-game EXP to figure out the EXP
-        multiplier factor.
+        multiplier. This is to account for external EXP multipliers, such as
+        post office, alchemy, statues, etc.
       </div>
       <div class="flex my-2">
         <q-select
@@ -134,7 +135,8 @@
     <q-card-section>
       <div class="text-xl font-medium">Best Monsters (EXP)</div>
       <div class="text-secondary">
-        These are your top 5 monsters for active EXP/hour.
+        These are your top 5 monsters for active EXP/swing. Note that movement
+        speed, respawn rate, and other factors affect total farming value.
       </div>
       <div class="flex p-4">
         <div
@@ -143,9 +145,17 @@
           class="bg-primary flex-1 mx-4 p-4 rounded-sm"
         >
           <div class="flex flex-col justify-center items-center">
-            <q-skeleton type="QAvatar" size="6rem" class="m-2" />
+            <q-img
+              height="64px"
+              width="64px"
+              fit="contain"
+              class="m-2"
+              :src="Assets.MonsterAnimated(monster.name)"
+            />
             <div class="font-medium">{{ monster.name }}</div>
-            <div class="text-secondary">123m EXP/hour</div>
+            <div class="text-secondary">
+              {{ expPerSwing(monster).toFixed(2) }} EXP/swing
+            </div>
           </div>
         </div>
       </div>
