@@ -78,7 +78,7 @@
                   <div v-html="props.node.name"></div>
                 </template>
               </ICAsset>
-              {{ props.node.quantity }} {{ props.node.name }}
+              {{ props.node.quantity * quantity }} {{ props.node.name }}
             </div>
           </template>
         </q-tree>
@@ -88,7 +88,7 @@
           v-else-if="displayType === 'List'"
           class="rounded"
         >
-          <q-item clickable v-for="(quantity, node) in flattenedRecipe">
+          <q-item clickable v-for="(cost, node) in flattenedRecipe">
             <q-item-section avatar>
               <ICAsset
                 size="small"
@@ -100,7 +100,7 @@
                 </template>
               </ICAsset>
             </q-item-section>
-            <q-item-section> {{ quantity }} {{ node }} </q-item-section>
+            <q-item-section> {{ cost * quantity }} {{ node }} </q-item-section>
           </q-item>
         </q-list>
       </div>
