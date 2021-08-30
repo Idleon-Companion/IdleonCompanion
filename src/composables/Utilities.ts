@@ -50,10 +50,14 @@ export class Assets {
     return Assets.FromDir(c, "classes");
   }
 
-  static FromDir(item: string, dir: string): string {
+  static FromDir(item: string, dir: string, extension?: string): string {
     const cleaned = item.replace(/ /g, "_");
     // Use base URL here for GH pages support
-    return import.meta.env.BASE_URL + `assets/${dir}/${cleaned}.png`;
+    return (
+      import.meta.env.BASE_URL +
+      `assets/${dir}/${cleaned}.` +
+      (extension ?? "png")
+    );
   }
 
   static IconImage(icon: string): string {
@@ -66,6 +70,10 @@ export class Assets {
 
   static MiscImage(item: string): string {
     return Assets.FromDir(item, "misc");
+  }
+
+  static MonsterAnimated(name: string): string {
+    return Assets.FromDir(name, "monsters", "gif");
   }
 
   static StampImage(item: string): string {
