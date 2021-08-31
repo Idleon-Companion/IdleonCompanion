@@ -94,6 +94,10 @@ const tabs: NavigationTab[] = [
     ],
   },
   {
+    name: "Import",
+    path: "/import",
+  },
+  {
     name: "Changelog",
     path: "/changelog",
   },

@@ -12,36 +12,37 @@ import { version } from "../package.json";
 import firebase from "firebase/app";
 
 const StorageKey = "idleon-companion";
-export const useState = createGlobalState(() =>
-  useStorage(StorageKey, {
-    alchemy: {
-      goals: {
-        Orange: [],
-        Green: [],
-        Purple: [],
-        Yellow: [],
-      },
-      upgrades: {
-        Orange: [],
-        Green: [],
-        Purple: [],
-        Yellow: [],
-      },
-      vials: {},
-    } as AlchemyData,
-    cards: {} as Record<string, number>,
-    chars: [] as Character[],
-    checklist: {} as Record<string, boolean>,
-    stamps: {} as Record<string, number>,
-    starSigns: {} as Record<string, boolean>,
-    statues: {} as Record<StatueName, StatueInfo>,
-    tasks: {
-      dailyReset: "12:00",
-      tasks: Array<Task>(),
-      timers: Array<Timer>(),
+export const DefaultState = {
+  alchemy: {
+    goals: {
+      Orange: [],
+      Green: [],
+      Purple: [],
+      Yellow: [],
     },
-    version: "0.2.0",
-  })
+    upgrades: {
+      Orange: [],
+      Green: [],
+      Purple: [],
+      Yellow: [],
+    },
+    vials: {},
+  } as AlchemyData,
+  cards: {} as Record<string, number>,
+  chars: [] as Character[],
+  checklist: {} as Record<string, boolean>,
+  stamps: {} as Record<string, number>,
+  starSigns: {} as Record<string, boolean>,
+  statues: {} as Record<StatueName, StatueInfo>,
+  tasks: {
+    dailyReset: "12:00",
+    tasks: Array<Task>(),
+    timers: Array<Timer>(),
+  },
+  version: "0.2.0",
+};
+export const useState = createGlobalState(() =>
+  useStorage(StorageKey, DefaultState)
 );
 
 export function versionControl() {
