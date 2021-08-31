@@ -1,5 +1,4 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Idleon Companion Schema",
   "properties": {
@@ -59,13 +58,13 @@
       "required": ["upgrades", "vials"]
     },
     "cards": {
-      "description": "Cards tracks the tier of each card (0: unobtained, 1: bronze, 2: silver, 3: gold).",
+      "description": "Cards tracks the tier of each card (0: unobtained, 1: obtained, 2: bronze, 3: silver, 4: gold).",
       "type": "object",
       "patternProperties": {
         "": {
           "type": "integer",
           "minimum": 0,
-          "maximum": 3
+          "maximum": 4
         }
       }
     },
@@ -76,19 +75,19 @@
         "properties": {
           "class": {
             "description": "The class of the character.",
-            "enum": ["Beginner", "Warrior", "Mage", "Archer"]
-          },
-          "subclass": {
-            "description": "The subclass of the character, or null for no subclass.",
             "enum": [
-              null,
+              "Beginner",
+              "Journeyman",
+              "Maestro",
+              "Warrior",
               "Barbarian",
               "Squire",
+              "Archer",
               "Bowman",
               "Hunter",
+              "Mage",
               "Shaman",
-              "Wizard",
-              "Journeyman"
+              "Wizard"
             ]
           },
           "name": {
@@ -117,7 +116,18 @@
                 "type": "integer",
                 "minimum": 0
               }
-            }
+            },
+            "required": [
+              "Alchemy",
+              "Catching",
+              "Choppin'",
+              "Construction",
+              "Fishing",
+              "Mining",
+              "Smithing",
+              "Trapping",
+              "Worship"
+            ]
           },
           "constellations": {
             "description": "The constellations that the character has completed.",
@@ -140,7 +150,6 @@
         },
         "required": [
           "class",
-          "subclass",
           "name",
           "level",
           "items",
@@ -203,9 +212,9 @@
       }
     },
     "version": {
-      "description": "Only accepts the latest game version supported on Idleon Companion.",
+      "description": "The game version from which this data was retrieved.",
       "type": "string",
-      "pattern": "^1\\.22(.+)?"
+      "pattern": "^\\d+\\.\\d+(.+)?"
     }
   },
   "required": ["version"],

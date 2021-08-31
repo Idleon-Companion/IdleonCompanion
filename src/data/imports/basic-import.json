@@ -1,0 +1,28 @@
+{
+  "cards": {
+    "Green_Mushroom": 1,
+    "Red_Mushroom": 3
+  },
+  "chars": [
+    {
+      "name": "Import Test",
+      "level": 123,
+      "class": "Maestro",
+      "items": {},
+      "skills": {
+        "Alchemy": 5,
+        "Catching": 6,
+        "Choppin'": 3,
+        "Construction": 8,
+        "Fishing": 4,
+        "Mining": 1,
+        "Smithing": 2,
+        "Trapping": 7,
+        "Worship": 9
+      },
+      "constellations": {},
+      "starSigns": {}
+    }
+  ],
+  "version": "1.22"
+}

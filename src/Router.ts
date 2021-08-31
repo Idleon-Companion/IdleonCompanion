@@ -5,6 +5,7 @@ import Builds from "~/pages/Builds.vue";
 import Cards from "~/pages/Cards.vue";
 import Characters from "~/pages/Characters.vue";
 import Credits from "~/pages/Changelog.vue";
+import Import from "~/pages/Import.vue";
 import PackMuleCrafter from "~/pages/tools/PackMuleCrafter.vue";
 import PicnicQuest from "~/pages/tools/PicnicQuest.vue";
 import ProgressTracker from "~/components/tracker/ProgressTracker.vue";
@@ -92,6 +93,11 @@ export const tabRoutes: RouteRecordRaw[] = [
     component: Credits,
     name: "Changelog",
     path: "/changelog",
+  },
+  {
+    component: Import,
+    name: "Import",
+    path: "/import",
   },
 ];
 
