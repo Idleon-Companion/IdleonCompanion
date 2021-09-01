@@ -115,7 +115,9 @@ export function versionControl() {
       for (let i = 0; i < amount; i++) {
         state.value.alchemy.upgrades[k][i] =
           state.value.alchemy.upgrades[k][i] ?? 0;
-        state.value.alchemy.goals[k][i] = state.value.alchemy.goals[k][i] ?? 0;
+        state.value.alchemy.goals[k][i] =
+          state.value.alchemy.goals[k][i] ??
+          state.value.alchemy.upgrades[k][i] + 1;
       }
     }
   }
@@ -156,6 +158,14 @@ export function versionControl() {
           state.value.chars[key].class;
         delete (state.value.chars[key] as Character & { subclass: any })
           .subclass;
+      }
+    }
+    // Also, change cards to be stored without underscores for API imports
+    for (const key in state.value.cards) {
+      // Only replace keys that have underscores
+      if (key.includes("_")) {
+        state.value.cards[key.replace(/_/g, " ")] = state.value.cards[key];
+        delete state.value.cards[key];
       }
     }
   }

@@ -21,14 +21,14 @@ export type Card = {
 
 const BlunderHillCards: Card[] = [
   {
-    id: "Green_Mushroom",
+    id: "Green Mushroom",
     category: CardCategory.BlunderHills,
     effect: Effects.BaseHP,
     base: 12,
     source: "Green Mushrooms (1/10,000)",
   },
   {
-    id: "Red_Mushroom",
+    id: "Red Mushroom",
     category: CardCategory.BlunderHills,
     effect: Effects.BaseLUK,
     base: 3,
@@ -42,7 +42,7 @@ const BlunderHillCards: Card[] = [
     source: "Frog (1/10,000)",
   },
   {
-    id: "Bored_Bean",
+    id: "Bored Bean",
     category: CardCategory.BlunderHills,
     effect: Effects.BaseDamage,
     base: 7,
@@ -56,7 +56,7 @@ const BlunderHillCards: Card[] = [
     source: "Slime (1/10,500)",
   },
   {
-    id: "Baby_Boa",
+    id: "Baby Boa",
     category: CardCategory.BlunderHills,
     effect: Effects.MoveSpeed,
     base: 1,
@@ -77,7 +77,7 @@ const BlunderHillCards: Card[] = [
     source: "Glublin (1/11,600)",
   },
   {
-    id: "Wode_Board",
+    id: "Wode Board",
     category: CardCategory.BlunderHills,
     effect: Effects.BaseSTR,
     base: 2,
@@ -105,7 +105,7 @@ const BlunderHillCards: Card[] = [
     source: "Rat (1/20,000)",
   },
   {
-    id: "Walking_Stick",
+    id: "Walking Stick",
     category: CardCategory.BlunderHills,
     effect: Effects.BaseWIS,
     base: 5,
@@ -119,14 +119,14 @@ const BlunderHillCards: Card[] = [
     source: "Nutto (1/20,000)",
   },
   {
-    id: "Crystal_Carrot",
+    id: "Crystal Carrot",
     category: CardCategory.BlunderHills,
     effect: Effects.DropRate,
     base: 5,
     source: "Crystal Carrot (1/100)",
   },
   {
-    id: "Wood_Mushroom",
+    id: "Wood Mushroom",
     category: CardCategory.BlunderHills,
     effect: Effects.TotalAccuracy,
     base: 5,
@@ -136,7 +136,7 @@ const BlunderHillCards: Card[] = [
 
 const YumYumDesertCards: Card[] = [
   {
-    id: "Sandy_Pot",
+    id: "Sandy Pot",
     category: CardCategory.YumYumDesert,
     effect: Effects.ExpConversion,
     base: 12,
@@ -164,7 +164,7 @@ const YumYumDesertCards: Card[] = [
     source: "Mafioso (1/10,000)",
   },
   {
-    id: "Sand_Castle",
+    id: "Sand Castle",
     category: CardCategory.YumYumDesert,
     effect: Effects.TotalAccuracy,
     base: 4,
@@ -178,7 +178,7 @@ const YumYumDesertCards: Card[] = [
     source: "Pincermin (1/10,000)",
   },
   {
-    id: "Mashed_Potato",
+    id: "Mashed Potato",
     category: CardCategory.YumYumDesert,
     effect: Effects.CritDamage,
     base: 3,
@@ -199,7 +199,7 @@ const YumYumDesertCards: Card[] = [
     source: "Moonmoon (1/10,000)",
   },
   {
-    id: "Sand_Giant",
+    id: "Sand Giant",
     category: CardCategory.YumYumDesert,
     effect: Effects.MinimumDamage,
     base: 2,
@@ -213,21 +213,21 @@ const YumYumDesertCards: Card[] = [
     source: "Snelbie (1/10,000)",
   },
   {
-    id: "Dig_Doug",
+    id: "Dig Doug",
     category: CardCategory.YumYumDesert,
     effect: Effects.BaseLUK,
     base: 6,
     source: "Dig Doug (1/10,000)",
   },
   {
-    id: "Crystal_Crabal",
+    id: "Crystal Crabal",
     category: CardCategory.YumYumDesert,
     effect: Effects.MonsterExp,
     base: 2,
     source: "Crystal Crabal (1/125)",
   },
   {
-    id: "Bandit_Bob",
+    id: "Bandit Bob",
     category: CardCategory.YumYumDesert,
     effect: Effects.MonsterMoney,
     base: 1,
@@ -237,56 +237,56 @@ const YumYumDesertCards: Card[] = [
 
 const EasyResourcesCards: Card[] = [
   {
-    id: "Copper_Ore",
+    id: "Copper Ore",
     category: CardCategory.EasyResources,
     effect: Effects.BaseAccuracy,
     base: 4,
     source: "Mining Copper",
   },
   {
-    id: "Iron_Ore",
+    id: "Iron Ore",
     category: CardCategory.EasyResources,
     effect: Effects.MiningEfficiency,
     base: 5,
     source: "Mining Iron",
   },
   {
-    id: "Gold_Ore",
+    id: "Gold Ore",
     category: CardCategory.EasyResources,
     effect: Effects.MiningExp,
     base: 5,
     source: "Mining Gold",
   },
   {
-    id: "Fire_Forge",
+    id: "Fire Forge",
     category: CardCategory.EasyResources,
     effect: Effects.SmithingExp,
     base: 4,
     source: "Smelting Ore in Slots 1-4",
   },
   {
-    id: "Oak_Logs",
+    id: "Oak Logs",
     category: CardCategory.EasyResources,
     effect: Effects.BaseDefense,
     base: 3,
     source: "Choppin Oak Tree",
   },
   {
-    id: "Bleach_Logs",
+    id: "Bleach Logs",
     category: CardCategory.EasyResources,
     effect: Effects.ChoppinEfficiency,
     base: 5,
     source: "Choppin Birch Tree",
   },
   {
-    id: "Jungle_Logs",
+    id: "Jungle Logs",
     category: CardCategory.EasyResources,
     effect: Effects.ChoppinExp,
     base: 5,
     source: "Choppin Jungle Tree",
   },
   {
-    id: "Forest_Fibres",
+    id: "Forest Fibres",
     category: CardCategory.EasyResources,
     effect: Effects.ExpConversion,
     base: 8,
@@ -300,7 +300,7 @@ const EasyResourcesCards: Card[] = [
     source: "Fishing Goldfish",
   },
   {
-    id: "Hermit_Can",
+    id: "Hermit Can",
     category: CardCategory.EasyResources,
     effect: Effects.FishingEfficiency,
     base: 5,
@@ -331,28 +331,28 @@ const EasyResourcesCards: Card[] = [
 
 const MediumResourcesCards: Card[] = [
   {
-    id: "Platinum_Ore",
+    id: "Platinum Ore",
     category: CardCategory.MediumResources,
     effect: Effects.MiningAfk,
     base: 2,
     source: "Mining Platinum",
   },
   {
-    id: "Dementia_Ore",
+    id: "Dementia Ore",
     category: CardCategory.MediumResources,
     effect: Effects.MiningSpeed,
     base: 4,
     source: "Mining Dementia",
   },
   {
-    id: "Void_Ore",
+    id: "Void Ore",
     category: CardCategory.MediumResources,
     effect: Effects.CardChance,
     base: 6,
     source: "Mining Void",
   },
   {
-    id: "Cinder_Forge",
+    id: "Cinder Forge",
     category: CardCategory.MediumResources,
     effect: Effects.SmithingExp,
     base: 7,
@@ -366,14 +366,14 @@ const MediumResourcesCards: Card[] = [
     source: "Choppin Palm Tree",
   },
   {
-    id: "Potty_Rolls",
+    id: "Potty Rolls",
     category: CardCategory.MediumResources,
     effect: Effects.ChoppinSpeed,
     base: 4,
     source: "Choppin Toilet Tree",
   },
   {
-    id: "Veiny_Logs",
+    id: "Veiny Logs",
     category: CardCategory.MediumResources,
     effect: Effects.TotalAccuracy,
     base: 3,
@@ -387,7 +387,7 @@ const MediumResourcesCards: Card[] = [
     source: "Fishing Bloaches",
   },
   {
-    id: "Sentient_Cereal",
+    id: "Sentient Cereal",
     category: CardCategory.MediumResources,
     effect: Effects.CatchingExp,
     base: 5,
@@ -401,14 +401,14 @@ const MediumResourcesCards: Card[] = [
     source: "Catching Fruitflies",
   },
   {
-    id: "Forest_Soul",
+    id: "Forest Soul",
     category: CardCategory.MediumResources,
     effect: Effects.EquipmentDefense,
     base: 3,
     source: "Glublin Totem",
   },
   {
-    id: "Dune_Soul",
+    id: "Dune Soul",
     category: CardCategory.MediumResources,
     effect: Effects.WorshipPoints,
     base: 3,
@@ -439,28 +439,28 @@ const MediumResourcesCards: Card[] = [
 
 const HardResourcesCards: Card[] = [
   {
-    id: "Lustre_Ore",
+    id: "Lustre Ore",
     category: CardCategory.HardResources,
     effect: Effects.BaseLUK,
     base: 4,
     source: "Mining Lustre",
   },
   {
-    id: "Rooted_Soul",
+    id: "Rooted Soul",
     category: CardCategory.HardResources,
     effect: Effects.WorshipPoints,
     base: 6,
     source: "Acorn Assault (Worship)",
   },
   {
-    id: "Frigid_Soul",
+    id: "Frigid Soul",
     category: CardCategory.HardResources,
     effect: Effects.WorshipCharge,
     base: 2.5,
     source: "Frosty Firefight (Worship)",
   },
   {
-    id: "Squiddy_Soul",
+    id: "Squiddy Soul",
     category: CardCategory.HardResources,
     effect: Effects.WorshipChargeRate,
     base: 2.5,
@@ -495,14 +495,14 @@ const HardResourcesCards: Card[] = [
     source: "Thermonuclear Climb (Trapping)",
   },
   {
-    id: "Tundra_Logs",
+    id: "Tundra Logs",
     category: CardCategory.HardResources,
     effect: Effects.ChoppinAfk,
     base: 2.5,
     source: "Chopping Saharan Foal",
   },
   {
-    id: "Wispy_Lumber",
+    id: "Wispy Lumber",
     category: CardCategory.HardResources,
     effect: Effects.ChoppinSpeed,
     base: 6,
@@ -533,14 +533,14 @@ const FrostbiteTundraCards: Card[] = [
     source: "1/10000",
   },
   {
-    id: "Frost_Flake",
+    id: "Frost Flake",
     category: CardCategory.FrostbiteTundra,
     effect: Effects.BaseSTR,
     base: 7,
     source: "1/10000",
   },
   {
-    id: "Sir_Stache",
+    id: "Sir Stache",
     category: CardCategory.FrostbiteTundra,
     effect: Effects.CardChance,
     base: 8,
@@ -596,7 +596,7 @@ const FrostbiteTundraCards: Card[] = [
     source: "1/10000",
   },
   {
-    id: "Bop_Box",
+    id: "Bop Box",
     category: CardCategory.FrostbiteTundra,
     effect: Effects.DropRate,
     base: 3,
@@ -610,7 +610,7 @@ const FrostbiteTundraCards: Card[] = [
     source: "1/10000",
   },
   {
-    id: "Dedotated_Ram",
+    id: "Dedotated Ram",
     category: CardCategory.FrostbiteTundra,
     effect: Effects.WeaponPower,
     base: 2,
@@ -631,7 +631,7 @@ const FrostbiteTundraCards: Card[] = [
     source: "1/10000",
   },
   {
-    id: "Crystal_Cattle",
+    id: "Crystal Cattle",
     category: CardCategory.FrostbiteTundra,
     effect: Effects.MonsterExp,
     base: 3,
@@ -641,14 +641,14 @@ const FrostbiteTundraCards: Card[] = [
 
 const BossesCards: Card[] = [
   {
-    id: "Baba_Yaga",
+    id: "Baba Yaga",
     category: CardCategory.Bosses,
     effect: Effects.MonsterMoney,
     base: 10,
     source: "Baba Yaga (1/33.3)",
   },
   {
-    id: "Dr._Defecaus",
+    id: "Dr. Defecaus",
     category: CardCategory.Bosses,
     effect: Effects.TotalDamage,
     base: 5,
@@ -662,42 +662,42 @@ const BossesCards: Card[] = [
     source: "Boop (1/667)",
   },
   {
-    id: "Normal_Amarok",
+    id: "Normal Amarok",
     category: CardCategory.Bosses,
     effect: Effects.SkillAfk,
     base: 2.5,
     source: "Normal Amarok (1/25)",
   },
   {
-    id: "Chaotic_Amarok",
+    id: "Chaotic Amarok",
     category: CardCategory.Bosses,
     effect: Effects.FightingAfk,
     base: 2.5,
     source: "Chaotic Amarok (1/50)",
   },
   {
-    id: "Biggie_Hours",
+    id: "Biggie Hours",
     category: CardCategory.Bosses,
     effect: Effects.DoubleAfkChance,
     base: 3,
     source: "Biggie Hours (1/41.7)",
   },
   {
-    id: "King_Doot",
+    id: "King Doot",
     category: CardCategory.Bosses,
     effect: Effects.DropRate,
     base: 6,
     source: "King Doot (1/25)",
   },
   {
-    id: "Normal_Efaunt",
+    id: "Normal Efaunt",
     category: CardCategory.Bosses,
     effect: Effects.MonsterExp,
     base: 5,
     source: "Normal Efaunt (1/28.6)",
   },
   {
-    id: "Chaotic_Efaunt",
+    id: "Chaotic Efaunt",
     category: CardCategory.Bosses,
     effect: Effects.SkillExp,
     base: 3.75,
@@ -711,7 +711,7 @@ const BossesCards: Card[] = [
     source: "",
   },
   {
-    id: "Chaotic_Chizoar",
+    id: "Chaotic Chizoar",
     category: CardCategory.Bosses,
     effect: Effects.ShrineEffect,
     base: 5,
@@ -728,14 +728,14 @@ const EventsCards: Card[] = [
     source: "Ghost (1/20)",
   },
   {
-    id: "Giftmas_Blobulyte",
+    id: "Giftmas Blobulyte",
     category: CardCategory.Events,
     effect: Effects.DropRate,
     base: 3,
     source: "Giftmas Box",
   },
   {
-    id: "Meaning_of_Giftmas",
+    id: "Meaning of Giftmas",
     category: CardCategory.Events,
     effect: Effects.MonsterMoney,
     base: 3,
@@ -756,7 +756,7 @@ const EventsCards: Card[] = [
     source: "Choco Box",
   },
   {
-    id: "Choco_Box",
+    id: "Choco Box",
     category: CardCategory.Events,
     effect: Effects.BoostFoodEffect,
     base: 4,
@@ -770,7 +770,7 @@ const EventsCards: Card[] = [
     source: "Floofie (1/20)",
   },
   {
-    id: "Shell_Snake",
+    id: "Shell Snake",
     category: CardCategory.Events,
     effect: Effects.BaseLUK,
     base: 3,
@@ -784,7 +784,7 @@ const EventsCards: Card[] = [
     source: "Egg Capsule",
   },
   {
-    id: "Egg_Capsule",
+    id: "Egg Capsule",
     category: CardCategory.Events,
     effect: Effects.CritDamage,
     base: 1,
@@ -833,9 +833,8 @@ export const Cards: Record<CardCategory, Card[]> = {
 
 export function useCards() {
   const getCardText = (card: Card, tier: number): string => {
-    const name = card.id.replace(/_/g, " ");
     const bonus = tier * card.base;
-    let text = `${name}<br>+${bonus} ${card.effect}`;
+    let text = `${card.id}<br>+${bonus} ${card.effect}`;
     if (card.source) {
       text += `<br><em>Source: ${card.source}</em>`;
     }

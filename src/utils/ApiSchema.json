@@ -74,7 +74,7 @@
         "type": "object",
         "properties": {
           "class": {
-            "description": "The class of the character.",
+            "description": "The class of the character. Must be one of the enum entries below.",
             "enum": [
               "Beginner",
               "Journeyman",
@@ -100,7 +100,7 @@
             "minimum": 1
           },
           "items": {
-            "description": "The items that the character owns, including bags, pouches, etc.",
+            "description": "The items that the character owns, including bags, pouches, etc. Should appear exactly as in the game (e.g. 'Inventory Bag A').",
             "type": "object",
             "patternProperties": {
               "": {
@@ -130,16 +130,16 @@
             ]
           },
           "constellations": {
-            "description": "The constellations that the character has completed.",
+            "description": "The constellations that the character has completed. Use the constellation ID (e.g. A-1, B-7).",
             "type": "object",
             "patternProperties": {
-              "": {
+              "^[A-Z]+-\\d+$": {
                 "type": "boolean"
               }
             }
           },
           "starSigns": {
-            "description": "The star signs that the character has equipped.",
+            "description": "The star signs that the character has equipped. Use the star sign ID (e.g. 1, 1a, 7c, 10).",
             "type": "object",
             "patternProperties": {
               "": {
@@ -161,7 +161,7 @@
       "maxItems": 9
     },
     "checklist": {
-      "description": "Items collected for the progress tracker, such as chests, inventory bags, or stamps.",
+      "description": "Items collected for the progress tracker, such as chests, inventory bags, or stamps. Should appear exactly as in the game (e.g. 'Bag o Heads Stamp').",
       "type": "object",
       "patternProperties": {
         "": {
@@ -170,7 +170,7 @@
       }
     },
     "stamps": {
-      "description": "Levels for each stamp that the player has unlocked.",
+      "description": "Levels for each stamp that the player has unlocked. Key is stamp name (e.g. 'Alch Go Brrr Stamp').",
       "type": "object",
       "patternProperties": {
         "": {
@@ -180,7 +180,7 @@
       }
     },
     "starSigns": {
-      "description": "The star signs that have been unlocked by spending Star Chart Points.",
+      "description": "The star signs that have been unlocked by spending Star Chart Points. Key is star sign ID: (e.g. 1, 1a, 7c, 10).",
       "type": "object",
       "patternProperties": {
         "": {
@@ -189,7 +189,7 @@
       }
     },
     "statues": {
-      "description": "Tracking information for statues, including level, progress, and golden status.",
+      "description": "Tracking information for statues, including level, progress, and golden status. Key is statue name (e.g. 'Power Statue').",
       "type": "object",
       "patternProperties": {
         "": {

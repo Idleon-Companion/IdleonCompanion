@@ -46,7 +46,8 @@
             </td>
             <td class="w-20">
               <q-input
-                v-model.number="stamps[stamp.name]"
+                :model-value="stamps[stamp.name] ?? 0"
+                @update:model-value="stamps[stamp.name] = $event"
                 type="number"
                 :min="0"
                 filled
@@ -55,7 +56,9 @@
             <td class="w-40">
               <div class="flex flex-col items-center justify-center">
                 <CoinDisplay
-                  :value="calculateStampCoinCost(stamp, stamps[stamp.name])"
+                  :value="
+                    calculateStampCoinCost(stamp, stamps[stamp.name] ?? 0)
+                  "
                 />
                 <div class="flex">
                   <div
@@ -68,21 +71,27 @@
                     />
                     <div class="flex items-center ml-0.5">
                       {{
-                        calculateStampMaterialsCost(stamp, stamps[stamp.name])
+                        calculateStampMaterialsCost(
+                          stamp,
+                          stamps[stamp.name] ?? 0
+                        )
                       }}
                     </div>
                   </div>
                   <div v-else>
                     Next material cost:
                     {{
-                      stamp.diffRatio - (stamps[stamp.name] % stamp.diffRatio)
+                      stamp.diffRatio -
+                      (stamps[stamp.name] ?? 0 % stamp.diffRatio)
                     }}
                   </div>
                 </div>
               </div>
             </td>
             <td class="w-40">
-              +{{ calculateStampBonus(stamp, stamps[stamp.name]).toFixed(2) }}
+              +{{
+                calculateStampBonus(stamp, stamps[stamp.name] ?? 0).toFixed(2)
+              }}
               {{ stamp.bonus }}
             </td>
           </tr>
