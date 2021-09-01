@@ -1,4 +1,4 @@
-import { DefaultState, useState } from "~/State";
+import { DefaultState, useState, versionControl } from "~/State";
 import { useCharacters } from "~/composables/Characters";
 import Ajv from "ajv";
 import apiSchema from "~/utils/ApiSchema.json";
@@ -14,6 +14,8 @@ export const validateImportData = ajv.compile<ImportData>(apiSchema);
 export function updateStateFromImportData(data: ImportData) {
   const state = useState();
   const { createCharactersFromData } = useCharacters();
+  // In the future, we will use this field for sem-ver of specific keys if needed
+  // const apiVersion = data.apiVersion;
   for (const [key, value] of Object.entries(data)) {
     if (key === "version") {
       // For now, we don't check or validate the version (see above comment)
@@ -24,4 +26,7 @@ export function updateStateFromImportData(data: ImportData) {
       createCharactersFromData(state.value.chars);
     }
   }
+  // Perform standard version control to make sure additional fields not from the game are created
+  state.value.version = "0.2.0";
+  versionControl();
 }
