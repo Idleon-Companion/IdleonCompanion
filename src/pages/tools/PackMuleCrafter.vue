@@ -134,6 +134,8 @@
                     <th>Food</th>
                     <th>Choppin</th>
                     <th>Bugs</th>
+                    <th>Critters</th>
+                    <th>Souls</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -145,6 +147,8 @@
                     <td>{{ inventory.food }}</td>
                     <td>{{ inventory.choppin }}</td>
                     <td>{{ inventory.bug }}</td>
+                    <td>{{ inventory.critter }}</td>
+                    <td>{{ inventory.soul }}</td>
                   </tr>
                 </tbody>
               </q-markup-table>
