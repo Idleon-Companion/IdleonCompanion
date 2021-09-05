@@ -22,7 +22,12 @@
       <div>
         Select a monster and enter your in-game EXP to figure out the EXP
         multiplier. This is to account for external EXP multipliers, such as
-        post office, alchemy, statues, etc.
+        post office, alchemy, statues, etc. 
+        <div class="text-secondary">
+          To obtain your in-game EXP, kill the Monster selected below. At the
+          lower-left of the Idleon screen, you'll see how much EXP you obtain per Monster kill.
+          Type that EXP in the "In-game EXP" box.
+        </div>
       </div>
       <div class="flex my-2">
         <q-select
@@ -42,7 +47,6 @@
           class="ml-2"
           type="number"
           label="In-game EXP"
-          hint="Find EXP/hour in AFK info"
         />
       </div>
       <div>
@@ -136,7 +140,9 @@
       <div class="text-xl font-medium">Best Monsters (EXP)</div>
       <div class="text-secondary">
         These are your top 5 monsters for active EXP/swing. Note that movement
-        speed, respawn rate, and other factors affect total farming value.
+        speed, respawn rate, and other factors affect total farming value. 
+        <br>
+        World 3 is not implemented! This calculator is only able to recommend up to Snelbies.
       </div>
       <div class="flex p-4">
         <div
