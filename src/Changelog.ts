@@ -154,4 +154,13 @@ export const Changelog: ChangelogEntry[] = [
     },
     date: "August 2021",
   },
+  {
+    version: "0.3.1 (Builds Update)",
+    changes: {
+      changes: [
+        "Builds: A variety of builds have been updated on the website. Some new builds were added.",
+      ],
+    },
+    date: "August 2021",
+  },
 ];
