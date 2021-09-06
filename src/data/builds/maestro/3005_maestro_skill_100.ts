@@ -19,7 +19,7 @@ export const build: Build = {
         "11": "100+",
       },
       comment:
-        "For the first tab, place as many points as you can into Happy Dude. Getting 300+ will require upgrading Bliss n Chips from Tab 3. \n1* Once Happy Dude is maximally upgraded, the rest of Tab 1 is used for improving skill efficiency in a particular skill. ",
+        "Place as many points as you can into Happy Dude. Getting 300+ will require upgrading Bliss n Chips from Tab 3. \n1* Once Happy Dude is maximally upgraded, the rest of Tab 1 is used for improving skill efficiency in a particular skill. ",
     },
     {
       skills: {

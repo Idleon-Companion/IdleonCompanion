@@ -32,12 +32,11 @@ export const build: Build = {
     {
       skills: {
         "2": "1",
-        "3": "1",
         "5": "*20",
         "6": "70",
       },
       comment:
-        'Put 1 point into Bear Trap and Uwu Rawrrr. 30 into "Have Another... Again", then put remaining points into "Looty McShooty".\n*20 Excess points can be put into "Have Another... Again"',
+        'Put 1 point into Bear Trap. 30 into "Have Another... Again", then put remaining points into "Looty McShooty".\n*20 Excess points can be put into "Have Another... Again"',
     },
   ],
   class: Class.Hunter,

@@ -3,7 +3,7 @@ import { Class } from "~/composables/Characters";
 import { Build } from "~/composables/Builds";
 
 export const build: Build = {
-  title: "Journeyman AFK 40",
+  title: "Journeyman AFK (~40)",
   notes:
     "This build is for leveling, and ignores all of the utility talents that provide help with drops and cash",
   version: "1.23",

@@ -10,13 +10,13 @@ export const build: Build = {
   tabs: [
     {
       skills: {
-        "6": "200+",
+        "6": "100+",
         "9": "*1",
         "11": "100+",
         "15": "100+",
       },
       comment:
-        "Max Brute Efficiency, Fist of Rage and Idle Skilling in that order.\nLeftover points can be put into LUK.",
+        "Max Brute Efficiency, Fist of Rage, and Idle Skilling in that order.\n*1 Leftover points can be put into LUK.",
     },
     {
       skills: {
@@ -30,17 +30,14 @@ export const build: Build = {
     },
     {
       skills: {
-        "7": "*2",
-        "8": "100+",
-        "9": "100+",
+        "9": "*2",
         "11": "100+",
-        "12": "100+",
+        "12": "*1",
         "13": "100+",
         "14": "100+",
-        "15": "*1",
       },
       comment:
-        "Max Worming Undercover, Bobbin' Bobbers, STR Summore, Strongest Statues, All Fish Diet and Catching Some ZZZ's.\nPut Points into Back To Basics and Fistful of Obol if you have extra points.",
+        "Max Worming Undercover, STR Summore, Strongest Statues, All Fish Diet and Catching Some ZZZ's.\n*1 Level it up to your minigame score \n*2 Excess can be used to improve STR.",
     },
   ],
   class: Class.Barbarian,
