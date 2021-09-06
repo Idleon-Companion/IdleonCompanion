@@ -26,6 +26,7 @@ export const build: Build = {
         "11": "100+",
         "12": "100+",
         "13": "100+",
+        "14": "100+",
       },
       comment:
         "Max Logs On Logs, Leaf Thief, Deforesting All Doubt, Mana Overdrive, Individual Insight, and Inner Peace in that order.\nExcess points can go into teleportation to move quicker.",
