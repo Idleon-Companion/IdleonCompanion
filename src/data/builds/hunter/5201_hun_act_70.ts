@@ -31,19 +31,17 @@ export const build: Build = {
         "8": "100",
       },
       comment:
-        'Put 1 point into the active skills, then max "High Polymer Limbs" followed by 40 points into "Have Another" & remaining points into "Veins of the Infernal". ',
+        'Put 1 point into the active skills, then max "High Polymer Limbs" followed by 40 points into "Have Another". The remaining points go to "Veins of the Infernal". ',
     },
     {
       skills: {
-        "1": "*1",
         "2": "1",
         "3": "1+",
         "5": "40",
         "6": "100",
-        "11": "*1",
       },
       comment:
-        'Put 1 point into active skills, 40 into "Have Another... Again", then get "Looty McShooty" maxed. \n With 430 mana, uwu rawr can be sustained and points should be put in to better match mob\'s respawn timer. \n *1 = Points can be taken away from "Looty Mcshooty" or "Have another... Again" to make room for "Eagle Eye".',
+        'Put 1 point into Bear Trap and Uwu Rawrrr. 40 into "Have Another... Again", then get "Looty McShooty" maxed. \n With 430 mana, uwu rawr can be sustained and points should be put in to better match mob\'s respawn timer.',
     },
   ],
   class: Class.Hunter,

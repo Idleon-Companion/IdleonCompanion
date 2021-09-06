@@ -3,9 +3,9 @@ import { Class } from "~/composables/Characters";
 import { Build } from "~/composables/Builds";
 
 export const build: Build = {
-  title: "Maestro Skilling (~100)",
+  title: "Maestro Skilling: Left + Right Hands (~100)",
   notes:
-    "This build is created to level Maestro's skills as quickly as possible.",
+    "The goal of this build is to allow your other characters to get level 20+ on their non-specialized skills. The focus is not to level Maestro's skill. However, it's expected Maestro will be skilling using this build.",
   version: "1.23",
   level: 100,
   tabs: [
@@ -35,15 +35,14 @@ export const build: Build = {
     },
     {
       skills: {
-        "3":"*4",
         "8": "1*",
         "9": "100+",
         "11":"*2",
-        "13": "*3",
-        "14": "*3",
+        "13": "100+",
+        "14": "100+",
       },
       comment:
-        "Use the Library to place 100+ into Bliss n Chips. \n1* Extra points can go into here to increase EhExPee Statue (+% Skill Exp)\n*2 If the Eff drop is not a big deal, you can place points into Transfusion. This will also increase the EXP gained from balloons.\n*3 Excess points can go into Left/Right hand to help your other skillers.\n*4 Excess points can be put into Printer Go Brrr",
+        "Place points into Left Hand of Learning and Right Hand of Action. Once those are maxed, put 100+ into Bliss n Chips. \n1* Extra points can go into here to increase EhExPee Statue (+% Skill Exp)\n*2 If the Eff drop is not a big deal, you can place points into Transfusion. This will also increase the EXP gained from balloons.",
     },
   ],
   class: Class.Maestro,
