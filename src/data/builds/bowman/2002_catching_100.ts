@@ -3,7 +3,7 @@ import { Class } from "~/composables/Characters";
 import { Build } from "~/composables/Builds";
 
 export const build: Build = {
-  title: "Catching 100+",
+  title: "Catching Active / AFK 100+",
   notes: "",
   version: "1.23",
   level: 100,
@@ -11,7 +11,7 @@ export const build: Build = {
     {
       skills: {
         "7": "200+",
-        "10": "100+",
+        "11": "100+",
         "15": "*1",
       },
       comment:

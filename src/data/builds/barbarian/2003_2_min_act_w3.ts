@@ -26,9 +26,10 @@ export const build: Build = {
         "12": "100+",
         "13": "100+",
         "14": "100+",
+        "15": "100+",
       },
       comment:
-        "Max Copper Collector, Tool Proficiency, Big Pick, Motherlode Miner and Tempestuous Emotions in that order.",
+        "Max Copper Collector, Tool Proficiency, Big Pick, Motherlode Miner and Tempestuous Emotions in that order. Extra points can go into HP",
     },
     {
       skills: {
