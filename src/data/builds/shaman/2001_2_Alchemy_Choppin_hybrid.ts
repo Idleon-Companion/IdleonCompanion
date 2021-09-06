@@ -4,7 +4,7 @@ import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Alchemy / Choppin Hybrid (Shaman) 100+",
-  notes: "",
+  notes: " ",
   version: "1.23",
   level: 100,
   tabs: [
