@@ -69,13 +69,13 @@ export const getClassTree = (class_: Class): Class[] => {
 
 export const Skills = [
   "Mining",
-  "Smithing",
-  "Choppin'",
   "Fishing",
-  "Alchemy",
-  "Catching",
   "Trapping",
+  "Smithing",
+  "Alchemy",
   "Construction",
+  "Choppin'",
+  "Catching",
   "Worship",
 ] as const;
 export type Skill = typeof Skills[number];
