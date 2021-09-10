@@ -14,8 +14,8 @@ export type Stamp = {
   growthFunc: GrowthFunc;
 };
 
-export const Stamps = {
-  "1": {
+const CombatStamps: Stamp[] = [
+  {
     name: "Sword Stamp",
     material: "Spore Cap",
     bonus: "Base Damage",
@@ -28,7 +28,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "2": {
+  {
     name: "Heart Stamp",
     material: "Oak Logs",
     bonus: "Base HP",
@@ -41,7 +41,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "3": {
+  {
     name: "Mana Stamp",
     material: "Copper Ore",
     bonus: "Base MP",
@@ -54,7 +54,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "4": {
+  {
     name: "Tomahawk Stamp",
     material: "Copper Bar",
     bonus: "% Total Damage",
@@ -67,7 +67,7 @@ export const Stamps = {
     par2: 40,
     growthFunc: Growth.Decay,
   },
-  "5": {
+  {
     name: "Target Stamp",
     material: "Thread",
     bonus: "Base Accuracy",
@@ -80,7 +80,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "6": {
+  {
     name: "Shield Stamp",
     material: "Iron Ore",
     bonus: "Base Defence",
@@ -93,7 +93,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "7": {
+  {
     name: "Longsword Stamp",
     material: "Bean Slices",
     bonus: "Base Damage",
@@ -106,7 +106,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "8": {
+  {
     name: "Kapow Stamp",
     material: "Trusty Nails",
     bonus: "% Critical Damage",
@@ -119,7 +119,7 @@ export const Stamps = {
     par2: 40,
     growthFunc: Growth.Decay,
   },
-  "9": {
+  {
     name: "Fist Stamp",
     material: "Bleach Logs",
     bonus: "STR",
@@ -132,7 +132,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "10": {
+  {
     name: "Battleaxe Stamp",
     material: "Grass Leaf",
     bonus: "% Total Damage",
@@ -145,7 +145,7 @@ export const Stamps = {
     par2: 40,
     growthFunc: Growth.Decay,
   },
-  "11": {
+  {
     name: "Agile Stamp",
     material: "Copper Chopper",
     bonus: "AGI",
@@ -158,7 +158,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "12": {
+  {
     name: "Vitality Stamp",
     material: "Snake Skin",
     bonus: "Base HP",
@@ -171,7 +171,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "13": {
+  {
     name: "Book Stamp",
     material: "Iron Bar",
     bonus: "WIS",
@@ -184,7 +184,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "14": {
+  {
     name: "Manamoar Stamp",
     material: "Goblin Ear",
     bonus: "Base MP",
@@ -197,7 +197,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "15": {
+  {
     name: "Clover Stamp",
     material: "Iron Platebody",
     bonus: "LUK",
@@ -210,7 +210,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "16": {
+  {
     name: "Scimitar Stamp",
     material: "Goldfish",
     bonus: "Base Damage",
@@ -223,7 +223,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "17": {
+  {
     name: "Bullseye Stamp",
     material: "Sentient Cereal",
     bonus: "Base Accuracy",
@@ -236,7 +236,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "18": {
+  {
     name: "Feather Stamp",
     material: "Coconotnotto",
     bonus: "Base Move Speed",
@@ -249,7 +249,7 @@ export const Stamps = {
     par2: 50,
     growthFunc: Growth.Decay,
   },
-  "19": {
+  {
     name: "Polearm Stamp",
     material: "Steel Axe",
     bonus: "% Total Damage",
@@ -262,7 +262,7 @@ export const Stamps = {
     par2: 40,
     growthFunc: Growth.Decay,
   },
-  "20": {
+  {
     name: "Violence Stamp",
     material: "Dementia Ore",
     bonus: "% STR from Talents",
@@ -275,7 +275,7 @@ export const Stamps = {
     par2: 50,
     growthFunc: Growth.Decay,
   },
-  "21": {
+  {
     name: "Buckler Stamp",
     material: "Platinum Bar",
     bonus: "Base Defence",
@@ -288,7 +288,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "23": {
+  {
     name: "Sukka Foo Stamp",
     material: "Amarok Slab",
     bonus: "% Boss Damage",
@@ -301,7 +301,7 @@ export const Stamps = {
     par2: 60,
     growthFunc: Growth.Decay,
   },
-  "24": {
+  {
     name: "Arcane Stamp",
     material: "Gold Bar",
     bonus: "WIS",
@@ -314,7 +314,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "26": {
+  {
     name: "Steve Sword Stamp",
     material: "Fruitfly",
     bonus: "% Total Damage",
@@ -327,7 +327,7 @@ export const Stamps = {
     par2: 60,
     growthFunc: Growth.Decay,
   },
-  "27": {
+  {
     name: "Blover Stamp",
     material: "Jellyfish",
     bonus: "Base LUK",
@@ -340,7 +340,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "28": {
+  {
     name: "Stat Graph Stamp",
     material: "Mystery Upgrade Stone I",
     bonus: "All Stats",
@@ -353,7 +353,10 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1000": {
+];
+
+const SkillStamps: Stamp[] = [
+  {
     name: "Pickaxe Stamp",
     material: "Oak Logs",
     bonus: "Mining Efficiency",
@@ -366,7 +369,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1002": {
+  {
     name: "Hatchet Stamp",
     material: "Thread",
     bonus: "Choppin Efficiency",
@@ -379,7 +382,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1003": {
+  {
     name: "Anvil Zoomer Stamp",
     material: "Copper Ore",
     bonus: "% Anvil Production Spd",
@@ -392,7 +395,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1004": {
+  {
     name: "Lil' Mining Baggy Stamp",
     material: "Jungle Logs",
     bonus: "Mining Carry Cap",
@@ -405,7 +408,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1005": {
+  {
     name: "Twin Ores Stamp",
     material: "Thief Hood",
     bonus: "% Multi Ore Chance",
@@ -418,7 +421,7 @@ export const Stamps = {
     par2: 40,
     growthFunc: Growth.Decay,
   },
-  "1006": {
+  {
     name: "Choppin' Bag Stamp",
     material: "Carrot Cube",
     bonus: "Choppin Carry Cap",
@@ -431,7 +434,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1007": {
+  {
     name: "Duplogs Stamp",
     material: "Militia Helm",
     bonus: "% Multi Log Chance",
@@ -444,7 +447,7 @@ export const Stamps = {
     par2: 40,
     growthFunc: Growth.Decay,
   },
-  "1008": {
+  {
     name: "Matty Bag Stamp",
     material: "Cramped Material Pouch",
     bonus: "Material Carry Cap",
@@ -457,7 +460,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1009": {
+  {
     name: "Smart Dirt Stamp",
     material: "Plank",
     bonus: "% Mining Exp",
@@ -470,7 +473,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1010": {
+  {
     name: "Cool Diggy Tool Stamp",
     material: "Iron Hatchet",
     bonus: "Mining Efficiency",
@@ -483,7 +486,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1011": {
+  {
     name: "High IQ Lumber Stamp",
     material: "Bullfrog Horn",
     bonus: "% Choppin Exp",
@@ -496,7 +499,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1012": {
+  {
     name: "Swag Swingy Tool Stamp",
     material: "Iron Pickaxe",
     bonus: "Choppin Efficiency",
@@ -509,7 +512,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1013": {
+  {
     name: "Alch Go Brrr Stamp",
     material: "Forest Fibres",
     bonus: "% Alch Speed",
@@ -522,7 +525,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1014": {
+  {
     name: "Brainstew Stamp",
     material: "Gold Ore",
     bonus: "% Alch Exp",
@@ -535,7 +538,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1015": {
+  {
     name: "Drippy Drop Stamp",
     material: "Pocket Sand",
     bonus: "% Liquid Spd",
@@ -548,7 +551,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1016": {
+  {
     name: "Droplots Stamp",
     material: "Bloach",
     bonus: "Liquid Cap",
@@ -561,7 +564,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1017": {
+  {
     name: "Fishing Rod Stamp",
     material: "Fly",
     bonus: "Fishing Efficiency",
@@ -574,7 +577,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1018": {
+  {
     name: "Fishhead Stamp",
     material: "Megalodon Tooth",
     bonus: "% Fishing Exp",
@@ -587,7 +590,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1019": {
+  {
     name: "Catch Net Stamp",
     material: "Goldfish",
     bonus: "Catching Efficiency",
@@ -600,7 +603,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1020": {
+  {
     name: "Fly Intel Stamp",
     material: "Crabby Cakey",
     bonus: "% Catching Exp",
@@ -613,7 +616,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1021": {
+  {
     name: "Bag o Heads Stamp",
     material: "Butterfly",
     bonus: "% Fish Carry Cap",
@@ -626,7 +629,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1022": {
+  {
     name: "Holy Mackerel Stamp",
     material: "Platinum Ore",
     bonus: "% Multifish Chance",
@@ -639,7 +642,7 @@ export const Stamps = {
     par2: 40,
     growthFunc: Growth.Decay,
   },
-  "1023": {
+  {
     name: "Bugsack Stamp",
     material: "Hermit Can",
     bonus: "% Bug Carry Cap",
@@ -652,7 +655,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "1024": {
+  {
     name: "Buzz Buzz Stamp",
     material: "Potty Rolls",
     bonus: "% Multibug Chance",
@@ -665,7 +668,10 @@ export const Stamps = {
     par2: 40,
     growthFunc: Growth.Decay,
   },
-  "2000": {
+];
+
+const MiscStamps: Stamp[] = [
+  {
     name: "Questin Stamp",
     material: "Slime Sludge",
     bonus: "% Quest EXP",
@@ -678,7 +684,7 @@ export const Stamps = {
     par2: 50,
     growthFunc: Growth.Decay,
   },
-  "2002": {
+  {
     name: "Mason Jar Stamp",
     material: "Glass Shard",
     bonus: "% All Carry Cap",
@@ -691,7 +697,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "2003": {
+  {
     name: "Crystallin Stamp",
     material: "Boring Brick",
     bonus: "Crystal Monster% Spawn Chance",
@@ -704,7 +710,7 @@ export const Stamps = {
     par2: 50,
     growthFunc: Growth.Decay,
   },
-  "2005": {
+  {
     name: "Apple Stamp",
     material: "Meat Pie",
     bonus: "% HP Food Effect",
@@ -717,7 +723,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "2006": {
+  {
     name: "Potion Stamp",
     material: "Icing Ironbite",
     bonus: "% Boost Food Effect",
@@ -730,7 +736,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "2007": {
+  {
     name: "Golden Apple Stamp",
     material: "Golden Nomwich",
     bonus: "% Gold Food Effect",
@@ -743,7 +749,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "2009": {
+  {
     name: "Card Stamp",
     material: "Furled Flag",
     bonus: "% Card Drop Rate",
@@ -756,7 +762,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "2013": {
+  {
     name: "Talent I Stamp",
     material: "Frog Leg",
     bonus: "Talent 1 Pts",
@@ -769,7 +775,7 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
-  "2014": {
+  {
     name: "Talent II Stamp",
     material: "Pincer Arm",
     bonus: "Talent 2 Pts",
@@ -782,7 +788,97 @@ export const Stamps = {
     par2: 0,
     growthFunc: Growth.Add,
   },
+];
+
+export const Stamps: Stamp[] = [...CombatStamps, ...SkillStamps, ...MiscStamps];
+
+type Bribe = {
+  name: string;
+  cost: number;
 };
+
+export const Bribes: Bribe[] = [
+  {
+    name: "Insider Trading",
+    cost: 750,
+  },
+  {
+    name: "Tracking Chips",
+    cost: 1800,
+  },
+  {
+    name: "Mandatory Fire Sale",
+    cost: 3200,
+  },
+  {
+    name: "Sleeping On The Job",
+    cost: 6000,
+  },
+  {
+    name: "Artificial Demand",
+    cost: 9000,
+  },
+  {
+    name: "The Art of the Deal",
+    cost: 15000,
+  },
+  {
+    name: "Overstock Regulations",
+    cost: 20000,
+  },
+  {
+    name: "Double EXP Scheme",
+    cost: 222222,
+  },
+  {
+    name: "Tagged Indicators",
+    cost: 30000,
+  },
+  {
+    name: "Fossil Fuel Legislation",
+    cost: 55000,
+  },
+  {
+    name: "Fice Aces in the Deck",
+    cost: 70000,
+  },
+  {
+    name: "Fake Teleport Tickets",
+    cost: 99000,
+  },
+  {
+    name: "The Art of the Steal",
+    cost: 200000,
+  },
+  {
+    name: "Counterfeit Telepassports",
+    cost: 300000,
+  },
+  {
+    name: "Weighted Marbles",
+    cost: 725000,
+  },
+  {
+    name: "Changing the Code",
+    cost: 1500000,
+  },
+  {
+    name: "Taxidermied Cog Pouches",
+    cost: 750000,
+  },
+  {
+    name: "Guild VIP Fraud",
+    cost: 400000,
+  },
+  {
+    name: "Library Double Agent",
+    cost: 9156348,
+  },
+  {
+    name: "The Art of the Fail",
+    cost: 99999999,
+  },
+];
 
 export function useStamps() {
   const calculateStampCoinCost = (s: Stamp, lvl: number): number => {
