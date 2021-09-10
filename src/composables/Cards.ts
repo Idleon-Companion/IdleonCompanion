@@ -791,6 +791,20 @@ const EventsCards: Card[] = [
     source: "Egg Capsule",
   },
   {
+    id: "Plasti_Doug",
+    category: CardCategory.Events,
+    effect: Effects.BaseDefense,
+    base: 3,
+    source: "Egg Capsule",
+  },
+  {
+    id: "Mr_Blueberry",
+    category: CardCategory.Events,
+    effect: Effects.DropRate,
+    base: 3,
+    source: "Egg Capsule",
+  },
+  {
     id: "Coastiolyte",
     category: CardCategory.Events,
     effect: Effects.FishingAfk,
@@ -802,20 +816,6 @@ const EventsCards: Card[] = [
     category: CardCategory.Events,
     effect: Effects.CatchingExp,
     base: 1,
-    source: "Egg Capsule",
-  },
-  {
-    id: "Mr_Blueberry",
-    category: CardCategory.Events,
-    effect: Effects.DropRate,
-    base: 3,
-    source: "Egg Capsule",
-  },
-  {
-    id: "Plasti_Doug",
-    category: CardCategory.Events,
-    effect: Effects.BaseDefense,
-    base: 3,
     source: "Egg Capsule",
   },
 ];
