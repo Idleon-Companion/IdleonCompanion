@@ -23,9 +23,9 @@ export type StatueName =
   | "Beholder"
   | "Bullseye"
   | "Box"
+  | "Twosoul"
   | "EhExPee"
-  | "Seesaw"
-  | "Twosoul";
+  | "Seesaw";
 
 // Metadata to keep track of for statues
 export type StatueInfo = {
@@ -99,6 +99,10 @@ export const Statues: Record<StatueName, Statue> = {
     base: 0.3,
     effect: Effects.TrappingBase,
   },
+  Twosoul: {
+    base: 0.3,
+    effect: Effects.WorshipBase,
+  },
   EhExPee: {
     base: 0.1,
     effect: Effects.SkillExp,
@@ -106,9 +110,5 @@ export const Statues: Record<StatueName, Statue> = {
   Seesaw: {
     base: 0.5,
     effect: Effects.ConstructionExp,
-  },
-  Twosoul: {
-    base: 0.3,
-    effect: Effects.WorshipBase,
   },
 };
