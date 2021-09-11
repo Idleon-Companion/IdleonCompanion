@@ -6,7 +6,7 @@ export const build: Build = {
   title: "Hunter Trapping (~100)",
   notes: "",
   version: "1.23",
-  level: 50,
+  level: 100,
   tabs: [
     {
       skills: {
