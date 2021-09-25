@@ -305,7 +305,7 @@ export const Monsters: Monster[] = [
     accLow: 275,
     accHigh: 825,
     respawnRate: 40,
-    numMobs: 1,
+    numMobs: 15,
     weight: 0,
   },
   {
@@ -316,7 +316,7 @@ export const Monsters: Monster[] = [
     accLow: 350,
     accHigh: 1050,
     respawnRate: 40,
-    numMobs: 1,
+    numMobs: 13,
     weight: 0,
   },
   {
@@ -327,7 +327,7 @@ export const Monsters: Monster[] = [
     accLow: 450,
     accHigh: 1350,
     respawnRate: 40,
-    numMobs: 1,
+    numMobs: 20,
     weight: 0,
   },
   {
@@ -338,7 +338,7 @@ export const Monsters: Monster[] = [
     accLow: 575,
     accHigh: 1725,
     respawnRate: 40,
-    numMobs: 1,
+    numMobs: 19,
     weight: 0,
   },
   {
@@ -349,7 +349,7 @@ export const Monsters: Monster[] = [
     accLow: 700,
     accHigh: 2100,
     respawnRate: 40,
-    numMobs: 1,
+    numMobs: 19,
     weight: 0,
   },
   {
@@ -360,7 +360,7 @@ export const Monsters: Monster[] = [
     accLow: 850,
     accHigh: 2550,
     respawnRate: 40,
-    numMobs: 1,
+    numMobs: 14,
     weight: 0,
   },
   {
@@ -371,7 +371,7 @@ export const Monsters: Monster[] = [
     accLow: 1000,
     accHigh: 3000,
     respawnRate: 40,
-    numMobs: 1,
+    numMobs: 13,
     weight: 0,
   },
   {
@@ -382,7 +382,7 @@ export const Monsters: Monster[] = [
     accLow: 1125,
     accHigh: 3375,
     respawnRate: 40,
-    numMobs: 1,
+    numMobs: 18,
     weight: 0,
   },
   {
@@ -393,7 +393,7 @@ export const Monsters: Monster[] = [
     accLow: 1300,
     accHigh: 3900,
     respawnRate: 40,
-    numMobs: 1,
+    numMobs: 19,
     weight: 0,
   },
   {
@@ -404,7 +404,7 @@ export const Monsters: Monster[] = [
     accLow: 1450,
     accHigh: 4350,
     respawnRate: 40,
-    numMobs: 1,
+    numMobs: 20,
     weight: 0,
   },
   {
@@ -415,7 +415,7 @@ export const Monsters: Monster[] = [
     accLow: 1600,
     accHigh: 4800,
     respawnRate: 40,
-    numMobs: 1,
+    numMobs: 17,
     weight: 0,
   },
   {
@@ -426,7 +426,7 @@ export const Monsters: Monster[] = [
     accLow: 1700,
     accHigh: 5100,
     respawnRate: 40,
-    numMobs: 1,
+    numMobs: 14,
     weight: 0,
   },
   {
@@ -437,8 +437,8 @@ export const Monsters: Monster[] = [
     accLow: 750,
     accHigh: 2250,
     respawnRate: 35,
-    numMobs: 1,
-    weight: 0,
+    numMobs: 20,
+    weight: 3.8,
   },
   {
     name: "Bloodbone",
