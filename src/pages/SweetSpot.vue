@@ -86,6 +86,7 @@
           v-model.number="stats.critDmg"
           :min="0"
           class="mr-2"
+          fill-mask="0"
           type="number"
           label="Crit Damage"
         />
@@ -141,8 +142,6 @@
       <div class="text-secondary">
         These are your top 5 monsters for active EXP/swing. Note that movement
         speed, respawn rate, and other factors affect total farming value. 
-        <br>
-        World 3 is not implemented! This calculator is only able to recommend up to Snelbies.
       </div>
       <div class="flex p-4">
         <div
@@ -189,11 +188,13 @@ import { Assets, Time, useNumberAbbr } from "~/composables/Utilities";
 import {
   Class,
   getClassTree,
+  Subclass,
   useCharacters,
   useCombat,
 } from "~/composables/Characters";
 import { Monster, Monsters } from "~/composables/SweetSpot";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
+import { truncateSync } from "fs";
 
 const wikiLinks = new Map([
   ["Bestiary", "https://idleon.miraheze.org/wiki/Bestiary"],
@@ -213,7 +214,7 @@ export default defineComponent({
       maxDmg: 2,
       accuracy: 2,
       critChance: 0,
-      critDmg: 0,
+      critDmg: 1.00,
     });
     const monsterExpInGame = ref(0);
 
@@ -241,6 +242,75 @@ export default defineComponent({
           );
       }
       return 1;
+    });
+
+    const multiHitChance= computed(() => {
+      // 100 is for the 100% chance of hitting your basic attack
+      let chanceArr = [100];
+      switch (currentCharacter.value?.class) {
+        case Class.Warrior:
+          chanceArr.push((110 * stats.skill1Lvl) / (stats.skill1Lvl + 50));
+          break;
+        case Class.Archer:
+          chanceArr.push((120 * stats.skill1Lvl) / (stats.skill1Lvl + 40));
+          break;
+        case Class.Hunter:
+          chanceArr.push((120 * stats.skill1Lvl) / (stats.skill1Lvl + 40));
+          chanceArr.push((120 * stats.skill2Lvl) / (stats.skill2Lvl + 40));
+          break;
+        case Class.Journeyman:
+          // Double Hit, 100% chance of a 2nd punch.
+          chanceArr.push(1.00);
+          break;
+        case Class.Maestro:
+          // Maestro has Triple Jab. 100% chance of 3 punches.
+          chanceArr.push(1.00);
+          chanceArr.push(1.00);
+          break
+      }
+      return chanceArr;
+    });
+
+    const multiHitDamage = computed(() => {
+       let damageArr = [1.00];
+      switch (currentCharacter.value?.class) {
+        case Class.Journeyman:
+          // Basic attacks do more damage
+          damageArr[0] = 1 + 0.6*stats.skill1Lvl;
+          damageArr.push((25 + Math.floor(stats.skill1Lvl/3)));
+          break;
+        case Class.Maestro:
+          // Increase the damage of the other hits.
+          damageArr[0] = 1 + 0.6*stats.skill1Lvl + 0.5*stats.skill2Lvl;
+          damageArr.push((25 + Math.floor(stats.skill1Lvl/3) + 0.5*stats.skill2Lvl));
+          damageArr.push(((20 + Math.floor(stats.skill1Lvl/4))));
+          break;
+      }
+      return damageArr;
+    });
+
+    const numberOfAttacks = computed(() => {
+       let numAttacks = 1;
+       switch (currentCharacter.value?.class) {
+        case Class.Warrior:
+          if(stats.skill1Lvl > 0) numAttacks++;
+          break;
+        case Class.Archer:
+          if(stats.skill1Lvl > 0) numAttacks++;
+          break;
+        case Class.Journeyman:
+          if(stats.skill1Lvl > 0) numAttacks++;
+          break;
+        case Class.Hunter:
+          if(stats.skill1Lvl > 0) numAttacks++;
+          if(stats.skill2Lvl > 0) numAttacks++;
+          break;
+        case Class.Maestro:
+          if(stats.skill1Lvl > 0) numAttacks++;
+          if(stats.skill2Lvl > 0) numAttacks++;
+          break;
+      }
+      return numAttacks;
     });
 
     const monsterExpMultiplier = computed(() => {
@@ -332,12 +402,12 @@ export default defineComponent({
         {
           name: "minHits",
           label: "Min. Hits",
-          field: (m: Monster) => minHitToKill(m),
+          field: (m: Monster) => avgMinHitToKill(m),
         },
         {
           name: "maxHits",
           label: "Max. Hits",
-          field: (m: Monster) => maxHitToKill(m),
+          field: (m: Monster) => avgMaxHitToKill(m),
         },
         {
           name: "avgHit",
@@ -417,7 +487,7 @@ export default defineComponent({
      * The next two functions are technically not the real min/max
      * They are used to calculate avgHitToKill.
      */
-    const minHitToKill = (monster: Monster): number => {
+    const avgMinHitToKill = (monster: Monster): number => {
       let hit = monster.health / (stats.maxDmg * multiHitMultiplier.value);
       if (!isValidNumber(hit)) {
         return 0;
@@ -425,7 +495,7 @@ export default defineComponent({
       return Math.ceil(hit);
     };
 
-    const maxHitToKill = (monster: Monster): number => {
+    const avgMaxHitToKill = (monster: Monster): number => {
       let hit = monster.health / (stats.minDmg * multiHitMultiplier.value);
       if (!isValidNumber(hit)) {
         return 0;
@@ -434,9 +504,72 @@ export default defineComponent({
     };
 
     const avgHitToKill = (monster: Monster): number => {
-      let minHit = minHitToKill(monster);
-      let maxHit = maxHitToKill(monster);
-      return (minHit + maxHit) / 2;
+      // If the min hit is too low, don't bother
+      if(avgMinHitToKill(monster) >= 10) return 0;
+
+      // If the hit chance is 0, don't bother.
+      if(hitChance(monster) == 0) return 0;
+
+      // Check Max DMG < min DMG, do nothing if so.
+      if(stats.maxDmg < stats.minDmg) return 0;
+
+      // If the Monster HP < Min Hit, trivially we will always kill it in 1 hit
+      if(monster.health < stats.minDmg) return 1;
+
+      // Check there is a minDMG
+      if(stats.minDmg < 1) return 0;
+
+      // If critDMG < 1
+      if(stats.critDmg < 1) return 0;
+
+      // If crit chance isn't between 0 & 100
+      if(stats.critChance < 0 || stats.critChance > 100) return 0;
+
+      // Simulate monster kill
+      let totalHits = [];
+      for(var i=0; i < 100; i ++){
+        var curHP = monster.health;
+        var numHits = 0;
+        while( curHP > 0){
+          // Multi-hit needs to act like one full attack
+          for( let curAttack = 0; curAttack < numberOfAttacks.value; curAttack ++){
+            // We will always hits our basic attack. If we have more than 1 attack, then check that we hit.
+            var didHit = true;
+            if(curAttack >= 1){
+              didHit =  Math.floor(Math.random() * 101) <= multiHitChance.value[curAttack];
+            }
+            // If we didn't hit, continue.
+            if(!didHit) continue;
+
+            // Did we crit?
+            var isCrit = Math.floor(Math.random() * 101) <= stats.critChance;
+
+            // If we crit, our maximum and minimum damage have increased by the crit DMG amount
+            // However, account for our maxDmg being lower (Due to Two Punch man, for example)
+            var curHit;
+            if(isCrit){
+              curHit = Math.floor(Math.random() * stats.maxDmg*stats.critDmg*multiHitDamage.value[curAttack]) + stats.minDmg*stats.critDmg*multiHitDamage.value[curAttack];
+            }
+            else {
+              curHit = Math.floor(Math.random() * stats.maxDmg*multiHitDamage.value[curAttack]) + stats.minDmg*multiHitDamage.value[curAttack];
+            }
+
+            // Deal DMG to the monster.
+            curHP = curHP - curHit;
+          }
+          numHits = numHits + 1;
+        }
+        totalHits.push(numHits);
+      }
+
+      // Calculate average number of hits
+      var total = 0;
+      for(var i = 0; i < totalHits.length; i++) {
+          total += totalHits[i];
+      }
+      var avg = total / totalHits.length;
+      return avg;
+      
     };
 
     const avgSwingToKill = (monster: Monster): number => {
@@ -488,8 +621,8 @@ export default defineComponent({
       expPerSwing,
       expToNextLevel,
       hitChance,
-      maxHitToKill,
-      minHitToKill,
+      avgMaxHitToKill,
+      avgMinHitToKill,
       monsterExpInGame,
       monsterExpMul,
       monsterFarmingValue,
