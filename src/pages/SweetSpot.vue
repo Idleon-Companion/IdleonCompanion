@@ -3,7 +3,7 @@
     Find the best EXP farming spot for your character! This tool takes into
     account respawn time, map complexity, and the number of monsters that appear
     on the map.
-    <u>Active gains will not be the same as your AFK gains.</u> World 3 is WIP.
+    <u>Active gains will not be the same as your AFK gains.</u>
     <template v-slot:action>
       <q-btn-dropdown outline label="Wiki">
         <q-list separator>
@@ -164,6 +164,12 @@
           </div>
         </div>
       </div>
+      <div class="text-xl">Feedback</div>
+      <div>
+        The SweetSpot logic is maintained by #100mar with the UI created by #adapap. If there are any questions regarding the best farming spots, please visit the public Idleon Companion discord server found in the <a href="/Changelog" style="color:#5bc0de">Changelog</a>.
+        This tool was created using data from multiple Idleon characters to tweak the results of the calculator. <br>
+        Below is an in-depth table of values. For any monster that takes 15+ Average hits to kill, it will show up as "0.0".
+      </div>
     </q-card-section>
     <q-card-section>
       <q-table
@@ -274,6 +280,16 @@ export default defineComponent({
     const multiHitDamage = computed(() => {
        let damageArr = [1.00];
       switch (currentCharacter.value?.class) {
+        case Class.Warrior:
+          damageArr.push(1.00);
+          break;
+        case Class.Archer:
+          damageArr.push(1.00);
+          break;
+        case Class.Hunter:
+          damageArr.push(1.00);
+          damageArr.push(1.00);
+          break;
         case Class.Journeyman:
           // Basic attacks do more damage
           damageArr[0] = 1 + 0.6*stats.skill1Lvl;
@@ -483,12 +499,15 @@ export default defineComponent({
       return n !== Infinity && !isNaN(n);
     };
 
-    /*
-     * The next two functions are technically not the real min/max
-     * They are used to calculate avgHitToKill.
-     */
     const avgMinHitToKill = (monster: Monster): number => {
-      let hit = monster.health / (stats.maxDmg * multiHitMultiplier.value);
+      let dmgMul = 0;
+      // Assume you hit your multi-hit skills 100% of the time.
+      for(let i = 0; i < numberOfAttacks.value; i++){
+        dmgMul = dmgMul + multiHitDamage.value[i];
+      }
+      // Assume crit
+      let bestHit = stats.maxDmg*stats.critDmg*dmgMul;
+      let hit = monster.health / (bestHit);
       if (!isValidNumber(hit)) {
         return 0;
       }
@@ -496,7 +515,7 @@ export default defineComponent({
     };
 
     const avgMaxHitToKill = (monster: Monster): number => {
-      let hit = monster.health / (stats.minDmg * multiHitMultiplier.value);
+      let hit = monster.health / (stats.minDmg);
       if (!isValidNumber(hit)) {
         return 0;
       }
