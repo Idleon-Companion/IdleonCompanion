@@ -564,9 +564,6 @@ export default defineComponent({
         }
         totalHits.push(numHits);
       }
-      if(monster.name == "Dedotated Ram"){
-        console.log(multiHitDamage.value)
-      }
 
       // Calculate average number of hits
       var total = 0;
