@@ -306,7 +306,7 @@ export const Monsters: Monster[] = [
     accHigh: 825,
     respawnRate: 40,
     numMobs: 15,
-    weight: 0,
+    weight: 7,
   },
   {
     name: "Frost Flake",
@@ -317,7 +317,7 @@ export const Monsters: Monster[] = [
     accHigh: 1050,
     respawnRate: 40,
     numMobs: 13,
-    weight: 0,
+    weight: 5.8,
   },
   {
     name: "Sir Stache",
@@ -328,7 +328,7 @@ export const Monsters: Monster[] = [
     accHigh: 1350,
     respawnRate: 40,
     numMobs: 20,
-    weight: 0,
+    weight: 10,
   },
   {
     name: "Bloque",
@@ -339,7 +339,7 @@ export const Monsters: Monster[] = [
     accHigh: 1725,
     respawnRate: 40,
     numMobs: 19,
-    weight: 0,
+    weight: 7.5,
   },
   {
     name: "Mamooth",
@@ -350,7 +350,7 @@ export const Monsters: Monster[] = [
     accHigh: 2100,
     respawnRate: 40,
     numMobs: 19,
-    weight: 0,
+    weight: 7.8,
   },
   {
     name: "Snowman",
@@ -361,7 +361,7 @@ export const Monsters: Monster[] = [
     accHigh: 2550,
     respawnRate: 40,
     numMobs: 14,
-    weight: 0,
+    weight: 3,
   },
   {
     name: "Penguin",
@@ -372,7 +372,7 @@ export const Monsters: Monster[] = [
     accHigh: 3000,
     respawnRate: 40,
     numMobs: 13,
-    weight: 0,
+    weight: 4.5,
   },
   {
     name: "Thermister",
@@ -383,7 +383,7 @@ export const Monsters: Monster[] = [
     accHigh: 3375,
     respawnRate: 40,
     numMobs: 18,
-    weight: 0,
+    weight: 7,
   },
   {
     name: "Quenchie",
@@ -394,7 +394,7 @@ export const Monsters: Monster[] = [
     accHigh: 3900,
     respawnRate: 40,
     numMobs: 19,
-    weight: 0,
+    weight: 7,
   },
   {
     name: "Cryosnake",
@@ -405,7 +405,7 @@ export const Monsters: Monster[] = [
     accHigh: 4350,
     respawnRate: 40,
     numMobs: 20,
-    weight: 0,
+    weight: 6,
   },
   {
     name: "Bop Box",
@@ -416,7 +416,7 @@ export const Monsters: Monster[] = [
     accHigh: 4800,
     respawnRate: 40,
     numMobs: 17,
-    weight: 0,
+    weight: 7,
   },
   {
     name: "Neyeptune",
@@ -427,7 +427,7 @@ export const Monsters: Monster[] = [
     accHigh: 5100,
     respawnRate: 40,
     numMobs: 14,
-    weight: 0,
+    weight: 2,
   },
   {
     name: "Dedotated Ram",
@@ -438,17 +438,6 @@ export const Monsters: Monster[] = [
     accHigh: 2250,
     respawnRate: 35,
     numMobs: 20,
-    weight: 3.8,
-  },
-  {
-    name: "Bloodbone",
-    attack: 3000,
-    health: 10000000,
-    exp: 6000,
-    accLow: 50,
-    accHigh: 150,
-    respawnRate: 40,
-    numMobs: 1,
-    weight: 0,
+    weight: 3,
   },
 ];
