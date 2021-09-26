@@ -234,22 +234,6 @@ export default defineComponent({
       return Monsters.filter((x) => x.name === currentMonsterName.value)[0];
     });
 
-    const multiHitMultiplier = computed(() => {
-      switch (currentCharacter.value?.class) {
-        case Class.Warrior:
-          return 1 + (110 * stats.skill1Lvl) / (stats.skill1Lvl + 50) / 100;
-        case Class.Archer:
-          return 1 + (120 * stats.skill1Lvl) / (stats.skill1Lvl + 40) / 100;
-        case Class.Hunter:
-          return (
-            1 +
-            (120 * stats.skill1Lvl) / (stats.skill1Lvl + 40) / 100 +
-            (120 * stats.skill2Lvl) / (stats.skill2Lvl + 40) / 100
-          );
-      }
-      return 1;
-    });
-
     const multiHitChance= computed(() => {
       // 100 is for the 100% chance of hitting your basic attack
       let chanceArr = [100];
@@ -292,14 +276,14 @@ export default defineComponent({
           break;
         case Class.Journeyman:
           // Basic attacks do more damage
-          damageArr[0] = 1 + 0.6*stats.skill1Lvl;
-          damageArr.push((25 + Math.floor(stats.skill1Lvl/3)));
+          damageArr[0] = 1*(1+0.6*stats.skill1Lvl/100);
+          damageArr.push((25 + Math.floor(stats.skill1Lvl/3))/100);
           break;
         case Class.Maestro:
           // Increase the damage of the other hits.
-          damageArr[0] = 1 + 0.6*stats.skill1Lvl + 0.5*stats.skill2Lvl;
-          damageArr.push((25 + Math.floor(stats.skill1Lvl/3) + 0.5*stats.skill2Lvl));
-          damageArr.push(((20 + Math.floor(stats.skill1Lvl/4))));
+          damageArr[0] = 1*(1+0.6*stats.skill1Lvl/100)*(1+0.5*stats.skill2Lvl/100);
+          damageArr.push((25 + Math.floor(stats.skill1Lvl/3) + 0.5*stats.skill2Lvl)/100);
+          damageArr.push(((20 + Math.floor(stats.skill1Lvl/4)))/100);
           break;
       }
       return damageArr;
@@ -579,6 +563,9 @@ export default defineComponent({
           numHits = numHits + 1;
         }
         totalHits.push(numHits);
+      }
+      if(monster.name == "Dedotated Ram"){
+        console.log(multiHitDamage.value)
       }
 
       // Calculate average number of hits
