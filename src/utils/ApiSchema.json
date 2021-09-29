@@ -210,13 +210,7 @@
           "required": ["level", "progress", "golden"]
         }
       }
-    },
-    "version": {
-      "description": "The game version from which this data was retrieved.",
-      "type": "string",
-      "pattern": "^\\d+\\.\\d+(.+)?"
     }
   },
-  "required": ["version"],
   "additionalProperties": false
 }

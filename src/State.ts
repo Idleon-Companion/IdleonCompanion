@@ -96,7 +96,11 @@ export function versionControl() {
     const newSkills = ["Trapping", "Construction", "Worship"] as const;
 
     for (const key in state.value.chars) {
-      for (const s of newSkills) state.value.chars[key].skills[s] = 0;
+      for (const s of newSkills) {
+        if (!(s in state.value.chars[key].skills)) {
+          state.value.chars[key].skills[s] = 0;
+        }
+      }
     }
   }
   // Add new bubble slots and a goals field for each bubble
@@ -138,9 +142,11 @@ export function versionControl() {
       delete (state.value.chars[index] as Character & { statues: any }).statues;
     }
     // Add stamp tracking data
-    state.value.stamps = {};
-    for (const stamp of Object.values(Stamps)) {
-      state.value.stamps[stamp.name] = 0;
+    if (!state.value.stamps) {
+      state.value.stamps = {};
+      for (const stamp of Object.values(Stamps)) {
+        state.value.stamps[stamp.name] = 0;
+      }
     }
     // Reset tasks/daily reset timer
     state.value.tasks = {
