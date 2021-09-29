@@ -2,17 +2,26 @@
   <q-card class="m-4 md:(mx-auto w-1/2)">
     <q-card-section>
       <div class="text-lg text-negative">
-        WARNING: This will overwrite your current Idleon Companion data.
+        WARNING: This will overwrite your current Idleon Companion data!
       </div>
       <div class="text-secondary">
         This tool is in beta and may not work as expected. It is recommended to
-        save to cloud before importing game data.
+        save to cloud before importing game data. In order to use this tool, use
+        one of the third-party tools to extract your data from the game. Use
+        these tools at your own risk!
       </div>
+      <a
+        class="text-info font-medium"
+        href="https://github.com/desophos/idleon-saver/releases"
+        >Idleon Saver (Steam)</a
+      >
     </q-card-section>
     <q-card-section>
       <div class="text-xl">Upload Data</div>
       <div class="text-secondary">
-        TODO: Add links/explanations for extension usage.
+        After you obtain a data file, you can either upload it here or paste the
+        contents below. Note that sharing this data will allow others to see
+        your game data.
       </div>
       <q-file
         v-model="jsonFile"
