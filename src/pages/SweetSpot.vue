@@ -50,8 +50,7 @@
         />
       </div>
       <div>
-        Enter your character's stats. In the future, this will be calculated
-        based on your equipment and unlocks.
+        Enter your character's stats.
       </div>
       <div class="flex py-2">
         <q-input
@@ -102,7 +101,7 @@
       <div v-if="skillInfo">
         <div class="text-lg">Multi-hit Skills</div>
         <div class="flex flex-col">
-          <div class="flex my-1">
+          <div class="flex my-1" v-if="skillInfo.skill1">
             <ICAsset
               v-if="skillInfo.skill1"
               :image="Assets.FromDir(skillInfo.skill1.image, 'talents')"
@@ -118,7 +117,7 @@
               label="Skill 1"
             />
           </div>
-          <div class="flex my-1">
+          <div class="flex my-1" v-if="skillInfo.skill2">
             <ICAsset
               v-if="skillInfo.skill2"
               :image="Assets.FromDir(skillInfo.skill2.image, 'talents')"
@@ -143,7 +142,8 @@
         These are your top 5 monsters for active EXP/swing. Note that movement
         speed, respawn rate, and other factors affect total farming value. 
       </div>
-      <div class="flex p-4">
+      <q-btn @click="computeMonsters" color="secondary" label="Calculate Best Farming Spot"></q-btn>
+      <div class="flex p-4" v-if="sortedMonstersForFarming">
         <div
           v-for="(monster, index) in sortedMonstersForFarming.slice(0, 5)"
           :key="monster.name"
@@ -159,7 +159,7 @@
             />
             <div class="font-medium">{{ monster.name }}</div>
             <div class="text-secondary">
-              {{ expPerSwing(monster).toFixed(2) }} EXP/swing
+              {{ expPerSwingContainer[index].toFixed(2) }} EXP/swing
             </div>
           </div>
         </div>
@@ -201,6 +201,7 @@ import {
 import { Monster, Monsters } from "~/composables/SweetSpot";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import { truncateSync } from "fs";
+import { isNull } from "util";
 
 const wikiLinks = new Map([
   ["Bestiary", "https://idleon.miraheze.org/wiki/Bestiary"],
@@ -358,7 +359,7 @@ export default defineComponent({
       }
       if (classes.includes(Class.Maestro)) {
         skill2 = {
-          image: "",
+          image: "mae-3-4",
           name: "Triple Jab",
         };
       }
@@ -422,7 +423,7 @@ export default defineComponent({
         },
         {
           name: "expMultiplier",
-          label: "EXP Multiplier",
+          label: "EXP w/Multiplier",
           field: (m: Monster) => monsterExpMul(m),
         },
         {
@@ -441,11 +442,13 @@ export default defineComponent({
     });
 
     // Determines the best monsters for the player to farm
-    const sortedMonstersForFarming = computed(() => {
+    const sortedMonstersForFarming = ref([] as any)
+
+    const sortMonsters = (): any => {
       return Monsters.slice().sort((a, b) => {
         return monsterFarmingValue(b) - monsterFarmingValue(a);
       });
-    });
+    };
 
     const expToNextLevel = (level: number): number => {
       // Calculation taken from the Idleon toolbox
@@ -585,6 +588,8 @@ export default defineComponent({
       return monster.exp * monsterExpMultiplier.value;
     };
 
+    const expPerSwingContainer = ref([] as any);
+
     const expPerSwing = (monster: Monster): number => {
       let swingToKill = avgSwingToKill(monster);
       let expMul = monsterExpMul(monster);
@@ -622,20 +627,34 @@ export default defineComponent({
       avgSwingToKill,
       currentMonsterName,
       expPerSwing,
+      expPerSwingContainer,
       expToNextLevel,
       hitChance,
       avgMaxHitToKill,
       avgMinHitToKill,
+      avgHitToKill,
       monsterExpInGame,
       monsterExpMul,
       monsterFarmingValue,
       stats,
       skillInfo,
       sortedMonstersForFarming,
+      sortMonsters,
       sweetSpotColumns,
       wikiLinks,
     };
   },
+
+  methods: {
+    computeMonsters: function() {
+      this.sortedMonstersForFarming = this.sortMonsters();
+      
+      this.expPerSwingContainer = [];
+      this.sortedMonstersForFarming.forEach(monster => {
+        this.expPerSwingContainer.push(this.expPerSwing(monster));
+      });
+    }
+  }
 });
 </script>
 
