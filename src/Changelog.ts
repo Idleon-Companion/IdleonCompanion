@@ -167,7 +167,7 @@ export const Changelog: ChangelogEntry[] = [
     version: "0.3.2 (SweetSpot Update)",
     changes: {
       changes: [
-        "SweetSpot: Calculation of the Average hit to kill has been refined. World 3 is now included in the calculator!",
+        "SweetSpot: World 3 is now included in the calculator! Calculation of the Average hit to kill has been refined. A \"Calculate\" button has been added to prevent uneeded computation. In-depth Table has been made easier to view"
       ],
     },
     date: "October 2021",

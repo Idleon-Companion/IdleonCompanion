@@ -388,7 +388,7 @@ export const Monsters: Monster[] = [
   {
     name: "Quenchie",
     attack: 1150,
-    health: 22500,
+    health: 225000,
     exp: 1570,
     accLow: 1300,
     accHigh: 3900,
