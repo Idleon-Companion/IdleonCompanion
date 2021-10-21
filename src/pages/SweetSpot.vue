@@ -44,6 +44,7 @@
           filled
           dense
           v-model.number="monsterExpInGame"
+          :min="0"
           class="ml-2"
           type="number"
           label="In-game EXP"
@@ -56,7 +57,7 @@
         <q-input
           filled
           dense
-          v-model.number="stats.minDmg"
+          v-model.number="statsBuffer.minDmg"
           :min="1"
           class="mr-2"
           type="number"
@@ -65,35 +66,40 @@
         <q-input
           filled
           dense
-          v-model.number="stats.maxDmg"
-          class="mr-2"
-          type="number"
-          label="Maximum Damage"
-        />
-        <q-input
-          filled
-          dense
-          v-model.number="stats.critChance"
+          v-model.number="statsBuffer.maxDmg"
           :min="2"
           class="mr-2"
           type="number"
-          label="Crit Chance"
+          label="Maximum Damage"
+          debounce="1000"
         />
         <q-input
           filled
           dense
-          v-model.number="stats.critDmg"
+          v-model.number="statsBuffer.critChance"
           :min="0"
           class="mr-2"
-          fill-mask="0"
           type="number"
-          label="Crit Damage"
+          label="Crit Chance"
+          step=".01"
+          suffix="%"
         />
         <q-input
           filled
           dense
-          v-model.number="stats.accuracy"
+          v-model.number="statsBuffer.critDmg"
           :min="0"
+          class="mr-2"
+          type="number"
+          label="Crit Damage"
+          step=".01"
+          suffix="x"
+        />
+        <q-input
+          filled
+          dense
+          v-model.number="statsBuffer.accuracy"
+          :min="1"
           type="number"
           label="Accuracy"
         />
@@ -110,7 +116,7 @@
             <q-input
               filled
               dense
-              v-model.number="stats.skill1Lvl"
+              v-model.number="statsBuffer.skill1Lvl"
               :min="0"
               class="m-1"
               type="number"
@@ -126,7 +132,7 @@
             <q-input
               filled
               dense
-              v-model.number="stats.skill2Lvl"
+              v-model.number="statsBuffer.skill2Lvl"
               :min="0"
               class="m-1"
               type="number"
@@ -168,7 +174,7 @@
       <div>
         The SweetSpot logic is maintained by #100mar with the UI created by #adapap. If there are any questions regarding the best farming spots, please visit the public Idleon Companion discord server found in the <a href="/Changelog" style="color:#5bc0de">Changelog</a>.
         This tool was created using data from multiple Idleon characters to tweak the results of the calculator. <br>
-        Below is an in-depth table of values. For any monster that takes 15+ Average hits to kill, it will show up as "0.0".
+        Below is an in-depth table of values. For any monster that takes 15+ Average hits to kill, The Exp/Swing and Farming Value is not calculated.
       </div>
     </q-card-section>
     <q-card-section>
@@ -176,6 +182,7 @@
         bordered
         hide-bottom
         flat
+        class="sweetspot-table"
         :columns="sweetSpotColumns"
         :rows="allMonsters"
         :rows-per-page-options="[0]"
@@ -214,6 +221,16 @@ export default defineComponent({
   },
   setup() {
     const currentMonsterName = ref("");
+    const statsBuffer = reactive({
+      skill1Lvl: 0,
+      skill2Lvl: 0,
+      minDmg: 1,
+      maxDmg: 2,
+      accuracy: 2,
+      critChance: 0,
+      critDmg: 1.00,
+    });
+
     const stats = reactive({
       skill1Lvl: 0,
       skill2Lvl: 0,
@@ -223,6 +240,26 @@ export default defineComponent({
       critChance: 0,
       critDmg: 1.00,
     });
+
+    /* Key = Monster name */ 
+
+    const monsterCalcArray = computed(() => {
+      var monsterDict:any = [];
+      Monsters.forEach(monster =>{
+        let monsterElem = {
+              hitChance: hitChance(monster),
+              avgMinHitToKill: avgMinHitToKill(monster),
+              avgMaxHitToKill: avgMaxHitToKill(monster),
+              avgHitToKill: avgHitToKill(monster),
+              monsterExpMul: monsterExpMul(monster),
+              expPerSwing: expPerSwing(monster),
+              monsterFarmingValue: monsterFarmingValue(monster)
+          }
+          monsterDict[monster.name] = monsterElem;
+        });
+      return monsterDict;
+    });
+
     const monsterExpInGame = ref(0);
 
     const { currentCharacter } = useCharacters();
@@ -251,12 +288,12 @@ export default defineComponent({
           break;
         case Class.Journeyman:
           // Double Hit, 100% chance of a 2nd punch.
-          chanceArr.push(1.00);
+          chanceArr.push(100);
           break;
         case Class.Maestro:
           // Maestro has Triple Jab. 100% chance of 3 punches.
-          chanceArr.push(1.00);
-          chanceArr.push(1.00);
+          chanceArr.push(100);
+          chanceArr.push(100);
           break
       }
       return chanceArr;
@@ -398,22 +435,27 @@ export default defineComponent({
         {
           name: "hitChance",
           label: "Hit Chance",
-          field: (m: Monster) => `${(hitChance(m) * 100).toPrecision(3)}%`,
+          field: (m: Monster) => `${(monsterCalcArray.value[m.name].hitChance * 100).toPrecision(3)}%`,
         },
         {
           name: "minHits",
           label: "Min. Hits",
-          field: (m: Monster) => avgMinHitToKill(m),
+          field: (m: Monster) => monsterCalcArray.value[m.name].avgMinHitToKill,
         },
         {
           name: "maxHits",
           label: "Max. Hits",
-          field: (m: Monster) => avgMaxHitToKill(m),
+          field: (m: Monster) => monsterCalcArray.value[m.name].avgMaxHitToKill,
         },
         {
           name: "avgHit",
           label: "Average Hits",
-          field: (m: Monster) => avgHitToKill(m).toFixed(1),
+          field: (m: Monster) => {
+            if (monsterCalcArray.value[m.name].avgHitToKill == 0.0)
+              return "15+"
+            else
+              return monsterCalcArray.value[m.name].avgHitToKill.toFixed(1)
+            },
         },
         {
           name: "exp",
@@ -424,18 +466,28 @@ export default defineComponent({
         {
           name: "expMultiplier",
           label: "EXP w/Multiplier",
-          field: (m: Monster) => monsterExpMul(m),
+          field: (m: Monster) => monsterCalcArray.value[m.name].monsterExpMul,
         },
         {
           name: "expPerSwing",
           label: "EXP / Swing",
-          field: (m: Monster) => expPerSwing(m).toFixed(1),
+          field: (m: Monster) => {
+            if (monsterCalcArray.value[m.name].avgHitToKill == 0.0)
+              return "N/A"
+            else 
+              return monsterCalcArray.value[m.name].expPerSwing.toFixed(2)
+          },
           sortable: true,
         },
         {
           name: "monsterValue",
           label: "Farming Value",
-          field: (m: Monster) => monsterFarmingValue(m).toFixed(3),
+          field: (m: Monster) => {
+            if (monsterCalcArray.value[m.name].avgHitToKill == 0.0)
+              return "N/A"
+            else
+              return monsterCalcArray.value[m.name].monsterFarmingValue.toFixed(3)
+          },
           sortable: true,
         },
       ];
@@ -446,7 +498,8 @@ export default defineComponent({
 
     const sortMonsters = (): any => {
       return Monsters.slice().sort((a, b) => {
-        return monsterFarmingValue(b) - monsterFarmingValue(a);
+        //return monsterFarmingValue(b) - monsterFarmingValue(a);
+        return monsterCalcArray.value[b.name].monsterFarmingValue - monsterCalcArray.value[a.name].monsterFarmingValue
       });
     };
 
@@ -624,6 +677,7 @@ export default defineComponent({
     return {
       Assets,
       allMonsters: Monsters,
+      monsterCalcArray,
       avgSwingToKill,
       currentMonsterName,
       expPerSwing,
@@ -637,6 +691,7 @@ export default defineComponent({
       monsterExpMul,
       monsterFarmingValue,
       stats,
+      statsBuffer,
       skillInfo,
       sortedMonstersForFarming,
       sortMonsters,
@@ -647,15 +702,45 @@ export default defineComponent({
 
   methods: {
     computeMonsters: function() {
+      Object.assign(this.stats, this.statsBuffer);
+
       this.sortedMonstersForFarming = this.sortMonsters();
       
       this.expPerSwingContainer = [];
-      this.sortedMonstersForFarming.forEach(monster => {
-        this.expPerSwingContainer.push(this.expPerSwing(monster));
+      this.sortedMonstersForFarming.forEach((monster: Monster) => {
+        this.expPerSwingContainer.push(this.monsterCalcArray[monster.name].expPerSwing);
       });
     }
   }
 });
 </script>
 
-<style scoped lang="sass"></style>
+<style lang="sass">
+.sweetspot-table
+  /* Code copied from https://quasar.dev/vue-components/table */
+  /* height or max-height is important */
+  height: 500px
+
+  td:first-child
+    background-color: #272b30 !important
+
+  tr th
+    position: sticky
+    /* higher than z-index for td below */
+    z-index: 2
+    background: #272b30
+
+  thead tr:first-child th
+    top: 0
+    z-index: 1
+  tr:first-child th:first-child
+    /* highest z-index */
+    z-index: 3
+
+  td:first-child
+    z-index: 1
+
+  td:first-child, th:first-child
+    position: sticky
+    left: 0
+</style>
