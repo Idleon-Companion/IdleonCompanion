@@ -494,7 +494,7 @@ export default defineComponent({
     });
 
     // Determines the best monsters for the player to farm
-    const sortedMonstersForFarming = ref([] as any)
+    const sortedMonstersForFarming = ref([] as Monster[])
 
     const sortMonsters = (): any => {
       return Monsters.slice().sort((a, b) => {
