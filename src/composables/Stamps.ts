@@ -289,7 +289,7 @@ const CombatStamps: Stamp[] = [
     growthFunc: Growth.Add,
   },
   {
-    name: "Sukka Foo",
+    name: "Sukka Foo Stamp",
     material: "Amarok Slab",
     bonus: "% Boss Damage",
     baseCoinCost: 10000,
@@ -315,7 +315,7 @@ const CombatStamps: Stamp[] = [
     growthFunc: Growth.Add,
   },
   {
-    name: "Steve Sword",
+    name: "Steve Sword Stamp",
     material: "Fruitfly",
     bonus: "% Total Damage",
     baseCoinCost: 10000,

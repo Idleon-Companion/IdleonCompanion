@@ -131,11 +131,13 @@ export function versionControl() {
       state.value.statues = {} as Record<StatueName, StatueInfo>;
     }
     for (const statue of Object.keys(Statues) as Array<StatueName>) {
-      state.value.statues[statue] = {
-        golden: false,
-        level: 0,
-        progress: 0,
-      };
+      if (!state.value.statues[statue]){
+        state.value.statues[statue] = {
+          golden: false,
+          level: 0,
+          progress: 0,
+        };
+      }
     }
     // Remove statues from character state
     for (const index in state.value.chars) {

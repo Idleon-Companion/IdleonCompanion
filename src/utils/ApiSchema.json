@@ -195,6 +195,9 @@
         "": {
           "type": "object",
           "properties": {
+            "golden": {
+              "type": "boolean"
+            },
             "level": {
               "type": "integer",
               "minimum": 0
@@ -202,12 +205,9 @@
             "progress": {
               "type": "integer",
               "minimum": 0
-            },
-            "golden": {
-              "type": "boolean"
             }
           },
-          "required": ["level", "progress", "golden"]
+          "required": ["golden", "level", "progress"]
         }
       }
     }
