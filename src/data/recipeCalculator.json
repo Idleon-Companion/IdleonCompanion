@@ -1,4 +1,12 @@
 {
+  "Acorn Topper": {
+    "name": "Acorn Topper",
+    "quantity": 1,
+    "materials": [
+      { "name": "Acorn", "quantity": 25000 },
+      { "name": "Woodular Circle", "quantity": 15}
+    ]
+  },
   "Adornment of the High Priest": {
     "name": "Adornment of the High Priest",
     "quantity": 1,
@@ -392,13 +400,13 @@
   "Copper Boots": {
     "name": "Copper Boots",
     "quantity": 1,
-    "materials": [{ "name": "Copper Bar", "quantity": 125 }]
+    "materials": [{ "name": "Copper Bar", "quantity": 75 }]
   },
   "Copper Chopper": {
     "name": "Copper Chopper",
     "quantity": 1,
     "materials": [
-      { "name": "Copper Bar", "quantity": 13 },
+      { "name": "Copper Bar", "quantity": 12 },
       { "name": "Oak Logs", "quantity": 30 },
       { "name": "Thread", "quantity": 15 }
     ]
@@ -415,8 +423,8 @@
     "name": "Copper Helmet",
     "quantity": 1,
     "materials": [
-      { "name": "Copper Bar", "quantity": 30 },
-      { "name": "Bean Slices", "quantity": 50 }
+      { "name": "Copper Bar", "quantity": 20 },
+      { "name": "Bean Slices", "quantity": 40 }
     ]
   },
   "Copper Netted Net": {
@@ -431,15 +439,15 @@
     "name": "Copper Pickaxe",
     "quantity": 1,
     "materials": [
-      { "name": "Copper Bar", "quantity": 13 },
-      { "name": "Frog Leg", "quantity": 30 }
+      { "name": "Copper Bar", "quantity": 10 },
+      { "name": "Frog Leg", "quantity": 15 }
     ]
   },
   "Copper Platebody": {
     "name": "Copper Platebody",
     "quantity": 1,
     "materials": [
-      { "name": "Copper Bar", "quantity": 45 },
+      { "name": "Copper Bar", "quantity": 25 },
       { "name": "Trusty Nails", "quantity": 120 }
     ]
   },
@@ -447,7 +455,7 @@
     "name": "Copper Platelegs",
     "quantity": 1,
     "materials": [
-      { "name": "Copper Bar", "quantity": 60 },
+      { "name": "Copper Bar", "quantity": 30 },
       { "name": "Bleach Logs", "quantity": 150 }
     ]
   },
@@ -767,7 +775,7 @@
     "quantity": 1,
     "materials": [
       { "name": "Spore Cap", "quantity": 5 },
-      { "name": "Copper Ore", "quantity": 15 }
+      { "name": "Copper Ore", "quantity": 12 }
     ]
   },
   "Feral Leathering": {
@@ -791,9 +799,8 @@
     "name": "Flip Flops",
     "quantity": 1,
     "materials": [
-      { "name": "Bean Slices", "quantity": 30 },
-      { "name": "Copper Bar", "quantity": 20 },
-      { "name": "Grass Leaf", "quantity": 20 }
+      { "name": "Bean Slices", "quantity": 12 },
+      { "name": "Grass Leaf", "quantity": 5 }
     ]
   },
   "Fur Shirt": {
@@ -826,8 +833,8 @@
     "name": "Gnarled Wand",
     "quantity": 1,
     "materials": [
-      { "name": "Spore Cap", "quantity": 25 },
-      { "name": "Oak Logs", "quantity": 30 }
+      { "name": "Spore Cap", "quantity": 10 },
+      { "name": "Oak Logs", "quantity": 15 }
     ]
   },
   "Gold Boots": {
@@ -1005,8 +1012,8 @@
     "name": "Iron Hatchet",
     "quantity": 1,
     "materials": [
-      { "name": "Jungle Logs", "quantity": 250 },
-      { "name": "Boring Brick", "quantity": 125 }
+      { "name": "Jungle Logs", "quantity": 200 },
+      { "name": "Boring Brick", "quantity": 100 }
     ]
   },
   "Iron Helmet": {
@@ -1021,8 +1028,8 @@
     "name": "Iron Pickaxe",
     "quantity": 1,
     "materials": [
-      { "name": "Iron Bar", "quantity": 100 },
-      { "name": "Carrot Cube", "quantity": 200 }
+      { "name": "Iron Bar", "quantity": 70 },
+      { "name": "Carrot Cube", "quantity": 150 }
     ]
   },
   "Iron Platebody": {
@@ -1112,9 +1119,9 @@
     "name": "Leather Cap",
     "quantity": 1,
     "materials": [
-      { "name": "Frog Leg", "quantity": 25 },
-      { "name": "Oak Logs", "quantity": 45 },
-      { "name": "Thread", "quantity": 13 }
+      { "name": "Frog Leg", "quantity": 15 },
+      { "name": "Oak Logs", "quantity": 30 },
+      { "name": "Thread", "quantity": 10 }
     ]
   },
   "Logger Heels": {
@@ -1178,8 +1185,8 @@
     "name": "Militia Helm",
     "quantity": 1,
     "materials": [
-      { "name": "Iron Bar", "quantity": 25 },
-      { "name": "Copper Ore", "quantity": 150 },
+      { "name": "Iron Bar", "quantity": 15 },
+      { "name": "Copper Ore", "quantity": 80 },
       { "name": "Copper Helmet", "quantity": 2 }
     ]
   },
@@ -1204,7 +1211,7 @@
     "name": "Orange Tee",
     "quantity": 1,
     "materials": [
-      { "name": "Spore Cap", "quantity": 10 },
+      { "name": "Spore Cap", "quantity": 8 },
       { "name": "Oak Logs", "quantity": 15 }
     ]
   },
@@ -1633,8 +1640,8 @@
     "name": "Thief Hood",
     "quantity": 1,
     "materials": [
-      { "name": "Iron Bar", "quantity": 25 },
-      { "name": "Thread", "quantity": 150 },
+      { "name": "Iron Bar", "quantity": 15 },
+      { "name": "Thread", "quantity": 400 },
       { "name": "Copper Helmet", "quantity": 2 }
     ]
   },
@@ -1642,8 +1649,8 @@
     "name": "Top Hat",
     "quantity": 1,
     "materials": [
-      { "name": "Iron Bar", "quantity": 25 },
-      { "name": "Oak Logs", "quantity": 200 },
+      { "name": "Iron Bar", "quantity": 15 },
+      { "name": "Oak Logs", "quantity": 150 },
       { "name": "Copper Helmet", "quantity": 2 }
     ]
   },
@@ -1651,9 +1658,8 @@
     "name": "Torn Jeans",
     "quantity": 1,
     "materials": [
-      { "name": "Frog Leg", "quantity": 20 },
-      { "name": "Copper Bar", "quantity": 8 },
-      { "name": "Thread", "quantity": 15 }
+      { "name": "Frog Leg", "quantity": 10 },
+      { "name": "Copper Bar", "quantity": 5 }
     ]
   },
   "Uninflated Glove": {
@@ -1763,16 +1769,16 @@
     "name": "Wooden Bow",
     "quantity": 1,
     "materials": [
-      { "name": "Spore Cap", "quantity": 25 },
-      { "name": "Thread", "quantity": 30 }
+      { "name": "Spore Cap", "quantity": 10 },
+      { "name": "Thread", "quantity": 15 }
     ]
   },
   "Wooden Spear": {
     "name": "Wooden Spear",
     "quantity": 1,
     "materials": [
-      { "name": "Spore Cap", "quantity": 25 },
-      { "name": "Copper Bar", "quantity": 10 }
+      { "name": "Spore Cap", "quantity": 10 },
+      { "name": "Copper Bar", "quantity": 5 }
     ]
   },
   "Wooden Traps": {
