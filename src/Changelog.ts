@@ -172,4 +172,15 @@ export const Changelog: ChangelogEntry[] = [
     },
     date: "October 2021",
   },
+  {
+    version: "0.3.3 (Bugfixes)",
+    changes: {
+      fixes: [
+        "Statues: Statues are now able to be imported",
+        "Stamps: Image of Sukka Foo and Steve Sword now show correctly",
+        "Cards: Name and source of Summer Cards updated"
+      ],
+    },
+    date: "October 2021",
+  },
 ];
