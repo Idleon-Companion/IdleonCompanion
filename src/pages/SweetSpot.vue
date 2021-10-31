@@ -478,6 +478,7 @@ export default defineComponent({
               return monsterCalcArray.value[m.name].expPerSwing.toFixed(2)
           },
           sortable: true,
+          sort: (a: number, b: number) => a - b,
         },
         {
           name: "monsterValue",
@@ -489,6 +490,7 @@ export default defineComponent({
               return monsterCalcArray.value[m.name].monsterFarmingValue.toFixed(3)
           },
           sortable: true,
+          sort: (a: number, b: number) => a - b,
         },
       ];
     });
