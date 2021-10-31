@@ -10,11 +10,11 @@
         one of the third-party tools to extract your data from the game. Use
         these tools at your own risk!
       </div>
-      <!-- <a
+      <a
         class="text-info font-medium"
         href="https://github.com/desophos/idleon-saver/releases"
-        >Idleon Saver (Steam)</a
-      > -->
+        >Idleon Saver (Steam - Windows Only)</a
+      >
     </q-card-section>
     <q-card-section>
       <div class="text-xl">Upload Data</div>

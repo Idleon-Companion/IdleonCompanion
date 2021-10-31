@@ -183,4 +183,13 @@ export const Changelog: ChangelogEntry[] = [
     },
     date: "October 2021",
   },
+  {
+    version: "1.0.0 (Imports are Here!)",
+    changes: {
+      changes: [
+        "Import: The import sidepannel has been introduced! Use tools created by our idleon community to generate a JSON file with all your character info! Import this file and all your progress in the Idleon Companion is automatically filled! The tool is able to take your data from the Steam Version!",
+      ],
+    },
+    date: "October 2021",
+  },
 ];
