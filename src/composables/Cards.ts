@@ -237,21 +237,21 @@ const YumYumDesertCards: Card[] = [
 
 const EasyResourcesCards: Card[] = [
   {
-    id: "Copper Ore",
+    id: "Copper",
     category: CardCategory.EasyResources,
     effect: Effects.BaseAccuracy,
     base: 4,
     source: "Mining Copper",
   },
   {
-    id: "Iron Ore",
+    id: "Iron",
     category: CardCategory.EasyResources,
     effect: Effects.MiningEfficiency,
     base: 5,
     source: "Mining Iron",
   },
   {
-    id: "Gold Ore",
+    id: "Gold",
     category: CardCategory.EasyResources,
     effect: Effects.MiningExp,
     base: 5,
@@ -265,28 +265,28 @@ const EasyResourcesCards: Card[] = [
     source: "Smelting Ore in Slots 1-4",
   },
   {
-    id: "Oak Logs",
+    id: "Oak Tree",
     category: CardCategory.EasyResources,
     effect: Effects.BaseDefense,
     base: 3,
     source: "Choppin Oak Tree",
   },
   {
-    id: "Bleach Logs",
+    id: "Birch Tree",
     category: CardCategory.EasyResources,
     effect: Effects.ChoppinEfficiency,
     base: 5,
     source: "Choppin Birch Tree",
   },
   {
-    id: "Jungle Logs",
+    id: "Jungle Tree",
     category: CardCategory.EasyResources,
     effect: Effects.ChoppinExp,
     base: 5,
     source: "Choppin Jungle Tree",
   },
   {
-    id: "Forest Fibres",
+    id: "Forest Tree",
     category: CardCategory.EasyResources,
     effect: Effects.ExpConversion,
     base: 8,
@@ -314,14 +314,14 @@ const EasyResourcesCards: Card[] = [
     source: "Fishing Jellyfish",
   },
   {
-    id: "Fly",
+    id: "Flies",
     category: CardCategory.EasyResources,
     effect: Effects.MonsterExpActive,
     base: 4,
     source: "Catching Flies",
   },
   {
-    id: "Butterfly",
+    id: "Butterflies",
     category: CardCategory.EasyResources,
     effect: Effects.CatchingEfficiency,
     base: 5,
@@ -331,21 +331,21 @@ const EasyResourcesCards: Card[] = [
 
 const MediumResourcesCards: Card[] = [
   {
-    id: "Platinum Ore",
+    id: "Plat",
     category: CardCategory.MediumResources,
     effect: Effects.MiningAfk,
     base: 2,
     source: "Mining Platinum",
   },
   {
-    id: "Dementia Ore",
+    id: "Dementia",
     category: CardCategory.MediumResources,
     effect: Effects.MiningSpeed,
     base: 4,
     source: "Mining Dementia",
   },
   {
-    id: "Void Ore",
+    id: "Void",
     category: CardCategory.MediumResources,
     effect: Effects.CardChance,
     base: 6,
@@ -359,21 +359,21 @@ const MediumResourcesCards: Card[] = [
     source: "Smelting Ore in Slots 5-8",
   },
   {
-    id: "Tropilogs",
+    id: "Palm Tree",
     category: CardCategory.MediumResources,
     effect: Effects.ChoppinAfk,
     base: 2,
     source: "Choppin Palm Tree",
   },
   {
-    id: "Potty Rolls",
+    id: "Toilet Tree",
     category: CardCategory.MediumResources,
     effect: Effects.ChoppinSpeed,
     base: 4,
     source: "Choppin Toilet Tree",
   },
   {
-    id: "Veiny Logs",
+    id: "Stump Tree",
     category: CardCategory.MediumResources,
     effect: Effects.TotalAccuracy,
     base: 3,
@@ -394,7 +394,7 @@ const MediumResourcesCards: Card[] = [
     source: "Catching Sentient Cereal",
   },
   {
-    id: "Fruitfly",
+    id: "Fruitflies",
     category: CardCategory.MediumResources,
     effect: Effects.CatchingAfk,
     base: 2,
@@ -439,7 +439,7 @@ const MediumResourcesCards: Card[] = [
 
 const HardResourcesCards: Card[] = [
   {
-    id: "Lustre Ore",
+    id: "Lustre",
     category: CardCategory.HardResources,
     effect: Effects.BaseLUK,
     base: 4,
@@ -495,14 +495,14 @@ const HardResourcesCards: Card[] = [
     source: "Thermonuclear Climb (Trapping)",
   },
   {
-    id: "Tundra Logs",
+    id: "Saharan Foal",
     category: CardCategory.HardResources,
     effect: Effects.ChoppinAfk,
     base: 2.5,
     source: "Chopping Saharan Foal",
   },
   {
-    id: "Wispy Lumber",
+    id: "Wispy Tree",
     category: CardCategory.HardResources,
     effect: Effects.ChoppinSpeed,
     base: 6,
@@ -648,7 +648,7 @@ const BossesCards: Card[] = [
     source: "Baba Yaga (1/33.3)",
   },
   {
-    id: "Dr. Defecaus",
+    id: "Dr Defecaus",
     category: CardCategory.Bosses,
     effect: Effects.TotalDamage,
     base: 5,
@@ -662,7 +662,7 @@ const BossesCards: Card[] = [
     source: "Boop (1/667)",
   },
   {
-    id: "Normal Amarok",
+    id: "Amarok",
     category: CardCategory.Bosses,
     effect: Effects.SkillAfk,
     base: 2.5,
@@ -690,7 +690,7 @@ const BossesCards: Card[] = [
     source: "King Doot (1/25)",
   },
   {
-    id: "Normal Efaunt",
+    id: "Efaunt",
     category: CardCategory.Bosses,
     effect: Effects.MonsterExp,
     base: 5,
@@ -753,14 +753,14 @@ const EventsCards: Card[] = [
     category: CardCategory.Events,
     effect: Effects.TotalHP,
     base: 5,
-    source: "Choco Box",
+    source: "Chocco Box",
   },
   {
-    id: "Choco Box",
+    id: "Chocco Box",
     category: CardCategory.Events,
     effect: Effects.BoostFoodEffect,
     base: 4,
-    source: "Choco Box",
+    source: "Chocco Box",
   },
   {
     id: "Floofie",
