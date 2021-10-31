@@ -614,7 +614,7 @@ const CombatStamps: Item[] = [
     source: "Quest (Snouts)",
   },
   {
-    name: "Sukka Foo Stamp",
+    name: "Sukka Foo",
     source: "Alchemy (Level Up Gift)",
   },
   {
@@ -622,7 +622,7 @@ const CombatStamps: Item[] = [
     source: "Quest (Wellington)",
   },
   {
-    name: "Steve Sword Stamp",
+    name: "Steve Sword",
     source: "Quest (Mutton)",
   },
   {
@@ -692,7 +692,7 @@ const SkillStamps: Item[] = [
     source: "DropTable11",
   },
   {
-    name: "Brainstew Stamp",
+    name: "Brainstew Stamps",
     source: "Quest (Wellington)",
   },
   {
@@ -748,7 +748,7 @@ const SkillStamps: Item[] = [
     source: "DropTable18",
   },
   {
-    name: "Sample Stamp",
+    name: "Stample Stamp",
     source: "DropTable14",
   },
   {
@@ -775,7 +775,7 @@ const MiscStamps: Item[] = [
     source: "Quest (XxX Cattleprod XxX)",
   },
   {
-    name: "Crystallin Stamp",
+    name: "Crystallin",
     source: "Drop (Crystal Monsters)",
   },
   {
