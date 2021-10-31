@@ -51,7 +51,7 @@ const InventoryBags: Item[] = [
     source: "Drop (Baby Boa)",
   },
   {
-    name: "Totally Normal And Not Fake Bag",
+    name: "Totally Normal and not fake Bag",
     bagSlots: 2,
     source: "Drop (Mimic)",
   },
