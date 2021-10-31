@@ -273,7 +273,7 @@
         "func": "Add"
     },
     "23": {
-        "name": "Sukka Foo Stamp",
+        "name": "Sukka Foo",
         "material": "Amarok Slab",
         "bonus": "% Boss Damage",
         "baseCoinCost": 2500,
@@ -299,7 +299,7 @@
         "func": "Add"
     },
     "26": {
-        "name": "Steve Sword Stamp",
+        "name": "Steve Sword",
         "material": "Fruitfly",
         "bonus": "% Total Damage",
         "baseCoinCost": 10000,
@@ -507,7 +507,7 @@
         "func": "Add"
     },
     "1014": {
-        "name": "Brainstew Stamp",
+        "name": "Brainstew Stamps",
         "material": "Gold Ore",
         "bonus": "% Alch Exp",
         "baseCoinCost": 1250,
@@ -676,7 +676,7 @@
         "func": "Add"
     },
     "2003": {
-        "name": "Crystallin Stamp",
+        "name": "Crystallin",
         "material": "Boring Brick",
         "bonus": "Crystal Monster% Spawn Chance",
         "baseCoinCost": 800,

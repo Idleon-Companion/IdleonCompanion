@@ -289,7 +289,7 @@ const CombatStamps: Stamp[] = [
     growthFunc: Growth.Add,
   },
   {
-    name: "Sukka Foo Stamp",
+    name: "Sukka Foo",
     material: "Amarok Slab",
     bonus: "% Boss Damage",
     baseCoinCost: 10000,
@@ -315,7 +315,7 @@ const CombatStamps: Stamp[] = [
     growthFunc: Growth.Add,
   },
   {
-    name: "Steve Sword Stamp",
+    name: "Steve Sword",
     material: "Fruitfly",
     bonus: "% Total Damage",
     baseCoinCost: 10000,
@@ -734,7 +734,7 @@ const SkillStamps: Stamp[] = [
     growthFunc: Growth.Add,
   },
   {
-    name: "Sample Stamp",
+    name: "Stample Stamp",
     material: "Floof Ploof",
     bonus: "% Sample Size",
     baseCoinCost: 10000,
@@ -760,7 +760,7 @@ const SkillStamps: Stamp[] = [
     growthFunc: Growth.Add,
   },
   {
-    name: "Amplesample Stamp",
+    name: "Amplestample Stamp",
     material: "Mosquisnow",
     bonus: "% Sample Size",
     baseCoinCost: 25000,
@@ -997,7 +997,7 @@ const MiscStamps: Stamp[] = [
     growthFunc: Growth.Add,
   },
   {
-    name: "Overkill Stamp",
+    name: "Multikill Stamp",
     material: "Spore Cap",
     bonus: "% Base Overkill",
     baseCoinCost: 10000,
