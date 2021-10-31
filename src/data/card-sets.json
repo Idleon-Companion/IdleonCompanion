@@ -2,21 +2,21 @@
   "card_set_1": {
     "title": "Woodcutting",
     "core": {
-      "1": "Normal_Amarok",
-      "2": "Tundra_Logs",
-      "3": "Tropilogs",
-      "4": "Wispy_Lumber"
+      "1": "Amarok",
+      "2": "Saharan_Foal",
+      "3": "Palm_Tree",
+      "4": "Wispy_Tree"
     },
     "useful": {
       "1": "Bunny",
-      "2": "Potty_Rolls",
+      "2": "Toilet_Tree",
       "3": "Chaotic_Efaunt",
-      "4": "Bleach_Logs",
-      "5": "Jungle_Logs",
+      "4": "Birch_Tree",
+      "5": "Jungle_Tree",
       "6": "Biggie_Hours"
     },
     "minimal": {
-      "1": "Choco_Box",
+      "1": "Chocco_Box",
       "2": "Penguin",
       "3": "Walking_Stick",
       "4": "Slime",
@@ -26,16 +26,16 @@
   "card_set_2": {
     "title": "Mining",
     "core": {
-      "1": "Platinum_Ore",
-      "2": "Normal_Amarok",
-      "3": "Dementia_Ore",
-      "4": "Iron_Ore"
+      "1": "Plat",
+      "2": "Amarok",
+      "3": "Dementia",
+      "4": "Iron"
     },
     "useful": {
       "1": "Bunny",
-      "2": "Gold_Ore",
+      "2": "Gold",
       "3": "Chaotic_Efaunt",
-      "4": "Choco_Box",
+      "4": "Chocco_Box",
       "5": "Loveulyte",
       "6": "Biggie_Hours"
     },
@@ -51,7 +51,7 @@
     "title": "Fishing",
     "core": {
       "1": "Bloach",
-      "2": "Normal_Amarok",
+      "2": "Amarok",
       "3": "Hermit_Can",
       "4": "Jellyfish"
     },
@@ -59,7 +59,7 @@
       "1": "Bunny",
       "2": "Coastiolyte",
       "3": "Chaotic_Efaunt",
-      "4": "Choco_Box",
+      "4": "Chocco_Box",
       "5": "Biggie_Hours"
     },
     "minimal": {
@@ -73,16 +73,16 @@
     "core": {
       "1": "Flycicle",
       "2": "Mosquisnow",
-      "3": "Fruitfly",
-      "4": "Butterfly",
-      "5": "Normal_Amarok"
+      "3": "Fruitflies",
+      "4": "Butterflies",
+      "5": "Amarok"
     },
     "useful": {
       "1": "Bunny",
       "2": "Sentient_Cereal",
       "3": "Summer_Spirit",
       "4": "Chaotic_Efaunt",
-      "5": "Choco_Box",
+      "5": "Chocco_Box",
       "6": "Biggie_Hours"
     },
     "minimal": {
@@ -94,7 +94,7 @@
   "card_set_5": {
     "title": "Active_Farming",
     "core": {
-      "1": "Normal_Efaunt",
+      "1": "Efaunt",
       "2": "Moonmoon",
       "3": "Fly",
       "4": "Ghost"
@@ -111,7 +111,7 @@
     "core": {
       "1": "Chaotic_Amarok",
       "2": "Boop",
-      "3": "Normal_Efaunt",
+      "3": "Efaunt",
       "4": "Crystal_Cattle"
     },
     "useful": {
@@ -131,7 +131,7 @@
       "1": "Neyeptune",
       "2": "Wood_Mushroom",
       "3": "Sand_Castle",
-      "4": "Veiny_Logs"
+      "4": "Stump_Tree"
     },
     "useful": {},
     "minimal": {}
@@ -139,7 +139,7 @@
   "card_set_8": {
     "title": "Damage",
     "core": {
-      "1": "Dr._Defecaus",
+      "1": "Dr_Defecaus",
       "2": "Snowman",
       "3": "Bloodbone",
       "4": "Dedotated_Ram",
@@ -170,14 +170,14 @@
     "useful": {
       "1": "Quenchie",
       "2": "Dig_Doug",
-      "3": "Lustre_Ore",
+      "3": "Lustre",
       "4": "Red_Mushroom",
       "5": "Shell_Snake"
     },
     "minimal": {
       "1": "Snelbie",
       "2": "Sir_Stache",
-      "3": "Void_Ore",
+      "3": "Void",
       "4": "Gigafrog",
       "5": "Egggulyte"
     }
@@ -190,7 +190,7 @@
       "3": "Forest_Soul"
     },
     "useful": {
-      "1": "Oak_Logs",
+      "1": "Oak_Tree",
       "2": "Plasti_Doug"
     },
     "minimal": {}
