@@ -51,6 +51,11 @@
             outlined
             type="number"
             class="mr-2 mb-2 w-1/2 md:w-1/3 lg:w-1/4"
+            :min="0"
+            :max="9999"
+            :rules="[
+              (val) => (val >= 0 && val < 9999) || 'Positive integers only',
+            ]"
           >
             <template v-slot:prepend>
               <Tooltip>
