@@ -355,7 +355,7 @@ export function useAlchemy() {
     const vial = Growth.Add(barleyBrew, 1, 0);
     const undev_vial = Math.max(0.05, 1 - (undevCost + vial) / 100);
     const bargain_tag = Math.max(Math.pow(0.75, bargainTagLevel), 0.1);
-    const achieve_discount = +hasAchievement ? 0.90 : 1;
+    const achieve_discount = hasAchievement ? 0.90 : 1;
     const discount = oa * newBubble * undev_vial * bargain_tag * achieve_discount;
     const roundToPrecision = (n: number): number =>
       (precision - Math.round(n * precision)) / 100;
