@@ -1,3 +1,4 @@
+import { connect } from "http2";
 import { Growth } from "~/composables/Utilities";
 import bubbleData from "~/data/bubbles.json";
 
@@ -338,7 +339,8 @@ export function useAlchemy() {
     bargainTagLevel: number,
     bargainBubble: number,
     undevCosts: number,
-    barleyBrew: number
+    barleyBrew: number,
+    hasAchievement: number,
   ) => {
     const precision = Math.pow(10, 4);
 
@@ -353,7 +355,8 @@ export function useAlchemy() {
     const vial = Growth.Add(barleyBrew, 1, 0);
     const undev_vial = Math.max(0.05, 1 - (undevCost + vial) / 100);
     const bargain_tag = Math.max(Math.pow(0.75, bargainTagLevel), 0.1);
-    const discount = oa * newBubble * undev_vial * bargain_tag;
+    const achieve_discount = +hasAchievement ? 0.90 : 1;
+    const discount = oa * newBubble * undev_vial * bargain_tag * achieve_discount;
     const roundToPrecision = (n: number): number =>
       (precision - Math.round(n * precision)) / 100;
     return {
