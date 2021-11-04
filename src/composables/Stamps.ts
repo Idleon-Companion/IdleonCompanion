@@ -1122,7 +1122,7 @@ export function useStamps() {
     return Math.floor(
       s.baseCoinCost *
         Math.pow(
-          s.powCoinBase - (lvl / (lvl + 5 * s.diffRatio)) * 0.25,
+          s.powCoinBase - (+lvl / (+lvl + 5 * s.diffRatio)) * 0.25,
           lvl * (10 / s.diffRatio)
         )
     );

@@ -82,7 +82,7 @@
                     Next material cost:
                     {{
                       stamp.diffRatio -
-                      (stamps[stamp.name] ?? 0 % stamp.diffRatio)
+                      ((stamps[stamp.name] ?? 0) % stamp.diffRatio)
                     }}
                   </div>
                 </div>
