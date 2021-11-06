@@ -44,8 +44,6 @@
       <q-checkbox
         v-model="hasAchievement"
         color="secondary"
-        true-value=1
-        false-value=0
       />
     </div>
     </div>
@@ -133,7 +131,7 @@ export default defineComponent({
     const { calculateBubbleDiscount } = useAlchemy();
 
     const currentCauldron = ref<AlchemyColor>("Orange");
-    const hasAchievement = ref(0);
+    const hasAchievement = ref<number>(0);
 
     const cauldronLevel = ref(0);
     const bargainTagLevel = ref(0);

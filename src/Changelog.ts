@@ -192,4 +192,14 @@ export const Changelog: ChangelogEntry[] = [
     },
     date: "October 2021",
   },
+  {
+    version: "1.0.1 (Stamps & Alchemy Bugfixes)",
+    changes: {
+      fixes: [
+        "Stamps: Costs are now accurate",
+        "Alchemy: Costs are now accurate. Introduced checkbox for SMRT achievement."
+      ],
+    },
+    date: "October 2021",
+  },
 ];
