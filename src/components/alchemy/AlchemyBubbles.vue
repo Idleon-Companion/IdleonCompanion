@@ -5,7 +5,7 @@
       <q-input
         v-model.number="cauldronLevel"
         type="number"
-        label="Cauldron Level"
+        label="Cauldron Boost Cost Level"
         filled
         :min="0"
       />
@@ -37,6 +37,17 @@
       <div class="text-secondary p-1">
         {{ `-${discount["Underdeveloped Costs/Barley Brew"].toFixed(1)}%` }}
       </div>
+    </div>
+    <div class="flex flex-col justify-end px-2">
+      <div class="text-lg">Obtained S-M-R-T</div>
+      <div class="q-gutter-sm">
+      <q-checkbox
+        v-model="hasAchievement"
+        color="secondary"
+        true-value=1
+        false-value=0
+      />
+    </div>
     </div>
     <div class="flex flex-col justify-end px-2 text-green-500">
       <div class="text-lg">Total Discount</div>
@@ -122,6 +133,7 @@ export default defineComponent({
     const { calculateBubbleDiscount } = useAlchemy();
 
     const currentCauldron = ref<AlchemyColor>("Orange");
+    const hasAchievement = ref(0);
 
     const cauldronLevel = ref(0);
     const bargainTagLevel = ref(0);
@@ -144,13 +156,15 @@ export default defineComponent({
       Assets,
       bargainTagLevel,
       bubbleCount: AlchemyConst.BubbleCount,
+      hasAchievement,
       discount: computed(() =>
         calculateBubbleDiscount(
           cauldronLevel.value,
           bargainTagLevel.value,
           bargainBubble.value,
           undevCosts.value,
-          barleyBrew.value
+          barleyBrew.value,
+          hasAchievement.value,
         )
       ),
       cauldronLevel,

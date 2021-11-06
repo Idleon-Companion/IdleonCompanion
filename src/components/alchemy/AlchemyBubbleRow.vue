@@ -103,17 +103,35 @@ export default defineComponent({
       let discountBy = (100 - props.discount) / 100;
       let materialCosts = cloneDeep(bubbleInfo.value.Materials);
       // Sum all materials of the different levels together into the histogram
-      for (let i = alchemyUpgrade.value; i < alchemyGoal.value - 1; i += 1) {
-        let levelMulti = Math.pow(1.35 - (0.3 * i) / (50 + i), i);
+      
+      // Hold the total cost in case goal is higher than current level by 2 or more
+      let totalCosts = Array(bubbleInfo.value.Materials.length);
+      for ( let costIndex = 0; costIndex < totalCosts.length; costIndex ++){
+        totalCosts[costIndex] = 0;
+      }
+
+      // For each level, calcualte the material cost. Then add it to the total cost.
+      for (let bubbleLevel = alchemyUpgrade.value; bubbleLevel < alchemyGoal.value; bubbleLevel += 1) {
+        let levelMulti = Math.pow(1.35 - (0.3 * bubbleLevel) / (50 + bubbleLevel), bubbleLevel);
         bubbleInfo.value.Materials.forEach((material, index) => {
           if (material.isLiquid) {
-            materialCosts[index].Amount += material.Amount + Math.floor(i / 20);
+            totalCosts[index] += materialCosts[index].Amount + Math.floor(bubbleLevel / 20);
           } else {
-            materialCosts[index].Amount +=
-              material.Amount * levelMulti * discountBy;
+            totalCosts[index] += material.Amount * levelMulti * discountBy;
           }
         });
       }
+      
+      // Edge-case if Goal=Upgrade level. Show no materials.
+      bubbleInfo.value.Materials.forEach((material, index) => {
+        if(alchemyUpgrade.value == alchemyGoal.value) {
+          materialCosts[index].Amount = 0;
+        }
+        else{
+          materialCosts[index].Amount = totalCosts[index];
+        }
+      });
+      
       return materialCosts;
     });
 
