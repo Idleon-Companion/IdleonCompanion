@@ -50,6 +50,10 @@ export class Assets {
     return Assets.FromDir(c, "classes");
   }
 
+  static EquipmentImage(item: string): string {
+    return Assets.FromDir(item, "equipment");
+  }
+
   static FromDir(item: string, dir: string, extension?: string): string {
     const cleaned = item.replace(/ /g, "_");
     // Use base URL here for GH pages support

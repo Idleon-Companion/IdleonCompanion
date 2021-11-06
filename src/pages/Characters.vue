@@ -26,6 +26,7 @@
   <CharacterEditor v-else />
   <CharacterProgressTracker v-if="currentCharacter !== null" />
   <Constellations />
+  <Equipment />
 </template>
 
 <script lang="ts">
@@ -38,11 +39,13 @@ import CharacterEditor from "~/components/characters/CharacterEditor.vue";
 import CharacterProgressTracker from "~/components/characters/CharacterProgressTracker.vue";
 import CloudData from "~/components/CloudData.vue";
 import Constellations from "~/components/characters/Constellations.vue";
+import Equipment from "~/components/characters/Equipment.vue";
 
 const wikiLinks = new Map([
   ["Classes", "https://idleon.miraheze.org/wiki/Classes"],
+  ["Classes", "https://idleon.miraheze.org/wiki/Classes"],
   ["Skills", "https://idleon.miraheze.org/wiki/Skills"],
-  ["Items", "https://idleon.miraheze.org/wiki/Items"],
+  ["Items/Equipment", "https://idleon.miraheze.org/wiki/Items"],
   ["Star Signs", "https://idleon.miraheze.org/wiki/Star_Signs"],
 ]);
 
@@ -53,6 +56,7 @@ export default defineComponent({
     CharacterProgressTracker,
     CloudData,
     Constellations,
+    Equipment,
   },
   setup() {
     const { user } = useAuth();

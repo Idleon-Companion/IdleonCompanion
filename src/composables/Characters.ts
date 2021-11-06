@@ -80,12 +80,81 @@ export const Skills = [
 ] as const;
 export type Skill = typeof Skills[number];
 
+type MiscEffect = {
+  effect: string;
+  value: number;
+};
+
+export enum EquipmentType {
+  Weapon = "Weapon",
+
+  Helmet = "Helmet",
+  Shirt = "Shirt",
+  Pants = "Pants",
+  Shoes = "Shoes",
+  Pendant = "Pendant",
+  Ring = "Ring",
+  Keychain = "Keychain",
+
+  Axe = "Axe",
+  Pickaxe = "Pickaxe",
+  Fishing_Rod = "Fishing_Rod",
+  Catching_Net = "Catching_Net",
+  Trap_Box = "Trap_Box",
+  Worship_Skull = "Worship_Skull",
+
+  Premium_Helmet = "Premium_Helmet",
+  Premium_Ring = "Premium_Ring",
+  Trophy = "Trophy",
+
+  Nothing = "Nothing",
+}
+
+export type Equippable = {
+  name: string;
+  type: EquipmentType;
+  class: Class; // This class and subclasses are able to use this equippable
+  weaponPower: number;
+  speed: number;
+  defense: number;
+  strength: number;
+  agility: number;
+  wisdom: number;
+  luck: number;
+  reach: number;
+  miscellaneous: MiscEffect[];
+};
+
+export const EquipmentSlot = <const>[
+  "helmet",
+  "shirt",
+  "pants",
+  "shoes",
+  "weapon",
+  "pendant",
+  "ring1",
+  "ring2",
+  "axe",
+  "pickaxe",
+  "net",
+  "rod",
+  "box",
+  "skull",
+  "keychain1",
+  "keychain2",
+  "trophy",
+  "premiumHelmet",
+  "premiumRing",
+];
+export type EquipmentSlot = typeof EquipmentSlot[number];
+
 // Characters keep track of individual data
 export class Character {
   public class: Class;
   public level: number;
   public name: string;
   public items: Record<string, boolean>;
+  public equipment: Partial<Record<EquipmentSlot, Equippable>>;
   public skills: Record<Skill, number>;
   public constellations: Record<string, boolean>;
   public starSigns: Record<string, boolean>;
@@ -95,6 +164,7 @@ export class Character {
     this.level = 1;
     this.name = "";
     this.items = {};
+    this.equipment = {};
     this.skills = <Record<Skill, number>>(
       Object.fromEntries(Skills.map((x) => [x, 0]))
     );
