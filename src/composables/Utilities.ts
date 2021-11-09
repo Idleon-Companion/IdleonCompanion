@@ -76,6 +76,10 @@ export class Assets {
     return Assets.FromDir(name, "monsters", "gif");
   }
 
+  static NPCAnimated(name: string): string {
+    return Assets.FromDir(name, "npc", "gif");
+  }
+
   static StampImage(item: string): string {
     return Assets.FromDir(item, "stamps");
   }
