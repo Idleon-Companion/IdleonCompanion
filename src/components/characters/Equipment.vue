@@ -4,8 +4,8 @@
       <div class="text-2xl font-medium">Equipment</div>
       <q-carousel animated v-model="equipmentTab">
         <q-carousel-slide v-for="tab in equipmentTabs" :name="tab">
-          <div class="flex justify-center items-start">
-            <div class="grid grid-cols-2 mr-4 p-2 rounded-sm bg-primary">
+          <div class="grid grid-cols-3 justify-items-stretch">
+            <div class="grid grid-cols-2 p-2 mx-auto rounded-sm bg-primary">
               <div
                 v-for="equip in equipmentSlots[equipmentTab]"
                 class="
@@ -54,7 +54,7 @@
                 </q-popup-proxy>
               </div>
             </div>
-            <div class="rounded-sm bg-primary p-4">
+            <div class="col-span-2 rounded-sm bg-primary p-4">
               <div class="text-xl font-medium">
                 {{ currentSlotEquipped.name.replace(/_/g, " ") }}
               </div>
