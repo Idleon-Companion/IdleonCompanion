@@ -8,20 +8,26 @@
       <div class="grid grid-cols-3 mt-2">
         <div v-for="(npcs, category) in AllQuests">
           <div
-            class="text-xl text-light text-center font-medium p-2 m-2 rounded"
+            class="
+              md:text-xl
+              text-light text-center
+              font-medium
+              p-2
+              m-2
+              rounded
+            "
             :class="categoryClass(category)"
           >
             {{ category }} {{ getCompletedByCategoryText(category) }}
           </div>
-          <div class="flex flex-wrap w-full mx-4">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-2 mx-2">
             <Tooltip v-for="(quests, npc) in npcs">
-              <div class="flex flex-col">
+              <div class="flex flex-col items-center">
                 <img
-                  class="cursor-pointer m-1 w-16 h-16 object-contain"
+                  class="cursor-pointer w-16 h-16 object-contain mb-1"
                   :src="Assets.NPCAnimated(npc)"
                 />
                 <q-badge
-                  class="mx-auto"
                   :color="
                     numQuestsCompleted(quests) === quests.length ? 'green' : ''
                   "
@@ -40,7 +46,7 @@
                         :icon="
                           questComplete(quest.id) ? 'mdi-check' : 'mdi-minus'
                         "
-                        @click="onToggleQuestComplete(quest.id)"
+                        @click="onToggleQuestComplete(quest, quests)"
                         ><template #subtitle>
                           <div
                             :class="questComplete(quest.id) ? 'text-green' : ''"
@@ -65,7 +71,6 @@
 </template>
 
 <script lang="ts">
-<<<<<<< HEAD
 import { AllQuests, Quest } from "~/composables/Quests";
 import { Assets } from "~/composables/Utilities";
 import { defineComponent, ref } from "vue";
@@ -77,22 +82,12 @@ export default defineComponent({
   components: {
     ICAsset,
   },
-=======
-import { AllQuests } from "~/composables/Quests";
-import { Assets } from "~/composables/Utilities";
-import { defineComponent, ref } from "vue";
-import { useCharacters } from "~/composables/Characters";
-
-export default defineComponent({
-  name: "Quests",
->>>>>>> 2307fef1... feat(quests): add quest data, persistence and basic functionality + UI
   setup() {
     const { currentCharacter } = useCharacters();
 
     const hideCompletedQuests = ref(false);
 
-<<<<<<< HEAD
-    const filteredQuests = (quests: Array<Quest>) => {
+    const filteredQuests = (quests: Quest[]) => {
       return quests.filter((quest) => {
         return hideCompletedQuests.value ? !questComplete(quest.id) : true;
       });
@@ -105,37 +100,31 @@ export default defineComponent({
       return `(${numQuestsCompleted(quests)}/${quests.length})`;
     };
 
-    const numQuestsCompleted = (quests: Array<Quest>): number => {
+    const numQuestsCompleted = (quests: Quest[]): number => {
       return quests.filter((x) => questComplete(x.id)).length;
-=======
-    const NUM_WORLDS = 3;
-    const getQuestsByWorld = (world: number) => {
-      return AllQuests.filter((quest) => {
-        return (
-          quest.world === world &&
-          (hideCompletedQuests.value ? !questComplete(quest.id) : true)
-        );
-      });
-    };
-
-    const getCompletedByWorldText = (world: number): string => {
-      let quests = getQuestsByWorld(world);
-      let completed = quests.filter((x) => questComplete(x.id));
-      return `(${completed.length}/${quests.length})`;
->>>>>>> 2307fef1... feat(quests): add quest data, persistence and basic functionality + UI
     };
 
     const questComplete = (id: string) => {
       return currentCharacter.value?.quests[id] ?? false;
     };
 
-    const onToggleQuestComplete = (id: string) => {
+    const onToggleQuestComplete = (quest: Quest, npcQuests: Quest[]) => {
       if (currentCharacter.value) {
-        currentCharacter.value.quests[id] = !currentCharacter.value.quests[id];
+        const completed = currentCharacter.value.quests[quest.id];
+        if (completed) {
+          // Uncheck this quest and all subsequent quests from NPC
+          for (const subsequent of npcQuests.filter((x) => x.id >= quest.id)) {
+            currentCharacter.value.quests[subsequent.id] = false;
+          }
+        } else {
+          // Check this quest and all previous quests from NPC
+          for (const subsequent of npcQuests.filter((x) => x.id <= quest.id)) {
+            currentCharacter.value.quests[subsequent.id] = true;
+          }
+        }
       }
     };
 
-<<<<<<< HEAD
     const categoryClass = (category: string): string => {
       return (
         {
@@ -157,31 +146,6 @@ export default defineComponent({
       numQuestsCompleted,
       onToggleQuestComplete,
       questComplete,
-=======
-    const worldClass = (world: number): string => {
-      if (world === 1) {
-        return "bg-green-600";
-      }
-      if (world === 2) {
-        return "bg-yellow-400";
-      }
-      if (world === 3) {
-        return "bg-blue-400";
-      }
-      return "";
-    };
-
-    return {
-      Assets,
-      currentCharacter,
-      getCompletedByWorldText,
-      getQuestsByWorld,
-      hideCompletedQuests,
-      NUM_WORLDS,
-      onToggleQuestComplete,
-      questComplete,
-      worldClass,
->>>>>>> 2307fef1... feat(quests): add quest data, persistence and basic functionality + UI
     };
   },
 });
