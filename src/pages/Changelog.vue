@@ -120,7 +120,7 @@ export default defineComponent({
   name: "Changelog",
   setup() {
     const entries = computed(() => {
-      return Changelog.reverse();
+      return [...Changelog].reverse();
     });
     return { entries };
   },
