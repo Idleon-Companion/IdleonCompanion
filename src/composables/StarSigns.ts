@@ -135,6 +135,62 @@ export const Constellations: Constellation[] = [
     points: 4,
     count: 4,
   },
+  {
+    name: "C-1",
+    area: "Frostbite Towndra",
+    requirement: "Reach Lvl 90 on 6 players",
+    points: 6,
+    count: 6,
+  },
+  {
+    name: "C-2",
+    area: "Steep Sheep Ledge",
+    requirement: "Kill a Sheepie barehanded on 4 players",
+    points: 4,
+    count: 4,
+  },
+  {
+    name: "C-3",
+    area: "Trappers Folley",
+    requirement: "Reach Lvl 15 Trapping on 5 players",
+    points: 4,
+    count: 5,
+  },
+  {
+    name: "C-4",
+    area: "Refrigeration Station",
+    requirement: "AFK here for 60 hours on 3 players",
+    points: 4,
+    count: 3,
+  },
+  {
+    name: "C-5",
+    area: "Rollin' Tundra",
+    requirement: "Reach Wave 11 on 4 players",
+    points: 5,
+    count: 4,
+  },
+  {
+    name: "C-6",
+    area: "Thermonuclear Climb",
+    requirement: "AFK here for 11 hours on 9 players",
+    points: 5,
+    count: 9,
+  },
+  {
+    name: "C-7",
+    area: "Crystal Basecamp",
+    requirement: "Reach this star on 6 players",
+    points: 6,
+    count: 6,
+  },
+  {
+    name: "C-8",
+    area: "Hell hath Frozen Over",
+    requirement: "Kill a Bloodbone on 4 players",
+    points: 5,
+    count: 4,
+  },
 ];
 
 export type StarSign = {
