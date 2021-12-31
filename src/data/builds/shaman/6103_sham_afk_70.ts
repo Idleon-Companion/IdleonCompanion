@@ -22,25 +22,25 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "70",
-        "2": "70",
+        "1": "25",
+        "2": "25",
         "6": "60",
         "8": "50",
         "10": "40",
         "15": "15",
       },
       comment:
-        'Go for ~50 in dmg active skill, then you want to max "Power Overwhelming", then mix "Individual Insight", "Knowledge is Power".\nPutting ~15 points into "Choppin it up EZ" can be a nice dmg boost depending on your chopping minigame score.',
+        'Go for 25 in dmg active skill, then you want to max "Power Overwhelming", then mix "Individual Insight", "Knowledge is Power".\nPutting ~25 points into "Choppin it up EZ" can be a nice dmg boost depending on your chopping minigame score.',
     },
     {
       skills: {
-        "1": "40",
-        "2": "40",
-        "3": "40",
+        "1": "25",
+        "2": "25",
+        "3": "25",
         "6": "30",
       },
       comment:
-        'Level up the damaging skills evenly. \n Put 20-30 points into "Virile Vials" (skip this part if you dont have many green vials.)',
+        'Level up the damaging skills evenly. \n Put 20-30 points into "Virile Vials" (getting more green vials is essential for Shaman.)',
     },
   ],
   class: Class.Shaman,

@@ -4,28 +4,28 @@ import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Catching Active / AFK 100+",
-  notes: "",
-  version: "1.23",
+  notes: "Use Buttered Toasted Butter. Do not level your catching skill higher than your Mman's Catching skill.",
+  version: "1.40b",
   level: 100,
   tabs: [
     {
       skills: {
         "7": "200+",
         "11": "100+",
-        "15": "*1",
+        "15": "100+",
       },
       comment:
-        "Max Elusive Efficiency and Quickness Boots in that order. Extra Points can go into Broken Time and LUK.",
+        "Max Elusive Efficiency, Quickness Boots, and Broken Time in that order. Extra Points can go into LUK and WIS.",
     },
     {
       skills: {
         "7": "100+",
         "9": "100+",
-        "13": "*1",
+        "10": "*1",
         "15": "100+",
       },
       comment:
-        "Max Sanic Speed, Garb Of Un'AGI'ing Quality and Focused Soul in that order. Extra points can go into Yea I Already Know.",
+        "Max Sanic Speed, Garb Of Un'AGI'ing Quality and Focused Soul in that order. Extra points can go into Robbinghood. Yea I Already Know doesn't work on catching right now..",
     },
     {
       skills: {

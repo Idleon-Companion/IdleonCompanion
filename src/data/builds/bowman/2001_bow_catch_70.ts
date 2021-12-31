@@ -5,8 +5,8 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Catching Active / AFK 70+",
   notes:
-    "With around 100k oak logs + ~400 agi you'll be able to catch fruitflies, but at very slow rate.",
-  version: "1.23",
+    "With around 100k oak logs + ~400 agi you'll be able to catch fruitflies, but at very slow rate. \n Use Buttered Toasted Butter. Do not level your catching skill higher than your MMan's Catching skill.",
+  version: "1.40b",
   level: 70,
   tabs: [
     {

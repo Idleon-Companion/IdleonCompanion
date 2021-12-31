@@ -5,7 +5,7 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Archer / AFK (~35)",
   notes: "That's how your build should roughly look when pushing for subclass.",
-  version: "1.23",
+  version: "1.40b",
   level: 35,
   tabs: [
     {
@@ -23,6 +23,7 @@ export const build: Build = {
         "2": "20",
         "4": "1",
         "5": "10",
+        "6": "1",
         "8": "50",
       },
       comment:

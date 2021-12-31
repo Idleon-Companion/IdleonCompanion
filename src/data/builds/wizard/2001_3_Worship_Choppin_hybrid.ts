@@ -6,7 +6,7 @@ export const build: Build = {
   title: "Worship / Choppin Hybrid (Wizard) 100+",
   notes:
     "skipping xp talents cause you usually dont have any need for xp when you decide to make hybrid build",
-  version: "1.23",
+  version: "1.40b",
   level: 100,
   tabs: [
     {
@@ -21,14 +21,15 @@ export const build: Build = {
     },
     {
       skills: {
-        "4": "*",
+        "3": "*",
         "7": "100+",
+        "9": "1+",
         "10": "100+",
         "11": "100+",
         "12": "100+",
         "13": "100+",
       },
-      comment: "11>12>13>10>7>3",
+      comment: "11>12>13>10>7>3. Free Meal to reduce food consumption. ",
     },
     {
       skills: {
