@@ -243,7 +243,16 @@ type ValueOf<T> = T[keyof T];
 export type EffectData = ValueOf<typeof Effects>;
 
 // Game Versions
-export const GameVersions = <const>["1.40b", "1.40", "1.30", "1.23", "1.22", "1.21", "1.20"];
+export const GameVersions = <const>[
+  "1.42",
+  "1.40b",
+  "1.40",
+  "1.30",
+  "1.23",
+  "1.22",
+  "1.21",
+  "1.20",
+];
 export type GameVersion = typeof GameVersions[number];
 export const LatestGameVersion: GameVersion = GameVersions[0];
 

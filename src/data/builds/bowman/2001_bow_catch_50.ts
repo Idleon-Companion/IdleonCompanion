@@ -5,8 +5,8 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Catching Active / AFK 50+",
   notes:
-    " ",
-  version: "1.23",
+    " Only use Buttered Toasted Butter if you can afford it. ",
+  version: "1.40b",
   level: 50,
   tabs: [
     {
@@ -31,10 +31,11 @@ export const build: Build = {
       skills: {
         "11": "50",
         "12": "50",
+        "13": "*1",
         "14": "*1",
       },
       comment:
-        'Place points into Teleki\'Net\'Ic Logs. Then put points into Briar Patch Runner\n*1 Excess points can be placed into Sunset on the Hives',
+        'Place points into Teleki\'Net\'Ic Logs. Then put points into Briar Patch Runner\n*1 Excess points can be placed into Bug Enthusiastic and Sunset on the Hives',
     },
   ],
   class: Class.Bowman,

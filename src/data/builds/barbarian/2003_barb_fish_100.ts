@@ -4,19 +4,21 @@ import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Fishing Active / AFK (Barb) 100+",
-  notes: "",
-  version: "1.23",
+  notes: "Do not level your fishing skill higher than your MMan's fishing skill.",
+  version: "1.40b",
   level: 100,
   tabs: [
     {
       skills: {
         "6": "100+",
+        "7": "*1",
+        "8": "*1",
         "9": "*1",
         "11": "100+",
         "15": "100+",
       },
       comment:
-        "Max Brute Efficiency, Fist of Rage, and Idle Skilling in that order.\n*1 Leftover points can be put into LUK.",
+        "Max Brute Efficiency, Fist of Rage, and Idle Skilling in that order.\n*1 Leftover points can be put into LUK, AGI or WIS.",
     },
     {
       skills: {
