@@ -4,7 +4,8 @@ import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Barbarian / AFK (~150)",
-  notes: "Active Skills act as a multiplyer to your total dmg for afk. lvl 25 on all of them should be enough to reach dmg cap. Put more points into attack talents and "Double Strike" if you are using Prayers that increase mob hp.",
+  notes:
+    'Active Skills act as a multiplyer to your total dmg for afk. lvl 25 on all of them should be enough to reach dmg cap. Put more points into attack talents and "Double Strike" if you are using Prayers that increase mob hp.',
   version: "1.40b",
   level: 150,
   tabs: [
@@ -21,7 +22,7 @@ export const build: Build = {
         "14": "160",
       },
       comment:
-        '*1 = Boost WIS to have as much accuracy as you need for the best AFK gains.*2 Assign points to increase survivability. *3 Boost AGI for smithing gains if you have the points.',
+        "*1 = Boost WIS to have as much accuracy as you need for the best AFK gains.*2 Assign points to increase survivability. *3 Boost AGI for smithing gains if you have the points.",
     },
     {
       skills: {
@@ -34,8 +35,7 @@ export const build: Build = {
         "8": "160",
         "9": "160",
       },
-      comment:
-        ' Please read main description below.',
+      comment: " Please read main description below.",
     },
     {
       skills: {
