@@ -9,6 +9,7 @@ import Import from "~/pages/Import.vue";
 import PackMuleCrafter from "~/pages/tools/PackMuleCrafter.vue";
 import PicnicQuest from "~/pages/tools/PicnicQuest.vue";
 import ProgressTracker from "~/components/tracker/ProgressTracker.vue";
+import QuestTracker from "~/components/tracker/QuestTracker.vue";
 import RecipeCalculator from "~/pages/tools/RecipeCalculator.vue";
 import StampTracker from "~/components/tracker/StampTracker.vue";
 import StatueTracker from "~/components/tracker/StatueTracker.vue";
@@ -37,6 +38,11 @@ export const trackerRoutes: RouteRecordRaw[] = [
     component: Alchemy,
     name: "Alchemy",
     path: "/tracker/alchemy",
+  },
+  {
+    component: QuestTracker,
+    name: "Quests",
+    path: "/tracker/quests",
   },
 ];
 

@@ -58,6 +58,10 @@ const tabs: NavigationTab[] = [
         name: "Alchemy",
         path: "/tracker/alchemy",
       },
+      {
+        name: "Quests",
+        path: "/tracker/quests",
+      },
     ],
   },
   {

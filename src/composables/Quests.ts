@@ -3,6 +3,7 @@ export type Quest = {
   name: string;
 };
 
+// Quest IDs for each NPC must be ordered lexicographically!
 const QuestsW1: Record<string, Array<Quest>> = {
   "TP Pete": [
     {
