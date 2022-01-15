@@ -807,7 +807,7 @@
     "name": "Fur Shirt",
     "quantity": 1,
     "materials": [
-      { "name": "Goblin Ear", "quantity": 500 },
+      { "name": "Glublin Ear", "quantity": 500 },
       { "name": "Iron Bar", "quantity": 500 }
     ]
   },
@@ -1021,7 +1021,7 @@
     "quantity": 1,
     "materials": [
       { "name": "Iron Bar", "quantity": 125 },
-      { "name": "Goblin Ear", "quantity": 300 }
+      { "name": "Glublin Ear", "quantity": 300 }
     ]
   },
   "Iron Pickaxe": {

@@ -186,7 +186,7 @@ const CombatStamps: Stamp[] = [
   },
   {
     name: "Manamoar Stamp",
-    material: "Goblin Ear",
+    material: "Glublin Ear",
     bonus: "Base MP",
     baseCoinCost: 75,
     baseMatCost: 25,
