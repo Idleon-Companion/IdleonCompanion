@@ -41,7 +41,7 @@ export const build: Build = {
         "15": "*1",
       },
       comment:
-        'Level "Bear Strike" and "Axe hurl" to around 70.\n*1 = You can put some points into "Back to Basics" if you\'re lacking points on Tab 2.\n *2 Be carefull with NPNG as it reduces your survivability. ',
+        'Level "Bear Strike" and "Axe hurl" to 25.\n*1 = You can put some points into "Back to Basics" if you\'re lacking points on Tab 2.\n *2 Be carefull with NPNG as it reduces your survivability. ',
     },
   ],
   class: Class.Barbarian,
