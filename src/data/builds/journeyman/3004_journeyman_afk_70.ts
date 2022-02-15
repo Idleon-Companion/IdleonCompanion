@@ -6,7 +6,7 @@ export const build: Build = {
   title: "Journeyman AFK (~70)",
   notes:
     "This build is for leveling, and ignores all of the utility talents that provide help with drops and cash.",
-  version: "1.23",
+  version: "1.40b",
   level: 70,
   tabs: [
     {
@@ -17,7 +17,7 @@ export const build: Build = {
         "15": "100",
       },
       comment:
-        "Journeyman has 4 talents that impact damage in tab 1. Once you get those maxed, it is up to you what you want - you can go for HP/defense for survivability, movespeed, etc",
+        "Journeyman has 4 talents that impact damage in tab 1. Once you get those maxed, it is up to you what you want - you can go for HP/defense for survivability, movespeed, etc. \n Accuracy shouldn't be an issue anymore at this point. Use cards and/or upgrade Shaq bubble if you need more.",
     },
     {
       skills: {
