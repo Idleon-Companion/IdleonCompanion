@@ -5,7 +5,7 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Bowman / AFK (~50)",
   notes:
-    "Active Skills act as a multiplyer to your total dmg for afk. lvl 25 on all of them should be enough to reach dmg cap. \n  If you\'re low on defense, by this point equipping food to stay alive is normal and expected.",
+    "Active Skills act as a multiplyer to your total dmg for afk. lvl 25 on all of them should be enough to reach dmg cap. \n  If you\'re low on defense, by this point equipping food to stay alive is normal and expected. \n Dmg for Bowman comes from "Speed DNA" and "Vines of the Infernal". Raise your Smithing lvl by produceing 2/3x thread. ",
   version: "1.40b",
   level: 50,
   tabs: [
@@ -30,7 +30,7 @@ export const build: Build = {
         "8": "50",
       },
       comment:
-        'Level "Polymer Limbs" to 50, then your active damage skills to 25. Afterwards, level up "Have Another" to 10. \n *1 = Level up "Strafe" to achieve 130% movement speed with points into featherweight into tab 1. This should be around 40 points. \n Excess points goes into "Veins of the Infernal". ',
+        'Level "Polymer Limbs" to 50, then your active damage skills to 25. Afterwards, level up "Have Another" to 10. \n *1 = Level up "Strafe" to achieve 130% movement speed with points into featherweight into tab 1. This should be around 40 points. \n Excess points go into "Veins of the Infernal". ',
     },
     {
       skills: {
