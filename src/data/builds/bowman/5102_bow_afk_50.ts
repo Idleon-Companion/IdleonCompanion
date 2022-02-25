@@ -40,7 +40,7 @@ export const build: Build = {
         "6": "40",
       },
       comment:
-        'Level up "Homing Arrow" and "Magic Shortbow" to 30. Value point into "Extendo Rangeo" for that sweet 3 accuracy. Activate before AFK. \n Then raise "SpeedNA" to 40+.',
+        'Level up "Homing Arrow" and "Magic Shortbow" to 25. Value point into "Extendo Rangeo" for that sweet 3 accuracy. Activate before AFK. \n Then raise "SpeedNA" to 40+.',
     },
   ],
   class: Class.Bowman,
