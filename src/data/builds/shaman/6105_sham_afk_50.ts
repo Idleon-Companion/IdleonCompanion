@@ -4,8 +4,8 @@ import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Shaman / AFK (~50)",
-  notes: "Active Skills directly increase AFK kills/hr.",
-  version: "1.23",
+  notes: "Active Skills act as a multiplyer to your total dmg for afk. lvl 25 on all of them should be enough to reach dmg cap. \n How many points you need depends on your "Attacks on Simmer" Star Talent and "All for Kill" bubble. If you got spare talent resets, reset your build at your fighting area and lvl attack talents last till you do not gain any more kills per hour.",
+  version: "1.40b",
   level: 50,
   tabs: [
     {
@@ -21,8 +21,8 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "40",
-        "2": "60",
+        "1": "25",
+        "2": "25",
         "8": "60",
       },
       comment:
@@ -30,14 +30,14 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "20",
-        "2": "20",
-        "3": "20",
+        "1": "25",
+        "2": "25",
+        "3": "25",
         "6": "*1",
         "15": "2*",
       },
       comment:
-        'Level the damage skills evenly.\n*1 = If you have many Green Vials, you can place 20-30 points into "Virile Vials" for more damage.\n*2 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2.',
+        'Level the damage skills evenly.\n*1 = If you have many Green Vials, you can place 20+ points into "Virile Vials" for more damage.\n*2 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2.',
     },
   ],
   class: Class.Shaman,
