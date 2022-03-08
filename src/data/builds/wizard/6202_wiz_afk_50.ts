@@ -23,10 +23,12 @@ export const build: Build = {
       skills: {
         "1": "25",
         "2": "25",
+        "6": "*1",
         "8": "60",
+        "10": "*1",
       },
       comment:
-        'Level "Power Overwhelming" to 60, then your active damage skills. Excess points can be used to level "Power Overwhelming" past 60.',
+         '*1 Max "Knowledge is Power" and then "Individual Insight".',
     },
     {
       skills: {
