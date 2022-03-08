@@ -5,7 +5,7 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Wizard / AFK (~70)",
   notes: "Active Skills directly increase AFK kills/hr.",
-  version: "1.23",
+  version: "1.40b",
   level: 70,
   tabs: [
     {
@@ -21,25 +21,26 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "*1",
-        "2": "70",
+        "1": "25",
+        "2": "25",
+        "3": "*2",
         "6": "*2",
         "8": "100",
         "10": "*2",
       },
       comment:
-        'Level "Power Overwhelming" to 100, then 70 to Fireball.\n*1 = If you are not AFK damage capped, you can add more points into "Energy Bolt" until you hit cap.\n*2 = Spread excess points equally between "Knowledge is Power" and "Individual Insight".',
+         '*1 Max "Knowledge is Power" and then "Individual Insight". *2 If excess points go here. ',
     },
     {
       skills: {
-        "1": "40",
-        "2": "40",
-        "3": "40",
-        "6": "30",
+        "1": "25",
+        "2": "25",
+        "3": "25",
+        "6": "30+",
         "15": "*1",
       },
       comment:
-        'Level the damage skills evenly. Be sure to place 30 points into "Paperwork Great..." for a nice damage boost.\n*1 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2. ',
+        'Level the damage skills evenly. Be sure to place 30+ points into "Paperwork Great..." for a nice damage boost.\n*1 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2. ',
     },
   ],
   class: Class.Wizard,
