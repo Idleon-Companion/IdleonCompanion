@@ -5,7 +5,7 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Bowman / AFK (~90)",
   notes:
-    "Active Skills act as a multiplyer to your total dmg for afk. lvl 25 on all of them should be enough to reach dmg cap. \n Activate Strafe and Extendo Rango before AFK. \n Dmg for Bowman comes from "Speed DNA" and "Vines of the Infernal". Raise your Smithing lvl by produceing 2/3x thread. ",
+    "Active Skills act as a multiplyer to your total dmg for afk. \n Activate Strafe and Extendo Rango before AFK. \n Dmg for Bowman comes from "Speed DNA" and "Vines of the Infernal". Raise your Smithing lvl by produceing 2/3x thread. ",
   version: "1.40b",
   level: 90,
   tabs: [
@@ -26,7 +26,7 @@ export const build: Build = {
     {
       skills: {
         "1": "25",
-        "2": "25",
+        "2": "50",
         "3": "*1",
         "4": "100+",
         "5": "25",
@@ -39,14 +39,14 @@ export const build: Build = {
     {
       skills: {
         "1": "25",
-        "2": "25",
+        "2": "50",
         "4": "*1",
         "6": "100",
         "8": "*2",
         "15": "1+",
       },
       comment:
-        ' Put points into extendo so you need less acc from tab 1. \n *2 Excess points here.',
+        ' *1 Put points into extendo so you need less acc from tab 1. \n *2 Excess points here.',
     },
   ],
   class: Class.Bowman,
