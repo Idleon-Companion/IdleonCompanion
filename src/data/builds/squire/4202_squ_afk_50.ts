@@ -4,7 +4,7 @@ import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Squire / AFK (~50)",
-  notes: "Active Skills act as a multiplyer to your total dmg for afk. lvl 25 on all of them should be enough to reach dmg cap. n How many points you need depends on your "Attacks on Simmer" Star Talent and "All for Kill" bubble. If you got spare talent resets, reset your build at your fighting area and lvl attack talents last till you do not gain any more kills per hour.",
+  notes: "Active Skills act as a multiplyer to your total dmg for afk. ",
   version: "1.40b",
   level: 50,
   tabs: [
@@ -21,14 +21,14 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "25",
-        "2": "25",
+        "1": "55",
+        "2": "55",
         "4": "20",
         "5": "1",
         "8": "60",
       },
       comment:
-        'Level "Carry A Big Stick" to 60, then your active damage skills to 25. Afterwards, bring "Double-Strike" up to 20. Excess points can be used to level "Carry A Big Stick" past 60.\n 1 point into "Firmly Grasp It" gives extra STR.',
+        'Level "Carry A Big Stick" to 60, then your active damage skills to 55. Afterwards, bring "Double-Strike" up to 20. Excess points can be used to level "Carry A Big Stick" past 60.\n 1 point into "Firmly Grasp It" gives extra STR.',
     },
     {
       skills: {
