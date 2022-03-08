@@ -5,7 +5,7 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Barbarian / AFK (~70)",
   notes:
-    'Active Skills act as a multiplyer to your total dmg for afk. lvl 25 on all of them should be enough to reach dmg cap. Put more points into attack talents and "Double Strike" if you are using Prayers that increase mob hp.',
+    'Active Skills act as a multiplyer to your total dmg for afk.  Put more points into attack talents and "Double Strike" if you are using Prayers that increase mob hp.',
   version: "1.40b",
   level: 70,
   tabs: [
@@ -22,8 +22,8 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "25",
-        "2": "25",
+        "1": "20",
+        "2": "20",
         "4": "41",
         "5": "1",
         "6": "*1",
@@ -35,13 +35,13 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "25",
+        "1": "30",
         "2": "25",
         "4": "*2",
         "15": "*1",
       },
       comment:
-        'Level "Bear Strike" and "Axe hurl" to 25.\n*1 = You can put some points into "Back to Basics" if you\'re lacking points on Tab 2.\n *2 Be carefull with NPNG as it reduces your survivability. ',
+        'Level "Bear Strike" and "Axe hurl" to 30 and 25.\n*1 = You can put some points into "Back to Basics" if you\'re lacking points on Tab 2.\n *2 Be carefull with NPNG as it reduces your survivability. ',
     },
   ],
   class: Class.Barbarian,
