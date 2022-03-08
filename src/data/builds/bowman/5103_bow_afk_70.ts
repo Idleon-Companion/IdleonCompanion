@@ -5,7 +5,7 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Bowman / AFK (~70)",
   notes:
-    "Active Skills act as a multiplyer to your total dmg for afk. lvl 25 on all of them should be enough to reach dmg cap. \n Activate Strafe and Extendo Rango before AFK. \n Dmg for Bowman comes from "Speed DNA" and "Vines of the Infernal". Raise your Smithing lvl by produceing 2/3x thread.",
+    "Active Skills act as a multiplyer to your total dmg for afk.\n Activate Strafe and Extendo Rango before AFK. \n Dmg for Bowman comes from "Speed DNA" and "Vines of the Infernal". Raise your Smithing lvl by produceing 2/3x thread.",
   version: "1.40b",
   level: 70,
   tabs: [
@@ -22,7 +22,7 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "25",
+        "1": "50",
         "2": "25",
         "4": "*1",
         "5": "15",
@@ -30,18 +30,18 @@ export const build: Build = {
         "8": "100",
       },
       comment:
-        'Level "Polymer Limbs" to 100, then your active damage skills to 25. Afterwards, level up "Have Another" to 15 & "Veins of the Infernal" to 30. \n *1 Level up "Strafe" to achieve 130% movement speed with points into featherweight into tab 1. This should be around 40 points.',
+        'Level "Polymer Limbs" to 100, then your active damage skills. Afterwards, level up "Have Another" to 15 & "Veins of the Infernal" to 30. \n *1 Level up "Strafe" to achieve 130% movement speed with points into featherweight into tab 1. This should be around 40 points.',
     },
     {
       skills: {
         "1": "25",
-        "2": "25",
+        "2": "50",
         "4": "1",
         "6": "60",
         "15": "*1",
       },
       comment:
-        'Level up "Homing Arrow" and "Magic Shortbow" to 25. Value point into "Extendo Rangeo" for that sweet 4 accuracy. \n Then raise "SpeedNA" to 60+. \n *1 Points can be invested back into tab 2. Eventually you want to aim for 145% MS. 50 points into Strafe would add another 15% MS for another "SpeedNA" bonus.',
+        'Level up "Homing Arrow" and "Magic Shortbow" to 50 and 25. Value point into "Extendo Rangeo" for that sweet 4 accuracy. \n Then raise "SpeedNA" to 60+. \n *1 Points can be invested back into tab 2. Eventually you want to aim for 145% MS. 50 points into Strafe would add another 15% MS for another "SpeedNA" bonus.',
     },
   ],
   class: Class.Bowman,
