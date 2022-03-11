@@ -11,9 +11,9 @@ export const build: Build = {
   tabs: [
     {
       skills: {
-        "5": "100",
-        "9": "80",
-        "10": "100",
+        "5": "75+",
+        "9": "50+",
+        "10": "75+",
         "15": "100",
       },
       comment:
@@ -21,18 +21,17 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "100",
+        "1": "75",
         "2": "*2",
         "4": "100",
-        "6": "100",
-        "7": "*1",
+        "6": "75+",
         "9": "*1",
         "11": "*2",
         "14": "*2",
         "15": "*2",
       },
       comment:
-        "Max Two Punch Man and Indiana Attack. Then, points can be placed into Lucky Hit.\n*1 Excess points split between F\'luk\'ey Fabrics and Lucky Horseshoe.\n*2 Excess points can instead be placed into non-combat bonuses, depending on what you're looking for.",
+        "Max Two Punch Man and Indiana Attack. Then, points can be placed into Lucky Hit.\n*1 Excess points into Lucky Horseshoe.\n*2 Excess points can instead be placed into non-combat bonuses, depending on what you're looking for.",
     },
   ],
   class: Class.Journeyman,
