@@ -10,10 +10,10 @@ export const build: Build = {
   tabs: [
     {
       skills: {
-        "5": "70",
+        "5": "50+",
         "8": "*1",
-        "10": "85",
-        "12": "70",
+        "10": "50+",
+        "12": "50+",
         "14": "100",
       },
       comment:
@@ -23,23 +23,23 @@ export const build: Build = {
       skills: {
         "1": "55",
         "2": "55",
-        "4": "41",
         "5": "1",
         "6": "*1",
         "8": "100",
         "9": "*1",
       },
       comment:
-        'Level "Carry A Big Stick" to 100, then your active damage skills to 55. Afterwards, bring "Double-Strike" up to 41.\n*1 = Spread excess points equally between "Absolute Unit" and "Strength In Numbers".\n 1 point into "Firmly Grasp It" gives extra STR.',
+        'Level "Carry A Big Stick" to 100, then your active damage skills to 55.\n*1 = Spread excess points equally between "Absolute Unit" and "Strength In Numbers".\n 1 point into "Firmly Grasp It" gives extra STR.',
     },
     {
       skills: {
         "1": "30",
         "2": "30",
+        "6": "*2",
         "15": "*1",
       },
       comment:
-        'Level "Shockwave Slash" and "Daggerang" to around 30.\n*1 = You can put some points into "Back to basics" if you\'re lacking points on tab 2.\n',
+        'Level "Shockwave Slash" and "Daggerang" to around 30.\n*1 = You can put some points into "Back to basics" if you\'re lacking points on tab 2.\n*2 If you have the required acc lvl this.',
     },
   ],
   class: Class.Squire,
