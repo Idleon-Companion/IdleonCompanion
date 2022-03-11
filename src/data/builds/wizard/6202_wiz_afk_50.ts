@@ -4,16 +4,16 @@ import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Wizard / AFK (~50)",
-  notes: " Active Skills act as a multiplyer to your total dmg for afk. lvl 25 on all of them should be enough to reach dmg cap.",
+  notes: " Active Skills act as a multiplyer to your total dmg for afk.",
   version: "1.40b",
   level: 50,
   tabs: [
     {
       skills: {
-        "5": "50",
+        "5": "25+",
         "7": "*1",
-        "10": "75",
-        "12": "50",
+        "10": "25+",
+        "12": "25+",
         "14": "50",
       },
       comment:
