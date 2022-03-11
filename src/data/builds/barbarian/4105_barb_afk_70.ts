@@ -11,19 +11,19 @@ export const build: Build = {
   tabs: [
     {
       skills: {
-        "5": "70",
+        "5": "50+",
         "8": "*1",
-        "10": "85",
-        "12": "70",
+        "10": "50+",
+        "12": "50+",
         "14": "50",
       },
       comment:
-        '*1 = Boost WIS to have as much accuracy as you need for the best AFK gains. Usually this will be the farthest monster you can reach without dying. If you\'re low on defense, by this point equipping food to stay alive is normal and expected.\n"Idle Brawling" to 50 for 10% AFK gain rate.\nPriority switches to Gilded sword > Meatshank > Sharpened axe',
+        '*1 = Boost WIS to have as much accuracy as you need for the best AFK gains. Usually this will be the farthest monster you can reach without dying. If you\'re low on defense, by this point equipping food to stay alive is normal and expected.\n"Idle Brawling" to 50 for 10% AFK gain rate.,
     },
     {
       skills: {
-        "1": "20",
-        "2": "20",
+        "1": "25",
+        "2": "25",
         "4": "41",
         "5": "1",
         "6": "*1",
@@ -31,7 +31,7 @@ export const build: Build = {
         "9": "*1",
       },
       comment:
-        'Level "Carry A Big Stick" to 100, then your active damage skills to 25. Afterwards, bring "Double-Strike" up to 41.\n*1 = Spread excess points equally between "Absolute Unit" and "Strength In Numbers".\n 1 point into "Firmly Grasp It" gives extra STR.',
+        'Level "Carry A Big Stick" to 100, then your active damage skills to 25. Afterwards, bring "Double-Strike" up to 41. \n 1 point into "Firmly Grasp It" gives extra STR. \n*1 = Spread excess points equally between "Absolute Unit" and "Strength In Numbers".',
     },
     {
       skills: {
