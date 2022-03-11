@@ -6,22 +6,23 @@ export const build: Build = {
   title: "Maestro AFK (~70)",
   notes:
     " ",
-  version: "1.23",
+  version: "1.40b",
   level: 70,
   tabs: [
     {
       skills: {
-        "5": "100",
+        "5": "75+",
         "9": "*1",
-        "10": "100",
+        "10": "75+",
+        "11": "*1"
         "15": "100",
       },
       comment:
-        "Max Gilded Sword and Sharpened Axe. Then place 100 points into Sleeping\' On The Job.\n*1 For more droprate, EXP, and damage, excess points can be placed into Lucky Clover.",
+        "Max Gilded Sword and Sharpened Axe. Then place 100 points into Sleeping\' On The Job.\n*1 For more droprate, EXP, and damage, excess points can be placed into "Lucky Clover" or "Happy Dude".",
     },
     {
       skills: {
-        "1": "100",
+        "1": "40",
         "2": "*2",
         "4": "100",
         "6": "100",
@@ -36,7 +37,7 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "100",
+        "1": "35",
         "2": "*2",
         "4": "100",
         "6": "*2",
