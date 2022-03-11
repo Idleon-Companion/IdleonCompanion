@@ -10,10 +10,10 @@ export const build: Build = {
   tabs: [
     {
       skills: {
-        "5": "70",
+        "5": "50+",
         "7": "*1",
-        "10": "85",
-        "12": "70",
+        "10": "50+",
+        "12": "50+",
         "14": "50",
       },
       comment:
@@ -40,7 +40,7 @@ export const build: Build = {
         "15": "*1",
       },
       comment:
-        'Level the damage skills evenly. Be sure to place 30+ points into "Paperwork Great..." for a nice damage boost.\n*1 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2. ',
+        'Be sure to place 30+ points into "Paperwork Great..." for a nice damage boost.\n*1 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2. ',
     },
   ],
   class: Class.Wizard,
