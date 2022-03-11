@@ -10,10 +10,10 @@ export const build: Build = {
   tabs: [
     {
       skills: {
-        "5": "50",
+        "5": "25+",
         "8": "*1",
-        "10": "75",
-        "12": "50",
+        "10": "25+",
+        "12": "25+",
         "14": "100",
       },
       comment:
@@ -23,12 +23,11 @@ export const build: Build = {
       skills: {
         "1": "55",
         "2": "55",
-        "4": "20",
         "5": "1",
-        "8": "60",
+        "8": "60+",
       },
       comment:
-        'Level "Carry A Big Stick" to 60, then your active damage skills to 55. Afterwards, bring "Double-Strike" up to 20. Excess points can be used to level "Carry A Big Stick" past 60.\n 1 point into "Firmly Grasp It" gives extra STR.',
+        'Level "Carry A Big Stick" to 60, then your active damage skills to 55. Excess points can be used to level "Carry A Big Stick" past 60.\n 1 point into "Firmly Grasp It" gives extra STR.',
     },
     {
       skills: {
