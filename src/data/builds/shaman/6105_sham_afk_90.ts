@@ -5,16 +5,16 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Shaman / AFK (~90)",
   notes: "100+ = Checkout books for these talents from the library.",
-  version: "1.23",
+  version: "1.40b",
   level: 90,
   tabs: [
     {
       skills: {
-        "5": "100+",
+        "5": "75+",
         "7": "*1",
         "8": "*2",
-        "10": "100+",
-        "12": "100+",
+        "10": "75+",
+        "12": "75+",
         "14": "100+",
       },
       comment:
@@ -37,11 +37,12 @@ export const build: Build = {
         "2": "25",
         "3": "25",
         "6": "100+",
+        "12": "*2",
         "13": "*2",
         "15": "*1",
       },
       comment:
-        'Place points into "Virile Vials".\n*1 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2.\n *2 = If you have capped your damage, excess points can go into alchemy talents. This build does not prominently focus on alchemy, and so you are likely to only have enough talent points to level "Bubble Breakthrough".\n With 25 in all attack talents on 2nd and 3rd tab you should be dmg capped. Only put more points into these talents if you are not dmg capped.\n Do not forget to put them into your quick bar.  ',
+        'Place points into "Virile Vials".\n*1 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2.\n *2 excess points go here. Use "Bubble Breakthrough" to unlock new bubbles. ',
     },
   ],
   class: Class.Shaman,
