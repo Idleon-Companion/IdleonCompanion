@@ -11,9 +11,9 @@ export const build: Build = {
   tabs: [
     {
       skills: {
-        "5": "65",
+        "5": "50+",
         "9": "*1",
-        "10": "65",
+        "10": "50+",
         "15": "100",
       },
       comment: "*1 = As much as you need accuracy for the zone you want to afk in. Check your AFK Info window or mob cards to find the acc requirements.",
