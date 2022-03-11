@@ -36,7 +36,7 @@ export const build: Build = {
         "1": "25",
         "2": "50",
         "4": "1",
-        "6": "40",
+        "6": "40+",
       },
       comment:
         'Level up "Homing Arrow" and "Magic Shortbow" to 50 and 25. Value point into "Extendo Rangeo" for that sweet 3 accuracy. Activate before AFK. \n Then raise "SpeedNA" to 40+.',
