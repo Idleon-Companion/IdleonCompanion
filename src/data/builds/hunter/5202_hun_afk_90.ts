@@ -35,7 +35,7 @@ export const build: Build = {
         "9": "1+",
       },
       comment:
-        'Level "Polymer Limbs" to max, active damage skills to 70, and then value point into "Strafe" and activate it before going offline. \n Excess points into "Veins of the Infernal"',
+        ' ',
     },
     {
       skills: {
