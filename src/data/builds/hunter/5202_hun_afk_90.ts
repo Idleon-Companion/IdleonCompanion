@@ -35,7 +35,7 @@ export const build: Build = {
         "9": "1+",
       },
       comment:
-        ' ',
+        ' Equip attack talents in your attack bar and activate "Strafe" before going offline. ',
     },
     {
       skills: {
