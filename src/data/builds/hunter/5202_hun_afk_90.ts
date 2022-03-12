@@ -5,7 +5,7 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Hunter / AFK (~90)",
   notes:
-    "Active Skills act as a multiplyer to your total dmg for afk. lvl 25 on all of them should be enough to reach dmg cap. Put more points into attack talents and "Have Another!" if you are using Prayers that increase mob hp.",
+    "Active Skills act as a multiplyer to your total dmg for afk.",
   version: "1.40b",
   level: 90,
   tabs: [
