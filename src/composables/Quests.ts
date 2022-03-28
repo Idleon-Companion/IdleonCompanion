@@ -276,103 +276,89 @@ const QuestsW2: Record<string, Array<Quest>> = {
 };
 
 const QuestsW3: Record<string, Array<Quest>> = {
-  "Iceland Irwin": [
-    {
-      id: "Iceland Irwin1",
-      name: "Crikey, it's cold out!",
-    },
+  Bellows: [
+    { id: "Bellows01", name: "Poking Some Eyes Out", },
+    { id: "Bellows02", name: "Eyexperience", },
+    { id: "Bellows03", name: "Veyebing", },
+    { id: "Bellows04", name: "Optometric Hoarder", },
+  ],
+  "Bill Brr": [
+    { id: "Bill Brr01", name: "Fairly Odd Damage", },
+    { id: "Bill Brr02", name: "Laughin' Amphibian", },
+    { id: "Bill Brr03", name: "The Spores are a Bore", },
+    { id: "Bill Brr04", name: "Coin Shenanigans", },
+    { id: "Bill Brr05", name: "Have a Candy", },
+    { id: "Bill Brr06", name: "Duckin' and Shatterin'", },
+    { id: "Bill Brr07", name: "Hatin' on the Green One", },
+  ],
+  "Carpenter Cardinal": [
+    { id: "Carpenter Cardinal01", name: "Restoring Power, once again, to a Portal", },
+  ],
+  Crystalswine: [
+    { id: "Crystalswine01", name: "Melting the Snakes", },
+    { id: "Crystalswine02", name: "Sunrunning to Chizoar", },
+    { id: "Crystalswine03", name: "Global Warming", },
   ],
   Hoggindaz: [
-    {
-      id: "Hoggindaz1",
-      name: "Turn ON for what???",
-    },
-    {
-      id: "Hoggindaz2",
-      name: "Trapping with the Lord",
-    },
-    {
-      id: "Hoggindaz3",
-      name: "Constructing a Tower",
-    },
-    {
-      id: "Hoggindaz4",
-      name: "Monke Tower Time!",
-    },
-    {
-      id: "Hoggindaz5",
-      name: "Taking Samples",
-    },
+    { id: "Hoggindaz01", name: "Turn ON for what???" },
+    { id: "Hoggindaz02", name: "Trapping with the Lord" },
+    { id: "Hoggindaz03", name: "Constructing a Tower" },
+    { id: "Hoggindaz04", name: "Monke Tower Time!" },
+    { id: "Hoggindaz05", name: "Taking Samples" },
+    { id: "Hoggindaz06", name: "Voter Recognition" },
+    { id: "Hoggindaz07", name: "Voter Appeasement" },
+    { id: "Hoggindaz08", name: "Voter Apathy" },
+    { id: "Hoggindaz09", name: "Chizoar No More" },
+    { id: "Hoggindaz10", name: "The Fresh Prince of the Tundra" },
+  ],
+  "Iceland Irwin": [
+    { id: "Iceland Irwin01", name: "Crikey, it's cold out!" },
   ],
   "Lonely Hunter": [
-    {
-      id: "Lonely Hunter1",
-      name: "Leaf Him Alone!",
-    },
-    {
-      id: "Lonely Hunter2",
-      name: "Skeleton? Skelegone!",
-    },
+    { id: "Lonely Hunter01", name: "Leaf Him Alone!" },
+    { id: "Lonely Hunter02", name: "Skeleton? Skelegone!" },
+    { id: "Lonely Hunter03", name: "Opening Chests" },
   ],
   "Lord of the Hunt": [
-    {
-      id: "Lord of the Hunt1",
-      name: "Pelt for the Pelt God",
-    },
-    {
-      id: "Lord of the Hunt2",
-      name: "Frogecoin to the MOON!",
-    },
-    {
-      id: "Lord of the Hunt3",
-      name: "Yet another Cartoon Reference",
-    },
-    {
-      id: "Lord of the Hunt4",
-      name: "Small Stingers, Big Owie",
-    },
-    {
-      id: "Lord of the Hunt5",
-      name: "The Mouse n the Molerat",
-    },
-    {
-      id: "Lord of the Hunt6",
-      name: "Happy Tree Friend",
-    },
-    {
-      id: "Lord of the Hunt7",
-      name: "Noot Noot!",
-    },
-    {
-      id: "Lord of the Hunt8",
-      name: "Bunny you Should Say That!",
-    },
-    {
-      id: "Lord of the Hunt9",
-      name: "Rollin' Thunder!",
-    },
-    {
-      id: "Lord of the Hunt10",
-      name: "Untitled Quest",
-    },
-    {
-      id: "Lord of the Hunt11",
-      name: "To Trap or not to Trap",
-    },
+    { id: "Lord of the Hunt01", name: "Pelt for the Pelt God" },
+    { id: "Lord of the Hunt02", name: "Frogecoin to the MOON!" },
+    { id: "Lord of the Hunt03", name: "Yet another Cartoon Reference" },
+    { id: "Lord of the Hunt04", name: "Small Stingers, Big Owie" },
+    { id: "Lord of the Hunt05", name: "The Mouse n the Molerat" },
+    { id: "Lord of the Hunt06", name: "Happy Tree Friend" },
+    { id: "Lord of the Hunt07", name: "Noot Noot!" },
+    { id: "Lord of the Hunt08", name: "Bunny you Should Say That!" },
+    { id: "Lord of the Hunt09", name: "Rollin' Thunder!" },
+    { id: "Lord of the Hunt10", name: "Untitled Quest" },
+    { id: "Lord of the Hunt11", name: "To Trap or not to Trap" },
+  ],
+  Shuvelle: [
+    { id: "Shuvelle01", name: "Mayoral Luck" },
+    { id: "Shuvelle02", name: "Mayoral Skill" },
+    { id: "Shuvelle03", name: "Mayoral Sack Size" },
+    { id: "Shuvelle04", name: "Mayoral Movie Taste" },
+    { id: "Shuvelle05", name: "Diggy Hole!" },
+    { id: "Shuvelle06", name: "Diggy Diggy Hole!" },
+    { id: "Shuvelle07", name: "Dig Diggily Diggy Dig Dig Hole!" },
   ],
   Snouts: [
-    {
-      id: "Snouts1",
-      name: "A Salty Fall",
-    },
-    {
-      id: "Snouts2",
-      name: "Gravity VS Salt",
-    },
-    {
-      id: "Snouts3",
-      name: "Big Ol Chonker",
-    },
+    { id: "Snouts01", name: "A Salty Fall" },
+    { id: "Snouts02", name: "Gravity VS Salt" },
+    { id: "Snouts03", name: "Big Ol Chonker" },
+    { id: "Snouts04", name: "Mana Plox" },
+  ],
+  Worldo: [
+    { id: "Worldo01", name: "Odd Jobs for Cold Hard Cash" },
+    { id: "Worldo02", name: "Can't Guard if you're Dead!" },
+  ],
+  Yondergreen: [
+    { id: "Yondergreen01", name: "Infrastructure Plan" },
+    { id: "Yondergreen02", name: "Economic Policy" },
+    { id: "Yondergreen03", name: "Stance on Big Tech" },
+    { id: "Yondergreen04", name: "Legislative Action" },
+    { id: "Yondergreen05", name: "No Snapping Contract" },
+    { id: "Yondergreen06", name: "Keep Away Contract" },
+    { id: "Yondergreen07", name: "Ad Solidarity Contract" },
   ],
 };
 
