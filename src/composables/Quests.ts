@@ -5,66 +5,66 @@ export type Quest = {
 
 const QuestsW1: Record<string, Array<Quest>> = {
   "Builder Bird": [
-    { id: "Builder Bird01", name: "Restoring Power to the Portal" }
+    { id: "Builder Bird01", name: "Restoring Power to the Portal" },
   ],
   Bushlyte: [
     { id: "Bushlyte01", name: "A Peanut for your Thoughts" },
     { id: "Bushlyte02", name: "Honk if you Love Peanuts!" },
-    { id: "Bushlyte03", name: "A Peanut Saved is a Peanut not Eaten!" }
+    { id: "Bushlyte03", name: "A Peanut Saved is a Peanut not Eaten!" },
   ],
   Dazey: [
     { id: "Dazey01", name: "Dressing like a Dork" },
-    { id: "Dazey02", name: "Literally Physics" }
+    { id: "Dazey02", name: "Literally Physics" },
   ],
   "Dog Bone": [
     { id: "Dog Bone01", name: "Why he Die???" },
-    { id: "Dog Bone02", name: "Bow Wow going Dow..n!"}
+    { id: "Dog Bone02", name: "Bow Wow going Dow..n!"},
   ],
   Funguy: [
     { id: "Funguy01", name: "Mushroom Munchies" },
     { id: "Funguy02", name: "Videogame Highscores are COOL!" },
     { id: "Funguy03", name: "Partycrastination" },
     { id: "Funguy04", name: "Party Crashin'" },
-    { id: "Funguy05", name: "Wicked Party Cleanup" }
+    { id: "Funguy05", name: "Wicked Party Cleanup" },
   ],
   Glumlee: [
     { id: "Glumlee01", name: "Learning to Swing" },
     { id: "Glumlee02", name: "Learning to Smelt" },
     { id: "Glumlee03", name: "Literally Burning your Money" },
     { id: "Glumlee04", name: "The Impossible Task" },
-    { id: "Glumlee05", name: "He's Havin' a Bad Day" }
+    { id: "Glumlee05", name: "He's Havin' a Bad Day" },
   ],
   Hamish: [
     { id: "Hamish01", name: "The Hamazing Plot Twist" },
     { id: "Hamish02", name: "Should We Tell Him?" },
-    { id: "Hamish03", name: "Slime for Storage" }
+    { id: "Hamish03", name: "Slime for Storage" },
   ],
   Krunk: [
     { id: "Krunk01", name: "A Plot to be Perfect" },
     { id: "Krunk02", name: "The Scientific Method, According to a Rock" },
-    { id: "Krunk03", name: "King of the Cavern" }
+    { id: "Krunk03", name: "King of the Cavern" },
   ],
   Meel: [
     { id: "Meel01", name: "Spooky Scary Skelepoops" },
     { id: "Meel02", name: "Waitin' for the Cards to Drop" },
   ],
   "Mr Pigibank": [
-    { id: "Mr Pigibank01", name: "A Pig and his Stamps" }
+    { id: "Mr Pigibank01", name: "A Pig and his Stamps" },
   ],
   Mutton: [
     { id: "Mutton01", name: "Beatboxing Starterpack" },
     { id: "Mutton02", name: "Clout Chasin'" },
     { id: "Mutton03", name: "Cross Platform Promotion" },
-    { id: "Mutton04", name: "7 Figure Followers" }
+    { id: "Mutton04", name: "7 Figure Followers" },
   ],
   "Obol Altar": [
-    { id: "Obol Altar01", name: "Bad Kitty, get off that altar" }
+    { id: "Obol Altar01", name: "Bad Kitty, get off that altar" },
   ],
   "Papua Piggea": [
     { id: "Papua Piggea01", name: "Oinko Boinko" },
     { id: "Papua Piggea02", name: "Crystal Crime Stopper" },
     { id: "Papua Piggea03", name: "Stamp Collecting" },
-    { id: "Papua Piggea04", name: "This Little Piggy Felt Remorse" }
+    { id: "Papua Piggea04", name: "This Little Piggy Felt Remorse" },
   ],
   "Picnic Stowaway": [
     { id: "Picnic Stowaway01", name: "The Hungry Stowaway" },
@@ -78,18 +78,18 @@ const QuestsW1: Record<string, Array<Quest>> = {
     { id: "Picnic Stowaway09", name: "The Last Supper, at Least for Today!" },
     { id: "Picnic Stowaway10", name: "Don't Desert the Dessert" },
     { id: "Picnic Stowaway11", name: "A Midnight Snack" },
-    { id: "Picnic Stowaway12", name: "King of Food" }
+    { id: "Picnic Stowaway12", name: "King of Food" },
   ],
   Promotheus: [
     { id: "Promotheus01", name: "I'm Ready, Promotion!" },
     { id: "Promotheus02", name: "Three Right Answers" },
     { id: "Promotheus03", name: "Slovakian Scare" },
-    { id: "Promotheus04", name: "The Witcher, but not Really" }
+    { id: "Promotheus04", name: "The Witcher, but not Really" },
   ],
   Rocklyte: [
     { id: "Rocklyte01", name: "How It's Made, Episode 7. The Super Peanut" },
     { id: "Rocklyte02", name: "If Life Gives you Peanuts, make Shiny Peanuts!" },
-    { id: "Rocklyte03", name: "Becoming the Best Beginner" }
+    { id: "Rocklyte03", name: "Becoming the Best Beginner" },
   ],
   Scripticus: [
     { id: "Scripticus01", name: "Hardcore Gamer Status, Here I Come!" },
@@ -103,13 +103,13 @@ const QuestsW1: Record<string, Array<Quest>> = {
     { id: "Scripticus09", name: "Seeking Foreign Aid" },
     { id: "Scripticus10", name: "What Lies at the Heart of the Forest" },
     { id: "Scripticus11", name: "The Bigger they are, the Bigger they Fall!" },
-    { id: "Scripticus12", name: "Champion of the Grasslands" }
+    { id: "Scripticus12", name: "Champion of the Grasslands" },
   ],
   Sprout: [
     { id: "Sprout01", name: "Sticks and Stone Something Something Bones..." },
     { id: "Sprout02", name: "Justice Wears No Clothes" },
     { id: "Sprout03", name: "Shoe Shopping with Sprout" },
-    { id: "Sprout04", name: "Frisbee Fanatic" }
+    { id: "Sprout04", name: "Frisbee Fanatic" },
   ],
   Stiltzcho: [
     { id: "Stiltzcho01", name: "Outta the Way Slimes" },
@@ -117,32 +117,32 @@ const QuestsW1: Record<string, Array<Quest>> = {
     { id: "Stiltzcho03", name: "Investigator by Day, Prankster by Night" },
     { id: "Stiltzcho04", name: "Time Crime Episode 1" },
     { id: "Stiltzcho05", name: "Time Crime Episode 2" },
-    { id: "Stiltzcho06", name: "Time Crime Season Finale" }
+    { id: "Stiltzcho06", name: "Time Crime Season Finale" },
   ],
   Telescope: [
-    { id: "Telescope01", name: "I'm Seeing Stars!" }
+    { id: "Telescope01", name: "I'm Seeing Stars!" },
   ],
   "Tiki Chief": [
     { id: "Tiki Chief01", name: "Brochure Building" },
     { id: "Tiki Chief02", name: "Three Strikes, you're Out!" },
     { id: "Tiki Chief03", name: "Blame it on the Glublins" },
-    { id: "Tiki Chief04", name: "Hotel? Tikivago. Sorry, couldn't Help It!" }
+    { id: "Tiki Chief04", name: "Hotel? Tikivago. Sorry, couldn't Help It!" },
   ],
   Toadstall: [
     { id: "Toadstall01", name: "Creating a Party!" },
     { id: "Toadstall02", name: "Bigger Party Better Party!" },
-    { id: "Toadstall03", name: "Bother the Frogger!" }
+    { id: "Toadstall03", name: "Bother the Frogger!" },
   ],
   "Town Marble": [
-    { id: "Town Marble01", name: "Visualizing the Sculpture Within..." }
+    { id: "Town Marble01", name: "Visualizing the Sculpture Within..." },
   ],
   "TP Pete": [
     { id: "TP Pete01", name: "Roll of Anger" },
     { id: "TP Pete02", name: "The Rats are to Blame!" },
-    { id: "TP Pete03", name: "Fired for BS Reasons!" }
+    { id: "TP Pete03", name: "Fired for BS Reasons!" },
   ],
   "Typhoon": [
-    { id: "Typhoon01", name: "Surprise Attack!" }
+    { id: "Typhoon01", name: "Surprise Attack!" },
   ],
   Woodsman: [
     { id: "Woodsman01", name: "A noob's first swing" },
@@ -153,315 +153,125 @@ const QuestsW1: Record<string, Array<Quest>> = {
 };
 
 const QuestsW2: Record<string, Array<Quest>> = {
-  Cactolyte: [
-    {
-      id: "Cactolyte1",
-      name: "Super Skillage",
-    },
-    {
-      id: "Cactolyte2",
-      name: "Top Skillage",
-    },
-    {
-      id: "Cactolyte3",
-      name: "Peanut De-Aging",
-    },
-    {
-      id: "Cactolyte4",
-      name: "Maestro! The Stro! Mman!",
-    },
-  ],
-  "Constructor Crow": [
-    {
-      id: "Constructor Crow1",
-      name: "Restoring Power to another Portal",
-    },
-  ],
-  Speccius: [
-    {
-      id: "Speccius1",
-      name: "More like 'Sleepius' lmao",
-    },
-    {
-      id: "Speccius2",
-      name: "Specialization Station",
-    },
-  ],
-  Fishpaste97: [
-    {
-      id: "Fishpaste971",
-      name: "'Accidental' Exploit",
-    },
-    {
-      id: "Fishpaste972",
-      name: "Can you do the Can Can?",
-    },
-  ],
-  Scubidew: [
-    {
-      id: "Scubidew1",
-      name: "Don't Step to Me, Bro!",
-    },
-    {
-      id: "Scubidew2",
-      name: "Uncovering the Deep Sea State!!!",
-    },
-    {
-      id: "Scubidew3",
-      name: "A Normal Quest.",
-    },
-  ],
-  Whattso: [
-    {
-      id: "Whattso1",
-      name: "Mopey Dick",
-    },
-    {
-      id: "Whattso2",
-      name: "The Whaley Hard Minigame",
-    },
-    {
-      id: "Whattso3",
-      name: "Bobbin' Bobbers",
-    },
-    {
-      id: "Whattso4",
-      name: "The Biggest Fish in the Sea...?",
-    },
-  ],
-  "Postboy Pablob": [
-    {
-      id: "Postboy Pablob1",
-      name: "Signed, Sealed and Lost in the Post",
-    },
-  ],
   "Bandit Bob": [
-    {
-      id: "Bandit Bob1",
-      name: "Bullets for Bandit Bob!",
-    },
-    {
-      id: "Bandit Bob2",
-      name: "Bob's Brand New Bandana",
-    },
-    {
-      id: "Bandit Bob3",
-      name: "Bringing Bob's Boxes",
-    },
-    {
-      id: "Bandit Bob4",
-      name: "The Desert Dungeon Prequest",
-    },
+    { id: "Bandit Bob01", name: "Bullets for Bandit Bob!" },
+    { id: "Bandit Bob02", name: "Bob's Brand New Bandana" },
+    { id: "Bandit Bob03", name: "Bringing Bob's Boxes" },
+    { id: "Bandit Bob04", name: "The Desert Dungeon Prequest" },
+  ],
+  Cactolyte: [
+    { id: "Cactolyte01", name: "Super Skillage" },
+    { id: "Cactolyte02", name: "Top Skillage" },
+    { id: "Cactolyte03", name: "Peanut De-Aging" },
+    { id: "Cactolyte04", name: "Maestro! The Stro! Mman!" },
   ],
   Carpetiem: [
-    {
-      id: "Carpetiem1",
-      name: "Darn Lazy Gamers!",
-    },
-    {
-      id: "Carpetiem2",
-      name: "Old Timey Craftin'",
-    },
-    {
-      id: "Carpetiem3",
-      name: "Be like Buster!",
-    },
-    {
-      id: "Carpetiem4",
-      name: "Helping 100 times over",
-    },
-  ],
-  Djonnut: [
-    {
-      id: "Djonnut1",
-      name: "Genie Dieting",
-    },
-    {
-      id: "Djonnut2",
-      name: "I'm Blue Dabadedada",
-    },
-    {
-      id: "Djonnut3",
-      name: "The Blue New World",
-    },
-  ],
-  Goldric: [
-    {
-      id: "Goldric1",
-      name: "Trickle Down Economics",
-    },
-    {
-      id: "Goldric2",
-      name: "Hoopsies",
-    },
-    {
-      id: "Goldric3",
-      name: "Only Winners have Portraits",
-    },
-    {
-      id: "Goldric4",
-      name: "Criminal Code of Conduct",
-    },
-    {
-      id: "Goldric5",
-      name: "Dress to Impress",
-    },
-    {
-      id: "Goldric6",
-      name: "Dont lay a finger on my Sheepies!!!",
-    },
-  ],
-  "Snake Jar": [
-    {
-      id: "Snake Jar1",
-      name: "Lookin' Like a Snack",
-    },
-    {
-      id: "Snake Jar2",
-      name: "Red Stuff Bad!",
-    },
-    {
-      id: "Snake Jar3",
-      name: "PSA. You Are Being Eaten!",
-    },
-    {
-      id: "Snake Jar4",
-      name: "A Noob, served Medium Rare!",
-    },
-  ],
-  Loominadi: [
-    {
-      id: "Loominadi1",
-      name: "Rhyming is Key!",
-    },
-    {
-      id: "Loominadi2",
-      name: "Uh, Something About Vials?",
-    },
-    {
-      id: "Loominadi3",
-      name: "Journey to the Center of the Blundermines",
-    },
-    {
-      id: "Loominadi4",
-      name: "The Mummy of Mystery",
-    },
-  ],
-  "Cowbo Jones": [
-    {
-      id: "Cowbo Jones1",
-      name: "The Grind Begins...?",
-    },
-    {
-      id: "Cowbo Jones2",
-      name: "The Hatless Howerhouse!",
-    },
-    {
-      id: "Cowbo Jones3",
-      name: "No Country for One Character",
-    },
-    {
-      id: "Cowbo Jones4",
-      name: "Say Goodbye to your Dubloon!",
-    },
-    {
-      id: "Cowbo Jones5",
-      name: "Alchemial Apprentice",
-    },
-    {
-      id: "Cowbo Jones6",
-      name: "Three Vials? Those are Rookie Numbers!",
-    },
-    {
-      id: "Cowbo Jones7",
-      name: "The Notorious B.O.B",
-    },
-    {
-      id: "Cowbo Jones8",
-      name: "Bake Him Away, Toys",
-    },
-    {
-      id: "Cowbo Jones9",
-      name: "A Hat in Crime",
-    },
-    {
-      id: "Cowbo Jones10",
-      name: "Commence Criminal Crimes!",
-    },
-    {
-      id: "Cowbo Jones11",
-      name: "The Worst Trade Deal in History",
-    },
-    {
-      id: "Cowbo Jones12",
-      name: "Children? What'd they ever do for Me...",
-    },
-    {
-      id: "Cowbo Jones13",
-      name: "Oh No, not the Elderly!",
-    },
-    {
-      id: "Cowbo Jones14",
-      name: "Tomb Raid",
-    },
-    {
-      id: "Cowbo Jones15",
-      name: "The New Sheriff",
-    },
+    { id: "Carpetiem01", name: "Darn Lazy Gamers!" },
+    { id: "Carpetiem02", name: "Old Timey Craftin'" },
+    { id: "Carpetiem03", name: "Be like Buster!" },
+    { id: "Carpetiem04", name: "Helping 100 times over" },
   ],
   Centurion: [
-    {
-      id: "Centurion1",
-      name: "Down The Mimic Hole!",
-    },
-    {
-      id: "Centurion2",
-      name: "Which one of yous is the Mafia?",
-    },
-    {
-      id: "Centurion3",
-      name: "High Scorer",
-    },
-    {
-      id: "Centurion4",
-      name: "Colosseum Champ!",
-    },
-    {
-      id: "Centurion5",
-      name: "Colosseum GDQ",
-    },
+    { id: "Centurion01", name: "Down The Mimic Hole!" },
+    { id: "Centurion02", name: "Which one of yous is the Mafia?" },
+    { id: "Centurion03", name: "High Scorer" },
+    { id: "Centurion04", name: "Colosseum Champ!" },
+    { id: "Centurion05", name: "Colosseum GDQ" },
   ],
-  Walupiggy: [
-    {
-      id: "Walupiggy1",
-      name: "Treasure Hunt 1",
-    },
-    {
-      id: "Walupiggy2",
-      name: "Treasure Hunt 2",
-    },
-    {
-      id: "Walupiggy3",
-      name: "Treasure Hunt 3",
-    },
-    {
-      id: "Walupiggy4",
-      name: "Treasure Hunt 4",
-    },
+  "Constructor Crow": [
+    { id: "Constructor Crow01", name: "Restoring Power to another Portal" },
+  ],
+  "Cowbo Jones": [
+    { id: "Cowbo Jones01", name: "The Grind Begins...?" },
+    { id: "Cowbo Jones02", name: "The Hatless Howerhouse!" },
+    { id: "Cowbo Jones03", name: "No Country for One Character" },
+    { id: "Cowbo Jones04", name: "Say Goodbye to your Dubloon!" },
+    { id: "Cowbo Jones05", name: "Alchemial Apprentice" },
+    { id: "Cowbo Jones06", name: "Three Vials? Those are Rookie Numbers!" },
+    { id: "Cowbo Jones07", name: "The Notorious B.O.B" },
+    { id: "Cowbo Jones08", name: "Bake Him Away, Toys" },
+    { id: "Cowbo Jones09", name: "A Hat in Crime" },
+    { id: "Cowbo Jones10", name: "Commence Criminal Crimes!" },
+    { id: "Cowbo Jones11", name: "The Worst Trade Deal in History" },
+    { id: "Cowbo Jones12", name: "Children? What'd they ever do for Me..." },
+    { id: "Cowbo Jones13", name: "Oh No, not the Elderly!" },
+    { id: "Cowbo Jones14", name: "Tomb Raid" },
+    { id: "Cowbo Jones15", name: "The New Sheriff" },
+  ],
+  "Desert Davey": [
+    { id: "Desert Davey01", name: "U Cool?" },
+  ],
+  Djonnut: [
+    { id: "Djonnut01", name: "Genie Dieting" },
+    { id: "Djonnut02", name: "I'm Blue Dabadedada" },
+    { id: "Djonnut03", name: "The Blue New World" },
+  ],
+  Fishpaste97: [
+    { id: "Fishpaste9701", name: "'Accidental' Exploit" },
+    { id: "Fishpaste9702", name: "Can you do the Can Can?" },
   ],
   "Gangster Gus": [
-    {
-      id: "Gangster Gus1",
-      name: "Plunderin Down Yonder",
-    },
-    {
-      id: "Gangster Gus2",
-      name: "Perfect Progress Score",
-    },
-    {
-      id: "Gangster Gus3",
-      name: "Sanke Revival Denial",
-    },
+    { id: "Gangster Gus01", name: "Plunderin Down Yonder" },
+    { id: "Gangster Gus02", name: "Perfect Progress Score" },
+    { id: "Gangster Gus03", name: "Sanke Revival Denial" },
+  ],
+  Goldric: [
+    { id: "Goldric01", name: "Trickle Down Economics" },
+    { id: "Goldric02", name: "Hoopsies" },
+    { id: "Goldric03", name: "Only Winners have Portraits" },
+    { id: "Goldric04", name: "Criminal Code of Conduct" },
+    { id: "Goldric05", name: "Dress to Impress" },
+    { id: "Goldric06", name: "Dont lay a finger on my Sheepies!!!" },
+  ],
+  Loominadi: [
+    { id: "Loominadi01", name: "Rhyming is Key!" },
+    { id: "Loominadi02", name: "Uh, Something About Vials?" },
+    { id: "Loominadi03", name: "Journey to the Center of the Blundermines" },
+    { id: "Loominadi04", name: "The Mummy of Mystery" },
+  ],
+  "Obol Altar": [
+    { id: "Obol Altar01", name: "Bad Kitty, get off that altar" },
+  ],
+  "Postboy Pablob": [
+    { id: "Postboy Pablob01", name: "Signed, Sealed and Lost in the Post" },
+  ],
+  Scubidew: [
+    { id: "Scubidew01", name: "Don't Step to Me, Bro!" },
+    { id: "Scubidew02", name: "Uncovering the Deep Sea State!!!" },
+    { id: "Scubidew03", name: "A Normal Quest." },
+  ],
+  "Snake Jar": [
+    { id: "Snake Jar01", name: "Lookin' Like a Snack" },
+    { id: "Snake Jar02", name: "Red Stuff Bad!" },
+    { id: "Snake Jar03", name: "PSA. You Are Being Eaten!" },
+    { id: "Snake Jar04", name: "A Noob, served Medium Rare!" },
+  ],
+  Speccius: [
+    { id: "Speccius01", name: "More like 'Sleepius' lmao" },
+    { id: "Speccius02", name: "Specialization Station" },
+  ],
+  Walupiggy: [
+    { id: "Walupiggy01", name: "Treasure Hunt 1" },
+    { id: "Walupiggy02", name: "Treasure Hunt 2" },
+    { id: "Walupiggy03", name: "Treasure Hunt 3" },
+    { id: "Walupiggy04", name: "Treasure Hunt 4" },
+  ],
+  Wellington: [
+    { id: "Wellington01", name: "Platforms in Disguise, Platsformers!" },
+    { id: "Wellington02", name: "Findin' Fingerprints" },
+    { id: "Wellington03", name: "You Can't Run, but you Can Hide" },
+    { id: "Wellington04", name: "Puzzles and Math, a Winning Combination!" },
+  ],
+  Whattso: [
+    { id: "Whattso01", name: "Mopey Dick" },
+    { id: "Whattso02", name: "The Whaley Hard Minigame" },
+    { id: "Whattso03", name: "Bobbin' Bobbers" },
+    { id: "Whattso04", name: "The Biggest Fish in the Sea...?" },
+  ],
+  "XxX Cattleprod XxX": [
+    { id: "XxX Cattleprod XxX01", name: "Peak Gaming" },
+    { id: "XxX Cattleprod XxX02", name: "Wait No, I meant Pathetic Gaming" },
+    { id: "XxX Cattleprod XxX03", name: "Ok, NOW it's Peak Gaming!" },
   ],
 };
 
