@@ -132,6 +132,7 @@ export default defineComponent({
           "World 1": "bg-green-600",
           "World 2": "bg-yellow-400",
           "World 3": "bg-blue-400",
+          "World 4": "bg-fuchsia-600",
         }[category] ?? ""
       );
     };

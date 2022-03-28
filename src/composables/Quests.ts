@@ -362,6 +362,30 @@ const QuestsW3: Record<string, Array<Quest>> = {
   ],
 };
 
+const QuestsW4: Record<string, Array<Quest>> = {
+  Blobbo: [
+    { id: "Blobbo01", name: "A Honker Took mah Baby!", },
+    { id: "Blobbo02", name: "Glitter Critter", },
+  ],
+  "Capital P": [
+    { id: "Capital P01", name: "Right side wrong side!", },
+    { id: "Capital P02", name: "No room on the Dance Floor!", },
+    { id: "Capital P03", name: "Everybody move it move it!", },
+  ],
+  Gobo: [
+    { id: "Gobo01", name: "Breeding in Outer Space", },
+    { id: "Gobo02", name: "Intense Pet Fighting", },
+    { id: "Gobo03", name: "Squirrel Tactics", },
+    { id: "Gobo04", name: "Spicy Cooking", },
+    { id: "Gobo05", name: "Lab Experimentation, Ft. You", },
+  ],
+  Oinkin: [
+    { id: "Oinkin01", name: "Filling the Menu", },
+    { id: "Oinkin02", name: "Diner Deliverer", },
+    { id: "Oinkin03", name: "Recipe for Fattening Pastry", },
+  ],
+};
+
 const QuestsEvents: Record<string, Array<Quest>> = {
   "Giftmas Blobulyte": [
     { id: "Giftmas Blobulyte01", name: "Boo, Headshot!" },
@@ -392,5 +416,6 @@ export const AllQuests: Record<string, Record<string, Array<Quest>>> = {
   "World 1": QuestsW1,
   "World 2": QuestsW2,
   "World 3": QuestsW3,
+  "World 4": QuestsW4,
   "Events": QuestsEvents,
 };
