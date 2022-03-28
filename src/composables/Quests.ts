@@ -362,8 +362,35 @@ const QuestsW3: Record<string, Array<Quest>> = {
   ],
 };
 
+const QuestsEvents: Record<string, Array<Quest>> = {
+  "Giftmas Blobulyte": [
+    { id: "Giftmas Blobulyte01", name: "Boo, Headshot!" },
+    { id: "Giftmas Blobulyte02", name: "You Shouldn't Have! No, really." },
+  ],
+  Loveulyte: [
+    { id: "Loveulyte01", name: "Heart Hogger" },
+    { id: "Loveulyte02", name: "Heartbreaker" },
+  ],
+  Egggulyte: [
+    { id: "Egggulyte01", name: "Egg Shaped Lootboxes!" },
+    { id: "Egggulyte02", name: "I've Got a Golden Tickegg!" },
+  ],
+  Coastiolyte: [
+    { id: "Coastiolyte01", name: "Cooler than a Cooler!" },
+    { id: "Coastiolyte02", name: "Vibe Check" },
+  ],
+  "Falloween Pumpkin": [
+    { id: "Falloween Pumpkin01", name: "The Spookyness" },
+    { id: "Falloween Pumpkin02", name: "The Scaryness" },
+    { id: "Falloween Pumpkin03", name: "The Horroriness" },
+    { id: "Falloween Pumpkin04", name: "The Booeyness" },
+    { id: "Falloween Pumpkin05", name: "The Afterparty" },
+  ],
+}
+
 export const AllQuests: Record<string, Record<string, Array<Quest>>> = {
   "World 1": QuestsW1,
   "World 2": QuestsW2,
   "World 3": QuestsW3,
+  "Events": QuestsEvents,
 };

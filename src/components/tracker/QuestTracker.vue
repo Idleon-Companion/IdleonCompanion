@@ -128,6 +128,7 @@ export default defineComponent({
     const categoryClass = (category: string): string => {
       return (
         {
+          "Events": "bg-red-400",
           "World 1": "bg-green-600",
           "World 2": "bg-yellow-400",
           "World 3": "bg-blue-400",
