@@ -3,519 +3,152 @@ export type Quest = {
   name: string;
 };
 
-// Quest IDs for each NPC must be ordered lexicographically!
 const QuestsW1: Record<string, Array<Quest>> = {
-  "TP Pete": [
-    {
-      id: "TP Pete1",
-      name: "Roll of Anger",
-    },
-    {
-      id: "TP Pete2",
-      name: "The Rats are to Blame!",
-    },
-    {
-      id: "TP Pete3",
-      name: "Fired for BS Reasons!",
-    },
-  ],
-  Sprout: [
-    {
-      id: "Sprout1",
-      name: "Sticks and Stone Something Something Bones...",
-    },
-    {
-      id: "Sprout2",
-      name: "Justice Wears No Clothes",
-    },
-    {
-      id: "Sprout3",
-      name: "Shoe Shopping with Sprout",
-    },
-    {
-      id: "Sprout4",
-      name: "Frisbee Fanatic",
-    },
-  ],
-  "Town Marble": [
-    {
-      id: "Town Marble1",
-      name: "Visualizing the Sculpture Within...",
-    },
-  ],
-  Woodsman: [
-    {
-      id: "Woodsman1",
-      name: "A noob's first swing",
-    },
-    {
-      id: "Woodsman2",
-      name: "A noob's 2nd first swing",
-    },
-    {
-      id: "Woodsman3",
-      name: "It's Just a Plank, Bro!",
-    },
-    {
-      id: "Woodsman4",
-      name: "Exotic Pranks... I mean Logs!",
-    },
-  ],
-  Scripticus: [
-    {
-      id: "Scripticus2",
-      name: "Hardcore Gamer Status, Here I Come!",
-    },
-    {
-      id: "Scripticus3",
-      name: "Gear Up, Gamer!",
-    },
-    {
-      id: "Scripticus4",
-      name: "Mr. Worldwide",
-    },
-    {
-      id: "Scripticus5",
-      name: "The Choice is Yours!",
-    },
-    {
-      id: "Scripticus6",
-      name: "Certified Swinger, of Pickaxes of course!",
-    },
-    {
-      id: "Scripticus7",
-      name: "The Smithing Grind",
-    },
-    {
-      id: "Scripticus8",
-      name: "The Unoccupied Picnic",
-    },
-    {
-      id: "Scripticus9",
-      name: "Seeking Foreign Aid",
-    },
-    {
-      id: "Scripticus10",
-      name: "What Lies at the Heart of the Forest",
-    },
-    {
-      id: "Scripticus11",
-      name: "The Bigger they are, the Bigger they Fall!",
-    },
-    {
-      id: "Scripticus12",
-      name: "Champion of the Grasslands",
-    },
-    {
-      id: "Scripticus13",
-      name: "Can't somebody else do it?",
-    },
-  ],
-  Krunk: [
-    {
-      id: "Krunk1",
-      name: "A Plot to be Perfect",
-    },
-    {
-      id: "Krunk2",
-      name: "The Scientific Method, According to a Rock",
-    },
-    {
-      id: "Krunk3",
-      name: "King of the Cavern",
-    },
-  ],
-  Glumlee: [
-    {
-      id: "Glumlee1",
-      name: "Learning to Swing",
-    },
-    {
-      id: "Glumlee2",
-      name: "Learning to Smelt",
-    },
-    {
-      id: "Glumlee3",
-      name: "Literally Burning your Money",
-    },
-    {
-      id: "Glumlee4",
-      name: "The Impossible Task",
-    },
-    {
-      id: "Glumlee5",
-      name: "He's Havin' a Bad Day",
-    },
-  ],
-  "Picnic Stowaway": [
-    {
-      id: "Picnic Stowaway1",
-      name: "The Hungry Stowaway",
-    },
-    {
-      id: "Picnic Stowaway2",
-      name: "Beating Up Frogs for some Sauce",
-    },
-    {
-      id: "Picnic Stowaway3",
-      name: "Live-Action Entertainment",
-    },
-    {
-      id: "Picnic Stowaway4",
-      name: "The Most Important Meal of the Day",
-    },
-    {
-      id: "Picnic Stowaway5",
-      name: "Brunchin' with the Blobs",
-    },
-    {
-      id: "Picnic Stowaway6",
-      name: "Luncheon with the Inlaws",
-    },
-    {
-      id: "Picnic Stowaway7",
-      name: "Afternoon Tea in a Jiffy",
-    },
-    {
-      id: "Picnic Stowaway8",
-      name: "Early Evening Eating Endeavor",
-    },
-    {
-      id: "Picnic Stowaway9",
-      name: "The Last Supper, at Least for Today!",
-    },
-    {
-      id: "Picnic Stowaway10",
-      name: "Don't Desert the Dessert",
-    },
-    {
-      id: "Picnic Stowaway11",
-      name: "A Midnight Snack",
-    },
-    {
-      id: "Picnic Stowaway12",
-      name: "King of Food",
-    },
-  ],
-  Hamish: [
-    {
-      id: "Hamish1",
-      name: "The Hamazing Plot Twist",
-    },
-    {
-      id: "Hamish2",
-      name: "Should We Tell Him?",
-    },
-    {
-      id: "Hamish3",
-      name: "Slime for Storage",
-    },
-  ],
-  "Mr Pigibank": [
-    {
-      id: "Mr Pigibank1",
-      name: "A Pig and his Stamps",
-    },
-  ],
-  Promotheus: [
-    {
-      id: "Promotheus1",
-      name: "I'm Ready, Promotion!",
-    },
-    {
-      id: "Promotheus2",
-      name: "Three Right Answers",
-    },
-    {
-      id: "Promotheus3",
-      name: "Slovakian Scare",
-    },
-    {
-      id: "Promotheus4",
-      name: "The Witcher, but not Really",
-    },
+  "Builder Bird": [
+    { id: "Builder Bird01", name: "Restoring Power to the Portal" }
   ],
   Bushlyte: [
-    {
-      id: "Bushlyte1",
-      name: "A Peanut for your Thoughts",
-    },
-    {
-      id: "Bushlyte2",
-      name: "Honk if you Love Peanuts!",
-    },
-    {
-      id: "Bushlyte3",
-      name: "A Peanut Saved is a Peanut not Eaten!",
-    },
-  ],
-  Rocklyte: [
-    {
-      id: "Rocklyte1",
-      name: "How It's Made, Episode 7. The Super Peanut",
-    },
-    {
-      id: "Rocklyte2",
-      name: "If Life Gives you Peanuts, make Shiny Peanuts!",
-    },
-    {
-      id: "Rocklyte3",
-      name: "Becoming the Best Beginner",
-    },
-  ],
-  Stiltzcho: [
-    {
-      id: "Stiltzcho1",
-      name: "Outta the Way Slimes",
-    },
-    {
-      id: "Stiltzcho2",
-      name: "No Stone Unturned",
-    },
-    {
-      id: "Stiltzcho3",
-      name: "Investigator by Day, Prankster by Night",
-    },
-    {
-      id: "Stiltzcho4",
-      name: "Time Crime Episode 1",
-    },
-    {
-      id: "Stiltzcho5",
-      name: "Time Crime Episode 2",
-    },
-    {
-      id: "Stiltzcho6",
-      name: "Time Crime Season Finale",
-    },
-  ],
-  Funguy: [
-    {
-      id: "Funguy1",
-      name: "Mushroom Munchies",
-    },
-    {
-      id: "Funguy2",
-      name: "Videogame Highscores are COOL!",
-    },
-    {
-      id: "Funguy3",
-      name: "Partycrastination",
-    },
-    {
-      id: "Funguy4",
-      name: "Party Crashin'",
-    },
-    {
-      id: "Funguy5",
-      name: "Wicked Party Cleanup",
-    },
-  ],
-  "Tiki Chief": [
-    {
-      id: "Tiki Chief1",
-      name: "Brochure Building",
-    },
-    {
-      id: "Tiki Chief2",
-      name: "Three Strikes, you're Out!",
-    },
-    {
-      id: "Tiki Chief3",
-
-      name: "Blame it on the Glublins",
-    },
-    {
-      id: "Tiki Chief4",
-
-      name: "Hotel? Tikivago. Sorry, couldn't Help It!",
-    },
-  ],
-  "Dog Bone": [
-    {
-      id: "Dog Bone1",
-
-      name: "Why he Die???",
-    },
-    {
-      id: "Dog Bone2",
-
-      name: "Bow Wow going Dow..n!",
-    },
-  ],
-  "Builder Bird": [
-    {
-      id: "Builder Bird1",
-
-      name: "Restoring Power to the Portal",
-    },
-  ],
-  "Papua Piggea": [
-    {
-      id: "Papua Piggea1",
-
-      name: "Oinko Boinko",
-    },
-    {
-      id: "Papua Piggea2",
-
-      name: "Crystal Crime Stopper",
-    },
-    {
-      id: "Papua Piggea3",
-
-      name: "Stamp Collecting",
-    },
-    {
-      id: "Papua Piggea4",
-
-      name: "This Little Piggy Felt Remorse",
-    },
-  ],
-  Mutton: [
-    {
-      id: "Mutton1",
-
-      name: "Beatboxing Starterpack",
-    },
-    {
-      id: "Mutton2",
-
-      name: "Clout Chasin'",
-    },
-    {
-      id: "Mutton3",
-
-      name: "Cross Platform Promotion",
-    },
-    {
-      id: "Mutton4",
-
-      name: "7 Figure Followers",
-    },
-  ],
-  Meel: [
-    {
-      id: "Meel1",
-
-      name: "Spooky Scary Skelepoops",
-    },
-    {
-      id: "Meel2",
-
-      name: "Waitin' for the Cards to Drop",
-    },
+    { id: "Bushlyte01", name: "A Peanut for your Thoughts" },
+    { id: "Bushlyte02", name: "Honk if you Love Peanuts!" },
+    { id: "Bushlyte03", name: "A Peanut Saved is a Peanut not Eaten!" }
   ],
   Dazey: [
-    {
-      id: "Dazey1",
-
-      name: "Dressing like a Dork",
-    },
-    {
-      id: "Dazey2",
-
-      name: "Literally Physics",
-    },
+    { id: "Dazey01", name: "Dressing like a Dork" },
+    { id: "Dazey02", name: "Literally Physics" }
   ],
-  "Giftmas Blobulyte": [
-    {
-      id: "Giftmas Blobulyte1",
-
-      name: "Boo, Headshot!",
-    },
-    {
-      id: "Giftmas Blobulyte2",
-
-      name: "You Shouldn't Have! No, really.",
-    },
+  "Dog Bone": [
+    { id: "Dog Bone01", name: "Why he Die???" },
+    { id: "Dog Bone02", name: "Bow Wow going Dow..n!"}
+  ],
+  Funguy: [
+    { id: "Funguy01", name: "Mushroom Munchies" },
+    { id: "Funguy02", name: "Videogame Highscores are COOL!" },
+    { id: "Funguy03", name: "Partycrastination" },
+    { id: "Funguy04", name: "Party Crashin'" },
+    { id: "Funguy05", name: "Wicked Party Cleanup" }
+  ],
+  Glumlee: [
+    { id: "Glumlee01", name: "Learning to Swing" },
+    { id: "Glumlee02", name: "Learning to Smelt" },
+    { id: "Glumlee03", name: "Literally Burning your Money" },
+    { id: "Glumlee04", name: "The Impossible Task" },
+    { id: "Glumlee05", name: "He's Havin' a Bad Day" }
+  ],
+  Hamish: [
+    { id: "Hamish01", name: "The Hamazing Plot Twist" },
+    { id: "Hamish02", name: "Should We Tell Him?" },
+    { id: "Hamish03", name: "Slime for Storage" }
+  ],
+  Krunk: [
+    { id: "Krunk01", name: "A Plot to be Perfect" },
+    { id: "Krunk02", name: "The Scientific Method, According to a Rock" },
+    { id: "Krunk03", name: "King of the Cavern" }
+  ],
+  Meel: [
+    { id: "Meel01", name: "Spooky Scary Skelepoops" },
+    { id: "Meel02", name: "Waitin' for the Cards to Drop" },
+  ],
+  "Mr Pigibank": [
+    { id: "Mr Pigibank01", name: "A Pig and his Stamps" }
+  ],
+  Mutton: [
+    { id: "Mutton01", name: "Beatboxing Starterpack" },
+    { id: "Mutton02", name: "Clout Chasin'" },
+    { id: "Mutton03", name: "Cross Platform Promotion" },
+    { id: "Mutton04", name: "7 Figure Followers" }
+  ],
+  "Obol Altar": [
+    { id: "Obol Altar01", name: "Bad Kitty, get off that altar" }
+  ],
+  "Papua Piggea": [
+    { id: "Papua Piggea01", name: "Oinko Boinko" },
+    { id: "Papua Piggea02", name: "Crystal Crime Stopper" },
+    { id: "Papua Piggea03", name: "Stamp Collecting" },
+    { id: "Papua Piggea04", name: "This Little Piggy Felt Remorse" }
+  ],
+  "Picnic Stowaway": [
+    { id: "Picnic Stowaway01", name: "The Hungry Stowaway" },
+    { id: "Picnic Stowaway02", name: "Beating Up Frogs for some Sauce" },
+    { id: "Picnic Stowaway03", name: "Live-Action Entertainment" },
+    { id: "Picnic Stowaway04", name: "The Most Important Meal of the Day" },
+    { id: "Picnic Stowaway05", name: "Brunchin' with the Blobs" },
+    { id: "Picnic Stowaway06", name: "Luncheon with the Inlaws" },
+    { id: "Picnic Stowaway07", name: "Afternoon Tea in a Jiffy" },
+    { id: "Picnic Stowaway08", name: "Early Evening Eating Endeavor" },
+    { id: "Picnic Stowaway09", name: "The Last Supper, at Least for Today!" },
+    { id: "Picnic Stowaway10", name: "Don't Desert the Dessert" },
+    { id: "Picnic Stowaway11", name: "A Midnight Snack" },
+    { id: "Picnic Stowaway12", name: "King of Food" }
+  ],
+  Promotheus: [
+    { id: "Promotheus01", name: "I'm Ready, Promotion!" },
+    { id: "Promotheus02", name: "Three Right Answers" },
+    { id: "Promotheus03", name: "Slovakian Scare" },
+    { id: "Promotheus04", name: "The Witcher, but not Really" }
+  ],
+  Rocklyte: [
+    { id: "Rocklyte01", name: "How It's Made, Episode 7. The Super Peanut" },
+    { id: "Rocklyte02", name: "If Life Gives you Peanuts, make Shiny Peanuts!" },
+    { id: "Rocklyte03", name: "Becoming the Best Beginner" }
+  ],
+  Scripticus: [
+    { id: "Scripticus01", name: "Hardcore Gamer Status, Here I Come!" },
+    { id: "Scripticus02", name: "Gear Up, Gamer!" },
+    { id: "Scripticus03", name: "Mr. Worldwide" },
+    { id: "Scripticus04", name: "The Choice is Yours!" },
+    { id: "Scripticus05", name: "Certified Swinger, of Pickaxes of course!" },
+    { id: "Scripticus06", name: "The Smithing Grind" },
+    { id: "Scripticus07", name: "Can't somebody else do it?" },
+    { id: "Scripticus08", name: "The Unoccupied Picnic" },
+    { id: "Scripticus09", name: "Seeking Foreign Aid" },
+    { id: "Scripticus10", name: "What Lies at the Heart of the Forest" },
+    { id: "Scripticus11", name: "The Bigger they are, the Bigger they Fall!" },
+    { id: "Scripticus12", name: "Champion of the Grasslands" }
+  ],
+  Sprout: [
+    { id: "Sprout01", name: "Sticks and Stone Something Something Bones..." },
+    { id: "Sprout02", name: "Justice Wears No Clothes" },
+    { id: "Sprout03", name: "Shoe Shopping with Sprout" },
+    { id: "Sprout04", name: "Frisbee Fanatic" }
+  ],
+  Stiltzcho: [
+    { id: "Stiltzcho01", name: "Outta the Way Slimes" },
+    { id: "Stiltzcho02", name: "No Stone Unturned" },
+    { id: "Stiltzcho03", name: "Investigator by Day, Prankster by Night" },
+    { id: "Stiltzcho04", name: "Time Crime Episode 1" },
+    { id: "Stiltzcho05", name: "Time Crime Episode 2" },
+    { id: "Stiltzcho06", name: "Time Crime Season Finale" }
   ],
   Telescope: [
-    {
-      id: "Telescope1",
-
-      name: "I'm Seeing Stars!",
-    },
+    { id: "Telescope01", name: "I'm Seeing Stars!" }
   ],
-  Loveulyte: [
-    {
-      id: "Loveulyte1",
-
-      name: "Heart Hogger",
-    },
-    {
-      id: "Loveulyte2",
-
-      name: "Heartbreaker",
-    },
-  ],
-  Egggulyte: [
-    {
-      id: "Egggulyte1",
-
-      name: "Egg Shaped Lootboxes!",
-    },
-    {
-      id: "Egggulyte2",
-
-      name: "I've Got a Golden Tickegg!",
-    },
-  ],
-  Coastiolyte: [
-    {
-      id: "Coastiolyte1",
-
-      name: "Cooler than a Cooler!",
-    },
-    {
-      id: "Coastiolyte2",
-
-      name: "Vibe Check",
-    },
+  "Tiki Chief": [
+    { id: "Tiki Chief01", name: "Brochure Building" },
+    { id: "Tiki Chief02", name: "Three Strikes, you're Out!" },
+    { id: "Tiki Chief03", name: "Blame it on the Glublins" },
+    { id: "Tiki Chief04", name: "Hotel? Tikivago. Sorry, couldn't Help It!" }
   ],
   Toadstall: [
-    {
-      id: "Toadstall1",
-
-      name: "Creating a Party!",
-    },
-    {
-      id: "Toadstall2",
-
-      name: "Bigger Party Better Party!",
-    },
-    {
-      id: "Toadstall3",
-
-      name: "Bother the Frogger!",
-    },
+    { id: "Toadstall01", name: "Creating a Party!" },
+    { id: "Toadstall02", name: "Bigger Party Better Party!" },
+    { id: "Toadstall03", name: "Bother the Frogger!" }
   ],
-  "Falloween Pumpkin": [
-    {
-      id: "Falloween Pumpkin1",
-
-      name: "The Spookyness",
-    },
-    {
-      id: "Falloween Pumpkin2",
-
-      name: "The Scaryness",
-    },
-    {
-      id: "Falloween Pumpkin3",
-
-      name: "The Horroriness",
-    },
-    {
-      id: "Falloween Pumpkin4",
-
-      name: "The Booeyness",
-    },
-    {
-      id: "Falloween Pumpkin5",
-
-      name: "The Afterparty",
-    },
+  "Town Marble": [
+    { id: "Town Marble01", name: "Visualizing the Sculpture Within..." }
+  ],
+  "TP Pete": [
+    { id: "TP Pete01", name: "Roll of Anger" },
+    { id: "TP Pete02", name: "The Rats are to Blame!" },
+    { id: "TP Pete03", name: "Fired for BS Reasons!" }
+  ],
+  "Typhoon": [
+    { id: "Typhoon01", name: "Surprise Attack!" }
+  ],
+  Woodsman: [
+    { id: "Woodsman01", name: "A noob's first swing" },
+    { id: "Woodsman02", name: "A noob's 2nd first swing" },
+    { id: "Woodsman03", name: "It's Just a Plank, Bro!" },
+    { id: "Woodsman04", name: "Exotic Pranks... I mean Logs!" },
   ],
 };
 
