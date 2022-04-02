@@ -133,7 +133,7 @@ export default defineComponent({
     const recipes: Record<string, RecipeNode> = calculatorData;
     const recipe = ref(null as { label: string; value: string } | null);
     const quantity = ref(1);
-    const lastUpdated = "March 23, 2022 (v1.51)";
+    const lastUpdated = "April 2, 2022 (v1.52)";
 
     const displayType = ref<RecipeDisplay>("Tree");
     const displayTypeOptions = ["List", "Tree"];

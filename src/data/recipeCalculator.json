@@ -215,15 +215,15 @@
     "materials": [
       {
         "name": "Cramped Bug Pouch",
-        "quantity": 5
-      },
-      {
-        "name": "Small Bug Pouch",
         "quantity": 2
       },
       {
+        "name": "Small Bug Pouch",
+        "quantity": 1
+      },
+      {
         "name": "Butterfly",
-        "quantity": 1600
+        "quantity": 2100
       }
     ]
   },
@@ -233,15 +233,15 @@
     "materials": [
       {
         "name": "Cramped Choppin Pouch",
-        "quantity": 5
-      },
-      {
-        "name": "Small Choppin Pouch",
         "quantity": 2
       },
       {
+        "name": "Small Choppin Pouch",
+        "quantity": 1
+      },
+      {
         "name": "Forest Fibres",
-        "quantity": 1800
+        "quantity": 2100
       }
     ]
   },
@@ -251,15 +251,15 @@
     "materials": [
       {
         "name": "Cramped Fish Pouch",
-        "quantity": 5
-      },
-      {
-        "name": "Small Fish Pouch",
         "quantity": 2
       },
       {
+        "name": "Small Fish Pouch",
+        "quantity": 1
+      },
+      {
         "name": "Hermit Can",
-        "quantity": 1500
+        "quantity": 2000
       }
     ]
   },
@@ -269,19 +269,19 @@
     "materials": [
       {
         "name": "Cramped Food Pouch",
-        "quantity": 7
+        "quantity": 2
       },
       {
         "name": "Meat Pie",
-        "quantity": 250
+        "quantity": 400
       },
       {
         "name": "Icing Ironbite",
-        "quantity": 600
+        "quantity": 700
       },
       {
         "name": "Saucy Logfries",
-        "quantity": 600
+        "quantity": 700
       }
     ]
   },
@@ -291,7 +291,7 @@
     "materials": [
       {
         "name": "Cramped Material Pouch",
-        "quantity": 7
+        "quantity": 2
       },
       {
         "name": "Glass Shard",
@@ -299,7 +299,7 @@
       },
       {
         "name": "Chain Link",
-        "quantity": 1250
+        "quantity": 1700
       }
     ]
   },
@@ -309,15 +309,15 @@
     "materials": [
       {
         "name": "Cramped Mining Pouch",
-        "quantity": 5
-      },
-      {
-        "name": "Small Mining Pouch",
         "quantity": 2
       },
       {
+        "name": "Small Mining Pouch",
+        "quantity": 1
+      },
+      {
         "name": "Gold Ore",
-        "quantity": 1400
+        "quantity": 2000
       }
     ]
   },
@@ -331,7 +331,7 @@
       },
       {
         "name": "The Stingers",
-        "quantity": 5
+        "quantity": 3
       },
       {
         "name": "Potty Rolls",
@@ -367,7 +367,7 @@
     "materials": [
       {
         "name": "Dirty Coal Miner Baggy Soot Pants",
-        "quantity": 3
+        "quantity": 2
       },
       {
         "name": "Fly",
@@ -527,15 +527,15 @@
       },
       {
         "name": "Blue Tee",
-        "quantity": 3
+        "quantity": 2
       },
       {
         "name": "Purple Tee",
-        "quantity": 3
+        "quantity": 2
       },
       {
         "name": "Green Tee",
-        "quantity": 3
+        "quantity": 2
       }
     ]
   },
@@ -553,7 +553,7 @@
       },
       {
         "name": "Blizzard Bow",
-        "quantity": 3
+        "quantity": 1
       },
       {
         "name": "Dense Water",
@@ -567,7 +567,7 @@
     "materials": [
       {
         "name": "Torn Jeans",
-        "quantity": 10
+        "quantity": 3
       },
       {
         "name": "Plank",
@@ -589,7 +589,7 @@
       },
       {
         "name": "Pharoah Bow",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Redox Salts",
@@ -611,7 +611,7 @@
       },
       {
         "name": "Orange Tee",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -669,7 +669,7 @@
       },
       {
         "name": "Carrot Launcher",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -715,6 +715,24 @@
       },
       {
         "name": "Cue Tape",
+        "quantity": 5
+      }
+    ]
+  },
+  "Bucket of Slush": {
+    "name": "Bucket of Slush",
+    "quantity": 1,
+    "materials": [
+      {
+        "name": "Melty Cube",
+        "quantity": 5
+      },
+      {
+        "name": "Snow Ball",
+        "quantity": 20
+      },
+      {
+        "name": "Iron Bar",
         "quantity": 5
       }
     ]
@@ -1169,7 +1187,7 @@
       },
       {
         "name": "Starlight",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -1184,6 +1202,28 @@
       {
         "name": "Void Imperium Platebody",
         "quantity": 1
+      }
+    ]
+  },
+  "Dawn Stopwatch": {
+    "name": "Dawn Stopwatch",
+    "quantity": 1,
+    "materials": [
+      {
+        "name": "Silver Stopwatch",
+        "quantity": 1
+      },
+      {
+        "name": "BobGoldPickle",
+        "quantity": 1
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 20
+      },
+      {
+        "name": "Spontaneity Salts",
+        "quantity": 400
       }
     ]
   },
@@ -1233,7 +1273,7 @@
       },
       {
         "name": "Platinum Platbody",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Dementia Bar",
@@ -1273,7 +1313,7 @@
       },
       {
         "name": "Plat Hatchet",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -1287,7 +1327,7 @@
       },
       {
         "name": "Platinum Helmet",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Dementia Bar",
@@ -1309,7 +1349,7 @@
       },
       {
         "name": "Platinet",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -1327,7 +1367,7 @@
       },
       {
         "name": "Platinum Pickaxe",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -1345,7 +1385,7 @@
       },
       {
         "name": "Plat Fishing Rod",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -1359,7 +1399,7 @@
       },
       {
         "name": "Platinum Shins",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Dementia Bar",
@@ -1567,7 +1607,7 @@
     "materials": [
       {
         "name": "Torn Jeans",
-        "quantity": 8
+        "quantity": 3
       },
       {
         "name": "Iron Ore",
@@ -1933,7 +1973,7 @@
     "materials": [
       {
         "name": "Fur Shirt",
-        "quantity": 4
+        "quantity": 1
       },
       {
         "name": "Stick",
@@ -1969,7 +2009,7 @@
     "materials": [
       {
         "name": "Bleached Designer Wode Patch Pants",
-        "quantity": 3
+        "quantity": 2
       },
       {
         "name": "Goldfish",
@@ -2011,7 +2051,7 @@
     "materials": [
       {
         "name": "Tattered Cloth",
-        "quantity": 4
+        "quantity": 1
       },
       {
         "name": "Leather Hide",
@@ -2101,7 +2141,7 @@
       },
       {
         "name": "Copper Helmet",
-        "quantity": 3
+        "quantity": 1
       },
       {
         "name": "Gold Bar",
@@ -2137,7 +2177,7 @@
       },
       {
         "name": "Copper Platebody",
-        "quantity": 4
+        "quantity": 1
       },
       {
         "name": "Gold Bar",
@@ -2155,7 +2195,7 @@
       },
       {
         "name": "Copper Platelegs",
-        "quantity": 5
+        "quantity": 1
       },
       {
         "name": "Gold Bar",
@@ -2259,11 +2299,11 @@
       },
       {
         "name": "Spore Tee",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Orange Tee",
-        "quantity": 3
+        "quantity": 1
       }
     ]
   },
@@ -2281,7 +2321,7 @@
       },
       {
         "name": "Spriggly Storm",
-        "quantity": 3
+        "quantity": 1
       },
       {
         "name": "Dense Water",
@@ -2357,7 +2397,7 @@
       },
       {
         "name": "Copper Platebody",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Steel Axe",
@@ -2425,7 +2465,7 @@
       },
       {
         "name": "Copper Boots",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -2627,7 +2667,7 @@
       },
       {
         "name": "Big Materials Pouch",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -2867,7 +2907,7 @@
       },
       {
         "name": "Prickle Skull",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Dense Water",
@@ -3115,6 +3155,28 @@
       }
     ]
   },
+  "Midnight Stopwatch": {
+    "name": "Midnight Stopwatch",
+    "quantity": 1,
+    "materials": [
+      {
+        "name": "Silver Stopwatch",
+        "quantity": 1
+      },
+      {
+        "name": "Midnight Cookie",
+        "quantity": 30
+      },
+      {
+        "name": "Dense Water",
+        "quantity": 20
+      },
+      {
+        "name": "Spontaneity Salts",
+        "quantity": 400
+      }
+    ]
+  },
   "Militia Helm": {
     "name": "Militia Helm",
     "quantity": 1,
@@ -3129,7 +3191,7 @@
       },
       {
         "name": "Copper Helmet",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -3161,7 +3223,7 @@
       },
       {
         "name": "Wooden Traps",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -3221,7 +3283,7 @@
       },
       {
         "name": "Copper Helmet",
-        "quantity": 4
+        "quantity": 1
       }
     ]
   },
@@ -3279,7 +3341,7 @@
       },
       {
         "name": "Spiked Menace",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -3315,7 +3377,7 @@
       },
       {
         "name": "Golden Axe",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -3351,7 +3413,7 @@
       },
       {
         "name": "Gold Boots",
-        "quantity": 3
+        "quantity": 1
       }
     ]
   },
@@ -3365,7 +3427,7 @@
       },
       {
         "name": "Iron Helmet",
-        "quantity": 4
+        "quantity": 1
       },
       {
         "name": "Platinum Bar",
@@ -3387,7 +3449,7 @@
       },
       {
         "name": "Gold Pickaxe",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -3401,7 +3463,7 @@
       },
       {
         "name": "Iron Platebody",
-        "quantity": 5
+        "quantity": 1
       },
       {
         "name": "Platinum Bar",
@@ -3419,11 +3481,25 @@
       },
       {
         "name": "Iron Platelegs",
-        "quantity": 6
+        "quantity": 1
       },
       {
         "name": "Platinum Bar",
         "quantity": 1250
+      }
+    ]
+  },
+  "Polished Bludgeon": {
+    "name": "Polished Bludgeon",
+    "quantity": 1,
+    "materials": [
+      {
+        "name": "Strung Bludgeon",
+        "quantity": 1
+      },
+      {
+        "name": "Distilled Water",
+        "quantity": 25
       }
     ]
   },
@@ -3441,7 +3517,25 @@
       },
       {
         "name": "Horned Skull",
-        "quantity": 2
+        "quantity": 1
+      }
+    ]
+  },
+  "Protectors Pride": {
+    "name": "Protectors Pride",
+    "quantity": 1,
+    "materials": [
+      {
+        "name": "Defenders Dignity",
+        "quantity": 1
+      },
+      {
+        "name": "Trimmed Rune Platelegs",
+        "quantity": 1
+      },
+      {
+        "name": "Distilled Water",
+        "quantity": 35
       }
     ]
   },
@@ -3459,7 +3553,7 @@
       },
       {
         "name": "Orange Tee",
-        "quantity": 3
+        "quantity": 1
       }
     ]
   },
@@ -3541,7 +3635,7 @@
       },
       {
         "name": "Steel Axe",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Distilled Water",
@@ -3592,6 +3686,20 @@
       {
         "name": "Small Life Potion",
         "quantity": 3
+      }
+    ]
+  },
+  "Serrated Rex Ring": {
+    "name": "Serrated Rex Ring",
+    "quantity": 1,
+    "materials": [
+      {
+        "name": "Rex Ring",
+        "quantity": 1
+      },
+      {
+        "name": "Iron Bar",
+        "quantity": 1000
       }
     ]
   },
@@ -3665,11 +3773,11 @@
     "materials": [
       {
         "name": "Fruitfly",
-        "quantity": 6750
+        "quantity": 7500
       },
       {
         "name": "Average Bug Pouch",
-        "quantity": 3
+        "quantity": 1
       }
     ]
   },
@@ -3679,11 +3787,11 @@
     "materials": [
       {
         "name": "Tropilogs",
-        "quantity": 6750
+        "quantity": 7500
       },
       {
         "name": "Average Choppin Pouch",
-        "quantity": 3
+        "quantity": 1
       }
     ]
   },
@@ -3710,8 +3818,12 @@
         "quantity": 2500
       },
       {
+        "name": "Goldfish",
+        "quantity": 5000
+      },
+      {
         "name": "Average Fish Pouch",
-        "quantity": 3
+        "quantity": 1
       }
     ]
   },
@@ -3757,11 +3869,11 @@
     "materials": [
       {
         "name": "Platinum Ore",
-        "quantity": 6750
+        "quantity": 7500
       },
       {
         "name": "Average Mining Pouch",
-        "quantity": 3
+        "quantity": 1
       }
     ]
   },
@@ -3776,6 +3888,20 @@
       {
         "name": "Redox Salts",
         "quantity": 20
+      }
+    ]
+  },
+  "Skullfish Pendant": {
+    "name": "Skullfish Pendant",
+    "quantity": 1,
+    "materials": [
+      {
+        "name": "Fishhead Pendant",
+        "quantity": 1
+      },
+      {
+        "name": "Distilled Water",
+        "quantity": 60
       }
     ]
   },
@@ -3803,7 +3929,7 @@
     "materials": [
       {
         "name": "Thief Hood",
-        "quantity": 5
+        "quantity": 1
       },
       {
         "name": "Tropilogs",
@@ -3829,11 +3955,11 @@
       },
       {
         "name": "Wooden Bow",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Gnarled Wand",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -3959,6 +4085,24 @@
       }
     ]
   },
+  "Souped Lab Ring": {
+    "name": "Souped Lab Ring",
+    "quantity": 1,
+    "materials": [
+      {
+        "name": "Lab Ring",
+        "quantity": 5
+      },
+      {
+        "name": "Purple Mush Cap",
+        "quantity": 200000
+      },
+      {
+        "name": "Gelatinous Chest",
+        "quantity": 1
+      }
+    ]
+  },
   "Spaggy Westerados": {
     "name": "Spaggy Westerados",
     "quantity": 1,
@@ -3987,7 +4131,7 @@
       },
       {
         "name": "Birch Longbow",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Distilled Water",
@@ -4005,7 +4149,7 @@
       },
       {
         "name": "Crows Nest",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Redox Salts",
@@ -4109,7 +4253,7 @@
       },
       {
         "name": "Quarterstaff",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Distilled Water",
@@ -4164,12 +4308,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Bullfrog Horn",
-        "quantity": 9000
+        "name": "Sleek Shank",
+        "quantity": 1
       },
       {
         "name": "Glass Shard",
-        "quantity": 10
+        "quantity": 4
       },
       {
         "name": "Distilled Water",
@@ -4183,7 +4327,7 @@
     "materials": [
       {
         "name": "Hide Shirt",
-        "quantity": 4
+        "quantity": 1
       },
       {
         "name": "Megalodon Tooth",
@@ -4205,7 +4349,7 @@
       },
       {
         "name": "Enforced Slasher",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Redox Salts",
@@ -4245,7 +4389,7 @@
       },
       {
         "name": "Copper Helmet",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -4263,7 +4407,7 @@
       },
       {
         "name": "Copper Helmet",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -4349,7 +4493,7 @@
       },
       {
         "name": "Bandage Wraps",
-        "quantity": 3
+        "quantity": 2
       }
     ]
   },
@@ -4359,7 +4503,7 @@
     "materials": [
       {
         "name": "Militia Helm",
-        "quantity": 5
+        "quantity": 1
       },
       {
         "name": "Gold Bar",
@@ -4381,7 +4525,7 @@
       },
       {
         "name": "Dementia Dicer",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Dense Water",
@@ -4399,7 +4543,7 @@
       },
       {
         "name": "Dementia Helmet",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Void Bar",
@@ -4443,7 +4587,7 @@
       },
       {
         "name": "Dementia Net",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Dense Water",
@@ -4461,7 +4605,7 @@
       },
       {
         "name": "Dementia Pickaxe",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Dense Water",
@@ -4479,7 +4623,7 @@
       },
       {
         "name": "Dementia Body",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Void Bar",
@@ -4505,7 +4649,7 @@
       },
       {
         "name": "Dementia Rod for Fishing",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Dense Water",
@@ -4523,7 +4667,7 @@
       },
       {
         "name": "Dementia Shins",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "name": "Void Bar",
@@ -4665,7 +4809,7 @@
     "materials": [
       {
         "name": "Top Hat",
-        "quantity": 5
+        "quantity": 1
       },
       {
         "name": "Corn Kernels",
