@@ -4,16 +4,16 @@ import { Build } from "~/composables/Builds";
 
 export const build: Build = {
   title: "Wizard / AFK (~50)",
-  notes: "Active Skills directly increase AFK kills/hr.",
-  version: "1.23",
+  notes: " Active Skills act as a multiplyer to your total dmg for afk.",
+  version: "1.40b",
   level: 50,
   tabs: [
     {
       skills: {
-        "5": "50",
+        "5": "25+",
         "7": "*1",
-        "10": "75",
-        "12": "50",
+        "10": "25+",
+        "12": "25+",
         "14": "50",
       },
       comment:
@@ -21,18 +21,20 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "40",
-        "2": "60",
+        "1": "25",
+        "2": "25",
+        "6": "*1",
         "8": "60",
+        "10": "*1",
       },
       comment:
-        'Level "Power Overwhelming" to 60, then your active damage skills. Excess points can be used to level "Power Overwhelming" past 60.',
+         '*1 Max "Knowledge is Power" and then "Individual Insight".',
     },
     {
       skills: {
-        "1": "20",
-        "2": "20",
-        "3": "20",
+        "1": "25",
+        "2": "25",
+        "3": "25",
         "6": "30",
         "15": "*1",
       },

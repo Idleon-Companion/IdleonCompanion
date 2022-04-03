@@ -5,15 +5,15 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Hunter / AFK (~70)",
   notes:
-    "Leveling up active skills directly increase AFK kills/hr, so we level them past 1.",
-  version: "1.23",
+    "Active Skills act as a multiplyer to your total dmg for afk. lvl 25 on all of them should be enough to reach dmg cap. Put more points into attack talents and \"Have Another!\" if you are using Prayers that increase mob hp.",
+  version: "1.40b",
   level: 70,
   tabs: [
     {
       skills: {
-        "5": "100",
+        "5": "75+",
         "6": "*1",
-        "10": "100",
+        "10": "75+",
         "14": "50",
       },
       comment:
@@ -21,26 +21,25 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "50",
-        "2": "50",
-        "4": "1",
-        "5": "30",
-        "6": "15",
+        "1": "25",
+        "2": "25",
+        "4": "25",
+        "6": "50",
         "8": "100",
       },
       comment:
-        'Level "Polymer Limbs" to 100, active damage skills to 50, and then value point into "Strafe" and activate it before going offline. Afterwards, level up "Have Another" to 30 & "Veins of the Infernal" to 15.',
+        'Equip attack talents in your attack bar and activate "Strafe" before going offline.',
     },
     {
       skills: {
-        "1": "50",
-        "2": "50",
-        "5": "30",
-        "6": "40",
+        "1": "25",
+        "2": "25",
+        "5": "25",
+        "6": "100",
         "11": "*1",
       },
       comment:
-        'Level up "360 Noscope" and "Bear Trap" to 50. \n Then raise "Have another... Again" to 30 and "Looty Mcshooty" to 40 or so. \n *1 = Points may be taken from active skills or excess points may be placed into "Eagle Eye" for Trapping',
+        '*1 Excess points may be placed into "Eagle Eye" for Trapping',
     },
   ],
   class: Class.Hunter,

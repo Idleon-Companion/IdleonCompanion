@@ -5,16 +5,16 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Wizard / AFK (~90)",
   notes: "100+ = Checkout books for these talents from the library.",
-  version: "1.23",
+  version: "1.40b",
   level: 90,
   tabs: [
     {
       skills: {
-        "5": "100",
+        "5": "75+",
         "7": "*1",
         "8": "*2",
-        "10": "100+",
-        "12": "100+",
+        "10": "75+",
+        "12": "75+",
         "14": "100+",
       },
       comment:
@@ -22,26 +22,28 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "*1",
-        "2": "100",
-        "6": "*2",
+        "1": "25",
+        "2": "25",
+        "3": "*2",
+        "6": "*1",
         "8": "100+",
-        "10": "*2",
+        "10": "*1",
       },
       comment:
-        'Level "Power Overwhelming" to 100, then 100 "Mini Fireball".\n*1 = If you are not AFK damage capped, you can add more points into "Energy Bolt" until you hit cap.\n*2 = Spread excess points equally between "Knowledge is Power" and "Individual Insight".',
+        '*1 Max "Knowledge is Power" and then "Individual Insight". *2 If excess points go here. ',
     },
     {
       skills: {
-        "1": "60",
-        "2": "60",
-        "3": "60",
-        "6": "50",
+        "1": "25",
+        "2": "25",
+        "3": "25",
+        "5": "25",
+        "6": "50+",
         "11": "*2",
         "15": "*1",
       },
       comment:
-        'Level the damage skills evenly. Be sure to place 50 points into "Paperwork Great..." for a nice damage boost.\n*1 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2.\n *2 = If you have capped your damage, excess points can go into worship talents. This build does not prominently focus on worship, and so you are likely to only have enough talent points to level "Charge Syphon". It may be a good idea to add 1 point into "Charge Syphon" to make gathering souls easier. ',
+        'Level the active skills to 25. Be sure to place 50+ points into "Paperwork Great..." for a nice damage boost.\n*1 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2.\n *2 = If you have capped your damage, excess points can go into worship talents. This build does not prominently focus on worship, and so you are likely to only have enough talent points to level "Charge Syphon". It may be a good idea to add 1 point into "Charge Syphon" to make gathering souls easier. ',
     },
   ],
   class: Class.Wizard,

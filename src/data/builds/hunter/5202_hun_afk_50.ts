@@ -5,15 +5,15 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Hunter / AFK (~50)",
   notes:
-    "Leveling up active skills directly increase AFK kills/hr, so we level them past 1.",
-  version: "1.23",
+    "Active Skills act as a multiplyer to your total dmg for afk.",
+  version: "1.40b",
   level: 50,
   tabs: [
     {
       skills: {
-        "5": "80",
+        "5": "25+",
         "6": "*1",
-        "10": "80",
+        "10": "25+",
         "14": "50",
       },
       comment:
@@ -21,25 +21,23 @@ export const build: Build = {
     },
     {
       skills: {
-        "1": "40",
-        "2": "40",
+        "1": "25",
+        "2": "25",
         "4": "1",
-        "5": "20",
-        "6": "10-15",
+        "6": "50",
         "8": "50",
       },
       comment:
-        'Level "Polymer Limbs" to 50, active damage skills to 40, then value point into "Strafe" and activate it before going offline. Afterwards, level up "Have Another" to 20 & "Veins of the Infernal" to 10-15 if you can afford.',
+        'Level "Polymer Limbs" to 50, active damage skills to 25, then value point into "Strafe" and activate it before going offline. Afterwards, level up "Veins of the Infernal" to 50 if you can afford. Raise your Smithing lvl by produceing 2/3x thread. ',
     },
     {
       skills: {
         "1": "30",
         "2": "30",
-        "5": "20",
-        "6": "20",
+        "6": "20+",
       },
       comment:
-        'Level up "360 Noscope" and "Bear Trap" to 30. \n Then raise "Have another... Again" and "Looty Mcshooty" to 20.',
+        'Level up "360 Noscope" and "Bear Trap" to 30. \n Then raise "Looty Mcshooty" to 20+.',
     },
   ],
   class: Class.Hunter,

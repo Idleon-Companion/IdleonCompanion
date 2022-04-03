@@ -10,14 +10,14 @@ export const build: Build = {
   tabs: [
     {
       skills: {
-        "5": "70",
+        "5": "50+",
         "7": "*1",
-        "10": "85",
-        "12": "70",
+        "10": "50+",
+        "12": "50+",
         "14": "50",
       },
       comment:
-        '*1 = Boost AGI to have as much accuracy as you need for the best AFK gains. Usually this will be the farthest monster you can reach without dying. If you\'re low on defense, by this point equipping food to stay alive is normal and expected.\n"Idle Casting" to 50 for 10% AFK gain rate.\nPriority switches to "Overclocked Energy" > "Gilded Sword" > "Sharpened Axe"',
+        '*1 = Boost AGI to have as much accuracy as you need for the best AFK gains. Usually this will be the farthest monster you can reach without dying. If you\'re low on defense, by this point equipping food to stay alive is normal and expected.\n"Idle Casting" to 50 for 10% AFK gain rate.',
     },
     {
       skills: {
@@ -39,7 +39,7 @@ export const build: Build = {
         "15": "*2",
       },
       comment:
-        'With 25 points in active talents you should be damage capped, only put more points into them if you are not.\n*1 = If you have many(Think 7+) Green Vials, you can place the rest of points into "Virile Vials" for more damage.\n*2 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2. ',
+        '*1 = If you have many(Think 7+) Green Vials, you can place the rest of points into "Virile Vials" for more damage.\n*2 = You can put some points into "Earlier Education" if you\'re lacking points on Tab 2. ',
     },
   ],
   class: Class.Shaman,
