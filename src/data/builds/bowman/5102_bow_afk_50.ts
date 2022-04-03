@@ -5,7 +5,7 @@ import { Build } from "~/composables/Builds";
 export const build: Build = {
   title: "Bowman / AFK (~50)",
   notes:
-    "Active Skills act as a multiplyer to your total dmg for afk. \n  If you\'re low on defense, by this point equipping food to stay alive is normal and expected. \n Dmg for Bowman comes from "Speed DNA" and "Vines of the Infernal". Raise your Smithing lvl by produceing 2/3x thread. ",
+    "Active Skills act as a multiplyer to your total dmg for afk. \n  If you\'re low on defense, by this point equipping food to stay alive is normal and expected. \n Dmg for Bowman comes from \"Speed DNA\" and \"Vines of the Infernal\". Raise your Smithing lvl by produceing 2/3x thread. ",
   version: "1.40b",
   level: 50,
   tabs: [
