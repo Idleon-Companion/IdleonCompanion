@@ -97,6 +97,10 @@ export class Assets {
   }
 }
 
+export function nameToWikiSlug(name: string): string {
+  return name.replaceAll(" ", "_");
+}
+
 export type Item = {
   name: string;
   bagSlots?: number;
