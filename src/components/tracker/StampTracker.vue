@@ -37,12 +37,14 @@
         <tbody>
           <tr v-for="(stamp, id) in allStamps" class="text-center">
             <td class="w-20">
-              <Tooltip>
-                <q-img width="48px" :src="Assets.StampImage(stamp.name)" />
-                <template #content>
-                  {{ stamp.name }}
-                </template>
-              </Tooltip>
+              <a :href="'https://idleon.info/wiki/' + nameToWikiSlug(stamp.name)">
+                <Tooltip>
+                  <q-img width="48px" :src="Assets.StampImage(stamp.name)" />
+                  <template #content>
+                    {{ stamp.name }}
+                  </template>
+                </Tooltip>
+              </a>
             </td>
             <td class="w-20">
               <q-input
@@ -102,7 +104,7 @@
 </template>
 
 <script lang="ts">
-import { Assets } from "~/composables/Utilities";
+import { Assets, nameToWikiSlug } from "~/composables/Utilities";
 import { Stamps, useStamps } from "~/composables/Stamps";
 import { computed, defineComponent } from "vue";
 import { useState } from "~/State";
@@ -132,6 +134,7 @@ export default defineComponent({
 
     return {
       Assets,
+      nameToWikiSlug,
       allStamps: Stamps,
       calculateStampBonus,
       calculateStampCoinCost,
