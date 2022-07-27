@@ -67,7 +67,7 @@ export default defineComponent({
       get: () => state.value.cards,
       set: (value) => (state.value.cards = value),
     });
-    const CARD_TIERS = 5;
+    const CARD_TIERS = 6;
 
     const getCardTier = (card: Card): number => {
       return cards.value[card.id] ?? 0;
