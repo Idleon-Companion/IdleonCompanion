@@ -202,4 +202,15 @@ export const Changelog: ChangelogEntry[] = [
     },
     date: "October 2021",
   },
+  {
+    version: "1.0.2 (Recipes & Cards tracker Updated)",
+    changes: {
+      changes: [
+        "Recipes: The recipes are updated to contain all ingame recipes as of v1.60",
+        "Cards: The cards in the progression tracker can go up to the blue border.",
+        "Cards: The 'Hyperion Nebula' set has been added as well as all World 4 materials."
+      ],
+    },
+    date: "July 2022",
+  },
 ];
