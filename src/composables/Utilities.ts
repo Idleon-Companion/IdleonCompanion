@@ -143,10 +143,11 @@ enum MultiplierEffects {
   BoostFoodEffect = "% Boost Food Effect",
   NoFoodConsume = "% To not consume Food",
   DropRate = "% Total Drop Rate",
+  Multikill = "% Multikill per tier"
 }
 
 enum ClassAndMonsterEffects {
-  ClassExp = "% Class Exp",
+  ClassExp = "% Class EXP",
   ExpConversion = "% EXP Conversion (Talent)",
   MonsterExpActive = "% Monster EXP (Active)",
   MonsterExp = "% Monster EXP",
@@ -156,9 +157,13 @@ enum ClassAndMonsterEffects {
 }
 
 enum SkillEffects {
+  // General
   SkillAfk = "% Skill AFK Gain Rate",
   SkillExp = "% Skill EXP",
   SkillProwess = "% Skill Prowess",
+  SkillEff = "% Skill Efficiency", 
+
+  // World 1
   SmithingEfficiency = "% Total Smithing Efficiency",
   SmithingExp = "% Smithing EXP",
   MiningAfk = "% Mining Away Gains",
@@ -175,12 +180,24 @@ enum SkillEffects {
   ChoppinMultiLog = "% Multi-Log Chance",
   ChoppinPower = "% Choppin Power",
   ChoppinSpeed = "% Choppin Speed",
+
+  // World 2
   FishingAfk = "% Fishing Away Gains",
   FishingBase = "Base Fishing Power",
   FishingEfficiency = "% Total Fishing Efficiency",
   FishingExp = "% Fishing EXP",
   FishingMultiFish = "% Multi-Fish Chance",
   FishingPower = "% Fishing Power",
+  FishingSpeed = "% Fishing speed",
+  CatchingAfk = "% Catching Away Gains",
+  CatchingBase = "Base Catching Power",
+  CatchingEfficiency = "% Total Catching Efficiency",
+  CatchingExp = "% Catching EXP",
+  CatchingMultiCatch = "% Multi-Catch Chance",
+  CatchingPower = "% Catching Power",
+  CatchingSpeed = "% Catching Speed",
+
+  // World 3
   WorshipCharge = "% Max Charge",
   WorshipChargeRate = "% Charge Rate",
   WorshipBase = "Base Worship Power",
@@ -189,13 +206,10 @@ enum SkillEffects {
   TrappingEfficiency = "% Trapping Efficiency",
   TrappingExp = "% Trapping EXP",
   TrappingBase = "Base Trapping Power",
-  // FishingSpeed = "% Fishing Speed",
-  CatchingAfk = "% Catching Away Gains",
-  CatchingBase = "Base Catching Power",
-  CatchingEfficiency = "% Total Catching Efficiency",
-  CatchingExp = "% Catching EXP",
-  CatchingMultiCatch = "% Multi-Catch Chance",
-  CatchingPower = "% Catching Power",
+
+  // World 4
+  LabExp = "% Lab EXP",
+  CookingExp = "Cooking EXP",
 }
 
 enum PassiveEffects {
@@ -203,8 +217,13 @@ enum PassiveEffects {
   TownSkillSpeed = "% Speed in Town Skills",
   AlchemyExp = "% Alchemy EXP",
   CogSpeed = "% Cog Build Spd (Passive)",
-  ConstructionExp = "% Construction Exp",
+  ConstructionExp = "% Construction EXP",
   ShrineEffect = "% Shrine Effects",
+  BreedingExp = "% Breeding EXP (Passive)",
+  StarTalentPts = "Star Talent Pts (Passive)",
+  CritChancePas = "Critical chance (Passive)",
+  LineWidthPas = "px Line width (Passive)",
+  KitchenSpeed = "% Kitchen Speed (Passive)",
 }
 
 enum BonusEffects {
@@ -227,6 +246,10 @@ enum DungeonEffects {
   DungeonHP = "Base Dungeon HP",
   DungeonMPRegen = "% Dungeon MP Regen",
   DungeonDropRate = "% Dungeon Drop Rate",
+  DungeonStartRNG = "% to start with RNG orb (Passive)",
+  DungeonMoveSpeed = "% Dungeon Move Speed",
+  DungeonRNGRarity = "% RNG item rarity",
+  DungeonTotalDamage = "% Total Dungeon Damage",
 }
 
 export const Effects = {
