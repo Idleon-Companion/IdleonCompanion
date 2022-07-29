@@ -18,12 +18,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Dioxide Synthesis",
-        "quantity": 150
-      },
-      {
         "name": "Void Imperium Helmet",
         "quantity": 1
+      },
+      {
+        "name": "Dioxide Synthesis",
+        "quantity": 150
       }
     ]
   },
@@ -86,16 +86,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Iron Boots",
+        "quantity": 1
+      },
+      {
         "name": "Amarok Slab",
         "quantity": 5
       },
       {
         "name": "Grass Leaf",
         "quantity": 125
-      },
-      {
-        "name": "Iron Boots",
-        "quantity": 1
       }
     ]
   },
@@ -326,12 +326,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Cue Tape",
-        "quantity": 5000
-      },
-      {
         "name": "The Stingers",
         "quantity": 3
+      },
+      {
+        "name": "Cue Tape",
+        "quantity": 5000
       },
       {
         "name": "Potty Rolls",
@@ -517,6 +517,20 @@
       }
     ]
   },
+  "Birthday Hat": {
+    "name": "Birthday Hat",
+    "quantity": 1,
+    "materials": [
+      {
+        "name": "Copper Helmet",
+        "quantity": 1
+      },
+      {
+        "name": "Iron Bar",
+        "quantity": 150
+      }
+    ]
+  },
   "Black Tee": {
     "name": "Black Tee",
     "quantity": 1,
@@ -544,16 +558,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Blizzard Bow",
+        "quantity": 1
+      },
+      {
         "name": "Black Lense",
         "quantity": 4
       },
       {
         "name": "Spontaneity Salts",
         "quantity": 350
-      },
-      {
-        "name": "Blizzard Bow",
-        "quantity": 1
       },
       {
         "name": "Dense Water",
@@ -584,12 +598,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Forest Soul",
-        "quantity": 7000
-      },
-      {
         "name": "Pharoah Bow",
         "quantity": 1
+      },
+      {
+        "name": "Forest Soul",
+        "quantity": 7000
       },
       {
         "name": "Redox Salts",
@@ -602,16 +616,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Orange Tee",
+        "quantity": 1
+      },
+      {
         "name": "Spore Cap",
         "quantity": 25
       },
       {
         "name": "Oak Logs",
         "quantity": 50
-      },
-      {
-        "name": "Orange Tee",
-        "quantity": 1
       }
     ]
   },
@@ -620,16 +634,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Amarok Helmet",
+        "quantity": 1
+      },
+      {
         "name": "Platinum Bar",
         "quantity": 1000
       },
       {
         "name": "Veiny Logs",
         "quantity": 2000
-      },
-      {
-        "name": "Amarok Helmet",
-        "quantity": 1
       }
     ]
   },
@@ -656,6 +670,10 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Carrot Launcher",
+        "quantity": 1
+      },
+      {
         "name": "Golden Peanut",
         "quantity": 30
       },
@@ -665,10 +683,6 @@
       },
       {
         "name": "Bolt Cutters",
-        "quantity": 1
-      },
-      {
-        "name": "Carrot Launcher",
         "quantity": 1
       }
     ]
@@ -838,16 +852,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Void Imperium Platebody",
+        "quantity": 1
+      },
+      {
         "name": "Chizoar Spike",
         "quantity": 18
       },
       {
         "name": "Ram Wool",
         "quantity": 100000
-      },
-      {
-        "name": "Void Imperium Platebody",
-        "quantity": 1
       },
       {
         "name": "Purple Salt",
@@ -860,16 +874,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Void Imperium Helmet",
+        "quantity": 1
+      },
+      {
         "name": "Chizoar Spike",
         "quantity": 25
       },
       {
         "name": "Blood Bone",
         "quantity": 1000
-      },
-      {
-        "name": "Void Imperium Helmet",
-        "quantity": 1
       },
       {
         "name": "Purple Salt",
@@ -882,16 +896,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Void Imperium Shardshins",
+        "quantity": 1
+      },
+      {
         "name": "Chizoar Spike",
         "quantity": 10
       },
       {
         "name": "Black Lense",
         "quantity": 8
-      },
-      {
-        "name": "Void Imperium Shardshins",
-        "quantity": 1
       },
       {
         "name": "Dioxide Synthesis",
@@ -904,16 +918,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Void Imperium Kicks",
+        "quantity": 1
+      },
+      {
         "name": "Chizoar Spike",
         "quantity": 6
       },
       {
         "name": "Ice Age 3",
         "quantity": 10
-      },
-      {
-        "name": "Void Imperium Kicks",
-        "quantity": 1
       },
       {
         "name": "Dioxide Synthesis",
@@ -926,16 +940,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Chizoars Blankie",
+        "quantity": 1
+      },
+      {
         "name": "Chizoar Stalagmite",
         "quantity": 15
       },
       {
         "name": "Chizoar Spike",
         "quantity": 30
-      },
-      {
-        "name": "Chizoars Blankie",
-        "quantity": 1
       }
     ]
   },
@@ -944,12 +958,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Dioxide Synthesis",
-        "quantity": 150
-      },
-      {
         "name": "Void Imperium Helmet",
         "quantity": 1
+      },
+      {
+        "name": "Dioxide Synthesis",
+        "quantity": 150
       }
     ]
   },
@@ -979,15 +993,15 @@
     "materials": [
       {
         "name": "Copper Bar",
-        "quantity": 12
+        "quantity": 5
       },
       {
         "name": "Oak Logs",
-        "quantity": 30
+        "quantity": 10
       },
       {
         "name": "Thread",
-        "quantity": 15
+        "quantity": 5
       }
     ]
   },
@@ -1039,11 +1053,11 @@
     "materials": [
       {
         "name": "Copper Bar",
-        "quantity": 10
+        "quantity": 5
       },
       {
         "name": "Frog Leg",
-        "quantity": 15
+        "quantity": 10
       }
     ]
   },
@@ -1178,16 +1192,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Starlight",
+        "quantity": 1
+      },
+      {
         "name": "Golden Plop",
         "quantity": 3
       },
       {
         "name": "Fruitfly",
         "quantity": 4000
-      },
-      {
-        "name": "Starlight",
-        "quantity": 1
       }
     ]
   },
@@ -1196,12 +1210,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Dioxide Synthesis",
-        "quantity": 250
-      },
-      {
         "name": "Void Imperium Platebody",
         "quantity": 1
+      },
+      {
+        "name": "Dioxide Synthesis",
+        "quantity": 250
       }
     ]
   },
@@ -1232,16 +1246,16 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Goldfish",
-        "quantity": 300000
-      },
-      {
         "name": "Angler Boots",
         "quantity": 1
       },
       {
         "name": "Lustre Shieldshoe",
         "quantity": 1
+      },
+      {
+        "name": "Goldfish",
+        "quantity": 300000
       }
     ]
   },
@@ -1268,12 +1282,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Forest Soul",
-        "quantity": 1000
-      },
-      {
         "name": "Platinum Platbody",
         "quantity": 1
+      },
+      {
+        "name": "Forest Soul",
+        "quantity": 1000
       },
       {
         "name": "Dementia Bar",
@@ -1286,12 +1300,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Poison Froge",
-        "quantity": 3
-      },
-      {
         "name": "Platinum Boots",
         "quantity": 1
+      },
+      {
+        "name": "Poison Froge",
+        "quantity": 3
       },
       {
         "name": "Dementia Bar",
@@ -1304,16 +1318,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Plat Hatchet",
+        "quantity": 1
+      },
+      {
         "name": "Tundra Logs",
         "quantity": 15000
       },
       {
         "name": "Redox Salts",
         "quantity": 50
-      },
-      {
-        "name": "Plat Hatchet",
-        "quantity": 1
       }
     ]
   },
@@ -1322,12 +1336,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Froge",
-        "quantity": 5000
-      },
-      {
         "name": "Platinum Helmet",
         "quantity": 1
+      },
+      {
+        "name": "Froge",
+        "quantity": 5000
       },
       {
         "name": "Dementia Bar",
@@ -1358,16 +1372,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Platinum Pickaxe",
+        "quantity": 1
+      },
+      {
         "name": "Dementia Bar",
         "quantity": 275
       },
       {
         "name": "Moustache Comb",
         "quantity": 15000
-      },
-      {
-        "name": "Platinum Pickaxe",
-        "quantity": 1
       }
     ]
   },
@@ -1394,12 +1408,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Floof Ploof",
-        "quantity": 8000
-      },
-      {
         "name": "Platinum Shins",
         "quantity": 1
+      },
+      {
+        "name": "Floof Ploof",
+        "quantity": 8000
       },
       {
         "name": "Dementia Bar",
@@ -1412,16 +1426,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "The Ice Breaker",
+        "quantity": 1
+      },
+      {
         "name": "Black Lense",
         "quantity": 10
       },
       {
         "name": "Eternal Lord of  The Undying Ember",
         "quantity": 15
-      },
-      {
-        "name": "The Ice Breaker",
-        "quantity": 3
       },
       {
         "name": "Dense Water",
@@ -1434,12 +1448,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Cubed Logs",
-        "quantity": 400000
-      },
-      {
         "name": "Lustre Chestplate",
         "quantity": 1
+      },
+      {
+        "name": "Cubed Logs",
+        "quantity": 400000
       },
       {
         "name": "Starfire Bar",
@@ -1456,12 +1470,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Voodofish",
-        "quantity": 10
-      },
-      {
         "name": "Shardsure Leif",
         "quantity": 1
+      },
+      {
+        "name": "Voodofish",
+        "quantity": 10
       },
       {
         "name": "Starfire Bar",
@@ -1478,12 +1492,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Kraken",
-        "quantity": 200000
-      },
-      {
         "name": "Slimsharp Fin",
         "quantity": 1
+      },
+      {
+        "name": "Kraken",
+        "quantity": 200000
       },
       {
         "name": "Starfire Bar",
@@ -1518,12 +1532,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Blobfish",
-        "quantity": 600000
-      },
-      {
         "name": "Lustre Veil",
         "quantity": 1
+      },
+      {
+        "name": "Blobfish",
+        "quantity": 600000
       },
       {
         "name": "Starfire Bar",
@@ -1540,12 +1554,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Squishy Soul",
-        "quantity": 15000
-      },
-      {
         "name": "Skullslip Hallow",
         "quantity": 1
+      },
+      {
+        "name": "Squishy Soul",
+        "quantity": 15000
       },
       {
         "name": "Starfire Bar",
@@ -1562,12 +1576,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Manta Ray",
-        "quantity": 500000
-      },
-      {
         "name": "Lustre Shieldshoe",
         "quantity": 1
+      },
+      {
+        "name": "Manta Ray",
+        "quantity": 500000
       },
       {
         "name": "Starfire Bar",
@@ -1584,12 +1598,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Fairy",
-        "quantity": 450000
-      },
-      {
         "name": "Lustre Scales",
         "quantity": 1
+      },
+      {
+        "name": "Fairy",
+        "quantity": 450000
       },
       {
         "name": "Starfire Bar",
@@ -1620,16 +1634,16 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Slime Sludge",
-        "quantity": 1000
-      },
-      {
         "name": "Copper Band",
         "quantity": 1
       },
       {
         "name": "Steel Band",
         "quantity": 1
+      },
+      {
+        "name": "Slime Sludge",
+        "quantity": 1000
       }
     ]
   },
@@ -1768,12 +1782,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Ripped Tunic",
-        "quantity": 20
-      },
-      {
         "name": "Trimmed Rune Platelegs",
         "quantity": 1
+      },
+      {
+        "name": "Ripped Tunic",
+        "quantity": 20
       },
       {
         "name": "Armor Upgrade Stone C",
@@ -1826,20 +1840,20 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Ribbed Tunic",
-        "quantity": 4
-      },
-      {
-        "name": "Ripped Tunic",
-        "quantity": 15
-      },
-      {
         "name": "Bandage Wraps",
         "quantity": 1
       },
       {
         "name": "Pharoah Bow",
         "quantity": 1
+      },
+      {
+        "name": "Ribbed Tunic",
+        "quantity": 4
+      },
+      {
+        "name": "Ripped Tunic",
+        "quantity": 15
       }
     ]
   },
@@ -1848,16 +1862,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Platinum Boots",
+        "quantity": 1
+      },
+      {
         "name": "Ripped Tunic",
         "quantity": 5
       },
       {
         "name": "Nuget Cake",
         "quantity": 3
-      },
-      {
-        "name": "Platinum Boots",
-        "quantity": 1
       }
     ]
   },
@@ -1866,12 +1880,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Dioxide Synthesis",
-        "quantity": 250
-      },
-      {
         "name": "Void Imperium Platebody",
         "quantity": 1
+      },
+      {
+        "name": "Dioxide Synthesis",
+        "quantity": 250
       }
     ]
   },
@@ -1907,7 +1921,7 @@
       },
       {
         "name": "Royal Bayonet",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -1930,12 +1944,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Dioxide Synthesis",
-        "quantity": 250
-      },
-      {
         "name": "Void Imperium Platebody",
         "quantity": 1
+      },
+      {
+        "name": "Dioxide Synthesis",
+        "quantity": 250
       }
     ]
   },
@@ -1963,7 +1977,7 @@
       },
       {
         "name": "Copper Ore",
-        "quantity": 12
+        "quantity": 5
       }
     ]
   },
@@ -1990,16 +2004,16 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Oak Logs",
-        "quantity": 300000
-      },
-      {
         "name": "Logger Heels",
         "quantity": 1
       },
       {
         "name": "Lustre Shieldshoe",
         "quantity": 1
+      },
+      {
+        "name": "Oak Logs",
+        "quantity": 300000
       }
     ]
   },
@@ -2100,12 +2114,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Gold Bar",
-        "quantity": 600
+        "name": "Iron Boots",
+        "quantity": 1
       },
       {
-        "name": "Iron Boots",
-        "quantity": 2
+        "name": "Gold Bar",
+        "quantity": 600
       },
       {
         "name": "Distilled Water",
@@ -2127,7 +2141,7 @@
       },
       {
         "name": "Iron Fishing Rod",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -2136,12 +2150,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Fly",
-        "quantity": 2000
-      },
-      {
         "name": "Copper Helmet",
         "quantity": 1
+      },
+      {
+        "name": "Fly",
+        "quantity": 2000
       },
       {
         "name": "Gold Bar",
@@ -2154,16 +2168,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Iron Pickaxe",
+        "quantity": 1
+      },
+      {
         "name": "Megalodon Tooth",
         "quantity": 2500
       },
       {
         "name": "Gold Bar",
         "quantity": 800
-      },
-      {
-        "name": "Iron Pickaxe",
-        "quantity": 1
       }
     ]
   },
@@ -2172,12 +2186,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Pocket Sand",
-        "quantity": 1500
-      },
-      {
         "name": "Copper Platebody",
         "quantity": 1
+      },
+      {
+        "name": "Pocket Sand",
+        "quantity": 1500
       },
       {
         "name": "Gold Bar",
@@ -2190,12 +2204,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Goldfish",
-        "quantity": 500
-      },
-      {
         "name": "Copper Platelegs",
         "quantity": 1
+      },
+      {
+        "name": "Goldfish",
+        "quantity": 500
       },
       {
         "name": "Gold Bar",
@@ -2208,16 +2222,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Iron Hatchet",
+        "quantity": 1
+      },
+      {
         "name": "Golden Dubloon",
         "quantity": 5
       },
       {
         "name": "Crabby Cakey",
         "quantity": 2000
-      },
-      {
-        "name": "Iron Hatchet",
-        "quantity": 1
       }
     ]
   },
@@ -2235,7 +2249,7 @@
       },
       {
         "name": "Reinforced Net",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -2258,16 +2272,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Copper Boots",
+        "quantity": 1
+      },
+      {
         "name": "Slime Sludge",
         "quantity": 600
       },
       {
         "name": "Jungle Logs",
         "quantity": 1000
-      },
-      {
-        "name": "Copper Boots",
-        "quantity": 2
       }
     ]
   },
@@ -2294,16 +2308,16 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Thread",
-        "quantity": 150
-      },
-      {
         "name": "Spore Tee",
         "quantity": 1
       },
       {
         "name": "Orange Tee",
         "quantity": 1
+      },
+      {
+        "name": "Thread",
+        "quantity": 150
       }
     ]
   },
@@ -2312,16 +2326,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Spriggly Storm",
+        "quantity": 1
+      },
+      {
         "name": "Black Lense",
         "quantity": 4
       },
       {
         "name": "Frigid Soul",
         "quantity": 5000
-      },
-      {
-        "name": "Spriggly Storm",
-        "quantity": 1
       },
       {
         "name": "Dense Water",
@@ -2392,16 +2406,16 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Bleach Logs",
-        "quantity": 325
-      },
-      {
         "name": "Copper Platebody",
         "quantity": 1
       },
       {
         "name": "Steel Axe",
         "quantity": 1
+      },
+      {
+        "name": "Bleach Logs",
+        "quantity": 325
       }
     ]
   },
@@ -2456,16 +2470,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Copper Boots",
+        "quantity": 1
+      },
+      {
         "name": "Trusty Nails",
         "quantity": 500
       },
       {
         "name": "Iron Bar",
         "quantity": 125
-      },
-      {
-        "name": "Copper Boots",
-        "quantity": 1
       }
     ]
   },
@@ -2562,12 +2576,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Thingymabob",
-        "quantity": 50000
-      },
-      {
         "name": "Eclectic Ordeal",
         "quantity": 1
+      },
+      {
+        "name": "Thingymabob",
+        "quantity": 50000
       },
       {
         "name": "Dioxide Synthesis",
@@ -2758,12 +2772,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Purple Mush Cap",
-        "quantity": 100000
-      },
-      {
         "name": "Void Imperium Platebody",
         "quantity": 1
+      },
+      {
+        "name": "Purple Mush Cap",
+        "quantity": 100000
       },
       {
         "name": "Lustre Bar",
@@ -2776,12 +2790,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Alien Hive Chunk",
-        "quantity": 110000
-      },
-      {
         "name": "Void Imperium Axe",
         "quantity": 1
+      },
+      {
+        "name": "Alien Hive Chunk",
+        "quantity": 110000
       },
       {
         "name": "Dioxide Synthesis",
@@ -2812,12 +2826,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Lustre Bar",
-        "quantity": 1000
-      },
-      {
         "name": "Void Imperium Pik",
         "quantity": 1
+      },
+      {
+        "name": "Lustre Bar",
+        "quantity": 1000
       },
       {
         "name": "Dioxide Synthesis",
@@ -2848,12 +2862,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Purple Screw",
-        "quantity": 60000
-      },
-      {
         "name": "Void Imperium Shardshins",
         "quantity": 1
+      },
+      {
+        "name": "Purple Screw",
+        "quantity": 60000
       },
       {
         "name": "Lustre Bar",
@@ -2866,12 +2880,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "TV Remote",
-        "quantity": 120000
-      },
-      {
         "name": "Void Imperium Kicks",
         "quantity": 1
+      },
+      {
+        "name": "TV Remote",
+        "quantity": 120000
       },
       {
         "name": "Lustre Bar",
@@ -2884,12 +2898,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Skelefish",
-        "quantity": 80000
-      },
-      {
         "name": "Void Imperium Helmet",
         "quantity": 1
+      },
+      {
+        "name": "Skelefish",
+        "quantity": 80000
       },
       {
         "name": "Lustre Bar",
@@ -3142,16 +3156,16 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Dioxide Synthesis",
-        "quantity": 400
-      },
-      {
         "name": "Uninflated Glove",
         "quantity": 2
       },
       {
         "name": "Void Imperium Platebody",
         "quantity": 1
+      },
+      {
+        "name": "Dioxide Synthesis",
+        "quantity": 400
       }
     ]
   },
@@ -3182,16 +3196,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Copper Helmet",
+        "quantity": 1
+      },
+      {
         "name": "Iron Bar",
         "quantity": 15
       },
       {
         "name": "Copper Ore",
         "quantity": 80
-      },
-      {
-        "name": "Copper Helmet",
-        "quantity": 1
       }
     ]
   },
@@ -3200,12 +3214,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Dioxide Synthesis",
-        "quantity": 150
-      },
-      {
         "name": "Void Imperium Helmet",
         "quantity": 1
+      },
+      {
+        "name": "Dioxide Synthesis",
+        "quantity": 150
       }
     ]
   },
@@ -3269,21 +3283,7 @@
       },
       {
         "name": "Oak Logs",
-        "quantity": 8
-      }
-    ]
-  },
-  "Party Hat": {
-    "name": "Party Hat",
-    "quantity": 1,
-    "materials": [
-      {
-        "name": "Iron Bar",
-        "quantity": 150
-      },
-      {
-        "name": "Copper Helmet",
-        "quantity": 1
+        "quantity": 3
       }
     ]
   },
@@ -3332,16 +3332,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Spiked Menace",
+        "quantity": 1
+      },
+      {
         "name": "Woodular Circle",
         "quantity": 3
       },
       {
         "name": "Bloach",
         "quantity": 1400
-      },
-      {
-        "name": "Spiked Menace",
-        "quantity": 1
       }
     ]
   },
@@ -3359,7 +3359,7 @@
       },
       {
         "name": "Gold Fishing Rod",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -3368,16 +3368,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Golden Axe",
+        "quantity": 1
+      },
+      {
         "name": "Tropilogs",
         "quantity": 6500
       },
       {
         "name": "Chain Link",
         "quantity": 5000
-      },
-      {
-        "name": "Golden Axe",
-        "quantity": 1
       }
     ]
   },
@@ -3395,7 +3395,7 @@
       },
       {
         "name": "Golden Net",
-        "quantity": 2
+        "quantity": 1
       }
     ]
   },
@@ -3404,16 +3404,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Gold Boots",
+        "quantity": 1
+      },
+      {
         "name": "Tropilogs",
         "quantity": 7000
       },
       {
         "name": "Jellyfish",
         "quantity": 3000
-      },
-      {
-        "name": "Gold Boots",
-        "quantity": 1
       }
     ]
   },
@@ -3422,12 +3422,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Jellyfish",
-        "quantity": 2250
-      },
-      {
         "name": "Iron Helmet",
         "quantity": 1
+      },
+      {
+        "name": "Jellyfish",
+        "quantity": 2250
       },
       {
         "name": "Platinum Bar",
@@ -3440,16 +3440,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Gold Pickaxe",
+        "quantity": 1
+      },
+      {
         "name": "Platinum Bar",
         "quantity": 800
       },
       {
         "name": "Pincer Arm",
         "quantity": 10500
-      },
-      {
-        "name": "Gold Pickaxe",
-        "quantity": 1
       }
     ]
   },
@@ -3458,12 +3458,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Potato Remains",
-        "quantity": 5000
-      },
-      {
         "name": "Iron Platebody",
         "quantity": 1
+      },
+      {
+        "name": "Potato Remains",
+        "quantity": 5000
       },
       {
         "name": "Platinum Bar",
@@ -3476,12 +3476,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Sentient Cereal",
-        "quantity": 5000
-      },
-      {
         "name": "Iron Platelegs",
         "quantity": 1
+      },
+      {
+        "name": "Sentient Cereal",
+        "quantity": 5000
       },
       {
         "name": "Platinum Bar",
@@ -3544,16 +3544,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Orange Tee",
+        "quantity": 1
+      },
+      {
         "name": "Red Spore Cap",
         "quantity": 40
       },
       {
         "name": "Bleach Logs",
         "quantity": 100
-      },
-      {
-        "name": "Orange Tee",
-        "quantity": 1
       }
     ]
   },
@@ -3612,16 +3612,16 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Copper Ore",
-        "quantity": 300000
-      },
-      {
         "name": "Cavern Trekkers",
         "quantity": 1
       },
       {
         "name": "Lustre Shieldshoe",
         "quantity": 1
+      },
+      {
+        "name": "Copper Ore",
+        "quantity": 300000
       }
     ]
   },
@@ -3708,12 +3708,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Skelefish",
-        "quantity": 110000
-      },
-      {
         "name": "Blackhole Bow",
         "quantity": 1
+      },
+      {
+        "name": "Skelefish",
+        "quantity": 110000
       },
       {
         "name": "Dioxide Synthesis",
@@ -3910,12 +3910,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Bunny",
-        "quantity": 50000
-      },
-      {
         "name": "Grey Gatsby",
         "quantity": 1
+      },
+      {
+        "name": "Bunny",
+        "quantity": 50000
       },
       {
         "name": "Dioxide Synthesis",
@@ -3946,20 +3946,20 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Thread",
-        "quantity": 300
-      },
-      {
-        "name": "Wooden Spear",
-        "quantity": 2
-      },
-      {
         "name": "Wooden Bow",
         "quantity": 1
       },
       {
         "name": "Gnarled Wand",
         "quantity": 1
+      },
+      {
+        "name": "Wooden Spear",
+        "quantity": 2
+      },
+      {
+        "name": "Thread",
+        "quantity": 300
       }
     ]
   },
@@ -3968,12 +3968,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Alien Hive Chunk",
-        "quantity": 90000
-      },
-      {
         "name": "Deuscythe",
         "quantity": 1
+      },
+      {
+        "name": "Alien Hive Chunk",
+        "quantity": 90000
       },
       {
         "name": "Dioxide Synthesis",
@@ -4071,6 +4071,28 @@
       }
     ]
   },
+  "Soles of the Troll": {
+    "name": "Soles of the Troll",
+    "quantity": 1,
+    "materials": [
+      {
+        "name": "Cooking Clogs",
+        "quantity": 8
+      },
+      {
+        "name": "Troll Scales",
+        "quantity": 10
+      },
+      {
+        "name": "Starfire Bar",
+        "quantity": 3000
+      },
+      {
+        "name": "Nullo Salt",
+        "quantity": 750
+      }
+    ]
+  },
   "Soulble Gum": {
     "name": "Soulble Gum",
     "quantity": 1,
@@ -4108,16 +4130,16 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Fly",
-        "quantity": 300000
-      },
-      {
         "name": "Bandito Boots",
         "quantity": 1
       },
       {
         "name": "Lustre Shieldshoe",
         "quantity": 1
+      },
+      {
+        "name": "Fly",
+        "quantity": 300000
       }
     ]
   },
@@ -4126,12 +4148,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Gold Bar",
-        "quantity": 250
-      },
-      {
         "name": "Birch Longbow",
         "quantity": 1
+      },
+      {
+        "name": "Gold Bar",
+        "quantity": 250
       },
       {
         "name": "Distilled Water",
@@ -4144,12 +4166,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Tundra Logs",
-        "quantity": 10000
-      },
-      {
         "name": "Crows Nest",
         "quantity": 1
+      },
+      {
+        "name": "Tundra Logs",
+        "quantity": 10000
       },
       {
         "name": "Redox Salts",
@@ -4176,16 +4198,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Lustre Logger",
+        "quantity": 1
+      },
+      {
         "name": "Wispy Lumber",
         "quantity": 200000
       },
       {
-        "name": "Pealer Shell",
-        "quantity": 100
-      },
-      {
-        "name": "Lustre Logger",
-        "quantity": 1
+        "name": "Pearler Shell",
+        "quantity": 40
       }
     ]
   },
@@ -4194,16 +4216,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Lustre Pickaxe",
+        "quantity": 1
+      },
+      {
         "name": "Lustre Bar",
         "quantity": 10000
       },
       {
-        "name": "Pealer Shell",
-        "quantity": 100
-      },
-      {
-        "name": "Lustre Pickaxe",
-        "quantity": 1
+        "name": "Pearler Shell",
+        "quantity": 20
       }
     ]
   },
@@ -4216,8 +4238,8 @@
         "quantity": 40000
       },
       {
-        "name": "Pealer Shell",
-        "quantity": 100
+        "name": "Pearler Shell",
+        "quantity": 60
       },
       {
         "name": "Lustre Rod",
@@ -4234,8 +4256,8 @@
         "quantity": 200000
       },
       {
-        "name": "Pealer Shell",
-        "quantity": 100
+        "name": "Pearler Shell",
+        "quantity": 80
       },
       {
         "name": "Lustre Netting",
@@ -4248,12 +4270,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Chain Link",
-        "quantity": 1000
-      },
-      {
         "name": "Quarterstaff",
         "quantity": 1
+      },
+      {
+        "name": "Chain Link",
+        "quantity": 1000
       },
       {
         "name": "Distilled Water",
@@ -4344,12 +4366,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Melty Cube",
-        "quantity": 25000
-      },
-      {
         "name": "Enforced Slasher",
         "quantity": 1
+      },
+      {
+        "name": "Melty Cube",
+        "quantity": 25000
       },
       {
         "name": "Redox Salts",
@@ -4380,16 +4402,38 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Copper Helmet",
+        "quantity": 1
+      },
+      {
         "name": "Iron Bar",
         "quantity": 15
       },
       {
         "name": "Thread",
         "quantity": 40
+      }
+    ]
+  },
+  "Thin Veil of The Troll": {
+    "name": "Thin Veil of The Troll",
+    "quantity": 1,
+    "materials": [
+      {
+        "name": "Troll Scales",
+        "quantity": 50
       },
       {
-        "name": "Copper Helmet",
-        "quantity": 1
+        "name": "Gold Twine",
+        "quantity": 10
+      },
+      {
+        "name": "Starfire Bar",
+        "quantity": 20000
+      },
+      {
+        "name": "Nullo Salt",
+        "quantity": 4000
       }
     ]
   },
@@ -4398,16 +4442,16 @@
     "quantity": 1,
     "materials": [
       {
+        "name": "Copper Helmet",
+        "quantity": 1
+      },
+      {
         "name": "Iron Bar",
         "quantity": 15
       },
       {
         "name": "Oak Logs",
         "quantity": 150
-      },
-      {
-        "name": "Copper Helmet",
-        "quantity": 1
       }
     ]
   },
@@ -4417,11 +4461,33 @@
     "materials": [
       {
         "name": "Frog Leg",
-        "quantity": 10
+        "quantity": 6
       },
       {
         "name": "Copper Bar",
-        "quantity": 5
+        "quantity": 3
+      }
+    ]
+  },
+  "Trollish Garb": {
+    "name": "Trollish Garb",
+    "quantity": 1,
+    "materials": [
+      {
+        "name": "Troll Scales",
+        "quantity": 25
+      },
+      {
+        "name": "Pearler Shell",
+        "quantity": 25
+      },
+      {
+        "name": "Starfire Bar",
+        "quantity": 10000
+      },
+      {
+        "name": "Nullo Salt",
+        "quantity": 2800
       }
     ]
   },
@@ -4430,20 +4496,20 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Nullo Salt",
-        "quantity": 10
-      },
-      {
-        "name": "Black Lense",
-        "quantity": 60
-      },
-      {
         "name": "Chizoar Helmet",
         "quantity": 1
       },
       {
         "name": "Neutron Ice Ring",
         "quantity": 1
+      },
+      {
+        "name": "Nullo Salt",
+        "quantity": 10
+      },
+      {
+        "name": "Black Lense",
+        "quantity": 60
       }
     ]
   },
@@ -4483,17 +4549,39 @@
       }
     ]
   },
+  "Twisted Scales": {
+    "name": "Twisted Scales",
+    "quantity": 1,
+    "materials": [
+      {
+        "name": "Troll Scales",
+        "quantity": 15
+      },
+      {
+        "name": "Condensed Zap",
+        "quantity": 333333
+      },
+      {
+        "name": "Starfire Bar",
+        "quantity": 5000
+      },
+      {
+        "name": "Nullo Salt",
+        "quantity": 1600
+      }
+    ]
+  },
   "Uninflated Glove": {
     "name": "Uninflated Glove",
     "quantity": 1,
     "materials": [
       {
-        "name": "Melty Cube",
-        "quantity": 70000
-      },
-      {
         "name": "Bandage Wraps",
         "quantity": 2
+      },
+      {
+        "name": "Melty Cube",
+        "quantity": 70000
       }
     ]
   },
@@ -4520,12 +4608,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Wispy Lumber",
-        "quantity": 50000
-      },
-      {
         "name": "Dementia Dicer",
         "quantity": 1
+      },
+      {
+        "name": "Wispy Lumber",
+        "quantity": 50000
       },
       {
         "name": "Dense Water",
@@ -4538,12 +4626,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Spontaneity Salts",
-        "quantity": 500
-      },
-      {
         "name": "Dementia Helmet",
         "quantity": 1
+      },
+      {
+        "name": "Spontaneity Salts",
+        "quantity": 500
       },
       {
         "name": "Void Bar",
@@ -4560,12 +4648,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Flycicle",
-        "quantity": 60000
+        "name": "Dementia Boots",
+        "quantity": 1
       },
       {
-        "name": "Dementia Boots",
-        "quantity": 2
+        "name": "Flycicle",
+        "quantity": 60000
       },
       {
         "name": "Void Bar",
@@ -4600,12 +4688,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Void Bar",
-        "quantity": 400
-      },
-      {
         "name": "Dementia Pickaxe",
         "quantity": 1
+      },
+      {
+        "name": "Void Bar",
+        "quantity": 400
       },
       {
         "name": "Dense Water",
@@ -4618,12 +4706,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Audio Cord",
-        "quantity": 75000
-      },
-      {
         "name": "Dementia Body",
         "quantity": 1
+      },
+      {
+        "name": "Audio Cord",
+        "quantity": 75000
       },
       {
         "name": "Void Bar",
@@ -4662,12 +4750,12 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Wispy Lumber",
-        "quantity": 75000
-      },
-      {
         "name": "Dementia Shins",
         "quantity": 1
+      },
+      {
+        "name": "Wispy Lumber",
+        "quantity": 75000
       },
       {
         "name": "Void Bar",
@@ -4702,8 +4790,8 @@
         "quantity": 300000
       },
       {
-        "name": "Pealer Shell",
-        "quantity": 15
+        "name": "Pearler Shell",
+        "quantity": 4
       },
       {
         "name": "Purple Salt",
@@ -4752,7 +4840,7 @@
         "quantity": 800
       },
       {
-        "name": "Pealer Shell",
+        "name": "Pearler Shell",
         "quantity": 25
       }
     ]
@@ -4766,7 +4854,7 @@
         "quantity": 500000
       },
       {
-        "name": "Pealer Shell",
+        "name": "Pearler Shell",
         "quantity": 25
       },
       {
@@ -4782,6 +4870,10 @@
       {
         "name": "Starfire Ore",
         "quantity": 300000
+      },
+      {
+        "name": "Pearler Shell",
+        "quantity": 4
       },
       {
         "name": "Purple Salt",
@@ -4886,20 +4978,20 @@
     "quantity": 1,
     "materials": [
       {
-        "name": "Minuteglass",
-        "quantity": 13
-      },
-      {
-        "name": "Ghost",
-        "quantity": 25
-      },
-      {
         "name": "Efaunt Helmet",
         "quantity": 1
       },
       {
         "name": "Fuscismatia",
         "quantity": 1
+      },
+      {
+        "name": "Minuteglass",
+        "quantity": 13
+      },
+      {
+        "name": "Ghost",
+        "quantity": 25
       }
     ]
   },
