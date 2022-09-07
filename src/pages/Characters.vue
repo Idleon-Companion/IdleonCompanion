@@ -40,10 +40,10 @@ import CloudData from "~/components/CloudData.vue";
 import Constellations from "~/components/characters/Constellations.vue";
 
 const wikiLinks = new Map([
-  ["Classes", "https://idleon.miraheze.org/wiki/Classes"],
-  ["Skills", "https://idleon.miraheze.org/wiki/Skills"],
-  ["Items", "https://idleon.miraheze.org/wiki/Items"],
-  ["Star Signs", "https://idleon.miraheze.org/wiki/Star_Signs"],
+  ["Classes", "https://idleon.info/wiki/Classes"],
+  ["Skills", "https://idleon.info/wiki/Skills"],
+  ["Items", "https://idleon.info/wiki/Items"],
+  ["Star Signs", "https://idleon.info/wiki/Star_Signs"],
 ]);
 
 export default defineComponent({

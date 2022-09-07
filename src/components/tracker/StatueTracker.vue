@@ -87,7 +87,7 @@ import { useState } from "~/State";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 
 const wikiLinks = new Map([
-  ["Statues", "https://idleon.miraheze.org/wiki/Statues"],
+  ["Statues", "https://idleon.info/wiki/Statues"],
 ]);
 
 export default defineComponent({

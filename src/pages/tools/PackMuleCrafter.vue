@@ -205,7 +205,7 @@ const lastUpdated = "July 31, 2021 (v1.23)";
 const wikiLinks = new Map([
   [
     "Pack Mule Crafter Task",
-    "https://idleon.miraheze.org/wiki/Tasks/Blunder_Hills#Pack_Mule_Crafter",
+    "https://idleon.info/wiki/Tasks/Blunder_Hills#Pack_Mule_Crafter",
   ],
 ]);
 

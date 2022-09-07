@@ -211,7 +211,7 @@ import { truncateSync } from "fs";
 import { isNull } from "util";
 
 const wikiLinks = new Map([
-  ["Bestiary", "https://idleon.miraheze.org/wiki/Bestiary"],
+  ["Bestiary", "https://idleon.info/wiki/Bestiary"],
 ]);
 
 export default defineComponent({
