@@ -167,7 +167,7 @@
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
 
-import { Assets } from "~/composables/Utilities";
+import { Assets, wikiBaseURL } from "~/composables/Utilities";
 import { useCharacters } from "~/composables/Characters";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import packMuleData from "~/data/packMule.json";
@@ -205,7 +205,7 @@ const lastUpdated = "July 31, 2021 (v1.23)";
 const wikiLinks = new Map([
   [
     "Pack Mule Crafter Task",
-    "https://idleon.info/wiki/Tasks/Blunder_Hills#Pack_Mule_Crafter",
+    wikiBaseURL + "Tasks/Blunder_Hills#Pack_Mule_Crafter",
   ],
 ]);
 

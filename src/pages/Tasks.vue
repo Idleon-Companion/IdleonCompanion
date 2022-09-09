@@ -261,7 +261,7 @@ import duration from "dayjs/plugin/duration";
 import relativeTime from "dayjs/plugin/relativeTime";
 
 import { DefaultTasks, Task, Timer } from "~/composables/Tasks";
-import { Time } from "~/composables/Utilities";
+import { Time, wikiBaseURL } from "~/composables/Utilities";
 import { useState } from "~/State";
 
 dayjs.locale;
@@ -269,8 +269,8 @@ dayjs.extend(duration);
 dayjs.extend(relativeTime);
 
 const wikiLinks = new Map([
-  ["Tasks", "https://idleon.info/wiki/Tasks"],
-  ["Guild Tasks", "https://idleon.info/wiki/Guilds#Daily_Guild_Tasks"],
+  ["Tasks", wikiBaseURL + "Tasks"],
+  ["Guild Tasks", wikiBaseURL + "Guilds#Daily_Guild_Tasks"],
 ]);
 
 export default defineComponent({

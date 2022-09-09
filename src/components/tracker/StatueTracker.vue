@@ -81,13 +81,13 @@
 <script lang="ts">
 import { computed, defineComponent } from "vue";
 
-import { Assets } from "~/composables/Utilities";
+import { Assets, wikiBaseURL } from "~/composables/Utilities";
 import { StatueName, Statues } from "~/composables/Statues";
 import { useState } from "~/State";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 
 const wikiLinks = new Map([
-  ["Statues", "https://idleon.info/wiki/Statues"],
+  ["Statues", wikiBaseURL + "Statues"],
 ]);
 
 export default defineComponent({

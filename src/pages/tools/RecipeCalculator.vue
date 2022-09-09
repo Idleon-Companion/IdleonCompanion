@@ -111,7 +111,7 @@
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
 
-import { Assets } from "~/composables/Utilities";
+import { Assets, wikiBaseURL } from "~/composables/Utilities";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import calculatorData from "~/data/recipeCalculator.json";
 
@@ -122,7 +122,7 @@ type RecipeNode = {
 };
 type RecipeDisplay = "List" | "Tree";
 
-const wikiLinks = new Map([["Smithing", "https://idleon.info/wiki/Smithing"]]);
+const wikiLinks = new Map([["Smithing", wikiBaseURL + "Smithing"]]);
 
 export default defineComponent({
   name: "RecipeCalculator",

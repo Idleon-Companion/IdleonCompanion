@@ -139,13 +139,13 @@ import { useToast } from "vue-toastification";
 
 import { Build, useBuilds } from "~/composables/Builds";
 import { Class, useCharacters } from "~/composables/Characters";
-import { GameVersions } from "~/composables/Utilities";
+import { GameVersions, wikiBaseURL } from "~/composables/Utilities";
 import { useAuth } from "~/State";
 import BuildSkills from "~/components/BuildSkills.vue";
 
 const wikiLinks = new Map([
-  ["Classes", "https://idleon.info/wiki/Classes"],
-  ["Special Talents", "https://idleon.info/wiki/Special_Talents"],
+  ["Classes", wikiBaseURL + "Classes"],
+  ["Special Talents", wikiBaseURL + "Special_Talents"],
 ]);
 
 export default defineComponent({
