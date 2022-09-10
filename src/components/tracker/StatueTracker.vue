@@ -115,7 +115,7 @@ export default defineComponent({
 
     const costToNextLevel = (statue: string): number => {
       const currentLevel = statues.value[statue as StatueName].level;
-      return Math.round(Math.pow(currentLevel, 1.35) + 1);
+      return Math.round(Math.pow(currentLevel, 1.17) * Math.pow(1.35, currentLevel/10) + 1);
     };
 
     return {
