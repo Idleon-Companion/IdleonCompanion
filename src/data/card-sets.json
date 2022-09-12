@@ -143,18 +143,21 @@
       "2": "Snowman",
       "3": "Bloodbone",
       "4": "Dedotated_Ram",
-      "5": "Pincermin"
+      "5": "Radiant_Amarok",
+      "6": "Blitzkrieg_Troll"
     },
     "useful": {
       "1": "Sand_Giant",
-      "2": "Bored_Bean"
+      "2": "Bored_Bean",
+      "3": "Choccie"
     },
     "minimal": {
       "1": "Thermister",
       "2": "Mashed_Potato",
       "3": "Rat",
       "4": "Xylobone",
-      "5": "Egg_Capsule"
+      "5": "Egg_Capsule",
+      "6": "Pincermin"
     }
   },
   "card_set_9": {
@@ -188,7 +191,8 @@
       "1": "Valentslime",
       "2": "Sheepie",
       "3": "Forest_Soul",
-      "4": "Golden_Giftmas_Box"
+      "4": "Golden_Giftmas_Box",
+      "5": "Donut"
     },
     "useful": {
       "1": "Oak_Tree",
