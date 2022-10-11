@@ -102,14 +102,14 @@
 </template>
 
 <script lang="ts">
-import { Assets } from "~/composables/Utilities";
+import { Assets, wikiBaseURL } from "~/composables/Utilities";
 import { Stamps, useStamps } from "~/composables/Stamps";
 import { computed, defineComponent } from "vue";
 import { useState } from "~/State";
 import CoinDisplay from "~/components/CoinDisplay.vue";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 
-const wikiLinks = new Map([["Stamps", "https://idleon.info/wiki/Stamps"]]);
+const wikiLinks = new Map([["Stamps", wikiBaseURL + "Stamps"]]);
 
 export default defineComponent({
   components: {

@@ -73,14 +73,14 @@
 <script lang="ts">
 import { computed, defineComponent } from "vue";
 
-import { Assets, Item, ItemGroup } from "~/composables/Utilities";
+import { Assets, Item, ItemGroup, wikiBaseURL } from "~/composables/Utilities";
 import { GlobalChecklist, useChecklist } from "~/composables/Checklist";
 import { useState } from "~/State";
 import CardTracker from "~/components/tracker/CardTracker.vue";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 
 const wikiLinks = new Map([
-  ["Drop Tables", "https://idleon.info/wiki/Category:Droptables"],
+  ["Drop Tables", wikiBaseURL + "Category:Droptables"],
 ]);
 
 export default defineComponent({

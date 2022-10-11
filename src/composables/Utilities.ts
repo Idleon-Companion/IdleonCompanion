@@ -262,6 +262,8 @@ export const Effects = {
   ...DungeonEffects,
 };
 
+export const wikiBaseURL = 'https://idleon.wiki/wiki/';
+
 type ValueOf<T> = T[keyof T];
 export type EffectData = ValueOf<typeof Effects>;
 

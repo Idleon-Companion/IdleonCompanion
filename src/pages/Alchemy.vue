@@ -34,9 +34,10 @@ import { defineComponent, ref } from "vue";
 
 import AlchemyBubbles from "~/components/alchemy/AlchemyBubbles.vue";
 import AlchemyVials from "~/components/alchemy/AlchemyVials.vue";
+import { wikiBaseURL } from "~/composables/Utilities";
 
 const wikiLinks = new Map([
-  ["Alchemy", "https://idleon.miraheze.org/wiki/Alchemy"],
+  ["Alchemy", wikiBaseURL + "Alchemy"],
 ]);
 
 export default defineComponent({

@@ -45,7 +45,7 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 
-import { Assets } from "~/composables/Utilities";
+import { Assets, wikiBaseURL } from "~/composables/Utilities";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 
 const picnicRequirements = [
@@ -104,7 +104,7 @@ const picnicRequirements = [
 ];
 
 const wikiLinks = new Map([
-  ["Picnic Stowaway", "https://idleon.miraheze.org/wiki/Picnic_Stowaway"],
+  ["Picnic Stowaway", wikiBaseURL + "Picnic_Stowaway"],
 ]);
 
 export default defineComponent({

@@ -197,7 +197,7 @@
 <script lang="ts">
 import { computed, defineComponent, reactive, ref } from "vue";
 
-import { Assets, Time, useNumberAbbr } from "~/composables/Utilities";
+import { Assets, Time, useNumberAbbr, wikiBaseURL } from "~/composables/Utilities";
 import {
   Class,
   getClassTree,
@@ -211,7 +211,7 @@ import { truncateSync } from "fs";
 import { isNull } from "util";
 
 const wikiLinks = new Map([
-  ["Bestiary", "https://idleon.miraheze.org/wiki/Bestiary"],
+  ["Bestiary", wikiBaseURL + "Bestiary"],
 ]);
 
 export default defineComponent({

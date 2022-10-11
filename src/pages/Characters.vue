@@ -38,12 +38,13 @@ import CharacterEditor from "~/components/characters/CharacterEditor.vue";
 import CharacterProgressTracker from "~/components/characters/CharacterProgressTracker.vue";
 import CloudData from "~/components/CloudData.vue";
 import Constellations from "~/components/characters/Constellations.vue";
+import { wikiBaseURL } from "~/composables/Utilities";
 
 const wikiLinks = new Map([
-  ["Classes", "https://idleon.miraheze.org/wiki/Classes"],
-  ["Skills", "https://idleon.miraheze.org/wiki/Skills"],
-  ["Items", "https://idleon.miraheze.org/wiki/Items"],
-  ["Star Signs", "https://idleon.miraheze.org/wiki/Star_Signs"],
+  ["Classes", wikiBaseURL + "Classes"],
+  ["Skills", wikiBaseURL + "Skills"],
+  ["Items", wikiBaseURL + "Items"],
+  ["Star Signs", wikiBaseURL + "Star_Signs"],
 ]);
 
 export default defineComponent({

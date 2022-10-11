@@ -90,11 +90,11 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import { Assets } from "~/composables/Utilities";
+import { Assets, wikiBaseURL } from "~/composables/Utilities";
 import ICAsset from "~/components/idleon-companion/IC-Asset.vue";
 import cardData from "~/data/card-sets.json";
 
-const wikiLinks = new Map([["Cards", "https://idleon.info/wiki/Cards"]]);
+const wikiLinks = new Map([["Cards", wikiBaseURL + "Cards"]]);
 
 export default defineComponent({
   name: "Cards",
